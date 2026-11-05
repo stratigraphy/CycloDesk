@@ -5,6 +5,14 @@ title: "CycloDesk: Graphical Interface for Cyclostratigraphy with WaverideR and 
 version: 0.1.0
 date-released: 2026-11-05
 license: GPL-2.0-or-later
+doi: 10.5281/zenodo.23983505
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23983505
+    description: "All versions (always resolves to the newest release)"
+  - type: doi
+    value: 10.5281/zenodo.23983506
+    description: "Version 0.1.0"
 repository-code: "https://github.com/stratigraphy/CycloDesk"
 url: "https://stratigraphy.github.io/CycloDesk/"
 keywords:

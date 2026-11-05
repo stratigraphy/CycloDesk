@@ -1200,7 +1200,7 @@ cd_about_modal <- function() {
       shiny::tags$p("When you publish results, please cite CycloDesk and the packages that did the work:"),
       shiny::tags$ul(
           shiny::tags$li(sprintf(paste0("Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy with WaverideR",
-              " and astrochron. R package version %s. https://github.com/stratigraphy/CycloDesk"),
+              " and astrochron. R package version %s. Zenodo. https://doi.org/10.5281/zenodo.23983505"),
               as.character(utils::packageVersion("CycloDesk")))),
           shiny::tags$li("Arts, M., et al. (2024). Frontiers in Earth Science 12, 1357751. doi:10.3389/feart.2024.1357751",
               " (the paper that introduced WaverideR)."),

@@ -2,6 +2,7 @@
 
 [![Lifecycle: alpha](https://img.shields.io/badge/lifecycle-alpha-orange.svg)](https://github.com/stratigraphy/CycloDesk/blob/main/NEWS.md)
 [![R-CMD-check](https://github.com/stratigraphy/CycloDesk/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stratigraphy/CycloDesk/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23983505.svg)](https://doi.org/10.5281/zenodo.23983505)
 [![License: GPL (>= 2)](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue.svg)](LICENSE.md)
 
 **A point-and-click workbench for cyclostratigraphy and paleoclimate time series, built on R.**
@@ -86,7 +87,7 @@ Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 If CycloDesk helps your work, please cite it, together with the packages that do the calculations:
 
 * Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy with WaverideR and astrochron. R package
-  version 0.1.0. <https://github.com/stratigraphy/CycloDesk>
+  version 0.1.0. Zenodo. <https://doi.org/10.5281/zenodo.23983505>
 * Arts, M., Corradini, C., Pondrelli, M., Pas, D., Da Silva, A.-C. (2024). Age and orbital forcing in the upper
   Silurian Cellon section (Carnic Alps, Austria) uncovered using the WaverideR R package. Frontiers in Earth
   Science 12, 1357751. <https://doi.org/10.3389/feart.2024.1357751>
