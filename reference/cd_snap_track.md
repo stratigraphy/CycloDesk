@@ -16,7 +16,7 @@ cd_snap_track(wavelet, points, tol = 0.25)
 - wavelet:
 
   Wavelet result of
-  [`WaverideR::analyse_wavelet()`](https://rdrr.io/pkg/WaverideR/man/analyse_wavelet.html)
+  [`WaverideR::analyse_wavelet()`](https://stratigraphy.github.io/WaverideR/reference/analyse_wavelet.html)
   (or a superlet / synchrosqueezed result).
 
 - points:
