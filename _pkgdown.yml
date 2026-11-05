@@ -1,0 +1,42 @@
+url: https://stratigraphy.github.io/CycloDesk/
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#1f4e79"
+
+home:
+  title: "CycloDesk: point-and-click cyclostratigraphy in R"
+  description: >
+    A desktop workbench for cyclostratigraphy and paleoclimate time series: spectra, wavelets, cycle tracking,
+    age models, tuning and astronomical testing with WaverideR and astrochron, without writing code.
+
+navbar:
+  structure:
+    left: [intro, articles, reference, news]
+    right: [search, github]
+
+articles:
+  - title: Tutorials
+    navbar: ~
+    contents:
+      - articles/getting-started
+
+reference:
+  - title: Start the interface
+    contents:
+      - run_app
+      - cd_app
+  - title: Reading and writing data files
+    contents:
+      - read_series
+      - write_series
+  - title: Astronomical solutions, tracking and age models
+    contents:
+      - cd_laskar
+      - cd_insolation
+      - cd_snap_track
+      - cd_cycle_agemodel
+  - title: Package
+    contents:
+      - CycloDesk-package

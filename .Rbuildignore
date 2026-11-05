@@ -1,0 +1,17 @@
+^LICENSE\.md$
+^tools$
+^README\.Rmd$
+^man/figures$
+^CITATION\.cff$
+^\.zenodo\.json$
+^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^vignettes/articles$
+^launcher$
+^NEWS_pending\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
+^CONTRIBUTING\.md$
+^\.gitattributes$

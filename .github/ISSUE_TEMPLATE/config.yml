@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and show-and-tell
+    url: https://github.com/stratigraphy/CycloDesk/discussions
+    about: How do I ...? Or show what you did with CycloDesk.
+  - name: Manual and tutorial
+    url: https://stratigraphy.github.io/CycloDesk/
+    about: Step-by-step walkthrough of a complete analysis.

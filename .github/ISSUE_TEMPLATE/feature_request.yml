@@ -1,0 +1,28 @@
+name: Feature request
+description: A method that is missing, or an idea to make the interface easier
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: The method or change, and what you would use it for.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference
+      description: Method paper, software that already does it (e.g. Acycle, astrochron, WaverideR function), or a screenshot.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Data import / file browser
+        - Plotting
+        - Spectral / wavelet analysis
+        - Tracking / age models / tuning
+        - Anchoring / astronomical solutions
+        - Testing (TimeOpt, COCO, ...)
+        - Other

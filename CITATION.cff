@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use CycloDesk, please cite it as below, and also cite WaverideR and astrochron, which do the calculations."
+type: software
+title: "CycloDesk: Graphical Interface for Cyclostratigraphy with WaverideR and astrochron"
+version: 0.1.0
+date-released: 2026-11-05
+license: GPL-2.0-or-later
+repository-code: "https://github.com/stratigraphy/CycloDesk"
+url: "https://stratigraphy.github.io/CycloDesk/"
+keywords:
+  - cyclostratigraphy
+  - astrochronology
+  - paleoclimate
+  - wavelet
+  - spectral analysis
+  - R
+  - shiny
+authors:
+  - family-names: Arts
+    given-names: Michiel
+    orcid: "https://orcid.org/0000-0003-3181-4608"
+references:
+  - type: article
+    title: "Age and orbital forcing in the upper Silurian Cellon section (Carnic Alps, Austria) uncovered using the WaverideR R package"
+    authors:
+      - family-names: Arts
+        given-names: Michiel
+      - family-names: Corradini
+        given-names: Carlo
+      - family-names: Pondrelli
+        given-names: Monica
+      - family-names: Pas
+        given-names: Damien
+      - family-names: Da Silva
+        given-names: Anne-Christine
+    journal: "Frontiers in Earth Science"
+    volume: 12
+    start: 1357751
+    year: 2024
+    doi: "10.3389/feart.2024.1357751"
+  - type: software
+    title: "WaverideR: Extracting Signals from Wavelet Spectra"
+    authors:
+      - family-names: Arts
+        given-names: Michiel
+    year: 2023
+    url: "https://CRAN.R-project.org/package=WaverideR"
+  - type: software
+    title: "Astrochron: An R Package for Astrochronology"
+    authors:
+      - family-names: Meyers
+        given-names: Stephen R.
+    year: 2014
+    url: "https://cran.r-project.org/package=astrochron"

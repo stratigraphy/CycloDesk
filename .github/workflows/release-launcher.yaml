@@ -1,0 +1,25 @@
+# When a release is published, zips the Windows launcher (launcher/ folder) and attaches it to the release as
+# CycloDesk-launcher.zip, so the README link .../releases/latest/download/CycloDesk-launcher.zip always works
+on:
+  release:
+    types: [published]
+
+name: release-launcher
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zip the Windows launcher
+        run: |
+          mkdir CycloDesk
+          cp launcher/* CycloDesk/
+          zip -r CycloDesk-launcher.zip CycloDesk
+      - name: Attach to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" CycloDesk-launcher.zip --clobber

@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+docs/
+*.Rcheck/
+*.tar.gz
+launcher/state/
+launcher/local_source.txt
