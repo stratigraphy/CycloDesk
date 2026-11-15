@@ -141,20 +141,17 @@ Contributions are welcome; see
 If CycloDesk helps your work, please cite it, together with the packages
 that do the calculations:
 
-\<\<\<\<\<\<\< HEAD \* Arts, M. (2026). CycloDesk: Graphical Interface
-for Cyclostratigraphy. R package version 0.2.0.
-<https://github.com/stratigraphy/CycloDesk> ======= \* Arts, M. (2026).
-CycloDesk: Graphical Interface for Cyclostratigraphy. R package version
-0.1.0. <https://github.com/stratigraphy/CycloDesk> \>\>\>\>\>\>\>
-119d635f982bcdadf013239c3aef0058eb59f64e \* Arts, M., Corradini, C.,
-Pondrelli, M., Pas, D., Da Silva, A.-C. (2024). Age and orbital forcing
-in the upper Silurian Cellon section (Carnic Alps, Austria) uncovered
-using the WaverideR R package. Frontiers in Earth Science 12, 1357751.
-<https://doi.org/10.3389/feart.2024.1357751> \* Arts, M. (2023).
-WaverideR: Extracting Signals from Wavelet Spectra. R package.
-<https://CRAN.R-project.org/package=WaverideR> \* Meyers, S.R. (2014).
-Astrochron: An R Package for Astrochronology.
-<https://cran.r-project.org/package=astrochron>
+- Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy.
+  R package version 0.2.0. <https://github.com/stratigraphy/CycloDesk>
+- Arts, M., Corradini, C., Pondrelli, M., Pas, D., Da Silva, A.-C.
+  (2024). Age and orbital forcing in the upper Silurian Cellon section
+  (Carnic Alps, Austria) uncovered using the WaverideR R package.
+  Frontiers in Earth Science 12, 1357751.
+  <https://doi.org/10.3389/feart.2024.1357751>
+- Arts, M. (2023). WaverideR: Extracting Signals from Wavelet Spectra. R
+  package. <https://CRAN.R-project.org/package=WaverideR>
+- Meyers, S.R. (2014). Astrochron: An R Package for Astrochronology.
+  <https://cran.r-project.org/package=astrochron>
 
 plus the papers of the methods you used (listed in each tool’s help
 panel). In R: `citation("CycloDesk")`.
