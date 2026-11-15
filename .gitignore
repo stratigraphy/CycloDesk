@@ -7,3 +7,5 @@ docs/
 *.tar.gz
 launcher/state/
 launcher/local_source.txt
+installer/build/
+installer/dist/

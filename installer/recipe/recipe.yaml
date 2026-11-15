@@ -1,0 +1,112 @@
+# Conda package "cyclodesk": CycloDesk, WaverideR and the R packages that are not on conda-forge, installed into
+# the R of a conda environment, plus the menu shortcut (menuinst) and the start and update scripts.
+# Built with rattler-build by installer/build_installer.R; the sources are collected in src/ by that script.
+
+context:
+  version: ${{ env.get("CYCLODESK_VERSION", default="0.0.0") }}
+
+package:
+  name: cyclodesk
+  version: ${{ version }}
+
+source:
+  path: src
+
+build:
+  number: 0
+  # astrochron has Fortran code; the other packages are pure R
+  dynamic_linking:
+    missing_dso_allowlist:
+      - "*"
+
+requirements:
+  build:
+    - if: unix
+      then:
+        - ${{ compiler('c') }}
+        - ${{ stdlib('c') }}
+        - ${{ compiler('fortran') }}
+        - make
+      else:
+        - ${{ compiler('m2w64_c') }}
+        - ${{ stdlib('m2w64_c') }}
+        - ${{ compiler('m2w64_fortran') }}
+        - m2-make
+        - m2-sed
+        - m2-coreutils
+        - m2-filesystem
+  host:
+    - r-base
+    - r-shiny
+    - r-callr
+    - r-remotes
+    - r-multitaper
+    - r-doparallel
+    - r-foreach
+    - r-iterators
+    - r-idpmisc
+    - r-fields
+    - r-viridislite
+    - r-ggplot2
+    - r-gridextra
+    - r-plotly
+    - r-pracma
+    - r-knitr
+    - r-xml
+    - r-dplyr
+    - r-stringr
+    - r-diagram
+    - r-reshape
+    - r-usethis
+    - r-tictoc
+    - r-hexbin
+    - r-colorramps
+  run:
+    - r-base
+    - r-shiny
+    - r-callr
+    - r-remotes
+    - r-multitaper
+    - r-doparallel
+    - r-foreach
+    - r-iterators
+    - r-idpmisc
+    - r-fields
+    - r-viridislite
+    - r-ggplot2
+    - r-gridextra
+    - r-plotly
+    - r-pracma
+    - r-knitr
+    - r-xml
+    - r-dplyr
+    - r-stringr
+    - r-diagram
+    - r-reshape
+    - r-usethis
+    - r-tictoc
+    - r-hexbin
+    - r-colorramps
+    - r-rcolorbrewer
+    - r-scico
+    - r-readxl
+    - r-writexl
+    - r-png
+    - r-jpeg
+    - r-tiff
+    - r-ragg
+    - r-dtw
+
+tests:
+  - script:
+      - if: unix
+        then: Rscript -e "library(CycloDesk); library(DecomposeR); library(lomb); app <- CycloDesk::cd_app(); stopifnot(inherits(app, 'shiny.appobj'))"
+        else: Rscript.exe -e "library(CycloDesk); library(DecomposeR); library(lomb); app <- CycloDesk::cd_app(); stopifnot(inherits(app, 'shiny.appobj'))"
+    requirements:
+      run:
+        - r-base
+
+about:
+  homepage: https://github.com/stratigraphy/CycloDesk
+  license: GPL-2.0-or-later
+  summary: Point-and-click cyclostratigraphy with WaverideR and astrochron

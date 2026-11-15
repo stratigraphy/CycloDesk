@@ -26,11 +26,12 @@ cd_txt <- function(id, label, value = "", help = NULL, show_if = NULL, numeric =
 # Tool constructor
 # lines: ids of two numeric parameters shown as two movable vertical lines on the figure (e.g. an interval);
 # preview: function(d, p) that draws the figure before the tool has run
+# icon: Font Awesome 6 name shown in the menu
 cd_tool <- function(id, menu, label, compute, plot = NULL, params = list(), inputs = 1L, heavy = FALSE,
-    info = "", group = NULL, full_table = FALSE, uses = "", lines = NULL, preview = NULL) {
+    info = "", group = NULL, full_table = FALSE, uses = "", lines = NULL, preview = NULL, icon = NULL) {
   list(id = id, menu = menu, group = group, label = label, compute = compute, plot = plot, params = params,
       inputs = as.integer(inputs), heavy = heavy, info = info, full_table = full_table, uses = uses, lines = lines,
-      preview = preview)
+      preview = preview, icon = icon)
 }
 
 # Input id of a parameter in the Shiny form
@@ -133,7 +134,9 @@ cd_get_tool <- function(id) {
 
 # Registry of all tools, in menu order
 cd_tools <- function() {
-  c(cd_tools_plot(), cd_tools_basic(), cd_tools_math(), cd_tools_timeseries())
+  c(cd_tools_plot(), cd_tools_basic(), cd_tools_math(), cd_tools_math_extra(), cd_tools_timeseries(),
+      cd_tools_wavelets(), cd_tools_sedrate(), cd_tools_agemodels(), cd_tools_astronomy(), cd_tools_astrochron_basic(),
+      cd_tools_astrochron_testing(), cd_tools_decompose())
 }
 
 # Output description helper

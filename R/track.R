@@ -52,14 +52,45 @@ cd_track_tab <- function() {
                   shiny::sliderInput("trk_lowess", "Smooth the curve: LOWESS span (0 = off)", min = 0, max = 0.5, value = 0,
                       step = 0.01)),
               cd_section("3. Helper lines",
-                  shiny::textInput("trk_lines", "Draw the periods of these cycles (kyr)", "",
-                      placeholder = "e.g. 405, 125, 95, 41, 21"),
-                  shiny::radioButtons("trk_lines_from", "computed from", c("the current track" = "track",
-                      "an age-model file (depth, age)" = "file"), inline = TRUE),
-                  shiny::conditionalPanel("input.trk_lines_from == 'file'", shiny::uiOutput("trk_amfile_ui")),
+                  shiny::tags$div(class = "cd-hint", "Set up a group of lines and press Add; add as many groups as you",
+                      " like. Tick groups in the list to remove them. On a sedimentation-rate map (eCOCO, eTimeOpt) only",
+                      " fixed values and file columns are drawn, read as rates (cm/kyr; use multiplier 1 for a rate column)."),
+                  shiny::selectInput("hl_type", "Lines", c(
+                      "periods of cycles (kyr), scaled by the current track" = "cyc_track",
+                      "periods of cycles (kyr), from an age-model file (depth, age)" = "cyc_file",
+                      "fixed periods (depth units, e.g. m)" = "fixed",
+                      "a column of a file (depth, value) x multiplier" = "column")),
+                  shiny::conditionalPanel("input.hl_type == 'cyc_track' || input.hl_type == 'cyc_file'",
+                      shiny::textInput("hl_cycles", "Cycles (kyr)", "", placeholder = "e.g. 405, 125, 95, 41, 21")),
+                  shiny::conditionalPanel("input.hl_type == 'fixed'",
+                      shiny::textInput("hl_fixed", "Periods (depth units)", "", placeholder = "e.g. 25, 32.5")),
+                  shiny::conditionalPanel("input.hl_type == 'cyc_file' || input.hl_type == 'column'",
+                      shiny::uiOutput("hl_file_ui")),
+                  shiny::conditionalPanel("input.hl_type == 'column'",
+                      shiny::uiOutput("hl_cols_ui"),
+                      shiny::numericInput("hl_mult", "Multiplier (period = value x multiplier)", 1, step = 0.05),
+                      shiny::tags$div(class = "cd-hint", "1 when the column is already a period in depth units; e.g. 4.05",
+                          " for a sedimentation rate in cm/kyr gives the 405-kyr period in m (rate x 405 / 100).")),
+                  shiny::fluidRow(
+                      shiny::column(6, shiny::selectInput("hl_colour", "Colour", cd_helper_colours())),
+                      shiny::column(6, shiny::selectInput("hl_lty", "Line", c("dashed" = "2", "solid" = "1", "dotted" = "3")))),
+                  shiny::textInput("hl_label", "Label (optional)", ""),
+                  shiny::tags$div(class = "cd-btnrow",
+                      shiny::actionButton("hl_add", "Add", icon = shiny::icon("plus"), class = "btn-sm"),
+                      shiny::actionButton("hl_remove", "Remove ticked", icon = shiny::icon("minus"), class = "btn-sm"),
+                      shiny::actionButton("hl_clear", "Remove all", icon = shiny::icon("eraser"), class = "btn-sm")),
+                  shiny::uiOutput("hl_list_ui"),
+                  shiny::tags$hr(),
                   shiny::textInput("trk_bounds", "Vertical boundary lines at depths", "", placeholder = "e.g. 160, 167.5"),
                   shiny::tags$div(class = "cd-hint", "Boundary lines can also be clicked on the scalogram (third click",
-                      " option above); clicking a line again removes it."), open = FALSE),
+                      " option above); clicking a line again removes it."),
+                  shiny::uiOutput("bd_file_ui"),
+                  shiny::uiOutput("bd_col_ui"),
+                  shiny::tags$div(class = "cd-btnrow",
+                      shiny::actionButton("bd_add", "Add depths from the file", icon = shiny::icon("file-import"),
+                          class = "btn-sm"),
+                      shiny::actionButton("bd_clear", "Clear boundary lines", icon = shiny::icon("eraser"), class = "btn-sm")),
+                  open = FALSE),
               cd_section("4. Floating age model and extraction",
                   shiny::numericInput("trk_cycle", "Duration of the tracked cycle (kyr)", 405, min = 0),
                   shiny::numericInput("trk_excycle", "Cycle to extract (kyr; any cycle, scaled from the track)", 405, min = 0),
@@ -136,8 +167,10 @@ cd_plot_track <- function(disp, pts = NULL, curve = NULL, band = NULL, xlab = "D
   graphics::image(disp$x, disp$lp, disp$z, col = cd_palette(100, palette), xlab = xlab, ylab = ylab, yaxt = "n", useRaster = TRUE)
   tk <- seq(ceiling(min(disp$lp)), floor(max(disp$lp)))
   graphics::axis(2, at = tk, labels = cd_fmt_period(2^tk))
-  graphics::polygon(c(disp$coi_x, rev(disp$coi_x)), c(disp$coi_y, rep(max(disp$lp) + 10, length(disp$coi_y))),
-      col = grDevices::adjustcolor("white", 0.45), border = NA)
+  if (length(disp$coi_x)) {
+    graphics::polygon(c(disp$coi_x, rev(disp$coi_x)), c(disp$coi_y, rep(max(disp$lp) + 10, length(disp$coi_y))),
+        col = grDevices::adjustcolor("white", 0.45), border = NA)
+  }
   if (!is.null(band)) {
     graphics::lines(band[, 1], log2(band[, 2]), col = "white", lty = 2)
     graphics::lines(band[, 1], log2(band[, 3]), col = "white", lty = 2)
@@ -145,9 +178,16 @@ cd_plot_track <- function(disp, pts = NULL, curve = NULL, band = NULL, xlab = "D
   if (length(helper)) {
     for (h in helper) {
       ok <- is.finite(h$period) & h$period > 0
-      graphics::lines(h$depth[ok], log2(h$period[ok]), col = "white", lty = 2, lwd = 1.3)
+      if (!any(ok)) {
+        next
+      }
+      hcol <- if (is.null(h$colour)) { "white" } else { h$colour }
+      hlty <- if (is.null(h$lty)) { 2 } else { h$lty }
+      y <- log2(h$period)
+      y[!ok] <- NA
+      graphics::lines(h$depth, y, col = hcol, lty = hlty, lwd = 1.5)
       k <- max(which(ok))
-      graphics::text(h$depth[k], log2(h$period[k]), h$label, pos = 2, col = "white", cex = 0.75, font = 2)
+      graphics::text(h$depth[k], y[k], h$label, pos = 2, col = hcol, cex = 0.75, font = 2)
     }
   }
   if (length(bounds)) {
@@ -176,17 +216,17 @@ cd_track_server <- function(input, output, session, ctx) {
   rv <- ctx$rv
   trk <- new.env()
   tv <- shiny::reactiveValues(ver = 0, pts = data.frame(id = integer(), depth = numeric(), period = numeric()), sel = integer(), nextid = 1L, hmm = NULL,
-      file = NULL, par = NULL, msg = "Choose a data file and compute its scalogram.")
+      file = NULL, par = NULL, kind = "cwt", ylab = "Period", msg = "Choose a data file and compute its scalogram.")
 
   # Scalograms that can be reused: the result in the Tool tab and the saved wavelet results in the folder
   sources <- shiny::reactive({
     rv$tick
     ch <- c("Compute a new CWT" = "new")
     res <- rv$tool_res
-    if (!is.null(res) && identical(res$tool, "wavelet")) {
-      ch <- c(stats::setNames("tool", sprintf("Result in the Tool tab (%s, %s)", res$file, res$params$method)), ch)
+    if (!is.null(res) && !is.null(cd_track_kind(res))) {
+      ch <- c(stats::setNames("tool", sprintf("Result in the Tool tab (%s, %s)", res$file, cd_get_tool(res$tool)$label)), ch)
     }
-    rds <- rv$listing$files[grepl("-wavelet\\.(cyclodesk|rcycle)\\.rds$", rv$listing$files)]
+    rds <- rv$listing$files[grepl("\\.(cyclodesk|rcycle)\\.rds$", rv$listing$files)]
     if (length(rds)) {
       ch <- c(ch, stats::setNames(paste0("rds|", rds), paste("Saved:", rds)))
     }
@@ -215,7 +255,8 @@ cd_track_server <- function(input, output, session, ctx) {
       }
     }
     shiny::tagList(
-        shiny::selectInput("trk_source", "Scalogram", choices = src, selected = pick),
+        shiny::selectInput("trk_source", "Scalogram or spectrum map (wavelet, EHA, eTimeOpt, eCOCO, ...)", choices = src,
+            selected = pick),
         shiny::conditionalPanel("input.trk_source == 'new'",
             shiny::selectInput("trk_file", "Data file", choices = fs, selected = s1),
             shiny::fluidRow(
@@ -237,6 +278,13 @@ cd_track_server <- function(input, output, session, ctx) {
     xcache$prep <- NULL
     trk$s <- s
     trk$disp <- cd_track_display(trk$w)
+    # the data panel: from the data when the positions of the map are not the data samples (EHA, eCOCO, ...)
+    if (length(w$x) != length(trk$w$axis.1) || length(trk$disp$dx) != length(trk$disp$x)) {
+      trk$disp$dx <- s[, 1]
+      trk$disp$dy <- s[, 2]
+    }
+    tv$kind <- if (is.null(par$kind)) { "cwt" } else { par$kind }
+    tv$ylab <- if (identical(tv$kind, "sedrate")) { "Sed. rate (cm/kyr)" } else { "Period" }
     tv$file <- f
     tv$par <- par
     tv$pts <- data.frame(id = integer(), depth = numeric(), period = numeric())
@@ -244,8 +292,14 @@ cd_track_server <- function(input, output, session, ctx) {
     tv$hmm <- NULL
     tv$snap <- NULL
     tv$ver <- tv$ver + 1
-    tv$msg <- sprintf("%s (%s): %d periods from %s to %s. Click along the band of the cycle.", f, how,
-        length(trk$w$Period), cd_fmt(min(trk$w$Period)), cd_fmt(max(trk$w$Period)))
+    tv$msg <- if (identical(tv$kind, "sedrate")) {
+      sprintf(paste("%s (%s): sedimentation rates %s to %s cm/kyr. Click along the ridge of the best rate; the track is",
+          "a sedimentation-rate curve (the cycle duration below is then only used to scale extracted cycles)."), f, how,
+          cd_fmt(min(trk$w$Period)), cd_fmt(max(trk$w$Period)))
+    } else {
+      sprintf("%s (%s): %d periods from %s to %s. Click along the band of the cycle.", f, how,
+          length(trk$w$Period), cd_fmt(min(trk$w$Period)), cd_fmt(max(trk$w$Period)))
+    }
     ctx$say("Track: scalogram of ", f, " (", how, ")")
   }
 
@@ -261,6 +315,28 @@ cd_track_server <- function(input, output, session, ctx) {
       }
     }
     w <- res$result
+    kind <- cd_track_kind(res)
+    if (is.null(kind)) {
+      shiny::showNotification("This result has no scalogram or spectrum map to track on.", type = "error")
+      return(invisible(FALSE))
+    }
+    if (!identical(kind, "cwt")) {
+      if (is.null(d)) {
+        shiny::showNotification(paste("The data file", f, "is not in this folder."), type = "error")
+        return(invisible(FALSE))
+      }
+      m <- try(cd_track_map(res), silent = TRUE)
+      if (inherits(m, "try-error") || is.null(m)) {
+        shiny::showNotification("The map of this result could not be read for tracking.", type = "error")
+        return(invisible(FALSE))
+      }
+      m$x <- d[, 1]
+      m$y <- d[, 2]
+      par <- list(lo = signif(3 * cd_dt(d[, 1]), 3), hi = signif(diff(range(d[, 1])) * 0.33, 3), omega = 8,
+          dj = cd_dj_default(d), wavelet = "morlet", method = "cwt", kind = kind, source = res$tool)
+      load_scalogram(m, f, par, d, how)
+      return(invisible(TRUE))
+    }
     if (is.null(d)) {
       if (is.null(w$x) || is.null(w$y)) {
         shiny::showNotification(paste("The data file", f, "is not in this folder."), type = "error")
@@ -319,7 +395,7 @@ cd_track_server <- function(input, output, session, ctx) {
 
   # "Track a cycle on this scalogram" button in the Tool tab
   shiny::observeEvent(input$tool_to_track, {
-    if (!is.null(rv$tool_res) && identical(rv$tool_res$tool, "wavelet")) {
+    if (!is.null(rv$tool_res) && !is.null(cd_track_kind(rv$tool_res))) {
       if (isTRUE(load_result(rv$tool_res, "the result in the Tool tab"))) {
         shiny::updateTabsetPanel(session, "tabs", selected = "track")
       }
@@ -367,7 +443,7 @@ cd_track_server <- function(input, output, session, ctx) {
       tol <- 0.01 * diff(range(trk$w$axis.1))
       near <- which(abs(b - cl$x) < tol)
       b <- if (length(near)) { b[-near] } else { sort(c(b, signif(cl$x, 6))) }
-      shiny::updateTextInput(session, "trk_bounds", value = paste(cd_fmt_period(b), collapse = ", "))
+      shiny::updateTextInput(session, "trk_bounds", value = cd_fmt_depths(b))
       return()
     }
     xy <- snap_point(cl$x, 2^cl$y)
@@ -485,13 +561,25 @@ cd_track_server <- function(input, output, session, ctx) {
     }
     tol <- input$trk_tol
     h <- shiny::withProgress(message = "Following the ridge ...", value = 0.5, {
-      wh <- if (identical(tv$par$method, "superlet")) { try(full_cwt(), silent = TRUE) } else { trk$w_orig }
+      wh <- if (!identical(tv$kind, "cwt")) {
+        trk$w_orig
+      } else if (identical(tv$par$method, "superlet")) {
+        try(full_cwt(), silent = TRUE)
+      } else {
+        trk$w_orig
+      }
       if (inherits(wh, "try-error")) {
         wh
-      } else if (nrow(pts) >= 2) {
-        try(WaverideR::track_ridge_hmm(wh, guide = pts[, c("depth", "period")], guide_tolerance = tol), silent = TRUE)
       } else {
-        try(WaverideR::track_ridge_hmm(wh, period = pts$period[1] * c(1 - tol, 1 + tol)), silent = TRUE)
+        # on an EHA, eTimeOpt or eCOCO map only that map is the evidence (no CWT of the data mixed in)
+        fw <- if (identical(tv$kind, "cwt")) { 0.2 } else { 0 }
+        if (nrow(pts) >= 2) {
+          try(WaverideR::track_ridge_hmm(wh, guide = pts[, c("depth", "period")], guide_tolerance = tol,
+              fallback_weight = fw), silent = TRUE)
+        } else {
+          try(WaverideR::track_ridge_hmm(wh, period = pts$period[1] * c(1 - tol, 1 + tol), fallback_weight = fw),
+              silent = TRUE)
+        }
       }
     })
     if (inherits(h, "try-error")) {
@@ -524,13 +612,26 @@ cd_track_server <- function(input, output, session, ctx) {
     data.frame(depth = x, period = stats::approx(pts$depth, pts$period, xout = x, rule = 2, ties = mean)$y)
   })
   # ... optionally smoothed with LOWESS to take out jumps; this is the curve that is used
-  curve <- shiny::reactive({
+  map_curve <- shiny::reactive({
     cv <- raw_curve()
     span <- input$trk_lowess
     if (is.null(cv) || is.null(span) || !is.finite(span) || span <= 0) {
       return(cv)
     }
     data.frame(depth = cv$depth, period = stats::lowess(cv$depth, cv$period, f = span)$y)
+  })
+  # ... as the period of the tracked cycle: a sedimentation-rate track (cm/kyr, depth in m) becomes the period of a
+  # cycle of the given duration, so the age model, extraction and tuning check work as for a period track
+  curve <- shiny::reactive({
+    cv <- map_curve()
+    if (is.null(cv) || !identical(tv$kind, "sedrate")) {
+      return(cv)
+    }
+    cyc <- input$trk_cycle
+    if (!is.finite(cyc) || cyc <= 0) {
+      return(NULL)
+    }
+    data.frame(depth = cv$depth, period = cv$period / 100 * cyc)
   })
 
   # Snap the whole curve to the nearest power peak at every depth
@@ -555,7 +656,7 @@ cd_track_server <- function(input, output, session, ctx) {
       cd_message_plot("Compute a scalogram to start tracking")
       return(invisible(NULL))
     }
-    cv <- curve()
+    cv <- map_curve()
     band <- NULL
     if (!is.null(tv$hmm) && !is.null(tv$hmm$period_lower)) {
       band <- tv$hmm[, c("depth", "period_lower", "period_upper")]
@@ -564,8 +665,9 @@ cd_track_server <- function(input, output, session, ctx) {
     if (isTRUE(input$trk_showpeaks)) {
       pk <- cd_track_peaks(trk$w, frac = cd_peak_frac(input$trk_peakmin))
     }
-    g <- cd_plot_track(trk$disp, pts = NULL, curve = cv, band = band, xlab = names(trk$s)[1], palette = input$trk_palette,
-        peaks = pk, helper = helper_lines(), bounds = bounds(),
+    g <- cd_plot_track(trk$disp, pts = NULL, curve = cv, band = band, xlab = names(trk$s)[1], ylab = tv$ylab,
+        palette = input$trk_palette, peaks = pk,
+        helper = cd_helper_for_kind(helper_lines(), tv$kind), bounds = bounds(),
         raw = if (is.finite(input$trk_lowess) && input$trk_lowess > 0) { raw_curve() } else { NULL })
     session$sendCustomMessage("trk_geom", g)
   }, res = 96)
@@ -585,11 +687,18 @@ cd_track_server <- function(input, output, session, ctx) {
           if (!is.null(tv$hmm)) { "; ridge followed (HMM)" } else if (!is.null(tv$snap)) { "; curve snapped to the nearest peaks" } else { "" },
           if (is.finite(input$trk_lowess) && input$trk_lowess > 0) { sprintf("; smoothed with LOWESS (span %s)", cd_fmt(input$trk_lowess)) } else { "" }))
     }
-    if (!is.null(cv) && is.finite(input$trk_cycle) && input$trk_cycle > 0) {
+    mc <- map_curve()
+    if (identical(tv$kind, "sedrate") && !is.null(mc)) {
+      txt <- c(txt, sprintf("Tracked sedimentation rate %s to %s cm/kyr: %s kyr in total.", cd_fmt(min(mc$period)),
+          cd_fmt(max(mc$period)), cd_fmt(sum(diff(mc$depth) / (mc$period[-1] / 100)))))
+    } else if (!is.null(cv) && is.finite(input$trk_cycle) && input$trk_cycle > 0) {
       sr <- 100 * cv$period / input$trk_cycle
       txt <- c(txt, sprintf("Tracked period %s to %s; for a %s-kyr cycle: sed. rate %s to %s cm/kyr, %s kyr in total.",
           cd_fmt(min(cv$period)), cd_fmt(max(cv$period)), cd_fmt(input$trk_cycle), cd_fmt(min(sr)), cd_fmt(max(sr)),
           cd_fmt(sum(diff(cv$depth) / (cv$period[-1] / input$trk_cycle)))))
+    }
+    if (length(hl()) && !is.null(trk$w)) {
+      txt <- c(txt, cd_helper_status(cd_helper_for_kind(helper_lines(), tv$kind), range(trk$w$Period), length(hl())))
     }
     paste(txt, collapse = "\n")
   })
@@ -645,47 +754,171 @@ cd_track_server <- function(input, output, session, ctx) {
     }
   }
 
-  output$trk_amfile_ui <- shiny::renderUI({
-    shiny::selectInput("trk_amfile", NULL, choices = ctx$data_files())
+  # Columns of a file (all numeric columns), for the file pickers of the helper and boundary lines
+  file_columns <- function(f) {
+    if (is.null(f) || !nzchar(f)) {
+      return(character())
+    }
+    d <- try(ctx$read_file(f, full = TRUE), silent = TRUE)
+    if (inherits(d, "try-error")) {
+      return(character())
+    }
+    names(d)
+  }
+  column_choices <- function(nm) {
+    stats::setNames(as.character(seq_along(nm)), sprintf("%d: %s", seq_along(nm), nm))
+  }
+
+  # Helper lines: groups of lines added with Add and removed with Remove
+  hl <- shiny::reactiveVal(list())
+  hl_counter <- new.env(parent = emptyenv())
+  hl_counter$n <- 0L
+  output$hl_file_ui <- shiny::renderUI({
+    shiny::selectInput("hl_file", "File", choices = ctx$data_files())
+  })
+  output$hl_cols_ui <- shiny::renderUI({
+    nm <- file_columns(input$hl_file)
+    if (!length(nm)) {
+      return(shiny::tags$div(class = "cd-hint", "Choose a readable file with at least two numeric columns."))
+    }
+    ch <- column_choices(nm)
+    shiny::fluidRow(
+        shiny::column(6, shiny::selectInput("hl_xcol", "Depth column", ch, selected = ch[1])),
+        shiny::column(6, shiny::selectInput("hl_ycol", "Value column", ch, selected = ch[min(2, length(ch))])))
+  })
+  shiny::observeEvent(input$hl_add, {
+    type <- input$hl_type
+    spec <- list(type = type, colour = input$hl_colour, lty = as.integer(input$hl_lty), label = trimws(input$hl_label))
+    if (type %in% c("cyc_track", "cyc_file")) {
+      spec$values <- cd_parse_nums(input$hl_cycles)
+    } else if (type == "fixed") {
+      spec$values <- cd_parse_nums(input$hl_fixed)
+    }
+    if (type %in% c("cyc_file", "column")) {
+      spec$file <- input$hl_file
+      if (is.null(spec$file) || !nzchar(spec$file)) {
+        shiny::showNotification("Choose a file.", type = "warning")
+        return()
+      }
+    }
+    if (type == "column") {
+      spec$xcol <- as.integer(input$hl_xcol)
+      spec$ycol <- as.integer(input$hl_ycol)
+      spec$mult <- input$hl_mult
+      if (!length(spec$xcol) || !length(spec$ycol) || !is.finite(spec$mult) || spec$mult == 0) {
+        shiny::showNotification("Choose the depth and value columns and a multiplier other than 0.", type = "warning")
+        return()
+      }
+      spec$colname <- file_columns(spec$file)[spec$ycol]
+    } else if (!length(spec$values)) {
+      shiny::showNotification("Give at least one value.", type = "warning")
+      return()
+    }
+    hl_counter$n <- hl_counter$n + 1L
+    spec$id <- hl_counter$n
+    spec$text <- cd_helper_describe(spec)
+    hl(c(hl(), list(spec)))
+    if (is.null(trk$w)) {
+      shiny::showNotification("Helper lines added; they are drawn once a scalogram is shown.", type = "message")
+    } else {
+      d <- NULL
+      if (type %in% c("cyc_file", "column")) {
+        d <- try(ctx$read_file(spec$file, full = TRUE), silent = TRUE)
+        if (inherits(d, "try-error")) {
+          d <- NULL
+        }
+      }
+      h <- cd_helper_lines(spec, trk$w$axis.1, track = curve(), track_cycle = input$trk_cycle, data = d)
+      shiny::showNotification(cd_helper_status(cd_helper_for_kind(h, tv$kind), range(trk$w$Period), 1L), type = "message",
+          duration = 8)
+    }
+  })
+  output$hl_list_ui <- shiny::renderUI({
+    s <- hl()
+    if (!length(s)) {
+      return(shiny::tags$div(class = "cd-hint", "No helper lines yet."))
+    }
+    ids <- character(length(s))
+    txt <- character(length(s))
+    for (k in seq_along(s)) {
+      ids[k] <- as.character(s[[k]]$id)
+      txt[k] <- s[[k]]$text
+    }
+    shiny::checkboxGroupInput("hl_pick", "Helper lines on the scalogram", choiceNames = txt, choiceValues = ids)
+  })
+  shiny::observeEvent(input$hl_remove, {
+    pick <- input$hl_pick
+    if (!length(pick)) {
+      shiny::showNotification("Tick the groups to remove first.", type = "warning")
+      return()
+    }
+    s <- hl()
+    keep <- logical(length(s))
+    for (k in seq_along(s)) {
+      keep[k] <- !(as.character(s[[k]]$id) %in% pick)
+    }
+    hl(s[keep])
+  })
+  shiny::observeEvent(input$hl_clear, {
+    hl(list())
   })
 
-  # Boundary lines (depths)
+  # Boundary lines (depths), typed, clicked or read from a column of a file
   bounds <- shiny::reactive({
     b <- cd_parse_nums(input$trk_bounds)
     if (is.null(b)) { numeric() } else { sort(b) }
   })
+  output$bd_file_ui <- shiny::renderUI({
+    shiny::selectInput("bd_file", "Depths from a file", choices = c("(choose a file)" = "", ctx$data_files()))
+  })
+  output$bd_col_ui <- shiny::renderUI({
+    nm <- file_columns(input$bd_file)
+    if (!length(nm)) {
+      return(NULL)
+    }
+    ch <- column_choices(nm)
+    shiny::selectInput("bd_col", "Column with the depths", ch, selected = ch[1])
+  })
+  shiny::observeEvent(input$bd_add, {
+    f <- input$bd_file
+    if (is.null(f) || !nzchar(f) || is.null(input$bd_col)) {
+      shiny::showNotification("Choose a file and the column with the depths.", type = "warning")
+      return()
+    }
+    d <- try(ctx$read_file(f, full = TRUE), silent = TRUE)
+    j <- as.integer(input$bd_col)
+    if (inherits(d, "try-error") || j > ncol(d)) {
+      shiny::showNotification("The file could not be read.", type = "error")
+      return()
+    }
+    v <- d[[j]]
+    v <- v[is.finite(v)]
+    b <- sort(unique(signif(c(bounds(), v), 6)))
+    shiny::updateTextInput(session, "trk_bounds", value = cd_fmt_depths(b))
+    shiny::showNotification(sprintf("%d boundary depths added from %s.", length(v), f), type = "message")
+  })
+  shiny::observeEvent(input$bd_clear, {
+    shiny::updateTextInput(session, "trk_bounds", value = "")
+  })
 
-  # Helper lines: the period (in depth units) of other cycles, from the track or from an age model
+  # The helper lines as curves of period (depth units) against depth
   helper_lines <- shiny::reactive({
-    cyc <- cd_parse_nums(input$trk_lines)
-    if (!length(cyc) || is.null(trk$w)) {
+    s <- hl()
+    if (!length(s) || is.null(trk$w)) {
       return(NULL)
     }
     x <- trk$w$axis.1
-    if (identical(input$trk_lines_from, "file")) {
-      f <- input$trk_amfile
-      am <- if (is.null(f) || !nzchar(f)) { NULL } else { try(ctx$read_file(f), silent = TRUE) }
-      if (is.null(am) || inherits(am, "try-error") || nrow(am) < 2) {
-        return(NULL)
+    cv <- curve()
+    out <- list()
+    for (k in seq_along(s)) {
+      d <- NULL
+      if (s[[k]]$type %in% c("cyc_file", "column")) {
+        d <- try(ctx$read_file(s[[k]]$file, full = TRUE), silent = TRUE)
+        if (inherits(d, "try-error")) {
+          next
+        }
       }
-      am <- am[order(am[, 1]), ]
-      sr <- abs(diff(am[, 1]) / diff(am[, 2]))
-      mid <- (am[-1, 1] + am[-nrow(am), 1]) / 2
-      ok <- is.finite(sr)
-      if (sum(ok) < 1) {
-        return(NULL)
-      }
-      srx <- if (sum(ok) == 1) { rep(sr[ok], length(x)) } else { stats::approx(mid[ok], sr[ok], xout = x, rule = 2)$y }
-    } else {
-      cv <- curve()
-      if (is.null(cv) || !is.finite(input$trk_cycle) || input$trk_cycle <= 0) {
-        return(NULL)
-      }
-      srx <- stats::approx(cv$depth, cv$period, xout = x, rule = 2)$y / input$trk_cycle
-    }
-    out <- vector("list", length(cyc))
-    for (k in seq_along(cyc)) {
-      out[[k]] <- list(depth = x, period = srx * cyc[k], label = paste(cd_fmt(cyc[k]), "kyr"))
+      out <- c(out, cd_helper_lines(s[[k]], x, track = cv, track_cycle = input$trk_cycle, data = d))
     }
     out
   })
@@ -780,6 +1013,26 @@ cd_track_server <- function(input, output, session, ctx) {
     tools::file_path_sans_ext(tv$file)
   }
   code_head <- function() {
+    if (!identical(tv$kind, "cwt")) {
+      # a track on an EHA, eTimeOpt, eCOCO, ... map: it is written to a file that the script reads
+      mc <- map_curve()
+      tf <- paste0(base_name(), if (identical(tv$kind, "sedrate")) { "-track_sedrate.txt" } else { "-track.txt" })
+      if (!is.null(mc)) {
+        write_out(mc, tf)
+      }
+      return(c(cd_code_read(tv$file, col = rv$cols[[tv$file]], sheet = rv$sheets[[tv$file]]),
+          sprintf("wt <- WaverideR::analyse_wavelet(data = as.matrix(dat), dj = %s, lowerPeriod = %s, upperPeriod = %s, omega_nr = %s)",
+              cd_fmt(tv$par$dj), cd_fmt(tv$par$lo), cd_fmt(tv$par$hi), cd_fmt(tv$par$omega)),
+          sprintf("# the track drawn in CycloDesk on the %s map (written by CycloDesk)", cd_get_tool(tv$par$source)$label),
+          sprintf("track <- CycloDesk::read_series(\"%s\")", tf),
+          "names(track) <- c(\"depth\", \"period\")",
+          if (identical(tv$kind, "sedrate")) {
+            sprintf("track$period <- track$period / 100 * %s  # sed. rate (cm/kyr) to the period (m) of a %s-kyr cycle",
+                cd_fmt(input$trk_cycle), cd_fmt(input$trk_cycle))
+          } else {
+            NULL
+          }))
+    }
     c(cd_code_read(tv$file, col = rv$cols[[tv$file]], sheet = rv$sheets[[tv$file]]),
         sprintf("wt <- WaverideR::analyse_wavelet(data = as.matrix(dat), dj = %s, lowerPeriod = %s, upperPeriod = %s, omega_nr = %s%s)",
             cd_fmt(tv$par$dj), cd_fmt(tv$par$lo), cd_fmt(tv$par$hi), cd_fmt(tv$par$omega),
@@ -810,6 +1063,15 @@ cd_track_server <- function(input, output, session, ctx) {
       return()
     }
     b <- base_name()
+    if (identical(tv$kind, "sedrate")) {
+      wr <- c(write_out(map_curve(), paste0(b, "-track_sedrate.txt")),
+          write_out(tv$pts[, c("depth", "period")], paste0(b, "-trackpoints_sedrate.txt")))
+      ctx$say("Sedimentation-rate track saved: ", paste(wr, collapse = ", "))
+      shiny::showNotification(paste("Saved", paste(wr, collapse = ", "), "(depth, sed. rate in cm/kyr; use Time Series >",
+          "Sedimentation rate to age model)"), type = "message", duration = 8)
+      ctx$refresh()
+      return()
+    }
     wr <- c(write_out(cv, paste0(b, "-track.txt")), write_out(tv$pts[, c("depth", "period")], paste0(b, "-trackpoints.txt")))
     if (!is.null(tv$hmm)) {
       wr <- c(wr, write_out(tv$hmm, paste0(b, "-trackHMM.txt"), header = TRUE))
@@ -896,6 +1158,140 @@ cd_track_server <- function(input, output, session, ctx) {
         cd_fmt(diff(range(out$am[, 2])))), type = "message", duration = 8)
     ctx$refresh(select = wr[3])
   })
+}
+
+# Helper lines ####
+
+# Colours offered for helper lines (they are drawn on the scalogram)
+cd_helper_colours <- function() {
+  c("white" = "white", "red" = "#ff4d4d", "orange" = "#ffa500", "yellow" = "#ffe14d", "cyan" = "#33d6ff",
+      "magenta" = "#ff4dd2", "green" = "#5cd65c", "black" = "black")
+}
+
+# Depths (or other values) as text for an input field: 6 significant digits, comma-separated
+cd_fmt_depths <- function(v) {
+  out <- character(length(v))
+  for (i in seq_along(v)) {
+    out[i] <- format(signif(v[i], 6), scientific = FALSE, trim = TRUE, drop0trailing = TRUE)
+  }
+  paste(out, collapse = ", ")
+}
+
+# Helper lines to draw on the current map: all of them on a scalogram; on a sedimentation-rate map (eCOCO,
+# eTimeOpt) only fixed values and file columns, which are then read as rates (cm/kyr), since cycle periods in
+# depth units have no meaning there
+cd_helper_for_kind <- function(h, kind) {
+  if (!identical(kind, "sedrate") || !length(h)) {
+    return(h)
+  }
+  keep <- logical(length(h))
+  for (k in seq_along(h)) {
+    keep[k] <- !is.null(h[[k]]$type) && h[[k]]$type %in% c("fixed", "column")
+  }
+  h[keep]
+}
+
+# Status text for helper lines: how many there are and which lie outside the period range of the scalogram
+cd_helper_status <- function(h, prange, n_groups) {
+  if (!length(h)) {
+    return(sprintf("Helper lines: %d group(s), nothing to draw (no track yet, or the file gives no values in the depth range).",
+        n_groups))
+  }
+  out <- character(0)
+  for (k in seq_along(h)) {
+    p <- h[[k]]$period[is.finite(h[[k]]$period) & h[[k]]$period > 0]
+    if (!length(p)) {
+      out <- c(out, sprintf("'%s' has no positive values", h[[k]]$label))
+    } else if (max(p) < prange[1] || min(p) > prange[2]) {
+      out <- c(out, sprintf("'%s' (%s to %s) lies outside the periods shown (%s to %s)", h[[k]]$label,
+          cd_fmt(signif(min(p), 3)), cd_fmt(signif(max(p), 3)), cd_fmt(signif(prange[1], 3)), cd_fmt(signif(prange[2], 3))))
+    }
+  }
+  txt <- sprintf("Helper lines: %d group(s), %d line(s).", n_groups, length(h))
+  if (length(out)) {
+    txt <- paste(txt, "Not visible:", paste(out, collapse = "; "),
+        "- check the column and the multiplier (an age column is not a period: use 'from an age-model file').")
+  }
+  txt
+}
+
+# One-line description of a group of helper lines, for the list in the Track tab
+cd_helper_describe <- function(spec) {
+  v <- cd_fmt_depths(spec$values)
+  txt <- switch(spec$type,
+      cyc_track = sprintf("%s kyr, scaled by the track", v),
+      cyc_file = sprintf("%s kyr, age model %s", v, spec$file),
+      fixed = sprintf("fixed periods %s", v),
+      column = sprintf("%s (%s) x %s", spec$colname, spec$file, cd_fmt(spec$mult)))
+  col_name <- names(cd_helper_colours())[match(spec$colour, cd_helper_colours())]
+  if (is.na(col_name)) {
+    col_name <- spec$colour
+  }
+  paste0(if (nzchar(spec$label)) { paste0(spec$label, ": ") } else { "" }, txt, " [", col_name, "]")
+}
+
+# The curves (depth, period in depth units) of one group of helper lines on the positions x of the scalogram.
+#   cyc_track: period = tracked period / tracked cycle x cycle (needs 'track', a data frame depth, period)
+#   cyc_file:  period = sedimentation rate of the age model in 'data' (depth, age) x cycle
+#   fixed:     constant periods
+#   column:    period = column spec$ycol x spec$mult against column spec$xcol of 'data', within the range of x
+# Returns a list of list(depth, period, label, colour, lty).
+cd_helper_lines <- function(spec, x, track = NULL, track_cycle = NA, data = NULL) {
+  lab0 <- if (is.null(spec$label) || !nzchar(spec$label)) { "" } else { paste0(spec$label, " ") }
+  colour <- if (is.null(spec$colour)) { "white" } else { spec$colour }
+  lty <- if (is.null(spec$lty)) { 2L } else { spec$lty }
+  one <- function(depth, period, label) {
+    list(depth = depth, period = period, label = trimws(paste0(lab0, label)), colour = colour, lty = lty, type = spec$type)
+  }
+  out <- list()
+  if (spec$type == "column") {
+    if (is.null(data) || max(spec$xcol, spec$ycol) > ncol(data)) {
+      return(out)
+    }
+    d <- data.frame(depth = data[[spec$xcol]], v = data[[spec$ycol]] * spec$mult)
+    d <- d[is.finite(d$depth) & is.finite(d$v), , drop = FALSE]
+    d <- d[order(d$depth), , drop = FALSE]
+    d <- d[d$depth >= min(x) & d$depth <= max(x), , drop = FALSE]
+    if (nrow(d) < 1) {
+      return(out)
+    }
+    lab <- if (nzchar(lab0)) { "" } else { sprintf("%s x %s", names(data)[spec$ycol], cd_fmt(spec$mult)) }
+    if (nrow(d) == 1) {
+      out[[1]] <- one(range(x), rep(d$v, 2), lab)
+    } else {
+      out[[1]] <- one(d$depth, d$v, lab)
+    }
+    return(out)
+  }
+  if (spec$type == "fixed") {
+    for (k in seq_along(spec$values)) {
+      out[[k]] <- one(range(x), rep(spec$values[k], 2), cd_fmt(spec$values[k]))
+    }
+    return(out)
+  }
+  # cycles: period per kyr (depth units / kyr) along x
+  if (spec$type == "cyc_track") {
+    if (is.null(track) || !is.finite(track_cycle) || track_cycle <= 0) {
+      return(out)
+    }
+    srx <- stats::approx(track$depth, track$period, xout = x, rule = 2)$y / track_cycle
+  } else {
+    if (is.null(data) || ncol(data) < 2 || nrow(data) < 2) {
+      return(out)
+    }
+    am <- data[order(data[[1]]), 1:2]
+    sr <- abs(diff(am[[1]]) / diff(am[[2]]))
+    mid <- (am[[1]][-1] + am[[1]][-nrow(am)]) / 2
+    ok <- is.finite(sr)
+    if (sum(ok) < 1) {
+      return(out)
+    }
+    srx <- if (sum(ok) == 1) { rep(sr[ok], length(x)) } else { stats::approx(mid[ok], sr[ok], xout = x, rule = 2)$y }
+  }
+  for (k in seq_along(spec$values)) {
+    out[[k]] <- one(x, srx * spec$values[k], paste(cd_fmt(spec$values[k]), "kyr"))
+  }
+  out
 }
 
 # Scalogram with the power as periods x positions and the periods increasing (CWT, SST and superlet results)
@@ -1167,4 +1563,100 @@ cd_extract <- function(prep, curve, cyc, exc, up = 1.2, down = 0.8, add_mean = F
     v <- v + prep$mean
   }
   data.frame(filtered_cycle = prep$x, value = v)
+}
+
+# Track tab sources ####
+#
+# Besides wavelet, superlet and synchrosqueezed scalograms, cycles can be tracked on the maps of the evolutive
+# spectra (EHA, windowed FFT, EHA on a log2 axis, evolutive MESA) and sedimentation rates on the maps of eTimeOpt,
+# win_timeOpt and eCOCO. These maps are put on a common form: power over positions (columns) and over y values
+# (rows) evenly spaced on a log2 scale, so that snapping, the HMM ridge follower and the display work as for a
+# scalogram.
+
+# What a result can be tracked as: "cwt" (a scalogram), "map" (a period map), "sedrate" (a sed-rate map) or NULL
+cd_track_kind <- function(res) {
+  if (is.null(res) || is.null(res$tool)) {
+    return(NULL)
+  }
+  r <- res$result
+  if (identical(res$tool, "wavelet")) {
+    return("cwt")
+  }
+  if (identical(res$tool, "evolutive")) {
+    return("map")
+  }
+  if (res$tool %in% c("etimeopt", "ecoco")) {
+    return("sedrate")
+  }
+  if (is.list(r) && !is.null(r$Power) && !is.null(r$Period) && !is.null(r$axis.1)) {
+    return("cwt")
+  }
+  if (is.list(r) && !is.null(r$sr) && !is.null(r$depth) && (is.matrix(r$score) || is.matrix(r$rho))) {
+    return("sedrate")
+  }
+  NULL
+}
+
+# A map (y values x positions) resampled to y values evenly spaced on a log2 scale
+cd_map_std <- function(pos, yv, M, n_y = 250) {
+  M <- as.matrix(M)
+  ok <- is.finite(yv) & yv > 0
+  yv <- yv[ok]
+  M <- M[ok, , drop = FALSE]
+  o <- order(yv)
+  yv <- yv[o]
+  M <- M[o, , drop = FALSE]
+  keep <- !duplicated(yv)
+  yv <- yv[keep]
+  M <- M[keep, , drop = FALSE]
+  po <- order(pos)
+  pos <- pos[po]
+  M <- M[, po, drop = FALSE]
+  if (length(yv) < 2 || length(pos) < 2) {
+    stop("the map is too small to track on", call. = FALSE)
+  }
+  lg <- seq(log2(min(yv)), log2(max(yv)), length.out = n_y)
+  ly <- log2(yv)
+  P <- matrix(0, n_y, length(pos))
+  for (j in seq_along(pos)) {
+    v <- M[, j]
+    f <- is.finite(v)
+    if (sum(f) >= 2) {
+      col <- stats::approx(ly[f], v[f], xout = lg, rule = 2)$y
+      # scores can be negative (eCOCO): shifted so that the lowest value of each position is 0
+      if (min(col) < 0) {
+        col <- col - min(col)
+      }
+      P[, j] <- col
+    }
+  }
+  list(Power = P, Period = 2^lg, axis.1 = pos, dt = stats::median(diff(pos)), dj = diff(lg[1:2]))
+}
+
+# The map of an evolutive, eTimeOpt or eCOCO result in the common form
+cd_track_map <- function(res) {
+  r <- res$result
+  if (identical(res$tool, "evolutive")) {
+    if (identical(r$method, "eha_log2")) {
+      return(cd_map_std(r$raw$depth, 2^r$raw$log2_period, r$raw$pwr))
+    }
+    if (identical(r$method, "mesa")) {
+      f <- r$raw$frequency
+      k <- f > 0
+      return(cd_map_std(r$raw$position, 1 / f[k], r$raw$windows[[1]]$power[k, , drop = FALSE]))
+    }
+    k <- r$f > 0
+    return(cd_map_std(r$x, 1 / r$f[k], t(r$z[, k, drop = FALSE])))
+  }
+  if (identical(res$tool, "etimeopt")) {
+    if (identical(r$method, "win")) {
+      return(cd_map_std(r$raw$x, r$raw$sedrate, r$raw$r_2_opt))
+    }
+    return(cd_map_std(r$x, r$sed, t(r$z)))
+  }
+  if (!is.null(r$sr) && !is.null(r$depth)) {
+    m <- if (is.matrix(r$score)) { r$score } else { r$rho }
+    return(cd_map_std(r$depth, r$sr, m))
+  }
+  NULL
 }

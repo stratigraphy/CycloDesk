@@ -1,0 +1,96 @@
+# Builds the CycloDesk installers (Windows .exe, macOS .pkg for Apple silicon and Intel, Linux .sh), installs each
+# one on a clean runner and checks it with installer/smoke_test.R. Started by hand (Actions > installers > Run
+# workflow) or when a release is published; for a release the installers are attached to it.
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+name: installers
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: ${{ matrix.label }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-latest, label: Linux x86_64 }
+          - { os: windows-latest, label: Windows x86_64 }
+          - { os: macos-15, label: macOS arm64 }
+          - { os: macos-15-intel, label: macOS x86_64 }
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: CycloDesk
+
+      - uses: actions/checkout@v4
+        with:
+          repository: stratigraphy/WaverideR
+          path: WaverideR
+
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-name: build
+          create-args: >-
+            -c conda-forge
+            r-base=4.5
+            rattler-build
+            constructor
+            conda
+          init-shell: bash
+          cache-environment: true
+
+      - name: Build the installer
+        run: |
+          WR_SHA=$(git -C WaverideR rev-parse HEAD)
+          CD_SHA=$(git -C CycloDesk rev-parse HEAD)
+          Rscript CycloDesk/installer/build_installer.R --waverider=WaverideR --waverider-sha=$WR_SHA \
+            --cyclodesk-sha=$CD_SHA --out=dist --r-base=4.5
+          ls -la dist
+
+      - name: Install and test (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          bash dist/CycloDesk-*-Linux-*.sh -b -p "$RUNNER_TEMP/cd"
+          micromamba deactivate
+          "$RUNNER_TEMP/cd/bin/Rscript" CycloDesk/installer/smoke_test.R
+
+      - name: Install and test (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          installer -pkg dist/CycloDesk-*.pkg -target CurrentUserHomeDirectory
+          micromamba deactivate
+          "$HOME/Library/CycloDesk/bin/Rscript" CycloDesk/installer/smoke_test.R
+
+      - name: Install and test (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $exe = (Get-ChildItem dist\CycloDesk-*-Windows-*.exe).FullName
+          $dest = Join-Path $env:RUNNER_TEMP "cd"
+          Start-Process -FilePath $exe -ArgumentList "/S", "/InstallationType=JustMe", "/D=$dest" -Wait
+          $env:PATH = "$dest;$dest\Library\mingw-w64\bin;$dest\Library\usr\bin;$dest\Library\bin;$dest\Scripts;$dest\bin;$env:PATH"
+          & "$dest\Lib\R\bin\x64\Rscript.exe" CycloDesk\installer\smoke_test.R
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Test-Path "$dest\Menu\cyclodesk_start.vbs")) { throw "start script missing" }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CycloDesk-${{ runner.os }}-${{ runner.arch }}
+          path: dist/CycloDesk-*
+          if-no-files-found: error
+
+      - name: Attach to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/CycloDesk-* --clobber --repo "${{ github.repository }}"

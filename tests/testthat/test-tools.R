@@ -13,6 +13,11 @@ test_that("all tools run with default parameters", {
   srd <- data.frame(d = g[, 1], sr = 2 + sin(g[, 1]))
   skip_net <- c("astro_solution", "insolation", "etp")
   for (t in CycloDesk:::cd_tools()) {
+    # the tools of the Wavelets, Sed. rate, Age models and Astronomy menus and Math extras have their own tests
+    if (t$menu %in% c("Wavelets", "Sed. rate", "Age models", "Astronomy") || identical(t$group, "More (WaverideR)") ||
+        grepl("^(ab|at|dc)_", t$id)) {
+      next
+    }
     if (t$id %in% skip_net || t$id %in% c("etimeopt", "coherence", "xwavelet", "ecoco", "dynot", "rho1", "changepoint")) {
       next
     }

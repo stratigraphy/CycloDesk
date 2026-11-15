@@ -1,0 +1,28 @@
+# Template for conda's constructor; installer/build_installer.R fills in the @...@ fields.
+name: CycloDesk
+version: @VERSION@
+company: Michiel Arts
+installer_type: @TYPE@
+installer_filename: @FILENAME@
+
+channels:
+  - @CHANNEL@
+  - conda-forge
+
+specs:
+  - r-base @RBASE@
+  - cyclodesk @VERSION@
+
+menu_packages:
+  - cyclodesk
+
+license_file: LICENSE.txt
+conclusion_text: |
+  CycloDesk is installed. Start it with the CycloDesk icon on the desktop or in the menu; it opens in your web
+  browser. Your data stay on your computer.
+
+register_python: false
+initialize_conda: false
+initialize_by_default: false
+register_python_default: false
+@EXTRA@

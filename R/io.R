@@ -302,7 +302,7 @@ cd_list_folder <- function(path, show_all = FALSE) {
   dirs <- sort(all[isd])
   files <- all[!isd]
   if (!show_all) {
-    files <- files[cd_is_data(files) | grepl("\\.(rds|pdf|png|r)$", files, ignore.case = TRUE)]
+    files <- files[cd_is_data(files) | grepl("\\.(rds|pdf|png|jpg|jpeg|tif|tiff|r)$", files, ignore.case = TRUE)]
   }
   files <- files[order(tolower(files))]
   list(dirs = dirs, files = files)
@@ -332,4 +332,44 @@ cd_dep <- function(x) {
     return(sprintf("\"%s\"", gsub("\\\\", "/", x)))
   }
   paste(deparse(x, width.cutoff = 500L), collapse = "")
+}
+
+#' Pad a series at both ends
+#'
+#' Extends an evenly spaced series by \code{width} (in depth or time units) at both ends, so that sliding-window
+#' analyses (EHA, eTimeOpt, eCOCO) can centre windows on the first and last samples and their result spans the
+#' whole record. The added values mirror the series at its ends (without repeating the end points) or repeat its
+#' mean. Results outside the range of the original series should be discarded.
+#'
+#' @param dat Evenly spaced series: data frame or matrix with depth or time in column 1 and the values in column 2.
+#' @param width Length added at each end, in the units of column 1 (numeric, >= 0; usually half the window length).
+#' @param method \code{"mirror"} (reflect the series at its ends) or \code{"mean"} (repeat its mean).
+#'   \code{Default="mirror"}.
+#' @return A data frame with two columns, the padded series. The added part is at most one record length long at
+#'   each end.
+#' @examples
+#' x <- data.frame(depth = seq(0, 10, by = 0.1), value = sin(seq(0, 10, by = 0.1)))
+#' range(cd_pad_ends(x, width = 2)[, 1])
+#' @export
+cd_pad_ends <- function(dat, width, method = c("mirror", "mean")) {
+  method <- match.arg(method)
+  s <- as.data.frame(dat)[, 1:2]
+  s <- s[order(s[, 1]), ]
+  n <- nrow(s)
+  dt <- stats::median(diff(s[, 1]))
+  k <- min(n - 1L, as.integer(round(width / dt)))
+  if (!is.finite(k) || k < 1L || n < 3L) {
+    return(s)
+  }
+  y <- s[, 2]
+  if (method == "mirror") {
+    left <- y[(k + 1):2]
+    right <- y[(n - 1):(n - k)]
+  } else {
+    left <- rep(mean(y, na.rm = TRUE), k)
+    right <- left
+  }
+  out <- data.frame(c(s[1, 1] - dt * (k:1), s[, 1], s[n, 1] + dt * seq_len(k)), c(left, y, right))
+  names(out) <- names(s)
+  out
 }

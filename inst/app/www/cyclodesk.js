@@ -302,6 +302,9 @@ function cdLinesDraw() {
     el.css({ left: bx.left + k[1] - 6, top: bx.top + bx.yt, height: bx.yb - bx.yt });
     el.find('.cd-vlab').text(cdFmt(v));
     el.attr('title', (cdLines.labels[i] || '') + ': drag, or type the value in the form');
+    // handled on the line itself: a drag on a line must not start a zoom box on the figure
+    el.on('mousedown', cdLineDown);
+    el.on('click dblclick', function (ev) { ev.stopPropagation(); });
     $p.append(el);
   });
 }
@@ -317,11 +320,12 @@ Shiny.addCustomMessageHandler('cd_lines_pos', function (x) {
 $(document).on('shiny:value', function (e) { if (e.name === 'tool_plot') { setTimeout(cdLinesDraw, 80); } });
 $(window).on('resize', function () { setTimeout(cdLinesDraw, 300); });
 var cdDragLine = null;
-$(document).on('mousedown', '#tool_plot .cd-vline', function (e) {
+function cdLineDown(e) {
   e.preventDefault();
+  e.stopPropagation();
   cdDragLine = $(this).data('which');
   $(this).addClass('cd-active');
-});
+}
 $(document).on('mousemove', function (e) {
   if (!cdDragLine) { return; }
   var bx = cdLinesBox();

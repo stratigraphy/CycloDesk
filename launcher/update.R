@@ -42,6 +42,33 @@ while (port_open() && k < 60) {
 }
 Sys.sleep(2)
 
+# An install that was interrupted (e.g. while CycloDesk was running) leaves a lock folder 00LOCK-<package> and an
+# empty package folder; every later install of that package then fails. Remove both. ####
+clear_locks <- function(lib, pkgs = c("WaverideR", "CycloDesk")) {
+  for (pk in pkgs) {
+    locks <- Sys.glob(file.path(lib, paste0("00LOCK-", pk, "*")))
+    for (lk in locks) {
+      say("Removing the lock ", lk, " left by an interrupted install ...")
+      unlink(lk, recursive = TRUE, force = TRUE)
+    }
+    d <- file.path(lib, pk)
+    if (dir.exists(d) && !file.exists(file.path(d, "DESCRIPTION"))) {
+      say("Removing the incomplete folder ", d, " ...")
+      unlink(d, recursive = TRUE, force = TRUE)
+    }
+  }
+}
+# Installs and writes warnings and errors to the log (install.packages only warns when a package fails)
+logged <- function(expr) {
+  withCallingHandlers(tryCatch(expr, error = function(e) {
+    say("FAILED: ", conditionMessage(e))
+  }), warning = function(w) {
+    say("Warning: ", conditionMessage(w))
+    invokeRestart("muffleWarning")
+  })
+}
+
+clear_locks(.libPaths()[1])
 ok <- TRUE
 options(repos = c(CRAN = "https://cloud.r-project.org"))
 lib <- .libPaths()[1]
@@ -51,6 +78,16 @@ for (r in repos) {
   if (inherits(res, "try-error")) {
     ok <- FALSE
     say("FAILED: ", conditionMessage(attr(res, "condition")))
+  }
+}
+# optional packages that newer versions use (installed once; a failure here does not stop the update)
+for (pk in c("readxl", "png", "jpeg", "DecomposeR", "lomb", "dtw")) {
+  if (!requireNamespace(pk, quietly = TRUE)) {
+    say("Installing ", pk, " ...")
+    res <- try(utils::install.packages(pk, lib = lib), silent = TRUE)
+    if (inherits(res, "try-error")) {
+      say("Could not install ", pk, ": ", conditionMessage(attr(res, "condition")))
+    }
   }
 }
 # a fresh check is needed after an update

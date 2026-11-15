@@ -131,7 +131,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         f <- rv$listing$files[k]
         ext <- tolower(tools::file_ext(f))
         tp <- if (ext %in% c("xlsx", "xls", "xlsm")) { "excel" } else if (ext == "las") { "las" } else if (cd_is_data(f)) {
-          "data" } else if (ext == "rds") { "rds" } else if (ext == "r") { "code" } else if (ext %in% c("pdf", "png")) { "fig" } else { "other" }
+          "data" } else if (ext == "rds") { "rds" } else if (ext == "r") { "code" } else if (ext %in% c("pdf", "png", "jpg", "jpeg", "tif", "tiff")) { "fig" } else { "other" }
         items[[length(items) + 1]] <- list(v = paste0("f|", f), n = f, t = tp,
             i = cd_size(fi$size[k]), d = format(fi$mtime[k], "%d %b %Y %H:%M"))
       }
@@ -655,13 +655,9 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
           shiny::actionButton("tool_run", "Run", icon = shiny::icon("play"), class = "btn-primary"),
           shiny::actionButton("tool_cancel", "Cancel", icon = shiny::icon("stop"), class = "btn-default"),
           shiny::actionButton("tool_savefig", "Save figure", icon = shiny::icon("image"), class = "btn-default"),
-          if (t$id == "wavelet") {
-            shiny::conditionalPanel("output.tool_has_wavelet == '1'",
-                shiny::actionButton("tool_to_track", "Track a cycle on this scalogram", icon = shiny::icon("route"),
-                    class = "btn-default"))
-          } else {
-            NULL
-          })
+          shiny::conditionalPanel("output.tool_has_wavelet == '1'",
+              shiny::actionButton("tool_to_track", "Track on this map (Track tab)", icon = shiny::icon("route"),
+                  class = "btn-default")))
     })
 
     finish_run <- function(res) {
@@ -833,8 +829,75 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       }
       invisible(NULL)
     }
+    # Zoom of the tool figure: a box dragged on the figure, typed limits, double-click to reset ####
+    view <- shiny::reactiveValues(v = NULL, used = TRUE)
+    shiny::observeEvent(list(rv$tool$id, input$files), {
+      view$v <- NULL
+    }, ignoreNULL = FALSE)
+    shiny::observeEvent(input$tool_brush, {
+      b <- input$tool_brush
+      if (is.null(b)) {
+        return()
+      }
+      view$v <- list(x = c(b$xmin, b$xmax), y = c(b$ymin, b$ymax))
+      session$resetBrush("tool_brush")
+    })
+    shiny::observeEvent(input$tool_dbl, {
+      view$v <- NULL
+    })
+    shiny::observeEvent(input$view_reset, {
+      view$v <- NULL
+    })
+    shiny::observeEvent(input$view_apply, {
+      num <- function(id) {
+        v <- suppressWarnings(as.numeric(input[[id]]))
+        if (length(v) != 1) {
+          return(NA_real_)
+        }
+        v
+      }
+      vx <- c(num("view_x0"), num("view_x1"))
+      vy <- c(num("view_y0"), num("view_y1"))
+      if (!all(is.finite(vx)) && !all(is.finite(vy))) {
+        view$v <- NULL
+      } else {
+        view$v <- list(x = vx, y = vy)
+      }
+    })
+    output$tool_view_ui <- shiny::renderUI({
+      if (is.null(rv$tool)) {
+        return(NULL)
+      }
+      v <- view$v
+      val <- function(k, i) {
+        if (is.null(v) || length(v[[k]]) != 2 || !is.finite(v[[k]][i])) {
+          return(NA)
+        }
+        signif(sort(v[[k]])[i], 6)
+      }
+      box <- function(id, k, i) {
+        shiny::tags$input(id = id, type = "number", step = "any", class = "form-control cd-viewnum",
+            value = if (is.na(val(k, i))) { "" } else { val(k, i) })
+      }
+      shiny::tags$div(class = "cd-viewbar",
+          shiny::tags$span(class = "cd-viewlab", shiny::icon("magnifying-glass"), " Zoom"),
+          shiny::tags$span("x"), box("view_x0", "x", 1), shiny::tags$span("\u2013"), box("view_x1", "x", 2),
+          shiny::tags$span("y"), box("view_y0", "y", 1), shiny::tags$span("\u2013"), box("view_y1", "y", 2),
+          shiny::actionButton("view_apply", "Apply", class = "btn-xs"),
+          shiny::actionButton("view_reset", "Reset", class = "btn-xs"),
+          shiny::tags$span(class = "cd-viewhint", if (!is.null(v) && !isTRUE(view$used)) {
+            "this figure cannot be zoomed"
+          } else {
+            "drag a box on the figure; double-click resets"
+          }))
+    })
+
     output$tool_plot <- shiny::renderPlot({
+      op <- options(CycloDesk.view = view$v)
+      on.exit(options(op), add = TRUE)
+      cd_state$view_used <- FALSE
       tool_plot()
+      shiny::isolate(view$used <- isTRUE(cd_state$view_used) || is.null(view$v))
       # where the last panel lies, so the browser can draw the two movable lines of interval tools on it
       t <- rv$tool
       if (!is.null(t) && length(t$lines) == 2 && is.null(rv$tool_err)) {
@@ -907,7 +970,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       shiny::updateNumericInput(session, cd_pid(t$id, t$lines[2]), value = signif(max(a, b), dg))
     })
     output$tool_has_wavelet <- shiny::reactive({
-      if (!is.null(rv$tool_res) && identical(rv$tool_res$tool, "wavelet")) { "1" } else { "0" }
+      if (!is.null(rv$tool_res) && !is.null(cd_track_kind(rv$tool_res))) { "1" } else { "0" }
     })
     shiny::outputOptions(output, "tool_has_wavelet", suspendWhenHidden = FALSE)
     output$tool_text <- shiny::renderText({
@@ -942,6 +1005,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         data_files = data_files, selected_files = selected_files, shared = shared)
     cd_track_server(input, output, session, tctx)
     cd_anchor_server(input, output, session, tctx)
+    cd_image_server(input, output, session, tctx)
 
     # Figures ####
     fig_modal <- function(source) {
@@ -1095,6 +1159,8 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
               shiny::tags$ul(cd_li_tags(fs)),
               footer = shiny::tagList(shiny::modalButton("Cancel"), shiny::actionButton("del_ok", "Delete", class = "btn-danger"))))
         }
+      } else if (cmd == "image") {
+        shiny::updateTabsetPanel(session, "tabs", selected = "image")
       } else if (cmd == "about") {
         cd_about_modal()
       } else if (cmd == "manual") {
@@ -1199,8 +1265,8 @@ cd_about_modal <- function() {
           link("https://github.com/stratigraphy/CycloDesk/issues/new/choose", "Tell us"), "."),
       shiny::tags$p("When you publish results, please cite CycloDesk and the packages that did the work:"),
       shiny::tags$ul(
-          shiny::tags$li(sprintf(paste0("Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy with WaverideR",
-              " and astrochron. R package version %s. Zenodo. https://doi.org/10.5281/zenodo.23983505"),
+          shiny::tags$li(sprintf(paste0("Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy.",
+              " R package version %s. https://github.com/stratigraphy/CycloDesk"),
               as.character(utils::packageVersion("CycloDesk")))),
           shiny::tags$li("Arts, M., et al. (2024). Frontiers in Earth Science 12, 1357751. doi:10.3389/feart.2024.1357751",
               " (the paper that introduced WaverideR)."),

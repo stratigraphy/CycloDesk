@@ -75,15 +75,29 @@ cd_update_code <- function(status) {
 }
 
 # Starts the launcher's updater (it waits until this app has stopped, installs, and starts the app again)
+# The installers (Windows, macOS, Linux) provide cyclodesk_update.R next to the start script; the older Windows
+# launcher (SETUP.bat) provides update.R.
 cd_start_updater <- function(status) {
   dir <- getOption("CycloDesk.launcher")
-  upd <- if (is.null(dir)) { "" } else { file.path(dir, "update.R") }
-  if (.Platform$OS.type != "windows" || !nzchar(upd) || !file.exists(upd)) {
+  if (is.null(dir)) {
     return(FALSE)
   }
-  rscript <- normalizePath(file.path(R.home("bin"), "Rscript.exe"), winslash = "\\", mustWork = FALSE)
-  args <- c("/c", "start", "\"CycloDesk update\"", shQuote(rscript, type = "cmd"),
-      shQuote(normalizePath(upd, winslash = "\\", mustWork = FALSE), type = "cmd"), status$repo[status$update])
-  res <- try(system2("cmd", args, wait = FALSE), silent = TRUE)
+  upd <- file.path(dir, "cyclodesk_update.R")
+  if (!file.exists(upd)) {
+    upd <- file.path(dir, "update.R")
+    if (.Platform$OS.type != "windows" || !file.exists(upd)) {
+      return(FALSE)
+    }
+  }
+  repos <- status$repo[status$update]
+  if (.Platform$OS.type == "windows") {
+    rscript <- normalizePath(file.path(R.home("bin"), "Rscript.exe"), winslash = "\\", mustWork = FALSE)
+    args <- c("/c", "start", "\"CycloDesk update\"", shQuote(rscript, type = "cmd"),
+        shQuote(normalizePath(upd, winslash = "\\", mustWork = FALSE), type = "cmd"), repos)
+    res <- try(system2("cmd", args, wait = FALSE), silent = TRUE)
+  } else {
+    res <- try(system2(file.path(R.home("bin"), "Rscript"), c(shQuote(upd), repos), wait = FALSE, stdout = FALSE,
+        stderr = FALSE), silent = TRUE)
+  }
   !inherits(res, "try-error")
 }

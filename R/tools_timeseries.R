@@ -30,6 +30,31 @@ cd_peak_freq <- function(d) {
   f[keep][which.max(sp[keep])]
 }
 
+# Padding of sliding-window analyses ####
+cd_pad_param <- function(show_if = NULL) {
+  cd_sel("pad", "Pad the ends by half a window", c("No padding (the result starts and ends half a window inside)" = "none",
+      "Mirror the record at its ends" = "mirror", "Mean value" = "mean"), value = "none",
+      help = "With padding, windows are also centred on the first and last samples, so the result spans the whole record.",
+      show_if = show_if)
+}
+
+cd_pad_apply <- function(s, half, pad) {
+  if (is.null(pad) || identical(pad, "none")) {
+    return(s)
+  }
+  out <- cd_pad_ends(s, half, pad)
+  names(out) <- names(s)
+  out
+}
+
+cd_pad_code <- function(half, pad) {
+  if (is.null(pad) || identical(pad, "none")) {
+    return(character())
+  }
+  c("rng <- range(dat[, 1])",
+      sprintf("dat <- CycloDesk::cd_pad_ends(dat, width = %s, method = %s)", cd_fmt(half), cd_dep(pad)))
+}
+
 cd_nyq <- function(d) {
   signif(0.5 / cd_dt(d[, 1]), 4)
 }
@@ -252,6 +277,7 @@ cd_tools_timeseries <- function() {
           cd_sel("method", "Method", c("EHA, multitaper (astrochron)" = "eha", "EHA on a log2 period axis (WaverideR)" = "eha_log2",
               "Windowed FFT (WaverideR)" = "winfft", "Evolutive MESA (WaverideR)" = "mesa")),
           cd_num("win", "Window length (depth / time units)", len_default(0.15), min = 0),
+          cd_pad_param(show_if = list(param = "method", values = "eha")),
           cd_num("step", "Step (depth / time units)", function(d) { signif(5 * cd_dt(d[, 1]), 3) }, min = 0,
               show_if = list(param = "method", values = c("eha", "mesa"))),
           cd_num("tbw", "Time-bandwidth product (NW)", 2, min = 1, step = 0.5,
@@ -285,14 +311,23 @@ cd_tools_timeseries <- function() {
                 code = c(cd_even_code(d), code)))
           }
           if (p$method == "eha") {
-            r <- astrochron::eha(s, tbw = p$tbw, win = p$win, step = p$step, fmax = p$fmax, output = 2, genplot = FALSE,
+            sp <- cd_pad_apply(s, p$win / 2, p$pad)
+            r <- astrochron::eha(sp, tbw = p$tbw, win = p$win, step = p$step, fmax = p$fmax, output = 2, genplot = FALSE,
                 verbose = FALSE)
             r <- as.data.frame(r)
             f <- r[, 1]
             x <- as.numeric(sub("^X", "", names(r)[-1]))
             z <- t(as.matrix(r[, -1]))
-            code <- sprintf("res <- astrochron::eha(dat, tbw = %s, win = %s, step = %s, fmax = %s, output = 2, genplot = FALSE)",
-                cd_fmt(p$tbw), cd_fmt(p$win), cd_fmt(p$step), cd_fmt(p$fmax))
+            inr <- x >= min(s$x) - 1e-9 & x <= max(s$x) + 1e-9
+            x <- x[inr]
+            z <- z[inr, , drop = FALSE]
+            code <- c(cd_pad_code(p$win / 2, p$pad),
+                sprintf("res <- astrochron::eha(dat, tbw = %s, win = %s, step = %s, fmax = %s, output = 2, genplot = FALSE)",
+                cd_fmt(p$tbw), cd_fmt(p$win), cd_fmt(p$step), cd_fmt(p$fmax)),
+                if (identical(p$pad, "none")) { character() } else {
+                  c("x <- as.numeric(sub(\"^X\", \"\", names(res)[-1]))",
+                      "res <- res[, c(TRUE, x >= rng[1] & x <= rng[2])]  # only windows centred inside the record")
+                })
           } else {
             r <- WaverideR::win_fft(data = as.matrix(s), window_size = p$win, freq_max = p$fmax, genplot = FALSE)
             z <- as.matrix(r$Power_mat)
@@ -644,8 +679,12 @@ cd_tools_timeseries <- function() {
           sp <- res$spec
           fmax <- min(max(sp$Frequency), 3 * p$fhigh)
           k <- sp$Frequency <= fmax
+          vw <- cd_view_lims(range(sp$Frequency[k]), range(sp$Power[k]), x = sp$Frequency, y = sp$Power)
+          if (vw$on) {
+            k <- rep(TRUE, length(k))
+          }
           graphics::plot(sp$Frequency[k], sp$Power[k], type = "l", col = "#1f4e79", xlab = "Frequency (cycles/unit)",
-              ylab = "Power")
+              ylab = "Power", xlim = vw$x, ylim = vw$y)
           graphics::rect(p$flow, 0, p$fhigh, max(sp$Power[k]) * 1.1, col = grDevices::adjustcolor("#c0392b", 0.15), border = NA)
           graphics::abline(v = c(p$flow, p$fhigh), col = "#c0392b", lty = 2)
         }),
@@ -823,6 +862,7 @@ cd_tools_timeseries <- function() {
         params = list(
           cd_sel("method", "Method", c("eTimeOpt (astrochron)" = "etimeopt", "win_timeOpt, bias corrected (WaverideR)" = "win")),
           cd_num("win", "Window length (depth units)", len_default(0.2), min = 0),
+          cd_pad_param(show_if = list(param = "method", values = "etimeopt")),
           cd_num("step", "Step (depth units)", function(d) { signif(10 * cd_dt(d[, 1]), 3) }, min = 0),
           cd_num("sedmin", "Minimum sed. rate (cm/kyr)", 0.5, min = 0),
           cd_num("sedmax", "Maximum sed. rate (cm/kyr)", 5, min = 0),
@@ -832,15 +872,30 @@ cd_tools_timeseries <- function() {
         compute = function(d, p, d2, file, file2) {
           s <- cd_even(d)
           if (p$method == "etimeopt") {
-            r <- astrochron::eTimeOpt(s, win = p$win, step = p$step, sedmin = p$sedmin, sedmax = p$sedmax, numsed = p$numsed,
-                fit = as.integer(p$fit), output = 1, genplot = FALSE, verbose = 0)
+            sp <- cd_pad_apply(s, p$win / 2, p$pad)
+            r <- tryCatch(utils::capture.output(rr <- astrochron::eTimeOpt(sp, win = p$win, step = p$step, sedmin = p$sedmin,
+                sedmax = p$sedmax, numsed = p$numsed, fit = as.integer(p$fit), output = 1, genplot = FALSE, verbose = 0)),
+                error = function(e) {
+                  stop(sprintf(paste("eTimeOpt could not test these sedimentation rates: a %s-unit window is too short to",
+                      "hold enough cycles at the highest rates (astrochron lowers the maximum rate until it is below the",
+                      "minimum). Use a longer window or a lower maximum sed. rate."), cd_fmt(p$win)), call. = FALSE)
+                })
+            r <- rr
             sed <- r[[3]][, 1]
             x <- as.numeric(sub("^X", "", names(r[[3]])[-1]))
             z <- t(as.matrix(r[[3]][, -1]))
+            inr <- x >= min(s$x) - 1e-9 & x <= max(s$x) + 1e-9
+            x <- x[inr]
+            z <- z[inr, , drop = FALSE]
             track <- data.frame(depth = x, sedrate = sed[apply_which_max(z)])
-            code <- sprintf(paste0("res <- astrochron::eTimeOpt(dat, win = %s, step = %s, sedmin = %s, sedmax = %s, numsed = %d,\n",
+            code <- c(cd_pad_code(p$win / 2, p$pad),
+                sprintf(paste0("res <- astrochron::eTimeOpt(dat, win = %s, step = %s, sedmin = %s, sedmax = %s, numsed = %d,\n",
                 "    fit = %s, output = 1, genplot = FALSE)"), cd_fmt(p$win), cd_fmt(p$step), cd_fmt(p$sedmin), cd_fmt(p$sedmax),
-                as.integer(p$numsed), p$fit)
+                as.integer(p$numsed), p$fit),
+                if (identical(p$pad, "none")) { character() } else {
+                  c("x <- as.numeric(sub(\"^X\", \"\", names(res[[3]])[-1]))",
+                      "res[[3]] <- res[[3]][, c(TRUE, x >= rng[1] & x <= rng[2])]  # only windows centred inside the record")
+                })
             out <- list(x = x, sed = sed, z = z, track = track, method = "etimeopt")
           } else {
             stp <- max(1L, as.integer(round(p$step / cd_dt(s$x))))
@@ -915,6 +970,7 @@ cd_tools_timeseries <- function() {
         params = list(
           cd_num("age_ma", "Approximate age of the record (Ma)", 100, min = 0),
           cd_num("window", "Window length (depth units)", len_default(0.25), min = 0),
+          cd_pad_param(),
           cd_num("step", "Step (samples)", 10, min = 1, step = 1),
           cd_num("srmin", "Minimum sed. rate (cm/kyr)", 0.2, min = 0),
           cd_num("srmax", "Maximum sed. rate (cm/kyr)", 10, min = 0),
@@ -924,13 +980,20 @@ cd_tools_timeseries <- function() {
           s <- cd_even(d)
           tg <- WaverideR::coco_target_from_periods(age_ma = p$age_ma)
           sr <- seq(p$srmin, p$srmax, by = p$srstep)
-          r <- WaverideR::ecoco_classic(data = as.matrix(s), target = tg, window = p$window, step = p$step, sr = sr,
+          sp <- cd_pad_apply(s, p$window / 2, p$pad)
+          r <- WaverideR::ecoco_classic(data = as.matrix(sp), target = tg, window = p$window, step = p$step, sr = sr,
               nsim = p$nsim, verbose = FALSE)
+          if (!identical(p$pad, "none")) {
+            r <- cd_ecoco_clip(r, range(s$x))
+          }
           o <- list()
-          code <- c(cd_even_code(d), sprintf("tg <- WaverideR::coco_target_from_periods(age_ma = %s)", cd_fmt(p$age_ma)),
+          code <- c(cd_even_code(d), cd_pad_code(p$window / 2, p$pad),
+              sprintf("tg <- WaverideR::coco_target_from_periods(age_ma = %s)", cd_fmt(p$age_ma)),
               sprintf(paste0("res <- WaverideR::ecoco_classic(data = as.matrix(dat), target = tg, window = %s, step = %d,\n",
                   "    sr = seq(%s, %s, by = %s), nsim = %d)"), cd_fmt(p$window), as.integer(p$step), cd_fmt(p$srmin),
-                  cd_fmt(p$srmax), cd_fmt(p$srstep), as.integer(p$nsim)), "plot(res)")
+                  cd_fmt(p$srmax), cd_fmt(p$srstep), as.integer(p$nsim)),
+              if (identical(p$pad, "none")) { character() } else { "# windows centred outside rng (the padding) can be ignored" },
+              "plot(res)")
           if (!is.null(r$track)) {
             o[[1]] <- cd_output(cd_out_name(file, "-eCOCO_track"), as.data.frame(r$track), header = TRUE, var = "res$track")
             code <- c(code, cd_code_write(o))
@@ -1158,4 +1221,21 @@ cd_wt_slim <- function(w, max_cols = 2000) {
   w$nc <- length(idx)
   w$slim <- TRUE
   w
+}
+
+# Keeps the eCOCO windows centred inside the record (after padding): all depth-wise fields are subset
+cd_ecoco_clip <- function(r, rng) {
+  dep <- r$depth
+  keep <- dep >= rng[1] - 1e-9 & dep <= rng[2] + 1e-9
+  n <- length(dep)
+  for (nm in names(r)) {
+    v <- r[[nm]]
+    if (is.matrix(v) && ncol(v) == n) {
+      r[[nm]] <- v[, keep, drop = FALSE]
+    } else if (is.data.frame(v) && nrow(v) == n) {
+      r[[nm]] <- v[keep, , drop = FALSE]
+    }
+  }
+  r$depth <- dep[keep]
+  r
 }

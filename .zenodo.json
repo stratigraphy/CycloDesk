@@ -1,5 +1,5 @@
 {
-  "title": "CycloDesk: Graphical Interface for Cyclostratigraphy with WaverideR and astrochron",
+  "title": "CycloDesk: Graphical Interface for Cyclostratigraphy",
   "upload_type": "software",
   "description": "<p>CycloDesk is a point-and-click interface for cyclostratigraphy and paleoclimate time-series analysis that runs in the web browser on your own computer. All calculations are done by the R packages WaverideR and astrochron; every step writes its result as a text file and logs the equivalent R code, so an analysis made by clicking can be repeated in a script.</p>",
   "creators": [

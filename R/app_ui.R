@@ -79,13 +79,10 @@ cd_tool_icon <- function(id) {
 }
 
 cd_tool_items <- function(menu) {
-  tl <- cd_tools()
+  tl <- cd_tool_order(cd_tools(), menu)
   out <- list()
   last_group <- ""
   for (t in tl) {
-    if (t$menu != menu) {
-      next
-    }
     g <- if (is.null(t$group)) { "" } else { t$group }
     if (!identical(g, last_group) && nzchar(g)) {
       if (length(out)) {
@@ -94,13 +91,38 @@ cd_tool_items <- function(menu) {
       out[[length(out) + 1]] <- cd_header(g)
     }
     last_group <- g
-    out[[length(out) + 1]] <- cd_item(t$label, paste0("tool:", t$id), icon = cd_tool_icon(t$id))
+    out[[length(out) + 1]] <- cd_item(t$label, paste0("tool:", t$id), icon = if (is.null(t$icon)) { cd_tool_icon(t$id) } else { t$icon })
     if (t$id == "track_auto") {
       out[[length(out) + 1]] <- cd_item("Track a cycle by hand on the scalogram", "cmd:track", icon = "route")
       out[[length(out) + 1]] <- cd_item("Anchor to an astronomical solution or metronome", "cmd:anchor", icon = "anchor")
     }
   }
   out
+}
+
+# Tools of one menu with the same group gathered together ####
+# Groups keep the order in which they first appear; a group with a source in brackets, e.g.
+# "Spectral analysis (astrochron)", follows the group of the same name without it.
+cd_tool_order <- function(tl, menu) {
+  sel <- list()
+  for (t in tl) {
+    if (identical(t$menu, menu)) {
+      sel[[length(sel) + 1]] <- t
+    }
+  }
+  if (!length(sel)) {
+    return(sel)
+  }
+  g <- character(length(sel))
+  for (i in seq_along(sel)) {
+    g[i] <- if (is.null(sel[[i]]$group)) { "" } else { sel[[i]]$group }
+  }
+  base <- sub(" \\([^)]*\\)$", "", g)
+  key_base <- match(base, base)
+  key_group <- match(g, g)
+  key_source <- as.integer(base != g)
+  o <- order(key_base, key_source, key_group, seq_along(sel))
+  sel[o]
 }
 
 # Small wave logo for the menu bar
@@ -117,6 +139,7 @@ cd_ui <- function() {
               cd_menu("File", list(
                 cd_item("New folder...", "cmd:newfolder", "folder-plus"),
                 cd_item("New data file (paste)...", "cmd:newfile", "file-circle-plus"),
+                cd_item("Colour record from an image (outcrop, core, tree rings)...", "cmd:image", "image"),
                 cd_divider(),
                 cd_item("Save current figure...", "cmd:savefig", "image"),
                 cd_item("Save R code of this session", "cmd:savecode", "code"),
@@ -141,6 +164,10 @@ cd_ui <- function() {
               cd_menu("Basic Series", cd_tool_items("Basic Series")),
               cd_menu("Math", cd_tool_items("Math")),
               cd_menu("Time Series", cd_tool_items("Time Series")),
+              cd_menu("Wavelets", cd_tool_items("Wavelets")),
+              cd_menu("Sed. rate", cd_tool_items("Sed. rate")),
+              cd_menu("Age models", cd_tool_items("Age models")),
+              cd_menu("Astronomy", cd_tool_items("Astronomy")),
               cd_menu("Help", list(
                 cd_item("About CycloDesk and how to cite", "cmd:about", "circle-info"),
                 cd_item("Which R function does what", "cmd:functions", "book"),
@@ -190,7 +217,9 @@ cd_ui <- function() {
               shiny::uiOutput("tool_form"),
               shiny::uiOutput("tool_buttons")),
           shiny::column(8,
-              shiny::plotOutput("tool_plot", height = "560px"),
+              shiny::uiOutput("tool_view_ui"),
+              shiny::plotOutput("tool_plot", height = "560px", dblclick = "tool_dbl",
+                  brush = shiny::brushOpts("tool_brush", direction = "xy", resetOnNew = TRUE, delay = 400)),
               shiny::verbatimTextOutput("tool_text"))))
   data_tab <- shiny::tabPanel("Data", value = "data",
       shiny::fluidRow(shiny::column(5, shiny::uiOutput("stats")), shiny::column(7, shiny::tableOutput("datatable"))))
@@ -213,7 +242,7 @@ cd_ui <- function() {
       shiny::tags$div(class = "cd-main",
           left,
           shiny::tags$div(class = "cd-right cd-card",
-              shiny::tabsetPanel(id = "tabs", type = "tabs", plot_tab, tool_tab, cd_track_tab(), cd_anchor_tab(), data_tab, code_tab,
+              shiny::tabsetPanel(id = "tabs", type = "tabs", plot_tab, tool_tab, cd_track_tab(), cd_anchor_tab(), cd_image_tab(), data_tab, code_tab,
                   log_tab))),
       shiny::tags$div(class = "cd-status", shiny::textOutput("status", inline = TRUE)))
 }

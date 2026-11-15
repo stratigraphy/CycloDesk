@@ -31,6 +31,8 @@ reference:
     contents:
       - read_series
       - write_series
+      - cd_pad_ends
+      - cd_image_profile
   - title: Astronomical solutions, tracking and age models
     contents:
       - cd_laskar

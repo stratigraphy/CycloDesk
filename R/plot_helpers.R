@@ -71,6 +71,11 @@ cd_plot_series <- function(series, labels = NULL, stack = FALSE, standardise = F
     inx <- allx >= min(xlim) & allx <= max(xlim)
     ylim <- range(ally[inx], finite = TRUE)
   }
+  if (!swap) {
+    vw <- cd_view_lims(xlim, ylim, x = allx, y = ally)
+    xlim <- vw$x
+    ylim <- vw$y
+  }
   if (rev_x) {
     xlim <- rev(xlim)
   }
@@ -125,7 +130,11 @@ cd_plot_spectrum <- function(f, pw, cl = NULL, cl_names = NULL, xaxis = "frequen
     main = NULL, label_peaks = TRUE, ylab = "Power", peaks_above = NULL) {
   oldpar <- graphics::par(no.readonly = TRUE)
   on.exit(graphics::par(oldpar))
-  cd_par()
+  if (logy) {
+    cd_par(mar = c(4, 5.2, 1.6, 1))
+  } else {
+    cd_par()
+  }
   ok <- is.finite(f) & is.finite(pw) & f > 0
   if (!is.null(fmax) && is.finite(fmax)) {
     ok <- ok & f <= fmax
@@ -140,9 +149,14 @@ cd_plot_spectrum <- function(f, pw, cl = NULL, cl_names = NULL, xaxis = "frequen
   }
   x <- if (xaxis == "period") { 1 / f } else { f }
   yr <- range(c(pw, if (is.null(cl)) { numeric() } else { cl[cl > 0] }), finite = TRUE)
+  vw <- cd_view_lims(range(x), yr, x = x, y = pw, logy = logy)
   graphics::plot(x, pw, type = "n", log = paste0(if (logy) { "y" } else { "" }, if (xaxis == "period") { "x" } else { "" }),
-      xlab = if (xaxis == "period") { "Period" } else { "Frequency (cycles/unit)" }, ylab = ylab, ylim = yr,
-      main = main)
+      xlab = if (xaxis == "period") { "Period" } else { "Frequency (cycles/unit)" },
+      ylab = if (logy) { "" } else { ylab }, xlim = vw$x,
+      ylim = vw$y, main = main)
+  if (logy) {
+    graphics::title(ylab = ylab, line = 3.9)
+  }
   graphics::grid(col = "grey90", lty = 1)
   lt <- c(2, 1, 3, 4)
   cc <- c("#c0392b", "#d35400", "#8e44ad", "#16a085")
@@ -159,10 +173,14 @@ cd_plot_spectrum <- function(f, pw, cl = NULL, cl_names = NULL, xaxis = "frequen
   if (label_peaks && length(pw) > 5) {
     thr <- if (is.null(peaks_above)) { rep(-Inf, length(pw)) } else { peaks_above[ok] }
     pk <- cd_peaks(pw, thr)
+    if (vw$on) {
+      # zoomed: label the peaks inside the view
+      pk <- pk[x[pk] >= min(vw$x) & x[pk] <= max(vw$x) & pw[pk] >= min(vw$y) & pw[pk] <= max(vw$y)]
+    }
     if (length(pk)) {
       pk <- pk[order(-pw[pk])]
       xs <- if (xaxis == "period") { log10(x) } else { x }
-      gap <- 0.04 * diff(range(xs))
+      gap <- 0.04 * diff(range(if (vw$on) { if (xaxis == "period") { log10(vw$x) } else { vw$x } } else { xs }))
       keep <- integer()
       for (k in pk) {
         if (length(keep) >= 8) {
@@ -207,8 +225,8 @@ cd_plot_image <- function(x, y, z, xlab = "Depth / time", ylab = "Frequency (cyc
     log_power = FALSE, ylog = FALSE, swap = FALSE, zlab = "Power", palette = "viridis|viridis") {
   oldpar <- graphics::par(no.readonly = TRUE)
   on.exit(graphics::par(oldpar))
-  graphics::layout(matrix(1:2, nrow = 1), widths = c(1, 0.12))
-  cd_par()
+  # figure 1 (colour bar) on the right is drawn first, figure 2 (the image) last
+  graphics::layout(matrix(c(2, 1), nrow = 1), widths = c(1, graphics::lcm(3.1)))
   if (log_power) {
     z <- log10(pmax(z, max(z, na.rm = TRUE) * 1e-8))
     zlab <- paste0("log10 ", zlab)
@@ -221,20 +239,24 @@ cd_plot_image <- function(x, y, z, xlab = "Depth / time", ylab = "Frequency (cyc
   z <- z[ox, , drop = FALSE]
   cols <- cd_palette(100, palette)
   reg <- cd_regular(x) && cd_regular(y) && !ylog
-  if (swap) {
-    graphics::image(y, x, t(z), col = cols, xlab = ylab, ylab = xlab, main = main, log = if (ylog) { "x" } else { "" },
-        useRaster = reg, ylim = rev(range(x)))
-  } else {
-    graphics::image(x, y, z, col = cols, xlab = xlab, ylab = ylab, main = main, log = if (ylog) { "y" } else { "" },
-        useRaster = reg)
-  }
-  graphics::box()
-  graphics::par(mar = c(4, 0.5, 1.6, 3.5))
+  cd_par()
+  graphics::par(mar = c(4, 0.4, 1.6, 3.4))
   zr <- range(z, finite = TRUE)
   zz <- seq(zr[1], zr[2], length.out = 100)
   graphics::image(1, zz, matrix(zz, nrow = 1), col = cols, axes = FALSE, xlab = "", ylab = "")
   graphics::axis(4, cex.axis = 0.8)
   graphics::mtext(zlab, side = 4, line = 2.3, cex = 0.8, las = 0)
+  graphics::box()
+  cd_par()
+  if (swap) {
+    vw <- cd_view_lims(range(y), rev(range(x)), last = TRUE)
+    graphics::image(y, x, t(z), col = cols, xlab = ylab, ylab = xlab, main = main, log = if (ylog) { "x" } else { "" },
+        useRaster = reg, xlim = vw$x, ylim = vw$y)
+  } else {
+    vw <- cd_view_lims(range(x), range(y), last = TRUE)
+    graphics::image(x, y, z, col = cols, xlab = xlab, ylab = ylab, main = main, log = if (ylog) { "y" } else { "" },
+        useRaster = reg, xlim = vw$x, ylim = vw$y)
+  }
   graphics::box()
   invisible(NULL)
 }
@@ -309,7 +331,8 @@ cd_plot_interval <- function(d, a, b, keep_inside = TRUE) {
   cd_par()
   s <- d[stats::complete.cases(d[, 1:2]), 1:2]
   s <- s[order(s[, 1]), ]
-  graphics::plot(s[, 1], s[, 2], type = "n", xlab = names(s)[1], ylab = names(s)[2])
+  vw <- cd_view_lims(range(s[, 1]), range(s[, 2]), x = s[, 1], y = s[, 2])
+  graphics::plot(s[, 1], s[, 2], type = "n", xlab = names(s)[1], ylab = names(s)[2], xlim = vw$x, ylim = vw$y)
   graphics::grid(col = "grey90", lty = 1)
   lo <- min(a, b, na.rm = TRUE)
   hi <- max(a, b, na.rm = TRUE)
@@ -342,10 +365,67 @@ cd_plot_band <- function(d, flow, fhigh) {
     fmax <- min(fmax, max(3 * fhigh, 0.2 * fmax))
   }
   k <- sp$Frequency <= fmax
-  graphics::plot(sp$Frequency[k], sp$Power[k], type = "l", col = "#1f4e79", xlab = "Frequency (cycles/unit)", ylab = "Power")
+  vw <- cd_view_lims(range(sp$Frequency[k]), range(sp$Power[k]), x = sp$Frequency, y = sp$Power)
+  if (vw$on) {
+    k <- rep(TRUE, length(k))
+  }
+  graphics::plot(sp$Frequency[k], sp$Power[k], type = "l", col = "#1f4e79", xlab = "Frequency (cycles/unit)", ylab = "Power",
+      xlim = vw$x, ylim = vw$y)
   graphics::grid(col = "grey90", lty = 1)
   if (is.finite(flow) && is.finite(fhigh)) {
     graphics::rect(flow, 0, fhigh, max(sp$Power[k]) * 1.1, col = grDevices::adjustcolor("#c0392b", 0.12), border = NA)
   }
   invisible(NULL)
+}
+
+# Zoom of the figure in the Tool tab ####
+#
+# The Tool tab stores the zoom (a box dragged on the figure, or typed limits) in the option CycloDesk.view =
+# list(x = c(from, to), y = c(from, to)). The plot helpers apply it to the last panel of a figure only, because the
+# mouse coordinates refer to that panel. With only x limits, y is fitted to the data inside them.
+cd_state <- new.env(parent = emptyenv())
+
+cd_next_is_last <- function() {
+  m <- graphics::par("mfg")
+  n <- m[3] * m[4]
+  k <- (m[1] - 1) * m[4] + m[2]
+  nxt <- if (k >= n) { 1 } else { k + 1 }
+  nxt == n
+}
+
+# last: TRUE when the caller knows this is the last panel (a layout whose figure order differs from the grid order)
+cd_view_lims <- function(xlim, ylim, x = NULL, y = NULL, logy = FALSE, last = NA) {
+  v <- getOption("CycloDesk.view")
+  if (is.null(v) || !(if (is.na(last)) { cd_next_is_last() } else { last })) {
+    return(list(x = xlim, y = ylim, on = FALSE))
+  }
+  vx <- v$x
+  vy <- v$y
+  have_x <- length(vx) == 2 && all(is.finite(vx)) && diff(vx) != 0
+  have_y <- length(vy) == 2 && all(is.finite(vy)) && diff(vy) != 0
+  if (!have_x && !have_y) {
+    return(list(x = xlim, y = ylim, on = FALSE))
+  }
+  cd_state$view_used <- TRUE
+  if (have_x) {
+    vx <- sort(vx)
+    xlim <- if (length(xlim) == 2 && xlim[1] > xlim[2]) { rev(vx) } else { vx }
+    if (!have_y && !is.null(x) && !is.null(y)) {
+      inx <- is.finite(x) & is.finite(y) & x >= vx[1] & x <= vx[2]
+      if (logy) {
+        inx <- inx & y > 0
+      }
+      if (sum(inx) >= 2) {
+        ylim <- range(y[inx])
+      }
+    }
+  }
+  if (have_y) {
+    vy <- sort(vy)
+    if (logy) {
+      vy <- pmax(vy, min(ylim[ylim > 0], na.rm = TRUE) * 1e-3)
+    }
+    ylim <- if (length(ylim) == 2 && ylim[1] > ylim[2]) { rev(vy) } else { vy }
+  }
+  list(x = xlim, y = ylim, on = TRUE)
 }

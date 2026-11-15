@@ -16,7 +16,7 @@ APP_TITLE <- "CycloDesk"
 PORT <- 7792L
 REPOS <- c("stratigraphy/WaverideR", "stratigraphy/CycloDesk")
 CRAN <- "https://cloud.r-project.org"
-NEED <- c("remotes", "shiny", "callr", "astrochron", "readxl")
+NEED <- c("remotes", "shiny", "callr", "astrochron", "readxl", "png", "jpeg", "DecomposeR", "lomb", "dtw")
 
 state_dir <- file.path(APP_DIR, "state")
 dir.create(state_dir, showWarnings = FALSE)
@@ -38,6 +38,32 @@ run_ps <- function(lines) {
       stdout = TRUE, stderr = TRUE))
 }
 
+# An install that was interrupted (e.g. while CycloDesk was running) leaves a lock folder 00LOCK-<package> and an
+# empty package folder; every later install of that package then fails. Remove both. ####
+clear_locks <- function(lib, pkgs = c("WaverideR", "CycloDesk")) {
+  for (pk in pkgs) {
+    locks <- Sys.glob(file.path(lib, paste0("00LOCK-", pk, "*")))
+    for (lk in locks) {
+      say("Removing the lock ", lk, " left by an interrupted install ...")
+      unlink(lk, recursive = TRUE, force = TRUE)
+    }
+    d <- file.path(lib, pk)
+    if (dir.exists(d) && !file.exists(file.path(d, "DESCRIPTION"))) {
+      say("Removing the incomplete folder ", d, " ...")
+      unlink(d, recursive = TRUE, force = TRUE)
+    }
+  }
+}
+# Installs and writes warnings and errors to the log (install.packages only warns when a package fails)
+logged <- function(expr) {
+  withCallingHandlers(tryCatch(expr, error = function(e) {
+    say("FAILED: ", conditionMessage(e))
+  }), warning = function(w) {
+    say("Warning: ", conditionMessage(w))
+    invokeRestart("muffleWarning")
+  })
+}
+
 # A user library when the R library is not writable (R installed for all users without admin rights) ####
 lib <- .libPaths()[1]
 if (file.access(lib, 2) != 0) {
@@ -51,9 +77,31 @@ if (file.access(lib, 2) != 0) {
 for (pk in NEED) {
   if (!requireNamespace(pk, quietly = TRUE)) {
     say("Installing ", pk, " from CRAN ...")
-    utils::install.packages(pk, lib = lib, repos = CRAN)
+    logged(utils::install.packages(pk, lib = lib, repos = CRAN))
   }
 }
+# CycloDesk must not run while it is replaced
+port_open <- function() {
+  con <- suppressWarnings(try(socketConnection("127.0.0.1", PORT, open = "r", blocking = TRUE, timeout = 1), silent = TRUE))
+  if (inherits(con, "try-error")) {
+    return(FALSE)
+  }
+  close(con)
+  TRUE
+}
+if (port_open()) {
+  say("CycloDesk is still running: close it (Close button in CycloDesk, or close its browser tab) ...")
+  k <- 0
+  while (port_open() && k < 120) {
+    Sys.sleep(1)
+    k <- k + 1
+  }
+  if (port_open()) {
+    say("CycloDesk is still running; close it and run SETUP.bat again.")
+    stop("CycloDesk is running", call. = FALSE)
+  }
+}
+clear_locks(lib)
 for (pk in c("CycloDesk", "WaverideR")) {
   if (isNamespaceLoaded(pk)) {
     unloadNamespace(pk)
@@ -65,7 +113,7 @@ if (file.exists(local_src)) {
   src <- src[nzchar(src)]
   for (s in src) {
     say("Installing from the source folder ", s, " ...")
-    utils::install.packages(s, lib = lib, repos = NULL, type = "source")
+    logged(utils::install.packages(s, lib = lib, repos = NULL, type = "source"))
   }
 } else {
   options(repos = c(CRAN = CRAN))

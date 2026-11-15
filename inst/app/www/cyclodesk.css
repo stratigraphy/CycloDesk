@@ -258,3 +258,14 @@ a.action-button:focus-visible, .btn:focus-visible { box-shadow: 0 0 0 3px rgba(4
 #anc_text { font-size: 12px; background: #f8fafc; border: 1px solid var(--cd-line); border-radius: 10px; }
 .cd-trkstack > .shiny-plot-output, .cd-trkstack .shiny-html-output { margin: 0; padding: 0; }
 .cd-trkstack img { display: block; }
+
+/* long menus scroll instead of running off the screen */
+.cd-navbar .dropdown-menu { max-height: calc(100vh - 70px); overflow-y: auto; }
+
+/* zoom bar above the tool figure */
+.cd-viewbar { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 12px; color: var(--cd-muted);
+  margin: 0 0 6px 0; }
+.cd-viewbar .cd-viewlab { color: var(--cd-ink); font-weight: 600; margin-right: 4px; }
+.cd-viewbar .cd-viewnum { width: 92px; height: 26px; padding: 2px 6px; font-size: 12px; display: inline-block; }
+.cd-viewbar .btn-xs { height: 26px; }
+.cd-viewbar .cd-viewhint { margin-left: 6px; font-style: italic; }
