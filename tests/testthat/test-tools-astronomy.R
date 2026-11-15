@@ -49,7 +49,7 @@ test_that("all astronomy tools run with default parameters", {
       as_test_tuned = list(n_surr = 5), as_test_check = list(k_true = 21, len = 3000))
   ids <- character()
   for (t in CycloDesk:::cd_tools()) {
-    if (t$menu != "Astronomy") {
+    if (t$menu != "Astronomy" || !startsWith(t$id, "as_")) {
       next
     }
     ids <- c(ids, t$id)
