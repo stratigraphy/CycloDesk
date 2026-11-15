@@ -16,3 +16,4 @@
 ^CONTRIBUTING\.md$
 ^\.gitattributes$
 ^installer$
+^\.fuse_hidden

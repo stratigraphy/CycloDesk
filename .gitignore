@@ -11,3 +11,4 @@ installer/build/
 installer/dist/
 installer/shell/target/
 installer/shell/gen/
+.fuse_hidden*
