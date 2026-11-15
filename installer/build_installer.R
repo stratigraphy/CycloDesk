@@ -103,7 +103,8 @@ if (!reuse) {
   say("CycloDesk ", version, " for ", platform, "-", arch)
   wr_tar <- build_tarball(wr_dir, "stratigraphy/WaverideR", wr_sha)
   cd_tar <- build_tarball(root, "stratigraphy/CycloDesk", cd_sha)
-  cran_pkgs <- c("palinsol", "astrochron", "lomb", "StratigrapheR", "DecomposeR")
+  # multitaper (Fortran) is built here because conda-forge lacks it for R 4.5 on Apple silicon
+  cran_pkgs <- c("multitaper", "palinsol", "astrochron", "lomb", "StratigrapheR", "DecomposeR")
   got <- utils::download.packages(cran_pkgs, destdir = src, repos = cran, type = "source")
   cran_tar <- basename(got[match(cran_pkgs, got[, 1]), 2])
   if (anyNA(cran_tar)) {
@@ -119,8 +120,10 @@ if (!reuse) {
       pin, quiet = TRUE, mode = "wb")
   variants <- file.path(work, "variants.yaml")
   writeLines(c("r_base:", sprintf("  - \"%s\"", r_base)), variants)
+  # system2(env = ) does not work on Windows
+  Sys.setenv(CYCLODESK_VERSION = version)
   run("rattler-build", c("build", "--recipe", shQuote(file.path(recipe, "recipe.yaml")), "--output-dir", shQuote(channel),
-      "-m", shQuote(pin), "-m", shQuote(variants)), env = paste0("CYCLODESK_VERSION=", version))
+      "-m", shQuote(pin), "-m", shQuote(variants)))
 
 }
 # 3. Installer ####

@@ -40,7 +40,6 @@ requirements:
     - r-shiny
     - r-callr
     - r-remotes
-    - r-multitaper
     - r-doparallel
     - r-foreach
     - r-iterators
@@ -66,7 +65,6 @@ requirements:
     - r-shiny
     - r-callr
     - r-remotes
-    - r-multitaper
     - r-doparallel
     - r-foreach
     - r-iterators
@@ -93,7 +91,8 @@ requirements:
     - r-writexl
     - r-png
     - r-jpeg
-    - r-tiff
+    - if: not (osx and arm64)
+      then: r-tiff
     - r-ragg
     - r-dtw
 
