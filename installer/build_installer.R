@@ -184,5 +184,7 @@ if (platform != "linux") {
   unlink(file.path(cons, "post_install.sh"))
 }
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-run("constructor", c(shQuote(cons), "--output-dir", shQuote(normalizePath(out_dir))))
+# as "python -m constructor": on Windows R starts programs by their short (8.3) name, and the constructor.exe launcher
+# then looks for CONSTR~1-script.py
+run("python", c("-m", "constructor", shQuote(cons), "--output-dir", shQuote(normalizePath(out_dir))))
 say("Installer: ", file.path(normalizePath(out_dir), filename))
