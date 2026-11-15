@@ -28,11 +28,11 @@ jobs:
       run:
         shell: bash -el {0}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           path: CycloDesk
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: stratigraphy/WaverideR
           path: WaverideR
@@ -83,7 +83,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           if (-not (Test-Path "$dest\Menu\cyclodesk_start.vbs")) { throw "start script missing" }
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: CycloDesk-${{ runner.os }}-${{ runner.arch }}
           path: dist/CycloDesk-*
