@@ -142,7 +142,7 @@ If CycloDesk helps your work, please cite it, together with the packages
 that do the calculations:
 
 - Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy.
-  R package version 0.2.0. <https://github.com/stratigraphy/CycloDesk>
+  R package version 0.2.1. <https://github.com/stratigraphy/CycloDesk>
 - Arts, M., Corradini, C., Pondrelli, M., Pas, D., Da Silva, A.-C.
   (2024). Age and orbital forcing in the upper Silurian Cellon section
   (Carnic Alps, Austria) uncovered using the WaverideR R package.
