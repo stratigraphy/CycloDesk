@@ -1,0 +1,25 @@
+[package]
+name = "cyclodesk"
+version = "0.2.0"
+description = "CycloDesk desktop window: starts CycloDesk's R in the background and shows it in a native window"
+edition = "2021"
+license = "GPL-2.0-or-later"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-single-instance = "2"
+open = "5"
+serde_json = "1"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true

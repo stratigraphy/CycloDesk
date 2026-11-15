@@ -16,6 +16,10 @@ build:
   number: 0
   # astrochron has Fortran code; the other packages are pure R
   dynamic_linking:
+    # only the R packages compiled here: the window program must find the system's web view libraries, not
+    # conda's, and keeps its macOS signature
+    binary_relocation:
+      - "lib/R/library/**"
     missing_dso_allowlist:
       - "*"
 
@@ -26,16 +30,22 @@ requirements:
         - ${{ compiler('c') }}
         - ${{ stdlib('c') }}
         - ${{ compiler('fortran') }}
+        - ${{ compiler('cxx') }}
         - make
       else:
         - ${{ compiler('m2w64_c') }}
         - ${{ stdlib('m2w64_c') }}
         - ${{ compiler('m2w64_fortran') }}
+        - ${{ compiler('m2w64_cxx') }}
         - m2-make
         - m2-sed
         - m2-coreutils
         - m2-filesystem
   host:
+    - r-dotcall64
+    - r-rcpp
+    - r-maps
+    - r-rcolorbrewer
     - r-base
     - r-shiny
     - r-callr
@@ -44,7 +54,6 @@ requirements:
     - r-foreach
     - r-iterators
     - r-idpmisc
-    - r-fields
     - r-viridislite
     - r-ggplot2
     - r-gridextra
@@ -61,6 +70,10 @@ requirements:
     - r-hexbin
     - r-colorramps
   run:
+    - r-dotcall64
+    - r-rcpp
+    - r-maps
+    - r-rcolorbrewer
     - r-base
     - r-shiny
     - r-callr
@@ -69,7 +82,6 @@ requirements:
     - r-foreach
     - r-iterators
     - r-idpmisc
-    - r-fields
     - r-viridislite
     - r-ggplot2
     - r-gridextra
@@ -85,7 +97,6 @@ requirements:
     - r-tictoc
     - r-hexbin
     - r-colorramps
-    - r-rcolorbrewer
     - r-scico
     - r-readxl
     - r-writexl

@@ -3,11 +3,12 @@
 # Windows: CycloDesk-<version>-Windows-x86_64.exe; macOS: CycloDesk-<version>-MacOSX-<arm64|x86_64>.pkg;
 # Linux: CycloDesk-<version>-Linux-x86_64.sh. Each brings its own R (from conda-forge) with all packages and makes
 # a desktop/menu icon. Steps:
+#   0. build the CycloDesk window program (installer/shell, Rust/Tauri) with cargo;
 #   1. collect the R source packages that are not on conda-forge in installer/build/recipe/src (CycloDesk and
 #      WaverideR from source folders, astrochron, palinsol, lomb, StratigrapheR and DecomposeR from CRAN);
 #   2. build the conda package "cyclodesk" with rattler-build (installer/recipe);
 #   3. build the installer with constructor (installer/construct).
-# Needs R, rattler-build and constructor on the PATH (e.g. micromamba create -n build -c conda-forge rattler-build
+# Needs R, cargo, rattler-build and constructor on the PATH (e.g. micromamba create -n build -c conda-forge rattler-build
 # constructor). Usage, from the CycloDesk folder:
 #   Rscript installer/build_installer.R --waverider=../WaverideR [--waverider-sha=<commit>] [--cyclodesk-sha=<commit>]
 #       [--out=installer/dist] [--r-base=4.5]
@@ -72,6 +73,44 @@ if (!reuse) {
   dir.create(src, recursive = TRUE)
   file.copy(list.files(file.path(inst_dir, "recipe"), full.names = TRUE), recipe, recursive = TRUE)
 
+  # 0. Window program ####
+  # CycloDesk's own window (installer/shell, Rust/Tauri): starts the installed R and shows the app; needs cargo
+  target <- file.path(work, "shell-target")
+  run("cargo", c("build", "--release", "--manifest-path", shQuote(file.path(inst_dir, "shell", "Cargo.toml")),
+      "--target-dir", shQuote(target)))
+  bin_dir <- file.path(recipe, "shell_bin")
+  dir.create(bin_dir)
+  exe <- file.path(target, "release", if (platform == "win") { "cyclodesk.exe" } else { "cyclodesk" })
+  if (platform == "win") {
+    file.copy(exe, file.path(bin_dir, "CycloDesk.exe"))
+  } else if (platform == "linux") {
+    file.copy(exe, file.path(bin_dir, "cyclodesk-window"), copy.mode = TRUE)
+  } else {
+    app <- file.path(bin_dir, "CycloDesk.app", "Contents")
+    dir.create(file.path(app, "MacOS"), recursive = TRUE)
+    dir.create(file.path(app, "Resources"))
+    file.copy(exe, file.path(app, "MacOS", "CycloDesk"), copy.mode = TRUE)
+    file.copy(file.path(inst_dir, "shell", "icons", "icon.icns"), file.path(app, "Resources", "icon.icns"))
+    plist <- c("<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">",
+        "<plist version=\"1.0\"><dict>",
+        "<key>CFBundleDevelopmentRegion</key><string>en</string>",
+        "<key>CFBundleExecutable</key><string>CycloDesk</string>",
+        "<key>CFBundleIconFile</key><string>icon.icns</string>",
+        "<key>CFBundleIdentifier</key><string>eu.stratigraphy.cyclodesk</string>",
+        "<key>CFBundleName</key><string>CycloDesk</string>",
+        "<key>CFBundleDisplayName</key><string>CycloDesk</string>",
+        "<key>CFBundlePackageType</key><string>APPL</string>",
+        sprintf("<key>CFBundleShortVersionString</key><string>%s</string>", version),
+        sprintf("<key>CFBundleVersion</key><string>%s</string>", version),
+        "<key>LSMinimumSystemVersion</key><string>11.0</string>",
+        "<key>NSHighResolutionCapable</key><true/>",
+        "</dict></plist>")
+    writeLines(plist, file.path(app, "Info.plist"))
+    # ad-hoc signature (Apple silicon runs only signed code; a developer signature can replace it later)
+    run("codesign", c("--force", "--deep", "--sign", "-", shQuote(file.path(bin_dir, "CycloDesk.app"))))
+  }
+
   # 1. Sources ####
   # A copy of a source folder, marked as a GitHub install when the commit is known, built into a tarball
   build_tarball <- function(dir, repo, sha) {
@@ -103,8 +142,10 @@ if (!reuse) {
   say("CycloDesk ", version, " for ", platform, "-", arch)
   wr_tar <- build_tarball(wr_dir, "stratigraphy/WaverideR", wr_sha)
   cd_tar <- build_tarball(root, "stratigraphy/CycloDesk", cd_sha)
-  # multitaper (Fortran) is built here because conda-forge lacks it for R 4.5 on Apple silicon
-  cran_pkgs <- c("multitaper", "palinsol", "astrochron", "lomb", "StratigrapheR", "DecomposeR")
+  # multitaper, spam and fields (Fortran) are built here: conda-forge lacks multitaper for R 4.5 on Apple silicon, and
+  # its Windows builds of spam and fields contain 32-bit pseudo relocations that crash R when Windows loads the DLLs
+  # far apart in memory ("Mingw-w64 runtime failure: 32 bit pseudo relocation ... out of range")
+  cran_pkgs <- c("multitaper", "spam", "fields", "palinsol", "astrochron", "lomb", "StratigrapheR", "DecomposeR")
   got <- utils::download.packages(cran_pkgs, destdir = src, repos = cran, type = "source")
   cran_tar <- basename(got[match(cran_pkgs, got[, 1]), 2])
   if (anyNA(cran_tar)) {
@@ -145,7 +186,7 @@ extra <- switch(platform,
         "uninstall_name: CycloDesk ${VERSION}"),
     osx = c("pkg_name: CycloDesk", "default_location_pkg: Library", "progress_notifications: true",
         "welcome_text: |", "  This installs CycloDesk with its own copy of R. Afterwards, start CycloDesk from",
-        "  Applications or Launchpad; it opens in your web browser."),
+        "  Applications or Launchpad."),
     linux = c("default_prefix: ${HOME}/CycloDesk", "post_install: post_install.sh"))
 chan_url <- paste0("file://", if (platform == "win") { "/" } else { "" }, gsub("\\\\", "/", normalizePath(channel)))
 

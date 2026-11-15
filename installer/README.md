@@ -26,13 +26,26 @@ installers to the release (or keeps them as workflow artifacts when started by h
 Locally (Linux or macOS shown; on Windows the same in a Miniforge prompt):
 
 ```sh
-micromamba create -n build -c conda-forge r-base=4.5 rattler-build constructor conda
+micromamba create -n build -c conda-forge r-base=4.5 rattler-build constructor conda   # plus Rust from rustup.rs
 micromamba activate build
 Rscript installer/build_installer.R --waverider=../WaverideR --out=installer/dist
 ```
 
 `--waverider-sha` and `--cyclodesk-sha` (the commits) mark the packages as GitHub installs so that "Update and
 restart" can update them; `--reuse-channel=true` skips steps 1-2 when only the installer changes.
+
+## The window program (shell/)
+
+CycloDesk runs as a desktop program: `shell/` is a small Rust/Tauri program (about 5 MB) that starts the installed R
+with `cyclodesk_start.R --port=<free port> --no-browser`, shows a start page while R loads, and then shows CycloDesk
+in its own window (WebView2 on Windows, WKWebView on macOS, WebKitGTK 4.1 on Linux). Closing the window stops R; when
+R stops (Close button, Update and restart) the window closes. Links to other sites open in the default browser.
+Messages from R go to `cyclodesk_console.txt` in the temporary folder. `CYCLODESK_SELFTEST=1` makes it start,
+check the page and quit (used by the GitHub test).
+
+Installed as `CycloDesk.exe` in the installation folder (Windows), `CycloDesk.app` in it (macOS; the shortcut in
+Applications opens it) or `bin/cyclodesk-window` with the launcher `bin/cyclodesk`, which falls back to the browser
+when WebKitGTK is missing (Linux).
 
 ## Started from the icon
 

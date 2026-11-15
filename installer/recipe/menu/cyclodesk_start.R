@@ -1,7 +1,7 @@
 # cyclodesk_start.R: starts CycloDesk from the desktop or menu icon of an installed copy ####
 #
-# Installed by the CycloDesk installer (Windows, macOS, Linux) next to the icon files. When CycloDesk already runs,
-# the page is opened again; otherwise R's web server is started and the page opened in the default browser.
+# Started by the CycloDesk window program (with --port=<n> --no-browser) or, as a fallback, directly from the icon:
+# then an already running CycloDesk is opened again in the browser, or R's web server is started and the page opened.
 # Messages go to cyclodesk_log.txt in the user's CycloDesk folder (tools::R_user_dir("CycloDesk", "data")).
 
 local({
@@ -10,15 +10,24 @@ local({
   dir <- if (length(f)) { dirname(normalizePath(sub("^--file=", "", f[1]))) } else { getwd() }
   assign("MENU_DIR", dir, envir = globalenv())
 })
+args <- commandArgs(trailingOnly = TRUE)
 PORT <- 7792L
+p <- grep("^--port=[0-9]+$", args, value = TRUE)
+if (length(p)) {
+  PORT <- as.integer(sub("^--port=", "", p[1]))
+}
+BROWSER <- !("--no-browser" %in% args)
+Sys.setenv(CYCLODESK_PORT = PORT)
 
 log_dir <- tools::R_user_dir("CycloDesk", "data")
 dir.create(log_dir, recursive = TRUE, showWarnings = FALSE)
 # updates go here when the installed library is not writable (cyclodesk_update.R)
 user_lib <- file.path(log_dir, "library")
-if (dir.exists(user_lib)) {
-  .libPaths(c(user_lib, .libPaths()))
-}
+# Only CycloDesk's own libraries: packages of another R on this computer (R_LIBS, R_LIBS_USER) can crash this R.
+# The settings are passed on to the background R processes (callr) and the updater.
+.libPaths(if (dir.exists(user_lib)) { user_lib } else { character() })
+Sys.setenv(R_LIBS = "", R_LIBS_USER = file.path(R.home(), "no-user-library"),
+    R_ENVIRON_USER = file.path(MENU_DIR, "none.Renviron"), R_PROFILE_USER = file.path(MENU_DIR, "none.Rprofile"))
 log_file <- file.path(log_dir, "cyclodesk_log.txt")
 log_con <- file(log_file, open = "wt")
 sink(log_con, split = FALSE)
@@ -46,7 +55,7 @@ open_page <- function(u) {
   }
 }
 
-if (port_open()) {
+if (BROWSER && port_open()) {
   cat("CycloDesk already runs: opening", url, "\n")
   open_page(url)
 } else {
@@ -56,5 +65,5 @@ if (port_open()) {
   options(waverider.dev_new = FALSE, shiny.useragg = isTRUE(ragg_ok), CycloDesk.launcher = MENU_DIR,
       CycloDesk.port = PORT, browser = open_page)
   app <- CycloDesk::cd_app(folder = NULL, stop_on_close = TRUE)
-  shiny::runApp(app, port = PORT, launch.browser = TRUE)
+  shiny::runApp(app, port = PORT, launch.browser = BROWSER)
 }

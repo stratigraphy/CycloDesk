@@ -11,7 +11,7 @@ local({
   dir <- if (length(f)) { dirname(normalizePath(sub("^--file=", "", f[1]))) } else { getwd() }
   assign("MENU_DIR", dir, envir = globalenv())
 })
-PORT <- 7792L
+PORT <- as.integer(Sys.getenv("CYCLODESK_PORT", "7792"))
 repos <- commandArgs(trailingOnly = TRUE)
 repos <- repos[grepl("^stratigraphy/[A-Za-z0-9.]+$", repos)]
 
@@ -87,12 +87,17 @@ if (ok) {
 } else {
   say("The update did not complete; CycloDesk keeps the previous version. Log: ", log_file)
 }
-if (.Platform$OS.type == "windows") {
+# start CycloDesk again: the window program when CycloDesk runs in it, else the start script
+shell <- Sys.getenv("CYCLODESK_SHELL")
+if (nzchar(shell) && file.exists(shell)) {
+  system2(shQuote(shell), wait = FALSE, stdout = FALSE, stderr = FALSE)
+} else if (.Platform$OS.type == "windows") {
   vbs <- normalizePath(file.path(MENU_DIR, "cyclodesk_start.vbs"), winslash = "\\", mustWork = FALSE)
   system2(file.path(Sys.getenv("SystemRoot", "C:\\Windows"), "System32", "wscript.exe"), shQuote(vbs, type = "cmd"),
       wait = FALSE)
 } else {
-  system2(file.path(R.home("bin"), "Rscript"), shQuote(file.path(MENU_DIR, "cyclodesk_start.R")), wait = FALSE,
+  system2(file.path(R.home("bin"), "Rscript"), c("--no-environ", "--no-init-file", shQuote(file.path(MENU_DIR, "cyclodesk_start.R"))),
+      wait = FALSE,
       stdout = FALSE, stderr = FALSE)
 }
 Sys.sleep(3)

@@ -14,6 +14,65 @@ for (pk in c("CycloDesk", "WaverideR", "astrochron", "shiny", "callr", "Decompos
   say(pk, " ", as.character(utils::packageVersion(pk)))
 }
 options(waverider.dev_new = FALSE)
+
+# Windows: no package DLL may contain 32-bit mingw pseudo relocations. They crash R ("Mingw-w64 runtime failure:
+# 32 bit pseudo relocation ... out of range") whenever Windows happens to load two DLLs more than 2 GB apart,
+# so a test run can pass while users' computers crash.
+pseudo_reloc32 <- function(f) {
+  b <- readBin(f, "raw", file.size(f))
+  u32 <- function(o) {
+    sum(as.numeric(as.integer(b[o + 1:4])) * 256^(0:3))
+  }
+  u16 <- function(o) {
+    as.integer(b[o + 1]) + 256L * as.integer(b[o + 2])
+  }
+  pe <- u32(0x3c)
+  nsec <- u16(pe + 6)
+  sh <- pe + 24 + u16(pe + 20)
+  n32 <- 0
+  for (i in seq_len(nsec) - 1) {
+    o <- sh + 40 * i
+    nm <- rawToChar(b[o + 1:8][b[o + 1:8] != as.raw(0)])
+    if (nm != ".rdata") {
+      next
+    }
+    st <- u32(o + 20)
+    en <- st + u32(o + 16) - 12
+    k <- st
+    while (k <= en) {
+      if (u32(k) == 0 && u32(k + 4) == 0 && u32(k + 8) == 1) {
+        j <- k + 12
+        while (j + 12 <= en + 12) {
+          fl <- u32(j + 8)
+          if (!(fl %in% c(8, 16, 32, 64)) || u32(j) == 0) {
+            break
+          }
+          n32 <- n32 + (fl == 32)
+          j <- j + 12
+        }
+        k <- j
+      } else {
+        k <- k + 4
+      }
+    }
+  }
+  n32
+}
+if (.Platform$OS.type == "windows") {
+  dlls <- Sys.glob(file.path(.Library, "*", "libs", "x64", "*.dll"))
+  bad <- character()
+  for (f in dlls) {
+    n <- pseudo_reloc32(f)
+    if (n > 0) {
+      bad <- c(bad, sprintf("%s (%d)", basename(dirname(dirname(dirname(f)))), n))
+    }
+  }
+  if (length(bad)) {
+    stop("packages with 32-bit pseudo relocations (they can crash R on Windows): ", paste(bad, collapse = ", "))
+  }
+  say("DLLs checked for 32-bit pseudo relocations: ", length(dlls), ", none found")
+}
+
 g <- WaverideR::grey
 g <- g[g[, 1] < 165, ]
 grDevices::pdf(NULL)

@@ -18,8 +18,8 @@ menu_packages:
 
 license_file: LICENSE.txt
 conclusion_text: |
-  CycloDesk is installed. Start it with the CycloDesk icon on the desktop or in the menu; it opens in your web
-  browser. Your data stay on your computer.
+  CycloDesk is installed. Start it with the CycloDesk icon on the desktop or in the menu. Your data stay on your
+  computer.
 
 register_python: false
 initialize_conda: false

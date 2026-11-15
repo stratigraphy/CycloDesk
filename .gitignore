@@ -9,3 +9,5 @@ launcher/state/
 launcher/local_source.txt
 installer/build/
 installer/dist/
+installer/shell/target/
+installer/shell/gen/

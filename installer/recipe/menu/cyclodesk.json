@@ -7,23 +7,24 @@
       "name": "CycloDesk",
       "description": "Point-and-click cyclostratigraphy and paleoclimate time-series analysis",
       "icon": "{{ MENU_DIR }}/cyclodesk.{{ ICON_EXT }}",
-      "command": ["{{ PREFIX }}/bin/Rscript", "{{ MENU_DIR }}/cyclodesk_start.R"],
+      "command": ["{{ PREFIX }}/bin/cyclodesk"],
       "activate": false,
       "terminal": false,
       "platforms": {
         "win": {
-          "command": ["C:\\Windows\\System32\\wscript.exe", "{{ MENU_DIR }}\\cyclodesk_start.vbs"],
+          "command": ["{{ PREFIX }}\\CycloDesk.exe"],
           "desktop": true,
           "quicklaunch": false
         },
         "linux": {
           "Categories": ["Science", "Education", "DataVisualization"],
-          "StartupWMClass": "CycloDesk"
+          "StartupWMClass": "cyclodesk-window"
         },
         "osx": {
+          "command": ["/usr/bin/open", "-a", "{{ PREFIX }}/CycloDesk.app"],
           "CFBundleName": "CycloDesk",
           "CFBundleDisplayName": "CycloDesk",
-          "CFBundleIdentifier": "eu.stratigraphy.cyclodesk"
+          "CFBundleIdentifier": "eu.stratigraphy.cyclodesk.launcher"
         }
       }
     }

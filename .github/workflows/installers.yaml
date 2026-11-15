@@ -37,6 +37,14 @@ jobs:
           repository: stratigraphy/WaverideR
           path: WaverideR
 
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Libraries for the window program (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev librsvg2-dev libayatana-appindicator3-dev libxdo-dev
+
       - uses: mamba-org/setup-micromamba@v2
         with:
           environment-name: build
@@ -63,6 +71,8 @@ jobs:
           bash dist/CycloDesk-*-Linux-*.sh -b -p "$RUNNER_TEMP/cd"
           micromamba deactivate
           "$RUNNER_TEMP/cd/bin/Rscript" CycloDesk/installer/smoke_test.R
+          # the window program starts R, shows the app and closes again
+          CYCLODESK_SELFTEST=1 timeout 300 xvfb-run -a "$RUNNER_TEMP/cd/bin/cyclodesk"
 
       - name: Install and test (macOS)
         if: runner.os == 'macOS'
@@ -70,6 +80,7 @@ jobs:
           installer -pkg dist/CycloDesk-*.pkg -target CurrentUserHomeDirectory
           micromamba deactivate
           "$HOME/Library/CycloDesk/bin/Rscript" CycloDesk/installer/smoke_test.R
+          CYCLODESK_SELFTEST=1 "$HOME/Library/CycloDesk/CycloDesk.app/Contents/MacOS/CycloDesk"
 
       - name: Install and test (Windows)
         if: runner.os == 'Windows'
@@ -82,6 +93,9 @@ jobs:
           & "$dest\Lib\R\bin\x64\Rscript.exe" CycloDesk\installer\smoke_test.R
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           if (-not (Test-Path "$dest\Menu\cyclodesk_start.vbs")) { throw "start script missing" }
+          $env:CYCLODESK_SELFTEST = "1"
+          $p = Start-Process -FilePath "$dest\CycloDesk.exe" -Wait -PassThru
+          if ($p.ExitCode -ne 0) { throw "the CycloDesk window program failed its self-test" }
 
       - uses: actions/upload-artifact@v5
         with:

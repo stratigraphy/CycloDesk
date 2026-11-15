@@ -4,6 +4,8 @@
   (`.exe`, `.pkg` for Apple silicon and Intel, `.sh`) that brings its own R (conda-forge) with all packages,
   installs without administrator rights and adds a desktop/menu icon. Built and tested on GitHub for every release
   and attached to it. "Update and restart" now also works in these installed copies on all three systems.
+* **CycloDesk is a desktop program:** the installers start it in its own window (a small native program,
+  `installer/shell`), with its own icon in the taskbar or Dock; closing the window closes CycloDesk.
 * Four new menus give access to most of WaverideR (about 50 more tools):
   * **Wavelets:** adaptive wavelet, superlet and chirplet synchrosqueezing, ConceFT, chirp-matched EHA and wavelet,
     de-chirped scalograms, wavelet/SST/band significance and surrogates, extraction of signal, power and amplitude
