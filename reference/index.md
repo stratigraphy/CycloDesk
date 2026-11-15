@@ -13,6 +13,10 @@
   : Read a data series file
 - [`write_series()`](https://stratigraphy.github.io/CycloDesk/reference/write_series.md)
   : Write a data series file
+- [`cd_pad_ends()`](https://stratigraphy.github.io/CycloDesk/reference/cd_pad_ends.md)
+  : Pad a series at both ends
+- [`cd_image_profile()`](https://stratigraphy.github.io/CycloDesk/reference/cd_image_profile.md)
+  : Colour and brightness record along a route on an image
 
 ## Astronomical solutions, tracking and age models
 

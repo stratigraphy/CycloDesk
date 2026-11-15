@@ -3,6 +3,7 @@
 [![Lifecycle:
 alpha](https://img.shields.io/badge/lifecycle-alpha-orange.svg)](https://github.com/stratigraphy/CycloDesk/blob/main/NEWS.md)
 [![R-CMD-check](https://github.com/stratigraphy/CycloDesk/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stratigraphy/CycloDesk/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23983505.svg)](https://doi.org/10.5281/zenodo.23983505)
 [![License: GPL (\>=
 2)](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue.svg)](https://stratigraphy.github.io/CycloDesk/LICENSE.md)
 
@@ -12,11 +13,14 @@ time series, built on R.**
 CycloDesk puts the R packages
 [WaverideR](https://github.com/stratigraphy/WaverideR) and
 [astrochron](https://cran.r-project.org/package=astrochron) behind menus
-and buttons. Open a folder with your data, pick a tool, press Run:
-spectra, wavelets, filters, cycle tracking, age models, tuning, TimeOpt
-and COCO, without writing code. Every step writes its result as a plain
-text file next to your data and records the equivalent R code, so
-anything you click can be repeated in a script.
+and buttons, together with empirical mode decomposition from
+[DecomposeR](https://cran.r-project.org/package=DecomposeR), the
+Lomb-Scargle periodogram and dynamic time warping. Open a folder with
+your data, pick a tool, press Run: spectra, wavelets, filters, cycle
+tracking, age models, tuning, TimeOpt and COCO, without writing code.
+Every step writes its result as a plain text file next to your data and
+records the equivalent R code, so anything you click can be repeated in
+a script.
 
 It runs in your web browser, but on your own computer: your data never
 leaves your machine.
@@ -39,16 +43,23 @@ cycle, floating age model and tuned series below
 | Menu | Tools |
 |----|----|
 | **File / Plot** | Working-folder browser (drives, places, drag-and-drop), text, csv, Excel and LAS files; overlay, stacked and standardised plots, zoom, data table, sampling rate, data distribution |
-| **Basic Series** | Astronomical solutions (La2004, La2010, La2011), insolation, ETP, signal and noise generator, example data |
-| **Math** | Sorting, interpolation, selecting/removing parts (draggable lines), clipping, transformations, derivative, smoothing, Bayesian change points |
-| **Time Series** | Detrending, pre-whitening; MTM, LOWSPEC, MESA, AMTM, SWA and other spectra; evolutive spectra; wavelets (22 mother wavelets), superlets and synchrosqueezing; coherence, cross wavelet, bispectral analysis; filtering, Hilbert amplitude, age models, tuning; TimeOpt/eTimeOpt, COCO/eCOCO; rho1, DYNOT, PDA, spectral moments |
-| **Track** | Track a cycle on the scalogram by clicking (snap to peaks or free), follow the ridge (HMM) or snap the whole curve to the nearest peaks, LOWESS smoothing, helper lines for other cycles, floating age model, extraction of any cycle, tuning check against the amplitude modulation |
+| **Basic Series** | Astronomical solutions (La2004, La2010, La2011), insolation series and maps, ETP, signal and noise generator, synthetic series and stratigraphy, ice-volume model, bioturbation, example data |
+| **Math** | Sorting, interpolation (also Laepple-Huybers for uneven records), selecting/removing parts (draggable lines), clipping, transformations, tapers, derivative, smoothing, peaks, moving-window statistics and correlation, PCA, accumulation rates, Bayesian change points |
+| **Time Series** | Detrending, pre-whitening; MTM, LOWSPEC, MESA, AMTM, SWA and other spectra; evolutive spectra; wavelets (22 mother wavelets), superlets and synchrosqueezing; coherence, cross wavelet, bispectral analysis; filtering, Hilbert amplitude, age models, tuning; TimeOpt/eTimeOpt, COCO/eCOCO; rho1, DYNOT, PDA, spectral moments; Lomb-Scargle, cross-spectral phase, spectral peak tests with multiple-testing corrections, bicoherence, surrogates; EMD/EEMD and SSA (DecomposeR), recurrence plots |
+| **Wavelets** | Adaptive wavelet, superlet and chirplet synchrosqueezing, ConceFT, chirp-matched EHA and wavelet, de-chirped scalograms, significance tests and surrogates, extraction of signal, power and amplitude, dynamic filtering, transients, Bayesian/SWA/MESA spectra, uncertainty |
+| **Sed. rate** | Astronomical HMM and iterative tracking, chirp-steered tracking, FLMW, MESA tracking, cross-validated and adaptive (e)COCO, windowed TimeOpt with several fits, astronomical sedimentation-rate and tuning tests; TimeOpt with Monte Carlo significance, timeOptTemplate, Bayesian TimeOpt, eTimeOptTrack, ASM/eASM |
+| **Age models** | Minimal tuning, conversion with tracks, rates or anchor points, Monte Carlo re-tracking and age-model uncertainty, gap durations, Bchron and astroMCBchron, age-model checks, sedimentation ramps, anchorTime, weighted mean ages, correlation by dynamic time warping |
+| **Astronomy** | Astronomical periods at any age, term identification, bundling ratios, chaotic resonance, CTest and the precession constant, tests of tuned records, the Earth-Moon system, the geological time scale |
+| **Track** | Track a cycle on any scalogram or evolutive spectrum (wavelet, superlet, SST, EHA, MESA) or a sedimentation rate on an eTimeOpt or eCOCO map: snap to peaks or free points, HMM ridge following, LOWESS smoothing, helper lines for other cycles, floating age model, extraction of any cycle, tuning check against the amplitude modulation |
 | **Anchor** | Tie a floating record to an astronomical solution, insolation or a metronome by clicking matching peaks |
+| **Image** | A colour and brightness record (grey, L\*a\*b\*, RGB, HSV) along a route clicked on an outcrop photograph, core scan, tree-ring image or satellite image |
 
-Heavy calculations run in a separate R process, so the window stays
-usable and can cancel them. The **R code** tab collects the code of
-every step; **Help \> Which R function does what** lists the function
-behind each menu.
+Every figure in the Tool tab can be zoomed (drag a box or type the
+limits) to read off a spectral peak, and sliding-window analyses can be
+padded so their result spans the whole record. Heavy calculations run in
+a separate R process, so the window stays usable and can cancel them.
+The **R code** tab collects the code of every step; **Help \> Which R
+function does what** lists the function behind each menu.
 
 |  |  |
 |----|----|
@@ -59,21 +70,30 @@ behind each menu.
 
 ## Installation
 
-### Windows, no R experience needed
+### Installer: download, double-click, done (Windows, macOS, Linux)
 
-1.  Install R from <https://cloud.r-project.org/bin/windows/base/> (the
-    default options are fine).
-2.  Download
-    [**CycloDesk-launcher.zip**](https://github.com/stratigraphy/CycloDesk/releases/latest/download/CycloDesk-launcher.zip)
-    and unzip it somewhere permanent, for example into `Documents\Apps`
-    (not in Downloads). This gives a folder `CycloDesk`.
-3.  In that folder, double-click **SETUP.bat**. It installs CycloDesk,
-    WaverideR and the other R packages it needs (a few minutes the first
-    time) and puts a **CycloDesk** icon on your desktop.
-4.  Double-click the icon. CycloDesk opens in your browser.
+Download the installer for your computer from the [**latest
+release**](https://github.com/stratigraphy/CycloDesk/releases/latest).
+It contains its own copy of R and all packages, so you do not need R,
+and it does not change an R you may already have. No administrator
+rights are needed.
 
-CycloDesk checks once a day, at start-up, whether a newer version of
-CycloDesk or WaverideR is on GitHub and installs it.
+| Computer | File | How |
+|----|----|----|
+| Windows 10/11 | `CycloDesk-<version>-Windows-x86_64.exe` | Double-click and follow the steps. Windows may first say “Windows protected your PC”: click *More info* \> *Run anyway* (the installer is not yet code-signed). |
+| Mac with Apple silicon (M1 and later) | `CycloDesk-<version>-MacOSX-arm64.pkg` | Double-click. If macOS says it cannot check the developer, right-click (Control-click) the file and choose *Open*, or allow it under *System Settings \> Privacy & Security*. |
+| Mac with an Intel processor | `CycloDesk-<version>-MacOSX-x86_64.pkg` | As above. |
+| Linux (x86_64) | `CycloDesk-<version>-Linux-x86_64.sh` | In a terminal: `bash CycloDesk-<version>-Linux-x86_64.sh` |
+
+Afterwards, start **CycloDesk** from the desktop icon, the Start menu,
+Applications/Launchpad or the applications menu. It opens in your web
+browser; your data stay on your computer. CycloDesk checks once a day
+whether a newer version of CycloDesk or WaverideR is available and
+offers to install it (*Update and restart*).
+
+To remove it: Windows, *Settings \> Apps*; macOS, delete
+`~/Library/CycloDesk` and *CycloDesk* in Applications; Linux, delete the
+`CycloDesk` folder in your home folder.
 
 ### From R (Windows, macOS, Linux)
 
@@ -85,7 +105,16 @@ remotes::install_github("stratigraphy/CycloDesk")
 CycloDesk::run_app()                                # or run_app("path/to/your/data")
 ```
 
-Both packages are pure R; no compilers or Rtools are needed.
+Both packages are pure R; no compilers or Rtools are needed. The
+optional tools also use the CRAN packages DecomposeR, lomb and dtw.
+
+### Windows launcher for an existing R
+
+If you already use R on Windows,
+[CycloDesk-launcher.zip](https://github.com/stratigraphy/CycloDesk/releases/latest/download/CycloDesk-launcher.zip)
+installs CycloDesk into that R: unzip it somewhere permanent
+(e.g. `Documents\Apps`), double-click **SETUP.bat**, then use the
+desktop icon.
 
 ## Getting started
 
@@ -112,17 +141,20 @@ Contributions are welcome; see
 If CycloDesk helps your work, please cite it, together with the packages
 that do the calculations:
 
-- Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy.
-  R package version 0.1.0. <https://github.com/stratigraphy/CycloDesk>
-- Arts, M., Corradini, C., Pondrelli, M., Pas, D., Da Silva, A.-C.
-  (2024). Age and orbital forcing in the upper Silurian Cellon section
-  (Carnic Alps, Austria) uncovered using the WaverideR R package.
-  Frontiers in Earth Science 12, 1357751.
-  <https://doi.org/10.3389/feart.2024.1357751>
-- Arts, M. (2023). WaverideR: Extracting Signals from Wavelet Spectra. R
-  package. <https://CRAN.R-project.org/package=WaverideR>
-- Meyers, S.R. (2014). Astrochron: An R Package for Astrochronology.
-  <https://cran.r-project.org/package=astrochron>
+\<\<\<\<\<\<\< HEAD \* Arts, M. (2026). CycloDesk: Graphical Interface
+for Cyclostratigraphy. R package version 0.2.0.
+<https://github.com/stratigraphy/CycloDesk> ======= \* Arts, M. (2026).
+CycloDesk: Graphical Interface for Cyclostratigraphy. R package version
+0.1.0. <https://github.com/stratigraphy/CycloDesk> \>\>\>\>\>\>\>
+119d635f982bcdadf013239c3aef0058eb59f64e \* Arts, M., Corradini, C.,
+Pondrelli, M., Pas, D., Da Silva, A.-C. (2024). Age and orbital forcing
+in the upper Silurian Cellon section (Carnic Alps, Austria) uncovered
+using the WaverideR R package. Frontiers in Earth Science 12, 1357751.
+<https://doi.org/10.3389/feart.2024.1357751> \* Arts, M. (2023).
+WaverideR: Extracting Signals from Wavelet Spectra. R package.
+<https://CRAN.R-project.org/package=WaverideR> \* Meyers, S.R. (2014).
+Astrochron: An R Package for Astrochronology.
+<https://cran.r-project.org/package=astrochron>
 
 plus the papers of the methods you used (listed in each tool’s help
 panel). In R: `citation("CycloDesk")`.
@@ -133,7 +165,8 @@ The menu layout and the working-folder workflow are inspired by
 [Acycle](https://github.com/mingsongli/acycle) (Li, Hinnov and Kump,
 2019, Computers & Geosciences 127, 12-22,
 <https://doi.org/10.1016/j.cageo.2019.02.011>). CycloDesk contains no
-Acycle code; all calculations are done by WaverideR and astrochron.
+Acycle code; all calculations are done by WaverideR, astrochron and the
+other R packages named above.
 
 ## Licence
 
@@ -155,6 +188,10 @@ GPL (\>= 2). See
   : Read a data series file
 - [`write_series()`](https://stratigraphy.github.io/CycloDesk/reference/write_series.md)
   : Write a data series file
+- [`cd_pad_ends()`](https://stratigraphy.github.io/CycloDesk/reference/cd_pad_ends.md)
+  : Pad a series at both ends
+- [`cd_image_profile()`](https://stratigraphy.github.io/CycloDesk/reference/cd_image_profile.md)
+  : Colour and brightness record along a route on an image
 
 ## Astronomical solutions, tracking and age models
 

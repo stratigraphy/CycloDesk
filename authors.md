@@ -10,14 +10,13 @@
 Source:
 [`inst/CITATION`](https://github.com/stratigraphy/CycloDesk/blob/main/inst/CITATION)
 
-Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy
-with WaverideR and astrochron. R package version 0.1.0.
-https://github.com/stratigraphy/CycloDesk
+Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy. R
+package version 0.2.0. https://github.com/stratigraphy/CycloDesk
 
     @Manual{,
-      title = {CycloDesk: Graphical Interface for Cyclostratigraphy with WaverideR and astrochron},
+      title = {CycloDesk: Graphical Interface for Cyclostratigraphy},
       author = {Michiel Arts},
       year = {2026},
-      note = {R package version 0.1.0},
+      note = {R package version 0.2.0},
       url = {https://github.com/stratigraphy/CycloDesk},
     }
