@@ -67,7 +67,7 @@
 <p><a href="https://github.com/stratigraphy/CycloDesk/blob/main/NEWS.md" class="external-link"><img src="https://img.shields.io/badge/lifecycle-alpha-orange.svg" alt="Lifecycle: alpha"></a> <a href="https://github.com/stratigraphy/CycloDesk/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/stratigraphy/CycloDesk/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://doi.org/10.5281/zenodo.23983505" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23983505.svg" alt="DOI"></a> <a href="LICENSE.html"><img src="https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue.svg" alt="License: GPL (&gt;= 2)"></a></p>
 <p><strong>A point-and-click workbench for cyclostratigraphy and paleoclimate time series, built on R.</strong></p>
 <p>CycloDesk puts the R packages <a href="https://github.com/stratigraphy/WaverideR" class="external-link">WaverideR</a> and <a href="https://cran.r-project.org/package=astrochron" class="external-link">astrochron</a> behind menus and buttons, together with empirical mode decomposition from <a href="https://cran.r-project.org/package=DecomposeR" class="external-link">DecomposeR</a>, the Lomb-Scargle periodogram and dynamic time warping. Open a folder with your data, pick a tool, press Run: spectra, wavelets, filters, cycle tracking, age models, tuning, TimeOpt and COCO, without writing code. Every step writes its result as a plain text file next to your data and records the equivalent R code, so anything you click can be repeated in a script.</p>
-<p>It runs in your web browser, but on your own computer: your data never leaves your machine.</p>
+<p>It runs on your own computer, in its own window: your data never leave your machine.</p>
 <blockquote>
 <p><strong>Status: alpha.</strong> CycloDesk works and is being used for real records, but menus, defaults and file names may still change. Please <a href="https://github.com/stratigraphy/CycloDesk/issues/new/choose" class="external-link">report</a> anything that breaks, looks wrong or is confusing. Feedback now shapes the first stable release.</p>
 </blockquote>
@@ -196,12 +196,11 @@
 <tr>
 <td>Linux (x86_64)</td>
 <td><code>CycloDesk-&lt;version&gt;-Linux-x86_64.sh</code></td>
-<td>In a terminal: <code>bash CycloDesk-&lt;version&gt;-Linux-x86_64.sh</code>
-</td>
+<td>In a terminal: <code>bash CycloDesk-&lt;version&gt;-Linux-x86_64.sh</code>. The window needs WebKitGTK 4.1 (standard on Ubuntu 22.04+, Debian 12+, Fedora); without it CycloDesk opens in the web browser.</td>
 </tr>
 </tbody>
 </table>
-<p>Afterwards, start <strong>CycloDesk</strong> from the desktop icon, the Start menu, Applications/Launchpad or the applications menu. It opens in your web browser; your data stay on your computer. CycloDesk checks once a day whether a newer version of CycloDesk or WaverideR is available and offers to install it (<em>Update and restart</em>).</p>
+<p>Afterwards, start <strong>CycloDesk</strong> from the desktop icon, the Start menu, Applications/Launchpad or the applications menu. It opens in its own window; your data stay on your computer. CycloDesk checks once a day whether a newer version of CycloDesk or WaverideR is available and offers to install it (<em>Update and restart</em>).</p>
 <p>To remove it: Windows, <em>Settings &gt; Apps</em>; macOS, delete <code>~/Library/CycloDesk</code> and <em>CycloDesk</em> in Applications; Linux, delete the <code>CycloDesk</code> folder in your home folder.</p>
 </div>
 <div class="section level3">

@@ -32,13 +32,15 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/stratigraphy/CycloDesk/blob/v0.2.0/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/stratigraphy/CycloDesk/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.0" id="cyclodesk-020-alpha">CycloDesk 0.2.0 (alpha)<a class="anchor" aria-label="anchor" href="#cyclodesk-020-alpha"></a></h2>
 <ul><li>
 <strong>Installers for Windows, macOS and Linux</strong> (<code>installer/</code>, GitHub workflow <code>installers</code>): one file per system (<code>.exe</code>, <code>.pkg</code> for Apple silicon and Intel, <code>.sh</code>) that brings its own R (conda-forge) with all packages, installs without administrator rights and adds a desktop/menu icon. Built and tested on GitHub for every release and attached to it. “Update and restart” now also works in these installed copies on all three systems.</li>
+<li>
+<strong>CycloDesk is a desktop program:</strong> the installers start it in its own window (a small native program, <code>installer/shell</code>), with its own icon in the taskbar or Dock; closing the window closes CycloDesk.</li>
 <li>Four new menus give access to most of WaverideR (about 50 more tools):
 <ul><li>
 <strong>Wavelets:</strong> adaptive wavelet, superlet and chirplet synchrosqueezing, ConceFT, chirp-matched EHA and wavelet, de-chirped scalograms, wavelet/SST/band significance and surrogates, extraction of signal, power and amplitude (stable band or along a track), dynamic filtering, transients, Bayesian/SWA/MESA spectra, frequency and wavelet uncertainty.</li>

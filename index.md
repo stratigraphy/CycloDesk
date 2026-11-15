@@ -22,8 +22,8 @@ Every step writes its result as a plain text file next to your data and
 records the equivalent R code, so anything you click can be repeated in
 a script.
 
-It runs in your web browser, but on your own computer: your data never
-leaves your machine.
+It runs on your own computer, in its own window: your data never leave
+your machine.
 
 > **Status: alpha.** CycloDesk works and is being used for real records,
 > but menus, defaults and file names may still change. Please
@@ -83,11 +83,11 @@ rights are needed.
 | Windows 10/11 | `CycloDesk-<version>-Windows-x86_64.exe` | Double-click and follow the steps. Windows may first say “Windows protected your PC”: click *More info* \> *Run anyway* (the installer is not yet code-signed). |
 | Mac with Apple silicon (M1 and later) | `CycloDesk-<version>-MacOSX-arm64.pkg` | Double-click. If macOS says it cannot check the developer, right-click (Control-click) the file and choose *Open*, or allow it under *System Settings \> Privacy & Security*. |
 | Mac with an Intel processor | `CycloDesk-<version>-MacOSX-x86_64.pkg` | As above. |
-| Linux (x86_64) | `CycloDesk-<version>-Linux-x86_64.sh` | In a terminal: `bash CycloDesk-<version>-Linux-x86_64.sh` |
+| Linux (x86_64) | `CycloDesk-<version>-Linux-x86_64.sh` | In a terminal: `bash CycloDesk-<version>-Linux-x86_64.sh`. The window needs WebKitGTK 4.1 (standard on Ubuntu 22.04+, Debian 12+, Fedora); without it CycloDesk opens in the web browser. |
 
 Afterwards, start **CycloDesk** from the desktop icon, the Start menu,
-Applications/Launchpad or the applications menu. It opens in your web
-browser; your data stay on your computer. CycloDesk checks once a day
+Applications/Launchpad or the applications menu. It opens in its own
+window; your data stay on your computer. CycloDesk checks once a day
 whether a newer version of CycloDesk or WaverideR is available and
 offers to install it (*Update and restart*).
 
