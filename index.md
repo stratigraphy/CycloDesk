@@ -25,6 +25,11 @@ a script.
 It runs on your own computer, in its own window: your data never leave
 your machine.
 
+The interface is available in **English, French, Dutch, German, Spanish
+and Chinese** (Help \> Language); corrections and further languages are
+welcome: each language is [one text
+file](https://stratigraphy.github.io/CycloDesk/inst/i18n/README.md).
+
 > **Status: alpha.** CycloDesk works and is being used for real records,
 > but menus, defaults and file names may still change. Please
 > [report](https://github.com/stratigraphy/CycloDesk/issues/new/choose)
@@ -43,22 +48,30 @@ cycle, floating age model and tuned series below
 | Menu | Tools |
 |----|----|
 | **File / Plot** | Working-folder browser (drives, places, drag-and-drop), text, csv, Excel and LAS files; overlay, stacked and standardised plots, zoom, data table, sampling rate, data distribution |
-| **Basic Series** | Astronomical solutions (La2004, La2010, La2011), insolation series and maps, ETP, signal and noise generator, synthetic series and stratigraphy, ice-volume model, bioturbation, example data |
-| **Math** | Sorting, interpolation (also Laepple-Huybers for uneven records), selecting/removing parts (draggable lines), clipping, transformations, tapers, derivative, smoothing, peaks, moving-window statistics and correlation, PCA, accumulation rates, Bayesian change points |
-| **Time Series** | Detrending, pre-whitening; MTM, LOWSPEC, MESA, AMTM, SWA and other spectra; evolutive spectra; wavelets (22 mother wavelets), superlets and synchrosqueezing; coherence, cross wavelet, bispectral analysis; filtering, Hilbert amplitude, age models, tuning; TimeOpt/eTimeOpt, COCO/eCOCO; rho1, DYNOT, PDA, spectral moments; Lomb-Scargle, cross-spectral phase, spectral peak tests with multiple-testing corrections, bicoherence, surrogates; EMD/EEMD and SSA (DecomposeR), recurrence plots |
-| **Wavelets** | Adaptive wavelet, superlet and chirplet synchrosqueezing, ConceFT, chirp-matched EHA and wavelet, de-chirped scalograms, significance tests and surrogates, extraction of signal, power and amplitude, dynamic filtering, transients, Bayesian/SWA/MESA spectra, uncertainty |
-| **Sed. rate** | Astronomical HMM and iterative tracking, chirp-steered tracking, FLMW, MESA tracking, cross-validated and adaptive (e)COCO, windowed TimeOpt with several fits, astronomical sedimentation-rate and tuning tests; TimeOpt with Monte Carlo significance, timeOptTemplate, Bayesian TimeOpt, eTimeOptTrack, ASM/eASM |
-| **Age models** | Minimal tuning, conversion with tracks, rates or anchor points, Monte Carlo re-tracking and age-model uncertainty, gap durations, Bchron and astroMCBchron, age-model checks, sedimentation ramps, anchorTime, weighted mean ages, correlation by dynamic time warping |
-| **Astronomy** | Astronomical periods at any age, term identification, bundling ratios, chaotic resonance, CTest and the precession constant, tests of tuned records, the Earth-Moon system, the geological time scale |
+| **Basic Series** | Make or load a series: astronomical solutions (La2004, La2010, La2011), insolation series and maps, ETP, the Imbrie ice-volume model; synthetic records (signal and noise generators, sedimentation-rate ramps, synthetic stratigraphy, bioturbation); example data |
+| **Processing** | Prepare the data: sorting, selecting/removing parts (draggable lines), outliers, clipping; interpolation (also Laepple-Huybers for uneven records) and resampling; transformations, derivative, smoothing, tapers; detrending and pre-whitening; statistics, moving-window statistics and correlation, PCA, peaks; Bayesian change points |
+| **Time Series** | Spectra (MTM, LOWSPEC, MESA, AMTM, SWA, Lomb-Scargle, Bayesian) with peak tests; evolutive spectra; wavelets (22 mother wavelets), superlets, synchrosqueezing and chirp-matched transforms; significance tests and surrogates; filtering, Hilbert amplitude and cycle extraction; coherence, cross wavelet and cross-spectral phase; EMD/EEMD and SSA (DecomposeR); bispectra, bicoherence, recurrence plots; rho1, DYNOT, PDA, spectral moments |
+| **Sed. rate** | Tracking a cycle or a rate (by hand, astronomical HMM, chirp-steered, MESA ridge, FLMW); TimeOpt, eTimeOpt and windowed TimeOpt, with Monte Carlo significance, templates and Bayesian versions; COCO/eCOCO, cross-validated and adaptive; ASM/eASM and other astronomical tests |
+| **Age models** | Building an age model (from a cycle, a sedimentation rate, minimal tuning, tie points) and tuning; anchoring to absolute ages (astronomical solution, anchorTime, weighted mean ages, the geological time scale); Bchron and astroMCBchron; Monte Carlo uncertainty and gap durations; checks of an age model; correlation by dynamic time warping |
+| **Astronomy** | Astronomical periods at any age and through time, term identification, bundling ratios, tones, chaotic resonance; CTest and the precession constant, tests of tuned records; the Earth-Moon system |
 | **Track** | Track a cycle on any scalogram or evolutive spectrum (wavelet, superlet, SST, EHA, MESA) or a sedimentation rate on an eTimeOpt or eCOCO map: snap to peaks or free points, HMM ridge following, LOWESS smoothing, helper lines for other cycles, floating age model, extraction of any cycle, tuning check against the amplitude modulation |
 | **Anchor** | Tie a floating record to an astronomical solution, insolation or a metronome by clicking matching peaks |
 | **Image** | A colour and brightness record (grey, L\*a\*b\*, RGB, HSV) along a route clicked on an outcrop photograph, core scan, tree-ring image or satellite image |
 
-Every figure in the Tool tab can be zoomed (drag a box or type the
-limits) to read off a spectral peak, and sliding-window analyses can be
-padded so their result spans the whole record. Heavy calculations run in
-a separate R process, so the window stays usable and can cancel them.
-The **R code** tab collects the code of every step; **Help \> Which R
+The menus and the five tabs follow the order of the work: **Data**,
+**Plot**, **Processing**, **Analysis & age models** and **R code &
+log**. Each menu opens submenus by subject. The Processing tab lists the
+tools that make and prepare a series, the Analysis & age models tab
+those for time-series analysis, sedimentation rates, age models and
+astronomy, each with a search box; Track, Anchor and Image open as views
+inside these two tabs. The file panel can be widened, or collapsed to a
+ribbon; right-click a file to plot, rename, duplicate or delete it.
+
+Every figure of a tool can be zoomed (drag a box or type the limits) to
+read off a spectral peak, and sliding-window analyses can be padded so
+their result spans the whole record. Heavy calculations run in a
+separate R process, so the window stays usable and can cancel them. The
+**R code & log** tab collects the code of every step; **Help \> Which R
 function does what** lists the function behind each menu.
 
 |  |  |
@@ -142,7 +155,7 @@ If CycloDesk helps your work, please cite it, together with the packages
 that do the calculations:
 
 - Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy.
-  R package version 0.2.1. <https://github.com/stratigraphy/CycloDesk>
+  R package version 0.2.2. <https://github.com/stratigraphy/CycloDesk>
 - Arts, M., Corradini, C., Pondrelli, M., Pas, D., Da Silva, A.-C.
   (2024). Age and orbital forcing in the upper Silurian Cellon section
   (Carnic Alps, Austria) uncovered using the WaverideR R package.

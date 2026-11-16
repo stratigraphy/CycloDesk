@@ -24,7 +24,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">CycloDesk</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Getting started: a complete analysis in CycloDesk</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/stratigraphy/CycloDesk/blob/v0.2.1/vignettes/articles/getting-started.Rmd" class="external-link"><code>vignettes/articles/getting-started.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/stratigraphy/CycloDesk/blob/main/vignettes/articles/getting-started.Rmd" class="external-link"><code>vignettes/articles/getting-started.Rmd</code></a></small>
       <div class="d-none name"><code>getting-started.Rmd</code></div>
     </div>
 
@@ -73,7 +73,7 @@
 takes about fifteen minutes and goes from the raw record to a floating
 age model, a tuning check and an anchored age model. Every step writes
 its result as a text file into your working folder and adds its R code
-to the <strong>R code</strong> tab.</p>
+to the <strong>R code &amp; log</strong> tab.</p>
 <div class="section level2">
 <h2 id="start-cyclodesk">1. Start CycloDesk<a class="anchor" aria-label="anchor" href="#start-cyclodesk"></a>
 </h2>
@@ -110,9 +110,10 @@ list.</p>
 <div class="section level2">
 <h2 id="spectrum">3. Spectrum<a class="anchor" aria-label="anchor" href="#spectrum"></a>
 </h2>
-<p>Choose <strong>Time Series &gt; Spectral analysis</strong>. The
-defaults compute a multitaper spectrum (MTM) with an AR(1) red-noise
-background and confidence levels. Press <strong>Run</strong>.</p>
+<p>Choose <strong>Time Series &gt; Spectra &gt; Spectral
+analysis</strong>. The defaults compute a multitaper spectrum (MTM) with
+an AR(1) red-noise background and confidence levels. Press
+<strong>Run</strong>.</p>
 <div class="float">
 <img src="../reference/figures/03_spectrum.png" alt="Multitaper spectrum with red-noise confidence levels"><div class="figcaption">Multitaper spectrum with red-noise confidence
 levels</div>
@@ -126,10 +127,10 @@ The spectrum is written as <code>grey-mtm2.txt</code>.</p>
 <div class="section level2">
 <h2 id="wavelet-scalogram">4. Wavelet scalogram<a class="anchor" aria-label="anchor" href="#wavelet-scalogram"></a>
 </h2>
-<p>Choose <strong>Time Series &gt; Wavelet / superlet /
-synchrosqueezing</strong> and press <strong>Run</strong>. The scalogram
-shows how the period of each cycle changes with depth, which a single
-spectrum cannot. Try other colour palettes, the colour scale, or
+<p>Choose <strong>Time Series &gt; Wavelets and superlets &gt; Wavelet /
+superlet / synchrosqueezing</strong> and press <strong>Run</strong>. The
+scalogram shows how the period of each cycle changes with depth, which a
+single spectrum cannot. Try other colour palettes, the colour scale, or
 <em>Whiten</em> to give weak and strong cycles the same contrast.</p>
 <div class="float">
 <img src="../reference/figures/04_wavelet.png" alt="Wavelet scalogram with the average spectrum"><div class="figcaption">Wavelet scalogram with the average
@@ -141,9 +142,11 @@ double-click it later to re-plot it without recomputing.</p>
 <div class="section level2">
 <h2 id="track-the-precession-cycle">5. Track the precession cycle<a class="anchor" aria-label="anchor" href="#track-the-precession-cycle"></a>
 </h2>
-<p>Choose <strong>Time Series &gt; Track a cycle by hand on the
-scalogram</strong>. Section 1 already selects the scalogram you just
-computed; press <strong>Show scalogram</strong>.</p>
+<p>Choose <strong>Sed. rate &gt; Track a cycle or a rate &gt; Track a
+cycle by hand</strong> (or <strong>Track</strong> under the
+<strong>Analysis &amp; age models</strong> tab). Section 1 already
+selects the scalogram you just computed; press <strong>Show
+scalogram</strong>.</p>
 <p>In section 2, click points along the bright band at about 0.5 m, from
 the top to the bottom of the record. With <em>snapped to the nearest
 power peak</em> every click jumps to the band. Click a point to select
@@ -215,7 +218,7 @@ r.</p>
 <h2 id="anchor-to-an-astronomical-solution">8. Anchor to an astronomical solution<a class="anchor" aria-label="anchor" href="#anchor-to-an-astronomical-solution"></a>
 </h2>
 <p>Press <strong>Anchor to a solution…</strong> in section 4. The Anchor
-tab opens with the extracted 100-kyr cycle as the record and the
+view opens with the extracted 100-kyr cycle as the record and the
 floating age model as the starting model. Choose <em>La2004
 eccentricity</em> as the target and set <em>Age of the top of the
 record</em> to an approximate age from your biostratigraphy or
@@ -238,10 +241,10 @@ one.</p>
 <div class="section level2">
 <h2 id="repeat-it-in-r">9. Repeat it in R<a class="anchor" aria-label="anchor" href="#repeat-it-in-r"></a>
 </h2>
-<p>The <strong>R code</strong> tab holds the code of every step: reading
-the file, the WaverideR or astrochron call and writing the result. Save
-it with <strong>Save to working folder</strong> to repeat or adapt the
-analysis in a script.</p>
+<p>The <strong>R code &amp; log</strong> tab holds the code of every
+step: reading the file, the WaverideR or astrochron call and writing the
+result. Save it with <strong>Save to working folder</strong> to repeat
+or adapt the analysis in a script.</p>
 <div class="float">
 <img src="../reference/figures/08_rcode.png" alt="The R code of the session"><div class="figcaption">The R code of the session</div>
 </div>

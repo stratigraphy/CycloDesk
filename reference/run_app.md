@@ -5,7 +5,7 @@ folder on the left; its data files are listed below it. Select one or
 more files and choose a tool from the menus; results are written as new
 text files into the same folder (with Acycle-style suffixes such as
 `-rsp0.02` or `-rLowess0.35`), and the equivalent R code is collected in
-the R code tab.
+the R code & log tab.
 
 ## Usage
 

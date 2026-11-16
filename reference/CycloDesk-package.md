@@ -4,7 +4,7 @@ Start the interface with
 [`run_app()`](https://stratigraphy.github.io/CycloDesk/reference/run_app.md).
 The menus follow Acycle (Li et al. 2019); every calculation is done by
 WaverideR or astrochron, and the R code of each step is shown in the R
-code tab.
+code & log tab.
 
 ## See also
 

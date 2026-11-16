@@ -5,7 +5,7 @@ This walkthrough analyses the IODP Site 926 grey-scale record (154 to
 takes about fifteen minutes and goes from the raw record to a floating
 age model, a tuning check and an anchored age model. Every step writes
 its result as a text file into your working folder and adds its R code
-to the **R code** tab.
+to the **R code & log** tab.
 
 ## 1. Start CycloDesk
 
@@ -44,9 +44,9 @@ list.
 
 ## 3. Spectrum
 
-Choose **Time Series \> Spectral analysis**. The defaults compute a
-multitaper spectrum (MTM) with an AR(1) red-noise background and
-confidence levels. Press **Run**.
+Choose **Time Series \> Spectra \> Spectral analysis**. The defaults
+compute a multitaper spectrum (MTM) with an AR(1) red-noise background
+and confidence levels. Press **Run**.
 
 ![Multitaper spectrum with red-noise confidence
 levels](../reference/figures/03_spectrum.png)
@@ -61,11 +61,11 @@ The spectrum is written as `grey-mtm2.txt`.
 
 ## 4. Wavelet scalogram
 
-Choose **Time Series \> Wavelet / superlet / synchrosqueezing** and
-press **Run**. The scalogram shows how the period of each cycle changes
-with depth, which a single spectrum cannot. Try other colour palettes,
-the colour scale, or *Whiten* to give weak and strong cycles the same
-contrast.
+Choose **Time Series \> Wavelets and superlets \> Wavelet / superlet /
+synchrosqueezing** and press **Run**. The scalogram shows how the period
+of each cycle changes with depth, which a single spectrum cannot. Try
+other colour palettes, the colour scale, or *Whiten* to give weak and
+strong cycles the same contrast.
 
 ![Wavelet scalogram with the average
 spectrum](../reference/figures/04_wavelet.png)
@@ -77,8 +77,9 @@ later to re-plot it without recomputing.
 
 ## 5. Track the precession cycle
 
-Choose **Time Series \> Track a cycle by hand on the scalogram**.
-Section 1 already selects the scalogram you just computed; press **Show
+Choose **Sed. rate \> Track a cycle or a rate \> Track a cycle by hand**
+(or **Track** under the **Analysis & age models** tab). Section 1
+already selects the scalogram you just computed; press **Show
 scalogram**.
 
 In section 2, click points along the bright band at about 0.5 m, from
@@ -139,7 +140,7 @@ a point, so you can improve the track and watch r.
 
 ## 8. Anchor to an astronomical solution
 
-Press **Anchor to a solution…** in section 4. The Anchor tab opens with
+Press **Anchor to a solution…** in section 4. The Anchor view opens with
 the extracted 100-kyr cycle as the record and the floating age model as
 the starting model. Choose *La2004 eccentricity* as the target and set
 *Age of the top of the record* to an approximate age from your
@@ -162,9 +163,9 @@ wrong eccentricity cycle looks just as convincing as with the right one.
 
 ## 9. Repeat it in R
 
-The **R code** tab holds the code of every step: reading the file, the
-WaverideR or astrochron call and writing the result. Save it with **Save
-to working folder** to repeat or adapt the analysis in a script.
+The **R code & log** tab holds the code of every step: reading the file,
+the WaverideR or astrochron call and writing the result. Save it with
+**Save to working folder** to repeat or adapt the analysis in a script.
 
 ![The R code of the session](../reference/figures/08_rcode.png)
 

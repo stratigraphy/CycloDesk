@@ -8,15 +8,15 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/stratigraphy/CycloDesk/blob/v0.2.1/inst/CITATION)
+[`inst/CITATION`](https://github.com/stratigraphy/CycloDesk/blob/main/inst/CITATION)
 
 Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy. R
-package version 0.2.1. https://github.com/stratigraphy/CycloDesk
+package version 0.2.2. https://github.com/stratigraphy/CycloDesk
 
     @Manual{,
       title = {CycloDesk: Graphical Interface for Cyclostratigraphy},
       author = {Michiel Arts},
       year = {2026},
-      note = {R package version 0.2.1},
+      note = {R package version 0.2.2},
       url = {https://github.com/stratigraphy/CycloDesk},
     }

@@ -1,5 +1,52 @@
 # Changelog
 
+## CycloDesk 0.2.2 (alpha)
+
+- **Menus in the order of the work**, with submenus by subject: Basic
+  Series (make or load a series), Processing (was Math; now also
+  detrending and pre-whitening), Time Series (spectra, evolutive
+  spectra, wavelets, significance, filtering, two series, decomposition,
+  nonlinear analysis, noise), Sed. rate (tracking, TimeOpt, COCO, other
+  tests), Age models (building, anchoring, dated levels, uncertainty,
+  checks, correlation) and Astronomy. The separate Wavelets menu is now
+  part of Time Series, and the geological time scale moved from
+  Astronomy to Age models \> Anchor to absolute ages. The place of every
+  tool is set in one list (`R/menus.R`).
+- **Five tabs in the order of the work** (were eight): Data, Plot,
+  Processing, Analysis & age models, R code & log. Processing holds the
+  tools of the menus Basic Series and Processing and the colour record
+  from an image; Analysis & age models holds the tools of Time Series,
+  Sed. rate, Age models and Astronomy, with Track and Anchor. Track,
+  Anchor and Image are views inside these two tabs (a small row under
+  the tabs), no longer tabs of their own. Each of the two tabs starts
+  with a list of its tools and a search box, and comes back to the view
+  it showed last. The R code and the log are side by side in one tab.
+- **The Plot tab shows every kind of file:** data series, spectra
+  written by the spectrum tools (power with its confidence levels and
+  labelled peaks, on a log axis) and saved results (`.cyclodesk.rds`,
+  for example a scalogram). New option “Log value axis”.
+- **File panel:** drag its edge to make it wider (full file names) or
+  collapse it to a ribbon for a larger work area; the width is
+  remembered. A delete button and a right-click menu (plot, rename,
+  duplicate, delete, open the folder) next to Edit \> Delete and the Del
+  key.
+- **Languages:** the interface (menus, tabs, tool names, settings, help
+  texts, dialogs) is available in English, French, Dutch, German,
+  Spanish and Simplified Chinese. CycloDesk starts in the language of
+  the computer when it has that language; change it under Help \>
+  Language. Each language is one text file (`inst/i18n/<code>.tsv`), so
+  corrections and new languages are easy to add (see
+  `inst/i18n/README.md`). Figures, result texts, the R code and the log
+  stay English. The choices of radio buttons and tick-box groups are
+  translated as well.
+- **Geological time scale** (Age models \> Anchor to absolute ages):
+  shows the table of the installed WaverideR, which now follows the
+  International Chronostratigraphic Chart 2026/06 (it was the chart of
+  2016, with some errors). The result files are named `GTS_...` (were
+  `GTS2020_...`).
+- PDF, PNG and R files and the working folder open with the system’s
+  program on macOS and Linux as well.
+
 ## CycloDesk 0.2.1 (alpha)
 
 - **CycloDesk is a desktop program:** the installers start it in its own

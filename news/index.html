@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">CycloDesk</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,25 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/stratigraphy/CycloDesk/blob/v0.2.1/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/stratigraphy/CycloDesk/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.2.2" id="cyclodesk-022-alpha">CycloDesk 0.2.2 (alpha)<a class="anchor" aria-label="anchor" href="#cyclodesk-022-alpha"></a></h2>
+<ul><li>
+<strong>Menus in the order of the work</strong>, with submenus by subject: Basic Series (make or load a series), Processing (was Math; now also detrending and pre-whitening), Time Series (spectra, evolutive spectra, wavelets, significance, filtering, two series, decomposition, nonlinear analysis, noise), Sed. rate (tracking, TimeOpt, COCO, other tests), Age models (building, anchoring, dated levels, uncertainty, checks, correlation) and Astronomy. The separate Wavelets menu is now part of Time Series, and the geological time scale moved from Astronomy to Age models &gt; Anchor to absolute ages. The place of every tool is set in one list (<code>R/menus.R</code>).</li>
+<li>
+<strong>Five tabs in the order of the work</strong> (were eight): Data, Plot, Processing, Analysis &amp; age models, R code &amp; log. Processing holds the tools of the menus Basic Series and Processing and the colour record from an image; Analysis &amp; age models holds the tools of Time Series, Sed. rate, Age models and Astronomy, with Track and Anchor. Track, Anchor and Image are views inside these two tabs (a small row under the tabs), no longer tabs of their own. Each of the two tabs starts with a list of its tools and a search box, and comes back to the view it showed last. The R code and the log are side by side in one tab.</li>
+<li>
+<strong>The Plot tab shows every kind of file:</strong> data series, spectra written by the spectrum tools (power with its confidence levels and labelled peaks, on a log axis) and saved results (<code>.cyclodesk.rds</code>, for example a scalogram). New option “Log value axis”.</li>
+<li>
+<strong>File panel:</strong> drag its edge to make it wider (full file names) or collapse it to a ribbon for a larger work area; the width is remembered. A delete button and a right-click menu (plot, rename, duplicate, delete, open the folder) next to Edit &gt; Delete and the Del key.</li>
+<li>
+<strong>Languages:</strong> the interface (menus, tabs, tool names, settings, help texts, dialogs) is available in English, French, Dutch, German, Spanish and Simplified Chinese. CycloDesk starts in the language of the computer when it has that language; change it under Help &gt; Language. Each language is one text file (<code>inst/i18n/&lt;code&gt;.tsv</code>), so corrections and new languages are easy to add (see <code>inst/i18n/README.md</code>). Figures, result texts, the R code and the log stay English. The choices of radio buttons and tick-box groups are translated as well.</li>
+<li>
+<strong>Geological time scale</strong> (Age models &gt; Anchor to absolute ages): shows the table of the installed WaverideR, which now follows the International Chronostratigraphic Chart 2026/06 (it was the chart of 2016, with some errors). The result files are named <code>GTS_...</code> (were <code>GTS2020_...</code>).</li>
+<li>PDF, PNG and R files and the working folder open with the system’s program on macOS and Linux as well.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.1" id="cyclodesk-021-alpha">CycloDesk 0.2.1 (alpha)<a class="anchor" aria-label="anchor" href="#cyclodesk-021-alpha"></a></h2>
 <ul><li>
