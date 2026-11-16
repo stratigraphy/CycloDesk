@@ -1,0 +1,2026 @@
+# language: Deutsch
+# CycloDesk interface texts: English<TAB>translation. A text that is missing here stays English.
+File	Datei
+New folder...	Neuer Ordner...
+New data file (paste)...	Neue Datendatei (einfügen)...
+Colour record from an image (outcrop, core, tree rings)...	Farbdatenreihe aus einem Bild (Aufschluss, Bohrkern, Baumringe)...
+Save current figure...	Aktuelle Abbildung speichern...
+Save R code of this session	R-Code dieser Sitzung speichern
+Open working folder in Explorer	Arbeitsordner im Explorer öffnen
+Quit CycloDesk	CycloDesk beenden
+Edit	Bearbeiten
+Refresh list	Liste aktualisieren
+Rename...	Umbenennen...
+Duplicate	Duplizieren
+Delete...	Löschen...
+Del	Entf
+Show all files / data files only	Alle Dateien / nur Datendateien anzeigen
+Plot	Plotten
+Plot stacked	Gestapelt plotten
+Plot standardised	Standardisiert plotten
+Plot with swapped axes	Mit vertauschten Achsen plotten
+Statistics summary / data table	Statistische Zusammenfassung / Datentabelle
+Sampling rate	Abtastrate
+Data distribution	Datenverteilung
+Basic Series	Basisreihen
+Astronomical solutions and insolation	Astronomische Lösungen und Insolation
+Astronomical solution	Astronomische Lösung
+Insolation: daily, caloric, integrated, threshold	Insolation: täglich, kalorisch, integriert, Schwellenwert
+Insolation map: latitude and season	Insolationskarte: Breitengrad und Jahreszeit
+Ice-volume model (Imbrie and Imbrie 1980)	Eisvolumenmodell (Imbrie und Imbrie 1980)
+Synthetic records	Synthetische Datenreihen
+Signal / noise generator	Signal- / Rauschgenerator
+Synthetic series: cycles, ARMA, ETP + AR(1)	Synthetische Reihen: Zyklen, ARMA, ETP + AR(1)
+Red noise (AR(1)) series	Reihe mit rotem Rauschen (AR(1))
+Time to stratigraphy: sed.-rate ramp or differential accumulation	Zeit zu Stratigraphie: Sed.-Raten-Rampe oder differenzielle Akkumulation
+Exponential sed.-rate ramp (time to depth)	Exponentielle Sed.-Raten-Rampe (Zeit zu Tiefe)
+Synthetic stratigraphy from a forcing (facies)	Synthetische Stratigraphie aus einem Antrieb (Fazies)
+Bioturbation: mix or unmix a record	Bioturbation: Datenreihe mischen oder entmischen
+Bioturbation impulse response	Impulsantwort der Bioturbation
+Example data	Beispieldaten
+Processing	Verarbeitung
+Clean and select	Bereinigen und auswählen
+Sort / unique / remove empty	Sortieren / Duplikate / Leere entfernen
+Select part	Abschnitt auswählen
+Remove part	Abschnitt entfernen
+Remove outliers	Ausreißer entfernen
+Extract column	Spalte extrahieren
+Clean values and select levels (all columns)	Werte bereinigen und Niveaus auswählen (alle Spalten)
+Interpolate and resample	Interpolieren und neu abtasten
+Interpolation of uneven records (Laepple and Huybers 2013)	Interpolation ungleichmäßig abgetasteter Datenreihen (Laepple und Huybers 2013)
+Resample at the levels of a second file (2 files)	An den Niveaus einer zweiten Datei neu abtasten (2 Dateien)
+Discretise a litholog (base, top, value)	Litholog diskretisieren (Basis, Top, Wert)
+Rank series from bed thicknesses	Rangreihe aus Schichtmächtigkeiten
+Transform	Transformieren
+Data transformations	Datentransformationen
+Transformations (astrochron)	Transformationen (astrochron)
+Derivative	Ableitung
+Smoothing	Glättung
+Data taper (window)	Daten-Taper (Fenster)
+Accumulation rates (accum)	Akkumulationsraten (accum)
+Detrend and pre-whiten	Trendbereinigung und Prewhitening
+Detrending	Trendbereinigung
+Lowpass, highpass and kernel detrending	Tiefpass, Hochpass und Kernel-Trendbereinigung
+Pre-whitening	Prewhitening
+Statistics	Statistik
+Summary statistics (strats)	Zusammenfassende Statistik (strats)
+Moving-window statistics	Statistik im gleitenden Fenster
+Moving-window correlation of two proxies	Korrelation zweier Proxys im gleitenden Fenster
+Windowed lag-1 autocorrelation (Monte Carlo)	Gefensterte Lag-1-Autokorrelation (Monte Carlo)
+Cross-plot with density curves	Kreuzdiagramm mit Dichtekurven
+Principal components (stratPCA)	Hauptkomponenten (stratPCA)
+Local maxima and minima	Lokale Maxima und Minima
+Peaks and troughs (astrochron)	Peaks und Täler (astrochron)
+Change points	Änderungspunkte
+Bayesian change points	Bayessche Änderungspunkte
+Change points: R2 against their number	Änderungspunkte: R2 gegen ihre Anzahl
+Time Series	Zeitreihen
+Spectra	Spektren
+Spectral analysis	Spektralanalyse
+Bayesian, SWA and average MESA spectra	Bayessche, SWA- und gemittelte MESA-Spektren
+Lomb-Scargle periodogram (uneven sampling)	Lomb-Scargle-Periodogramm (ungleichmäßige Abtastung)
+Spectral peak tests (multiple testing, AR order, power law)	Tests spektraler Peaks (multiples Testen, AR-Ordnung, Potenzgesetz)
+False positives of a spectral background (testBackground)	Falsch-Positive eines spektralen Hintergrunds (testBackground)
+Evolutive spectra	Evolutive Spektren
+Evolutionary spectral analysis	Evolutive Spektralanalyse
+EHA band power and spectrum at a depth	EHA-Bandleistung und Spektrum in einer Tiefe
+De-chirped EHA (changing sed. rate)	De-chirpte EHA (veränderliche Sed.-Rate)
+Wavelets and superlets	Wavelets und Superlets
+Wavelet / superlet / synchrosqueezing	Wavelet / Superlet / Synchrosqueezing
+Adaptive and synchrosqueezed scalograms	Adaptive und Synchrosqueezing-Skalogramme
+Chirp-matched wavelet sed. rate map	Chirp-angepasste Wavelet-Karte der Sed.-Rate
+De-chirped scalogram along a track (2 files)	De-chirptes Skalogramm entlang einer Spur (2 Dateien)
+Frequency resolution and cycle bands	Frequenzauflösung und Zyklusbänder
+Significance and surrogates	Signifikanz und Surrogate
+Scalogram significance (CWT / superlet)	Signifikanz des Skalogramms (CWT / Superlet)
+Synchrosqueezed scalogram significance	Signifikanz des Synchrosqueezing-Skalogramms
+Band-averaged power significance	Signifikanz der bandgemittelten Leistung
+Surrogate series (IAAFT / phase randomised)	Surrogatreihen (IAAFT / phasenrandomisiert)
+Phase-randomised surrogates and spectral noise	Phasenrandomisierte Surrogate und spektrales Rauschen
+Filtering and cycle extraction	Filterung und Zyklusextraktion
+Filtering	Filterung
+Amplitude modulation (Hilbert)	Amplitudenmodulation (Hilbert)
+Extract a cycle of constant period	Zyklus mit konstanter Periode extrahieren
+Extract a tracked cycle (2 files)	Verfolgten Zyklus extrahieren (2 Dateien)
+Dynamic filter along a tracked period (2 files)	Dynamischer Filter entlang einer verfolgten Periode (2 Dateien)
+Two series: coherence and phase	Zwei Reihen: Kohärenz und Phase
+Wavelet coherence (2 series)	Wavelet-Kohärenz (2 Reihen)
+Cross wavelet (2 series)	Kreuz-Wavelet (2 Reihen)
+Cross superlet (2 series)	Kreuz-Superlet (2 Reihen)
+Cross-spectral analysis: coherence and phase (2 series)	Kreuzspektralanalyse: Kohärenz und Phase (2 Reihen)
+Correlation of two series (surrogateCor / slideCor)	Korrelation zweier Reihen (surrogateCor / slideCor)
+Decomposition (EMD, SSA)	Zerlegung (EMD, SSA)
+EMD / ensemble EMD (extricate)	EMD / Ensemble-EMD (extricate)
+Singular spectrum analysis (SSA)	Singulärspektrumanalyse (SSA)
+Instantaneous frequency and amplitude of modes	Momentanfrequenz und -amplitude der Moden
+Ratios between modes (e.g. eccentricity / precession)	Verhältnisse zwischen Moden (z. B. Exzentrizität / Präzession)
+Precision of the Hilbert instantaneous frequency (test signal)	Genauigkeit der Hilbert-Momentanfrequenz (Testsignal)
+Nonlinear analysis	Nichtlineare Analyse
+Bispectral analysis	Bispektralanalyse
+Bicoherence (WOSA, astrochron)	Bikohärenz (WOSA, astrochron)
+Recurrence plot	Rekurrenzplot
+Sedimentary noise and power	Sedimentäres Rauschen und Leistung
+Evolutive lag-1 autocorrelation (rho1)	Evolutive Lag-1-Autokorrelation (rho1)
+DYNOT (dynamic noise after tuning)	DYNOT (dynamisches Rauschen nach dem Tuning)
+Power decomposition analysis	Leistungszerlegungsanalyse
+Power decomposition (Acycle legacy)	Leistungszerlegung (Acycle, alte Version)
+Spectral moments	Spektrale Momente
+Sed. rate	Sed.-Rate
+Track a cycle or a rate	Zyklus oder Rate verfolgen
+Track a cycle by hand	Zyklus von Hand verfolgen
+Automatic astronomical tracking	Automatische astronomische Verfolgung
+Astronomical HMM tracking	Astronomische HMM-Verfolgung
+Chirp-matched EHA tracking	Chirp-angepasste EHA-Verfolgung
+Evolutive MESA ridge tracking	Gratverfolgung in evolutiver MESA
+Sed.-rate scan of a scalogram (FLMW)	Sed.-Raten-Scan eines Skalogramms (FLMW)
+Tracked cycle to sed. rate (freq2sedrate)	Verfolgter Zyklus zu Sed.-Rate (freq2sedrate)
+eTimeOpt (evolutive)	eTimeOpt (evolutiv)
+Windowed TimeOpt with several fits	Gefenstertes TimeOpt mit mehreren Fits
+TimeOpt with Monte Carlo significance	TimeOpt mit Monte-Carlo-Signifikanz
+TimeOpt with variable sed. rate (timeOptTemplate)	TimeOpt mit variabler Sed.-Rate (timeOptTemplate)
+Bayesian TimeOpt (timeOptB)	Bayessches TimeOpt (timeOptB)
+Bayesian TimeOpt by MCMC (timeOptBMCMC / timeOptMCMC)	Bayessches TimeOpt mit MCMC (timeOptBMCMC / timeOptMCMC)
+eTimeOpt with ridge tracking (eTimeOptTrack)	eTimeOpt mit Gratverfolgung (eTimeOptTrack)
+eCOCO (evolutive)	eCOCO (evolutiv)
+COCO: adaptive / cross-validated	COCO: adaptiv / kreuzvalidiert
+eCOCO: adaptive / cross-validated	eCOCO: adaptiv / kreuzvalidiert
+COCO / eCOCO with a target series (2 files)	COCO / eCOCO mit einer Zielreihe (2 Dateien)
+Other astronomical tests	Weitere astronomische Tests
+Average spectral misfit (ASM / eASM)	Mittlere spektrale Fehlanpassung (ASM / eASM)
+Astronomical sed.-rate test	Astronomischer Sed.-Raten-Test
+Astronomical sed.-rate test, two proxies (2 files)	Astronomischer Sed.-Raten-Test, zwei Proxys (2 Dateien)
+Age models	Altersmodelle
+Build an age model	Altersmodell erstellen
+Build age model	Altersmodell erstellen
+Minimal tuning (WaverideR)	Minimales Tuning (WaverideR)
+Sedimentation rate to age model	Sedimentationsrate zu Altersmodell
+Depth to time: tracked curve, sed. rate or tie points (2 files)	Tiefe zu Zeit: verfolgte Kurve, Sed.-Rate oder Ankerpunkte (2 Dateien)
+Age scale / tuning (2 files)	Altersskala / Tuning (2 Dateien)
+Anchor to absolute ages	An absolute Alter verankern
+Anchor to an astronomical solution or metronome	An astronomische Lösung oder Metronom verankern
+Anchor a floating time scale (anchorTime)	Schwimmende Zeitskala verankern (anchorTime)
+Weighted mean age (wtMean / stepHeat)	Gewichtetes mittleres Alter (wtMean / stepHeat)
+Geological time scale	Geologische Zeitskala
+Dated levels (Bayesian)	Datierte Niveaus (bayessch)
+U-Pb age-depth model (modBchron)	U-Pb-Alters-Tiefen-Modell (modBchron)
+Dates + astrochronology (astroMCBchron, 2 files)	Datierungen + Astrochronologie (astroMCBchron, 2 Dateien)
+Uncertainty (Monte Carlo)	Unsicherheit (Monte Carlo)
+Re-track a cycle (Monte Carlo, multi-proxy)	Zyklus neu verfolgen (Monte Carlo, mehrere Proxys)
+Age model with uncertainty (Monte Carlo)	Altersmodell mit Unsicherheit (Monte Carlo)
+Duration of a hiatus (Monte Carlo, 2 files)	Dauer eines Hiatus (Monte Carlo, 2 Dateien)
+Uncertainty of a tracked cycle (2 files)	Unsicherheit eines verfolgten Zyklus (2 Dateien)
+Check an age model	Altersmodell prüfen
+Check an age model (de-chirped record, 2 files)	Altersmodell prüfen (de-chirpte Datenreihe, 2 Dateien)
+Amplitude-modulation test of a tuned record (testPrecession / testTilt)	Amplitudenmodulationstest einer getunten Datenreihe (testPrecession / testTilt)
+Detect hiatuses and transients	Hiaten und Transienten erkennen
+Correlate two records	Zwei Datenreihen korrelieren
+Correlate two records (dynamic time warping, 2 files)	Zwei Datenreihen korrelieren (Dynamic Time Warping, 2 Dateien)
+Astronomy	Astronomie
+Astronomical periods	Astronomische Perioden
+Astronomical periods at an age	Astronomische Perioden zu einem Alter
+Astronomical periods through time	Astronomische Perioden im Lauf der Zeit
+Precession and obliquity periods (bergerPeriods / calcPeriods)	Präzessions- und Obliquitätsperioden (bergerPeriods / calcPeriods)
+Identify a measured period	Gemessene Periode identifizieren
+Bundling ratios	Bündelungsverhältnisse
+Combination and difference tones (tones)	Kombinations- und Differenztöne (tones)
+Chaotic resonance and sensitivity	Chaotische Resonanz und Sensitivität
+Priors of the Solar System frequencies (hoangPriors)	Priors der Frequenzen des Sonnensystems (hoangPriors)
+Precession constant	Präzessionskonstante
+CTest from depth-domain peaks	CTest aus Peaks im Tiefenbereich
+CTest for a tuned record	CTest für eine getunte Datenreihe
+Precession constant from cycles	Präzessionskonstante aus Zyklen
+Combine two k estimates	Zwei k-Schätzungen kombinieren
+Test a tuned record (precession constant)	Getunte Datenreihe testen (Präzessionskonstante)
+Check the k test on synthetic records	k-Test an synthetischen Datenreihen prüfen
+Compare k with published models	k mit veröffentlichten Modellen vergleichen
+Earth-Moon system	Erde-Mond-System
+Earth-Moon calculator	Erde-Mond-Rechner
+Earth-Moon relations	Erde-Mond-Beziehungen
+Earth-Moon distance and day length from k (alodfromk)	Erde-Mond-Abstand und Tageslänge aus k (alodfromk)
+Help	Hilfe
+About CycloDesk and how to cite	Über CycloDesk und Zitierweise
+Which R function does what	Welche R-Funktion macht was
+Tutorial and manual (web)	Tutorial und Handbuch (Web)
+Report a problem or suggest a feature	Problem melden oder Funktion vorschlagen
+Check for updates	Nach Updates suchen
+Language	Sprache
+Close CycloDesk (stops R)	CycloDesk schließen (beendet R)
+Close	Schließen
+Show the file panel	Dateibereich anzeigen
+Files	Dateien
+Up one folder (Backspace)	Einen Ordner nach oben (Rücktaste)
+Type a path	Pfad eingeben
+Refresh (F5)	Aktualisieren (F5)
+Delete the selected files (Del)	Ausgewählte Dateien löschen (Entf)
+Hide the file panel	Dateibereich ausblenden
+Filter files	Dateien filtern
+Drag to make the file panel wider or narrower	Ziehen, um den Dateibereich breiter oder schmaler zu machen
+Data	Daten
+Track	Verfolgen
+Anchor	Verankern
+Image	Bild
+R code	R-Code
+Log	Protokoll
+Stacked	Gestapelt
+Standardised	Standardisiert
+Points	Punkte
+Reverse depth axis	Tiefenachse umkehren
+Depth vertical	Tiefe vertikal
+Log value axis	Logarithmische Werteachse
+Save figure	Abbildung speichern
+Data files, spectra and saved results (.rds). Drag to zoom, double-click to reset	Datendateien, Spektren und gespeicherte Ergebnisse (.rds). Zum Zoomen ziehen, zum Zurücksetzen doppelklicken
+All tools	Alle Werkzeuge
+Track a cycle on the scalogram	Zyklus im Skalogramm verfolgen
+Click points along the band of a cycle, give its duration, and build a	Punkte entlang des Bandes eines Zyklus anklicken, seine Dauer angeben und ein
+floating age model. The tuning check compares the amplitude envelope of a shorter cycle with a longer	schwimmendes Altersmodell erstellen. Die Tuning-Prüfung vergleicht die Amplitudenhüllkurve eines kürzeren Zyklus mit einem längeren
+cycle extracted directly from the record; move points and watch the check until you are happy.	Zyklus, der direkt aus der Datenreihe extrahiert wurde; Punkte verschieben und die Prüfung beobachten, bis das Ergebnis zufriedenstellend ist.
+1. Scalogram	1. Skalogramm
+Colour palette	Farbpalette
+Cividis (colour-blind safe)	Cividis (für Farbenblinde geeignet)
+Turbo (rainbow-like)	Turbo (regenbogenartig)
+Jet (MATLAB / Acycle style)	Jet (MATLAB- / Acycle-Stil)
+Blue to red	Blau nach Rot
+Red-yellow-blue	Rot-Gelb-Blau
+Yellow-orange-red	Gelb-Orange-Rot
+Greys	Graustufen
+Rainbow	Regenbogen
+Show scalogram	Skalogramm anzeigen
+2. Track the cycle	2. Zyklus verfolgen
+A click on the scalogram	Ein Klick auf das Skalogramm
+Show the power peaks	Leistungspeaks anzeigen
+Peak filter (0: all peaks; to the right: only the strong ones)	Peakfilter (0: alle Peaks; nach rechts: nur die starken)
+Click a point to select it (Shift/Ctrl-click: several), click it again	Ein Klick auf einen Punkt wählt ihn aus (Umschalt/Strg-Klick: mehrere), ein erneuter Klick
+to deselect; drag a point to move it; Delete or Backspace removes the selected points.	hebt die Auswahl auf; einen Punkt ziehen, um ihn zu verschieben; Entf oder Rücktaste entfernt die ausgewählten Punkte.
+Undo last point	Letzten Punkt rückgängig
+Delete selected	Ausgewählte löschen
+Select all	Alle auswählen
+Deselect	Auswahl aufheben
+Clear all	Alle löschen
+Ridge search width around the clicks (fraction)	Suchbreite des Grats um die Klicks (Anteil)
+Snap the whole curve to the nearest peaks	Ganze Kurve auf die nächsten Peaks einrasten
+Follow the ridge (HMM)	Dem Grat folgen (HMM)
+Snapping: at every depth the curve goes to the power peak nearest to the	Einrasten: In jeder Tiefe springt die Kurve auf den Leistungspeak, der der
+line through your points (within the search width). HMM: WaverideR::track_ridge_hmm.	Linie durch die gesetzten Punkte am nächsten liegt (innerhalb der Suchbreite). HMM: WaverideR::track_ridge_hmm.
+Smooth the curve: LOWESS span (0 = off)	Kurve glätten: LOWESS-Spanne (0 = aus)
+3. Helper lines	3. Hilfslinien
+Set up a group of lines and press Add; add as many groups as you	Eine Gruppe von Linien einrichten und auf Hinzufügen klicken; es lassen sich beliebig viele Gruppen
+like. Tick groups in the list to remove them. On a sedimentation-rate map (eCOCO, eTimeOpt) only	hinzufügen. Gruppen in der Liste ankreuzen, um sie zu entfernen. Auf einer Sedimentationsraten-Karte (eCOCO, eTimeOpt) werden nur
+fixed values and file columns are drawn, read as rates (cm/kyr; use multiplier 1 for a rate column).	feste Werte und Dateispalten gezeichnet, gelesen als Raten (cm/kyr; für eine Ratenspalte den Multiplikator 1 verwenden).
+Lines	Linien
+periods of cycles (kyr), scaled by the current track	Perioden von Zyklen (kyr), skaliert mit der aktuellen Spur
+periods of cycles (kyr), from an age-model file (depth, age)	Perioden von Zyklen (kyr), aus einer Altersmodell-Datei (Tiefe, Alter)
+fixed periods (depth units, e.g. m)	feste Perioden (Tiefeneinheiten, z. B. m)
+a column of a file (depth, value) x multiplier	eine Spalte einer Datei (Tiefe, Wert) x Multiplikator
+Cycles (kyr)	Zyklen (kyr)
+Periods (depth units)	Perioden (Tiefeneinheiten)
+Multiplier (period = value x multiplier)	Multiplikator (Periode = Wert x Multiplikator)
+1 when the column is already a period in depth units; e.g. 4.05	1, wenn die Spalte bereits eine Periode in Tiefeneinheiten ist; z. B. ergibt 4.05
+for a sedimentation rate in cm/kyr gives the 405-kyr period in m (rate x 405 / 100).	für eine Sedimentationsrate in cm/kyr die 405-kyr-Periode in m (Rate x 405 / 100).
+Colour	Farbe
+white	weiß
+red	rot
+yellow	gelb
+green	grün
+black	schwarz
+Line	Linie
+dashed	gestrichelt
+solid	durchgezogen
+dotted	gepunktet
+Label (optional)	Beschriftung (optional)
+Add	Hinzufügen
+Remove ticked	Angekreuzte entfernen
+Remove all	Alle entfernen
+Vertical boundary lines at depths	Vertikale Grenzlinien in Tiefen
+Boundary lines can also be clicked on the scalogram (third click	Grenzlinien lassen sich auch im Skalogramm anklicken (dritte Klickoption
+option above); clicking a line again removes it.	oben); ein erneuter Klick auf eine Linie entfernt sie.
+Add depths from the file	Tiefen aus der Datei hinzufügen
+Clear boundary lines	Grenzlinien löschen
+4. Floating age model and extraction	4. Schwimmendes Altersmodell und Extraktion
+Duration of the tracked cycle (kyr)	Dauer des verfolgten Zyklus (kyr)
+Cycle to extract (kyr; any cycle, scaled from the track)	Zu extrahierender Zyklus (kyr; beliebiger Zyklus, aus der Spur skaliert)
+Band: lower factor	Band: unterer Faktor
+upper factor	oberer Faktor
+Add the mean to the extracted cycle	Mittelwert zum extrahierten Zyklus addieren
+Show below the scalogram	Unter dem Skalogramm anzeigen
+Results (written to the working folder)	Ergebnisse (in den Arbeitsordner geschrieben)
+Save track	Spur speichern
+Extract cycle	Zyklus extrahieren
+Age model + tuned series	Altersmodell + getunte Reihe
+Anchor to a solution...	An eine Lösung verankern...
+5. Tuning check (amplitude modulation)	5. Tuning-Prüfung (Amplitudenmodulation)
+The modulated cycle is extracted with the track and its Hilbert	Der modulierte Zyklus wird mit der Spur extrahiert, und es wird seine
+envelope is taken. The modulating cycle is then extracted from that envelope (amplitude modulation)	Hilbert-Hüllkurve gebildet. Der modulierende Zyklus wird dann aus dieser Hüllkurve (Amplitudenmodulation)
+and, with the track, from the record itself; both are compared on the floating time scale.	und, mit der Spur, aus der Datenreihe selbst extrahiert; beide werden auf der schwimmenden Zeitskala verglichen.
+A good age model gives a high correlation.	Ein gutes Altersmodell ergibt eine hohe Korrelation.
+Modulated cycle (kyr)	Modulierter Zyklus (kyr)
+Modulating cycle (kyr)	Modulierender Zyklus (kyr)
+Update after every change of the track	Nach jeder Änderung der Spur aktualisieren
+Show the tuning check	Tuning-Prüfung anzeigen
+Run the check	Prüfung ausführen
+Anchor to an astronomical solution	An eine astronomische Lösung verankern
+Click a peak in the record (top), then the matching peak in the target	Einen Peak in der Datenreihe anklicken (oben), dann den entsprechenden Peak im Ziel
+(middle): each pair is a tie point. The bottom figure shows the tuned record on the target.	(Mitte): Jedes Paar ist ein Ankerpunkt. Die untere Abbildung zeigt die getunte Datenreihe auf dem Ziel.
+1. Record	1. Datenreihe
+Starting age model	Ausgangs-Altersmodell
+Sed. rate (cm/kyr)	Sed.-Rate (cm/kyr)
+Depth unit	Tiefeneinheit
+Age of the top of the record (ka)	Alter am Top der Datenreihe (ka)
+Age increases with depth	Alter nimmt mit der Tiefe zu
+2. Target	2. Ziel
+Astronomical solution or metronome	Astronomische Lösung oder Metronom
+La2004 eccentricity	La2004 Exzentrizität
+La2004 obliquity	La2004 Obliquität
+La2004 precession index	La2004 Präzessionsindex
+Insolation 65N, June solstice (La2004)	Insolation 65N, Juni-Sonnenwende (La2004)
+La2010b eccentricity	La2010b Exzentrizität
+La2011 eccentricity	La2011 Exzentrizität
+Metronome	Metronom
+Period (kyr)	Periode (kyr)
+Phase (degrees)	Phase (Grad)
+Flip the target (maxima become minima)	Ziel umkehren (Maxima werden zu Minima)
+Show from (ka)	Anzeigen von (ka)
+to (ka)	bis (ka)
+Empty: the range of the starting age model plus a margin.	Leer: der Bereich des Ausgangs-Altersmodells plus ein Rand.
+3. Tie points	3. Ankerpunkte
+A click snaps to	Ein Klick rastet ein auf
+Undo last tie	Letzten Ankerpunkt rückgängig
+Clear ties	Ankerpunkte löschen
+4. Results (written to the working folder)	4. Ergebnisse (in den Arbeitsordner geschrieben)
+Save ties	Ankerpunkte speichern
+Colour record along a route on an image	Farbdatenreihe entlang einer Route in einem Bild
+Outcrop photographs, core scans, tree-ring images or satellite images:	Aufschlussfotos, Kernscans, Baumringbilder oder Satellitenbilder:
+click a route along the beds (or across the rings), set the scale, and the colour is averaged across	eine Route entlang der Schichten (oder quer über die Ringe) klicken, den Maßstab festlegen, und die Farbe wird bei jedem Schritt entlang der Route über
+a swath at every step along the route. For satellite images use an exported image or screenshot	einen Streifen gemittelt. Für Satellitenbilder ein exportiertes Bild oder einen Screenshot
+that you are allowed to use, and set the scale from its scale bar.	verwenden, dessen Nutzung erlaubt ist, und den Maßstab anhand des Maßstabsbalkens festlegen.
+1. Image	1. Bild
+or copy an image into the working folder	oder ein Bild in den Arbeitsordner kopieren
+Browse...	Durchsuchen...
+No file selected	Keine Datei ausgewählt
+2. Route and scale	2. Route und Maßstab
+A click on the image	Ein Klick auf das Bild
+Clear route	Route löschen
+Reverse direction	Richtung umkehren
+Swath width (pixels)	Streifenbreite (Pixel)
+Step (pixels)	Schritt (Pixel)
+Across the swath	Quer zum Streifen
+Mean	Mittelwert
+Median (robust against cracks and specks)	Median (robust gegen Risse und Flecken)
+Length of the scale bar	Länge des Maßstabsbalkens
+Pixels per unit	Pixel pro Einheit
+Click both ends of a scale bar (or of a known distance) with	Beide Enden eines Maßstabsbalkens (oder einer bekannten Strecke) mit
+"sets the scale bar" and give its length; or type the pixels per unit directly. Without a	„setzt den Maßstabsbalken“ anklicken und dessen Länge angeben; oder die Pixel pro Einheit direkt eingeben. Ohne
+scale the record is in pixels.	Maßstab ist die Datenreihe in Pixeln angegeben.
+Depth at the start	Tiefe am Anfang
+Along the route, depth	Tiefe entlang der Route
+increases	nimmt zu
+decreases	nimmt ab
+3. Record	3. Datenreihe
+Show	Anzeigen
+Grey value (luma, 0-255)	Grauwert (Luma, 0-255)
+Lightness L*	Helligkeit L*
+Red-green a*	Rot-Grün a*
+Yellow-blue b*	Gelb-Blau b*
+Red (0-255)	Rot (0-255)
+Green (0-255)	Grün (0-255)
+Blue (0-255)	Blau (0-255)
+Hue (degrees)	Farbton (Grad)
+Saturation	Sättigung
+Value (brightness)	Hellwert (Helligkeit)
+Extract and write	Extrahieren und schreiben
+Writes <image>-profile.txt (all colour columns, with header) and	Schreibt <image>-profile.txt (alle Farbspalten, mit Kopfzeile) und
+<image>-<channel>.txt (depth and the shown channel) to the working folder.	<image>-<channel>.txt (Tiefe und der angezeigte Kanal) in den Arbeitsordner.
+The R code of every operation in this session. It runs in the working folder	Der R-Code aller Vorgänge dieser Sitzung. Er läuft im Arbeitsordner
+(setwd() to it first).	(zuerst mit setwd() dorthin wechseln).
+Save to working folder	Im Arbeitsordner speichern
+Clear	Leeren
+Places	Orte
+This computer	Dieser Computer
+Home	Benutzerordner
+This PC (all drives)	Dieser PC (alle Laufwerke)
+D: Data	D: Daten
+This PC: all drives	Dieser PC: alle Laufwerke
+Go to drive C:	Zu Laufwerk C:
+Go to drive D:	Zu Laufwerk D:
+Click a folder to open it, the arrow or a part of the path above to go	Einen Ordner anklicken, um ihn zu öffnen; den Pfeil oder einen Teil des Pfades oben anklicken, um nach
+up. Click a data file to plot it; Ctrl/Shift-click selects several. Drag files onto a folder, drive or part of the	oben zu wechseln. Eine Datendatei anklicken, um sie zu plotten; Strg/Umschalt-Klick wählt mehrere aus. Dateien auf einen Ordner, ein Laufwerk oder einen Teil des
+path to move them there (hold Ctrl to copy). Arrow keys, Enter and Backspace also work.	Pfades ziehen, um sie dorthin zu verschieben (zum Kopieren Strg gedrückt halten). Pfeiltasten, Eingabetaste und Rücktaste funktionieren ebenfalls.
+Folder: %s | %d data files | %d selected | WaverideR %s, astrochron %s	Ordner: %s | %d Datendateien | %d ausgewählt | WaverideR %s, astrochron %s
+No data files here.	Hier sind keine Datendateien.
+Open another folder or drive above.	Oben einen anderen Ordner oder ein anderes Laufwerk öffnen.
+Up one level	Eine Ebene nach oben
+Delete	Löschen
+files	Dateien
+Open the folder	Ordner öffnen
+CycloDesk is closed	CycloDesk ist geschlossen
+R has stopped. You can close this window.	R wurde beendet. Dieses Fenster kann geschlossen werden.
+Start CycloDesk again from its icon.	CycloDesk über sein Symbol erneut starten.
+2001 points, 154 to 174, dt 0.01	2001 Punkte, 154 bis 174, dt 0.01
+Start	Anfang
+End	Ende
+Median interval	Medianintervall
+Min interval	Min. Intervall
+Max interval	Max. Intervall
+Standard deviation	Standardabweichung
+Choose a tool	Werkzeug wählen
+Every tool of the menus, in the order of the work. Its settings open here on	Alle Werkzeuge der Menüs, in der Reihenfolge des Arbeitsablaufs. Die Einstellungen eines Werkzeugs öffnen sich hier
+the left and its result on the right; the result files are written to the working folder.	links und sein Ergebnis rechts; die Ergebnisdateien werden in den Arbeitsordner geschrieben.
+Find a tool, e.g. wavelet, detrend, TimeOpt, tuning	Werkzeug suchen, z. B. Wavelet, Trendbereinigung, TimeOpt, Tuning
+Make or load a series	Reihe erzeugen oder laden
+Prepare the data	Daten vorbereiten
+Spectra, wavelets, filters	Spektren, Wavelets, Filter
+Sedimentation rates from astronomical cycles	Sedimentationsraten aus astronomischen Zyklen
+Depth to time, anchoring, uncertainty	Tiefe zu Zeit, Verankerung, Unsicherheit
+Periods, precession constant, Earth-Moon	Perioden, Präzessionskonstante, Erde-Mond
+No tool with these words.	Kein Werkzeug mit diesen Wörtern.
+Scalogram or spectrum map (wavelet, EHA, eTimeOpt, eCOCO, ...)	Skalogramm oder Spektrumkarte (Wavelet, EHA, eTimeOpt, eCOCO, ...)
+Compute a new CWT	Neue CWT berechnen
+Data file	Datendatei
+Shortest period	Kürzeste Periode
+Longest period	Längste Periode
+No helper lines yet.	Noch keine Hilfslinien.
+Depths from a file	Tiefen aus einer Datei
+(choose a file)	(Datei wählen)
+Record (depth domain)	Datenreihe (Tiefenbereich)
+Image in the working folder	Bild im Arbeitsordner
+Eccentricity, obliquity or precession index from an astronomical solution. The solution is downloaded once by astrochron::getLaskar() and then kept in a local cache.	Exzentrizität, Obliquität oder Präzessionsindex aus einer astronomischen Lösung. Die Lösung wird einmal mit astrochron::getLaskar() heruntergeladen und danach in einem lokalen Cache vorgehalten.
+Solution	Lösung
+Eccentricity	Exzentrizität
+Obliquity (radians)	Obliquität (Radiant)
+Precession index	Präzessionsindex
+ETP (standardised sum)	ETP (standardisierte Summe)
+Obliquity, precession and ETP are only in La2004.	Obliquität, Präzession und ETP gibt es nur in La2004.
+Start (ka)	Anfang (ka)
+End (ka)	Ende (ka)
+Step (ka)	Schritt (ka)
+Reset to the defaults for this file	Auf die Standardwerte für diese Datei zurücksetzen
+Write result files to the working folder	Ergebnisdateien in den Arbeitsordner schreiben
+Run	Ausführen
+Cancel	Abbrechen
+Track on this map	Auf dieser Karte verfolgen
+Apply	Anwenden
+Reset	Zurücksetzen
+drag a box on the figure; double-click resets	Rahmen in der Abbildung aufziehen; Doppelklick setzt zurück
+Daily mean insolation at the top of the atmosphere (Berger 1978) from La2004.	Tagesmittel der Insolation am Oberrand der Atmosphäre (Berger 1978) aus La2004.
+Latitude (degrees N)	Breitengrad (Grad N)
+True solar longitude	Wahre solare Länge
+June solstice (90)	Juni-Sonnenwende (90)
+September equinox (180)	September-Äquinoktium (180)
+December solstice (270)	Dezember-Sonnenwende (270)
+March equinox (0)	März-Äquinoktium (0)
+Other...	Andere...
+True solar longitude (degrees)	Wahre solare Länge (Grad)
+Solar constant (W/m2)	Solarkonstante (W/m2)
+Eccentricity + tilt + precession composite from La2004, each standardised and weighted.	Komposit aus Exzentrizität + Achsneigung + Präzession aus La2004, jeweils standardisiert und gewichtet.
+Weight of eccentricity	Gewicht der Exzentrizität
+Weight of obliquity	Gewicht der Obliquität
+Weight of precession	Gewicht der Präzession
+Standardise the result	Ergebnis standardisieren
+Insolation series from La2004 computed by the palinsol package: daily mean insolation on a day, caloric summer insolation (Milankovitch), insolation integrated between two true solar longitudes, or integrated over the days above a threshold (Huybers and Tziperman 2008).	Insolationsreihen aus La2004, berechnet mit dem Paket palinsol: Tagesmittel der Insolation an einem Tag, kalorische Sommerinsolation (Milankovitch), zwischen zwei wahren solaren Längen integrierte Insolation oder über die Tage oberhalb eines Schwellenwerts integrierte Insolation (Huybers und Tziperman 2008).
+Quantity	Größe
+Daily mean insolation (W/m2)	Tagesmittel der Insolation (W/m2)
+Caloric summer insolation (kJ/m2)	Kalorische Sommerinsolation (kJ/m2)
+Insolation integrated between two true solar longitudes (kJ/m2)	Zwischen zwei wahren solaren Längen integrierte Insolation (kJ/m2)
+Integrated insolation above a threshold (kJ/m2)	Integrierte Insolation oberhalb eines Schwellenwerts (kJ/m2)
+True solar longitude (degrees; 90 = 21 June)	Wahre solare Länge (Grad; 90 = 21. Juni)
+From true solar longitude (degrees)	Von wahrer solarer Länge (Grad)
+To true solar longitude (degrees)	Bis wahre solare Länge (Grad)
+Threshold (W/m2)	Schwellenwert (W/m2)
+Start (ka; negative = future)	Anfang (ka; negativ = Zukunft)
+Step (ka, >= 1)	Schritt (ka, >= 1)
+Save the result for re-plotting later (.rds)	Ergebnis zum späteren erneuten Plotten speichern (.rds)
+Daily mean insolation for every latitude and true solar longitude at one time, or the difference between two times (La2004, palinsol), with the seasonal cycle at one latitude and the latitude profile on one day.	Tagesmittel der Insolation für jeden Breitengrad und jede wahre solare Länge zu einem Zeitpunkt oder die Differenz zwischen zwei Zeitpunkten (La2004, palinsol), mit dem Jahresgang auf einem Breitengrad und dem Breitenprofil an einem Tag.
+Map	Karte
+Insolation at one time (insoMap)	Insolation zu einem Zeitpunkt (insoMap)
+Difference between two times (insoDiff)	Differenz zwischen zwei Zeitpunkten (insoDiff)
+Time (ka; negative = future)	Zeit (ka; negativ = Zukunft)
+Second time (ka)	Zweiter Zeitpunkt (ka)
+Seasonal cycle at latitude (degrees N)	Jahresgang auf Breitengrad (Grad N)
+Latitude profile on	Breitenprofil für
+Ice volume from the Imbrie and Imbrie (1980) model forced by daily insolation (La2004, palinsol), with one or several time constants and non-linearity coefficients.	Eisvolumen aus dem Modell von Imbrie und Imbrie (1980), angetrieben durch die tägliche Insolation (La2004, palinsol), mit einer oder mehreren Zeitkonstanten und Nichtlinearitätskoeffizienten.
+Insolation latitude (degrees N)	Breitengrad der Insolation (Grad N)
+Insolation on	Insolation für
+Mean time constant(s) Tm (ka)	Mittlere Zeitkonstante(n) Tm (ka)
+Non-linearity coefficient(s) b (0-1)	Nichtlinearitätskoeffizient(en) b (0-1)
+Start times of each Tm and b (ka; empty = one regime)	Startzeiten jedes Tm und b (ka; leer = ein Regime)
+e.g. Tm = 15, 5; b = 0.6, 0.3; times = 500, 1000 uses Tm 15 and b 0.6 from 0 to 500 ka.	z. B. Tm = 15, 5; b = 0.6, 0.3; Zeiten = 500, 1000 verwendet Tm 15 und b 0.6 von 0 bis 500 ka.
+Burn-in (points)	Burn-in (Punkte)
+Initial ice volume	Anfängliches Eisvolumen
+Scale the ice volume to 0-1	Eisvolumen auf 0-1 skalieren
+Sum of sinusoids plus white, AR(1) red or power-law noise (Acycle: Basic Series > Signal/Noise Generator).	Summe von Sinusschwingungen plus weißes Rauschen, rotes AR(1)-Rauschen oder Potenzgesetz-Rauschen (Acycle: Basic Series > Signal/Noise Generator).
+Number of points	Anzahl der Punkte
+Sampling interval	Abtastintervall
+Periods (comma separated, empty = none)	Perioden (durch Kommas getrennt, leer = keine)
+Amplitudes (one per period)	Amplituden (eine pro Periode)
+Noise	Rauschen
+AR(1) red noise	Rotes AR(1)-Rauschen
+White noise	Weißes Rauschen
+Power-law noise	Potenzgesetz-Rauschen
+None	Keines
+AR(1) coefficient rho	AR(1)-Koeffizient rho
+Power-law exponent beta	Potenzgesetz-Exponent beta
+Noise standard deviation	Standardabweichung des Rauschens
+Random seed	Zufallsstartwert
+File name	Dateiname
+Sum of sinusoids with white noise, an autoregressive moving-average (ARMA) series, or an ETP signal (La2004) plus AR(1) red noise; shows the MTM spectrum with AR(1) confidence levels.	Summe von Sinusschwingungen mit weißem Rauschen, eine autoregressive Moving-Average-Reihe (ARMA) oder ein ETP-Signal (La2004) plus rotes AR(1)-Rauschen; zeigt das MTM-Spektrum mit AR(1)-Konfidenzniveaus.
+Model	Modell
+Sum of sinusoids plus white noise (cycles)	Summe von Sinusschwingungen plus weißes Rauschen (cycles)
+ARMA model (armaGen)	ARMA-Modell (armaGen)
+ETP plus AR(1) noise (ar1etp)	ETP plus AR(1)-Rauschen (ar1etp)
+Periods (comma separated)	Perioden (durch Kommas getrennt)
+Phases in radians (one per period, empty = 0)	Phasen in Radiant (eine pro Periode, leer = 0)
+Variance of the white noise	Varianz des weißen Rauschens
+Start (ka for ETP)	Anfang (ka für ETP)
+End (ka for ETP)	Ende (ka für ETP)
+AR coefficients (one per order)	AR-Koeffizienten (einer pro Ordnung)
+MA coefficients (one per order)	MA-Koeffizienten (einer pro Ordnung)
+AR(1) coefficient of the noise	AR(1)-Koeffizient des Rauschens
+Noise amplitude relative to ETP (1 = equal variance, < 0 = noise only)	Rauschamplitude relativ zu ETP (1 = gleiche Varianz, < 0 = nur Rauschen)
+Generates an AR(1) red-noise series with a given mean, standard deviation and lag-1 autocorrelation.	Erzeugt eine Reihe mit rotem AR(1)-Rauschen mit vorgegebenem Mittelwert, vorgegebener Standardabweichung und vorgegebener Lag-1-Autokorrelation.
+First depth / time	Erste Tiefe / Zeit
+Lag-1 autocorrelation (0 = white noise)	Lag-1-Autokorrelation (0 = weißes Rauschen)
+Converts a time series (time in kyr, value), e.g. ETP or insolation, into a synthetic stratigraphic series (depth in m): with a linearly changing sedimentation rate, or with a rate that follows the signal (differential accumulation); use it to test how tools cope with changing rates.	Wandelt eine Zeitreihe (Zeit in kyr, Wert), z. B. ETP oder Insolation, in eine synthetische stratigraphische Reihe (Tiefe in m) um: mit einer sich linear ändernden Sedimentationsrate oder mit einer Rate, die dem Signal folgt (differenzielle Akkumulation); damit lässt sich testen, wie Werkzeuge mit veränderlichen Raten zurechtkommen.
+Choose a readable data file.	Eine lesbare Datendatei wählen.
+Linear sed.-rate ramp (sedRamp)	Lineare Sed.-Raten-Rampe (sedRamp)
+Differential accumulation (diffAccum)	Differenzielle Akkumulation (diffAccum)
+Sed. rate at the start of the series (cm/kyr)	Sed.-Rate am Anfang der Reihe (cm/kyr)
+Sed. rate at the end of the series (cm/kyr)	Sed.-Rate am Ende der Reihe (cm/kyr)
+Lowest sed. rate (cm/kyr)	Niedrigste Sed.-Rate (cm/kyr)
+Highest sed. rate (cm/kyr)	Höchste Sed.-Rate (cm/kyr)
+Highest rate at	Höchste Rate bei
+peaks of the signal	Maxima des Signals
+troughs of the signal	Minima des Signals
+Converts a time series (time in kyr, value), e.g. an ETP or insolation series, to a synthetic stratigraphic record whose sedimentation rate changes exponentially from the start to the end value; use it to test how tracking and age-model tools cope with a changing rate.	Wandelt eine Zeitreihe (Zeit in kyr, Wert), z. B. eine ETP- oder Insolationsreihe, in eine synthetische stratigraphische Datenreihe um, deren Sedimentationsrate sich exponentiell vom Anfangs- zum Endwert ändert; damit lässt sich testen, wie Verfolgungs- und Altersmodell-Werkzeuge mit einer veränderlichen Rate zurechtkommen.
+Sedimentation rate at the start of the series (cm/kyr)	Sedimentationsrate am Anfang der Reihe (cm/kyr)
+Sedimentation rate at the end of the series (cm/kyr)	Sedimentationsrate am Ende der Reihe (cm/kyr)
+Turns a forcing series (e.g. precession, ETP or an ice-volume model) into a series of sedimentary facies by slicing the standardised forcing into classes, and compares the spectra of forcing and facies.	Wandelt eine Antriebsreihe (z. B. Präzession, ETP oder ein Eisvolumenmodell) in eine Reihe sedimentärer Fazies um, indem der standardisierte Antrieb in Klassen unterteilt wird, und vergleicht die Spektren von Antrieb und Fazies.
+Number of facies	Anzahl der Fazies
+Clip the forcing at its mean value (no facies change below it)	Antrieb bei seinem Mittelwert abschneiden (darunter kein Fazieswechsel)
+Reverse the sign of the forcing	Vorzeichen des Antriebs umkehren
+Simulates the smoothing of a time series (time in kyr) by diffusive bioturbation, or removes it by Wiener deconvolution (Liu et al. 2021), for a mixed-layer depth, sedimentation rate and mixing parameter G.	Simuliert die Glättung einer Zeitreihe (Zeit in kyr) durch diffusive Bioturbation oder entfernt sie durch Wiener-Dekonvolution (Liu et al. 2021), für eine Tiefe der Mischungsschicht, eine Sedimentationsrate und einen Mischungsparameter G.
+Direction	Richtung
+Mix: simulate bioturbation (bioturb)	Mischen: Bioturbation simulieren (bioturb)
+Unmix: remove bioturbation (unbioturb)	Entmischen: Bioturbation entfernen (unbioturb)
+Mixing parameter G = D / (ML v)	Mischungsparameter G = D / (ML v)
+Mixed-layer depth (cm)	Tiefe der Mischungsschicht (cm)
+Sedimentation rate (cm/kyr)	Sedimentationsrate (cm/kyr)
+Fraction tapered before deconvolution	Vor der Dekonvolution getaperter Anteil
+Wiener filter (stabilises the deconvolution)	Wiener-Filter (stabilisiert die Dekonvolution)
+Lowpass cut-off after deconvolution (cycles/kyr, 0 = none)	Tiefpass-Grenzfrequenz nach der Dekonvolution (Zyklen/kyr, 0 = keine)
+Response of the advection-diffusion bioturbation model of Schink and Guinasso (1975) to an impulse: how a single event is smeared over depth and time by a mixed layer.	Antwort des Advektions-Diffusions-Bioturbationsmodells von Schink und Guinasso (1975) auf einen Impuls: wie ein einzelnes Ereignis durch eine Mischungsschicht über Tiefe und Zeit verschmiert wird.
+Bioturbation parameter G = D / (ML v)	Bioturbationsparameter G = D / (ML v)
+Writes an example data set of WaverideR into the working folder.	Schreibt einen Beispieldatensatz von WaverideR in den Arbeitsordner.
+Data set	Datensatz
+IODP 926 grey scale (Zeeden et al. 2013)	IODP 926 Graustufen (Zeeden et al. 2013)
+Sullivan core magnetic susceptibility (Pas et al. 2018)	Sullivan-Kern, magnetische Suszeptibilität (Pas et al. 2018)
+ETP astronomical signal example	Beispiel für ein astronomisches ETP-Signal
+Depth rank example	Beispiel für Tiefenränge
+Total solar irradiance 0-9400 ka (Steinhilber et al. 2012)	Totale solare Bestrahlungsstärke 0-9400 ka (Steinhilber et al. 2012)
+Bisciaro Fm XRF (several columns)	Bisciaro-Fm., XRF (mehrere Spalten)
+Sorts by the first column, removes empty values and averages duplicated depths.	Sortiert nach der ersten Spalte, entfernt leere Werte und mittelt doppelt vorkommende Tiefen.
+Keeps the part of the series between two depths / times (Acycle: Math > Select Parts). Drag the two lines on the figure or type the values.	Behält den Abschnitt der Reihe zwischen zwei Tiefen / Zeiten (Acycle: Math > Select Parts). Die beiden Linien in der Abbildung ziehen oder die Werte eingeben.
+From	Von
+To	Bis
+Removes the part of the series between two depths; optionally closes the gap (Acycle: Remove Parts). Drag the two lines on the figure or type the values.	Entfernt den Abschnitt der Reihe zwischen zwei Tiefen; schließt optional die Lücke (Acycle: Remove Parts). Die beiden Linien in der Abbildung ziehen oder die Werte eingeben.
+Close the gap (shift the part below upwards)	Lücke schließen (den Abschnitt darunter nach oben verschieben)
+Removes values outside c times the interquartile range from the quartiles (astrochron::trim).	Entfernt Werte, die mehr als das c-Fache des Interquartilsabstands von den Quartilen entfernt liegen (astrochron::trim).
+Factor c (x IQR)	Faktor c (x IQR)
+Values below the lower or above the upper limit are set to the limit (Acycle: Math > Clipping).	Werte unter der unteren oder über der oberen Grenze werden auf die Grenze gesetzt (Acycle: Math > Clipping).
+Lower limit	Untere Grenze
+Upper limit	Obere Grenze
+Writes one proxy column of a multi-column table as its own two-column series.	Schreibt eine Proxy-Spalte einer mehrspaltigen Tabelle als eigene zweispaltige Reihe.
+Column	Spalte
+Grey	Grau
+Works on all columns of a table: removes levels with an empty value, replaces negative or zero values (e.g. before a log transform), removes values above or below a threshold, or keeps an interval.	Arbeitet auf allen Spalten einer Tabelle: entfernt Niveaus mit einem leeren Wert, ersetzt negative Werte oder Nullwerte (z. B. vor einer Log-Transformation), entfernt Werte über oder unter einem Schwellenwert oder behält ein Intervall.
+Remove levels with an empty value (rmNA)	Niveaus mit einem leeren Wert entfernen (rmNA)
+Replace negative values by 0 (repl0)	Negative Werte durch 0 ersetzen (repl0)
+Replace values <= 0 by the smallest positive number (replEps)	Werte <= 0 durch die kleinste positive Zahl ersetzen (replEps)
+Remove values above or below a threshold (trimAT)	Werte über oder unter einem Schwellenwert entfernen (trimAT)
+Keep an interval of all columns (iso)	Ein Intervall aller Spalten behalten (iso)
+Column shown in the figure; trimAT tests and keeps only this column.	In der Abbildung gezeigte Spalte; trimAT prüft und behält nur diese Spalte.
+Threshold	Schwellenwert
+Remove the values	Werte entfernen
+larger than the threshold	größer als der Schwellenwert
+smaller than the threshold	kleiner als der Schwellenwert
+Resamples the series at an even interval (linear, as Acycle) or with a cubic spline.	Tastet die Reihe in einem gleichmäßigen Intervall neu ab (linear, wie Acycle) oder mit einem kubischen Spline.
+New sampling interval	Neues Abtastintervall
+Method	Methode
+Cubic spline	Kubischer Spline
+Estimates the sampling interval at which linear interpolation of an unevenly sampled record does not bias the spectral background (from power-law noise surrogates on the actual sampling grid), then interpolates with an anti-alias filter.	Schätzt das Abtastintervall, bei dem die lineare Interpolation einer ungleichmäßig abgetasteten Datenreihe den spektralen Hintergrund nicht verzerrt (aus Potenzgesetz-Rauschsurrogaten auf dem tatsächlichen Abtastgitter), und interpoliert dann mit einem Anti-Aliasing-Filter.
+Interpolation interval	Interpolationsintervall
+Estimate it (Laepple and Huybers 2013)	Schätzen (Laepple und Huybers 2013)
+Given	Vorgegeben
+Interval	Intervall
+Threshold of the spectral ratio R	Schwellenwert des spektralen Verhältnisses R
+Power-law exponent of the noise surrogates	Potenzgesetz-Exponent der Rauschsurrogate
+MTM time-bandwidth product	MTM-Zeit-Bandbreite-Produkt
+Smoothing of the ratio R	Glättung des Verhältnisses R
+Number of noise simulations (> 1 runs in parallel)	Anzahl der Rauschsimulationen (> 1 läuft parallel)
+Anti-alias filter	Anti-Aliasing-Filter
+Interpolates series 1 linearly at the depths / times of series 2 (e.g. to compare or cross-plot two proxies measured at different levels).	Interpoliert Reihe 1 linear an den Tiefen / Zeiten von Reihe 2 (z. B. um zwei auf unterschiedlichen Niveaus gemessene Proxys zu vergleichen oder gegeneinander aufzutragen).
+Series 1	Reihe 1
+Series 2	Reihe 2
+Also write a table with both series at the levels of file 2	Zusätzlich eine Tabelle mit beiden Reihen an den Niveaus von Datei 2 schreiben
+Turns a bed table (column 1 base, column 2 top of every bed, column 3 rank or proxy value, as in StratigrapheR) into an evenly sampled series that keeps the bed boundaries.	Wandelt eine Schichttabelle (Spalte 1 Basis, Spalte 2 Top jeder Schicht, Spalte 3 Rang oder Proxy-Wert, wie in StratigrapheR) in eine gleichmäßig abgetastete Reihe um, die die Schichtgrenzen beibehält.
+Divisor of the greatest common bed thickness	Teiler der größten gemeinsamen Schichtmächtigkeit
+Resample to a regular step	Mit regelmäßigem Schritt neu abtasten
+Step of the resampled series	Schritt der neu abgetasteten Reihe
+Builds a lithofacies rank series from a bed table in stratigraphic order (column 1 bed thickness, another column the facies rank of the bed), sampled at an even step.	Erstellt eine Lithofazies-Rangreihe aus einer Schichttabelle in stratigraphischer Reihenfolge (Spalte 1 Schichtmächtigkeit, eine weitere Spalte der Faziesrang der Schicht), abgetastet mit gleichmäßigem Schritt.
+Rank column	Rangspalte
+Sampling step (0 = no interpolation)	Abtastschritt (0 = keine Interpolation)
+Height of the base of the first bed	Höhe der Basis der ersten Schicht
+Standardise, remove the mean, log transform, change sign or scale, or flip the depth axis.	Standardisieren, Mittelwert entfernen, logarithmieren, Vorzeichen oder Skalierung ändern oder die Tiefenachse umkehren.
+Standardise (z-score)	Standardisieren (z-Wert)
+Remove mean	Mittelwert entfernen
+Natural log	Natürlicher Logarithmus
+Change sign (x -1)	Vorzeichen ändern (x -1)
+Normalise to 0-1	Auf 0-1 normieren
+Multiply depth by a factor (units)	Tiefe mit einem Faktor multiplizieren (Einheiten)
+Flip depth axis (top <-> base)	Tiefenachse umkehren (Top <-> Basis)
+Depth to height / time to age (x -> max - x)	Tiefe zu Höhe / Zeit zu Alter (x -> max - x)
+Factor	Faktor
+e.g. 0.01 converts cm to m	z. B. wandelt 0.01 cm in m um
+Divides by the linear trend, arcsine transform, flips the stratigraphic order, clips or mutes the values below a threshold (enhances the modulator, e.g. eccentricity), pads with zeros, or converts depth to time with a constant sedimentation rate.	Dividiert durch den linearen Trend, Arkussinus-Transformation, kehrt die stratigraphische Reihenfolge um, schneidet die Werte unter einem Schwellenwert ab oder dämpft sie (verstärkt den Modulator, z. B. die Exzentrizität), füllt mit Nullen auf oder wandelt Tiefe mit einer konstanten Sedimentationsrate in Zeit um.
+Divide by the linear trend (divTrend)	Durch den linearen Trend dividieren (divTrend)
+Arcsine transform, after rescaling to 0-1 (arcsinT)	Arkussinus-Transformation, nach Reskalierung auf 0-1 (arcsinT)
+Flip the stratigraphic order (flip)	Stratigraphische Reihenfolge umkehren (flip)
+Clip the values below a threshold (clipIt)	Werte unter einem Schwellenwert abschneiden (clipIt)
+Mute the values below a threshold by a divisor (clipIt)	Werte unter einem Schwellenwert durch einen Divisor dämpfen (clipIt)
+Pad with zeros (pad)	Mit Nullen auffüllen (pad)
+Depth to time with a constant sed. rate (constantSedrate)	Tiefe zu Zeit mit konstanter Sed.-Rate (constantSedrate)
+Height given to the new first level	Höhe des neuen ersten Niveaus
+Value given to the clipped values	Wert für die abgeschnittenen Werte
+Number of zeros added at the end	Anzahl der am Ende angefügten Nullen
+Sedimentation rate (depth units per time unit)	Sedimentationsrate (Tiefeneinheiten pro Zeiteinheit)
+In the units of the depth column per time unit, e.g. 0.02 m/kyr for 2 cm/kyr with depths in metres.	In den Einheiten der Tiefenspalte pro Zeiteinheit, z. B. 0.02 m/kyr für 2 cm/kyr bei Tiefen in Metern.
+Time of the first level	Zeit des ersten Niveaus
+Time	Zeit
+increases with depth	nimmt mit der Tiefe zu
+decreases with depth	nimmt mit der Tiefe ab
+First derivative dy/dx (central differences).	Erste Ableitung dy/dx (zentrale Differenzen).
+Moving average, moving median or Gaussian kernel with a window in depth / time units, or LOESS.	Gleitender Mittelwert, gleitender Median oder Gauß-Kernel mit einem Fenster in Tiefen- / Zeiteinheiten oder LOESS.
+Moving average	Gleitender Mittelwert
+Moving median	Gleitender Median
+Gaussian kernel	Gauß-Kernel
+LOESS (span)	LOESS (Spanne)
+Window width (depth / time units)	Fensterbreite (Tiefen- / Zeiteinheiten)
+For the Gaussian kernel the window is 4 sigma wide.	Beim Gauß-Kernel ist das Fenster 4 Sigma breit.
+LOESS span (fraction of the record)	LOESS-Spanne (Anteil der Datenreihe)
+Applies a cosine-tapered (Tukey), DPSS, Gaussian or Hann taper to the series, e.g. before a periodogram, and shows the shape of the taper and its spectral window.	Wendet einen Kosinus-Taper (Tukey), DPSS-, Gauß- oder Hann-Taper auf die Reihe an, z. B. vor einem Periodogramm, und zeigt die Form des Tapers und sein Spektralfenster.
+Cosine-tapered window (cosTaper)	Kosinus-getapertes Fenster (cosTaper)
+Discrete prolate spheroidal sequence (dpssTaper)	Diskrete prolate sphäroidale Sequenz (dpssTaper)
+Gaussian window (gausTaper)	Gauß-Fenster (gausTaper)
+Hann window (hannTaper)	Hann-Fenster (hannTaper)
+Fraction of the series tapered (1 = Hann)	Getaperter Anteil der Reihe (1 = Hann)
+Time-bandwidth product	Zeit-Bandbreite-Produkt
+Which DPSS (1 = first)	Welche DPSS (1 = erste)
+Gaussian alpha (1 / standard deviation, >= 2.5)	Gauß-Alpha (1 / Standardabweichung, >= 2.5)
+Normalise the taper to RMS = 1 (keeps the power of a white process)	Taper auf RMS = 1 normieren (erhält die Leistung eines weißen Prozesses)
+Remove the mean first	Zuerst den Mittelwert entfernen
+Remove a linear trend first	Zuerst einen linearen Trend entfernen
+Also write the taper itself (256 points)	Zusätzlich den Taper selbst schreiben (256 Punkte)
+Accumulation rate of a component (concentration in weight %) from a constant linear sedimentation rate and dry bulk density: component, bulk and linear accumulation rates.	Akkumulationsrate einer Komponente (Konzentration in Gewichts-%) aus einer konstanten linearen Sedimentationsrate und der Trockenrohdichte: Komponenten-, Gesamt- und lineare Akkumulationsrate.
+Dry bulk density (g/cm3)	Trockenrohdichte (g/cm3)
+Removes a linear, LOWESS, polynomial or automatic-span LOESS trend (Acycle: Detrending).	Entfernt einen linearen Trend, einen LOWESS-Trend, einen Polynomtrend oder einen LOESS-Trend mit automatischer Spanne (Acycle: Detrending).
+Polynomial	Polynom
+LOESS with automatic span (WaverideR)	LOESS mit automatischer Spanne (WaverideR)
+LOWESS span (fraction of the record)	LOWESS-Spanne (Anteil der Datenreihe)
+Polynomial order	Polynomordnung
+Also write the trend	Zusätzlich den Trend schreiben
+FFT lowpass filter with a rectangular, Gaussian or cosine-tapered window, the matching highpass (series minus lowpass), or removal of a Gaussian-kernel trend.	FFT-Tiefpassfilter mit Rechteck-, Gauß- oder Kosinus-getapertem Fenster, der zugehörige Hochpass (Reihe minus Tiefpass) oder Entfernen eines Gauß-Kernel-Trends.
+Lowpass filter (lowpass)	Tiefpassfilter (lowpass)
+Highpass: series minus lowpass (lowpass)	Hochpass: Reihe minus Tiefpass (lowpass)
+Remove a Gaussian-kernel trend (noKernel)	Gauß-Kernel-Trend entfernen (noKernel)
+Cut-off frequency (cycles per unit)	Grenzfrequenz (Zyklen pro Einheit)
+Window	Fenster
+Rectangular	Rechteck
+Gaussian	Gauß
+Cosine-tapered	Kosinus-getapert
+Gaussian window: alpha (>= 2.5)	Gauß-Fenster: Alpha (>= 2.5)
+Cosine-tapered window: fraction tapered	Kosinus-getapertes Fenster: getaperter Anteil
+Zero padding factor	Zero-Padding-Faktor
+Remove a linear trend before filtering	Vor dem Filtern einen linearen Trend entfernen
+Kernel smoothing (fraction of the record, > 0)	Kernel-Glättung (Anteil der Datenreihe, > 0)
+Also write the lowpass / kernel trend	Zusätzlich den Tiefpass- / Kernel-Trend schreiben
+Removes the AR(1) or AR(p) red-noise structure (Acycle: Pre-whitening).	Entfernt die AR(1)- oder AR(p)-Struktur des roten Rauschens (Acycle: Pre-whitening).
+AR(p), order chosen by AIC	AR(p), Ordnung nach AIC gewählt
+Maximum AR order	Maximale AR-Ordnung
+Summary of the sampling interval (and its Nyquist frequency) and of the distribution of the values.	Zusammenfassung des Abtastintervalls (und seiner Nyquist-Frequenz) und der Verteilung der Werte.
+Sampling-interval figure	Abbildung des Abtastintervalls
+Cumulative sampling intervals	Kumulative Abtastintervalle
+Histogram of the sampling intervals	Histogramm der Abtastintervalle
+Mean, median and variance, or minimum, maximum and range, in a window of constant length in depth or time (the number of points per window adapts to uneven sampling); on an even grid also the distribution of the values in each window.	Mittelwert, Median und Varianz oder Minimum, Maximum und Spannweite in einem Fenster konstanter Länge in Tiefe oder Zeit (die Anzahl der Punkte pro Fenster passt sich an ungleichmäßige Abtastung an); auf einem gleichmäßigen Gitter zusätzlich die Verteilung der Werte in jedem Fenster.
+Mean, median and variance (mwStats)	Mittelwert, Median und Varianz (mwStats)
+Mean, median, variance and value densities on an even grid (mwStatsGrid)	Mittelwert, Median, Varianz und Wertedichten auf einem gleichmäßigen Gitter (mwStatsGrid)
+Minimum, maximum and range (mwMinMax)	Minimum, Maximum und Spannweite (mwMinMax)
+Window length (depth / time units)	Fensterlänge (Tiefen- / Zeiteinheiten)
+Window placement	Fensterplatzierung
+Centred on every level	Auf jedes Niveau zentriert
+Starting at the smallest depth / time	Beginnend bei der kleinsten Tiefe / Zeit
+Starting at the largest depth / time	Beginnend bei der größten Tiefe / Zeit
+Confidence interval of the mean (%, 0 = none)	Konfidenzintervall des Mittelwerts (%, 0 = keines)
+Ends: mean of the first and last half window (centred windows only)	Enden: Mittelwert des ersten und letzten halben Fensters (nur zentrierte Fenster)
+Grid step	Gitterschritt
+Also write the table of windows (mwin / mwinGrid)	Zusätzlich die Tabelle der Fenster schreiben (mwin / mwinGrid)
+Correlation coefficient (Pearson, Spearman or Kendall) of two columns of a table in a moving window of constant length in depth or time.	Korrelationskoeffizient (Pearson, Spearman oder Kendall) zweier Spalten einer Tabelle in einem gleitenden Fenster konstanter Länge in Tiefe oder Zeit.
+First proxy	Erster Proxy
+Second proxy	Zweiter Proxy
+Correlation	Korrelation
+Lag-1 autocorrelation in a moving window, averaged over Monte Carlo runs with random sampling intervals and window widths between the shortest and longest window (mean and standard deviation).	Lag-1-Autokorrelation in einem gleitenden Fenster, gemittelt über Monte-Carlo-Läufe mit zufälligen Abtastintervallen und Fensterbreiten zwischen dem kürzesten und dem längsten Fenster (Mittelwert und Standardabweichung).
+Shortest window (depth / time units)	Kürzestes Fenster (Tiefen- / Zeiteinheiten)
+Longest window (depth / time units)	Längstes Fenster (Tiefen- / Zeiteinheiten)
+Number of simulations	Anzahl der Simulationen
+Cross-plot of two columns of a table with kernel density estimates of each variable along the axes; gives the Pearson and Spearman correlation.	Kreuzdiagramm zweier Spalten einer Tabelle mit Kerndichteschätzungen jeder Variablen entlang der Achsen; gibt die Pearson- und die Spearman-Korrelation an.
+x variable	x-Variable
+y variable	y-Variable
+Grey fill of the density curves	Graue Füllung der Dichtekurven
+Principal component analysis of all numeric columns of a table (column 1 depth or time), optionally rotated (varimax or promax); writes the loadings and the scores along the record.	Hauptkomponentenanalyse aller numerischen Spalten einer Tabelle (Spalte 1 Tiefe oder Zeit), optional rotiert (Varimax oder Promax); schreibt die Ladungen und die Scores entlang der Datenreihe.
+Promax (oblique)	Promax (schiefwinklig)
+Number of components (0 = all)	Anzahl der Komponenten (0 = alle)
+Standardise the variables first (scores of standardised data)	Zuerst die Variablen standardisieren (Scores standardisierter Daten)
+stratPCA uses the correlation matrix but multiplies the loadings with the raw values for the scores.	stratPCA verwendet die Korrelationsmatrix, multipliziert für die Scores aber die Ladungen mit den Rohwerten.
+Finds the local maxima and/or minima of a (filtered or extracted) cycle, keeping only the most extreme of consecutive extremes of the same kind, e.g. as tie points for an age model.	Findet die lokalen Maxima und/oder Minima eines (gefilterten oder extrahierten) Zyklus und behält von aufeinanderfolgenden Extrema derselben Art nur das extremste, z. B. als Ankerpunkte für ein Altersmodell.
+Find	Finden
+Maxima and minima	Maxima und Minima
+Points compared on each side	Auf jeder Seite verglichene Punkte
+Finds the maxima of peaks and / or minima of troughs, optionally only above (peaks) or below (troughs) a level, or lists the plateau points that are not evaluated as peaks or troughs.	Findet die Maxima von Peaks und / oder die Minima von Tälern, optional nur oberhalb (Peaks) oder unterhalb (Täler) eines Niveaus, oder listet die Plateaupunkte auf, die nicht als Peaks oder Täler gewertet werden.
+Troughs	Täler
+Peaks and troughs	Peaks und Täler
+Only peaks above / troughs below a level	Nur Peaks oberhalb / Täler unterhalb eines Niveaus
+Level	Niveau
+List the plateau points instead (flat tops / bottoms, not evaluated)	Stattdessen die Plateaupunkte auflisten (flache Gipfel / Böden, nicht gewertet)
+Bayesian change-point regression (as Acycle: Math > Changepoint).	Bayessche Änderungspunkt-Regression (wie Acycle: Math > Changepoint).
+Maximum number of change points	Maximale Anzahl der Änderungspunkte
+Minimum segment length (points)	Minimale Segmentlänge (Punkte)
+Runs the Bayesian change-point regression (Ruggieri 2013) for 1 to k change points and gives the R2 of each model, to choose the number of change points for Bayesian change points.	Führt die Bayessche Änderungspunkt-Regression (Ruggieri 2013) für 1 bis k Änderungspunkte aus und gibt das R2 jedes Modells an, um die Anzahl der Änderungspunkte für Bayessche Änderungspunkte zu wählen.
+Largest number of change points	Größte Anzahl der Änderungspunkte
+Largest number of points (longer records are resampled)	Größte Anzahl der Punkte (längere Datenreihen werden neu abgetastet)
+Multitaper (MTM) spectrum with AR(1), robust red-noise (ML96), LOWSPEC or power-law confidence levels; periodogram; maximum entropy (MESA) or adaptive multitaper (AMTM) of WaverideR.	Multitaper-Spektrum (MTM) mit AR(1)-Konfidenzniveaus, Konfidenzniveaus für robustes rotes Rauschen (ML96), LOWSPEC- oder Potenzgesetz-Konfidenzniveaus; Periodogramm; Maximum-Entropie-Methode (MESA) oder adaptives Multitaper-Verfahren (AMTM) von WaverideR.
+MTM, AR(1) red noise	MTM, rotes AR(1)-Rauschen
+MTM, robust red noise (Mann & Lees 1996)	MTM, robustes rotes Rauschen (Mann & Lees 1996)
+MTM, power-law noise	MTM, Potenzgesetz-Rauschen
+Periodogram	Periodogramm
+MESA, maximum entropy (WaverideR)	MESA, Maximum-Entropie (WaverideR)
+Adaptive MTM with noise models (WaverideR)	Adaptives MTM mit Rauschmodellen (WaverideR)
+Spectral whitening background, SWA (WaverideR)	Hintergrund durch spektrales Whitening, SWA (WaverideR)
+Time-bandwidth product (NW)	Zeit-Bandbreite-Produkt (NW)
+Padding factor	Padding-Faktor
+Remove linear trend	Linearen Trend entfernen
+Maximum frequency shown (cycles/unit)	Höchste angezeigte Frequenz (Zyklen/Einheit)
+Default: the Nyquist frequency, 1 / (2 x sampling interval).	Standard: die Nyquist-Frequenz, 1 / (2 x Abtastintervall).
+Horizontal axis	Horizontale Achse
+Frequency	Frequenz
+Period	Periode
+Logarithmic power axis	Logarithmische Leistungsachse
+Bayesian probability spectrum (Gregory 2005, Weedon et al. 2019), periodogram with the Smoothed Window Average background (Kemp 2016, Weedon 2020), or the average spectrum of an evolutive MESA.	Bayessches Wahrscheinlichkeitsspektrum (Gregory 2005, Weedon et al. 2019), Periodogramm mit dem Smoothed-Window-Average-Hintergrund (Kemp 2016, Weedon 2020) oder das gemittelte Spektrum einer evolutiven MESA.
+Spectrum	Spektrum
+Bayesian probability spectrum	Bayessches Wahrscheinlichkeitsspektrum
+Periodogram with SWA background	Periodogramm mit SWA-Hintergrund
+Average of an evolutive MESA	Mittel einer evolutiven MESA
+MESA window length (depth units)	MESA-Fensterlänge (Tiefeneinheiten)
+MESA window step (depth units)	MESA-Fensterschritt (Tiefeneinheiten)
+Normalise every window before averaging	Jedes Fenster vor dem Mitteln normieren
+Periodogram of an unevenly sampled series without interpolation (Lomb-Scargle), with the power level that the highest peak exceeds by chance with probability alpha (Baluev 2008 or Press et al. 1994), and optionally a p-value of the highest peak by randomisation.	Periodogramm einer ungleichmäßig abgetasteten Reihe ohne Interpolation (Lomb-Scargle), mit dem Leistungsniveau, das der höchste Peak mit der Wahrscheinlichkeit alpha zufällig überschreitet (Baluev 2008 oder Press et al. 1994), und optional einem p-Wert des höchsten Peaks durch Randomisierung.
+Lowest frequency (0 = 1 / record length)	Niedrigste Frequenz (0 = 1 / Länge der Datenreihe)
+Highest frequency (cycles/unit)	Höchste Frequenz (Zyklen/Einheit)
+Default: half the inverse of the median sampling interval.	Standard: die Hälfte des Kehrwerts des medianen Abtastintervalls.
+Oversampling factor	Oversampling-Faktor
+Significance level alpha	Signifikanzniveau alpha
+Normalisation	Normierung
+Standard (0 to 1, Baluev 2008)	Standard (0 bis 1, Baluev 2008)
+p-value of the highest peak by randomisation (randlsp)	p-Wert des höchsten Peaks durch Randomisierung (randlsp)
+Randomisations	Randomisierungen
+Tests spectral peaks more strictly than one confidence level: confidence levels and p-values corrected for testing many frequencies at once (Bonferroni and five other corrections), the intermediate spectrum of Thomson et al. (2001) to choose the order of the AR background, or a power-law (1/f) fit.	Prüft spektrale Peaks strenger als mit einem einzelnen Konfidenzniveau: Konfidenzniveaus und p-Werte, die für das gleichzeitige Testen vieler Frequenzen korrigiert sind (Bonferroni und fünf weitere Korrekturen), das Zwischenspektrum von Thomson et al. (2001) zur Wahl der Ordnung des AR-Hintergrunds oder ein Potenzgesetz-Fit (1/f).
+Bonferroni-corrected confidence levels (confAdjust)	Bonferroni-korrigierte Konfidenzniveaus (confAdjust)
+p-values corrected for multiple testing (multiTest)	Für multiples Testen korrigierte p-Werte (multiTest)
+Intermediate spectrum, MTM / AR(p) (mtmAR)	Zwischenspektrum, MTM / AR(p) (mtmAR)
+Power-law (1/f) fit to the periodogram (pwrLawFit)	Potenzgesetz-Fit (1/f) an das Periodogramm (pwrLawFit)
+Spectrum and background	Spektrum und Hintergrund
+MTM, robust red noise (ML96)	MTM, robustes rotes Rauschen (ML96)
+Computed without zero padding, as the multiple-testing corrections require.	Ohne Zero-Padding berechnet, wie es die Korrekturen für multiples Testen erfordern.
+Frequency bands of interest (optional): low high; low high	Interessierende Frequenzbänder (optional): tief hoch; tief hoch
+Only frequencies in these bands count as tests, which makes the correction less strict. For the power-law fit: the first band is the frequency range of the fit.	Nur Frequenzen in diesen Bändern zählen als Tests, wodurch die Korrektur weniger streng wird. Für den Potenzgesetz-Fit: Das erste Band ist der Frequenzbereich des Fits.
+Order of the AR model	Ordnung des AR-Modells
+Increase the order until the intermediate spectrum stops getting flatter.	Die Ordnung erhöhen, bis das Zwischenspektrum nicht mehr flacher wird.
+AR estimation	AR-Schätzung
+Maximum likelihood	Maximum-Likelihood
+Least squares	Kleinste Quadrate
+Simulates noise series with the length, sampling and noise of your record and counts how often each background method (AR(1), ML96, LOWSPEC, power law) finds false peaks, in total and per frequency, also after multiple-testing corrections. Use it to choose a background method you can trust.	Simuliert Rauschreihen mit der Länge, der Abtastung und dem Rauschen der eigenen Datenreihe und zählt, wie oft jede Hintergrundmethode (AR(1), ML96, LOWSPEC, Potenzgesetz) falsche Peaks findet, insgesamt und pro Frequenz, auch nach Korrekturen für multiples Testen. Damit lässt sich eine Hintergrundmethode wählen, der man vertrauen kann.
+Noise of the simulated series	Rauschen der simulierten Reihen
+AR(1) coefficient rho or power-law exponent beta (0 = from the data)	AR(1)-Koeffizient rho oder Potenzgesetz-Exponent beta (0 = aus den Daten)
+By default rho is the lag-1 autocorrelation of the detrended record, beta its power-law slope.	Standardmäßig ist rho die Lag-1-Autokorrelation der trendbereinigten Datenreihe, beta die Steigung ihres Potenzgesetzes.
+Background method tested	Getestete Hintergrundmethode
+MTM, power law	MTM, Potenzgesetz
+Periodogram, power law	Periodogramm, Potenzgesetz
+Periodogram, AR(1)	Periodogramm, AR(1)
+Time-bandwidth product (NW, MTM methods)	Zeit-Bandbreite-Produkt (NW, MTM-Methoden)
+Remove a linear trend from the simulated series	Linearen Trend aus den simulierten Reihen entfernen
+Remove a LOWESS trend (span 0-1, 0 = no)	LOWESS-Trend entfernen (Spanne 0-1, 0 = nein)
+Also evaluate multiple-testing corrections	Zusätzlich Korrekturen für multiples Testen auswerten
+Number of simulated series	Anzahl der simulierten Reihen
+Sliding-window spectra: evolutive harmonic analysis (EHA, multitaper), EHA on a log2 period axis, windowed FFT or evolutive maximum entropy (MESA).	Spektren im gleitenden Fenster: evolutive harmonische Analyse (EHA, Multitaper), EHA auf einer log2-Periodenachse, gefensterte FFT oder evolutive Maximum-Entropie-Methode (MESA).
+EHA, multitaper (astrochron)	EHA, Multitaper (astrochron)
+EHA on a log2 period axis (WaverideR)	EHA auf einer log2-Periodenachse (WaverideR)
+Windowed FFT (WaverideR)	Gefensterte FFT (WaverideR)
+Pad the ends by half a window	Enden um ein halbes Fenster auffüllen
+No padding (the result starts and ends half a window inside)	Kein Padding (das Ergebnis beginnt und endet ein halbes Fenster weiter innen)
+Mirror the record at its ends	Datenreihe an ihren Enden spiegeln
+Mean value	Mittelwert
+With padding, windows are also centred on the first and last samples, so the result spans the whole record.	Mit Padding werden Fenster auch auf den ersten und den letzten Abtastwert zentriert, sodass das Ergebnis die gesamte Datenreihe abdeckt.
+Step (depth / time units)	Schritt (Tiefen- / Zeiteinheiten)
+Maximum frequency (cycles/unit)	Maximale Frequenz (Zyklen/Einheit)
+Logarithmic power	Logarithmische Leistung
+Normalise each window to its maximum	Jedes Fenster auf sein Maximum normieren
+Depth / time on the vertical axis (Acycle style)	Tiefe / Zeit auf der vertikalen Achse (Acycle-Stil)
+Evolutive harmonic analysis (EHA), then the power in a frequency band through the record and its share of the total power (e.g. how strong precession is along the section), or the spectrum at one depth.	Evolutive harmonische Analyse (EHA), dann die Leistung in einem Frequenzband entlang der Datenreihe und ihr Anteil an der Gesamtleistung (z. B. wie stark die Präzession entlang des Profils ist) oder das Spektrum in einer Tiefe.
+Result	Ergebnis
+Power in a band through the record (integratePower)	Leistung in einem Band entlang der Datenreihe (integratePower)
+Spectrum at one depth (extract)	Spektrum in einer Tiefe (extract)
+Window length (depth units)	Fensterlänge (Tiefeneinheiten)
+Step (depth units)	Schritt (Tiefeneinheiten)
+Highest frequency of the EHA (cycles/unit)	Höchste Frequenz der EHA (Zyklen/Einheit)
+Frequency band: low high (cycles/unit)	Frequenzband: tief hoch (Zyklen/Einheit)
+Default: around the highest peak of the periodogram.	Standard: um den höchsten Peak des Periodogramms.
+Normalise each spectrum to unit total power	Jedes Spektrum auf Einheits-Gesamtleistung normieren
+Depth of the spectrum	Tiefe des Spektrums
+Power	Leistung
+Harmonic F-test probability	Wahrscheinlichkeit des harmonischen F-Tests
+Evolutive multitaper spectra in which every window is first warped by the linear change of the sedimentation rate that sharpens its spectrum most, so cycles whose period changes become sharp lines; gives the rate gradient per window. Optional significance against warped AR(1) surrogates.	Evolutive Multitaper-Spektren, bei denen jedes Fenster zunächst mit derjenigen linearen Änderung der Sedimentationsrate verzerrt wird, die sein Spektrum am stärksten schärft, sodass Zyklen mit veränderlicher Periode zu scharfen Linien werden; gibt den Ratengradienten pro Fenster an. Optional Signifikanz gegenüber verzerrten AR(1)-Surrogaten.
+Step between windows (0 = window / 20)	Schritt zwischen Fenstern (0 = Fenster / 20)
+Largest relative rate gradient tried (per depth unit)	Größter getesteter relativer Ratengradient (pro Tiefeneinheit)
+Number of gradients on each side of zero	Anzahl der Gradienten auf jeder Seite von null
+Choice of the gradient of a window	Wahl des Gradienten eines Fensters
+Strength of the lines (F-test)	Stärke der Linien (F-Test)
+Match with the astronomical template	Übereinstimmung mit dem astronomischen Template
+Highest whitened peak	Höchster Peak nach Whitening
+Spectral entropy	Spektrale Entropie
+Astronomical periods of the template (kyr)	Astronomische Perioden des Templates (kyr)
+Depth unit of the data	Tiefeneinheit der Daten
+metres	Meter
+centimetres	Zentimeter
+feet	Fuß
+Number of AR(1) surrogates for significance (0 = none, slow)	Anzahl der AR(1)-Surrogate für die Signifikanz (0 = keine, langsam)
+Figure	Abbildung
+De-chirped map, significant cells outlined	De-chirpte Karte, signifikante Zellen umrandet
+Significance (ratio to the 95% surrogate level)	Signifikanz (Verhältnis zum 95%-Surrogatniveau)
+De-chirped map only	Nur de-chirpte Karte
+Continuous wavelet transform with 22 mother wavelets, superlet transform or synchrosqueezed wavelet transform (WaverideR). Significance against red noise is optional for the CWT.	Kontinuierliche Wavelet-Transformation mit 22 Mutter-Wavelets, Superlet-Transformation oder Synchrosqueezed-Wavelet-Transformation (WaverideR). Die Signifikanz gegenüber rotem Rauschen ist für die CWT optional.
+Continuous wavelet transform (CWT)	Kontinuierliche Wavelet-Transformation (CWT)
+Superlet transform	Superlet-Transformation
+Synchrosqueezed wavelet transform (SST)	Synchrosqueezed-Wavelet-Transformation (SST)
+Mother wavelet	Mutter-Wavelet
+Morlet, zero mean	Morlet, mittelwertfrei
+Generalised Morse	Verallgemeinertes Morse
+Complex Morlet (cmor)	Komplexes Morlet (cmor)
+Complex Gaussian (cgau)	Komplexes Gauß (cgau)
+Complex Mexican hat	Komplexer Mexikanischer Hut
+Frequency B-spline	Frequenz-B-Spline
+DOG (real)	DOG (reell)
+Real Morlet	Reelles Morlet
+Hermitian hat	Hermitescher Hut
+Number of cycles (omega_nr)	Anzahl der Zyklen (omega_nr)
+Scale resolution dj (smaller = more periods, slower)	Skalenauflösung dj (kleiner = mehr Perioden, langsamer)
+Number of periods	Anzahl der Perioden
+Base number of cycles c1	Basisanzahl der Zyklen c1
+Superlet order (min, max)	Superlet-Ordnung (min, max)
+Significance against red noise (slower)	Signifikanz gegenüber rotem Rauschen (langsamer)
+Number of red-noise simulations	Anzahl der Simulationen mit rotem Rauschen
+Show the average spectrum	Gemitteltes Spektrum anzeigen
+Show the data	Daten anzeigen
+Period axis label	Beschriftung der Periodenachse
+Depth axis label	Beschriftung der Tiefenachse
+Colour scale	Farbskala
+Default (quantiles)	Standard (Quantile)
+Quantiles	Quantile
+Logarithmic	Logarithmisch
+Square root	Quadratwurzel
+Automatic	Automatisch
+Whiten (equal contrast at every period)	Whitening (gleicher Kontrast bei jeder Periode)
+Sharper scalograms than the plain CWT: adaptive Morlet wavelet (number of cycles grows with the period), superlet synchrosqueezing, chirplet synchrosqueezing (follows changes of the sedimentation rate, with a map of the rate of change of the period) and ConceFT / multitaper synchrosqueezing (robust against noise).	Schärfere Skalogramme als die einfache CWT: adaptives Morlet-Wavelet (die Anzahl der Zyklen wächst mit der Periode), Superlet-Synchrosqueezing, Chirplet-Synchrosqueezing (folgt Änderungen der Sedimentationsrate, mit einer Karte der Änderungsrate der Periode) und ConceFT / Multitaper-Synchrosqueezing (robust gegen Rauschen).
+Adaptive Morlet wavelet (Awavelet)	Adaptives Morlet-Wavelet (Awavelet)
+Superlet synchrosqueezing (superlet SST)	Superlet-Synchrosqueezing (Superlet-SST)
+Chirplet synchrosqueezing (chirplet SST, slow)	Chirplet-Synchrosqueezing (Chirplet-SST, langsam)
+ConceFT (multitaper synchrosqueezing, Daubechies et al. 2016)	ConceFT (Multitaper-Synchrosqueezing, Daubechies et al. 2016)
+Multitaper SST (average of Morse wavelets)	Multitaper-SST (Mittel von Morse-Wavelets)
+Number of cycles at the shortest period (omega_min)	Anzahl der Zyklen bei der kürzesten Periode (omega_min)
+Number of cycles at the longest period (omega_max)	Anzahl der Zyklen bei der längsten Periode (omega_max)
+Change of the number of cycles with the period	Änderung der Anzahl der Zyklen mit der Periode
+Linear in log2(period)	Linear in log2(Periode)
+Linear in the scale index	Linear im Skalenindex
+Linear in period	Linear in der Periode
+Quadratic	Quadratisch
+Number of cycles of the orders (omega_0)	Anzahl der Zyklen der Ordnungen (omega_0)
+Combination of the orders	Kombination der Ordnungen
+Geometric mean	Geometrisches Mittel
+Arithmetic mean	Arithmetisches Mittel
+Largest dimensionless chirp tried	Größter getesteter dimensionsloser Chirp
+Chirp step	Chirp-Schritt
+Show the map of the rate of change of the period instead of the power	Statt der Leistung die Karte der Änderungsrate der Periode anzeigen
+Number of Morse wavelets (K)	Anzahl der Morse-Wavelets (K)
+Number of random combinations	Anzahl der Zufallskombinationen
+Scores the astronomical template on scalograms of chirped Morlet wavelets matched to every rate gradient, for every depth and sedimentation rate (an eCOCO-like evidence map that allows for changing rates). Shows the best score over the gradients and the best rate at every depth.	Bewertet das astronomische Template auf Skalogrammen gechirpter Morlet-Wavelets, die an jeden Ratengradienten angepasst sind, für jede Tiefe und Sedimentationsrate (eine eCOCO-ähnliche Evidenzkarte, die veränderliche Raten zulässt). Zeigt den besten Score über die Gradienten und die beste Rate in jeder Tiefe.
+Astronomical periods (kyr)	Astronomische Perioden (kyr)
+Period and rate spacing (octaves)	Perioden- und Ratenabstand (Oktaven)
+Number of cycles of the wavelet (omega_0)	Anzahl der Zyklen des Wavelets (omega_0)
+Step between scored positions (0 = 5 samples)	Schritt zwischen bewerteten Positionen (0 = 5 Abtastwerte)
+Second file: the tracked period curve (depth, period) of a cycle of known duration. The record is tuned with it, transformed in time and mapped back onto depth, so all cycles become sharp lines where the track is right: a check of the track. Optional significance against warped AR(1) surrogates.	Zweite Datei: die verfolgte Periodenkurve (Tiefe, Periode) eines Zyklus bekannter Dauer. Die Datenreihe wird damit getunt, in der Zeit transformiert und auf die Tiefe zurückabgebildet, sodass alle Zyklen dort zu scharfen Linien werden, wo die Spur stimmt: eine Prüfung der Spur. Optional Signifikanz gegenüber verzerrten AR(1)-Surrogaten.
+Transform in time	Transformation in der Zeit
+Morlet wavelet	Morlet-Wavelet
+Superlet SST	Superlet-SST
+Chirplet SST (slow)	Chirplet-SST (langsam)
+Multitaper EHA	Multitaper-EHA
+Combined (Morlet, EHA and superlet SST)	Kombiniert (Morlet, EHA und Superlet-SST)
+Shortest period (kyr; 0 = automatic)	Kürzeste Periode (kyr; 0 = automatisch)
+Longest period (kyr; 0 = automatic)	Längste Periode (kyr; 0 = automatisch)
+Period spacing (octaves)	Periodenabstand (Oktaven)
+Number of cycles of the Morlet wavelet	Anzahl der Zyklen des Morlet-Wavelets
+EHA window (kyr; 0 = 20 x shortest period)	EHA-Fenster (kyr; 0 = 20 x kürzeste Periode)
+Tuned scalogram (time domain)	Getuntes Skalogramm (Zeitbereich)
+Frequency uncertainty of a Fourier spectrum of this record (practical 1/T and Heisenberg-Gabor limit) and the period range a cycle can be told apart from (Rayleigh band), for the periods you give.	Frequenzunsicherheit eines Fourier-Spektrums dieser Datenreihe (praktisches 1/T und Heisenberg-Gabor-Grenze) und der Periodenbereich, gegenüber dem sich ein Zyklus abgrenzen lässt (Rayleigh-Band), für die angegebenen Perioden.
+Periods of interest	Interessierende Perioden
+Number of Rayleigh bandwidths (half-width of the band)	Anzahl der Rayleigh-Bandbreiten (halbe Breite des Bandes)
+Which parts of a wavelet or superlet scalogram stand above noise: analytic Torrence & Compo (1998) levels, Monte Carlo surrogates (white, AR(1), signal-corrected AR(1) or power-law noise, with p-values of candidate cycles), or percentiles of the average spectrum of red-noise runs.	Welche Teile eines Wavelet- oder Superlet-Skalogramms sich vom Rauschen abheben: analytische Niveaus nach Torrence & Compo (1998), Monte-Carlo-Surrogate (weißes Rauschen, AR(1)-Rauschen, signalkorrigiertes AR(1)-Rauschen oder Potenzgesetz-Rauschen, mit p-Werten von Kandidatenzyklen) oder Perzentile des gemittelten Spektrums von Läufen mit rotem Rauschen.
+Scalogram	Skalogramm
+Morlet CWT	Morlet-CWT
+Analytic (Torrence & Compo 1998, instantaneous)	Analytisch (Torrence & Compo 1998, sofort)
+Noise surrogates (Monte Carlo)	Rauschsurrogate (Monte Carlo)
+Red-noise percentiles of the average spectrum	Perzentile des roten Rauschens für das gemittelte Spektrum
+Noise background	Rauschhintergrund
+AR(1) without the candidate cycles	AR(1) ohne die Kandidatenzyklen
+Power law (1/f^beta)	Potenzgesetz (1/f^beta)
+Periods removed before fitting the noise	Vor dem Fit des Rauschens entfernte Perioden
+Candidate periods to give p-values for	Kandidatenperioden, für die p-Werte angegeben werden
+Significance level	Signifikanzniveau
+Percentiles of the red noise	Perzentile des roten Rauschens
+Scale resolution dj	Skalenauflösung dj
+Keeps only the ridges of a synchrosqueezed transform (SST, superlet SST or ConceFT) that are unlikely to come from AR noise of the record (optionally with a variance that changes along the record).	Behält nur die Grate einer Synchrosqueezing-Transformation (SST, Superlet-SST oder ConceFT), die wahrscheinlich nicht aus AR-Rauschen der Datenreihe stammen (optional mit einer Varianz, die sich entlang der Datenreihe ändert).
+Synchrosqueezed wavelet transform	Synchrosqueezed-Wavelet-Transformation
+Number of noise simulations	Anzahl der Rauschsimulationen
+Highest AR order of the noise model	Höchste AR-Ordnung des Rauschmodells
+Noise variance changes along the record	Rauschvarianz ändert sich entlang der Datenreihe
+Averages the wavelet power over a band of periods (e.g. one Milankovitch band) and tests it at every depth against white or AR(1) noise (Torrence & Compo 1998, eq. 24): is this cycle significant here?	Mittelt die Wavelet-Leistung über ein Periodenband (z. B. ein Milankovitch-Band) und testet sie in jeder Tiefe gegen weißes oder AR(1)-Rauschen (Torrence & Compo 1998, Gl. 24): Ist dieser Zyklus hier signifikant?
+Shortest period of the band	Kürzeste Periode des Bandes
+Longest period of the band	Längste Periode des Bandes
+Degrees of freedom	Freiheitsgrade
+Exact (eigenvalues)	Exakt (Eigenwerte)
+Number of cycles of the Morlet wavelet (omega_nr)	Anzahl der Zyklen des Morlet-Wavelets (omega_nr)
+Null-hypothesis series with the same spectrum as the data: IAAFT surrogates keep the value distribution exactly and the spectrum approximately, phase-randomised (FT) surrogates keep the spectrum exactly.	Nullhypothesen-Reihen mit demselben Spektrum wie die Daten: IAAFT-Surrogate erhalten die Werteverteilung exakt und das Spektrum näherungsweise, phasenrandomisierte (FT-)Surrogate erhalten das Spektrum exakt.
+Surrogate type	Surrogattyp
+Fourier phase randomisation	Fourier-Phasenrandomisierung
+Number of surrogates	Anzahl der Surrogate
+Maximum IAAFT iterations	Maximale Anzahl der IAAFT-Iterationen
+Surrogate series with the same power spectrum as the record but random phases (Ebisuzaki 1997), or noise generated from a theoretical spectrum (power law or AR(1); Timmer and Konig 1995) with the length, sampling, mean and standard deviation of the record.	Surrogatreihen mit demselben Leistungsspektrum wie die Datenreihe, aber zufälligen Phasen (Ebisuzaki 1997), oder Rauschen, das aus einem theoretischen Spektrum erzeugt wird (Potenzgesetz oder AR(1); Timmer und Konig 1995), mit der Länge, der Abtastung, dem Mittelwert und der Standardabweichung der Datenreihe.
+Phase-randomised surrogates of the record (surrogates)	Phasenrandomisierte Surrogate der Datenreihe (surrogates)
+Noise from a theoretical spectrum (makeNoise)	Rauschen aus einem theoretischen Spektrum (makeNoise)
+Number of series	Anzahl der Reihen
+Keep the mean of the record	Mittelwert der Datenreihe beibehalten
+Keep the variance of the record	Varianz der Datenreihe beibehalten
+Power law 1 / f^beta	Potenzgesetz 1 / f^beta
+beta or rho (0 = from the record)	beta oder rho (0 = aus der Datenreihe)
+Random seed (0 = random)	Zufallsstartwert (0 = zufällig)
+Band-pass filter: Taner (Taner 2000), Gaussian or cosine-tapered window. Optionally writes the amplitude envelope. Drag the two lines on the spectrum or type the cut-off frequencies.	Bandpassfilter: Taner (Taner 2000), Gauß- oder Kosinus-getapertes Fenster. Schreibt optional die Amplitudenhüllkurve. Die beiden Linien im Spektrum ziehen oder die Grenzfrequenzen eingeben.
+Gaussian (WaverideR)	Gauß (WaverideR)
+Cosine-tapered window (astrochron)	Kosinus-getapertes Fenster (astrochron)
+Low frequency cut-off (cycles/unit)	Untere Grenzfrequenz (Zyklen/Einheit)
+High frequency cut-off (cycles/unit)	Obere Grenzfrequenz (Zyklen/Einheit)
+Taner roll-off rate	Taner-Flankensteilheit
+Add the mean back to the filtered series	Mittelwert wieder zur gefilterten Reihe addieren
+Also write the amplitude envelope (Hilbert)	Zusätzlich die Amplitudenhüllkurve schreiben (Hilbert)
+Instantaneous amplitude of a filtered series (Acycle: Amplitude Modulation).	Momentanamplitude einer gefilterten Reihe (Acycle: Amplitude Modulation).
+Reconstructs a cycle of fixed period from the wavelet transform (band given as factors of the period or as shortest and longest period), its spectral power, or its amplitude (wavelet analogue of the Hilbert envelope, absolute calibration); or the envelope of the whole record.	Rekonstruiert einen Zyklus fester Periode aus der Wavelet-Transformation (Band als Faktoren der Periode oder als kürzeste und längste Periode angegeben), seine spektrale Leistung oder seine Amplitude (Wavelet-Analogon der Hilbert-Hüllkurve, absolute Kalibrierung); oder die Hüllkurve der gesamten Datenreihe.
+Extract	Extrahieren
+Cycle, band as factors of the period	Zyklus, Band als Faktoren der Periode
+Cycle, band as shortest and longest period	Zyklus, Band als kürzeste und längste Periode
+Spectral power of the cycle	Spektrale Leistung des Zyklus
+Amplitude of the cycle	Amplitude des Zyklus
+Envelope of the whole record	Hüllkurve der gesamten Datenreihe
+Period of the cycle	Periode des Zyklus
+Lower band factor	Unterer Bandfaktor
+Upper band factor	Oberer Bandfaktor
+Add the mean of the data to the cycle	Mittelwert der Daten zum Zyklus addieren
+Second file: the tracked period curve (depth, period). Extracts the tracked cycle (or another cycle scaled from it) with band limits from the Gabor uncertainty of the wavelet, its spectral power, or its amplitude along the changing period.	Zweite Datei: die verfolgte Periodenkurve (Tiefe, Periode). Extrahiert den verfolgten Zyklus (oder einen anderen, daraus skalierten Zyklus) mit Bandgrenzen aus der Gabor-Unschärfe des Wavelets, seine spektrale Leistung oder seine Amplitude entlang der veränderlichen Periode.
+Cycle, band from the wavelet uncertainty	Zyklus, Band aus der Wavelet-Unschärfe
+Duration of the cycle to extract (kyr)	Dauer des zu extrahierenden Zyklus (kyr)
+Band half-width (standard deviations of the uncertainty)	Halbe Bandbreite (Standardabweichungen der Unschärfe)
+Second file: the tracked period curve (depth, period). Band-pass filter whose pass band follows the tracked period (the dynamic filter of Acycle, Thibault & Rizzi / Li), computed in sliding Hann windows.	Zweite Datei: die verfolgte Periodenkurve (Tiefe, Periode). Bandpassfilter, dessen Durchlassband der verfolgten Periode folgt (der dynamische Filter von Acycle, Thibault & Rizzi / Li), berechnet in gleitenden Hann-Fenstern.
+Relative bandwidth of the pass band	Relative Bandbreite des Durchlassbandes
+Number of control points (0 = all track points)	Anzahl der Stützpunkte (0 = alle Punkte der Spur)
+Window step (depth units)	Fensterschritt (Tiefeneinheiten)
+Drop the ends covered by less than 10% of a window (edge blow-up)	Enden verwerfen, die von weniger als 10% eines Fensters abgedeckt sind (Aufblähen am Rand)
+Show the pass band as period	Durchlassband als Periode anzeigen
+Wavelet coherence and phase of two series; series 2 is interpolated onto the depths of series 1.	Wavelet-Kohärenz und Phase zweier Reihen; Reihe 2 wird auf die Tiefen von Reihe 1 interpoliert.
+Cross-wavelet power and phase of two series; series 2 is interpolated onto the depths of series 1.	Kreuz-Wavelet-Leistung und Phase zweier Reihen; Reihe 2 wird auf die Tiefen von Reihe 1 interpoliert.
+Cross-superlet power and phase of two series (the superlet counterpart of the cross wavelet); series 2 is interpolated onto the depths of series 1.	Kreuz-Superlet-Leistung und Phase zweier Reihen (das Superlet-Gegenstück zum Kreuz-Wavelet); Reihe 2 wird auf die Tiefen von Reihe 1 interpoliert.
+Show phase arrows	Phasenpfeile anzeigen
+Fourier coherence and phase of two series (Acycle: lead-lag), with the lead or lag of series 2 behind series 1 in the units of column 1 at each frequency and the 95% significance level of the coherence. Both series are interpolated onto a common grid over their overlap.	Fourier-Kohärenz und Phase zweier Reihen (Acycle: lead-lag), mit dem Vorlauf oder der Verzögerung von Reihe 2 gegenüber Reihe 1 in den Einheiten von Spalte 1 bei jeder Frequenz und dem 95%-Signifikanzniveau der Kohärenz. Beide Reihen werden über ihren Überlappungsbereich auf ein gemeinsames Gitter interpoliert.
+Common sampling interval	Gemeinsames Abtastintervall
+Smoothing: modified Daniell span (odd, at least 3)	Glättung: modifizierte Daniell-Spanne (ungerade, mindestens 3)
+Applied twice; wider spans give a smoother coherence with more degrees of freedom.	Zweimal angewendet; breitere Spannen ergeben eine glattere Kohärenz mit mehr Freiheitsgraden.
+Cosine taper proportion	Anteil des Kosinus-Tapers
+Zero padding (proportion of the length)	Zero-Padding (Anteil der Länge)
+Remove linear trends	Lineare Trends entfernen
+Confidence level	Konfidenzniveau
+Highest frequency shown	Höchste angezeigte Frequenz
+Lowest panel	Unterstes Teilbild
+Lag of series 2 (units of column 1)	Verzögerung von Reihe 2 (Einheiten von Spalte 1)
+Correlation of two records with a significance test that respects their serial correlation (phase-randomised surrogates, also for different sampling; Baddouh et al. 2016), or the shift of the second record that correlates best with the first (slideCor).	Korrelation zweier Datenreihen mit einem Signifikanztest, der ihre serielle Korrelation berücksichtigt (phasenrandomisierte Surrogate, auch bei unterschiedlicher Abtastung; Baddouh et al. 2016), oder die Verschiebung der zweiten Datenreihe, die am besten mit der ersten korreliert (slideCor).
+Correlation with surrogate significance (surrogateCor)	Korrelation mit Surrogat-Signifikanz (surrogateCor)
+Best shift between the records (slideCor)	Beste Verschiebung zwischen den Datenreihen (slideCor)
+Correlation coefficient	Korrelationskoeffizient
+Spearman rank	Spearman-Rang
+Kendall rank	Kendall-Rang
+Correlate first differences	Erste Differenzen korrelieren
+Reverse the polarity of the second record	Polarität der zweiten Datenreihe umkehren
+Remove the linear trend of each window	Linearen Trend jedes Fensters entfernen
+Smallest overlap (points, 0 = default)	Kleinste Überlappung (Punkte, 0 = Standard)
+Splits the series into intrinsic mode functions (IMFs, from short to long periods) plus a residue and the removed trend, by (ensemble) empirical mode decomposition. Writes all modes as one table (input for Instantaneous frequency and Ratios), chosen modes or the sum of modes as series, and checks of the decomposition. Uneven sampling is allowed.	Zerlegt die Reihe durch (Ensemble-)empirische Modenzerlegung in intrinsische Modenfunktionen (IMFs, von kurzen zu langen Perioden) plus ein Residuum und den entfernten Trend. Schreibt alle Moden als eine Tabelle (Eingabe für Momentanfrequenz und Verhältnisse), ausgewählte Moden oder die Summe von Moden als Reihen sowie Prüfungen der Zerlegung. Ungleichmäßige Abtastung ist zulässig.
+Ensemble EMD (EEMD, added white noise)	Ensemble-EMD (EEMD, zugefügtes weißes Rauschen)
+EMD (no added noise)	EMD (kein zugefügtes Rauschen)
+Number of IMFs	Anzahl der IMFs
+The residue (and, unless bound to it, the removed trend) is added as an extra mode.	Das Residuum (und, sofern nicht damit verbunden, der entfernte Trend) wird als zusätzliche Mode angefügt.
+Ensemble size (decompositions combined, even)	Ensemblegröße (Anzahl kombinierter Zerlegungen, gerade)
+Noise amplitude factor	Faktor der Rauschamplitude
+Noise amplitude unit	Einheit der Rauschamplitude
+Mean of the lag-1 differences	Mittelwert der Lag-1-Differenzen
+Data units	Dateneinheiten
+Mirrored noise (cancels when combined)	Gespiegeltes Rauschen (hebt sich beim Kombinieren auf)
+Sifting iterations	Sifting-Iterationen
+Removed before decomposition (added back as a mode)	Vor der Zerlegung entfernt (als Mode wieder angefügt)
+Linear trend	Linearer Trend
+Add the removed trend to the residue (one mode instead of two)	Entfernten Trend zum Residuum addieren (eine Mode statt zwei)
+Resampling	Neuabtastung
+None (uneven sampling allowed)	Keine (ungleichmäßige Abtastung zulässig)
+Even, at the greatest common divisor of the spacing (respace)	Gleichmäßig, mit dem größten gemeinsamen Teiler der Abstände (respace)
+Even, at an own interval	Gleichmäßig, mit eigenem Intervall
+respace only refines: the interval must divide the greatest common divisor of the depth steps.	respace verfeinert nur: Das Intervall muss den größten gemeinsamen Teiler der Tiefenschritte teilen.
+Merge modes (groups separated by ;)	Moden zusammenführen (Gruppen durch ; getrennt)
+For example 6, 7 or 1, 2; 7, 8 (mode.bind). Mode numbers of the decomposition before merging.	Zum Beispiel 6, 7 oder 1, 2; 7, 8 (mode.bind). Modennummern der Zerlegung vor dem Zusammenführen.
+Write these modes as two-column series	Diese Moden als zweispaltige Reihen schreiben
+For example 4 or 4, 6 (numbers after merging).	Zum Beispiel 4 oder 4, 6 (Nummern nach dem Zusammenführen).
+Write the sum of these modes as a series	Die Summe dieser Moden als Reihe schreiben
+For example 3-5: a band-pass reconstruction (mode.out, keep). Numbers after merging.	Zum Beispiel 3-5: eine Bandpass-Rekonstruktion (mode.out, keep). Nummern nach dem Zusammenführen.
+Check the decomposition (integrity, parsimony, symmetry, check.emd)	Zerlegung prüfen (Integrität, Sparsamkeit, Symmetrie, check.emd)
+Signal and all modes	Signal und alle Moden
+DecomposeR plot_emd (modes listed below)	DecomposeR plot_emd (unten aufgeführte Moden)
+Modes in the figure (empty = all)	Moden in der Abbildung (leer = alle)
+Decomposes the series into components of a trajectory matrix (singular spectrum analysis), to be grouped into trend, cycles and noise. Writes the same table as EMD (input for Instantaneous frequency and Ratios). Uneven series are interpolated and the components given at the original depths.	Zerlegt die Reihe in Komponenten einer Trajektorienmatrix (Singulärspektrumanalyse), die zu Trend, Zyklen und Rauschen zu gruppieren sind. Schreibt dieselbe Tabelle wie EMD (Eingabe für Momentanfrequenz und Verhältnisse). Ungleichmäßige Reihen werden interpoliert und die Komponenten an den ursprünglichen Tiefen angegeben.
+Implementation	Implementierung
+Window length (points)	Fensterlänge (Punkte)
+Longer than the longest period of interest; at most half the record.	Länger als die längste interessierende Periode; höchstens die Hälfte der Datenreihe.
+Number of components	Anzahl der Komponenten
+Removed before decomposition (written as the trend)	Vor der Zerlegung entfernt (als Trend geschrieben)
+Nothing	Nichts
+Group components (groups separated by ;)	Komponenten gruppieren (Gruppen durch ; getrennt)
+For example 1, 2; 3, 4: each pair of a cycle gives one component. Components not listed stay single.	Zum Beispiel 1, 2; 3, 4: Jedes Paar eines Zyklus ergibt eine Komponente. Nicht aufgeführte Komponenten bleiben einzeln.
+Write these components as two-column series	Diese Komponenten als zweispaltige Reihen schreiben
+Numbers of the columns after grouping.	Nummern der Spalten nach dem Gruppieren.
+Signal and components	Signal und Komponenten
+Share of variance per component	Varianzanteil pro Komponente
+Instantaneous frequency, period and amplitude of IMFs: select a decomposition table written by EMD / SSA (all modes) or a two-column series (one IMF or a filtered cycle). The period curves can be used as a tracked cycle in Age models > Build an age model > Depth to time.	Momentanfrequenz, -periode und -amplitude von IMFs: eine von EMD / SSA geschriebene Zerlegungstabelle (alle Moden) oder eine zweispaltige Reihe (eine IMF oder ein gefilterter Zyklus) auswählen. Die Periodenkurven können als verfolgter Zyklus in Altersmodelle > Altersmodell erstellen > Tiefe zu Zeit verwendet werden.
+Modes to analyse (empty = all but residue and trend)	Zu analysierende Moden (leer = alle außer Residuum und Trend)
+Positions among the mode columns: 1 = first column after depth and signal (imf_1 of an EMD table).	Positionen unter den Modenspalten: 1 = erste Spalte nach Tiefe und Signal (imf_1 einer EMD-Tabelle).
+Instantaneous frequency method	Methode der Momentanfrequenz
+Hilbert transform (HT)	Hilbert-Transformation (HT)
+Normalised Hilbert transform (NHT)	Normierte Hilbert-Transformation (NHT)
+Direct quadrature (DQ)	Direkte Quadratur (DQ)
+Generalised zero-crossing (GZC)	Verallgemeinerter Nulldurchgang (GZC)
+Hilbert transform, analytic derivative (chain rule)	Hilbert-Transformation, analytische Ableitung (Kettenregel)
+HT: Hilbert transform; NHT and DQ first normalise the mode to unit amplitude (Huang et al. 2009), which can fail; GZC: generalised zero crossing, robust, precise to a quarter period (needs simple modes); chain: Hilbert transform with the analytic derivative of the phase.	HT: Hilbert-Transformation; NHT und DQ normieren die Mode zunächst auf Einheitsamplitude (Huang et al. 2009), was fehlschlagen kann; GZC: verallgemeinerter Nulldurchgang, robust, auf eine Viertelperiode genau (benötigt einfache Moden); chain: Hilbert-Transformation mit der analytischen Ableitung der Phase.
+Interpolation interval for the Hilbert transform (0 = automatic)	Interpolationsintervall für die Hilbert-Transformation (0 = automatisch)
+Uneven series are interpolated before the transform; 0 uses the greatest common divisor of the spacing (HT, NHT) or the median spacing (chain).	Ungleichmäßige Reihen werden vor der Transformation interpoliert; 0 verwendet den größten gemeinsamen Teiler der Abstände (HT, NHT) oder den medianen Abstand (chain).
+Differentiation lag (samples)	Differenzierungs-Lag (Abtastwerte)
+Running median of the period curves (points, 0 = none)	Gleitender Median der Periodenkurven (Punkte, 0 = keiner)
+Smooths the written period curves (useful for an age model); the table also keeps the raw values.	Glättet die geschriebenen Periodenkurven (nützlich für ein Altersmodell); die Tabelle enthält zusätzlich die Rohwerte.
+Compare with the zero-crossing frequency (gzc.departure)	Mit der Nulldurchgangsfrequenz vergleichen (gzc.departure)
+Period curves of all modes	Periodenkurven aller Moden
+One mode: envelope and period	Eine Mode: Hüllkurve und Periode
+Period distribution (plot_pulse)	Periodenverteilung (plot_pulse)
+Spectral population, period vs amplitude (plot_pulse)	Spektrale Population, Periode gegen Amplitude (plot_pulse)
+DecomposeR plot_imf (one mode)	DecomposeR plot_imf (eine Mode)
+Mode for the one-mode figures	Mode für die Ein-Moden-Abbildungen
+Reference periods drawn in the figure	In der Abbildung eingezeichnete Referenzperioden
+Instantaneous ratios of the frequencies of pairs of modes of a decomposition table (EMD / SSA), with the product of their amplitudes. Compare them with the ratios of astronomical periods (e.g. 405 / 21 kyr) to test an astronomical interpretation without an age model.	Momentane Verhältnisse der Frequenzen von Modenpaaren einer Zerlegungstabelle (EMD / SSA), mit dem Produkt ihrer Amplituden. Diese mit den Verhältnissen astronomischer Perioden (z. B. 405 / 21 kyr) vergleichen, um eine astronomische Interpretation ohne Altersmodell zu testen.
+Modes (at least two; empty = all but residue and trend)	Moden (mindestens zwei; leer = alle außer Residuum und Trend)
+Positions among the mode columns, e.g. 4, 6, 7.	Positionen unter den Modenspalten, z. B. 4, 6, 7.
+Reference periods (expected ratios between them)	Referenzperioden (erwartete Verhältnisse zwischen ihnen)
+Periods in any one unit (e.g. kyr); every ratio between them is listed and drawn.	Perioden in einer beliebigen einheitlichen Einheit (z. B. kyr); jedes Verhältnis zwischen ihnen wird aufgelistet und gezeichnet.
+Pairs in the figure (e.g. 4/6; empty = automatic)	Paare in der Abbildung (z. B. 4/6; leer = automatisch)
+Ratios along the record	Verhältnisse entlang der Datenreihe
+Ratio population (plot_ratio)	Population der Verhältnisse (plot_ratio)
+Compares the instantaneous frequency computed with the Hilbert transform with the exact value for a test signal a sin(2 pi f1 t + phi1) + b sin(2 pi f2 t + phi2) + c, to see how sampling, an offset or a second cycle bias the method.	Vergleicht die mit der Hilbert-Transformation berechnete Momentanfrequenz mit dem exakten Wert für ein Testsignal a sin(2 pi f1 t + phi1) + b sin(2 pi f2 t + phi2) + c, um zu sehen, wie Abtastung, ein Offset oder ein zweiter Zyklus die Methode verzerren.
+Length of the test signal	Länge des Testsignals
+Random (uneven) sampling with the same number of points	Zufällige (ungleichmäßige) Abtastung mit derselben Anzahl von Punkten
+Phase derivative	Ableitung der Phase
+Arctangent of the phase (arctan)	Arkustangens der Phase (arctan)
+Analytic derivative (chain)	Analytische Ableitung (chain)
+Amplitude a of cycle 1	Amplitude a von Zyklus 1
+Frequency f1 of cycle 1	Frequenz f1 von Zyklus 1
+Phase phi1 of cycle 1 (radians)	Phase phi1 von Zyklus 1 (Radiant)
+Amplitude b of cycle 2	Amplitude b von Zyklus 2
+Frequency f2 of cycle 2	Frequenz f2 von Zyklus 2
+Phase phi2 of cycle 2 (radians)	Phase phi2 von Zyklus 2 (Radiant)
+Bispectrum and bicoherence: phase coupling between frequencies, e.g. combination tones of astronomical cycles.	Bispektrum und Bikohärenz: Phasenkopplung zwischen Frequenzen, z. B. Kombinationstöne astronomischer Zyklen.
+Significance test	Signifikanztest
+Surrogates (IAAFT, slow)	Surrogate (IAAFT, langsam)
+Bispectrum and bicoherence by Welch overlapping segments (Choudhury et al. 2008), as in Sullivan et al. (2023): high bicoherence at (f1, f2) means f1 + f2 is a combination tone with coupled phases.	Bispektrum und Bikohärenz mit überlappenden Welch-Segmenten (Choudhury et al. 2008), wie in Sullivan et al. (2023): Eine hohe Bikohärenz bei (f1, f2) bedeutet, dass f1 + f2 ein Kombinationston mit gekoppelten Phasen ist.
+Number of segments	Anzahl der Segmente
+Overlap of the segments (%)	Überlappung der Segmente (%)
+Confidence level of the contour (%)	Konfidenzniveau der Konturlinie (%)
+Hanning taper	Hanning-Taper
+Frequencies to mark (optional)	Zu markierende Frequenzen (optional)
+Bicoherence	Bikohärenz
+Bispectrum	Bispektrum
+Power spectrum	Leistungsspektrum
+Recurrence plot of the series after time-delay embedding (Acycle: Recurrence plot): dark points mark pairs of depths at which the system is in a similar state. Regular cycles give diagonal lines; changes in the pattern mark changes in the dynamics. Gives the recurrence quantification (RR, DET, LAM, ...).	Rekurrenzplot der Reihe nach Zeitverzögerungseinbettung (Acycle: Recurrence plot): Dunkle Punkte markieren Paare von Tiefen, in denen sich das System in einem ähnlichen Zustand befindet. Regelmäßige Zyklen ergeben diagonale Linien; Änderungen im Muster zeigen Änderungen der Dynamik an. Gibt die Rekurrenzquantifizierung an (RR, DET, LAM, ...).
+Embedding dimension	Einbettungsdimension
+Delay (samples)	Verzögerung (Abtastwerte)
+Default: the first lag at which the autocorrelation falls below 1/e.	Standard: der erste Lag, bei dem die Autokorrelation unter 1/e fällt.
+Distance threshold	Abstandsschwelle
+Fraction of the largest distance	Anteil des größten Abstands
+Recurrence rate	Rekurrenzrate
+Recurrence rate (share of recurrent pairs)	Rekurrenzrate (Anteil rekurrenter Paare)
+Distance	Abstand
+Euclidean	Euklidisch
+Standardise the series first	Zuerst die Reihe standardisieren
+Most points in the plot (subsampling)	Höchstzahl der Punkte im Plot (Unterabtastung)
+Shortest line for DET and LAM (points)	Kürzeste Linie für DET und LAM (Punkte)
+Distance matrix (unthresholded)	Abstandsmatrix (ohne Schwellenwert)
+Running lag-1 autocorrelation with Monte Carlo windows, a sea-level proxy (Li et al. 2018, Acycle: rho1).	Gleitende Lag-1-Autokorrelation mit Monte-Carlo-Fenstern, ein Meeresspiegel-Proxy (Li et al. 2018, Acycle: rho1).
+Shortest window (time units)	Kürzestes Fenster (Zeiteinheiten)
+Longest window (time units)	Längstes Fenster (Zeiteinheiten)
+Monte Carlo simulations (at least 50)	Monte-Carlo-Simulationen (mindestens 50)
+Dynamic noise after orbital tuning, a sea-level proxy for tuned series (Li et al. 2018, Acycle: DYNOT).	Dynamisches Rauschen nach orbitalem Tuning, ein Meeresspiegel-Proxy für getunte Reihen (Li et al. 2018, Acycle: DYNOT).
+Shortest window (kyr)	Kürzestes Fenster (kyr)
+Longest window (kyr)	Längstes Fenster (kyr)
+Step (kyr)	Schritt (kyr)
+Monte Carlo simulations	Monte-Carlo-Simulationen
+Ratio of power in astronomical bands to total power in sliding windows (Acycle: Power Decomposition Analysis).	Verhältnis der Leistung in astronomischen Bändern zur Gesamtleistung in gleitenden Fenstern (Acycle: Power Decomposition Analysis).
+Target band (two frequencies, cycles/unit)	Zielband (zwei Frequenzen, Zyklen/Einheit)
+Window length	Fensterlänge
+Ratio of the power in a target band to the total power in sliding windows, exactly as the Acycle menu and DYNOT compute it (adaptive multitaper, historical bin mapping).	Verhältnis der Leistung in einem Zielband zur Gesamtleistung in gleitenden Fenstern, genau so berechnet wie im Acycle-Menü und in DYNOT (adaptives Multitaper-Verfahren, historische Bin-Zuordnung).
+Step (samples)	Schritt (Abtastwerte)
+Padding (FFT length)	Padding (FFT-Länge)
+Evolutive mean frequency and bandwidth, indicators of sedimentation-rate change (Sinnesael et al. 2018).	Evolutive mittlere Frequenz und Bandbreite, Indikatoren für Änderungen der Sedimentationsrate (Sinnesael et al. 2018).
+Step	Schritt
+Tracks the astronomical cycles in a scalogram automatically (hidden Markov model over all cycles at once) and gives the sedimentation rate and an age model with uncertainty. Use the Track view to do it by hand.	Verfolgt die astronomischen Zyklen in einem Skalogramm automatisch (Hidden-Markov-Modell über alle Zyklen gleichzeitig) und liefert die Sedimentationsrate und ein Altersmodell mit Unsicherheit. Für die Verfolgung von Hand die Ansicht „Verfolgen“ verwenden.
+Approximate age (Ma)	Ungefähres Alter (Ma)
+Morlet CWT (fast)	Morlet-CWT (schnell)
+Multi-synchrosqueezed (msst)	Multisynchrosqueezing (msst)
+Tracker	Verfolgungsmethode
+HMM on the scalogram	HMM auf dem Skalogramm
+HMM and chirp-matched spectra	HMM und Chirp-angepasste Spektren
+Chirp-matched spectra	Chirp-angepasste Spektren
+Tracks the sedimentation rate through a scalogram with all astronomical cycles at once (hidden Markov model), with a credible band and an age model. The iterative method repeats the tracking on the record converted to time, which sharpens the cycles.	Verfolgt die Sedimentationsrate durch ein Skalogramm mit allen astronomischen Zyklen gleichzeitig (Hidden-Markov-Modell), mit einem Kredibilitätsband und einem Altersmodell. Die iterative Methode wiederholt die Verfolgung an der in Zeit umgewandelten Datenreihe, was die Zyklen schärft.
+One pass on a scalogram (track_astro_hmm)	Ein Durchlauf auf einem Skalogramm (track_astro_hmm)
+Iterative, in the time domain (track_astro_iterative)	Iterativ, im Zeitbereich (track_astro_iterative)
+Sedimentation rates are given in cm/kyr; the depth unit converts them to the depth unit of the data.	Sedimentationsraten werden in cm/kyr angegeben; die Tiefeneinheit rechnet sie in die Tiefeneinheit der Daten um.
+At the age of the record (AstroGeo22)	Zum Alter der Datenreihe (AstroGeo22)
+Own list (kyr)	Eigene Liste (kyr)
+Age of the record (Ma)	Alter der Datenreihe (Ma)
+Obliquity and precession periods at this age (lunar recession), from WaverideR::astro_periods_tracking.	Obliquitäts- und Präzessionsperioden zu diesem Alter (Mondrezession), aus WaverideR::astro_periods_tracking.
+Periods (kyr)	Perioden (kyr)
+Synchrosqueezed CWT	Synchrosqueezed-CWT
+Superlet SST (slower)	Superlet-SST (langsamer)
+Scalogram of the first pass	Skalogramm des ersten Durchlaufs
+Number of cycles of the wavelet (omega_nr)	Anzahl der Zyklen des Wavelets (omega_nr)
+Iterations in the time domain	Iterationen im Zeitbereich
+Approximate duration (kyr, 0 = unknown)	Ungefähre Dauer (kyr, 0 = unbekannt)
+Turned into a guide for the tracking; strongly recommended for real records.	Wird in eine Führung für die Verfolgung umgesetzt; für reale Datenreihen dringend empfohlen.
+Background of the power	Hintergrund der Leistung
+Rate change allowed per shortest cycle (sd of log2 rate)	Zulässige Ratenänderung pro kürzestem Zyklus (sd der log2-Rate)
+Probability of an abrupt jump	Wahrscheinlichkeit eines abrupten Sprungs
+Depths of possible jumps, e.g. hiatuses (optional)	Tiefen möglicher Sprünge, z. B. Hiaten (optional)
+Smoothing of the tracked path	Glättung des verfolgten Pfades
+Piecewise constant (TV)	Stückweise konstant (TV)
+Piecewise linear	Stückweise linear
+Posterior samples (uncertainty)	Posterior-Stichproben (Unsicherheit)
+Track on the scalogram	Spur auf dem Skalogramm
+Evidence map (rate x depth)	Evidenzkarte (Rate x Tiefe)
+Posterior of the rate	Posterior der Rate
+Sed. rate and age model	Sed.-Rate und Altersmodell
+Sliding-window multitaper spectra de-chirped for a linear change of the rate, scored against the astronomical template. Gives a tracked rate (HMM on rate and gradient) or the spectral rate estimate per window (rate-gram).	Multitaper-Spektren im gleitenden Fenster, für eine lineare Änderung der Rate de-chirpt und gegen das astronomische Template bewertet. Liefert eine verfolgte Rate (HMM auf Rate und Gradient) oder die spektrale Ratenschätzung pro Fenster (Rate-Gramm).
+Estimate	Schätzung
+HMM tracking of rate and gradient (track_chirp_hmm)	HMM-Verfolgung von Rate und Gradient (track_chirp_hmm)
+Best rate per window, median filtered (rate_gram)	Beste Rate pro Fenster, mediangefiltert (rate_gram)
+Largest relative change of the rate across a window	Größte relative Änderung der Rate über ein Fenster
+Weight of the spectral evidence	Gewicht der spektralen Evidenz
+Median filter (windows)	Medianfilter (Fenster)
+Follows one cycle (e.g. precession or the 405-kyr eccentricity) through an evolutive maximum-entropy spectrum and converts its period to a sedimentation rate with the duration of the cycle.	Folgt einem Zyklus (z. B. der Präzession oder der 405-kyr-Exzentrizität) durch ein evolutives Maximum-Entropie-Spektrum und rechnet seine Periode mit der Dauer des Zyklus in eine Sedimentationsrate um.
+Shortest period of the tracked cycle (depth units)	Kürzeste Periode des verfolgten Zyklus (Tiefeneinheiten)
+Longest period of the tracked cycle (depth units)	Längste Periode des verfolgten Zyklus (Tiefeneinheiten)
+e.g. 405 (long eccentricity), 100, 41 (obliquity) or about 20 (precession).	z. B. 405 (lange Exzentrizität), 100, 41 (Obliquität) oder etwa 20 (Präzession).
+Largest change of frequency between windows (fraction)	Größte Frequenzänderung zwischen Fenstern (Anteil)
+Penalty for changes of frequency	Strafterm für Frequenzänderungen
+Scores every trial sedimentation rate at every depth by how well the astronomical periods match the wavelet spectrum (FLMW fit, peak or template match, or summed power above red noise), then finds the most probable smooth rate curve with a credible band.	Bewertet jede Test-Sedimentationsrate in jeder Tiefe danach, wie gut die astronomischen Perioden zum Wavelet-Spektrum passen (FLMW-Fit, Peak- oder Template-Übereinstimmung oder summierte Leistung oberhalb des roten Rauschens), und findet dann die wahrscheinlichste glatte Ratenkurve mit einem Kredibilitätsband.
+Template match (fast)	Template-Übereinstimmung (schnell)
+Weighted peak match	Gewichtete Peak-Übereinstimmung
+Linear fit to spectral peaks (classic FLMW)	Linearer Fit an spektrale Peaks (klassisches FLMW)
+Summed power above red noise	Summierte Leistung oberhalb des roten Rauschens
+Sed. rate step (cm/kyr)	Schritt der Sed.-Rate (cm/kyr)
+Period tolerance (relative)	Periodentoleranz (relativ)
+Red-noise simulations	Simulationen mit rotem Rauschen
+Red-noise percentile	Perzentil des roten Rauschens
+Rate change allowed per metre (sd of the log rate)	Zulässige Ratenänderung pro Meter (sd der log-Rate)
+Depths of hiatuses or breaks (optional)	Tiefen von Hiaten oder Unterbrechungen (optional)
+Sharpness of the score	Schärfe des Scores
+Converts a tracked cycle (depth and its period or frequency, e.g. from EHA or a tracked scalogram ridge) into a sedimentation-rate curve and age model, given the duration of the cycle.	Wandelt einen verfolgten Zyklus (Tiefe und seine Periode oder Frequenz, z. B. aus der EHA oder einem verfolgten Skalogramm-Grat) bei gegebener Dauer des Zyklus in eine Sedimentationsratenkurve und ein Altersmodell um.
+Column 2 of the data	Spalte 2 der Daten
+Period (depth units)	Periode (Tiefeneinheiten)
+Frequency (cycles/depth unit)	Frequenz (Zyklen/Tiefeneinheit)
+Duration of the cycle (kyr)	Dauer des Zyklus (kyr)
+Optimises the sedimentation rate by fitting precession amplitude modulation and spectral power (Meyers 2015).	Optimiert die Sedimentationsrate durch einen Fit der Amplitudenmodulation der Präzession und der spektralen Leistung (Meyers 2015).
+Minimum sed. rate (cm/kyr)	Minimale Sed.-Rate (cm/kyr)
+Maximum sed. rate (cm/kyr)	Maximale Sed.-Rate (cm/kyr)
+Number of sed. rates	Anzahl der Sed.-Raten
+Sed. rate grid	Gitter der Sed.-Raten
+Envelope fit	Hüllkurven-Fit
+Precession amplitude modulation	Amplitudenmodulation der Präzession
+Short eccentricity modulation	Modulation der kurzen Exzentrizität
+Eccentricity periods (kyr, empty = default)	Exzentrizitätsperioden (kyr, leer = Standard)
+Precession periods (kyr, empty = default)	Präzessionsperioden (kyr, leer = Standard)
+TimeOpt in sliding windows: astrochron eTimeOpt, or WaverideR win_timeOpt with the null-model bias correction.	TimeOpt in gleitenden Fenstern: eTimeOpt von astrochron oder win_timeOpt von WaverideR mit der Bias-Korrektur durch das Nullmodell.
+win_timeOpt, bias corrected (WaverideR)	win_timeOpt, Bias-korrigiert (WaverideR)
+Null simulations per window	Nullsimulationen pro Fenster
+Runs windowed TimeOpt (bias corrected against noise) with the precession, short-eccentricity and obliquity amplitude-modulation fits and compares their best rates per window: rates that agree are robust, rates in the ratio of two cycles point to an alias. Depth in metres.	Führt gefenstertes TimeOpt (Bias-korrigiert gegenüber Rauschen) mit den Fits der Amplitudenmodulation von Präzession, kurzer Exzentrizität und Obliquität aus und vergleicht deren beste Raten pro Fenster: Übereinstimmende Raten sind robust, Raten im Verhältnis zweier Zyklen deuten auf ein Alias hin. Tiefe in Metern.
+Fit 1: precession amplitude modulation	Fit 1: Amplitudenmodulation der Präzession
+Fit 2: short-eccentricity amplitude modulation	Fit 2: Amplitudenmodulation der kurzen Exzentrizität
+Fit 3: obliquity amplitude modulation	Fit 3: Amplitudenmodulation der Obliquität
+Fixed length in depth	Feste Länge in der Tiefe
+Fixed duration in time	Feste Dauer in der Zeit
+Window length (m)	Fensterlänge (m)
+Window duration (kyr)	Fensterdauer (kyr)
+Noise simulations per window	Rauschsimulationen pro Fenster
+Tolerance of the rate ratios	Toleranz der Ratenverhältnisse
+TimeOpt default	TimeOpt-Standard
+Fit written as sed. rate curve	Als Sed.-Raten-Kurve geschriebener Fit
+TimeOpt (Meyers 2015) over a grid of sedimentation rates, with the p-value of the best fit from simulated AR(1) or power-law noise series that are analysed in the same way, and the TimeOpt summary figure. Depth in metres.	TimeOpt (Meyers 2015) über ein Gitter von Sedimentationsraten, mit dem p-Wert des besten Fits aus simulierten AR(1)- oder Potenzgesetz-Rauschreihen, die auf dieselbe Weise analysiert werden, und der TimeOpt-Übersichtsabbildung. Tiefe in Metern.
+Statistic tested	Getestete Statistik
+r2 opt (envelope x power)	r2 opt (Hüllkurve x Leistung)
+r2 spectral power	r2 spektrale Leistung
+r2 envelope	r2 Hüllkurve
+Noise model of the simulations	Rauschmodell der Simulationen
+AR(1) red noise (timeOptSim)	Rotes AR(1)-Rauschen (timeOptSim)
+Power law (timeOptSimPwrLaw)	Potenzgesetz (timeOptSimPwrLaw)
+rho or beta of the noise (0 = from the record)	rho oder beta des Rauschens (0 = aus der Datenreihe)
+Meyers (2015) used 2000; with 100 the smallest p-value that can be reported is 0.1.	Meyers (2015) verwendete 2000; mit 100 ist der kleinste p-Wert, der angegeben werden kann, 0.1.
+Processor cores	Prozessorkerne
+Include the modulation periods in the spectral fit	Modulationsperioden in den spektralen Fit einbeziehen
+In decreasing order, starting with 405 kyr; default 405.7, 130.7, 123.8, 98.9, 94.9 kyr.	In absteigender Reihenfolge, beginnend mit 405 kyr; Standard 405.7, 130.7, 123.8, 98.9, 94.9 kyr.
+Default 23.6, 22.3, 19.1, 18.9 kyr.	Standard 23.6, 22.3, 19.1, 18.9 kyr.
+Low cut-off of the bandpass (cycles/kyr, 0 = default)	Untere Grenzfrequenz des Bandpasses (Zyklen/kyr, 0 = Standard)
+Default 0.035 (precession modulation) or 0.007 (short eccentricity modulation).	Standard 0.035 (Präzessionsmodulation) oder 0.007 (Modulation der kurzen Exzentrizität).
+High cut-off of the bandpass (cycles/kyr, 0 = default)	Obere Grenzfrequenz des Bandpasses (Zyklen/kyr, 0 = Standard)
+Default 0.065 (precession modulation) or 0.0115 (short eccentricity modulation).	Standard 0.065 (Präzessionsmodulation) oder 0.0115 (Modulation der kurzen Exzentrizität).
+Roll-off of the Taner filter (dB/octave, 0 = default)	Flankensteilheit des Taner-Filters (dB/Oktave, 0 = Standard)
+TimeOpt for a sedimentation rate that changes along the record following a template: faster deposition of one lithology (the proxy itself as template), a linear change, steps at given depths or possible hiatuses. Gives the instantaneous sed. rate, an age model and optionally a Monte Carlo p-value. Slow: each average rate is a full optimisation. Depth in metres.	TimeOpt für eine Sedimentationsrate, die sich entlang der Datenreihe einem Template folgend ändert: schnellere Ablagerung einer Lithologie (der Proxy selbst als Template), eine lineare Änderung, Stufen in vorgegebenen Tiefen oder mögliche Hiaten. Liefert die momentane Sed.-Rate, ein Altersmodell und optional einen Monte-Carlo-p-Wert. Langsam: Jede mittlere Rate ist eine vollständige Optimierung. Tiefe in Metern.
+Sedimentation-rate template	Sedimentationsraten-Template
+The proxy itself (differential accumulation)	Der Proxy selbst (differenzielle Akkumulation)
+Linear change along the record	Lineare Änderung entlang der Datenreihe
+Steps at given depths	Stufen in vorgegebenen Tiefen
+Possible hiatuses at given depths	Mögliche Hiaten in vorgegebenen Tiefen
+Depths of the steps or hiatuses	Tiefen der Stufen oder Hiaten
+Minimum average sed. rate (cm/kyr)	Minimale mittlere Sed.-Rate (cm/kyr)
+Maximum average sed. rate (cm/kyr)	Maximale mittlere Sed.-Rate (cm/kyr)
+Number of average sed. rates	Anzahl der mittleren Sed.-Raten
+Lowest instantaneous sed. rate (cm/kyr, 0 = default)	Niedrigste momentane Sed.-Rate (cm/kyr, 0 = Standard)
+Highest instantaneous sed. rate (cm/kyr, 0 = factor below)	Höchste momentane Sed.-Rate (cm/kyr, 0 = Faktor unten)
+Highest instantaneous rate as a factor of the average (0 = default 5)	Höchste momentane Rate als Faktor des Mittels (0 = Standard 5)
+Optimise on	Optimieren auf
+Modulations x spectral power	Modulationen x spektrale Leistung
+Modulations	Modulationen
+Spectral power	Spektrale Leistung
+Remove the linear trend of the template	Linearen Trend des Templates entfernen
+Flip the template	Template umkehren
+Monte Carlo significance (timeOptTemplateSim, slow)	Monte-Carlo-Signifikanz (timeOptTemplateSim, langsam)
+Bayesian TimeOpt of Malinverno and Meyers (2024): posterior probability of the sedimentation rate and the precession frequency k on a grid, with age-specific priors, the best astronomical fit and optionally the p-values of AR(2) noise simulations. k also gives the Earth-Moon distance and day length. Depth in metres.	Bayessches TimeOpt nach Malinverno und Meyers (2024): Posterior-Wahrscheinlichkeit der Sedimentationsrate und der Präzessionsfrequenz k auf einem Gitter, mit altersspezifischen Priors, dem besten astronomischen Fit und optional den p-Werten von AR(2)-Rauschsimulationen. k liefert auch den Erde-Mond-Abstand und die Tageslänge. Tiefe in Metern.
+Lowest k (arcsec/yr, 0 = from the prior)	Niedrigstes k (arcsec/yr, 0 = aus dem Prior)
+Highest k (arcsec/yr, 0 = from the prior)	Höchstes k (arcsec/yr, 0 = aus dem Prior)
+Number of k values	Anzahl der k-Werte
+Include the envelope fit	Hüllkurven-Fit einbeziehen
+Obliquity terms	Obliquitätsterme
+s1 to s6	s1 bis s6
+s3 and s4	s3 und s4
+Tolerance of the precession band (cycles/kyr)	Toleranz des Präzessionsbandes (Zyklen/kyr)
+Significance with 1000 AR(2) simulations (timeOptBSim)	Signifikanz mit 1000 AR(2)-Simulationen (timeOptBSim)
+Likelihood maps	Likelihood-Karten
+Best fit to the data	Bester Fit an die Daten
+AR(2) noise fit	AR(2)-Rausch-Fit
+Simulations (timeOptBSim)	Simulationen (timeOptBSim)
+Markov chain Monte Carlo versions of Bayesian TimeOpt: posterior distributions of the sedimentation rate, the precession frequency k and the Solar System frequencies g (and s), hence of all astronomical periods and grand cycles. Slow: astrochron recommends 50 000 samples for timeOptBMCMC. Depth in metres.	Markov-Chain-Monte-Carlo-Versionen des Bayesschen TimeOpt: Posterior-Verteilungen der Sedimentationsrate, der Präzessionsfrequenz k und der Frequenzen g (und s) des Sonnensystems, damit aller astronomischen Perioden und Großzyklen. Langsam: astrochron empfiehlt 50 000 Stichproben für timeOptBMCMC. Tiefe in Metern.
+timeOptBMCMC (Malinverno and Meyers 2024)	timeOptBMCMC (Malinverno und Meyers 2024)
+timeOptMCMC (Meyers and Malinverno 2018)	timeOptMCMC (Meyers und Malinverno 2018)
+Sets the priors of k and of the g (and s) frequencies (Hoang et al. 2021).	Legt die Priors von k und der g- (und s-)Frequenzen fest (Hoang et al. 2021).
+Number of MCMC samples	Anzahl der MCMC-Stichproben
+Power and envelope	Leistung und Hüllkurve
+Power only	Nur Leistung
+Prior mean of k (arcsec/yr, 0 = AstroGeo22 at the age)	Prior-Mittelwert von k (arcsec/yr, 0 = AstroGeo22 zum Alter)
+Prior standard deviation of k (arcsec/yr, 0 = AstroGeo22 range)	Prior-Standardabweichung von k (arcsec/yr, 0 = AstroGeo22-Bereich)
+Figure number	Abbildungsnummer
+timeOptBMCMC: 1 MCMC diagnostics, 2 posterior and prior PDFs, 3 Milankovitch periods, 4-5 grand cycles, 6 correlations. timeOptMCMC: 1 stability, 2-3 candidates along the chain, 4 kernel densities, 5 histograms.	timeOptBMCMC: 1 MCMC-Diagnostik, 2 Posterior- und Prior-PDFs, 3 Milankovitch-Perioden, 4-5 Großzyklen, 6 Korrelationen. timeOptMCMC: 1 Stabilität, 2-3 Kandidaten entlang der Kette, 4 Kerndichten, 5 Histogramme.
+Evolutive TimeOpt in sliding windows, then the r2 maxima in every window (eTimeOptTrack) and the best sedimentation rate along the record as a sed.-rate curve and age model. Depth in metres.	Evolutives TimeOpt in gleitenden Fenstern, dann die r2-Maxima in jedem Fenster (eTimeOptTrack) und die beste Sedimentationsrate entlang der Datenreihe als Sed.-Raten-Kurve und Altersmodell. Tiefe in Metern.
+Step (m)	Schritt (m)
+Statistic tracked	Verfolgte Statistik
+Smallest r2 of a tracked maximum	Kleinstes r2 eines verfolgten Maximums
+Correlation coefficient between the data spectrum and an astronomical target for a range of sedimentation rates (Li et al. 2018).	Korrelationskoeffizient zwischen dem Datenspektrum und einem astronomischen Ziel für einen Bereich von Sedimentationsraten (Li et al. 2018).
+Approximate age of the record (Ma)	Ungefähres Alter der Datenreihe (Ma)
+Used to set the precession and obliquity periods of the target (Berger 1992 / Waltham 2015).	Dient zur Festlegung der Präzessions- und Obliquitätsperioden des Ziels (Berger 1992 / Waltham 2015).
+Monte Carlo simulations (0 = none)	Monte-Carlo-Simulationen (0 = keine)
+COCO in sliding windows with ridge tracking of the best sedimentation rate (Li et al. 2018).	COCO in gleitenden Fenstern mit Gratverfolgung der besten Sedimentationsrate (Li et al. 2018).
+Correlation of the data spectrum with an astronomical target over a range of constant sedimentation rates (Acycle 3): adaptive target amplitudes, or cvCOCO with targets trained on one half of the record and tested on the other. Depth in metres.	Korrelation des Datenspektrums mit einem astronomischen Ziel über einen Bereich konstanter Sedimentationsraten (Acycle 3): adaptive Zielamplituden oder cvCOCO mit Zielen, die an einer Hälfte der Datenreihe trainiert und an der anderen getestet werden. Tiefe in Metern.
+cvCOCO, blocked halves	cvCOCO, geblockte Hälften
+cvCOCO, interleaved samples	cvCOCO, verschachtelte Abtastwerte
+Adaptive COCO	Adaptives COCO
+Target amplitudes	Zielamplituden
+Fitted per orbital group	Pro orbitaler Gruppe angepasst
+Fitted per period	Pro Periode angepasst
+Fixed (Acycle weights)	Fest (Acycle-Gewichte)
+Astronomical target periods	Astronomische Zielperioden
+Acycle default (La2004, nine periods)	Acycle-Standard (La2004, neun Perioden)
+Own nine periods (kyr)	Eigene neun Perioden (kyr)
+Nine periods (kyr, descending)	Neun Perioden (kyr, absteigend)
+Correlation and p-values	Korrelation und p-Werte
+Folds and validation spectra	Folds und Validierungsspektren
+Monte Carlo audit	Monte-Carlo-Prüfung
+Data spectrum and fixed target at the best rate	Datenspektrum und festes Ziel bei der besten Rate
+Evolutive COCO of Acycle 3: adaptive targets, or targets trained on separate data (blocked or interleaved validation) so that the correlation is not inflated. The sed.-rate ridge is tracked automatically or through points you give. Depth in metres.	Evolutives COCO von Acycle 3: adaptive Ziele oder Ziele, die an getrennten Daten trainiert werden (geblockte oder verschachtelte Validierung), damit die Korrelation nicht überhöht ist. Der Sed.-Raten-Grat wird automatisch oder durch vorgegebene Punkte verfolgt. Tiefe in Metern.
+Blocked validation (ecoco_blocked)	Geblockte Validierung (ecoco_blocked)
+Interleaved validation (ecoco_interleaved, slow)	Verschachtelte Validierung (ecoco_interleaved, langsam)
+Adaptive (ecoco_adaptive)	Adaptiv (ecoco_adaptive)
+Ridge tracking	Gratverfolgung
+Viterbi ridge (ecoco_track_ridge)	Viterbi-Grat (ecoco_track_ridge)
+Best rate per window (ecoco_best_per_window)	Beste Rate pro Fenster (ecoco_best_per_window)
+Acycle depth slices (ecoco_track)	Acycle-Tiefenscheiben (ecoco_track)
+Through given points (track_ecoco)	Durch vorgegebene Punkte (track_ecoco)
+Number of depth slices	Anzahl der Tiefenscheiben
+Largest rate jump between windows (cm/kyr)	Größter Ratensprung zwischen Fenstern (cm/kyr)
+Largest p-value of a tracked peak	Größter p-Wert eines verfolgten Peaks
+Points: depth rate; depth rate; ...	Punkte: Tiefe Rate; Tiefe Rate; ...
+COCO or evolutive COCO with the spectrum of an astronomical series (series 2: time in kyr, value, e.g. an ETP or insolation series from Basic Series) as the target. Depth in metres.	COCO oder evolutives COCO mit dem Spektrum einer astronomischen Reihe (Reihe 2: Zeit in kyr, Wert, z. B. eine ETP- oder Insolationsreihe aus Basisreihen) als Ziel. Tiefe in Metern.
+COCO (one rate for the record)	COCO (eine Rate für die Datenreihe)
+eCOCO (sliding windows)	eCOCO (gleitende Fenster)
+Highest target frequency (cycles/kyr)	Höchste Zielfrequenz (Zyklen/kyr)
+Average spectral misfit (Meyers and Sageman 2007; Meyers et al. 2012): compares the frequencies of significant spectral peaks with astronomical target frequencies over a range of sedimentation rates and gives the null-hypothesis significance level (Ho-SL). Evolutive: in sliding EHA windows, with the Ho-SL minima tracked along the record. Depth in metres.	Mittlere spektrale Fehlanpassung (Meyers und Sageman 2007; Meyers et al. 2012): vergleicht die Frequenzen signifikanter spektraler Peaks mit astronomischen Zielfrequenzen über einen Bereich von Sedimentationsraten und gibt das Signifikanzniveau der Nullhypothese (Ho-SL) an. Evolutiv: in gleitenden EHA-Fenstern, wobei die Ho-SL-Minima entlang der Datenreihe verfolgt werden. Tiefe in Metern.
+Whole record (asm)	Gesamte Datenreihe (asm)
+Evolutive, sliding windows (eAsm, eAsmTrack)	Evolutiv, gleitende Fenster (eAsm, eAsmTrack)
+Astronomical target periods (kyr)	Astronomische Zielperioden (kyr)
+Relative uncertainty of the targets (0-1, 0 = none)	Relative Unsicherheit der Ziele (0-1, 0 = keine)
+Time-bandwidth product of the spectra (NW)	Zeit-Bandbreite-Produkt der Spektren (NW)
+Harmonic F-test level of the peaks (0-1)	Niveau des harmonischen F-Tests der Peaks (0-1)
+Own peak frequencies (cycles/m, optional)	Eigene Peakfrequenzen (Zyklen/m, optional)
+Largest Ho-SL of a tracked minimum (%)	Größtes Ho-SL eines verfolgten Minimums (%)
+Tests constant sedimentation rates against noise analysed at the same rate (TimeOpt, likelihood and COCO scores, several noise models), or estimates the rate history and tests the minimally tuned record against surrogates. Depth in metres.	Testet konstante Sedimentationsraten gegen Rauschen, das mit derselben Rate analysiert wird (TimeOpt-, Likelihood- und COCO-Scores, mehrere Rauschmodelle), oder schätzt den Ratenverlauf und testet die minimal getunte Datenreihe gegen Surrogate. Tiefe in Metern.
+Constant rates, TimeOpt / COCO scores (astro_sedrate_test)	Konstante Raten, TimeOpt- / COCO-Scores (astro_sedrate_test)
+Tracked rate and tuning against surrogates (astro_tune_test)	Verfolgte Rate und Tuning gegen Surrogate (astro_tune_test)
+TimeOpt fit	TimeOpt-Fit
+Short-eccentricity modulation	Modulation der kurzen Exzentrizität
+Default	Standard
+Include the COCO score	COCO-Score einbeziehen
+Minimal tuning at the best rate (writes an age model)	Minimales Tuning bei der besten Rate (schreibt ein Altersmodell)
+Noise series	Rauschreihen
+Surrogates	Surrogate
+Sampled rate paths	Gezogene Ratenpfade
+Runs the astronomical sedimentation-rate test on two proxies of the same section and combines their evidence rate by rate (they share one sedimentation rate). Depth in metres.	Führt den astronomischen Sedimentationsraten-Test an zwei Proxys desselben Profils aus und kombiniert deren Evidenz Rate für Rate (sie teilen sich eine Sedimentationsrate). Tiefe in Metern.
+TimeOpt fit 1 (precession modulation)	TimeOpt-Fit 1 (Präzessionsmodulation)
+TimeOpt fit 2 (short-eccentricity modulation)	TimeOpt-Fit 2 (Modulation der kurzen Exzentrizität)
+Combination	Kombination
+Minimum p	Minimales p
+Floating age model from a filtered cycle: every maximum (or minimum) of the filtered series is one cycle period later than the previous one (Acycle: Build Age Model; minimal tuning).	Schwimmendes Altersmodell aus einem gefilterten Zyklus: Jedes Maximum (oder Minimum) der gefilterten Reihe liegt eine Zyklusperiode später als das vorherige (Acycle: Build Age Model; minimales Tuning).
+Period of the filtered cycle (kyr)	Periode des gefilterten Zyklus (kyr)
+Tie points at	Ankerpunkte bei
+Half-width of the peak search (points)	Halbe Breite der Peaksuche (Punkte)
+Age of the first tie point (kyr)	Alter des ersten Ankerpunkts (kyr)
+Also write the tuned series	Zusätzlich die getunte Reihe schreiben
+Age model from a filtered or extracted cycle (depth in metres): the distance between successive maxima, minima or both of the cycle is set to its duration. Use a filtered series (Time Series > Filtering and cycle extraction) or a cycle extracted in the Track view.	Altersmodell aus einem gefilterten oder extrahierten Zyklus (Tiefe in Metern): Der Abstand zwischen aufeinanderfolgenden Maxima, Minima oder beiden des Zyklus wird auf dessen Dauer gesetzt. Eine gefilterte Reihe (Zeitreihen > Filterung und Zyklusextraktion) oder einen in der Ansicht „Verfolgen“ extrahierten Zyklus verwenden.
+Maxima (one cycle apart)	Maxima (ein Zyklus Abstand)
+Minima (one cycle apart)	Minima (ein Zyklus Abstand)
+Maxima and minima (half a cycle apart)	Maxima und Minima (ein halber Zyklus Abstand)
+Points compared on each side (peak detection)	Auf jeder Seite verglichene Punkte (Peakerkennung)
+Age of the top of the record (kyr)	Alter am Top der Datenreihe (kyr)
+Integrates a sedimentation-rate curve (depth in m, rate in cm/kyr) to a depth-time model.	Integriert eine Sedimentationsratenkurve (Tiefe in m, Rate in cm/kyr) zu einem Tiefen-Zeit-Modell.
+Converts a record (file 1: depth in metres, value) to time with file 2: a tracked period curve of one cycle (depth, period), a sedimentation-rate curve (depth, cm/kyr) or tie points (depth, age).	Wandelt eine Datenreihe (Datei 1: Tiefe in Metern, Wert) mit Datei 2 in Zeit um: eine verfolgte Periodenkurve eines Zyklus (Tiefe, Periode), eine Sedimentationsratenkurve (Tiefe, cm/kyr) oder Ankerpunkte (Tiefe, Alter).
+File 2 holds	Datei 2 enthält
+Tracked period curve of one cycle	Verfolgte Periodenkurve eines Zyklus
+Sedimentation-rate curve (cm/kyr)	Sedimentationsratenkurve (cm/kyr)
+Tie points (depth, age)	Ankerpunkte (Tiefe, Alter)
+Interpolate the result at an even time step	Ergebnis mit gleichmäßigem Zeitschritt interpolieren
+Time step (kyr)	Zeitschritt (kyr)
+Converts a depth series to time with an age model (file 2: depth, age), as Acycle: Age Scale.	Wandelt eine Tiefenreihe mit einem Altersmodell (Datei 2: Tiefe, Alter) in Zeit um, wie Acycle: Age Scale.
+Age model (depth, age)	Altersmodell (Tiefe, Alter)
+Extrapolate beyond the first and last tie point	Über den ersten und letzten Ankerpunkt hinaus extrapolieren
+Interpolate the tuned series at an even step	Getunte Reihe mit gleichmäßigem Schritt interpolieren
+Turns a floating astrochronology (time in kyr from the start of the record) into absolute ages by giving one point of the floating scale a radioisotopic or other age.	Wandelt eine schwimmende Astrochronologie (Zeit in kyr ab dem Anfang der Datenreihe) in absolute Alter um, indem einem Punkt der schwimmenden Skala ein radioisotopisches oder anderes Alter zugewiesen wird.
+Floating time of the anchor point (kyr)	Schwimmende Zeit des Verankerungspunkts (kyr)
+Age of the anchor point (kyr)	Alter des Verankerungspunkts (kyr)
+The floating time increases	Die schwimmende Zeit nimmt zu
+Towards the present (older at the start)	Zur Gegenwart hin (älter am Anfang)
+Away from the present (younger at the start)	Von der Gegenwart weg (jünger am Anfang)
+Sort the output with decreasing age	Ausgabe nach abnehmendem Alter sortieren
+Weighted mean of dates with uncertainties, MSWD and probability of fit, with the confidence interval of IsoPlot or ArArCALC (also for any values with uncertainties), or the age spectrum and plateau age of an Ar/Ar step-heating experiment. Data file: date and uncertainty (wtMean; or the six Ar/Ar columns date, uncertainty, K/Ca, %Ar40*, F, F uncertainty), or the seven step-heating columns %Ar39, date, uncertainty, K/Ca, %Ar40*, F, F uncertainty.	Gewichtetes Mittel von Datierungen mit Unsicherheiten, MSWD und Anpassungswahrscheinlichkeit, mit dem Konfidenzintervall von IsoPlot oder ArArCALC (auch für beliebige Werte mit Unsicherheiten), oder das Altersspektrum und Plateaualter eines Ar/Ar-Stufenheizexperiments. Datendatei: Datierung und Unsicherheit (wtMean; oder die sechs Ar/Ar-Spalten Datierung, Unsicherheit, K/Ca, %Ar40*, F, Unsicherheit von F) oder die sieben Stufenheiz-Spalten %Ar39, Datierung, Unsicherheit, K/Ca, %Ar40*, F, Unsicherheit von F.
+Dates with uncertainties (wtMean)	Datierungen mit Unsicherheiten (wtMean)
+Ar/Ar step heating (stepHeat)	Ar/Ar-Stufenheizung (stepHeat)
+Uncertainties in the file are	Unsicherheiten in der Datei sind
+1 sigma	1 Sigma
+2 sigma	2 Sigma
+95% confidence interval	95%-Konfidenzintervall
+Rows left out of the mean (optional)	Vom Mittel ausgeschlossene Zeilen (optional)
+Row numbers of the data file, e.g. outliers by Chauvenet's criterion listed in the result.	Zeilennummern der Datendatei, z. B. die im Ergebnis aufgeführten Ausreißer nach dem Chauvenet-Kriterium.
+Time unit of the dates	Zeiteinheit der Datierungen
+J value (neutron fluence, 0 = none)	J-Wert (Neutronenfluenz, 0 = keiner)
+Ar/Ar only: adds the uncertainty of J.	Nur Ar/Ar: fügt die Unsicherheit von J hinzu.
+Uncertainty of J (0 = none)	Unsicherheit von J (0 = keine)
+Total decay constant of 40K (1/yr)	Gesamtzerfallskonstante von 40K (1/yr)
+%Ar40* level shown	Angezeigtes %Ar40*-Niveau
+Boundaries, mid-ages and colours of the units of the International Chronostratigraphic Chart: a unit and its subdivisions, an age range, or the units at one age, drawn as a time-scale chart; optionally with the astronomical periods at the mid-age.	Grenzen, mittlere Alter und Farben der Einheiten der Internationalen Chronostratigraphischen Tabelle: eine Einheit und ihre Untereinheiten, ein Altersbereich oder die Einheiten zu einem Alter, gezeichnet als Zeitskalen-Diagramm; optional mit den astronomischen Perioden zum mittleren Alter.
+A unit and its subdivisions	Eine Einheit und ihre Untereinheiten
+An age range	Ein Altersbereich
+The units at one age	Die Einheiten zu einem Alter
+Unit	Einheit
+Phanerozoic (Eon, 0-541 Ma)	Phanerozoikum (Äon, 0-541 Ma)
+Cenozoic (Era, 0-66 Ma)	Känozoikum (Ära, 0-66 Ma)
+Quaternary (Period, 0-2.58 Ma)	Quartär (Periode, 0-2.58 Ma)
+Holocene (Epoch, 0-0.0117 Ma)	Holozän (Epoche, 0-0.0117 Ma)
+Holocene Age (Age, 0-0.0117 Ma)	Holozän-Alter (Alter, 0-0.0117 Ma)
+Pleistocene (Epoch, 0.0117-2.58 Ma)	Pleistozän (Epoche, 0.0117-2.58 Ma)
+Calabrian (Age, 0.781-1.8 Ma)	Calabrium (Alter, 0.781-1.8 Ma)
+Gelasian (Age, 1.8-2.58 Ma)	Gelasium (Alter, 1.8-2.58 Ma)
+Neogene (Period, 2.58-23.03 Ma)	Neogen (Periode, 2.58-23.03 Ma)
+Pliocene (Epoch, 2.58-5.333 Ma)	Pliozän (Epoche, 2.58-5.333 Ma)
+Piacenzian (Age, 2.58-3.6 Ma)	Piacenzium (Alter, 2.58-3.6 Ma)
+Zanclean (Age, 3.6-5.333 Ma)	Zancleum (Alter, 3.6-5.333 Ma)
+Miocene (Epoch, 5.333-23.03 Ma)	Miozän (Epoche, 5.333-23.03 Ma)
+Messinian (Age, 5.333-7.246 Ma)	Messinium (Alter, 5.333-7.246 Ma)
+Tortonian (Age, 7.246-11.63 Ma)	Tortonium (Alter, 7.246-11.63 Ma)
+Serravallian (Age, 11.63-13.82 Ma)	Serravallium (Alter, 11.63-13.82 Ma)
+Langhian (Age, 13.82-15.97 Ma)	Langhium (Alter, 13.82-15.97 Ma)
+Burdigalian (Age, 15.97-20.44 Ma)	Burdigalium (Alter, 15.97-20.44 Ma)
+Aquitanian (Age, 20.44-23.03 Ma)	Aquitanium (Alter, 20.44-23.03 Ma)
+Paleogene (Period, 23.03-66 Ma)	Paläogen (Periode, 23.03-66 Ma)
+Oligocene (Epoch, 23.03-33.9 Ma)	Oligozän (Epoche, 23.03-33.9 Ma)
+Chattian (Age, 23.03-28.1 Ma)	Chattium (Alter, 23.03-28.1 Ma)
+Rupelian (Age, 28.1-33.9 Ma)	Rupelium (Alter, 28.1-33.9 Ma)
+Eocene (Epoch, 33.9-56 Ma)	Eozän (Epoche, 33.9-56 Ma)
+Priabonian (Age, 33.9-37.8 Ma)	Priabonium (Alter, 33.9-37.8 Ma)
+Bartonian (Age, 37.8-41.2 Ma)	Bartonium (Alter, 37.8-41.2 Ma)
+Lutetian (Age, 41.2-47.8 Ma)	Lutetium (Alter, 41.2-47.8 Ma)
+Ypresian (Age, 47.8-56 Ma)	Ypresium (Alter, 47.8-56 Ma)
+Paleocene (Epoch, 56-66 Ma)	Paläozän (Epoche, 56-66 Ma)
+Thanetian (Age, 56-59.2 Ma)	Thanetium (Alter, 56-59.2 Ma)
+Selandian (Age, 59.2-61.6 Ma)	Seelandium (Alter, 59.2-61.6 Ma)
+Danian (Age, 61.6-66 Ma)	Danium (Alter, 61.6-66 Ma)
+Mesozoic (Era, 66-252 Ma)	Mesozoikum (Ära, 66-252 Ma)
+Cretaceous (Period, 66-145 Ma)	Kreide (Periode, 66-145 Ma)
+Maastrictian (Age, 66-72.1 Ma)	Maastrichtium (Alter, 66-72.1 Ma)
+Campanian (Age, 72.1-83.6 Ma)	Campanium (Alter, 72.1-83.6 Ma)
+Santonian (Age, 83.6-86.3 Ma)	Santonium (Alter, 83.6-86.3 Ma)
+Coniacian (Age, 86.3-89.8 Ma)	Coniacium (Alter, 86.3-89.8 Ma)
+Turonian (Age, 89.8-93.9 Ma)	Turonium (Alter, 89.8-93.9 Ma)
+Cenamonian (Age, 93.9-100 Ma)	Cenomanium (Alter, 93.9-100 Ma)
+Albian (Age, 100-113 Ma)	Albium (Alter, 100-113 Ma)
+Aptian (Age, 113-126 Ma)	Aptium (Alter, 113-126 Ma)
+Barremian (Age, 126-131 Ma)	Barremium (Alter, 126-131 Ma)
+Hauterivian (Age, 131-134 Ma)	Hauterivium (Alter, 131-134 Ma)
+Valanginian (Age, 134-139 Ma)	Valanginium (Alter, 134-139 Ma)
+Berriasian (Age, 139-145 Ma)	Berriasium (Alter, 139-145 Ma)
+Jurassic (Period, 145-201.3 Ma)	Jura (Periode, 145-201.3 Ma)
+Tithonian (Age, 145-152.1 Ma)	Tithonium (Alter, 145-152.1 Ma)
+Kimmeridgian (Age, 152.1-157.3 Ma)	Kimmeridgium (Alter, 152.1-157.3 Ma)
+Oxfordian (Age, 157.3-163.5 Ma)	Oxfordium (Alter, 157.3-163.5 Ma)
+Callovian (Age, 163.5-166.1 Ma)	Callovium (Alter, 163.5-166.1 Ma)
+Bathonian (Age, 166.1-168.3 Ma)	Bathonium (Alter, 166.1-168.3 Ma)
+Bajocian (Age, 168.3-170.3 Ma)	Bajocium (Alter, 168.3-170.3 Ma)
+Aalenian (Age, 170.3-174.1 Ma)	Aalenium (Alter, 170.3-174.1 Ma)
+Toarcian (Age, 174.1-182.7 Ma)	Toarcium (Alter, 174.1-182.7 Ma)
+Pliensbachian (Age, 182.7-190.8 Ma)	Pliensbachium (Alter, 182.7-190.8 Ma)
+Sinemurian (Age, 190.8-199.3 Ma)	Sinemurium (Alter, 190.8-199.3 Ma)
+Hettangian (Age, 199.3-201.3 Ma)	Hettangium (Alter, 199.3-201.3 Ma)
+Triassic (Period, 201.3-251.902 Ma)	Trias (Periode, 201.3-251.902 Ma)
+Rhaetian (Age, 201.3-208.5 Ma)	Rhaetium (Alter, 201.3-208.5 Ma)
+Norian (Age, 208.5-227 Ma)	Norium (Alter, 208.5-227 Ma)
+Carnian (Age, 227-237 Ma)	Karnium (Alter, 227-237 Ma)
+Ladinian (Age, 237-242 Ma)	Ladinium (Alter, 237-242 Ma)
+Anisian (Age, 242-247.2 Ma)	Anisium (Alter, 242-247.2 Ma)
+Olenekian (Age, 247.2-251.2 Ma)	Olenekium (Alter, 247.2-251.2 Ma)
+Induan (Age, 251.2-251.902 Ma)	Indusium (Alter, 251.2-251.902 Ma)
+Paleozoic (Era, 251.902-541 Ma)	Paläozoikum (Ära, 251.902-541 Ma)
+Permian (Period, 251.902-298.9 Ma)	Perm (Periode, 251.902-298.9 Ma)
+Lopingian (Epoch, 251.902-259.1 Ma)	Lopingium (Epoche, 251.902-259.1 Ma)
+Changhsingian (Age, 251.902-254.14 Ma)	Changhsingium (Alter, 251.902-254.14 Ma)
+Wuchiapingian (Age, 254.14-259.1 Ma)	Wuchiapingium (Alter, 254.14-259.1 Ma)
+Guadalupian (Epoch, 259.1-272.95 Ma)	Guadalupium (Epoche, 259.1-272.95 Ma)
+Capitanian (Age, 259.1-265.1 Ma)	Capitanium (Alter, 259.1-265.1 Ma)
+Wordian (Age, 265.1-268.8 Ma)	Wordium (Alter, 265.1-268.8 Ma)
+Roardian (Age, 268.8-272.95 Ma)	Roadium (Alter, 268.8-272.95 Ma)
+Cisuralian (Epoch, 272.95-298.9 Ma)	Cisuralium (Epoche, 272.95-298.9 Ma)
+Kungurian (Age, 272.95-283.5 Ma)	Kungurium (Alter, 272.95-283.5 Ma)
+Artinskian (Age, 283.5-290.1 Ma)	Artinskium (Alter, 283.5-290.1 Ma)
+Sakmarian (Age, 290.1-295 Ma)	Sakmarium (Alter, 290.1-295 Ma)
+Asselian (Age, 295-298.9 Ma)	Asselium (Alter, 295-298.9 Ma)
+Carboniferous (Period, 298.9-358.9 Ma)	Karbon (Periode, 298.9-358.9 Ma)
+Gzhelian (Age, 298.9-303.7 Ma)	Gzhelium (Alter, 298.9-303.7 Ma)
+Kasimovian (Age, 303.7-307 Ma)	Kasimovium (Alter, 303.7-307 Ma)
+Moscovian (Age, 307-315.2 Ma)	Moskovium (Alter, 307-315.2 Ma)
+Bashkirian (Age, 315.2-323.2 Ma)	Bashkirium (Alter, 315.2-323.2 Ma)
+Serpukhovian (Age, 323.2-330.9 Ma)	Serpukhovium (Alter, 323.2-330.9 Ma)
+Visean (Age, 330.9-346.7 Ma)	Viseum (Alter, 330.9-346.7 Ma)
+Tournaisian (Age, 346.7-358.9 Ma)	Tournaisium (Alter, 346.7-358.9 Ma)
+Devonian (Period, 358.9-419.2 Ma)	Devon (Periode, 358.9-419.2 Ma)
+Famennian (Age, 358.9-372.2 Ma)	Famennium (Alter, 358.9-372.2 Ma)
+Frasnian (Age, 372.2-382.7 Ma)	Frasnium (Alter, 372.2-382.7 Ma)
+Eifelian (Age, 378.7-393.3 Ma)	Eifelium (Alter, 378.7-393.3 Ma)
+Givetian (Age, 382.7-378.7 Ma)	Givetium (Alter, 382.7-378.7 Ma)
+Emsian (Age, 393.3-407.6 Ma)	Emsium (Alter, 393.3-407.6 Ma)
+Pragian (Age, 407.6-410.8 Ma)	Pragium (Alter, 407.6-410.8 Ma)
+Lochkovian (Age, 410.8-419.2 Ma)	Lochkovium (Alter, 410.8-419.2 Ma)
+Silurian (Period, 419.2-443.8 Ma)	Silur (Periode, 419.2-443.8 Ma)
+Pridoli (Epoch, 419.2-423 Ma)	Pridolium (Epoche, 419.2-423 Ma)
+Pridoli Age (Age, 419.2-423 Ma)	Pridolium-Alter (Alter, 419.2-423 Ma)
+Ludlow (Epoch, 423-427.4 Ma)	Ludlow (Epoche, 423-427.4 Ma)
+Ludfordian (Age, 423-425.6 Ma)	Ludfordium (Alter, 423-425.6 Ma)
+Wenlock (Epoch, 427.4-433.4 Ma)	Wenlock (Epoche, 427.4-433.4 Ma)
+Gorstian (Age, 425.6-427.4 Ma)	Gorstium (Alter, 425.6-427.4 Ma)
+Homerian (Age, 427.4-430.5 Ma)	Homerium (Alter, 427.4-430.5 Ma)
+Sheinwoodian (Age, 430.5-433.4 Ma)	Sheinwoodium (Alter, 430.5-433.4 Ma)
+Llandovery (Epoch, 433.4-443.8 Ma)	Llandovery (Epoche, 433.4-443.8 Ma)
+Telychian (Age, 433.4-438.5 Ma)	Telychium (Alter, 433.4-438.5 Ma)
+Aeronian (Age, 438.5-440.8 Ma)	Aeronium (Alter, 438.5-440.8 Ma)
+Rhuddanian (Age, 440.8-443.8 Ma)	Rhuddanium (Alter, 440.8-443.8 Ma)
+Ordovician (Period, 443.8-485.4 Ma)	Ordovizium (Periode, 443.8-485.4 Ma)
+Hirnantian (Age, 443.8-445.2 Ma)	Hirnantium (Alter, 443.8-445.2 Ma)
+Katian (Age, 445.2-453 Ma)	Katium (Alter, 445.2-453 Ma)
+Sandbian (Age, 453-458.4 Ma)	Sandbium (Alter, 453-458.4 Ma)
+Darriwilian (Age, 458.4-467.3 Ma)	Darriwilium (Alter, 458.4-467.3 Ma)
+Dapingian (Age, 467.3-470 Ma)	Dapingium (Alter, 467.3-470 Ma)
+Floian (Age, 470-477.7 Ma)	Floium (Alter, 470-477.7 Ma)
+Tremadocian (Age, 477.7-485.4 Ma)	Tremadocium (Alter, 477.7-485.4 Ma)
+Cambrian (Period, 485.4-541 Ma)	Kambrium (Periode, 485.4-541 Ma)
+Furongian (Epoch, 485.4-497 Ma)	Furongium (Epoche, 485.4-497 Ma)
+Stage 10 (Age, 485.4-489.5 Ma)	Stufe 10 (Alter, 485.4-489.5 Ma)
+Jiangshanian (Age, 489.5-494 Ma)	Jiangshanium (Alter, 489.5-494 Ma)
+Paibian (Age, 494-497 Ma)	Paibium (Alter, 494-497 Ma)
+Series 3 (Epoch, 497-509 Ma)	Serie 3 (Epoche, 497-509 Ma)
+Guzhangian (Age, 497-500.5 Ma)	Guzhangium (Alter, 497-500.5 Ma)
+Drumian (Age, 500.5-504.5 Ma)	Drumium (Alter, 500.5-504.5 Ma)
+Stage 5 (Age, 504.5-509 Ma)	Stufe 5 (Alter, 504.5-509 Ma)
+Series 2 (Epoch, 509-521 Ma)	Serie 2 (Epoche, 509-521 Ma)
+Stage 4 (Age, 509-514 Ma)	Stufe 4 (Alter, 509-514 Ma)
+Stage 3 (Age, 514-521 Ma)	Stufe 3 (Alter, 514-521 Ma)
+Terreneuvian (Epoch, 521-541 Ma)	Terreneuvium (Epoche, 521-541 Ma)
+Stage 2 (Age, 521-529 Ma)	Stufe 2 (Alter, 521-529 Ma)
+Fortunian (Age, 529-541 Ma)	Fortunium (Alter, 529-541 Ma)
+Proterozoic (Eon, 541-2500 Ma)	Proterozoikum (Äon, 541-2500 Ma)
+Neoproterozoic (Era, 541-1000 Ma)	Neoproterozoikum (Ära, 541-1000 Ma)
+Ediacaran (Period, 541-635 Ma)	Ediacarium (Periode, 541-635 Ma)
+Cryogenian (Period, 635-720 Ma)	Cryogenium (Periode, 635-720 Ma)
+Tonian (Period, 720-1000 Ma)	Tonium (Periode, 720-1000 Ma)
+Mesoproterozoic (Era, 1000-1600 Ma)	Mesoproterozoikum (Ära, 1000-1600 Ma)
+Stenian (Period, 1000-1200 Ma)	Stenium (Periode, 1000-1200 Ma)
+Ectasian (Period, 1200-1400 Ma)	Ectasium (Periode, 1200-1400 Ma)
+Calymmian (Period, 1400-1600 Ma)	Calymmium (Periode, 1400-1600 Ma)
+Paleoproterozoic (Era, 1600-2500 Ma)	Paläoproterozoikum (Ära, 1600-2500 Ma)
+Statherian (Period, 1600-1800 Ma)	Statherium (Periode, 1600-1800 Ma)
+Orosirian (Period, 1800-2050 Ma)	Orosirium (Periode, 1800-2050 Ma)
+Rhyacian (Period, 2050-2300 Ma)	Rhyacium (Periode, 2050-2300 Ma)
+Siderian (Period, 2300-2500 Ma)	Siderium (Periode, 2300-2500 Ma)
+Archean (Eon, 2500-4000 Ma)	Archaikum (Äon, 2500-4000 Ma)
+Neoarchean (Era, 2500-2800 Ma)	Neoarchaikum (Ära, 2500-2800 Ma)
+Neoarchean Period (Period, 2500-2800 Ma)	Neoarchaikum-Periode (Periode, 2500-2800 Ma)
+Mesoarchean (Era, 2800-3200 Ma)	Mesoarchaikum (Ära, 2800-3200 Ma)
+Mesoarchean Period (Period, 2800-3200 Ma)	Mesoarchaikum-Periode (Periode, 2800-3200 Ma)
+Paleoarchean (Era, 3200-3600 Ma)	Paläoarchaikum (Ära, 3200-3600 Ma)
+Paleoarchean Period (Period, 3200-3600 Ma)	Paläoarchaikum-Periode (Periode, 3200-3600 Ma)
+Eoarchean (Era, 3600-4000 Ma)	Eoarchaikum (Ära, 3600-4000 Ma)
+Eoarchean Period (Period, 3600-4000 Ma)	Eoarchaikum-Periode (Periode, 3600-4000 Ma)
+Hadean (Eon, 4000-4600 Ma)	Hadaikum (Äon, 4000-4600 Ma)
+Youngest age (Ma)	Jüngstes Alter (Ma)
+Oldest age (Ma)	Ältestes Alter (Ma)
+Age (Ma)	Alter (Ma)
+Also give the astronomical periods at the mid-age	Zusätzlich die astronomischen Perioden zum mittleren Alter angeben
+Bayesian age-depth model of radioisotopic dates alone (modified Bchron; Trayler et al., 2020). The file is a table with a header: position (depth or height), age, sd (1 sigma, or a 2sd column) and optionally thickness; rows at the same position are combined into one dated level.	Bayessches Alters-Tiefen-Modell allein aus radioisotopischen Datierungen (modifiziertes Bchron; Trayler et al., 2020). Die Datei ist eine Tabelle mit Kopfzeile: position (Tiefe oder Höhe), age, sd (1 Sigma, oder eine Spalte 2sd) und optional thickness; Zeilen an derselben Position werden zu einem datierten Niveau zusammengefasst.
+Positions are	Positionen sind
+Depths (increasing downwards, older)	Tiefen (nach unten zunehmend, älter)
+Heights (increasing upwards, younger)	Höhen (nach oben zunehmend, jünger)
+Number of MCMC iterations	Anzahl der MCMC-Iterationen
+Burn-in iterations	Burn-in-Iterationen
+Probability of the interval	Wahrscheinlichkeit des Intervalls
+Number of positions of the model	Anzahl der Positionen des Modells
+Also predict the age at positions (optional)	Zusätzlich das Alter an Positionen vorhersagen (optional)
+Joint Bayesian age-depth model of radioisotopic dates (file 1: table with position, age, sd and optionally thickness, or single-zircon dates) and a floating astrochronology (file 2: tracked period of the cycle, depth and period). Estimates hiatus durations, outlier probabilities and, optionally, compares with the dates-only modBchron model.	Gemeinsames Bayessches Alters-Tiefen-Modell aus radioisotopischen Datierungen (Datei 1: Tabelle mit position, age, sd und optional thickness, oder Einzelzirkon-Datierungen) und einer schwimmenden Astrochronologie (Datei 2: verfolgte Periode des Zyklus, Tiefe und Periode). Schätzt Hiatusdauern, Ausreißerwahrscheinlichkeiten und vergleicht optional mit dem nur auf Datierungen beruhenden modBchron-Modell.
+File 1 holds	Datei 1 enthält
+One row per dated level (position, age, sd)	Eine Zeile pro datiertem Niveau (position, age, sd)
+Single-zircon dates (one row per grain; grains at one position form a level)	Einzelzirkon-Datierungen (eine Zeile pro Korn; Körner an einer Position bilden ein Niveau)
+Longest crystallisation interval before eruption (kyr)	Längstes Kristallisationsintervall vor der Eruption (kyr)
+Unit of the ages	Einheit der Alter
+Relative uncertainty of the tracked period (1 sd, %)	Relative Unsicherheit der verfolgten Periode (1 sd, %)
+Positions of hiatuses (empty = none)	Positionen von Hiaten (leer = keine)
+Prior durations of the hiatuses (kyr)	Prior-Dauern der Hiaten (kyr)
+Prior uncertainties of the hiatuses (1 sd, kyr)	Prior-Unsicherheiten der Hiaten (1 sd, kyr)
+Outlier model of the dates	Ausreißermodell der Datierungen
+Mixture with outlier probability	Mischung mit Ausreißerwahrscheinlichkeit
+Two-stage screening	Zweistufiges Screening
+Gaussian (no outliers)	Gauß (keine Ausreißer)
+Outliers can be	Ausreißer können sein
+Too old or too young	Zu alt oder zu jung
+Too old (inheritance)	Zu alt (Vererbung)
+Too young (Pb loss)	Zu jung (Pb-Verlust)
+Thinning interval	Ausdünnungsintervall
+Track realisations per segment	Realisierungen der Spur pro Segment
+Leave-one-out test of every date (one extra run per date, slow)	Leave-one-out-Test jeder Datierung (ein zusätzlicher Lauf pro Datierung, langsam)
+Also run the dates-only modBchron model	Zusätzlich das nur auf Datierungen beruhende modBchron-Modell ausführen
+modBchron iterations	modBchron-Iterationen
+File 1: depth and one or more proxy columns; file 2: a tracked period curve (depth, period), e.g. from the Track view. Every simulation blends randomly perturbed copies of the track and follows the nearest ridge in the scalogram of a randomly chosen proxy; the spread of the re-tracked curves is the tracking uncertainty, used by Age model with uncertainty, Gap duration and Dates + astrochronology.	Datei 1: Tiefe und eine oder mehrere Proxy-Spalten; Datei 2: eine verfolgte Periodenkurve (Tiefe, Periode), z. B. aus der Ansicht „Verfolgen“. Jede Simulation mischt zufällig gestörte Kopien der Spur und folgt dem nächstgelegenen Grat im Skalogramm eines zufällig gewählten Proxys; die Streuung der neu verfolgten Kurven ist die Verfolgungsunsicherheit, die von Altersmodell mit Unsicherheit, Dauer eines Hiatus und Datierungen + Astrochronologie verwendet wird.
+Proxy columns of file 1 (numbers; empty = all)	Proxy-Spalten von Datei 1 (Nummern; leer = alle)
+Perturbation of the track (+/- %)	Störung der Spur (+/- %)
+Upper limit of the ridge search (factor of the track)	Obere Grenze der Gratsuche (Faktor der Spur)
+Lower limit of the ridge search (factor of the track)	Untere Grenze der Gratsuche (Faktor der Spur)
+Smoothing of every re-tracked curve	Glättung jeder neu verfolgten Kurve
+LOESS, automatic span	LOESS, automatische Spanne
+LOESS, given span	LOESS, vorgegebene Spanne
+Span (0 to 1) or window length (depth units)	Spanne (0 bis 1) oder Fensterlänge (Tiefeneinheiten)
+Shortest period of the scalograms	Kürzeste Periode der Skalogramme
+Longest period of the scalograms	Längste Periode der Skalogramme
+Simulates age models from a tracked cycle with its uncertainty (a re-tracked curve, or a tracked period curve with a relative uncertainty) and the uncertainty of the cycle duration; optionally anchored to dated levels (ages in kyr) with hiatuses. Writes the mean, sd and quantiles of the age at every depth.	Simuliert Altersmodelle aus einem verfolgten Zyklus mit seiner Unsicherheit (eine neu verfolgte Kurve oder eine verfolgte Periodenkurve mit einer relativen Unsicherheit) und der Unsicherheit der Zyklusdauer; optional an datierten Niveaus (Alter in kyr) verankert, mit Hiaten. Schreibt Mittelwert, sd und Quantile des Alters in jeder Tiefe.
+The data file is a	Die Datendatei ist eine
+Tracked period curve (depth, period)	Verfolgte Periodenkurve (Tiefe, Periode)
+Re-tracked curve (depth, mean frequency, sd), from Re-track	Neu verfolgte Kurve (Tiefe, mittlere Frequenz, sd), aus Zyklus neu verfolgen
+Uncertainty of the cycle duration (kyr)	Unsicherheit der Zyklusdauer (kyr)
+Distribution of the cycle duration	Verteilung der Zyklusdauer
+Normal (uncertainty = 1 sd)	Normal (Unsicherheit = 1 sd)
+Uniform (uncertainty = half-width)	Gleichverteilt (Unsicherheit = halbe Breite)
+Ages	Alter
+Floating (time from the top)	Schwimmend (Zeit ab dem Top)
+Anchored to dated levels	An datierten Niveaus verankert
+Depths of the dated levels	Tiefen der datierten Niveaus
+Ages of the dated levels (kyr)	Alter der datierten Niveaus (kyr)
+Age uncertainties (1 sd, kyr; one value for all)	Altersunsicherheiten (1 sd, kyr; ein Wert für alle)
+Depth uncertainty of the dated levels (full width)	Tiefenunsicherheit der datierten Niveaus (volle Breite)
+Depths of hiatuses (empty = none)	Tiefen von Hiaten (leer = keine)
+Durations of the hiatuses (kyr)	Dauern der Hiaten (kyr)
+Uncertainties of the hiatuses (1 sd, kyr)	Unsicherheiten der Hiaten (1 sd, kyr)
+Rejections before a disagreeing date is dropped	Ablehnungen, bevor eine widersprechende Datierung verworfen wird
+Estimates the duration of a gap at a given depth from a stable cycle: file 1 is the tracked curve on both sides of the gap (a re-tracked curve, or a period curve with a relative uncertainty), file 2 the proxy record. Both sides are tuned, the cycle is extracted and the missing part of the cycle across the gap is the gap duration.	Schätzt die Dauer einer Lücke in einer vorgegebenen Tiefe aus einem stabilen Zyklus: Datei 1 ist die verfolgte Kurve auf beiden Seiten der Lücke (eine neu verfolgte Kurve oder eine Periodenkurve mit einer relativen Unsicherheit), Datei 2 die Proxy-Datenreihe. Beide Seiten werden getunt, der Zyklus wird extrahiert, und der über die Lücke hinweg fehlende Teil des Zyklus ist die Dauer der Lücke.
+File 1 is a	Datei 1 ist eine
+Depth of the gap	Tiefe der Lücke
+Duration of the cycle missing in the gap (kyr)	Dauer des in der Lücke fehlenden Zyklus (kyr)
+Number of missing cycles	Anzahl der fehlenden Zyklen
+Uncertainty of the missing-cycle duration (kyr, if it differs from the tracked cycle)	Unsicherheit der Dauer des fehlenden Zyklus (kyr, falls sie vom verfolgten Zyklus abweicht)
+Extracted band: shortest period (factor of the missing cycle)	Extrahiertes Band: kürzeste Periode (Faktor des fehlenden Zyklus)
+Extracted band: longest period (factor of the missing cycle)	Extrahiertes Band: längste Periode (Faktor des fehlenden Zyklus)
+Measure between	Messen zwischen
+Maxima of the cycle	Maxima des Zyklus
+Minima of the cycle	Minima des Zyklus
+Scale resolution dj of the tuned scalograms	Skalenauflösung dj der getunten Skalogramme
+Second file: the tracked period curve (depth, period). Frequency uncertainty of the tracked cycle from the Gabor uncertainty of the Morlet wavelet or the resolution of an FFT, and the resulting spread of the time-depth model.	Zweite Datei: die verfolgte Periodenkurve (Tiefe, Periode). Frequenzunsicherheit des verfolgten Zyklus aus der Gabor-Unschärfe des Morlet-Wavelets oder der Auflösung einer FFT und die daraus folgende Streuung des Zeit-Tiefen-Modells.
+Uncertainty of	Unsicherheit von
+Morlet wavelet (Gabor)	Morlet-Wavelet (Gabor)
+FFT, practical resolution 1/T	FFT, praktische Auflösung 1/T
+FFT, Heisenberg-Gabor limit 1/(4 pi T)	FFT, Heisenberg-Gabor-Grenze 1/(4 pi T)
+Multiple of the uncertainty	Vielfaches der Unsicherheit
+Record or window length for the FFT (0 = length of the track)	Länge der Datenreihe oder des Fensters für die FFT (0 = Länge der Spur)
+De-chirps the record (file 1) with an existing age model (file 2: a tracked period curve, a sedimentation-rate curve or depth-age points): in the time of the age model every astronomical cycle should be a horizontal line; intervals where the cycles bend away are flagged with the rate correction they ask for.	De-chirpt die Datenreihe (Datei 1) mit einem vorhandenen Altersmodell (Datei 2: eine verfolgte Periodenkurve, eine Sedimentationsratenkurve oder Tiefen-Alters-Punkte): In der Zeit des Altersmodells sollte jeder astronomische Zyklus eine horizontale Linie sein; Intervalle, in denen die Zyklen davon abbiegen, werden mit der Ratenkorrektur markiert, die sie verlangen.
+Tracked period of one cycle (depth, period)	Verfolgte Periode eines Zyklus (Tiefe, Periode)
+Sedimentation rate (depth, rate)	Sedimentationsrate (Tiefe, Rate)
+Unit of the rate	Einheit der Rate
+cm/kyr with depth in metres	cm/kyr bei Tiefe in Metern
+depth units per kyr	Tiefeneinheiten pro kyr
+m/Myr with depth in metres	m/Myr bei Tiefe in Metern
+Approximate age of the record (Ma, picks the cycles)	Ungefähres Alter der Datenreihe (Ma, wählt die Zyklen)
+Cycles to check (kyr; empty = eccentricity, obliquity, precession)	Zu prüfende Zyklen (kyr; leer = Exzentrizität, Obliquität, Präzession)
+Transform: Morlet wavelet	Transformation: Morlet-Wavelet
+Transform: multitaper EHA	Transformation: Multitaper-EHA
+Transform: superlet SST (slower)	Transformation: Superlet-SST (langsamer)
+Transform: chirplet SST (slow)	Transformation: Chirplet-SST (langsam)
+Rate correction that is flagged (0.1 = 10 %)	Ratenkorrektur, die markiert wird (0.1 = 10 %)
+Cycles that must agree	Zyklen, die übereinstimmen müssen
+Also run a blind re-track for comparison (slower)	Zum Vergleich zusätzlich eine blinde Neuverfolgung ausführen (langsamer)
+Horizontal axis of the maps	Horizontale Achse der Karten
+Time of the age model	Zeit des Altersmodells
+Depth	Tiefe
+Tests an astronomically tuned record (time in kyr, 0-50 Ma): are the precession (or obliquity) amplitude modulations those of the La2004 solution? Significance from phase-randomised or AR(1) surrogates, with filters and added noise that guard against modulations created by tuning (Zeeden et al. 2015, 2019).	Testet eine astronomisch getunte Datenreihe (Zeit in kyr, 0-50 Ma): Entsprechen die Amplitudenmodulationen der Präzession (oder der Obliquität) denen der Lösung La2004? Signifikanz aus phasenrandomisierten oder AR(1)-Surrogaten, mit Filtern und zugefügtem Rauschen, die vor durch das Tuning erzeugten Modulationen schützen (Zeeden et al. 2015, 2019).
+Precession amplitude modulation (testPrecession)	Amplitudenmodulation der Präzession (testPrecession)
+Obliquity amplitude modulation (testTilt)	Amplitudenmodulation der Obliquität (testTilt)
+Time unit of the data	Zeiteinheit der Daten
+Phase-randomised	Phasenrandomisiert
+Part of each end excluded (0-1)	Ausgeschlossener Anteil an jedem Ende (0-1)
+Largest noise added (standard deviations of the data)	Größtes zugefügtes Rauschen (Standardabweichungen der Daten)
+Low-pass cut-off of the envelope (cycles/kyr)	Tiefpass-Grenzfrequenz der Hüllkurve (Zyklen/kyr)
+Detrend the envelope	Hüllkurve trendbereinigen
+Finds depths where energy over many periods arrives at once (phase jumps of all cycles at a hiatus, erosion surfaces, turbidites, spikes) with the transient-extracting (time-reassigned) wavelet transform.	Findet Tiefen, in denen Energie über viele Perioden gleichzeitig eintrifft (Phasensprünge aller Zyklen an einem Hiatus, Erosionsflächen, Turbidite, Spitzen), mit der transientenextrahierenden (zeitlich neu zugeordneten) Wavelet-Transformation.
+Period spacing dj (octaves)	Periodenabstand dj (Oktaven)
+Number of cycles (small = sharper in depth)	Anzahl der Zyklen (klein = schärfer in der Tiefe)
+Detection threshold (multiple of the running median)	Erkennungsschwelle (Vielfaches des gleitenden Medians)
+Minimum distance between transients (0 = longest period / 4)	Mindestabstand zwischen Transienten (0 = längste Periode / 4)
+Running-median window (0 = 2 x longest period)	Fenster des gleitenden Medians (0 = 2 x längste Periode)
+Aligns record 2 to record 1 by dynamic time warping and writes the depth-to-depth tie function (depth in record 2, equivalent depth in record 1) and record 2 on the depth scale of record 1. With an open end (and begin), record 2 may match only part of record 1. Use the tie function in Age scale / tuning to move other proxies of record 2.	Richtet Datenreihe 2 durch Dynamic Time Warping an Datenreihe 1 aus und schreibt die Tiefe-zu-Tiefe-Zuordnungsfunktion (Tiefe in Datenreihe 2, äquivalente Tiefe in Datenreihe 1) sowie Datenreihe 2 auf der Tiefenskala von Datenreihe 1. Mit offenem Ende (und Anfang) darf Datenreihe 2 nur einem Teil von Datenreihe 1 entsprechen. Die Zuordnungsfunktion in Altersskala / Tuning verwenden, um weitere Proxys von Datenreihe 2 zu übertragen.
+Points per record (even resampling)	Punkte pro Datenreihe (gleichmäßige Neuabtastung)
+Both records are resampled evenly with at most this many points; the cost matrix grows with its square.	Beide Datenreihen werden gleichmäßig mit höchstens so vielen Punkten neu abgetastet; die Kostenmatrix wächst mit deren Quadrat.
+Values	Werte
+Detrended and standardised	Trendbereinigt und standardisiert
+As they are	Unverändert
+Step pattern	Schrittmuster
+symmetric2 (default, normalisable)	symmetric2 (Standard, normierbar)
+asymmetric (needed for open begin)	asymmetric (für offenen Anfang erforderlich)
+symmetricP05 (slope limited)	symmetricP05 (steigungsbegrenzt)
+symmetricP1 (slope limited)	symmetricP1 (steigungsbegrenzt)
+symmetricP2 (slope limited)	symmetricP2 (steigungsbegrenzt)
+Rabiner-Juang type IIIc	Rabiner-Juang Typ IIIc
+Rabiner-Juang type IVc	Rabiner-Juang Typ IVc
+Window constraint	Fensterbeschränkung
+Sakoe-Chiba band	Sakoe-Chiba-Band
+Slanted band	Schräges Band
+Itakura parallelogram	Itakura-Parallelogramm
+Window size (share of the record)	Fenstergröße (Anteil der Datenreihe)
+Open end (record 2 matches a leading part of record 1)	Offenes Ende (Datenreihe 2 entspricht einem Anfangsteil von Datenreihe 1)
+Open begin (needs open end and an asymmetric or type c step pattern)	Offener Anfang (erfordert offenes Ende und ein asymmetrisches Schrittmuster oder eines vom Typ c)
+Alignment of the two records	Ausrichtung der beiden Datenreihen
+Record 2 on the depth scale of record 1	Datenreihe 2 auf der Tiefenskala von Datenreihe 1
+Tie function	Zuordnungsfunktion
+Eccentricity, obliquity and precession periods at a given age, with the precession constant k from the AstroGeo22 tidal model (Farhat et al. 2022) or your own k. Use it to know which periods to expect in a deep-time record.	Exzentrizitäts-, Obliquitäts- und Präzessionsperioden zu einem gegebenen Alter, mit der Präzessionskonstante k aus dem Gezeitenmodell AstroGeo22 (Farhat et al. 2022) oder einem eigenen k. Damit lässt sich ermitteln, welche Perioden in einer Datenreihe aus der geologischen Tiefenzeit zu erwarten sind.
+Terms	Terme
+Nine main periods (Acycle ORBIT9)	Neun Hauptperioden (Acycle ORBIT9)
+All named terms with aliases	Alle benannten Terme mit Aliasnamen
+Main periods with weights for tracking	Hauptperioden mit Gewichten für die Verfolgung
+Every gi-gj, k+si and k+gi term	Jeder gi-gj-, k+si- und k+gi-Term
+Precession constant k	Präzessionskonstante k
+AstroGeo22 model at this age	AstroGeo22-Modell zu diesem Alter
+My own value	Eigener Wert
+Precession constant k (kyr)	Präzessionskonstante k (kyr)
+Include eccentricity	Exzentrizität einbeziehen
+Include obliquity	Obliquität einbeziehen
+Include precession	Präzession einbeziehen
+The nine main astronomical periods over an age range, with the precession constant from AstroGeo22 or the La2004 extrapolation. Shows how the obliquity and precession periods shorten into the past.	Die neun astronomischen Hauptperioden über einen Altersbereich, mit der Präzessionskonstante aus AstroGeo22 oder der La2004-Extrapolation. Zeigt, wie sich die Obliquitäts- und Präzessionsperioden in die Vergangenheit hinein verkürzen.
+Age step (Ma)	Altersschritt (Ma)
+Precession constant from	Präzessionskonstante aus
+AstroGeo22 (Farhat et al. 2022), interpolated	AstroGeo22 (Farhat et al. 2022), interpoliert
+AstroGeo22, nearest 1-Myr row as in Acycle	AstroGeo22, nächstgelegene 1-Myr-Zeile wie in Acycle
+La2004 polynomial extrapolation	La2004-Polynomextrapolation
+Precession and obliquity periods at an age from Berger et al. (1992), or eccentricity, obliquity and precession periods from the Solar System frequencies g and s and the precession constant k (Laskar 1999 or Malinverno and Meyers 2024).	Präzessions- und Obliquitätsperioden zu einem Alter nach Berger et al. (1992) oder Exzentrizitäts-, Obliquitäts- und Präzessionsperioden aus den Frequenzen g und s des Sonnensystems und der Präzessionskonstante k (Laskar 1999 oder Malinverno und Meyers 2024).
+At an age, Berger et al. 1992 (bergerPeriods)	Zu einem Alter, Berger et al. 1992 (bergerPeriods)
+From g, s and k (calcPeriods)	Aus g, s und k (calcPeriods)
+Age (Ma, 0-500)	Alter (Ma, 0-500)
+g1 to g5 (arcsec/yr)	g1 bis g5 (arcsec/yr)
+Needed for the obliquity periods; leave empty for eccentricity and precession only.	Für die Obliquitätsperioden erforderlich; für nur Exzentrizität und Präzession leer lassen.
+Precession constant k (arcsec/yr)	Präzessionskonstante k (arcsec/yr)
+Laskar (1999, table 6)	Laskar (1999, Tabelle 6)
+Malinverno and Meyers (2024, table 1)	Malinverno und Meyers (2024, Tabelle 1)
+Which astronomical term, harmonic or combination tone could an unidentified spectral peak be? Lists the terms within a relative tolerance of each measured period.	Welcher astronomische Term, welche Harmonische oder welcher Kombinationston könnte ein nicht identifizierter spektraler Peak sein? Listet die Terme innerhalb einer relativen Toleranz um jede gemessene Periode auf.
+Measured period(s) (kyr)	Gemessene Periode(n) (kyr)
+Relative tolerance	Relative Toleranz
+Highest order	Höchste Ordnung
+Single terms	Einzelne Terme
+Also harmonics, sums and differences	Auch Harmonische, Summen und Differenzen
+Predicted number of precession (or obliquity) cycles per eccentricity cycle at a given age. Compare with the bundling counted in the record (then use the Precession constant tool, method 'Bundling').	Vorhergesagte Anzahl der Präzessions- (oder Obliquitäts-)Zyklen pro Exzentrizitätszyklus zu einem gegebenen Alter. Mit der in der Datenreihe gezählten Bündelung vergleichen (dann das Werkzeug Präzessionskonstante, Methode 'Bündelung', verwenden).
+Eccentricity terms (rows)	Exzentrizitätsterme (Zeilen)
+Precession / obliquity terms (columns)	Präzessions- / Obliquitätsterme (Spalten)
+All difference and combination tones (f1 - f2, f1 + f2) of a set of periods, and the tone closest to a period you observed, e.g. to explain a peak that is not a primary astronomical term.	Alle Differenz- und Kombinationstöne (f1 - f2, f1 + f2) eines Satzes von Perioden und der Ton, der einer beobachteten Periode am nächsten liegt, z. B. um einen Peak zu erklären, der kein primärer astronomischer Term ist.
+Observed period to explain (kyr, 0 = none)	Zu erklärende beobachtete Periode (kyr, 0 = keine)
+Explore chaos in the inner solar system: shift g4-g3 / s4-s3 and see which cycles move, the sensitivity of every term to each fundamental frequency, or which resonance state measured long modulation periods imply.	Chaos im inneren Sonnensystem erkunden: g4-g3 / s4-s3 verschieben und sehen, welche Zyklen sich verschieben, die Sensitivität jedes Terms gegenüber jeder Grundfrequenz oder welchen Resonanzzustand gemessene lange Modulationsperioden implizieren.
+Analysis	Analyse
+Scenario: shift g4-g3 and s4-s3	Szenario: g4-g3 und s4-s3 verschieben
+Sensitivity of every term to each fundamental	Sensitivität jedes Terms gegenüber jeder Grundfrequenz
+Resonance state from measured modulation periods	Resonanzzustand aus gemessenen Modulationsperioden
+g4-g3 period in the scenario (kyr, 0 = La2004)	g4-g3-Periode im Szenario (kyr, 0 = La2004)
+s4-s3 period in the scenario (kyr, 0 = La2004)	s4-s3-Periode im Szenario (kyr, 0 = La2004)
+How g3 and g4 move	Wie sich g3 und g4 verschieben
+Both, about their mean	Beide, um ihren Mittelwert
+Keep g3, move g4	g3 beibehalten, g4 verschieben
+Keep g4, move g3	g4 beibehalten, g3 verschieben
+Fractional change of each fundamental	Relative Änderung jeder Grundfrequenz
+Fundamentals	Grundfrequenzen
+Measured eccentricity modulation, g4-g3 (kyr)	Gemessene Exzentrizitätsmodulation, g4-g3 (kyr)
+Measured obliquity modulation, s4-s3 (kyr)	Gemessene Obliquitätsmodulation, s4-s3 (kyr)
+Largest p and q of the ratio p:q	Größtes p und q des Verhältnisses p:q
+Probability density of the fundamental frequencies g1-g5 and s1-s4, s6 at an age, from the chaotic diffusion of the Solar System (Hoang et al. 2021, table 2): the priors of the Bayesian TimeOpt methods.	Wahrscheinlichkeitsdichte der Grundfrequenzen g1-g5 und s1-s4, s6 zu einem Alter, aus der chaotischen Diffusion des Sonnensystems (Hoang et al. 2021, Tabelle 2): die Priors der Bayesschen TimeOpt-Methoden.
+Age (Ga)	Alter (Ga)
+CTest (Zeeden et al. 2023): give the wavelength ranges (m) of the eccentricity, obliquity and precession cycles you identified in a depth-domain spectrum and the age; a Monte Carlo consistency test returns the sedimentation rate, the precession constant k and the Earth-Moon distance and length of day.	CTest (Zeeden et al. 2023): die Wellenlängenbereiche (m) der in einem Spektrum im Tiefenbereich identifizierten Exzentrizitäts-, Obliquitäts- und Präzessionszyklen sowie das Alter angeben; ein Monte-Carlo-Konsistenztest liefert die Sedimentationsrate, die Präzessionskonstante k sowie den Erde-Mond-Abstand und die Tageslänge.
+CTest in the published draw order (slow, reproduces the paper's samples)	CTest in der veröffentlichten Ziehungsreihenfolge (langsam, reproduziert die Stichproben der Veröffentlichung)
+Flexible Monte Carlo with a sedimentation-rate range	Flexibles Monte Carlo mit einem Sedimentationsratenbereich
+Age of the record (Ma): one value or min, max	Alter der Datenreihe (Ma): ein Wert oder min, max
+405-kyr eccentricity, wavelength min, max (m)	405-kyr-Exzentrizität, Wellenlänge min, max (m)
+~125-kyr eccentricity (m)	~125-kyr-Exzentrizität (m)
+~95-kyr eccentricity (m)	~95-kyr-Exzentrizität (m)
+Obliquity k+s3 (m, empty = not identified)	Obliquität k+s3 (m, leer = nicht identifiziert)
+Longest precession k+g5 (m)	Längste Präzession k+g5 (m)
+Middle precession k+g2 (m)	Mittlere Präzession k+g2 (m)
+Shortest precession k+g4 and k+g3 (m)	Kürzeste Präzession k+g4 und k+g3 (m)
+Cycles used besides eccentricity	Neben der Exzentrizität verwendete Zyklen
+From the cycles given	Aus den angegebenen Zyklen
+Precession and obliquity	Präzession und Obliquität
+Obliquity only	Nur Obliquität
+Precession only	Nur Präzession
+Sedimentation rate range (m/kyr)	Sedimentationsratenbereich (m/kyr)
+Accepted Monte Carlo samples	Akzeptierte Monte-Carlo-Stichproben
+Range of k sampled (yr)	Bereich, aus dem k gezogen wird (yr)
+Sampling of g2-g5	Ziehung von g2-g5
+Uniform within 2 sigma (as in the paper)	Gleichverteilt innerhalb von 2 Sigma (wie in der Veröffentlichung)
+Uncertainty of s3	Unsicherheit von s3
+As in the published code (s3 fixed)	Wie im veröffentlichten Code (s3 fest)
+Scaled like g2-g5	Skaliert wie g2-g5
+Earth-Moon conversion	Erde-Mond-Umrechnung
+Angular-momentum conservation	Drehimpulserhaltung
+AstroGeo22 curve (Farhat et al. 2022)	AstroGeo22-Kurve (Farhat et al. 2022)
+Consistency test for a record already tuned to time: give the period ranges (kyr) of the cycles you resolved; the precession constant k, the secular frequencies and the Earth-Moon state follow, with the uncertainty of the tuning target propagated.	Konsistenztest für eine bereits auf Zeit getunte Datenreihe: die Periodenbereiche (kyr) der aufgelösten Zyklen angeben; daraus folgen die Präzessionskonstante k, die säkularen Frequenzen und der Erde-Mond-Zustand, wobei die Unsicherheit des Tuning-Ziels fortgepflanzt wird.
+Monte Carlo consistency test (astro_from_periods)	Monte-Carlo-Konsistenztest (astro_from_periods)
+Zeeden et al. (2023) estimator (astro_ctest)	Schätzer nach Zeeden et al. (2023) (astro_ctest)
+Joint inversion of the obliquity and precession terms only (astro_invert)	Gemeinsame Inversion nur der Obliquitäts- und Präzessionsterme (astro_invert)
+405-kyr eccentricity, period min, max (kyr)	405-kyr-Exzentrizität, Periode min, max (kyr)
+~125-kyr eccentricity (kyr, empty = not resolved)	~125-kyr-Exzentrizität (kyr, leer = nicht aufgelöst)
+~95-kyr eccentricity (kyr)	~95-kyr-Exzentrizität (kyr)
+Obliquity k+s3 (kyr)	Obliquität k+s3 (kyr)
+Precession k+g5 (kyr)	Präzession k+g5 (kyr)
+Precession k+g2 (kyr)	Präzession k+g2 (kyr)
+Precession k+g4 (kyr)	Präzession k+g4 (kyr)
+Precession k+g3 (kyr)	Präzession k+g3 (kyr)
+Short precession k+g4 and k+g3 together (kyr)	Kurze Präzession k+g4 und k+g3 zusammen (kyr)
+Other constraints (term = min, max; ...)	Weitere Randbedingungen (Term = min, max; ...)
+Any term of 'Astronomical periods at an age', e.g. g4-g3 = 2200, 2600; any:k+g5|k+g2 = 19, 20	Jeder Term aus 'Astronomische Perioden zu einem Alter', z. B. g4-g3 = 2200, 2600; any:k+g5|k+g2 = 19, 20
+Period assumed for the tuning target (kyr, 0 = free stretch)	Für das Tuning-Ziel angenommene Periode (kyr, 0 = freie Streckung)
+Tuning target term	Term des Tuning-Ziels
+Monte Carlo samples	Monte-Carlo-Stichproben
+Range of k sampled (kyr)	Bereich, aus dem k gezogen wird (kyr)
+The precession constant k and the Earth-Moon state from measured cycles: single cycles read as named terms, the ratio of two cycles (works on untuned depth data), a bundling count, every possible reading of one peak, a quick conversion, or a scan of k against several peaks.	Die Präzessionskonstante k und der Erde-Mond-Zustand aus gemessenen Zyklen: einzelne Zyklen, als benannte Terme gelesen, das Verhältnis zweier Zyklen (funktioniert mit ungetunten Tiefendaten), eine Bündelungszählung, jede mögliche Lesart eines Peaks, eine schnelle Umrechnung oder ein Scan von k gegen mehrere Peaks.
+Single cycles read as named terms	Einzelne Zyklen, als benannte Terme gelesen
+Ratio of two cycles	Verhältnis zweier Zyklen
+Precession cycles per eccentricity bundle	Präzessionszyklen pro Exzentrizitätsbündel
+Every reading of one peak (hypotheses)	Jede Lesart eines Peaks (Hypothesen)
+Quick conversion of periods to k	Schnelle Umrechnung von Perioden in k
+Scan k against measured peaks	k gegen gemessene Peaks scannen
+Measured periods (kyr)	Gemessene Perioden (kyr)
+Hypotheses use the first period only.	Hypothesen verwenden nur die erste Periode.
+Term of each period	Term jeder Periode
+Longer cycle (kyr or m)	Längerer Zyklus (kyr oder m)
+Shorter cycle (same unit)	Kürzerer Zyklus (gleiche Einheit)
+Term of the longer cycle	Term des längeren Zyklus
+Term of the shorter cycle	Term des kürzeren Zyklus
+Relative 1-sigma uncertainty of each cycle	Relative 1-Sigma-Unsicherheit jedes Zyklus
+Cycles counted per bundle (may be fractional)	Pro Bündel gezählte Zyklen (auch gebrochene Werte möglich)
+Eccentricity term of the bundle	Exzentrizitätsterm des Bündels
+Bundled term	Gebündelter Term
+1-sigma counting uncertainty (cycles)	1-Sigma-Zählunsicherheit (Zyklen)
+Candidate terms	Kandidatenterme
+Term of the periods	Term der Perioden
+Obliquity k+s3	Obliquität k+s3
+Precession k+g5	Präzession k+g5
+Precession k+g2	Präzession k+g2
+Precession k+g4	Präzession k+g4
+Precession k+g3	Präzession k+g3
+Terms predicted for every k	Für jedes k vorhergesagte Terme
+Smallest k (kyr)	Kleinstes k (kyr)
+Largest k (kyr)	Größtes k (kyr)
+Step of k (kyr)	Schritt von k (kyr)
+Relative tolerance of a match	Relative Toleranz einer Übereinstimmung
+Age (Ma): one value or min, max	Alter (Ma): ein Wert oder min, max
+Record length (kyr or m; 0 = use the tolerance / sd)	Länge der Datenreihe (kyr oder m; 0 = Toleranz / sd verwenden)
+With a record length the band of each cycle is its frequency resolution.	Mit einer Länge der Datenreihe ist das Band jedes Zyklus seine Frequenzauflösung.
+Relative half-width of each cycle	Relative halbe Breite jedes Zyklus
+Multiple of the frequency resolution	Vielfaches der Frequenzauflösung
+Period assumed for the tuning target (kyr, 0 = untuned)	Für das Tuning-Ziel angenommene Periode (kyr, 0 = ungetunt)
+Combine several k terms by	Mehrere k-Terme kombinieren durch
+Multiplying the densities	Multiplizieren der Dichten
+Pooling the samples	Zusammenlegen der Stichproben
+g4-g3 period range for chaos (kyr, empty = La2004)	g4-g3-Periodenbereich für Chaos (kyr, leer = La2004)
+s4-s3 period range (kyr, empty = La2004)	s4-s3-Periodenbereich (kyr, leer = La2004)
+Sampling of the secular frequencies	Ziehung der säkularen Frequenzen
+Monte Carlo draws (0 = point estimate)	Monte-Carlo-Ziehungen (0 = Punktschätzung)
+Multiplies the densities of two sets of precession-constant samples (e.g. the *_k_samples.txt files of two CTest runs or two proxies), as in Zeeden et al. (2023). Column 2 of each file is used.	Multipliziert die Dichten zweier Sätze von Stichproben der Präzessionskonstante (z. B. die Dateien *_k_samples.txt zweier CTest-Läufe oder zweier Proxys), wie in Zeeden et al. (2023). Verwendet wird Spalte 2 jeder Datei.
+Grid points of the densities	Gitterpunkte der Dichten
+Age for the Earth-Moon state (Ma, 0 = present-day obliquity)	Alter für den Erde-Mond-Zustand (Ma, 0 = heutige Obliquität)
+Tests an age model: the significant obliquity and precession peaks of the tuned record must give one consistent precession constant k, which is compared with AstroGeo22; spectral peaks and amplitude modulation are tested as well. The data file is the tuned record (time, value).	Testet ein Altersmodell: Die signifikanten Obliquitäts- und Präzessionspeaks der getunten Datenreihe müssen eine konsistente Präzessionskonstante k ergeben, die mit AstroGeo22 verglichen wird; spektrale Peaks und Amplitudenmodulation werden ebenfalls getestet. Die Datendatei ist die getunte Datenreihe (Zeit, Wert).
+Time unit of the record	Zeiteinheit der Datenreihe
+k+g5 and k+g2 separate only when tbw <= record length (kyr) / 1600; values below 1.5 (a single taper) fail in astrochron::mtm.	k+g5 und k+g2 trennen sich nur, wenn tbw <= Länge der Datenreihe (kyr) / 1600; Werte unter 1.5 (ein einzelner Taper) schlagen in astrochron::mtm fehl.
+Confidence level of a peak	Konfidenzniveau eines Peaks
+Also require the harmonic F-test	Zusätzlich den harmonischen F-Test verlangen
+Half-width of the search windows (fraction)	Halbe Breite der Suchfenster (Anteil)
+Remove intervals with weak precession first	Zuerst Intervalle mit schwacher Präzession entfernen
+Precession band of the pre-scan (kyr)	Präzessionsband des Vorab-Scans (kyr)
+Running window of the pre-scan (kyr)	Gleitendes Fenster des Vorab-Scans (kyr)
+Weak when below this fraction of the median	Schwach, wenn unter diesem Anteil des Medians
+Shortest piece kept or removed (kyr)	Kürzestes behaltenes oder entferntes Stück (kyr)
+Phase-randomised surrogates	Phasenrandomisierte Surrogate
+Reference k (kyr, 0 = AstroGeo22 at the age)	Referenz-k (kyr, 0 = AstroGeo22 zum Alter)
+Plausible range of k for the verdict (kyr)	Plausibler Bereich von k für das Urteil (kyr)
+Range of k searched (kyr, empty = around AstroGeo22)	Durchsuchter Bereich von k (kyr, leer = um AstroGeo22)
+Builds synthetic tuned records with known precession constants (five orbital terms, a 405-kyr cycle and AR(1) noise) and shows the k recovered by the tuned-record test: a check that the chosen time-bandwidth product resolves the terms.	Erstellt synthetische getunte Datenreihen mit bekannten Präzessionskonstanten (fünf orbitale Terme, ein 405-kyr-Zyklus und AR(1)-Rauschen) und zeigt das k, das der Test für getunte Datenreihen zurückgewinnt: eine Prüfung, ob das gewählte Zeit-Bandbreite-Produkt die Terme auflöst.
+Known k of the synthetic records (kyr)	Bekanntes k der synthetischen Datenreihen (kyr)
+Noise level (sd multiplier)	Rauschniveau (sd-Multiplikator)
+Record length (kyr)	Länge der Datenreihe (kyr)
+Age passed to the test (Ma)	An den Test übergebenes Alter (Ma)
+Compares a measured precession constant with AstroGeo22 (Farhat et al. 2022) and the La2004 extrapolation at the age of the record, or lists the Devonian reference values of Zeeden et al. (2023).	Vergleicht eine gemessene Präzessionskonstante mit AstroGeo22 (Farhat et al. 2022) und der La2004-Extrapolation zum Alter der Datenreihe oder listet die devonischen Referenzwerte von Zeeden et al. (2023) auf.
+Table	Tabelle
+Measured k against the published models	Gemessenes k gegenüber den veröffentlichten Modellen
+Zeeden et al. (2023) Table 1, Devonian reference values	Zeeden et al. (2023) Tabelle 1, devonische Referenzwerte
+Measured k (kyr, 0 = none)	Gemessenes k (kyr, 0 = keines)
+Obliquity for the inversion (degrees, 0 = AstroGeo22)	Obliquität für die Inversion (Grad, 0 = AstroGeo22)
+From any one known quantity (precession constant, Earth-Moon distance, length of day, lunar months per year, an observed cycle, or an age on the AstroGeo22 model) to the full Earth-Moon state: distance, solar and sidereal day, days and months per year, obliquity, spin rate and angular momentum.	Von einer beliebigen bekannten Größe (Präzessionskonstante, Erde-Mond-Abstand, Tageslänge, Mondmonate pro Jahr, ein beobachteter Zyklus oder ein Alter im AstroGeo22-Modell) zum vollständigen Erde-Mond-Zustand: Abstand, Sonnentag und Sterntag, Tage und Monate pro Jahr, Obliquität, Rotationsrate und Drehimpuls.
+Known quantity	Bekannte Größe
+Precession frequency (arcsec/yr)	Präzessionsfrequenz (arcsec/yr)
+Earth-Moon distance (Earth radii)	Erde-Mond-Abstand (Erdradien)
+Earth-Moon distance (km)	Erde-Mond-Abstand (km)
+Length of the solar day (h)	Länge des Sonnentags (h)
+Lunar months per year	Mondmonate pro Jahr
+Observed obliquity or precession cycle (kyr)	Beobachteter Obliquitäts- oder Präzessionszyklus (kyr)
+Age on the AstroGeo22 model (Ma)	Alter im AstroGeo22-Modell (Ma)
+Precession constant k (kyr), one or more	Präzessionskonstante k (kyr), eine oder mehrere
+Type of month	Art des Monats
+Sidereal	Siderisch
+Synodic	Synodisch
+Observed cycle (kyr)	Beobachteter Zyklus (kyr)
+The cycle is	Der Zyklus ist
+Inversion of a precession value	Inversion eines Präzessionswerts
+Obliquity	Obliquität
+AstroGeo22 at an age	AstroGeo22 zu einem Alter
+Present day (23.25 degrees)	Heute (23.25 Grad)
+Age for the obliquity (Ma)	Alter für die Obliquität (Ma)
+Obliquity (degrees)	Obliquität (Grad)
+Curves of the Earth-Moon system with conserved angular momentum over a range of distances, day lengths, months per year or precession constants, compared with the AstroGeo22 tidal model.	Kurven des Erde-Mond-Systems bei erhaltenem Drehimpuls über einen Bereich von Abständen, Tageslängen, Monaten pro Jahr oder Präzessionskonstanten, verglichen mit dem Gezeitenmodell AstroGeo22.
+Vary	Variieren
+From (Earth radii)	Von (Erdradien)
+To (Earth radii)	Bis (Erdradien)
+From (h)	Von (h)
+To (h)	Bis (h)
+From (months per year)	Von (Monate pro Jahr)
+To (months per year)	Bis (Monate pro Jahr)
+From (kyr)	Von (kyr)
+To (kyr)	Bis (kyr)
+Obliquity for the precession (degrees)	Obliquität für die Präzession (Grad)
+Show the AstroGeo22 model (0-1000 Ma)	AstroGeo22-Modell anzeigen (0-1000 Ma)
+Earth-Moon distance (Earth radii) and length of day (hours), with uncertainties, from a precession frequency k and its uncertainty (e.g. from Bayesian TimeOpt), after Walker et al. (1986) with the constants of Malinverno and Meyers (2024).	Erde-Mond-Abstand (Erdradien) und Tageslänge (Stunden), mit Unsicherheiten, aus einer Präzessionsfrequenz k und ihrer Unsicherheit (z. B. aus Bayesschem TimeOpt), nach Walker et al. (1986) mit den Konstanten von Malinverno und Meyers (2024).
+Precession frequency k (arcsec/yr)	Präzessionsfrequenz k (arcsec/yr)
+Standard deviation of k (arcsec/yr)	Standardabweichung von k (arcsec/yr)
+Distribution of the sampling interval (Acycle: Plot > Sampling Rate).	Verteilung des Abtastintervalls (Acycle: Plot > Sampling Rate).
+Number of histogram bins	Anzahl der Histogrammklassen
+Histogram, density and normal Q-Q plot of the data values (Acycle: Plot > Data Distribution).	Histogramm, Dichte und Normal-Q-Q-Plot der Datenwerte (Acycle: Plot > Data Distribution).
+About CycloDesk	Über CycloDesk
+is a point-and-click workbench for cyclostratigraphy by Michiel Arts. All calculations are done by the R	ist eine per Mausklick bedienbare Arbeitsumgebung für die Zyklostratigraphie von Michiel Arts. Alle Berechnungen werden von den R-Paketen
+packages WaverideR and astrochron; the R code of every step is in the R code & log tab.	WaverideR und astrochron ausgeführt; der R-Code jedes Schritts steht im Tab „R-Code & Protokoll“.
+Source code, manual and feedback:	Quellcode, Handbuch und Rückmeldungen:
+. Something wrong or missing?	. Fehlt etwas oder stimmt etwas nicht?
+Tell us	Bitte melden
+When you publish results, please cite CycloDesk and the packages that did the work:	Bei der Veröffentlichung von Ergebnissen bitte CycloDesk und die Pakete zitieren, die die Arbeit geleistet haben:
+(the paper that introduced WaverideR).	(der Artikel, in dem WaverideR vorgestellt wurde).
+Arts, M. (2023). WaverideR: Extracting Signals from Wavelet Spectra. R package,	Arts, M. (2023). WaverideR: Extracting Signals from Wavelet Spectra. R-Paket,
+The original method papers named in the help of each function (the purple line under the name of a tool).	Die Originalarbeiten zu den Methoden, die in der Hilfe jeder Funktion genannt sind (die violette Zeile unter dem Namen eines Werkzeugs).
+The menu layout and working-folder workflow are inspired by Acycle: Li, M., Hinnov, L.A., Kump, L.R.	Der Menüaufbau und der Arbeitsablauf mit Arbeitsordner sind von Acycle inspiriert: Li, M., Hinnov, L.A., Kump, L.R.
+Dismiss	Schließen
+Menu	Menü
+Tool	Werkzeug
+Function(s)	Funktion(en)
+New folder	Neuer Ordner
+Create	Erstellen
+New data file	Neue Datendatei
+Paste two (or more) columns: depth/time and values (from Excel or a text file)	Zwei (oder mehr) Spalten einfügen: Tiefe/Zeit und Werte (aus Excel oder einer Textdatei)
+Save	Speichern
+Rename	Umbenennen
+New name	Neuer Name
+Delete %d file(s) from the working folder? This cannot be undone.	%d Datei(en) aus dem Arbeitsordner löschen? Dies kann nicht rückgängig gemacht werden.
+Delete files	Dateien löschen
+Delete 1 file(s) from the working folder? This cannot be undone.	1 Datei(en) aus dem Arbeitsordner löschen? Dies kann nicht rückgängig gemacht werden.
+File name (without extension)	Dateiname (ohne Erweiterung)
+PDF (editable in Illustrator)	PDF (in Illustrator bearbeitbar)
+Width (inches)	Breite (Zoll)
+Height (inches)	Höhe (Zoll)
+No tie points yet.	Noch keine Ankerpunkte.
+Pick at least one tie point first.	Zuerst mindestens einen Ankerpunkt setzen.
+The update check failed.	Die Suche nach Updates ist fehlgeschlagen.
+Drop the files on a folder.	Die Dateien auf einem Ordner ablegen.
+A calculation is still running.	Eine Berechnung läuft noch.
+Not a CycloDesk result file.	Keine CycloDesk-Ergebnisdatei.
+Figure failed	Abbildung fehlgeschlagen
+Select exactly one file or folder.	Genau eine Datei oder einen Ordner auswählen.
+Select the files to delete in the list first.	Zuerst die zu löschenden Dateien in der Liste auswählen.
+Checking GitHub for updates ...	Suche auf GitHub nach Updates ...
+That name exists already.	Dieser Name existiert bereits.
+This PC	Dieser PC
+Click at least two points along the beds first.	Zuerst mindestens zwei Punkte entlang der Schichten anklicken.
+This result has no scalogram or spectrum map to track on.	Dieses Ergebnis enthält kein Skalogramm und keine Spektrumkarte, auf der verfolgt werden kann.
+The map of this result could not be read for tracking.	Die Karte dieses Ergebnisses konnte für die Verfolgung nicht gelesen werden.
+Choose a data file.	Eine Datendatei wählen.
+The file could not be read as a series.	Die Datei konnte nicht als Reihe gelesen werden.
+Compute the scalogram first.	Zuerst das Skalogramm berechnen.
+Click at least one point on the band of the cycle first.	Zuerst mindestens einen Punkt auf dem Band des Zyklus anklicken.
+Show a scalogram first.	Zuerst ein Skalogramm anzeigen.
+Choose a file.	Eine Datei wählen.
+Choose the depth and value columns and a multiplier other than 0.	Die Tiefen- und die Wertespalte sowie einen Multiplikator ungleich 0 wählen.
+Give at least one value.	Mindestens einen Wert angeben.
+Helper lines added; they are drawn once a scalogram is shown.	Hilfslinien hinzugefügt; sie werden gezeichnet, sobald ein Skalogramm angezeigt wird.
+Tick the groups to remove first.	Zuerst die zu entfernenden Gruppen ankreuzen.
+Choose a file and the column with the depths.	Eine Datei und die Spalte mit den Tiefen wählen.
+The file could not be read.	Die Datei konnte nicht gelesen werden.
+Track the cycle first: click at least two points on its band.	Zuerst den Zyklus verfolgen: mindestens zwei Punkte auf seinem Band anklicken.
+Delete %d files...	%d Dateien l<c3><b6>schen...
+%d files	%d Dateien
+Analysis & age models	Analyse & Altersmodelle
+R code & log	R-Code & Protokoll
+Tools	Werkzeuge
+adds a point, snapped to the nearest power peak	fügt einen Punkt hinzu, eingerastet auf den nächsten Leistungspeak
+adds a point exactly where you click (free tracking)	fügt einen Punkt genau an der Klickposition hinzu (freies Verfolgen)
+adds or removes a vertical boundary line	fügt eine vertikale Grenzlinie hinzu oder entfernt sie
+extracted cycle	extrahierter Zyklus
+age model + tuned series	Altersmodell + getunte Datenreihe
+floating model from the Track view	schwimmendes Modell aus der Ansicht „Verfolgen“
+Track view: the data of the tracked record	Ansicht „Verfolgen“: die Daten der verfolgten Datenreihe
+an age-model file (depth, age)	eine Altersmodell-Datei (Tiefe, Alter)
+a constant sedimentation rate	eine konstante Sedimentationsrate
+the nearest maximum	das nächste Maximum
+the nearest minimum	das nächste Minimum
+nothing (exactly where you click)	nichts (genau an der Klickposition)
+adds a point to the route	fügt der Route einen Punkt hinzu
+sets the scale bar (two points)	legt den Maßstabsbalken fest (zwei Punkte)

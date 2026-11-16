@@ -1,4 +1,4 @@
-# Image tab: a colour or brightness record along a route on an image ####
+# Image view: a colour or brightness record along a route on an image ####
 #
 # Outcrop photographs, satellite images (an exported image or screenshot whose use is permitted), core scans and
 # tree-ring images: click a route along the beds (or across the rings), set the scale with a scale bar, and the
@@ -290,7 +290,7 @@ cd_image_server <- function(input, output, session, ctx) {
     fs <- list.files(rv$folder)
     fs[tolower(tools::file_ext(fs)) %in% cd_image_ext()]
   })
-  output$img_file_ui <- shiny::renderUI({
+  output$img_file_ui <- cd_render_ui({
     fs <- images()
     if (!length(fs)) {
       return(shiny::tags$div(class = "cd-hint", "No PNG, JPEG or TIFF images in the working folder yet."))
@@ -304,7 +304,7 @@ cd_image_server <- function(input, output, session, ctx) {
     }
     dest <- file.path(rv$folder, u$name)
     if (file.exists(dest)) {
-      shiny::showNotification(paste(u$name, "is already in the working folder; that file is used."), type = "warning")
+      cd_notify(paste(u$name, "is already in the working folder; that file is used."), type = "warning")
     } else {
       file.copy(u$datapath, dest)
     }
@@ -320,7 +320,7 @@ cd_image_server <- function(input, output, session, ctx) {
       try(cd_image_read(file.path(rv$folder, f)), silent = TRUE)
     })
     if (inherits(img, "try-error")) {
-      shiny::showNotification(conditionMessage(attr(img, "condition")), type = "error", duration = 10)
+      cd_notify(conditionMessage(attr(img, "condition")), type = "error", duration = 10)
       return()
     }
     cache$img <- img
@@ -431,7 +431,7 @@ cd_image_server <- function(input, output, session, ctx) {
   shiny::observeEvent(input$img_extract, {
     p <- prof()
     if (is.null(p)) {
-      shiny::showNotification("Click at least two points along the beds first.", type = "warning")
+      cd_notify("Click at least two points along the beds first.", type = "warning")
       return()
     }
     b <- tools::file_path_sans_ext(st$file)
@@ -453,7 +453,7 @@ cd_image_server <- function(input, output, session, ctx) {
         sprintf("CycloDesk::write_series(rec[complete.cases(rec), ], \"%s\")", f2))
     ctx$add_code(code, paste("Image profile:", st$file))
     ctx$say("Image profile written: ", f1, ", ", f2)
-    shiny::showNotification(paste("Written", f1, "and", f2), type = "message")
+    cd_notify(paste("Written", f1, "and", f2), type = "message")
     ctx$refresh(select = f2)
   })
 }

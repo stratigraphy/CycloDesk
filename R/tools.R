@@ -132,11 +132,12 @@ cd_get_tool <- function(id) {
   stop("unknown tool: ", id, call. = FALSE)
 }
 
-# Registry of all tools, in menu order
+# Registry of all tools, with the menu and group of each tool and their order taken from cd_menu_layout()
 cd_tools <- function() {
-  c(cd_tools_plot(), cd_tools_basic(), cd_tools_math(), cd_tools_math_extra(), cd_tools_timeseries(),
+  tl <- c(cd_tools_plot(), cd_tools_basic(), cd_tools_math(), cd_tools_math_extra(), cd_tools_timeseries(),
       cd_tools_wavelets(), cd_tools_sedrate(), cd_tools_agemodels(), cd_tools_astronomy(), cd_tools_astrochron_basic(),
       cd_tools_astrochron_testing(), cd_tools_decompose())
+  cd_apply_menu_layout(tl)
 }
 
 # Output description helper

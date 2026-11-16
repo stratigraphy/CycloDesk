@@ -13,6 +13,29 @@ $(document).on('click', 'a.cd-place', function (e) {
   cdSend('nav', { path: $(this).data('path'), nonce: Math.random() });
 });
 
+// Tabs: five tabs in the order of the work; the two work tabs have a row of views (Tools, Track, Anchor, Image).
+// R says which tab and view are shown.
+function cdStage(stage, view) {
+  $('#cd_stages > li').each(function () { $(this).toggleClass('active', $(this).data('stage') === stage); });
+  $('.cd-views').each(function () {
+    var on = $(this).data('stage') === stage;
+    $(this).toggle(on);
+    if (on) {
+      $(this).find('.cd-view').each(function () { $(this).toggleClass('cd-view-on', $(this).data('view') === view); });
+    }
+  });
+  $(window).trigger('resize');
+}
+Shiny.addCustomMessageHandler('cd_stage', function (x) { cdStage(x.stage, x.view); });
+
+// Texts of this script in the language in use (sent by R)
+var cdTexts = {};
+function cdT(s) { return cdTexts[s] || s; }
+Shiny.addCustomMessageHandler('cd_i18n', function (x) {
+  cdTexts = x || {};
+  cdRender();
+});
+
 // File browser
 var cd = { items: [], sel: [], order: [], anchor: null, focus: null, up: false, filter: '' };
 
@@ -28,7 +51,7 @@ function cdEsc(s) {
 function cdVisible() {
   var f = cd.filter.toLowerCase();
   var out = [];
-  if (cd.up && !f) { out.push({ v: 'u|..', n: 'Up one level', t: 'up', i: '' }); }
+  if (cd.up && !f) { out.push({ v: 'u|..', n: cdT('Up one level'), t: 'up', i: '' }); }
   cd.items.forEach(function (it) {
     if (!f || it.n.toLowerCase().indexOf(f) >= 0) { out.push(it); }
   });
@@ -39,7 +62,7 @@ function cdRender() {
   var vis = cdVisible();
   var h = '';
   if (!vis.length) {
-    h = '<div class="cd-empty">No data files here.<br>Open another folder or drive above.</div>';
+    h = '<div class="cd-empty">' + cdEsc(cdT('No data files here.')) + '<br>' + cdEsc(cdT('Open another folder or drive above.')) + '</div>';
   }
   vis.forEach(function (it) {
     var cls = 'cd-row cd-' + it.t + (cd.sel.indexOf(it.v) >= 0 ? ' cd-sel' : '') + (cd.focus === it.v ? ' cd-focus' : '');
@@ -87,6 +110,8 @@ Shiny.addCustomMessageHandler('cd_listing', function (x) {
       (k.p === '::pc' ? '<i class="fa-solid fa-desktop"></i> ' : (i === 0 ? '<i class="fa-solid fa-hard-drive"></i> ' : '')) + cdEsc(k.l) + '</a>';
   });
   $('#cd_crumbs').html(c);
+  var cr = x.crumbs || [];
+  $('#cd_ribbon_name').text(cr.length ? cr[cr.length - 1].l : cdT('Files'));
   var el = document.getElementById('cd_crumbs');
   if (el) { el.scrollLeft = el.scrollWidth; }
   cdRender();
@@ -201,8 +226,8 @@ Shiny.addCustomMessageHandler('cd_busy', function (x) {
 });
 Shiny.addCustomMessageHandler('cd_close', function (x) {
   if (!x.keep) { window.close(); }
-  var title = x.title || 'CycloDesk is closed';
-  var text = x.text || 'R has stopped. You can close this tab.<br>Start CycloDesk again from the desktop shortcut.';
+  var title = x.title || cdT('CycloDesk is closed');
+  var text = x.text || (cdEsc(cdT('R has stopped. You can close this window.')) + '<br>' + cdEsc(cdT('Start CycloDesk again from its icon.')));
   setTimeout(function () {
     document.body.innerHTML = '<div class="cd-closed"><img src="cyclodesk/cyclodesk.png" width="56" height="56" alt="">' +
       '<h3>' + title + '</h3><p>' + text + '</p></div>';
@@ -343,7 +368,7 @@ $(document).on('mouseup', function () {
   Shiny.setInputValue('lines_moved', { a: cdLines.a, b: cdLines.b, nonce: Math.random() }, { priority: 'event' });
 });
 
-// Track tab: tracking points as markers that can be selected, deselected and dragged
+// Track view: tracking points as markers that can be selected, deselected and dragged
 var cdTrk = { geom: null, pts: [], drag: null };
 function cdTrkBox() {
   var img = $('#trk_plot img')[0];
@@ -416,7 +441,7 @@ function cdTrkUp() {
     Shiny.setInputValue('trk_pt_click', { id: d.id, add: d.add, nonce: Math.random() }, { priority: 'event' });
   }
 }
-// Delete / Backspace removes the selected points while the Track tab is shown (not while typing in a field)
+// Delete / Backspace removes the selected points while the Track view is shown (not while typing in a field)
 $(document).on('keydown', function (e) {
   if ((e.key === 'Delete' || e.key === 'Backspace') && $('#trk_plot').is(':visible') &&
       !$(e.target).is('input, textarea, select, #cd_browser') && $('#trk_plot .cd-tsel').length) {
@@ -425,5 +450,168 @@ $(document).on('keydown', function (e) {
   }
   if (e.key === 'Escape' && $('#trk_plot').is(':visible')) {
     Shiny.setInputValue('trk_selnone', Math.random(), { priority: 'event' });
+  }
+});
+
+// Submenus: the tools of one group open beside the menu, on hover or click
+function cdPlaceSub($li) {
+  var $m = $li.children('.cd-submenu');
+  $li.removeClass('cd-flip');
+  $m.css('top', '');
+  var r = $m[0].getBoundingClientRect();
+  if (r.right > window.innerWidth - 4) { $li.addClass('cd-flip'); }
+  r = $m[0].getBoundingClientRect();
+  if (r.bottom > window.innerHeight - 6) {
+    var cur = parseFloat($m.css('top')) || 0;
+    var up = Math.min(r.bottom - (window.innerHeight - 6), r.top - 6);
+    $m.css('top', (cur - up) + 'px');
+  }
+}
+function cdOpenSub($li) {
+  $li.siblings('.cd-sub').removeClass('cd-open');
+  if (!$li.hasClass('cd-open')) {
+    $li.addClass('cd-open');
+    cdPlaceSub($li);
+  }
+}
+$(document).on('mouseenter', '.cd-sub', function () { cdOpenSub($(this)); });
+$(document).on('mouseenter', '.cd-navbar .dropdown-menu > li:not(.cd-sub)', function () {
+  $(this).siblings('.cd-sub').removeClass('cd-open');
+});
+// the group heading must not take the keyboard focus: Bootstrap would then try to close the menu through it
+$(document).on('mousedown', 'a.cd-subhead', function (e) { e.preventDefault(); });
+$(document).on('click', 'a.cd-subhead', function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  cdOpenSub($(this).parent());
+});
+$(document).on('hidden.bs.dropdown', '.cd-navbar .dropdown', function () {
+  $(this).find('.cd-sub').removeClass('cd-open cd-flip');
+});
+
+// File panel: drag the bar to resize, collapse to a ribbon; the state is remembered by R
+var cdPanel = { width: 340, collapsed: false, timer: null };
+function cdPanelApply(send) {
+  var max = Math.max(260, window.innerWidth - 420);
+  cdPanel.width = Math.min(Math.max(cdPanel.width, 220), max);
+  $('#cd_left').css('width', cdPanel.width + 'px');
+  $('.cd-main').toggleClass('cd-files-collapsed', cdPanel.collapsed);
+  $(window).trigger('resize');
+  if (send) {
+    clearTimeout(cdPanel.timer);
+    cdPanel.timer = setTimeout(function () {
+      Shiny.setInputValue('ui_state', { width: cdPanel.width, collapsed: cdPanel.collapsed, nonce: Math.random() });
+    }, 400);
+  }
+}
+Shiny.addCustomMessageHandler('cd_ui', function (x) {
+  if (x && x.width) { cdPanel.width = Number(x.width); }
+  cdPanel.collapsed = !!(x && x.collapsed);
+  cdPanelApply(false);
+});
+$(document).on('mousedown', '#cd_resizer', function (e) {
+  e.preventDefault();
+  var x0 = e.clientX, w0 = $('#cd_left').outerWidth();
+  $('body').addClass('cd-resizing');
+  $(document).on('mousemove.cdres', function (ev) {
+    cdPanel.width = w0 + (ev.clientX - x0);
+    var max = Math.max(260, window.innerWidth - 420);
+    $('#cd_left').css('width', Math.min(Math.max(cdPanel.width, 220), max) + 'px');
+  });
+  $(document).on('mouseup.cdres', function () {
+    $(document).off('.cdres');
+    $('body').removeClass('cd-resizing');
+    cdPanelApply(true);
+  });
+});
+$(document).on('dblclick', '#cd_resizer', function () {
+  cdPanel.width = 340;
+  cdPanelApply(true);
+});
+$(document).on('click', '#cd_collapse', function () { cdPanel.collapsed = true; cdPanelApply(true); });
+$(document).on('click', '#cd_ribbon', function () { cdPanel.collapsed = false; cdPanelApply(true); });
+$(document).on('click', '#cd_delete', function () {
+  cdSend('menu_action', { action: 'cmd:delete', nonce: Math.random() });
+});
+
+// Right-click menu of the file list
+function cdCtxClose() { $('.cd-ctx').remove(); }
+$(document).on('contextmenu', function (e) {
+  var $t = $(e.target);
+  // the usual menu stays in text fields and outputs, to copy and paste
+  if ($t.closest('input, textarea, pre, code, .cd-code, .cd-log').length) { return; }
+  e.preventDefault();
+  cdCtxClose();
+  var $row = $t.closest('#cd_browser .cd-row');
+  if (!$row.length) { return; }
+  var v = String($row.data('v'));
+  if (v.indexOf('f|') !== 0) { return; }
+  if (cd.sel.indexOf(v) < 0) {
+    cd.sel = [v];
+    cd.anchor = v;
+    cd.focus = v;
+    cdRender();
+    cdSendSel();
+  }
+  var n = cd.sel.length;
+  var head = n === 1 ? v.substring(2) : cdT('%d files').replace('%d', n);
+  var one = n === 1;
+  var h = '<div class="cd-ctx"><div class="cd-ctxhead">' + cdEsc(head) + '</div>' +
+    '<a href="#" data-action="cmd:plot"><i class="fa-solid fa-chart-line"></i>' + cdEsc(cdT('Plot')) + '</a>' +
+    (one ? '<a href="#" data-action="cmd:rename"><i class="fa-solid fa-pen"></i>' + cdEsc(cdT('Rename...')) + '</a>' : '') +
+    (one ? '<a href="#" data-action="cmd:duplicate"><i class="fa-solid fa-copy"></i>' + cdEsc(cdT('Duplicate')) + '</a>' : '') +
+    '<div class="cd-ctxsep"></div>' +
+    '<a href="#" class="cd-danger" data-action="cmd:delete"><i class="fa-solid fa-trash-can"></i>' + cdEsc(one ? cdT('Delete...') : cdT('Delete %d files...').replace('%d', n)) + '</a>' +
+    '<div class="cd-ctxsep"></div>' +
+    '<a href="#" data-action="cmd:explorer"><i class="fa-solid fa-folder-open"></i>' + cdEsc(cdT('Open the folder')) + '</a></div>';
+  var $m = $(h).appendTo('body');
+  var x = Math.min(e.clientX, window.innerWidth - $m.outerWidth() - 6);
+  var y = Math.min(e.clientY, window.innerHeight - $m.outerHeight() - 6);
+  $m.css({ left: x + 'px', top: y + 'px' });
+});
+$(document).on('click', '.cd-ctx a', function (e) {
+  e.preventDefault();
+  cdSend('menu_action', { action: $(this).data('action'), nonce: Math.random() });
+  cdCtxClose();
+});
+$(document).on('mousedown', function (e) {
+  if (!$(e.target).closest('.cd-ctx').length) { cdCtxClose(); }
+});
+$(document).on('keydown', function (e) { if (e.key === 'Escape') { cdCtxClose(); } });
+$(window).on('blur resize', cdCtxClose);
+
+// Start page of a work tab: search in its tools
+$(document).on('input', '#cd_idx_filter', function () {
+  var words = ($(this).val() || '').toLowerCase().split(/\s+/).filter(function (w) { return w.length; });
+  var any = false;
+  $('.cd-idx-menu').each(function () {
+    var mshow = false;
+    var mname = $(this).find('.cd-idx-mname').text().toLowerCase();
+    $(this).find('.cd-idx-group').each(function () {
+      var gshow = false;
+      var gname = ($(this).find('.cd-idx-gname').text() || '').toLowerCase();
+      $(this).find('.cd-idx-tool').each(function () {
+        var txt = $(this).text().toLowerCase() + ' ' + gname + ' ' + mname + ' ' + String($(this).data('action')).toLowerCase();
+        var ok = words.every(function (w) { return txt.indexOf(w) >= 0; });
+        $(this).toggle(ok);
+        gshow = gshow || ok;
+      });
+      $(this).toggle(gshow);
+      mshow = mshow || gshow;
+    });
+    $(this).toggle(mshow);
+    any = any || mshow;
+  });
+  $('.cd-idx-none').toggle(!any);
+});
+
+// Shiny's Bootstrap keyboard add-on calls dropdown('hide') when the focus leaves an open menu, but Bootstrap 3 has no
+// such method (a script error); provide it
+$(function () {
+  var D = $.fn.dropdown && $.fn.dropdown.Constructor;
+  if (D && !D.prototype.hide) {
+    D.prototype.hide = function () {
+      $(this).attr('aria-expanded', 'false').parent().removeClass('open');
+    };
   }
 });

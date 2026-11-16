@@ -1909,7 +1909,7 @@ cd_as_tool_em_relations <- function(menu, group) {
 
 cd_as_tool_gts <- function(menu, group, gts_choices) {
   cd_tool("as_gts", menu, "Geological time scale", inputs = 0L, group = group, icon = "mountain",
-      info = paste("Boundaries, mid-ages and colours of the Geologic Time Scale 2020 units: a unit and its",
+      info = paste("Boundaries, mid-ages and colours of the units of the International Chronostratigraphic Chart: a unit and its",
           "subdivisions, an age range, or the units at one age, drawn as a time-scale chart; optionally with the",
           "astronomical periods at the mid-age."),
       uses = "WaverideR::GTS_info, WaverideR::geo_loc, WaverideR::geo_col, WaverideR::geo_mid, WaverideR::calculate_orbit9",
@@ -1917,8 +1917,8 @@ cd_as_tool_gts <- function(menu, group, gts_choices) {
         cd_sel("mode", "Show", c("A unit and its subdivisions" = "unit", "An age range" = "range",
             "The units at one age" = "age")),
         cd_sel("name", "Unit", gts_choices, value = "Silurian", show_if = list(param = "mode", values = "unit")),
-        cd_num("tmin", "Youngest age (Ma)", 419.2, min = 0, show_if = list(param = "mode", values = "range")),
-        cd_num("tmax", "Oldest age (Ma)", 443.8, min = 0, show_if = list(param = "mode", values = "range")),
+        cd_num("tmin", "Youngest age (Ma)", 419.62, min = 0, show_if = list(param = "mode", values = "range")),
+        cd_num("tmax", "Oldest age (Ma)", 443.1, min = 0, show_if = list(param = "mode", values = "range")),
         cd_num("age", "Age (Ma)", 435, min = 0, show_if = list(param = "mode", values = "age")),
         cd_chk("orbit", "Also give the astronomical periods at the mid-age", TRUE)),
       compute = function(d, p, d2, file, file2) {
@@ -1974,8 +1974,8 @@ cd_as_tool_gts <- function(menu, group, gts_choices) {
         tab <- units[sel, , drop = FALSE]
         rownames(tab) <- NULL
         ctx <- units[units$base_ma > t0 & units$top_ma < t1, , drop = FALSE]
-        nm <- if (p$mode == "unit") { sprintf("GTS2020_%s.txt", gsub("[^A-Za-z0-9]", "_", p$name)) } else if (p$mode == "range") {
-          sprintf("GTS2020_%s-%sMa.txt", cd_fmt(t0), cd_fmt(t1)) } else { sprintf("GTS2020_at_%sMa.txt", cd_fmt(p$age)) }
+        nm <- if (p$mode == "unit") { sprintf("GTS_%s.txt", gsub("[^A-Za-z0-9]", "_", p$name)) } else if (p$mode == "range") {
+          sprintf("GTS_%s-%sMa.txt", cd_fmt(t0), cd_fmt(t1)) } else { sprintf("GTS_at_%sMa.txt", cd_fmt(p$age)) }
         o <- list(cd_output(nm, tab, header = TRUE, var = "tab"))
         code <- c(code, "g <- WaverideR::GTS_info",
             "tab <- data.frame(name = g$name, type = g$type, top_ma = g$top, base_ma = g$bot, mid_ma = (g$top + g$bot) / 2,",

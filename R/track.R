@@ -1,6 +1,6 @@
 # Tracking a cycle on the wavelet scalogram ####
 #
-# The Track tab: compute a CWT, click points on the ridge of a cycle (optionally snapped to the power maximum), or
+# The Track view: compute a CWT, click points on the ridge of a cycle (optionally snapped to the power maximum), or
 # let WaverideR::track_ridge_hmm() follow the ridge with the clicks as a guide. The tracked period curve is then used
 # to extract the cycle (WaverideR::extract_signal), to build an age model (WaverideR::curve2time, curve2sedrate) and to
 # tune the series (astrochron::tune), as with WaverideR's track_period_wavelet() workflow.
@@ -218,13 +218,13 @@ cd_track_server <- function(input, output, session, ctx) {
   tv <- shiny::reactiveValues(ver = 0, pts = data.frame(id = integer(), depth = numeric(), period = numeric()), sel = integer(), nextid = 1L, hmm = NULL,
       file = NULL, par = NULL, kind = "cwt", ylab = "Period", msg = "Choose a data file and compute its scalogram.")
 
-  # Scalograms that can be reused: the result in the Tool tab and the saved wavelet results in the folder
+  # Scalograms that can be reused: the result in the tool view and the saved wavelet results in the folder
   sources <- shiny::reactive({
     rv$tick
     ch <- c("Compute a new CWT" = "new")
     res <- rv$tool_res
     if (!is.null(res) && !is.null(cd_track_kind(res))) {
-      ch <- c(stats::setNames("tool", sprintf("Result in the Tool tab (%s, %s)", res$file, cd_get_tool(res$tool)$label)), ch)
+      ch <- c(stats::setNames("tool", sprintf("Result of the open tool (%s, %s)", res$file, cd_get_tool(res$tool)$label)), ch)
     }
     rds <- rv$listing$files[grepl("\\.(cyclodesk|rcycle)\\.rds$", rv$listing$files)]
     if (length(rds)) {
@@ -233,7 +233,7 @@ cd_track_server <- function(input, output, session, ctx) {
     ch
   })
 
-  output$trk_setup <- shiny::renderUI({
+  output$trk_setup <- cd_render_ui({
     fs <- ctx$data_files()
     sel <- shiny::isolate(ctx$selected_files())
     s1 <- if (length(sel)) { sel[1] } else { fs[1] }
@@ -267,7 +267,7 @@ cd_track_server <- function(input, output, session, ctx) {
                 shiny::column(6, shiny::numericInput("trk_dj", "dj", dj, min = 0.001, step = 0.005)))))
   })
 
-  # Put a scalogram into the Track tab. w can be a full or a slimmed (saved) result; the full CWT that
+  # Put a scalogram into the Track view. w can be a full or a slimmed (saved) result; the full CWT that
   # extract_signal() needs is recomputed with the same settings only when it is missing
   load_scalogram <- function(w, f, par, d, how) {
     s <- cd_even(d)
@@ -303,7 +303,7 @@ cd_track_server <- function(input, output, session, ctx) {
     ctx$say("Track: scalogram of ", f, " (", how, ")")
   }
 
-  # A result of the Wavelet tool (list with result, params, file) into the Track tab
+  # A result of the Wavelet tool (list with result, params, file) into the Track view
   load_result <- function(res, how) {
     p <- res$params
     f <- res$file
@@ -317,17 +317,17 @@ cd_track_server <- function(input, output, session, ctx) {
     w <- res$result
     kind <- cd_track_kind(res)
     if (is.null(kind)) {
-      shiny::showNotification("This result has no scalogram or spectrum map to track on.", type = "error")
+      cd_notify("This result has no scalogram or spectrum map to track on.", type = "error")
       return(invisible(FALSE))
     }
     if (!identical(kind, "cwt")) {
       if (is.null(d)) {
-        shiny::showNotification(paste("The data file", f, "is not in this folder."), type = "error")
+        cd_notify(paste("The data file", f, "is not in this folder."), type = "error")
         return(invisible(FALSE))
       }
       m <- try(cd_track_map(res), silent = TRUE)
       if (inherits(m, "try-error") || is.null(m)) {
-        shiny::showNotification("The map of this result could not be read for tracking.", type = "error")
+        cd_notify("The map of this result could not be read for tracking.", type = "error")
         return(invisible(FALSE))
       }
       m$x <- d[, 1]
@@ -339,11 +339,11 @@ cd_track_server <- function(input, output, session, ctx) {
     }
     if (is.null(d)) {
       if (is.null(w$x) || is.null(w$y)) {
-        shiny::showNotification(paste("The data file", f, "is not in this folder."), type = "error")
+        cd_notify(paste("The data file", f, "is not in this folder."), type = "error")
         return(invisible(FALSE))
       }
       d <- data.frame(x = w$x, y = w$y)
-      shiny::showNotification(paste("The data file", f, "is not in this folder: the thinned data stored with the result",
+      cd_notify(paste("The data file", f, "is not in this folder: the thinned data stored with the result",
           "are used."), type = "warning", duration = 8)
     }
     par <- list(lo = p$lowerPeriod, hi = p$upperPeriod, omega = if (is.null(p$omega_nr)) { 8 } else { p$omega_nr },
@@ -357,13 +357,13 @@ cd_track_server <- function(input, output, session, ctx) {
   shiny::observeEvent(input$trk_compute, {
     src <- input$trk_source
     if (identical(src, "tool")) {
-      load_result(rv$tool_res, "the result in the Tool tab")
+      load_result(rv$tool_res, "the result of the open tool")
       return()
     }
     if (!is.null(src) && startsWith(src, "rds|")) {
       x <- try(readRDS(file.path(rv$folder, substring(src, 5))), silent = TRUE)
       if (inherits(x, "try-error") || !isTRUE(x$cyclodesk)) {
-        shiny::showNotification("Not an CycloDesk result file.", type = "error")
+        cd_notify("Not a CycloDesk result file.", type = "error")
         return()
       }
       load_result(x$result, substring(src, 5))
@@ -371,12 +371,12 @@ cd_track_server <- function(input, output, session, ctx) {
     }
     f <- input$trk_file
     if (is.null(f) || !nzchar(f)) {
-      shiny::showNotification("Choose a data file.", type = "warning")
+      cd_notify("Choose a data file.", type = "warning")
       return()
     }
     d <- try(ctx$read_file(f), silent = TRUE)
     if (inherits(d, "try-error")) {
-      shiny::showNotification("The file could not be read as a series.", type = "error")
+      cd_notify("The file could not be read as a series.", type = "error")
       return()
     }
     s <- cd_even(d)
@@ -387,16 +387,16 @@ cd_track_server <- function(input, output, session, ctx) {
           omega_nr = par$omega), silent = TRUE)
     })
     if (inherits(w, "try-error")) {
-      shiny::showNotification(conditionMessage(attr(w, "condition")), type = "error", duration = 8)
+      cd_notify(conditionMessage(attr(w, "condition")), type = "error", duration = 8)
       return()
     }
     load_scalogram(w, f, par, d, "new CWT")
   })
 
-  # "Track a cycle on this scalogram" button in the Tool tab
+  # "Track a cycle on this scalogram" button in the tool view
   shiny::observeEvent(input$tool_to_track, {
     if (!is.null(rv$tool_res) && !is.null(cd_track_kind(rv$tool_res))) {
-      if (isTRUE(load_result(rv$tool_res, "the result in the Tool tab"))) {
+      if (isTRUE(load_result(rv$tool_res, "the result of the open tool"))) {
         shiny::updateTabsetPanel(session, "tabs", selected = "track")
       }
     }
@@ -551,12 +551,12 @@ cd_track_server <- function(input, output, session, ctx) {
 
   shiny::observeEvent(input$trk_hmm, {
     if (is.null(trk$w)) {
-      shiny::showNotification("Compute the scalogram first.", type = "warning")
+      cd_notify("Compute the scalogram first.", type = "warning")
       return()
     }
     pts <- tv$pts
     if (nrow(pts) < 1) {
-      shiny::showNotification("Click at least one point on the band of the cycle first.", type = "warning")
+      cd_notify("Click at least one point on the band of the cycle first.", type = "warning")
       return()
     }
     tol <- input$trk_tol
@@ -583,7 +583,7 @@ cd_track_server <- function(input, output, session, ctx) {
       }
     })
     if (inherits(h, "try-error")) {
-      shiny::showNotification(conditionMessage(attr(h, "condition")), type = "error", duration = 8)
+      cd_notify(conditionMessage(attr(h, "condition")), type = "error", duration = 8)
       return()
     }
     tv$hmm <- as.data.frame(h)
@@ -637,12 +637,12 @@ cd_track_server <- function(input, output, session, ctx) {
   # Snap the whole curve to the nearest power peak at every depth
   shiny::observeEvent(input$trk_snapall, {
     if (is.null(trk$w)) {
-      shiny::showNotification("Show a scalogram first.", type = "warning")
+      cd_notify("Show a scalogram first.", type = "warning")
       return()
     }
     pts <- tv$pts
     if (nrow(pts) < 1) {
-      shiny::showNotification("Click at least one point on the band of the cycle first.", type = "warning")
+      cd_notify("Click at least one point on the band of the cycle first.", type = "warning")
       return()
     }
     tv$snap <- cd_snap_track(trk$w, pts[, c("depth", "period")], tol = input$trk_tol)
@@ -708,7 +708,7 @@ cd_track_server <- function(input, output, session, ctx) {
   shiny::observeEvent(tv$ver, {
     ext_res(NULL)
   })
-  output$trk_ext_ui <- shiny::renderUI({
+  output$trk_ext_ui <- cd_render_ui({
     if (is.null(ext_res()) || !("ext" %in% input$trk_show)) {
       return(NULL)
     }
@@ -727,7 +727,7 @@ cd_track_server <- function(input, output, session, ctx) {
   shiny::observeEvent(tv$ver, {
     age_res(NULL)
   })
-  output$trk_age_ui <- shiny::renderUI({
+  output$trk_age_ui <- cd_render_ui({
     if (is.null(age_res()) || !("age" %in% input$trk_show)) {
       return(NULL)
     }
@@ -773,10 +773,10 @@ cd_track_server <- function(input, output, session, ctx) {
   hl <- shiny::reactiveVal(list())
   hl_counter <- new.env(parent = emptyenv())
   hl_counter$n <- 0L
-  output$hl_file_ui <- shiny::renderUI({
+  output$hl_file_ui <- cd_render_ui({
     shiny::selectInput("hl_file", "File", choices = ctx$data_files())
   })
-  output$hl_cols_ui <- shiny::renderUI({
+  output$hl_cols_ui <- cd_render_ui({
     nm <- file_columns(input$hl_file)
     if (!length(nm)) {
       return(shiny::tags$div(class = "cd-hint", "Choose a readable file with at least two numeric columns."))
@@ -797,7 +797,7 @@ cd_track_server <- function(input, output, session, ctx) {
     if (type %in% c("cyc_file", "column")) {
       spec$file <- input$hl_file
       if (is.null(spec$file) || !nzchar(spec$file)) {
-        shiny::showNotification("Choose a file.", type = "warning")
+        cd_notify("Choose a file.", type = "warning")
         return()
       }
     }
@@ -806,12 +806,12 @@ cd_track_server <- function(input, output, session, ctx) {
       spec$ycol <- as.integer(input$hl_ycol)
       spec$mult <- input$hl_mult
       if (!length(spec$xcol) || !length(spec$ycol) || !is.finite(spec$mult) || spec$mult == 0) {
-        shiny::showNotification("Choose the depth and value columns and a multiplier other than 0.", type = "warning")
+        cd_notify("Choose the depth and value columns and a multiplier other than 0.", type = "warning")
         return()
       }
       spec$colname <- file_columns(spec$file)[spec$ycol]
     } else if (!length(spec$values)) {
-      shiny::showNotification("Give at least one value.", type = "warning")
+      cd_notify("Give at least one value.", type = "warning")
       return()
     }
     hl_counter$n <- hl_counter$n + 1L
@@ -819,7 +819,7 @@ cd_track_server <- function(input, output, session, ctx) {
     spec$text <- cd_helper_describe(spec)
     hl(c(hl(), list(spec)))
     if (is.null(trk$w)) {
-      shiny::showNotification("Helper lines added; they are drawn once a scalogram is shown.", type = "message")
+      cd_notify("Helper lines added; they are drawn once a scalogram is shown.", type = "message")
     } else {
       d <- NULL
       if (type %in% c("cyc_file", "column")) {
@@ -829,11 +829,11 @@ cd_track_server <- function(input, output, session, ctx) {
         }
       }
       h <- cd_helper_lines(spec, trk$w$axis.1, track = curve(), track_cycle = input$trk_cycle, data = d)
-      shiny::showNotification(cd_helper_status(cd_helper_for_kind(h, tv$kind), range(trk$w$Period), 1L), type = "message",
+      cd_notify(cd_helper_status(cd_helper_for_kind(h, tv$kind), range(trk$w$Period), 1L), type = "message",
           duration = 8)
     }
   })
-  output$hl_list_ui <- shiny::renderUI({
+  output$hl_list_ui <- cd_render_ui({
     s <- hl()
     if (!length(s)) {
       return(shiny::tags$div(class = "cd-hint", "No helper lines yet."))
@@ -849,7 +849,7 @@ cd_track_server <- function(input, output, session, ctx) {
   shiny::observeEvent(input$hl_remove, {
     pick <- input$hl_pick
     if (!length(pick)) {
-      shiny::showNotification("Tick the groups to remove first.", type = "warning")
+      cd_notify("Tick the groups to remove first.", type = "warning")
       return()
     }
     s <- hl()
@@ -868,10 +868,10 @@ cd_track_server <- function(input, output, session, ctx) {
     b <- cd_parse_nums(input$trk_bounds)
     if (is.null(b)) { numeric() } else { sort(b) }
   })
-  output$bd_file_ui <- shiny::renderUI({
+  output$bd_file_ui <- cd_render_ui({
     shiny::selectInput("bd_file", "Depths from a file", choices = c("(choose a file)" = "", ctx$data_files()))
   })
-  output$bd_col_ui <- shiny::renderUI({
+  output$bd_col_ui <- cd_render_ui({
     nm <- file_columns(input$bd_file)
     if (!length(nm)) {
       return(NULL)
@@ -882,20 +882,20 @@ cd_track_server <- function(input, output, session, ctx) {
   shiny::observeEvent(input$bd_add, {
     f <- input$bd_file
     if (is.null(f) || !nzchar(f) || is.null(input$bd_col)) {
-      shiny::showNotification("Choose a file and the column with the depths.", type = "warning")
+      cd_notify("Choose a file and the column with the depths.", type = "warning")
       return()
     }
     d <- try(ctx$read_file(f, full = TRUE), silent = TRUE)
     j <- as.integer(input$bd_col)
     if (inherits(d, "try-error") || j > ncol(d)) {
-      shiny::showNotification("The file could not be read.", type = "error")
+      cd_notify("The file could not be read.", type = "error")
       return()
     }
     v <- d[[j]]
     v <- v[is.finite(v)]
     b <- sort(unique(signif(c(bounds(), v), 6)))
     shiny::updateTextInput(session, "trk_bounds", value = cd_fmt_depths(b))
-    shiny::showNotification(sprintf("%d boundary depths added from %s.", length(v), f), type = "message")
+    cd_notify(sprintf("%d boundary depths added from %s.", length(v), f), type = "message")
   })
   shiny::observeEvent(input$bd_clear, {
     shiny::updateTextInput(session, "trk_bounds", value = "")
@@ -957,7 +957,7 @@ cd_track_server <- function(input, output, session, ctx) {
       run_check()
     }
   }, ignoreInit = TRUE)
-  output$trk_check_ui <- shiny::renderUI({
+  output$trk_check_ui <- cd_render_ui({
     if (is.null(check_res()) || !isTRUE(input$chk_show)) {
       return(NULL)
     }
@@ -975,7 +975,7 @@ cd_track_server <- function(input, output, session, ctx) {
     cd_plot_track_check(r)
   }, res = 96)
 
-  # The floating model and the extracted cycle go to the Anchor tab
+  # The floating model and the extracted cycle go to the Anchor view
   shiny::observeEvent(input$trk_to_anchor, {
     cv <- need_curve()
     if (is.null(cv)) {
@@ -989,7 +989,7 @@ cd_track_server <- function(input, output, session, ctx) {
       list(am = am, ex = ex)
     }, silent = TRUE)
     if (inherits(out, "try-error")) {
-      shiny::showNotification(conditionMessage(attr(out, "condition")), type = "error", duration = 8)
+      cd_notify(conditionMessage(attr(out, "condition")), type = "error", duration = 8)
       return()
     }
     ctx$shared$age <- out$am
@@ -1005,7 +1005,7 @@ cd_track_server <- function(input, output, session, ctx) {
   need_curve <- function() {
     cv <- curve()
     if (is.null(cv)) {
-      shiny::showNotification("Track the cycle first: click at least two points on its band.", type = "warning")
+      cd_notify("Track the cycle first: click at least two points on its band.", type = "warning")
     }
     cv
   }
@@ -1067,7 +1067,7 @@ cd_track_server <- function(input, output, session, ctx) {
       wr <- c(write_out(map_curve(), paste0(b, "-track_sedrate.txt")),
           write_out(tv$pts[, c("depth", "period")], paste0(b, "-trackpoints_sedrate.txt")))
       ctx$say("Sedimentation-rate track saved: ", paste(wr, collapse = ", "))
-      shiny::showNotification(paste("Saved", paste(wr, collapse = ", "), "(depth, sed. rate in cm/kyr; use Time Series >",
+      cd_notify(paste("Saved", paste(wr, collapse = ", "), "(depth, sed. rate in cm/kyr; use Age models > Build an age model >",
           "Sedimentation rate to age model)"), type = "message", duration = 8)
       ctx$refresh()
       return()
@@ -1078,7 +1078,7 @@ cd_track_server <- function(input, output, session, ctx) {
     }
     ctx$add_code(c(code_head(), sprintf("CycloDesk::write_series(track, \"%s-track.txt\")", b)), paste("Track:", tv$file))
     ctx$say("Track saved: ", paste(wr, collapse = ", "))
-    shiny::showNotification(paste("Saved", paste(wr, collapse = ", ")), type = "message")
+    cd_notify(paste("Saved", paste(wr, collapse = ", ")), type = "message")
     ctx$refresh()
   })
 
@@ -1095,7 +1095,7 @@ cd_track_server <- function(input, output, session, ctx) {
     ex <- try(cd_extract(full_prep(), cv, cyc, exc, up = input$trk_up, down = input$trk_down,
         add_mean = isTRUE(input$trk_addmean)), silent = TRUE)
     if (inherits(ex, "try-error")) {
-      shiny::showNotification(conditionMessage(attr(ex, "condition")), type = "error", duration = 8)
+      cd_notify(conditionMessage(attr(ex, "condition")), type = "error", duration = 8)
       return()
     }
     nm <- write_out(as.data.frame(ex), sprintf("%s-extract%s.txt", base_name(), cd_fmt(exc)))
@@ -1108,7 +1108,7 @@ cd_track_server <- function(input, output, session, ctx) {
         cd_fmt(input$trk_up), cd_fmt(input$trk_down), isTRUE(input$trk_addmean), cd_fmt(cyc), cd_fmt(exc)),
         sprintf("CycloDesk::write_series(ext, \"%s\")", nm)), paste("Extract tracked cycle:", tv$file))
     ctx$say("Extracted cycle written: ", nm)
-    shiny::showNotification(paste("Written", nm), type = "message")
+    cd_notify(paste("Written", nm), type = "message")
     ctx$refresh(select = nm)
   })
 
@@ -1135,7 +1135,7 @@ cd_track_server <- function(input, output, session, ctx) {
       list(am = am, sr = sr, tuned = tuned, ex = ex, exc = exc)
     }, silent = TRUE)
     if (inherits(out, "try-error")) {
-      shiny::showNotification(conditionMessage(attr(out, "condition")), type = "error", duration = 8)
+      cd_notify(conditionMessage(attr(out, "condition")), type = "error", duration = 8)
       return()
     }
     age_res(list(am = out$am, tuned = out$tuned, cyc = cyc, ex = out$ex, exc = out$exc))
@@ -1154,7 +1154,7 @@ cd_track_server <- function(input, output, session, ctx) {
         sprintf("CycloDesk::write_series(am, \"%s\")", wr[1]), sprintf("CycloDesk::write_series(sr, \"%s\")", wr[2]),
         sprintf("CycloDesk::write_series(tuned, \"%s\")", wr[3])), paste("Age model from the track:", tv$file))
     ctx$say("Age model written: ", paste(wr, collapse = ", "))
-    shiny::showNotification(sprintf("Written %s (%s kyr in total)", paste(wr, collapse = ", "),
+    cd_notify(sprintf("Written %s (%s kyr in total)", paste(wr, collapse = ", "),
         cd_fmt(diff(range(out$am[, 2])))), type = "message", duration = 8)
     ctx$refresh(select = wr[3])
   })
@@ -1215,7 +1215,7 @@ cd_helper_status <- function(h, prange, n_groups) {
   txt
 }
 
-# One-line description of a group of helper lines, for the list in the Track tab
+# One-line description of a group of helper lines, for the list in the Track view
 cd_helper_describe <- function(spec) {
   v <- cd_fmt_depths(spec$values)
   txt <- switch(spec$type,
@@ -1565,7 +1565,7 @@ cd_extract <- function(prep, curve, cyc, exc, up = 1.2, down = 0.8, add_mean = F
   data.frame(filtered_cycle = prep$x, value = v)
 }
 
-# Track tab sources ####
+# Track view sources ####
 #
 # Besides wavelet, superlet and synchrosqueezed scalograms, cycles can be tracked on the maps of the evolutive
 # spectra (EHA, windowed FFT, EHA on a log2 axis, evolutive MESA) and sedimentation rates on the maps of eTimeOpt,

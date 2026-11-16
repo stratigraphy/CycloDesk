@@ -29,7 +29,7 @@ Called for its side effect; returns the value of \code{shiny::runApp()} invisibl
 Opens the point-and-click interface in the web browser. Pick a working folder on the left; its data files are
 listed below it. Select one or more files and choose a tool from the menus; results are written as new text files
 into the same folder (with Acycle-style suffixes such as \code{-rsp0.02} or \code{-rLowess0.35}), and the
-equivalent R code is collected in the R code tab.
+equivalent R code is collected in the R code & log tab.
 }
 \examples{
 if (interactive()) {

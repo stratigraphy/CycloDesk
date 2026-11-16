@@ -14,7 +14,7 @@ cd_tools_plot <- function() {
               sprintf("Sampling interval: min %s, median %s, mean %s, max %s", cd_fmt(min(dx)), cd_fmt(stats::median(dx)),
                   cd_fmt(mean(dx)), cd_fmt(max(dx))),
               if (cd_is_even(s$x)) { "The series is evenly spaced." } else {
-                "The series is NOT evenly spaced: interpolate it (Math > Interpolation) before spectral analysis." })
+                "The series is NOT evenly spaced: interpolate it (Processing > Interpolate and resample) before spectral analysis." })
           res <- data.frame(x = xm, dx = dx)
           list(result = res, text = txt,
               code = c("s <- dat[order(dat[, 1]), ]", "res <- data.frame(x = s[-1, 1], dx = diff(s[, 1]))",

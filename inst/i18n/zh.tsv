@@ -1,0 +1,2072 @@
+# language: <e4><b8><ad><e6><96><87> (<e7><ae><80><e4><bd><93>)
+# CycloDesk interface texts: English<TAB>translation. A text that is missing here stays English.
+File	文件
+New folder...	新建文件夹...
+New data file (paste)...	新建数据文件（粘贴）...
+Colour record from an image (outcrop, core, tree rings)...	从图像提取颜色记录（露头、岩心、树轮）...
+Save current figure...	保存当前图像...
+Save R code of this session	保存本次会话的 R 代码
+Open working folder in Explorer	在资源管理器中打开工作文件夹
+Quit CycloDesk	退出 CycloDesk
+Edit	编辑
+Refresh list	刷新列表
+Rename...	重命名...
+Duplicate	复制副本
+Delete...	删除...
+Show all files / data files only	显示全部文件 / 仅显示数据文件
+Plot	绘图
+Plot stacked	堆叠绘图
+Plot standardised	标准化绘图
+Plot with swapped axes	交换坐标轴绘图
+Statistics summary / data table	统计摘要 / 数据表
+Sampling rate	采样率
+Data distribution	数据分布
+Basic Series	基本序列
+Astronomical solutions and insolation	天文解与日照量
+Astronomical solution	天文解
+Insolation	日照量
+Insolation: daily, caloric, integrated, threshold	日照量：日均、热量夏半年、积分、阈值
+Insolation map: latitude and season	日照量图：纬度与季节
+Ice-volume model (Imbrie and Imbrie 1980)	冰量模型（Imbrie and Imbrie 1980）
+Synthetic records	合成记录
+Signal / noise generator	信号 / 噪声发生器
+Synthetic series: cycles, ARMA, ETP + AR(1)	合成序列：旋回、ARMA、ETP + AR(1)
+Red noise (AR(1)) series	红噪声（AR(1)）序列
+Time to stratigraphy: sed.-rate ramp or differential accumulation	时间转地层：沉积速率渐变或差异堆积
+Exponential sed.-rate ramp (time to depth)	指数型沉积速率渐变（时间转深度）
+Synthetic stratigraphy from a forcing (facies)	由驱动信号生成合成地层（沉积相）
+Bioturbation: mix or unmix a record	生物扰动：混合或解混记录
+Bioturbation impulse response	生物扰动脉冲响应
+Example data	示例数据
+Processing	数据处理
+Clean and select	清理与选取
+Sort / unique / remove empty	排序 / 去重 / 移除空值
+Select part	选取片段
+Remove part	移除片段
+Remove outliers	移除异常值
+Clipping	截幅
+Extract column	提取列
+Clean values and select levels (all columns)	清理数值并选取层位（所有列）
+Interpolate and resample	插值与重采样
+Interpolation	插值
+Interpolation of uneven records (Laepple and Huybers 2013)	非等间距记录的插值（Laepple and Huybers 2013）
+Resample at the levels of a second file (2 files)	按第二个文件的层位重采样（2 个文件）
+Discretise a litholog (base, top, value)	岩性柱离散化（底、顶、数值）
+Rank series from bed thicknesses	由层厚生成等级序列
+Transform	变换
+Data transformations	数据变换
+Transformations (astrochron)	变换（astrochron）
+Derivative	求导
+Smoothing	平滑
+Data taper (window)	数据加窗（锥形窗）
+Accumulation rates (accum)	堆积速率（accum）
+Detrend and pre-whiten	去趋势与预白化
+Detrending	去趋势
+Lowpass, highpass and kernel detrending	低通、高通与核函数去趋势
+Pre-whitening	预白化
+Statistics	统计
+Summary statistics (strats)	统计摘要（strats）
+Moving-window statistics	滑动窗口统计
+Moving-window correlation of two proxies	两个代用指标的滑动窗口相关
+Windowed lag-1 autocorrelation (Monte Carlo)	分窗一阶滞后自相关（蒙特卡洛）
+Cross-plot with density curves	带密度曲线的交会图
+Principal components (stratPCA)	主成分分析（stratPCA）
+Local maxima and minima	局部极大值与极小值
+Peaks and troughs (astrochron)	波峰与波谷（astrochron）
+Change points	变点
+Bayesian change points	贝叶斯变点
+Change points: R2 against their number	变点：R2 随变点数的变化
+Time Series	时间序列
+Spectra	频谱
+Spectral analysis	频谱分析
+Bayesian, SWA and average MESA spectra	贝叶斯谱、SWA 谱与平均 MESA 谱
+Lomb-Scargle periodogram (uneven sampling)	Lomb-Scargle 周期图（非等间距采样）
+Spectral peak tests (multiple testing, AR order, power law)	谱峰检验（多重检验、AR 阶数、幂律）
+False positives of a spectral background (testBackground)	频谱背景的假阳性（testBackground）
+Evolutive spectra	演化谱
+Evolutionary spectral analysis	演化谱分析
+EHA band power and spectrum at a depth	EHA 频带功率与某一深度的频谱
+De-chirped EHA (changing sed. rate)	去啁啾 EHA（沉积速率变化）
+Wavelets and superlets	小波与超小波
+Wavelet / superlet / synchrosqueezing	小波 / 超小波 / 同步压缩
+Adaptive and synchrosqueezed scalograms	自适应与同步压缩小波尺度图
+Chirp-matched wavelet sed. rate map	啁啾匹配小波沉积速率图
+De-chirped scalogram along a track (2 files)	沿追踪曲线去啁啾的小波尺度图（2 个文件）
+Frequency resolution and cycle bands	频率分辨率与旋回频带
+Significance and surrogates	显著性与替代数据
+Scalogram significance (CWT / superlet)	小波尺度图显著性（CWT / 超小波）
+Synchrosqueezed scalogram significance	同步压缩小波尺度图显著性
+Band-averaged power significance	频带平均功率显著性
+Surrogate series (IAAFT / phase randomised)	替代序列（IAAFT / 相位随机化）
+Phase-randomised surrogates and spectral noise	相位随机化替代数据与谱噪声
+Filtering and cycle extraction	滤波与旋回提取
+Filtering	滤波
+Amplitude modulation (Hilbert)	振幅调制（Hilbert）
+Extract a cycle of constant period	提取固定周期的旋回
+Extract a tracked cycle (2 files)	提取追踪的旋回（2 个文件）
+Dynamic filter along a tracked period (2 files)	沿追踪周期的动态滤波（2 个文件）
+Two series: coherence and phase	两条序列：相干与相位
+Wavelet coherence (2 series)	小波相干（2 条序列）
+Cross wavelet (2 series)	交叉小波（2 条序列）
+Cross superlet (2 series)	交叉超小波（2 条序列）
+Cross-spectral analysis: coherence and phase (2 series)	交叉谱分析：相干与相位（2 条序列）
+Correlation of two series (surrogateCor / slideCor)	两条序列的相关（surrogateCor / slideCor）
+Decomposition (EMD, SSA)	分解（EMD、SSA）
+EMD / ensemble EMD (extricate)	EMD / 集合 EMD（extricate）
+Singular spectrum analysis (SSA)	奇异谱分析（SSA）
+Instantaneous frequency and amplitude of modes	各模态的瞬时频率与振幅
+Ratios between modes (e.g. eccentricity / precession)	模态间的比值（如偏心率 / 岁差）
+Precision of the Hilbert instantaneous frequency (test signal)	Hilbert 瞬时频率的精度（测试信号）
+Nonlinear analysis	非线性分析
+Bispectral analysis	双谱分析
+Bicoherence (WOSA, astrochron)	双相干（WOSA，astrochron）
+Recurrence plot	递归图
+Sedimentary noise and power	沉积噪声与功率
+Evolutive lag-1 autocorrelation (rho1)	演化一阶滞后自相关（rho1）
+DYNOT (dynamic noise after tuning)	DYNOT（调谐后的动态噪声）
+Power decomposition analysis	功率分解分析
+Power decomposition (Acycle legacy)	功率分解（Acycle 旧版）
+Spectral moments	谱矩
+Sed. rate	沉积速率
+Track a cycle or a rate	追踪旋回或速率
+Track a cycle by hand	手动追踪旋回
+Automatic astronomical tracking	自动天文追踪
+Astronomical HMM tracking	天文 HMM 追踪
+Chirp-matched EHA tracking	啁啾匹配 EHA 追踪
+Evolutive MESA ridge tracking	演化 MESA 脊线追踪
+Sed.-rate scan of a scalogram (FLMW)	小波尺度图的沉积速率扫描（FLMW）
+Tracked cycle to sed. rate (freq2sedrate)	追踪旋回转沉积速率（freq2sedrate）
+eTimeOpt (evolutive)	eTimeOpt（演化）
+Windowed TimeOpt with several fits	多种拟合的分窗 TimeOpt
+TimeOpt with Monte Carlo significance	带蒙特卡洛显著性的 TimeOpt
+TimeOpt with variable sed. rate (timeOptTemplate)	沉积速率可变的 TimeOpt（timeOptTemplate）
+Bayesian TimeOpt (timeOptB)	贝叶斯 TimeOpt（timeOptB）
+Bayesian TimeOpt by MCMC (timeOptBMCMC / timeOptMCMC)	MCMC 贝叶斯 TimeOpt（timeOptBMCMC / timeOptMCMC）
+eTimeOpt with ridge tracking (eTimeOptTrack)	带脊线追踪的 eTimeOpt（eTimeOptTrack）
+eCOCO (evolutive)	eCOCO（演化）
+COCO: adaptive / cross-validated	COCO：自适应 / 交叉验证
+eCOCO: adaptive / cross-validated	eCOCO：自适应 / 交叉验证
+COCO / eCOCO with a target series (2 files)	使用目标序列的 COCO / eCOCO（2 个文件）
+Other astronomical tests	其他天文检验
+Average spectral misfit (ASM / eASM)	平均频谱失配（ASM / eASM）
+Astronomical sed.-rate test	天文沉积速率检验
+Astronomical sed.-rate test, two proxies (2 files)	天文沉积速率检验，两个代用指标（2 个文件）
+Age models	年龄模型
+Build an age model	建立年龄模型
+Build age model	建立年龄模型
+Minimal tuning (WaverideR)	最小调谐（WaverideR）
+Sedimentation rate to age model	沉积速率转年龄模型
+Depth to time: tracked curve, sed. rate or tie points (2 files)	深度转时间：追踪曲线、沉积速率或控制点（2 个文件）
+Age scale / tuning (2 files)	年龄标尺 / 调谐（2 个文件）
+Anchor to absolute ages	锚定到绝对年龄
+Anchor to an astronomical solution or metronome	锚定到天文解或节拍器
+Anchor a floating time scale (anchorTime)	锚定浮动时间标尺（anchorTime）
+Weighted mean age (wtMean / stepHeat)	加权平均年龄（wtMean / stepHeat）
+Geological time scale	地质年代表
+Dated levels (Bayesian)	定年层位（贝叶斯）
+U-Pb age-depth model (modBchron)	U-Pb 年龄-深度模型（modBchron）
+Dates + astrochronology (astroMCBchron, 2 files)	定年数据 + 天文年代学（astroMCBchron，2 个文件）
+Uncertainty (Monte Carlo)	不确定度（蒙特卡洛）
+Re-track a cycle (Monte Carlo, multi-proxy)	重新追踪旋回（蒙特卡洛，多指标）
+Age model with uncertainty (Monte Carlo)	带不确定度的年龄模型（蒙特卡洛）
+Duration of a hiatus (Monte Carlo, 2 files)	沉积间断的时长（蒙特卡洛，2 个文件）
+Uncertainty of a tracked cycle (2 files)	追踪旋回的不确定度（2 个文件）
+Check an age model	检验年龄模型
+Check an age model (de-chirped record, 2 files)	检验年龄模型（去啁啾记录，2 个文件）
+Amplitude-modulation test of a tuned record (testPrecession / testTilt)	已调谐记录的振幅调制检验（testPrecession / testTilt）
+Detect hiatuses and transients	检测沉积间断与瞬变
+Correlate two records	两条记录的对比
+Correlate two records (dynamic time warping, 2 files)	两条记录的对比（动态时间规整，2 个文件）
+Astronomy	天文
+Astronomical periods	天文周期
+Astronomical periods at an age	某一年龄的天文周期
+Astronomical periods through time	天文周期随时间的变化
+Precession and obliquity periods (bergerPeriods / calcPeriods)	岁差与斜率周期（bergerPeriods / calcPeriods）
+Identify a measured period	识别实测周期
+Bundling ratios	成束比
+Combination and difference tones (tones)	和频与差频（tones）
+Chaotic resonance and sensitivity	混沌共振与敏感性
+Priors of the Solar System frequencies (hoangPriors)	太阳系频率的先验（hoangPriors）
+Precession constant	岁差常数
+CTest from depth-domain peaks	由深度域谱峰进行 CTest
+CTest for a tuned record	已调谐记录的 CTest
+Precession constant from cycles	由旋回求岁差常数
+Combine two k estimates	合并两个 k 估计值
+Test a tuned record (precession constant)	检验已调谐记录（岁差常数）
+Check the k test on synthetic records	用合成记录验证 k 检验
+Compare k with published models	将 k 与已发表模型比较
+Earth-Moon system	地月系统
+Earth-Moon calculator	地月计算器
+Earth-Moon relations	地月关系
+Earth-Moon distance and day length from k (alodfromk)	由 k 求地月距离与日长（alodfromk）
+Help	帮助
+About CycloDesk and how to cite	关于 CycloDesk 及引用方式
+Which R function does what	各 R 函数的用途
+Tutorial and manual (web)	教程与手册（网页）
+Report a problem or suggest a feature	报告问题或建议新功能
+Check for updates	检查更新
+Language	语言
+Close CycloDesk (stops R)	关闭 CycloDesk（停止 R）
+Close	关闭
+Show the file panel	显示文件面板
+Files	文件
+Up one folder (Backspace)	上一级文件夹（Backspace）
+Type a path	输入路径
+Refresh (F5)	刷新（F5）
+Delete the selected files (Del)	删除选中的文件（Del）
+Hide the file panel	隐藏文件面板
+Filter files	筛选文件
+Drag to make the file panel wider or narrower	拖动以调整文件面板的宽度
+Data	数据
+Track	追踪
+Anchor	锚定
+Image	图像
+R code	R 代码
+Log	日志
+Stacked	堆叠
+Standardised	标准化
+Points	数据点
+Reverse depth axis	反转深度轴
+Depth vertical	深度为纵轴
+Log value axis	数值轴取对数
+Save figure	保存图像
+Data files, spectra and saved results (.rds). Drag to zoom, double-click to reset	数据文件、频谱和已保存的结果（.rds）。拖动可缩放，双击可复位
+All tools	全部工具
+Track a cycle on the scalogram	在小波尺度图上追踪旋回
+Click points along the band of a cycle, give its duration, and build a	沿某一旋回的条带点击取点，给出该旋回的持续时间，即可建立
+floating age model. The tuning check compares the amplitude envelope of a shorter cycle with a longer	浮动年龄模型。调谐检验将较短旋回的振幅包络与直接从记录中提取的较长
+cycle extracted directly from the record; move points and watch the check until you are happy.	旋回进行比较；移动各点并观察检验结果，直到满意为止。
+1. Scalogram	1. 小波尺度图
+Colour palette	调色板
+Cividis (colour-blind safe)	Cividis（色盲友好）
+Turbo (rainbow-like)	Turbo（类彩虹）
+Jet (MATLAB / Acycle style)	Jet（MATLAB / Acycle 风格）
+Blue to red	蓝到红
+Red-yellow-blue	红-黄-蓝
+Yellow-orange-red	黄-橙-红
+Greys	灰度
+Rainbow	彩虹
+Show scalogram	显示小波尺度图
+2. Track the cycle	2. 追踪旋回
+A click on the scalogram	在小波尺度图上点击
+Show the power peaks	显示功率峰
+Peak filter (0: all peaks; to the right: only the strong ones)	峰值筛选（0：全部峰；向右：仅保留强峰）
+Click a point to select it (Shift/Ctrl-click: several), click it again	点击某点可将其选中（Shift/Ctrl+点击：多选），再次点击
+to deselect; drag a point to move it; Delete or Backspace removes the selected points.	则取消选中；拖动某点可移动它；按 Delete 或 Backspace 可删除选中的点。
+Undo last point	撤销上一个点
+Delete selected	删除选中项
+Select all	全选
+Deselect	取消选择
+Clear all	全部清除
+Ridge search width around the clicks (fraction)	点击位置附近的脊线搜索宽度（比例）
+Snap the whole curve to the nearest peaks	将整条曲线吸附到最近的峰
+Follow the ridge (HMM)	沿脊线追踪（HMM）
+Snapping: at every depth the curve goes to the power peak nearest to the	吸附：在每个深度上，曲线都会移到最靠近
+line through your points (within the search width). HMM: WaverideR::track_ridge_hmm.	所选各点连线的功率峰（在搜索宽度内）。HMM：WaverideR::track_ridge_hmm。
+Smooth the curve: LOWESS span (0 = off)	平滑曲线：LOWESS 跨度（0 = 关闭）
+3. Helper lines	3. 辅助线
+Set up a group of lines and press Add; add as many groups as you	设置一组辅助线后点击“添加”；可添加任意
+like. Tick groups in the list to remove them. On a sedimentation-rate map (eCOCO, eTimeOpt) only	多组。在列表中勾选要移除的组。在沉积速率图（eCOCO、eTimeOpt）上只绘制
+fixed values and file columns are drawn, read as rates (cm/kyr; use multiplier 1 for a rate column).	固定值和文件列，并按速率读取（cm/kyr；速率列请使用乘数 1）。
+Lines	辅助线
+periods of cycles (kyr), scaled by the current track	旋回周期（kyr），按当前追踪曲线换算
+periods of cycles (kyr), from an age-model file (depth, age)	旋回周期（kyr），由年龄模型文件（深度、年龄）换算
+fixed periods (depth units, e.g. m)	固定周期（深度单位，如 m）
+a column of a file (depth, value) x multiplier	文件中的一列（深度、数值）x 乘数
+Cycles (kyr)	旋回（kyr）
+Periods (depth units)	周期（深度单位）
+Multiplier (period = value x multiplier)	乘数（周期 = 数值 x 乘数）
+1 when the column is already a period in depth units; e.g. 4.05	当该列已是以深度单位表示的周期时取 1；例如取 4.05，
+for a sedimentation rate in cm/kyr gives the 405-kyr period in m (rate x 405 / 100).	则可由以 cm/kyr 表示的沉积速率得到以 m 表示的 405-kyr 周期（速率 x 405 / 100）。
+Colour	颜色
+white	白色
+red	红色
+orange	橙色
+yellow	黄色
+cyan	青色
+magenta	品红
+green	绿色
+black	黑色
+Line	线型
+dashed	虚线
+solid	实线
+dotted	点线
+Label (optional)	标签（可选）
+Add	添加
+Remove ticked	移除勾选项
+Remove all	全部移除
+Vertical boundary lines at depths	指定深度处的垂直界线
+Boundary lines can also be clicked on the scalogram (third click	界线也可直接在小波尺度图上点击添加（上方第三个点击
+option above); clicking a line again removes it.	选项）；再次点击某条线可将其移除。
+Add depths from the file	从文件添加深度
+Clear boundary lines	清除界线
+4. Floating age model and extraction	4. 浮动年龄模型与旋回提取
+Duration of the tracked cycle (kyr)	所追踪旋回的持续时间（kyr）
+Cycle to extract (kyr; any cycle, scaled from the track)	要提取的旋回（kyr；任意旋回，按追踪曲线换算）
+Band: lower factor	频带：下限系数
+upper factor	上限系数
+Add the mean to the extracted cycle	将均值加回提取的旋回
+Show below the scalogram	在小波尺度图下方显示
+Results (written to the working folder)	结果（写入工作文件夹）
+Save track	保存追踪曲线
+Extract cycle	提取旋回
+Age model + tuned series	年龄模型 + 调谐序列
+Anchor to a solution...	锚定到天文解...
+5. Tuning check (amplitude modulation)	5. 调谐检验（振幅调制）
+The modulated cycle is extracted with the track and its Hilbert	先利用追踪曲线提取被调制旋回，并求取其 Hilbert
+envelope is taken. The modulating cycle is then extracted from that envelope (amplitude modulation)	包络。随后分别从该包络中（振幅调制）
+and, with the track, from the record itself; both are compared on the floating time scale.	以及利用追踪曲线从记录本身提取调制旋回；二者在浮动时间标尺上进行比较。
+A good age model gives a high correlation.	好的年龄模型会给出较高的相关性。
+Modulated cycle (kyr)	被调制旋回（kyr）
+Modulating cycle (kyr)	调制旋回（kyr）
+Update after every change of the track	追踪曲线每次改动后自动更新
+Show the tuning check	显示调谐检验
+Run the check	运行检验
+Anchor to an astronomical solution	锚定到天文解
+Click a peak in the record (top), then the matching peak in the target	先点击记录中的一个峰（上图），再点击目标曲线中与之对应的峰
+(middle): each pair is a tie point. The bottom figure shows the tuned record on the target.	（中图）：每一对即为一个控制点。下图显示叠加在目标曲线上的已调谐记录。
+1. Record	1. 记录
+Starting age model	初始年龄模型
+Sed. rate (cm/kyr)	沉积速率（cm/kyr）
+Depth unit	深度单位
+Age of the top of the record (ka)	记录顶部的年龄（ka）
+Age increases with depth	年龄随深度增加
+2. Target	2. 目标曲线
+Astronomical solution or metronome	天文解或节拍器
+La2004 eccentricity	La2004 偏心率
+La2004 obliquity	La2004 斜率
+La2004 precession index	La2004 岁差指数
+Insolation 65N, June solstice (La2004)	北纬 65 度夏至日照量（La2004）
+La2010b eccentricity	La2010b 偏心率
+La2011 eccentricity	La2011 偏心率
+Metronome	节拍器
+Period (kyr)	周期（kyr）
+Phase (degrees)	相位（度）
+Flip the target (maxima become minima)	翻转目标曲线（极大值变为极小值）
+Show from (ka)	显示范围自（ka）
+to (ka)	至（ka）
+Empty: the range of the starting age model plus a margin.	留空：初始年龄模型的范围外加一定余量。
+3. Tie points	3. 控制点
+A click snaps to	点击时吸附到
+Undo last tie	撤销上一个控制点
+Clear ties	清除控制点
+4. Results (written to the working folder)	4. 结果（写入工作文件夹）
+Save ties	保存控制点
+Colour record along a route on an image	沿图像上的路线提取颜色记录
+Outcrop photographs, core scans, tree-ring images or satellite images:	露头照片、岩心扫描图、树轮图像或卫星图像：
+click a route along the beds (or across the rings), set the scale, and the colour is averaged across	沿岩层（或横穿年轮）点击出一条路线，设定比例尺，程序将沿路线逐步在
+a swath at every step along the route. For satellite images use an exported image or screenshot	条带宽度内对颜色取平均。对于卫星图像，请使用您有权使用的
+that you are allowed to use, and set the scale from its scale bar.	导出图像或截图，并根据其比例尺条设定比例。
+1. Image	1. 图像
+or copy an image into the working folder	或将图像复制到工作文件夹
+Browse...	浏览...
+No file selected	未选择文件
+2. Route and scale	2. 路线与比例尺
+A click on the image	在图像上点击
+Clear route	清除路线
+Reverse direction	反转方向
+Swath width (pixels)	条带宽度（像素）
+Step (pixels)	步长（像素）
+Across the swath	条带内取值
+Mean	均值
+Median (robust against cracks and specks)	中位数（不受裂缝和斑点影响）
+Length of the scale bar	比例尺条的长度
+Pixels per unit	每单位像素数
+Click both ends of a scale bar (or of a known distance) with	点击比例尺条（或某一已知距离）的两端时请选择
+"sets the scale bar" and give its length; or type the pixels per unit directly. Without a	“设定比例尺条”选项，并给出其长度；也可直接输入每单位的像素数。若未设定
+scale the record is in pixels.	比例尺，记录以像素为单位。
+Depth at the start	起点处的深度
+Along the route, depth	沿路线方向，深度
+increases	增大
+decreases	减小
+3. Record	3. 记录
+Show	显示
+Grey value (luma, 0-255)	灰度值（亮度 luma，0-255）
+Lightness L*	明度 L*
+Red-green a*	红-绿 a*
+Yellow-blue b*	黄-蓝 b*
+Red (0-255)	红（0-255）
+Green (0-255)	绿（0-255）
+Blue (0-255)	蓝（0-255）
+Hue (degrees)	色相（度）
+Saturation	饱和度
+Value (brightness)	明度值（亮度）
+Extract and write	提取并写入
+Writes <image>-profile.txt (all colour columns, with header) and	将 <image>-profile.txt（全部颜色列，含表头）和
+<image>-<channel>.txt (depth and the shown channel) to the working folder.	<image>-<channel>.txt（深度和所显示的通道）写入工作文件夹。
+The R code of every operation in this session. It runs in the working folder	本次会话中每一步操作的 R 代码。代码须在工作文件夹中运行
+(setwd() to it first).	（请先用 setwd() 切换到该文件夹）。
+Save to working folder	保存到工作文件夹
+Clear	清除
+Places	位置
+This computer	此电脑
+Home	主目录
+This PC (all drives)	此电脑（所有驱动器）
+C: System	C: 系统
+D: Data	D: 数据
+This PC: all drives	此电脑：所有驱动器
+Go to drive C:	转到驱动器 C:
+Go to drive D:	转到驱动器 D:
+Click a folder to open it, the arrow or a part of the path above to go	点击文件夹可将其打开，点击箭头或上方路径的某一部分可返回
+up. Click a data file to plot it; Ctrl/Shift-click selects several. Drag files onto a folder, drive or part of the	上级。点击数据文件可绘图；Ctrl/Shift+点击可多选。将文件拖到文件夹、驱动器或路径的某一
+path to move them there (hold Ctrl to copy). Arrow keys, Enter and Backspace also work.	部分上即可移动到该处（按住 Ctrl 为复制）。方向键、Enter 和 Backspace 同样可用。
+Folder: %s | %d data files | %d selected | WaverideR %s, astrochron %s	文件夹：%s | %d 个数据文件 | 已选 %d 个 | WaverideR %s，astrochron %s
+No data files here.	此处没有数据文件。
+Open another folder or drive above.	请在上方打开其他文件夹或驱动器。
+Up one level	上一级
+Delete	删除
+files	个文件
+Open the folder	打开文件夹
+CycloDesk is closed	CycloDesk 已关闭
+R has stopped. You can close this window.	R 已停止。您可以关闭此窗口。
+Start CycloDesk again from its icon.	请从图标重新启动 CycloDesk。
+2001 points, 154 to 174, dt 0.01	2001 个点，154 至 174，dt 0.01
+Start	起点
+End	终点
+Median interval	间隔中位数
+Min interval	最小间隔
+Max interval	最大间隔
+Median	中位数
+Standard deviation	标准差
+Minimum	最小值
+Maximum	最大值
+Choose a tool	选择工具
+Every tool of the menus, in the order of the work. Its settings open here on	菜单中的全部工具，按工作流程排序。工具的设置在此处
+the left and its result on the right; the result files are written to the working folder.	左侧打开，结果显示在右侧；结果文件写入工作文件夹。
+Find a tool, e.g. wavelet, detrend, TimeOpt, tuning	查找工具，如：小波、去趋势、TimeOpt、调谐
+Make or load a series	生成或载入序列
+Prepare the data	准备数据
+Spectra, wavelets, filters	频谱、小波、滤波
+Sedimentation rates from astronomical cycles	由天文旋回求沉积速率
+Depth to time, anchoring, uncertainty	深度转时间、锚定、不确定度
+Periods, precession constant, Earth-Moon	周期、岁差常数、地月系统
+No tool with these words.	没有包含这些词的工具。
+Scalogram or spectrum map (wavelet, EHA, eTimeOpt, eCOCO, ...)	小波尺度图或频谱图（小波、EHA、eTimeOpt、eCOCO ...）
+Compute a new CWT	计算新的 CWT
+Data file	数据文件
+Shortest period	最短周期
+Longest period	最长周期
+No helper lines yet.	尚无辅助线。
+Depths from a file	来自文件的深度
+(choose a file)	（选择文件）
+Record (depth domain)	记录（深度域）
+Image in the working folder	工作文件夹中的图像
+Eccentricity, obliquity or precession index from an astronomical solution. The solution is downloaded once by astrochron::getLaskar() and then kept in a local cache.	取自天文解的偏心率、斜率或岁差指数。天文解由 astrochron::getLaskar() 下载一次，之后保存在本地缓存中。
+Solution	天文解
+La2004 (Laskar et al. 2004)	La2004（Laskar et al. 2004）
+Parameter	参数
+Eccentricity	偏心率
+Obliquity (radians)	斜率（弧度）
+Precession index	岁差指数
+ETP (standardised sum)	ETP（标准化之和）
+Obliquity, precession and ETP are only in La2004.	斜率、岁差和 ETP 仅 La2004 提供。
+Start (ka)	起始（ka）
+End (ka)	结束（ka）
+Step (ka)	步长（ka）
+Reset to the defaults for this file	恢复为此文件的默认值
+Write result files to the working folder	将结果文件写入工作文件夹
+Run	运行
+Cancel	取消
+Track on this map	在此图上追踪
+Zoom	缩放
+Apply	应用
+Reset	重置
+drag a box on the figure; double-click resets	在图上拖出一个矩形框；双击复位
+Daily mean insolation at the top of the atmosphere (Berger 1978) from La2004.	基于 La2004 的大气层顶日平均日照量（Berger 1978）。
+Latitude (degrees N)	纬度（北纬，度）
+True solar longitude	真太阳黄经
+June solstice (90)	六月至点（90）
+September equinox (180)	九月分点（180）
+December solstice (270)	十二月至点（270）
+March equinox (0)	三月分点（0）
+Other...	其他...
+True solar longitude (degrees)	真太阳黄经（度）
+Solar constant (W/m2)	太阳常数（W/m2）
+Eccentricity + tilt + precession composite from La2004, each standardised and weighted.	基于 La2004 的偏心率 + 斜率 + 岁差合成曲线，各分量分别标准化并加权。
+Weight of eccentricity	偏心率权重
+Weight of obliquity	斜率权重
+Weight of precession	岁差权重
+Standardise the result	对结果进行标准化
+Insolation series from La2004 computed by the palinsol package: daily mean insolation on a day, caloric summer insolation (Milankovitch), insolation integrated between two true solar longitudes, or integrated over the days above a threshold (Huybers and Tziperman 2008).	由 palinsol 包基于 La2004 计算的日照量序列：某一天的日平均日照量、热量夏半年日照量（Milankovitch）、两个真太阳黄经之间的积分日照量，或超过阈值各日的积分日照量（Huybers and Tziperman 2008）。
+Quantity	物理量
+Daily mean insolation (W/m2)	日平均日照量（W/m2）
+Caloric summer insolation (kJ/m2)	热量夏半年日照量（kJ/m2）
+Insolation integrated between two true solar longitudes (kJ/m2)	两个真太阳黄经之间的积分日照量（kJ/m2）
+Integrated insolation above a threshold (kJ/m2)	超过阈值的积分日照量（kJ/m2）
+True solar longitude (degrees; 90 = 21 June)	真太阳黄经（度；90 = 6 月 21 日）
+From true solar longitude (degrees)	起始真太阳黄经（度）
+To true solar longitude (degrees)	终止真太阳黄经（度）
+Threshold (W/m2)	阈值（W/m2）
+Start (ka; negative = future)	起始（ka；负值 = 未来）
+Step (ka, >= 1)	步长（ka，>= 1）
+Save the result for re-plotting later (.rds)	保存结果以便日后重新绘图（.rds）
+Daily mean insolation for every latitude and true solar longitude at one time, or the difference between two times (La2004, palinsol), with the seasonal cycle at one latitude and the latitude profile on one day.	某一时刻各纬度和各真太阳黄经的日平均日照量，或两个时刻之间的差值（La2004，palinsol），并给出某一纬度的季节变化和某一天的纬度剖面。
+Map	分布图
+Insolation at one time (insoMap)	某一时刻的日照量（insoMap）
+Difference between two times (insoDiff)	两个时刻之间的差值（insoDiff）
+Time (ka; negative = future)	时间（ka；负值 = 未来）
+Second time (ka)	第二个时间（ka）
+Seasonal cycle at latitude (degrees N)	季节变化所在纬度（北纬，度）
+Latitude profile on	纬度剖面取自
+Ice volume from the Imbrie and Imbrie (1980) model forced by daily insolation (La2004, palinsol), with one or several time constants and non-linearity coefficients.	由逐日日照量（La2004，palinsol）驱动的 Imbrie and Imbrie (1980) 模型计算的冰量，可设一个或多个时间常数和非线性系数。
+Insolation latitude (degrees N)	日照量纬度（北纬，度）
+Insolation on	日照量取自
+Mean time constant(s) Tm (ka)	平均时间常数 Tm（ka）
+Non-linearity coefficient(s) b (0-1)	非线性系数 b（0-1）
+Start times of each Tm and b (ka; empty = one regime)	各 Tm 和 b 的起始时间（ka；留空 = 单一阶段）
+e.g. Tm = 15, 5; b = 0.6, 0.3; times = 500, 1000 uses Tm 15 and b 0.6 from 0 to 500 ka.	例如 Tm = 15, 5；b = 0.6, 0.3；时间 = 500, 1000，表示 0 至 500 ka 使用 Tm 15 和 b 0.6。
+Burn-in (points)	预热期（点数）
+Initial ice volume	初始冰量
+Scale the ice volume to 0-1	将冰量缩放到 0-1
+Sum of sinusoids plus white, AR(1) red or power-law noise (Acycle: Basic Series > Signal/Noise Generator).	正弦波之和加白噪声、AR(1) 红噪声或幂律噪声（Acycle：Basic Series > Signal/Noise Generator）。
+Number of points	点数
+Sampling interval	采样间隔
+Periods (comma separated, empty = none)	周期（逗号分隔，留空 = 无）
+Amplitudes (one per period)	振幅（每个周期一个）
+Noise	噪声
+AR(1) red noise	AR(1) 红噪声
+White noise	白噪声
+Power-law noise	幂律噪声
+None	无
+AR(1) coefficient rho	AR(1) 系数 rho
+Power-law exponent beta	幂律指数 beta
+Noise standard deviation	噪声标准差
+Random seed	随机种子
+File name	文件名
+Sum of sinusoids with white noise, an autoregressive moving-average (ARMA) series, or an ETP signal (La2004) plus AR(1) red noise; shows the MTM spectrum with AR(1) confidence levels.	正弦波之和加白噪声、自回归滑动平均（ARMA）序列，或 ETP 信号（La2004）加 AR(1) 红噪声；并显示带 AR(1) 置信水平的 MTM 频谱。
+Model	模型
+Sum of sinusoids plus white noise (cycles)	正弦波之和加白噪声（cycles）
+ARMA model (armaGen)	ARMA 模型（armaGen）
+ETP plus AR(1) noise (ar1etp)	ETP 加 AR(1) 噪声（ar1etp）
+Periods (comma separated)	周期（逗号分隔）
+Phases in radians (one per period, empty = 0)	相位，弧度（每个周期一个，留空 = 0）
+Variance of the white noise	白噪声方差
+Start (ka for ETP)	起始（ETP 为 ka）
+End (ka for ETP)	结束（ETP 为 ka）
+AR coefficients (one per order)	AR 系数（每阶一个）
+MA coefficients (one per order)	MA 系数（每阶一个）
+AR(1) coefficient of the noise	噪声的 AR(1) 系数
+Noise amplitude relative to ETP (1 = equal variance, < 0 = noise only)	噪声相对于 ETP 的振幅（1 = 方差相等，< 0 = 仅噪声）
+Generates an AR(1) red-noise series with a given mean, standard deviation and lag-1 autocorrelation.	生成具有给定均值、标准差和一阶滞后自相关的 AR(1) 红噪声序列。
+First depth / time	起始深度 / 时间
+Lag-1 autocorrelation (0 = white noise)	一阶滞后自相关（0 = 白噪声）
+Converts a time series (time in kyr, value), e.g. ETP or insolation, into a synthetic stratigraphic series (depth in m): with a linearly changing sedimentation rate, or with a rate that follows the signal (differential accumulation); use it to test how tools cope with changing rates.	将时间序列（时间单位 kyr，数值），如 ETP 或日照量，转换为合成地层序列（深度单位 m）：沉积速率可线性变化，也可随信号变化（差异堆积）；可用于检验各工具对沉积速率变化的适应能力。
+Choose a readable data file.	请选择可读取的数据文件。
+Linear sed.-rate ramp (sedRamp)	线性沉积速率渐变（sedRamp）
+Differential accumulation (diffAccum)	差异堆积（diffAccum）
+Sed. rate at the start of the series (cm/kyr)	序列起点的沉积速率（cm/kyr）
+Sed. rate at the end of the series (cm/kyr)	序列终点的沉积速率（cm/kyr）
+Lowest sed. rate (cm/kyr)	最低沉积速率（cm/kyr）
+Highest sed. rate (cm/kyr)	最高沉积速率（cm/kyr）
+Highest rate at	最高速率位于
+peaks of the signal	信号的波峰
+troughs of the signal	信号的波谷
+Converts a time series (time in kyr, value), e.g. an ETP or insolation series, to a synthetic stratigraphic record whose sedimentation rate changes exponentially from the start to the end value; use it to test how tracking and age-model tools cope with a changing rate.	将时间序列（时间单位 kyr，数值），如 ETP 或日照量序列，转换为沉积速率从起始值到终止值呈指数变化的合成地层记录；可用于检验追踪工具和年龄模型工具对沉积速率变化的适应能力。
+Sedimentation rate at the start of the series (cm/kyr)	序列起点的沉积速率（cm/kyr）
+Sedimentation rate at the end of the series (cm/kyr)	序列终点的沉积速率（cm/kyr）
+Turns a forcing series (e.g. precession, ETP or an ice-volume model) into a series of sedimentary facies by slicing the standardised forcing into classes, and compares the spectra of forcing and facies.	将驱动序列（如岁差、ETP 或冰量模型）的标准化值划分为若干等级，从而转换为沉积相序列，并比较驱动信号与沉积相的频谱。
+Number of facies	沉积相数量
+Clip the forcing at its mean value (no facies change below it)	在驱动信号的均值处截断（低于均值时沉积相不变）
+Reverse the sign of the forcing	反转驱动信号的符号
+Simulates the smoothing of a time series (time in kyr) by diffusive bioturbation, or removes it by Wiener deconvolution (Liu et al. 2021), for a mixed-layer depth, sedimentation rate and mixing parameter G.	在给定混合层深度、沉积速率和混合参数 G 的条件下，模拟扩散型生物扰动对时间序列（时间单位 kyr）的平滑作用，或用 Wiener 反褶积将其去除（Liu et al. 2021）。
+Direction	方向
+Mix: simulate bioturbation (bioturb)	混合：模拟生物扰动（bioturb）
+Unmix: remove bioturbation (unbioturb)	解混：去除生物扰动（unbioturb）
+Mixing parameter G = D / (ML v)	混合参数 G = D / (ML v)
+Mixed-layer depth (cm)	混合层深度（cm）
+Sedimentation rate (cm/kyr)	沉积速率（cm/kyr）
+Fraction tapered before deconvolution	反褶积前加锥形窗的比例
+Wiener filter (stabilises the deconvolution)	Wiener 滤波（使反褶积稳定）
+Lowpass cut-off after deconvolution (cycles/kyr, 0 = none)	反褶积后的低通截止频率（cycles/kyr，0 = 无）
+Response of the advection-diffusion bioturbation model of Schink and Guinasso (1975) to an impulse: how a single event is smeared over depth and time by a mixed layer.	Schink and Guinasso (1975) 平流-扩散生物扰动模型的脉冲响应：单一事件如何被混合层在深度和时间上展宽。
+Bioturbation parameter G = D / (ML v)	生物扰动参数 G = D / (ML v)
+Writes an example data set of WaverideR into the working folder.	将 WaverideR 的示例数据集写入工作文件夹。
+Data set	数据集
+IODP 926 grey scale (Zeeden et al. 2013)	IODP 926 灰度（Zeeden et al. 2013）
+Sullivan core magnetic susceptibility (Pas et al. 2018)	Sullivan 岩心磁化率（Pas et al. 2018）
+ETP astronomical signal example	ETP 天文信号示例
+Depth rank example	深度等级示例
+Total solar irradiance 0-9400 ka (Steinhilber et al. 2012)	太阳总辐照度 0-9400 ka（Steinhilber et al. 2012）
+Bisciaro Fm XRF (several columns)	Bisciaro 组 XRF（多列）
+Sorts by the first column, removes empty values and averages duplicated depths.	按第一列排序，移除空值，并对重复深度取平均。
+Keeps the part of the series between two depths / times (Acycle: Math > Select Parts). Drag the two lines on the figure or type the values.	保留序列中两个深度 / 时间之间的部分（Acycle：Math > Select Parts）。可在图上拖动两条线或直接输入数值。
+From	自
+To	至
+Removes the part of the series between two depths; optionally closes the gap (Acycle: Remove Parts). Drag the two lines on the figure or type the values.	移除序列中两个深度之间的部分；可选择闭合缺口（Acycle：Remove Parts）。可在图上拖动两条线或直接输入数值。
+Close the gap (shift the part below upwards)	闭合缺口（将下方部分上移）
+Removes values outside c times the interquartile range from the quartiles (astrochron::trim).	移除超出四分位数 c 倍四分位距范围的数值（astrochron::trim）。
+Factor c (x IQR)	系数 c（x IQR）
+Values below the lower or above the upper limit are set to the limit (Acycle: Math > Clipping).	低于下限或高于上限的数值被设为相应限值（Acycle：Math > Clipping）。
+Lower limit	下限
+Upper limit	上限
+Writes one proxy column of a multi-column table as its own two-column series.	将多列数据表中的某一代用指标列单独写成两列序列。
+Column	列
+Works on all columns of a table: removes levels with an empty value, replaces negative or zero values (e.g. before a log transform), removes values above or below a threshold, or keeps an interval.	作用于数据表的所有列：移除含空值的层位，替换负值或零值（例如在取对数之前），移除高于或低于阈值的数值，或保留某一区间。
+Operation	操作
+Remove levels with an empty value (rmNA)	移除含空值的层位（rmNA）
+Replace negative values by 0 (repl0)	将负值替换为 0（repl0）
+Replace values <= 0 by the smallest positive number (replEps)	将 <= 0 的值替换为最小正数（replEps）
+Remove values above or below a threshold (trimAT)	移除高于或低于阈值的数值（trimAT）
+Keep an interval of all columns (iso)	保留所有列的某一区间（iso）
+Column shown in the figure; trimAT tests and keeps only this column.	图中显示的列；trimAT 仅检验并保留该列。
+Threshold	阈值
+Remove the values	移除的数值
+larger than the threshold	大于阈值
+smaller than the threshold	小于阈值
+Resamples the series at an even interval (linear, as Acycle) or with a cubic spline.	以等间距对序列重采样（线性插值，同 Acycle）或采用三次样条插值。
+New sampling interval	新采样间隔
+Method	方法
+Linear	线性
+Cubic spline	三次样条
+Estimates the sampling interval at which linear interpolation of an unevenly sampled record does not bias the spectral background (from power-law noise surrogates on the actual sampling grid), then interpolates with an anti-alias filter.	估算对非等间距采样记录做线性插值而不使频谱背景产生偏差的采样间隔（基于实际采样网格上的幂律噪声替代数据），然后用抗混叠滤波器进行插值。
+Interpolation interval	插值间隔
+Estimate it (Laepple and Huybers 2013)	估算（Laepple and Huybers 2013）
+Given	指定
+Interval	间隔
+Threshold of the spectral ratio R	谱比值 R 的阈值
+Power-law exponent of the noise surrogates	噪声替代数据的幂律指数
+MTM time-bandwidth product	MTM 时间带宽积
+Smoothing of the ratio R	比值 R 的平滑
+Number of noise simulations (> 1 runs in parallel)	噪声模拟次数（> 1 时并行运行）
+Anti-alias filter	抗混叠滤波器
+Interpolates series 1 linearly at the depths / times of series 2 (e.g. to compare or cross-plot two proxies measured at different levels).	在序列 2 的深度 / 时间处对序列 1 做线性插值（例如用于比较或交会两个在不同层位测量的代用指标）。
+Series 1	序列 1
+Series 2	序列 2
+Also write a table with both series at the levels of file 2	同时写出一张含两条序列在文件 2 各层位取值的数据表
+Turns a bed table (column 1 base, column 2 top of every bed, column 3 rank or proxy value, as in StratigrapheR) into an evenly sampled series that keeps the bed boundaries.	将岩层表（第 1 列为每层的底，第 2 列为顶，第 3 列为等级或代用指标值，格式同 StratigrapheR）转换为保留层界面的等间距采样序列。
+Divisor of the greatest common bed thickness	层厚最大公约数的除数
+Resample to a regular step	重采样为规则步长
+Step of the resampled series	重采样序列的步长
+Builds a lithofacies rank series from a bed table in stratigraphic order (column 1 bed thickness, another column the facies rank of the bed), sampled at an even step.	由按地层顺序排列的岩层表（第 1 列为层厚，另一列为该层的岩相等级）建立以等步长采样的岩相等级序列。
+Rank column	等级列
+Sampling step (0 = no interpolation)	采样步长（0 = 不插值）
+Height of the base of the first bed	第一层底部的高度
+Standardise, remove the mean, log transform, change sign or scale, or flip the depth axis.	标准化、去均值、对数变换、改变符号或缩放，或翻转深度轴。
+Transformation	变换
+Standardise (z-score)	标准化（z-score）
+Remove mean	去均值
+Natural log	自然对数
+Change sign (x -1)	改变符号（x -1）
+Normalise to 0-1	归一化到 0-1
+Multiply depth by a factor (units)	深度乘以系数（单位换算）
+Flip depth axis (top <-> base)	翻转深度轴（顶 <-> 底）
+Depth to height / time to age (x -> max - x)	深度转高度 / 时间转年龄（x -> max - x）
+Factor	系数
+e.g. 0.01 converts cm to m	例如 0.01 可将 cm 换算为 m
+Divides by the linear trend, arcsine transform, flips the stratigraphic order, clips or mutes the values below a threshold (enhances the modulator, e.g. eccentricity), pads with zeros, or converts depth to time with a constant sedimentation rate.	除以线性趋势、反正弦变换、翻转地层顺序、对低于阈值的数值进行截幅或压低（可突出调制信号，如偏心率）、补零，或按恒定沉积速率将深度转换为时间。
+Divide by the linear trend (divTrend)	除以线性趋势（divTrend）
+Arcsine transform, after rescaling to 0-1 (arcsinT)	反正弦变换，先缩放到 0-1（arcsinT）
+Flip the stratigraphic order (flip)	翻转地层顺序（flip）
+Clip the values below a threshold (clipIt)	对低于阈值的数值截幅（clipIt）
+Mute the values below a threshold by a divisor (clipIt)	将低于阈值的数值除以某一除数予以压低（clipIt）
+Pad with zeros (pad)	补零（pad）
+Depth to time with a constant sed. rate (constantSedrate)	按恒定沉积速率将深度转为时间（constantSedrate）
+Height given to the new first level	赋给新的第一个层位的高度
+Value given to the clipped values	赋给被截幅数值的值
+Divisor	除数
+Number of zeros added at the end	在末尾添加的零的个数
+Sedimentation rate (depth units per time unit)	沉积速率（深度单位/时间单位）
+In the units of the depth column per time unit, e.g. 0.02 m/kyr for 2 cm/kyr with depths in metres.	以深度列的单位/时间单位表示，例如深度以米计时，2 cm/kyr 应输入 0.02 m/kyr。
+Time of the first level	第一个层位的时间
+Time	时间
+increases with depth	随深度增加
+decreases with depth	随深度减小
+First derivative dy/dx (central differences).	一阶导数 dy/dx（中心差分）。
+Moving average, moving median or Gaussian kernel with a window in depth / time units, or LOESS.	以深度 / 时间单位设定窗口的滑动平均、滑动中位数或高斯核平滑，或 LOESS。
+Moving average	滑动平均
+Moving median	滑动中位数
+Gaussian kernel	高斯核
+LOESS (span)	LOESS（跨度）
+Window width (depth / time units)	窗口宽度（深度 / 时间单位）
+For the Gaussian kernel the window is 4 sigma wide.	对于高斯核，窗口宽度为 4 sigma。
+LOESS span (fraction of the record)	LOESS 跨度（占记录的比例）
+Applies a cosine-tapered (Tukey), DPSS, Gaussian or Hann taper to the series, e.g. before a periodogram, and shows the shape of the taper and its spectral window.	对序列施加余弦锥形窗（Tukey）、DPSS 窗、高斯窗或 Hann 窗（例如在计算周期图之前），并显示窗的形状及其谱窗。
+Taper	锥形窗
+Cosine-tapered window (cosTaper)	余弦锥形窗（cosTaper）
+Discrete prolate spheroidal sequence (dpssTaper)	离散扁长椭球序列（dpssTaper）
+Gaussian window (gausTaper)	高斯窗（gausTaper）
+Hann window (hannTaper)	Hann 窗（hannTaper）
+Fraction of the series tapered (1 = Hann)	序列中加窗衰减的比例（1 = Hann）
+Time-bandwidth product	时间带宽积
+Which DPSS (1 = first)	第几个 DPSS（1 = 第一个）
+Gaussian alpha (1 / standard deviation, >= 2.5)	高斯 alpha（1 / 标准差，>= 2.5）
+Normalise the taper to RMS = 1 (keeps the power of a white process)	将锥形窗归一化为 RMS = 1（保持白噪声过程的功率）
+Remove the mean first	先去均值
+Remove a linear trend first	先去除线性趋势
+Also write the taper itself (256 points)	同时写出锥形窗本身（256 个点）
+Accumulation rate of a component (concentration in weight %) from a constant linear sedimentation rate and dry bulk density: component, bulk and linear accumulation rates.	由恒定的线性沉积速率和干体积密度计算某组分（浓度以重量 % 表示）的堆积速率：组分堆积速率、全岩堆积速率和线性堆积速率。
+Dry bulk density (g/cm3)	干体积密度（g/cm3）
+Removes a linear, LOWESS, polynomial or automatic-span LOESS trend (Acycle: Detrending).	去除线性、LOWESS、多项式或自动跨度 LOESS 趋势（Acycle：Detrending）。
+Trend	趋势
+Polynomial	多项式
+LOESS with automatic span (WaverideR)	自动跨度 LOESS（WaverideR）
+LOWESS span (fraction of the record)	LOWESS 跨度（占记录的比例）
+Polynomial order	多项式阶数
+Also write the trend	同时写出趋势
+FFT lowpass filter with a rectangular, Gaussian or cosine-tapered window, the matching highpass (series minus lowpass), or removal of a Gaussian-kernel trend.	采用矩形窗、高斯窗或余弦锥形窗的 FFT 低通滤波，相应的高通滤波（序列减去低通结果），或去除高斯核趋势。
+Lowpass filter (lowpass)	低通滤波（lowpass）
+Highpass: series minus lowpass (lowpass)	高通：序列减去低通结果（lowpass）
+Remove a Gaussian-kernel trend (noKernel)	去除高斯核趋势（noKernel）
+Cut-off frequency (cycles per unit)	截止频率（cycles/单位）
+Window	窗函数
+Rectangular	矩形
+Gaussian	高斯
+Cosine-tapered	余弦锥形
+Gaussian window: alpha (>= 2.5)	高斯窗：alpha（>= 2.5）
+Cosine-tapered window: fraction tapered	余弦锥形窗：加窗衰减的比例
+Zero padding factor	补零倍数
+Remove a linear trend before filtering	滤波前去除线性趋势
+Kernel smoothing (fraction of the record, > 0)	核平滑（占记录的比例，> 0）
+Also write the lowpass / kernel trend	同时写出低通 / 核趋势
+Removes the AR(1) or AR(p) red-noise structure (Acycle: Pre-whitening).	去除 AR(1) 或 AR(p) 红噪声结构（Acycle：Pre-whitening）。
+AR(p), order chosen by AIC	AR(p)，阶数由 AIC 选定
+Maximum AR order	最大 AR 阶数
+Summary of the sampling interval (and its Nyquist frequency) and of the distribution of the values.	采样间隔（及其奈奎斯特频率）和数值分布的摘要。
+Sampling-interval figure	采样间隔图
+Cumulative sampling intervals	累积采样间隔
+Histogram of the sampling intervals	采样间隔直方图
+Mean, median and variance, or minimum, maximum and range, in a window of constant length in depth or time (the number of points per window adapts to uneven sampling); on an even grid also the distribution of the values in each window.	在深度或时间上长度固定的窗口内计算均值、中位数和方差，或最小值、最大值和极差（每个窗口内的点数随非等间距采样而变化）；在等间距网格上还可给出各窗口内数值的分布。
+Mean, median and variance (mwStats)	均值、中位数和方差（mwStats）
+Mean, median, variance and value densities on an even grid (mwStatsGrid)	等间距网格上的均值、中位数、方差和数值密度（mwStatsGrid）
+Minimum, maximum and range (mwMinMax)	最小值、最大值和极差（mwMinMax）
+Window length (depth / time units)	窗口长度（深度 / 时间单位）
+Window placement	窗口位置
+Centred on every level	以每个层位为中心
+Starting at the smallest depth / time	从最小深度 / 时间开始
+Starting at the largest depth / time	从最大深度 / 时间开始
+Confidence interval of the mean (%, 0 = none)	均值的置信区间（%，0 = 无）
+Ends: mean of the first and last half window (centred windows only)	两端：取首、末半个窗口的均值（仅限居中窗口）
+Grid step	网格步长
+Also write the table of windows (mwin / mwinGrid)	同时写出窗口数据表（mwin / mwinGrid）
+Correlation coefficient (Pearson, Spearman or Kendall) of two columns of a table in a moving window of constant length in depth or time.	在深度或时间上长度固定的滑动窗口内，计算数据表中两列的相关系数（Pearson、Spearman 或 Kendall）。
+First proxy	第一个代用指标
+Second proxy	第二个代用指标
+Correlation	相关类型
+Lag-1 autocorrelation in a moving window, averaged over Monte Carlo runs with random sampling intervals and window widths between the shortest and longest window (mean and standard deviation).	滑动窗口内的一阶滞后自相关，对多次蒙特卡洛运行取平均（均值和标准差）；每次运行的采样间隔随机，窗口宽度在最短与最长窗口之间随机选取。
+Shortest window (depth / time units)	最短窗口（深度 / 时间单位）
+Longest window (depth / time units)	最长窗口（深度 / 时间单位）
+Number of simulations	模拟次数
+Cross-plot of two columns of a table with kernel density estimates of each variable along the axes; gives the Pearson and Spearman correlation.	数据表中两列的交会图，沿坐标轴绘出各变量的核密度估计；并给出 Pearson 和 Spearman 相关系数。
+x variable	x 变量
+y variable	y 变量
+Grey fill of the density curves	密度曲线灰色填充
+Principal component analysis of all numeric columns of a table (column 1 depth or time), optionally rotated (varimax or promax); writes the loadings and the scores along the record.	对数据表中所有数值列（第 1 列为深度或时间）进行主成分分析，可选择旋转（varimax 或 promax）；写出载荷以及沿记录的得分。
+Rotation	旋转
+Varimax (orthogonal)	Varimax（正交）
+Promax (oblique)	Promax（斜交）
+Number of components (0 = all)	成分数量（0 = 全部）
+Standardise the variables first (scores of standardised data)	先对变量进行标准化（标准化数据的得分）
+stratPCA uses the correlation matrix but multiplies the loadings with the raw values for the scores.	stratPCA 使用相关矩阵，但计算得分时将载荷与原始值相乘。
+Finds the local maxima and/or minima of a (filtered or extracted) cycle, keeping only the most extreme of consecutive extremes of the same kind, e.g. as tie points for an age model.	寻找（滤波或提取得到的）旋回的局部极大值和/或极小值，在连续的同类极值中仅保留最极端者，例如用作年龄模型的控制点。
+Find	查找
+Maxima	极大值
+Minima	极小值
+Maxima and minima	极大值和极小值
+Points compared on each side	每侧参与比较的点数
+Finds the maxima of peaks and / or minima of troughs, optionally only above (peaks) or below (troughs) a level, or lists the plateau points that are not evaluated as peaks or troughs.	寻找波峰的极大值和/或波谷的极小值，可仅限于高于（波峰）或低于（波谷）某一水平值者，或列出未被判定为波峰或波谷的平台点。
+Peaks	波峰
+Troughs	波谷
+Peaks and troughs	波峰和波谷
+Only peaks above / troughs below a level	仅限高于某一水平值的波峰 / 低于该值的波谷
+Level	水平值
+List the plateau points instead (flat tops / bottoms, not evaluated)	改为列出平台点（平顶 / 平底，不作判定）
+Bayesian change-point regression (as Acycle: Math > Changepoint).	贝叶斯变点回归（同 Acycle：Math > Changepoint）。
+Maximum number of change points	最大变点数
+Minimum segment length (points)	最小分段长度（点数）
+Runs the Bayesian change-point regression (Ruggieri 2013) for 1 to k change points and gives the R2 of each model, to choose the number of change points for Bayesian change points.	对 1 至 k 个变点分别运行贝叶斯变点回归（Ruggieri 2013），给出各模型的 R2，以便为“贝叶斯变点”工具选择变点数。
+Largest number of change points	变点数上限
+Largest number of points (longer records are resampled)	点数上限（更长的记录将被重采样）
+Multitaper (MTM) spectrum with AR(1), robust red-noise (ML96), LOWSPEC or power-law confidence levels; periodogram; maximum entropy (MESA) or adaptive multitaper (AMTM) of WaverideR.	多窗谱（MTM）频谱，置信水平可基于 AR(1)、稳健红噪声（ML96）、LOWSPEC 或幂律；周期图；WaverideR 的最大熵谱（MESA）或自适应多窗谱（AMTM）。
+MTM, AR(1) red noise	MTM，AR(1) 红噪声
+MTM, robust red noise (Mann & Lees 1996)	MTM，稳健红噪声（Mann & Lees 1996）
+LOWSPEC (Meyers 2012)	LOWSPEC（Meyers 2012）
+MTM, power-law noise	MTM，幂律噪声
+Periodogram	周期图
+MESA, maximum entropy (WaverideR)	MESA，最大熵（WaverideR）
+Adaptive MTM with noise models (WaverideR)	带噪声模型的自适应 MTM（WaverideR）
+Spectral whitening background, SWA (WaverideR)	谱白化背景，SWA（WaverideR）
+Time-bandwidth product (NW)	时间带宽积（NW）
+Padding factor	补零倍数
+Remove linear trend	去除线性趋势
+Maximum frequency shown (cycles/unit)	显示的最大频率（cycles/单位）
+Default: the Nyquist frequency, 1 / (2 x sampling interval).	默认值：奈奎斯特频率，1 / (2 x 采样间隔)。
+Horizontal axis	横轴
+Frequency	频率
+Period	周期
+Logarithmic power axis	功率轴取对数
+Bayesian probability spectrum (Gregory 2005, Weedon et al. 2019), periodogram with the Smoothed Window Average background (Kemp 2016, Weedon 2020), or the average spectrum of an evolutive MESA.	贝叶斯概率谱（Gregory 2005，Weedon et al. 2019）、带平滑窗口平均（Smoothed Window Average）背景的周期图（Kemp 2016，Weedon 2020），或演化 MESA 的平均谱。
+Spectrum	频谱
+Bayesian probability spectrum	贝叶斯概率谱
+Periodogram with SWA background	带 SWA 背景的周期图
+Average of an evolutive MESA	演化 MESA 的平均谱
+MESA window length (depth units)	MESA 窗口长度（深度单位）
+MESA window step (depth units)	MESA 窗口步长（深度单位）
+Normalise every window before averaging	取平均前对每个窗口归一化
+Periodogram of an unevenly sampled series without interpolation (Lomb-Scargle), with the power level that the highest peak exceeds by chance with probability alpha (Baluev 2008 or Press et al. 1994), and optionally a p-value of the highest peak by randomisation.	非等间距采样序列无需插值的周期图（Lomb-Scargle），给出最高峰因偶然因素以概率 alpha 超过的功率水平（Baluev 2008 或 Press et al. 1994），并可选择通过随机化计算最高峰的 p 值。
+Lowest frequency (0 = 1 / record length)	最低频率（0 = 1 / 记录长度）
+Highest frequency (cycles/unit)	最高频率（cycles/单位）
+Default: half the inverse of the median sampling interval.	默认值：采样间隔中位数倒数的一半。
+Oversampling factor	过采样倍数
+Significance level alpha	显著性水平 alpha
+Normalisation	归一化
+Standard (0 to 1, Baluev 2008)	标准（0 至 1，Baluev 2008）
+p-value of the highest peak by randomisation (randlsp)	通过随机化计算最高峰的 p 值（randlsp）
+Randomisations	随机化次数
+Tests spectral peaks more strictly than one confidence level: confidence levels and p-values corrected for testing many frequencies at once (Bonferroni and five other corrections), the intermediate spectrum of Thomson et al. (2001) to choose the order of the AR background, or a power-law (1/f) fit.	比单一置信水平更严格地检验谱峰：针对同时检验多个频率进行校正的置信水平和 p 值（Bonferroni 及另外五种校正）、用于选择 AR 背景阶数的 Thomson et al. (2001) 中间谱，或幂律（1/f）拟合。
+Test	检验
+Bonferroni-corrected confidence levels (confAdjust)	Bonferroni 校正的置信水平（confAdjust）
+p-values corrected for multiple testing (multiTest)	多重检验校正的 p 值（multiTest）
+Intermediate spectrum, MTM / AR(p) (mtmAR)	中间谱，MTM / AR(p)（mtmAR）
+Power-law (1/f) fit to the periodogram (pwrLawFit)	对周期图的幂律（1/f）拟合（pwrLawFit）
+Spectrum and background	频谱与背景
+MTM, robust red noise (ML96)	MTM，稳健红噪声（ML96）
+Computed without zero padding, as the multiple-testing corrections require.	按多重检验校正的要求，计算时不补零。
+Frequency bands of interest (optional): low high; low high	关注的频带（可选）：下限 上限; 下限 上限
+Only frequencies in these bands count as tests, which makes the correction less strict. For the power-law fit: the first band is the frequency range of the fit.	只有这些频带内的频率才计为检验次数，从而使校正不那么严格。对于幂律拟合：第一个频带为拟合的频率范围。
+Order of the AR model	AR 模型的阶数
+Increase the order until the intermediate spectrum stops getting flatter.	逐步提高阶数，直到中间谱不再变得更平坦。
+AR estimation	AR 估计方法
+Maximum likelihood	最大似然
+Least squares	最小二乘
+Simulates noise series with the length, sampling and noise of your record and counts how often each background method (AR(1), ML96, LOWSPEC, power law) finds false peaks, in total and per frequency, also after multiple-testing corrections. Use it to choose a background method you can trust.	按您记录的长度、采样方式和噪声特征模拟噪声序列，统计每种背景方法（AR(1)、ML96、LOWSPEC、幂律）检出虚假谱峰的频次（总数及各频率处），包括多重检验校正之后的情况。可据此选择可信赖的背景方法。
+Noise of the simulated series	模拟序列的噪声
+AR(1) coefficient rho or power-law exponent beta (0 = from the data)	AR(1) 系数 rho 或幂律指数 beta（0 = 由数据估计）
+By default rho is the lag-1 autocorrelation of the detrended record, beta its power-law slope.	默认情况下，rho 为去趋势后记录的一阶滞后自相关，beta 为其幂律斜率。
+Background method tested	被检验的背景方法
+MTM, AR(1)	MTM，AR(1)
+MTM, power law	MTM，幂律
+Periodogram, power law	周期图，幂律
+Periodogram, AR(1)	周期图，AR(1)
+Time-bandwidth product (NW, MTM methods)	时间带宽积（NW，MTM 方法）
+Remove a linear trend from the simulated series	去除模拟序列的线性趋势
+Remove a LOWESS trend (span 0-1, 0 = no)	去除 LOWESS 趋势（跨度 0-1，0 = 否）
+Also evaluate multiple-testing corrections	同时评估多重检验校正
+Number of simulated series	模拟序列数量
+Sliding-window spectra: evolutive harmonic analysis (EHA, multitaper), EHA on a log2 period axis, windowed FFT or evolutive maximum entropy (MESA).	滑动窗口频谱：演化谐波分析（EHA，多窗谱）、log2 周期轴上的 EHA、加窗 FFT 或演化最大熵谱（MESA）。
+EHA, multitaper (astrochron)	EHA，多窗谱（astrochron）
+EHA on a log2 period axis (WaverideR)	log2 周期轴上的 EHA（WaverideR）
+Windowed FFT (WaverideR)	加窗 FFT（WaverideR）
+Evolutive MESA (WaverideR)	演化 MESA（WaverideR）
+Pad the ends by half a window	两端各填充半个窗口
+No padding (the result starts and ends half a window inside)	不填充（结果的起止点各向内缩进半个窗口）
+Mirror the record at its ends	在两端对记录做镜像延拓
+Mean value	均值
+With padding, windows are also centred on the first and last samples, so the result spans the whole record.	填充后，窗口也会以首、末采样点为中心，因此结果覆盖整条记录。
+Step (depth / time units)	步长（深度 / 时间单位）
+Maximum frequency (cycles/unit)	最大频率（cycles/单位）
+Logarithmic power	功率取对数
+Normalise each window to its maximum	将每个窗口归一化到其最大值
+Depth / time on the vertical axis (Acycle style)	深度 / 时间为纵轴（Acycle 风格）
+Evolutive harmonic analysis (EHA), then the power in a frequency band through the record and its share of the total power (e.g. how strong precession is along the section), or the spectrum at one depth.	先进行演化谐波分析（EHA），然后给出某一频带的功率沿记录的变化及其占总功率的比例（例如岁差信号沿剖面的强弱），或某一深度处的频谱。
+Result	结果
+Power in a band through the record (integratePower)	某一频带的功率沿记录的变化（integratePower）
+Spectrum at one depth (extract)	某一深度处的频谱（extract）
+Window length (depth units)	窗口长度（深度单位）
+Step (depth units)	步长（深度单位）
+Highest frequency of the EHA (cycles/unit)	EHA 的最高频率（cycles/单位）
+Frequency band: low high (cycles/unit)	频带：下限 上限（cycles/单位）
+Default: around the highest peak of the periodogram.	默认值：周期图最高峰附近。
+Normalise each spectrum to unit total power	将每个频谱归一化为总功率为 1
+Depth of the spectrum	频谱所在深度
+Power	功率
+Amplitude	振幅
+Harmonic F-test probability	谐波 F 检验概率
+Evolutive multitaper spectra in which every window is first warped by the linear change of the sedimentation rate that sharpens its spectrum most, so cycles whose period changes become sharp lines; gives the rate gradient per window. Optional significance against warped AR(1) surrogates.	演化多窗谱：每个窗口先按最能使其频谱锐化的沉积速率线性变化进行拉伸变换，使周期变化的旋回成为清晰的谱线；并给出每个窗口的速率梯度。可选择以经同样变换的 AR(1) 替代数据检验显著性。
+Step between windows (0 = window / 20)	窗口间步长（0 = 窗口 / 20）
+Largest relative rate gradient tried (per depth unit)	尝试的最大相对速率梯度（每深度单位）
+Number of gradients on each side of zero	零两侧各自的梯度个数
+Choice of the gradient of a window	窗口梯度的选取依据
+Strength of the lines (F-test)	谱线强度（F 检验）
+Match with the astronomical template	与天文模板的匹配程度
+Highest whitened peak	白化后的最高峰
+Spectral entropy	谱熵
+Astronomical periods of the template (kyr)	模板的天文周期（kyr）
+Depth unit of the data	数据的深度单位
+metres	米
+centimetres	厘米
+feet	英尺
+Number of AR(1) surrogates for significance (0 = none, slow)	用于显著性检验的 AR(1) 替代数据个数（0 = 无，较慢）
+Figure	图形
+De-chirped map, significant cells outlined	去啁啾图，显著单元加轮廓线
+Significance (ratio to the 95% surrogate level)	显著性（与 95% 替代数据水平之比）
+De-chirped map only	仅去啁啾图
+Continuous wavelet transform with 22 mother wavelets, superlet transform or synchrosqueezed wavelet transform (WaverideR). Significance against red noise is optional for the CWT.	连续小波变换（22 种母小波）、超小波变换或同步压缩小波变换（WaverideR）。CWT 可选择进行相对于红噪声的显著性检验。
+Continuous wavelet transform (CWT)	连续小波变换（CWT）
+Superlet transform	超小波变换
+Synchrosqueezed wavelet transform (SST)	同步压缩小波变换（SST）
+Mother wavelet	母小波
+Morlet, zero mean	Morlet，零均值
+Generalised Morse	广义 Morse
+Complex Morlet (cmor)	复 Morlet（cmor）
+Complex Gaussian (cgau)	复高斯（cgau）
+Complex Mexican hat	复墨西哥帽
+Frequency B-spline	频率 B 样条
+DOG (real)	DOG（实）
+Real Morlet	实 Morlet
+Hermitian hat	Hermitian 帽
+Number of cycles (omega_nr)	振荡周数（omega_nr）
+Scale resolution dj (smaller = more periods, slower)	尺度分辨率 dj（越小周期越多、越慢）
+Number of periods	周期个数
+Base number of cycles c1	基础振荡周数 c1
+Superlet order (min, max)	超小波阶数（最小，最大）
+Significance against red noise (slower)	相对于红噪声的显著性（较慢）
+Number of red-noise simulations	红噪声模拟次数
+Show the average spectrum	显示平均谱
+Show the data	显示数据
+Period axis label	周期轴标签
+Depth axis label	深度轴标签
+Colour scale	色标
+Default (quantiles)	默认（分位数）
+Quantiles	分位数
+Logarithmic	对数
+Square root	平方根
+Automatic	自动
+Whiten (equal contrast at every period)	白化（各周期对比度相同）
+Sharper scalograms than the plain CWT: adaptive Morlet wavelet (number of cycles grows with the period), superlet synchrosqueezing, chirplet synchrosqueezing (follows changes of the sedimentation rate, with a map of the rate of change of the period) and ConceFT / multitaper synchrosqueezing (robust against noise).	比普通 CWT 更清晰的小波尺度图：自适应 Morlet 小波（振荡周数随周期增大）、超小波同步压缩、啁啾小波同步压缩（可跟随沉积速率的变化，并给出周期变化率图）以及 ConceFT / 多窗同步压缩（抗噪声能力强）。
+Adaptive Morlet wavelet (Awavelet)	自适应 Morlet 小波（Awavelet）
+Superlet synchrosqueezing (superlet SST)	超小波同步压缩（superlet SST）
+Chirplet synchrosqueezing (chirplet SST, slow)	啁啾小波同步压缩（chirplet SST，较慢）
+ConceFT (multitaper synchrosqueezing, Daubechies et al. 2016)	ConceFT（多窗同步压缩，Daubechies et al. 2016）
+Multitaper SST (average of Morse wavelets)	多窗 SST（Morse 小波的平均）
+Number of cycles at the shortest period (omega_min)	最短周期处的振荡周数（omega_min）
+Number of cycles at the longest period (omega_max)	最长周期处的振荡周数（omega_max）
+Change of the number of cycles with the period	振荡周数随周期的变化方式
+Linear in log2(period)	随 log2(周期) 线性变化
+Linear in the scale index	随尺度序号线性变化
+Linear in period	随周期线性变化
+Quadratic	二次
+Number of cycles of the orders (omega_0)	各阶的振荡周数（omega_0）
+Combination of the orders	各阶的合并方式
+Geometric mean	几何平均
+Arithmetic mean	算术平均
+Largest dimensionless chirp tried	尝试的最大无量纲啁啾率
+Chirp step	啁啾率步长
+Show the map of the rate of change of the period instead of the power	显示周期变化率图而非功率图
+Number of Morse wavelets (K)	Morse 小波个数（K）
+Number of random combinations	随机组合次数
+Scores the astronomical template on scalograms of chirped Morlet wavelets matched to every rate gradient, for every depth and sedimentation rate (an eCOCO-like evidence map that allows for changing rates). Shows the best score over the gradients and the best rate at every depth.	在与各速率梯度相匹配的啁啾 Morlet 小波尺度图上，对每个深度和每个沉积速率计算天文模板的得分（类似 eCOCO 的证据图，但允许速率变化）。显示各梯度中的最佳得分以及每个深度的最佳速率。
+Astronomical periods (kyr)	天文周期（kyr）
+Period and rate spacing (octaves)	周期与速率间隔（倍频程）
+Number of cycles of the wavelet (omega_0)	小波的振荡周数（omega_0）
+Step between scored positions (0 = 5 samples)	评分位置之间的步长（0 = 5 个采样点）
+Second file: the tracked period curve (depth, period) of a cycle of known duration. The record is tuned with it, transformed in time and mapped back onto depth, so all cycles become sharp lines where the track is right: a check of the track. Optional significance against warped AR(1) surrogates.	第二个文件：已知持续时间的某一旋回的追踪周期曲线（深度、周期）。用它对记录进行调谐，在时间域做变换后再映射回深度，这样在追踪正确的层段所有旋回都成为清晰的谱线：这是对追踪结果的检验。可选择以经同样变换的 AR(1) 替代数据检验显著性。
+Transform in time	时间域变换
+Morlet wavelet	Morlet 小波
+Superlet SST	超小波 SST
+Multisynchrosqueezing	多重同步压缩
+Chirplet SST (slow)	啁啾小波 SST（较慢）
+Multitaper EHA	多窗谱 EHA
+Combined (Morlet, EHA and superlet SST)	组合（Morlet、EHA 和超小波 SST）
+Shortest period (kyr; 0 = automatic)	最短周期（kyr；0 = 自动）
+Longest period (kyr; 0 = automatic)	最长周期（kyr；0 = 自动）
+Period spacing (octaves)	周期间隔（倍频程）
+Number of cycles of the Morlet wavelet	Morlet 小波的振荡周数
+EHA window (kyr; 0 = 20 x shortest period)	EHA 窗口（kyr；0 = 20 x 最短周期）
+Tuned scalogram (time domain)	调谐后的小波尺度图（时间域）
+Frequency uncertainty of a Fourier spectrum of this record (practical 1/T and Heisenberg-Gabor limit) and the period range a cycle can be told apart from (Rayleigh band), for the periods you give.	针对您给出的周期，计算该记录傅里叶谱的频率不确定度（实用 1/T 和 Heisenberg-Gabor 极限），以及某一旋回与其他周期区分开所需的周期范围（Rayleigh 频带）。
+Periods of interest	关注的周期
+Number of Rayleigh bandwidths (half-width of the band)	Rayleigh 带宽的倍数（频带半宽）
+Which parts of a wavelet or superlet scalogram stand above noise: analytic Torrence & Compo (1998) levels, Monte Carlo surrogates (white, AR(1), signal-corrected AR(1) or power-law noise, with p-values of candidate cycles), or percentiles of the average spectrum of red-noise runs.	小波或超小波尺度图中哪些部分高于噪声：Torrence & Compo (1998) 解析水平、蒙特卡洛替代数据（白噪声、AR(1)、经信号校正的 AR(1) 或幂律噪声，并给出候选旋回的 p 值），或多次红噪声模拟的平均谱百分位数。
+Scalogram	小波尺度图
+Superlet	超小波
+Analytic (Torrence & Compo 1998, instantaneous)	解析法（Torrence & Compo 1998，瞬时）
+Noise surrogates (Monte Carlo)	噪声替代数据（蒙特卡洛）
+Red-noise percentiles of the average spectrum	平均谱的红噪声百分位数
+Noise background	噪声背景
+AR(1) without the candidate cycles	剔除候选旋回后的 AR(1)
+Power law (1/f^beta)	幂律（1/f^beta）
+Periods removed before fitting the noise	拟合噪声前剔除的周期
+Candidate periods to give p-values for	需给出 p 值的候选周期
+Significance level	显著性水平
+Percentiles of the red noise	红噪声的百分位数
+Scale resolution dj	尺度分辨率 dj
+Keeps only the ridges of a synchrosqueezed transform (SST, superlet SST or ConceFT) that are unlikely to come from AR noise of the record (optionally with a variance that changes along the record).	仅保留同步压缩变换（SST、超小波 SST 或 ConceFT）中不太可能来自记录 AR 噪声的脊线（可选择让噪声方差沿记录变化）。
+Synchrosqueezed wavelet transform	同步压缩小波变换
+Number of noise simulations	噪声模拟次数
+Highest AR order of the noise model	噪声模型的最高 AR 阶数
+Noise variance changes along the record	噪声方差沿记录变化
+Averages the wavelet power over a band of periods (e.g. one Milankovitch band) and tests it at every depth against white or AR(1) noise (Torrence & Compo 1998, eq. 24): is this cycle significant here?	在某一周期频带（如某个米兰科维奇频带）内对小波功率取平均，并在每个深度处相对于白噪声或 AR(1) 噪声进行检验（Torrence & Compo 1998，式 24）：该旋回在此处是否显著？
+Shortest period of the band	频带的最短周期
+Longest period of the band	频带的最长周期
+Degrees of freedom	自由度
+Exact (eigenvalues)	精确（特征值）
+Number of cycles of the Morlet wavelet (omega_nr)	Morlet 小波的振荡周数（omega_nr）
+Null-hypothesis series with the same spectrum as the data: IAAFT surrogates keep the value distribution exactly and the spectrum approximately, phase-randomised (FT) surrogates keep the spectrum exactly.	与数据具有相同频谱的零假设序列：IAAFT 替代数据精确保持数值分布并近似保持频谱，相位随机化（FT）替代数据精确保持频谱。
+Surrogate type	替代数据类型
+IAAFT (Schreiber & Schmitz 1996)	IAAFT（Schreiber & Schmitz 1996）
+Fourier phase randomisation	傅里叶相位随机化
+Number of surrogates	替代数据个数
+Maximum IAAFT iterations	IAAFT 最大迭代次数
+Surrogate series with the same power spectrum as the record but random phases (Ebisuzaki 1997), or noise generated from a theoretical spectrum (power law or AR(1); Timmer and Konig 1995) with the length, sampling, mean and standard deviation of the record.	与记录具有相同功率谱但相位随机的替代序列（Ebisuzaki 1997），或由理论谱（幂律或 AR(1)；Timmer and Konig 1995）生成的噪声，其长度、采样方式、均值和标准差与记录一致。
+Phase-randomised surrogates of the record (surrogates)	记录的相位随机化替代数据（surrogates）
+Noise from a theoretical spectrum (makeNoise)	由理论谱生成的噪声（makeNoise）
+Number of series	序列数量
+Keep the mean of the record	保持记录的均值
+Keep the variance of the record	保持记录的方差
+Power law 1 / f^beta	幂律 1 / f^beta
+beta or rho (0 = from the record)	beta 或 rho（0 = 由记录估计）
+Random seed (0 = random)	随机种子（0 = 随机）
+Band-pass filter: Taner (Taner 2000), Gaussian or cosine-tapered window. Optionally writes the amplitude envelope. Drag the two lines on the spectrum or type the cut-off frequencies.	带通滤波：Taner（Taner 2000）、高斯或余弦锥形窗。可选择写出振幅包络。可在频谱上拖动两条线或直接输入截止频率。
+Filter	滤波器
+Taner (astrochron)	Taner（astrochron）
+Gaussian (WaverideR)	高斯（WaverideR）
+Cosine-tapered window (astrochron)	余弦锥形窗（astrochron）
+Low frequency cut-off (cycles/unit)	低频截止（cycles/单位）
+High frequency cut-off (cycles/unit)	高频截止（cycles/单位）
+Taner roll-off rate	Taner 滚降率
+Add the mean back to the filtered series	将均值加回滤波后的序列
+Also write the amplitude envelope (Hilbert)	同时写出振幅包络（Hilbert）
+Instantaneous amplitude of a filtered series (Acycle: Amplitude Modulation).	滤波序列的瞬时振幅（Acycle：Amplitude Modulation）。
+Reconstructs a cycle of fixed period from the wavelet transform (band given as factors of the period or as shortest and longest period), its spectral power, or its amplitude (wavelet analogue of the Hilbert envelope, absolute calibration); or the envelope of the whole record.	由小波变换重构固定周期的旋回（频带以周期的倍数或以最短、最长周期给出）、其谱功率或其振幅（Hilbert 包络的小波对应量，绝对标定）；或整条记录的包络。
+Extract	提取
+Cycle, band as factors of the period	旋回，频带以周期的倍数表示
+Cycle, band as shortest and longest period	旋回，频带以最短和最长周期表示
+Spectral power of the cycle	旋回的谱功率
+Amplitude of the cycle	旋回的振幅
+Envelope of the whole record	整条记录的包络
+Period of the cycle	旋回的周期
+Lower band factor	频带下限系数
+Upper band factor	频带上限系数
+Add the mean of the data to the cycle	将数据的均值加回旋回
+Second file: the tracked period curve (depth, period). Extracts the tracked cycle (or another cycle scaled from it) with band limits from the Gabor uncertainty of the wavelet, its spectral power, or its amplitude along the changing period.	第二个文件：追踪周期曲线（深度、周期）。提取所追踪的旋回（或由其换算的其他旋回），频带界限取自小波的 Gabor 不确定度；也可提取其谱功率或沿变化周期的振幅。
+Cycle, band from the wavelet uncertainty	旋回，频带取自小波不确定度
+Duration of the cycle to extract (kyr)	要提取旋回的持续时间（kyr）
+Band half-width (standard deviations of the uncertainty)	频带半宽（不确定度的标准差倍数）
+Second file: the tracked period curve (depth, period). Band-pass filter whose pass band follows the tracked period (the dynamic filter of Acycle, Thibault & Rizzi / Li), computed in sliding Hann windows.	第二个文件：追踪周期曲线（深度、周期）。通带随追踪周期变化的带通滤波（Acycle 的动态滤波，Thibault & Rizzi / Li），在滑动 Hann 窗内计算。
+Relative bandwidth of the pass band	通带的相对带宽
+Number of control points (0 = all track points)	节点个数（0 = 全部追踪点）
+Window step (depth units)	窗口步长（深度单位）
+Drop the ends covered by less than 10% of a window (edge blow-up)	舍弃窗口覆盖不足 10% 的两端（边缘失真）
+Show the pass band as period	以周期显示通带
+Wavelet coherence and phase of two series; series 2 is interpolated onto the depths of series 1.	两条序列的小波相干与相位；序列 2 插值到序列 1 的深度上。
+Cross-wavelet power and phase of two series; series 2 is interpolated onto the depths of series 1.	两条序列的交叉小波功率与相位；序列 2 插值到序列 1 的深度上。
+Cross-superlet power and phase of two series (the superlet counterpart of the cross wavelet); series 2 is interpolated onto the depths of series 1.	两条序列的交叉超小波功率与相位（交叉小波的超小波对应方法）；序列 2 插值到序列 1 的深度上。
+Show phase arrows	显示相位箭头
+Fourier coherence and phase of two series (Acycle: lead-lag), with the lead or lag of series 2 behind series 1 in the units of column 1 at each frequency and the 95% significance level of the coherence. Both series are interpolated onto a common grid over their overlap.	两条序列的傅里叶相干与相位（Acycle：lead-lag），给出各频率处序列 2 相对于序列 1 的超前或滞后量（以第 1 列的单位表示）以及相干的 95% 显著性水平。两条序列在其重叠段内插值到共同的网格上。
+Common sampling interval	共同采样间隔
+Smoothing: modified Daniell span (odd, at least 3)	平滑：修正 Daniell 跨度（奇数，至少为 3）
+Applied twice; wider spans give a smoother coherence with more degrees of freedom.	施加两次；跨度越宽，相干越平滑，自由度越高。
+Cosine taper proportion	余弦锥形窗比例
+Zero padding (proportion of the length)	补零（占长度的比例）
+Remove linear trends	去除线性趋势
+Confidence level	置信水平
+Highest frequency shown	显示的最高频率
+Lowest panel	底部子图
+Lag of series 2 (units of column 1)	序列 2 的滞后量（第 1 列的单位）
+Correlation of two records with a significance test that respects their serial correlation (phase-randomised surrogates, also for different sampling; Baddouh et al. 2016), or the shift of the second record that correlates best with the first (slideCor).	两条记录的相关分析，显著性检验考虑其序列相关性（相位随机化替代数据，也适用于采样不同的情形；Baddouh et al. 2016），或求第二条记录与第一条记录相关性最佳时的偏移量（slideCor）。
+Correlation with surrogate significance (surrogateCor)	带替代数据显著性的相关（surrogateCor）
+Best shift between the records (slideCor)	两条记录之间的最佳偏移量（slideCor）
+Correlation coefficient	相关系数
+Spearman rank	Spearman 秩相关
+Kendall rank	Kendall 秩相关
+Correlate first differences	对一阶差分求相关
+Reverse the polarity of the second record	反转第二条记录的极性
+Remove the linear trend of each window	去除每个窗口的线性趋势
+Smallest overlap (points, 0 = default)	最小重叠（点数，0 = 默认）
+Splits the series into intrinsic mode functions (IMFs, from short to long periods) plus a residue and the removed trend, by (ensemble) empirical mode decomposition. Writes all modes as one table (input for Instantaneous frequency and Ratios), chosen modes or the sum of modes as series, and checks of the decomposition. Uneven sampling is allowed.	通过（集合）经验模态分解，将序列分解为本征模态函数（IMF，周期由短到长）以及残余项和被去除的趋势。可将全部模态写成一张数据表（作为“瞬时频率”和“比值”工具的输入），将选定模态或模态之和写成序列，并对分解进行检查。允许非等间距采样。
+Ensemble EMD (EEMD, added white noise)	集合 EMD（EEMD，添加白噪声）
+EMD (no added noise)	EMD（不添加噪声）
+Number of IMFs	IMF 个数
+The residue (and, unless bound to it, the removed trend) is added as an extra mode.	残余项（以及被去除的趋势，除非已并入残余项）作为额外模态加入。
+Ensemble size (decompositions combined, even)	集合规模（合并的分解次数，偶数）
+Noise amplitude factor	噪声振幅系数
+Noise amplitude unit	噪声振幅单位
+Mean of the lag-1 differences	一阶滞后差分的均值
+Data units	数据单位
+Mirrored noise (cancels when combined)	镜像噪声（合并时相互抵消）
+Sifting iterations	筛分迭代次数
+Removed before decomposition (added back as a mode)	分解前去除（作为一个模态加回）
+Linear trend	线性趋势
+Add the removed trend to the residue (one mode instead of two)	将被去除的趋势并入残余项（一个模态而非两个）
+Resampling	重采样
+None (uneven sampling allowed)	无（允许非等间距采样）
+Even, at the greatest common divisor of the spacing (respace)	等间距，取间距的最大公约数（respace）
+Even, at an own interval	等间距，自定义间隔
+respace only refines: the interval must divide the greatest common divisor of the depth steps.	respace 只能加密：间隔必须能整除深度步长的最大公约数。
+Merge modes (groups separated by ;)	合并模态（各组以 ; 分隔）
+For example 6, 7 or 1, 2; 7, 8 (mode.bind). Mode numbers of the decomposition before merging.	例如 6, 7 或 1, 2; 7, 8（mode.bind）。此处为合并前分解的模态编号。
+Write these modes as two-column series	将这些模态写成两列序列
+For example 4 or 4, 6 (numbers after merging).	例如 4 或 4, 6（合并后的编号）。
+Write the sum of these modes as a series	将这些模态之和写成一条序列
+For example 3-5: a band-pass reconstruction (mode.out, keep). Numbers after merging.	例如 3-5：带通重构（mode.out，keep）。此处为合并后的编号。
+Check the decomposition (integrity, parsimony, symmetry, check.emd)	检查分解（完整性、简约性、对称性，check.emd）
+Signal and all modes	信号与全部模态
+DecomposeR plot_emd (modes listed below)	DecomposeR plot_emd（模态见下方列表）
+Modes in the figure (empty = all)	图中的模态（留空 = 全部）
+Decomposes the series into components of a trajectory matrix (singular spectrum analysis), to be grouped into trend, cycles and noise. Writes the same table as EMD (input for Instantaneous frequency and Ratios). Uneven series are interpolated and the components given at the original depths.	将序列分解为轨迹矩阵的各成分（奇异谱分析），再归并为趋势、旋回和噪声。写出与 EMD 相同格式的数据表（作为“瞬时频率”和“比值”工具的输入）。非等间距序列先经插值，各成分再在原始深度处给出。
+Implementation	实现方式
+Base R (CycloDesk)	Base R（CycloDesk）
+Window length (points)	窗口长度（点数）
+Longer than the longest period of interest; at most half the record.	应长于所关注的最长周期；最多为记录长度的一半。
+Number of components	成分数量
+Removed before decomposition (written as the trend)	分解前去除（写为趋势）
+Nothing	无
+Group components (groups separated by ;)	成分分组（各组以 ; 分隔）
+For example 1, 2; 3, 4: each pair of a cycle gives one component. Components not listed stay single.	例如 1, 2; 3, 4：一个旋回的每对成分合为一个成分。未列出的成分保持独立。
+Write these components as two-column series	将这些成分写成两列序列
+Numbers of the columns after grouping.	分组后各列的编号。
+Signal and components	信号与各成分
+Share of variance per component	各成分的方差贡献率
+Instantaneous frequency, period and amplitude of IMFs: select a decomposition table written by EMD / SSA (all modes) or a two-column series (one IMF or a filtered cycle). The period curves can be used as a tracked cycle in Age models > Build an age model > Depth to time.	IMF 的瞬时频率、周期和振幅：选择由 EMD / SSA 写出的分解数据表（全部模态）或一条两列序列（单个 IMF 或滤波得到的旋回）。所得周期曲线可在“年龄模型 > 建立年龄模型 > 深度转时间”中作为追踪旋回使用。
+Modes to analyse (empty = all but residue and trend)	要分析的模态（留空 = 除残余项和趋势外的全部模态）
+Positions among the mode columns: 1 = first column after depth and signal (imf_1 of an EMD table).	在模态列中的位置：1 = 深度和信号之后的第一列（EMD 数据表的 imf_1）。
+Instantaneous frequency method	瞬时频率方法
+Hilbert transform (HT)	Hilbert 变换（HT）
+Normalised Hilbert transform (NHT)	归一化 Hilbert 变换（NHT）
+Direct quadrature (DQ)	直接正交法（DQ）
+Generalised zero-crossing (GZC)	广义过零点法（GZC）
+Hilbert transform, analytic derivative (chain rule)	Hilbert 变换，解析导数（链式法则）
+HT: Hilbert transform; NHT and DQ first normalise the mode to unit amplitude (Huang et al. 2009), which can fail; GZC: generalised zero crossing, robust, precise to a quarter period (needs simple modes); chain: Hilbert transform with the analytic derivative of the phase.	HT：Hilbert 变换；NHT 和 DQ 先将模态归一化为单位振幅（Huang et al. 2009），这一步可能失败；GZC：广义过零点法，稳健，精度为四分之一周期（要求模态简单）；chain：采用相位解析导数的 Hilbert 变换。
+Interpolation interval for the Hilbert transform (0 = automatic)	Hilbert 变换的插值间隔（0 = 自动）
+Uneven series are interpolated before the transform; 0 uses the greatest common divisor of the spacing (HT, NHT) or the median spacing (chain).	非等间距序列在变换前先插值；0 表示采用间距的最大公约数（HT、NHT）或间距中位数（chain）。
+Differentiation lag (samples)	差分滞后（采样点数）
+Running median of the period curves (points, 0 = none)	周期曲线的滑动中位数（点数，0 = 无）
+Smooths the written period curves (useful for an age model); the table also keeps the raw values.	对写出的周期曲线进行平滑（便于建立年龄模型）；数据表中同时保留原始值。
+Compare with the zero-crossing frequency (gzc.departure)	与过零点频率比较（gzc.departure）
+Period curves of all modes	全部模态的周期曲线
+One mode: envelope and period	单个模态：包络与周期
+Period distribution (plot_pulse)	周期分布（plot_pulse）
+Spectral population, period vs amplitude (plot_pulse)	谱总体分布，周期对振幅（plot_pulse）
+DecomposeR plot_imf (one mode)	DecomposeR plot_imf（单个模态）
+Mode for the one-mode figures	单模态图所用的模态
+Reference periods drawn in the figure	图中绘出的参考周期
+Instantaneous ratios of the frequencies of pairs of modes of a decomposition table (EMD / SSA), with the product of their amplitudes. Compare them with the ratios of astronomical periods (e.g. 405 / 21 kyr) to test an astronomical interpretation without an age model.	分解数据表（EMD / SSA）中成对模态的瞬时频率之比，以及二者振幅的乘积。将其与天文周期之比（如 405 / 21 kyr）比较，可在没有年龄模型的情况下检验天文解释。
+Modes (at least two; empty = all but residue and trend)	模态（至少两个；留空 = 除残余项和趋势外的全部模态）
+Positions among the mode columns, e.g. 4, 6, 7.	在模态列中的位置，例如 4, 6, 7。
+Reference periods (expected ratios between them)	参考周期（它们之间的预期比值）
+Periods in any one unit (e.g. kyr); every ratio between them is listed and drawn.	周期采用任一统一单位（如 kyr）；它们之间的每个比值都会列出并绘出。
+Pairs in the figure (e.g. 4/6; empty = automatic)	图中的模态对（如 4/6；留空 = 自动）
+Ratios along the record	沿记录的比值
+Ratio population (plot_ratio)	比值总体分布（plot_ratio）
+Compares the instantaneous frequency computed with the Hilbert transform with the exact value for a test signal a sin(2 pi f1 t + phi1) + b sin(2 pi f2 t + phi2) + c, to see how sampling, an offset or a second cycle bias the method.	对测试信号 a sin(2 pi f1 t + phi1) + b sin(2 pi f2 t + phi2) + c，将 Hilbert 变换计算的瞬时频率与精确值进行比较，以了解采样、偏移量或第二个旋回如何使该方法产生偏差。
+Length of the test signal	测试信号的长度
+Random (uneven) sampling with the same number of points	点数相同的随机（非等间距）采样
+Phase derivative	相位导数
+Arctangent of the phase (arctan)	相位的反正切（arctan）
+Analytic derivative (chain)	解析导数（chain）
+Amplitude a of cycle 1	旋回 1 的振幅 a
+Frequency f1 of cycle 1	旋回 1 的频率 f1
+Phase phi1 of cycle 1 (radians)	旋回 1 的相位 phi1（弧度）
+Amplitude b of cycle 2	旋回 2 的振幅 b
+Frequency f2 of cycle 2	旋回 2 的频率 f2
+Phase phi2 of cycle 2 (radians)	旋回 2 的相位 phi2（弧度）
+Offset c	偏移量 c
+Bispectrum and bicoherence: phase coupling between frequencies, e.g. combination tones of astronomical cycles.	双谱与双相干：频率之间的相位耦合，例如天文旋回的组合频率。
+Significance test	显著性检验
+Surrogates (IAAFT, slow)	替代数据（IAAFT，较慢）
+Bispectrum and bicoherence by Welch overlapping segments (Choudhury et al. 2008), as in Sullivan et al. (2023): high bicoherence at (f1, f2) means f1 + f2 is a combination tone with coupled phases.	采用 Welch 重叠分段法计算双谱与双相干（Choudhury et al. 2008），同 Sullivan et al. (2023)：(f1, f2) 处的高双相干表示 f1 + f2 是相位耦合的组合频率。
+Number of segments	分段数
+Overlap of the segments (%)	分段重叠（%）
+Confidence level of the contour (%)	等值线的置信水平（%）
+Hanning taper	Hanning 窗
+Frequencies to mark (optional)	要标注的频率（可选）
+Bicoherence	双相干
+Bispectrum	双谱
+Power spectrum	功率谱
+Recurrence plot of the series after time-delay embedding (Acycle: Recurrence plot): dark points mark pairs of depths at which the system is in a similar state. Regular cycles give diagonal lines; changes in the pattern mark changes in the dynamics. Gives the recurrence quantification (RR, DET, LAM, ...).	序列经时间延迟嵌入后的递归图（Acycle：Recurrence plot）：深色点标示系统处于相似状态的深度对。规则的旋回表现为对角线；图案的变化标示动力学特征的变化。并给出递归定量分析指标（RR、DET、LAM ...）。
+Embedding dimension	嵌入维数
+Delay (samples)	延迟（采样点数）
+Default: the first lag at which the autocorrelation falls below 1/e.	默认值：自相关首次降至 1/e 以下时的滞后。
+Distance threshold	距离阈值
+Fraction of the largest distance	最大距离的比例
+Recurrence rate	递归率
+Recurrence rate (share of recurrent pairs)	递归率（递归点对所占比例）
+Distance	距离
+Euclidean	欧氏
+Manhattan	曼哈顿
+Standardise the series first	先对序列进行标准化
+Most points in the plot (subsampling)	图中的最大点数（抽样）
+Shortest line for DET and LAM (points)	DET 和 LAM 的最短线长（点数）
+Distance matrix (unthresholded)	距离矩阵（未取阈值）
+Running lag-1 autocorrelation with Monte Carlo windows, a sea-level proxy (Li et al. 2018, Acycle: rho1).	基于蒙特卡洛窗口的滑动一阶滞后自相关，一种海平面代用指标（Li et al. 2018，Acycle：rho1）。
+Shortest window (time units)	最短窗口（时间单位）
+Longest window (time units)	最长窗口（时间单位）
+Monte Carlo simulations (at least 50)	蒙特卡洛模拟次数（至少 50）
+Dynamic noise after orbital tuning, a sea-level proxy for tuned series (Li et al. 2018, Acycle: DYNOT).	天文调谐后的动态噪声，一种适用于已调谐序列的海平面代用指标（Li et al. 2018，Acycle：DYNOT）。
+Shortest window (kyr)	最短窗口（kyr）
+Longest window (kyr)	最长窗口（kyr）
+Step (kyr)	步长（kyr）
+Monte Carlo simulations	蒙特卡洛模拟次数
+Ratio of power in astronomical bands to total power in sliding windows (Acycle: Power Decomposition Analysis).	滑动窗口内天文频带功率与总功率之比（Acycle：Power Decomposition Analysis）。
+Target band (two frequencies, cycles/unit)	目标频带（两个频率，cycles/单位）
+Window length	窗口长度
+Ratio of the power in a target band to the total power in sliding windows, exactly as the Acycle menu and DYNOT compute it (adaptive multitaper, historical bin mapping).	滑动窗口内目标频带功率与总功率之比，计算方式与 Acycle 菜单和 DYNOT 完全一致（自适应多窗谱，沿用原有的频点映射）。
+Step (samples)	步长（采样点数）
+Padding (FFT length)	补零（FFT 长度）
+Evolutive mean frequency and bandwidth, indicators of sedimentation-rate change (Sinnesael et al. 2018).	演化平均频率与带宽，沉积速率变化的指示量（Sinnesael et al. 2018）。
+Step	步长
+Tracks the astronomical cycles in a scalogram automatically (hidden Markov model over all cycles at once) and gives the sedimentation rate and an age model with uncertainty. Use the Track view to do it by hand.	在小波尺度图中自动追踪天文旋回（对所有旋回同时使用隐马尔可夫模型），给出沉积速率和带不确定度的年龄模型。如需手动追踪，请使用“追踪”视图。
+Approximate age (Ma)	大致年龄（Ma）
+Morlet CWT (fast)	Morlet CWT（快）
+Multi-synchrosqueezed (msst)	多重同步压缩（msst）
+Tracker	追踪器
+HMM on the scalogram	小波尺度图上的 HMM
+HMM and chirp-matched spectra	HMM 与啁啾匹配谱
+Chirp-matched spectra	啁啾匹配谱
+Tracks the sedimentation rate through a scalogram with all astronomical cycles at once (hidden Markov model), with a credible band and an age model. The iterative method repeats the tracking on the record converted to time, which sharpens the cycles.	利用全部天文旋回同时在小波尺度图中追踪沉积速率（隐马尔可夫模型），给出可信带和年龄模型。迭代法在转换到时间域的记录上重复追踪，从而使旋回更加清晰。
+One pass on a scalogram (track_astro_hmm)	在小波尺度图上单次追踪（track_astro_hmm）
+Iterative, in the time domain (track_astro_iterative)	迭代，在时间域中进行（track_astro_iterative）
+Sedimentation rates are given in cm/kyr; the depth unit converts them to the depth unit of the data.	沉积速率以 cm/kyr 给出；深度单位用于将其换算为数据的深度单位。
+At the age of the record (AstroGeo22)	按记录的年龄（AstroGeo22）
+Own list (kyr)	自定义列表（kyr）
+Age of the record (Ma)	记录的年龄（Ma）
+Obliquity and precession periods at this age (lunar recession), from WaverideR::astro_periods_tracking.	该年龄的斜率和岁差周期（月球退行），来自 WaverideR::astro_periods_tracking。
+Periods (kyr)	周期（kyr）
+Synchrosqueezed CWT	同步压缩 CWT
+Superlet SST (slower)	超小波 SST（较慢）
+Scalogram of the first pass	首次追踪所用的小波尺度图
+Number of cycles of the wavelet (omega_nr)	小波的振荡周数（omega_nr）
+Iterations in the time domain	时间域迭代次数
+Approximate duration (kyr, 0 = unknown)	大致持续时间（kyr，0 = 未知）
+Turned into a guide for the tracking; strongly recommended for real records.	将转换为追踪的引导约束；对实际记录强烈建议填写。
+Background of the power	功率背景
+Rate change allowed per shortest cycle (sd of log2 rate)	每个最短旋回允许的速率变化（log2 速率的 sd）
+Probability of an abrupt jump	突变跳跃的概率
+Depths of possible jumps, e.g. hiatuses (optional)	可能发生跳跃的深度，如沉积间断（可选）
+Smoothing of the tracked path	追踪路径的平滑
+Piecewise constant (TV)	分段常数（TV）
+Piecewise linear	分段线性
+Posterior samples (uncertainty)	后验样本（不确定度）
+Track on the scalogram	小波尺度图上的追踪曲线
+Evidence map (rate x depth)	证据图（速率 x 深度）
+Posterior of the rate	速率的后验分布
+Sed. rate and age model	沉积速率与年龄模型
+Sliding-window multitaper spectra de-chirped for a linear change of the rate, scored against the astronomical template. Gives a tracked rate (HMM on rate and gradient) or the spectral rate estimate per window (rate-gram).	针对速率线性变化去啁啾的滑动窗口多窗谱，并按天文模板评分。给出追踪的速率（对速率和梯度的 HMM）或每个窗口的谱速率估计（速率图，rate-gram）。
+Estimate	估计方式
+HMM tracking of rate and gradient (track_chirp_hmm)	速率与梯度的 HMM 追踪（track_chirp_hmm）
+Best rate per window, median filtered (rate_gram)	每个窗口的最佳速率，经中值滤波（rate_gram）
+Largest relative change of the rate across a window	窗口内速率的最大相对变化
+Weight of the spectral evidence	谱证据的权重
+Median filter (windows)	中值滤波（窗口数）
+Follows one cycle (e.g. precession or the 405-kyr eccentricity) through an evolutive maximum-entropy spectrum and converts its period to a sedimentation rate with the duration of the cycle.	在演化最大熵谱中跟踪某一旋回（如岁差或 405-kyr 偏心率），并利用该旋回的持续时间将其周期转换为沉积速率。
+Shortest period of the tracked cycle (depth units)	所追踪旋回的最短周期（深度单位）
+Longest period of the tracked cycle (depth units)	所追踪旋回的最长周期（深度单位）
+e.g. 405 (long eccentricity), 100, 41 (obliquity) or about 20 (precession).	例如 405（长偏心率）、100、41（斜率）或约 20（岁差）。
+Largest change of frequency between windows (fraction)	窗口间频率的最大变化（比例）
+Penalty for changes of frequency	频率变化的惩罚项
+Scores every trial sedimentation rate at every depth by how well the astronomical periods match the wavelet spectrum (FLMW fit, peak or template match, or summed power above red noise), then finds the most probable smooth rate curve with a credible band.	根据天文周期与小波谱的匹配程度（FLMW 拟合、谱峰或模板匹配，或高于红噪声的功率之和），对每个深度的每个试验沉积速率进行评分，然后求出最可能的平滑速率曲线及其可信带。
+Score	评分
+Template match (fast)	模板匹配（快）
+Weighted peak match	加权谱峰匹配
+Linear fit to spectral peaks (classic FLMW)	对谱峰的线性拟合（经典 FLMW）
+Summed power above red noise	高于红噪声的功率之和
+Sed. rate step (cm/kyr)	沉积速率步长（cm/kyr）
+Period tolerance (relative)	周期容差（相对）
+Red-noise simulations	红噪声模拟次数
+Red-noise percentile	红噪声百分位数
+Rate change allowed per metre (sd of the log rate)	每米允许的速率变化（对数速率的 sd）
+Depths of hiatuses or breaks (optional)	沉积间断或中断的深度（可选）
+Sharpness of the score	评分的锐度
+Converts a tracked cycle (depth and its period or frequency, e.g. from EHA or a tracked scalogram ridge) into a sedimentation-rate curve and age model, given the duration of the cycle.	给定旋回的持续时间，将追踪的旋回（深度及其周期或频率，例如来自 EHA 或追踪的小波尺度图脊线）转换为沉积速率曲线和年龄模型。
+Column 2 of the data	数据的第 2 列
+Period (depth units)	周期（深度单位）
+Frequency (cycles/depth unit)	频率（cycles/深度单位）
+Duration of the cycle (kyr)	旋回的持续时间（kyr）
+Optimises the sedimentation rate by fitting precession amplitude modulation and spectral power (Meyers 2015).	通过拟合岁差振幅调制和谱功率来优化沉积速率（Meyers 2015）。
+Minimum sed. rate (cm/kyr)	最小沉积速率（cm/kyr）
+Maximum sed. rate (cm/kyr)	最大沉积速率（cm/kyr）
+Number of sed. rates	沉积速率个数
+Sed. rate grid	沉积速率网格
+Envelope fit	包络拟合
+Precession amplitude modulation	岁差振幅调制
+Short eccentricity modulation	短偏心率调制
+Eccentricity periods (kyr, empty = default)	偏心率周期（kyr，留空 = 默认）
+Precession periods (kyr, empty = default)	岁差周期（kyr，留空 = 默认）
+TimeOpt in sliding windows: astrochron eTimeOpt, or WaverideR win_timeOpt with the null-model bias correction.	滑动窗口 TimeOpt：astrochron 的 eTimeOpt，或带零模型偏差校正的 WaverideR win_timeOpt。
+eTimeOpt (astrochron)	eTimeOpt（astrochron）
+win_timeOpt, bias corrected (WaverideR)	win_timeOpt，偏差校正（WaverideR）
+Null simulations per window	每个窗口的零模型模拟次数
+Runs windowed TimeOpt (bias corrected against noise) with the precession, short-eccentricity and obliquity amplitude-modulation fits and compares their best rates per window: rates that agree are robust, rates in the ratio of two cycles point to an alias. Depth in metres.	分别采用岁差、短偏心率和斜率振幅调制拟合运行分窗 TimeOpt（相对于噪声做偏差校正），并比较各窗口的最佳速率：相互一致的速率是稳健的，而比值等于两个旋回之比的速率则提示存在混叠。深度以米为单位。
+Fit 1: precession amplitude modulation	拟合 1：岁差振幅调制
+Fit 2: short-eccentricity amplitude modulation	拟合 2：短偏心率振幅调制
+Fit 3: obliquity amplitude modulation	拟合 3：斜率振幅调制
+Fixed length in depth	深度上长度固定
+Fixed duration in time	时间上时长固定
+Window length (m)	窗口长度（m）
+Window duration (kyr)	窗口时长（kyr）
+Noise simulations per window	每个窗口的噪声模拟次数
+Tolerance of the rate ratios	速率比值的容差
+TimeOpt default	TimeOpt 默认
+Fit written as sed. rate curve	写成沉积速率曲线的拟合
+Fit 1	拟合 1
+Fit 2	拟合 2
+Fit 3	拟合 3
+TimeOpt (Meyers 2015) over a grid of sedimentation rates, with the p-value of the best fit from simulated AR(1) or power-law noise series that are analysed in the same way, and the TimeOpt summary figure. Depth in metres.	在沉积速率网格上运行 TimeOpt（Meyers 2015），最佳拟合的 p 值由以相同方式分析的 AR(1) 或幂律模拟噪声序列得出，并给出 TimeOpt 汇总图。深度以米为单位。
+Statistic tested	被检验的统计量
+r2 opt (envelope x power)	r2 opt（包络 x 功率）
+r2 spectral power	r2 谱功率
+r2 envelope	r2 包络
+Noise model of the simulations	模拟所用的噪声模型
+AR(1) red noise (timeOptSim)	AR(1) 红噪声（timeOptSim）
+Power law (timeOptSimPwrLaw)	幂律（timeOptSimPwrLaw）
+rho or beta of the noise (0 = from the record)	噪声的 rho 或 beta（0 = 由记录估计）
+Meyers (2015) used 2000; with 100 the smallest p-value that can be reported is 0.1.	Meyers (2015) 使用了 2000 次；若为 100 次，可报告的最小 p 值为 0.1。
+Processor cores	处理器核数
+Include the modulation periods in the spectral fit	在谱拟合中包含调制周期
+In decreasing order, starting with 405 kyr; default 405.7, 130.7, 123.8, 98.9, 94.9 kyr.	按降序排列，从 405 kyr 开始；默认值 405.7, 130.7, 123.8, 98.9, 94.9 kyr。
+Default 23.6, 22.3, 19.1, 18.9 kyr.	默认值 23.6, 22.3, 19.1, 18.9 kyr。
+Low cut-off of the bandpass (cycles/kyr, 0 = default)	带通滤波的低频截止（cycles/kyr，0 = 默认）
+Default 0.035 (precession modulation) or 0.007 (short eccentricity modulation).	默认值 0.035（岁差调制）或 0.007（短偏心率调制）。
+High cut-off of the bandpass (cycles/kyr, 0 = default)	带通滤波的高频截止（cycles/kyr，0 = 默认）
+Default 0.065 (precession modulation) or 0.0115 (short eccentricity modulation).	默认值 0.065（岁差调制）或 0.0115（短偏心率调制）。
+Roll-off of the Taner filter (dB/octave, 0 = default)	Taner 滤波器的滚降率（dB/octave，0 = 默认）
+TimeOpt for a sedimentation rate that changes along the record following a template: faster deposition of one lithology (the proxy itself as template), a linear change, steps at given depths or possible hiatuses. Gives the instantaneous sed. rate, an age model and optionally a Monte Carlo p-value. Slow: each average rate is a full optimisation. Depth in metres.	适用于沉积速率按模板沿记录变化的 TimeOpt：某种岩性沉积较快（以代用指标本身为模板）、线性变化、在给定深度处的阶跃或可能的沉积间断。给出瞬时沉积速率、年龄模型，并可选择给出蒙特卡洛 p 值。较慢：每个平均速率都是一次完整的优化。深度以米为单位。
+Sedimentation-rate template	沉积速率模板
+The proxy itself (differential accumulation)	代用指标本身（差异堆积）
+Linear change along the record	沿记录线性变化
+Steps at given depths	在给定深度处阶跃
+Possible hiatuses at given depths	在给定深度处可能存在沉积间断
+Depths of the steps or hiatuses	阶跃或沉积间断的深度
+Minimum average sed. rate (cm/kyr)	最小平均沉积速率（cm/kyr）
+Maximum average sed. rate (cm/kyr)	最大平均沉积速率（cm/kyr）
+Number of average sed. rates	平均沉积速率个数
+Lowest instantaneous sed. rate (cm/kyr, 0 = default)	最低瞬时沉积速率（cm/kyr，0 = 默认）
+Highest instantaneous sed. rate (cm/kyr, 0 = factor below)	最高瞬时沉积速率（cm/kyr，0 = 采用下方系数）
+Highest instantaneous rate as a factor of the average (0 = default 5)	最高瞬时速率相对于平均值的倍数（0 = 默认 5）
+Optimise on	优化对象
+Modulations x spectral power	调制 x 谱功率
+Modulations	调制
+Spectral power	谱功率
+Remove the linear trend of the template	去除模板的线性趋势
+Flip the template	翻转模板
+Monte Carlo significance (timeOptTemplateSim, slow)	蒙特卡洛显著性（timeOptTemplateSim，较慢）
+Bayesian TimeOpt of Malinverno and Meyers (2024): posterior probability of the sedimentation rate and the precession frequency k on a grid, with age-specific priors, the best astronomical fit and optionally the p-values of AR(2) noise simulations. k also gives the Earth-Moon distance and day length. Depth in metres.	Malinverno and Meyers (2024) 的贝叶斯 TimeOpt：在网格上计算沉积速率和岁差频率 k 的后验概率，采用与年龄相应的先验，给出最佳天文拟合，并可选择给出 AR(2) 噪声模拟的 p 值。由 k 还可得到地月距离和日长。深度以米为单位。
+Lowest k (arcsec/yr, 0 = from the prior)	最低 k（arcsec/yr，0 = 取自先验）
+Highest k (arcsec/yr, 0 = from the prior)	最高 k（arcsec/yr，0 = 取自先验）
+Number of k values	k 值个数
+Include the envelope fit	包含包络拟合
+Obliquity terms	斜率项
+s1 to s6	s1 至 s6
+s3 and s4	s3 和 s4
+Tolerance of the precession band (cycles/kyr)	岁差频带的容差（cycles/kyr）
+Significance with 1000 AR(2) simulations (timeOptBSim)	用 1000 次 AR(2) 模拟检验显著性（timeOptBSim）
+Likelihood maps	似然图
+Posterior	后验
+Best fit to the data	对数据的最佳拟合
+AR(2) noise fit	AR(2) 噪声拟合
+Simulations (timeOptBSim)	模拟（timeOptBSim）
+Markov chain Monte Carlo versions of Bayesian TimeOpt: posterior distributions of the sedimentation rate, the precession frequency k and the Solar System frequencies g (and s), hence of all astronomical periods and grand cycles. Slow: astrochron recommends 50 000 samples for timeOptBMCMC. Depth in metres.	贝叶斯 TimeOpt 的马尔可夫链蒙特卡洛版本：给出沉积速率、岁差频率 k 以及太阳系频率 g（和 s）的后验分布，进而得到全部天文周期和超长周期的后验分布。较慢：astrochron 建议 timeOptBMCMC 使用 50 000 个样本。深度以米为单位。
+timeOptBMCMC (Malinverno and Meyers 2024)	timeOptBMCMC（Malinverno and Meyers 2024）
+timeOptMCMC (Meyers and Malinverno 2018)	timeOptMCMC（Meyers and Malinverno 2018）
+Sets the priors of k and of the g (and s) frequencies (Hoang et al. 2021).	用于设定 k 以及 g（和 s）频率的先验（Hoang et al. 2021）。
+Number of MCMC samples	MCMC 样本数
+Fit	拟合
+Power and envelope	功率和包络
+Power only	仅功率
+Prior mean of k (arcsec/yr, 0 = AstroGeo22 at the age)	k 的先验均值（arcsec/yr，0 = 该年龄的 AstroGeo22 值）
+Prior standard deviation of k (arcsec/yr, 0 = AstroGeo22 range)	k 的先验标准差（arcsec/yr，0 = AstroGeo22 范围）
+Figure number	图号
+timeOptBMCMC: 1 MCMC diagnostics, 2 posterior and prior PDFs, 3 Milankovitch periods, 4-5 grand cycles, 6 correlations. timeOptMCMC: 1 stability, 2-3 candidates along the chain, 4 kernel densities, 5 histograms.	timeOptBMCMC：1 MCMC 诊断，2 后验与先验 PDF，3 米兰科维奇周期，4-5 超长周期，6 相关性。timeOptMCMC：1 稳定性，2-3 沿链的候选值，4 核密度，5 直方图。
+Evolutive TimeOpt in sliding windows, then the r2 maxima in every window (eTimeOptTrack) and the best sedimentation rate along the record as a sed.-rate curve and age model. Depth in metres.	滑动窗口演化 TimeOpt，然后提取每个窗口的 r2 极大值（eTimeOptTrack），并将沿记录的最佳沉积速率输出为沉积速率曲线和年龄模型。深度以米为单位。
+Step (m)	步长（m）
+Statistic tracked	被追踪的统计量
+Smallest r2 of a tracked maximum	被追踪极大值的最小 r2
+Correlation coefficient between the data spectrum and an astronomical target for a range of sedimentation rates (Li et al. 2018).	在一定沉积速率范围内，数据频谱与天文目标之间的相关系数（Li et al. 2018）。
+Approximate age of the record (Ma)	记录的大致年龄（Ma）
+Used to set the precession and obliquity periods of the target (Berger 1992 / Waltham 2015).	用于设定目标的岁差和斜率周期（Berger 1992 / Waltham 2015）。
+Monte Carlo simulations (0 = none)	蒙特卡洛模拟次数（0 = 无）
+COCO in sliding windows with ridge tracking of the best sedimentation rate (Li et al. 2018).	滑动窗口 COCO，并对最佳沉积速率进行脊线追踪（Li et al. 2018）。
+Correlation of the data spectrum with an astronomical target over a range of constant sedimentation rates (Acycle 3): adaptive target amplitudes, or cvCOCO with targets trained on one half of the record and tested on the other. Depth in metres.	在一系列恒定沉积速率下计算数据频谱与天文目标的相关（Acycle 3）：自适应目标振幅，或 cvCOCO（目标在记录的一半上训练、在另一半上检验）。深度以米为单位。
+cvCOCO, blocked halves	cvCOCO，分块对半
+cvCOCO, interleaved samples	cvCOCO，交错采样点
+Adaptive COCO	自适应 COCO
+Target amplitudes	目标振幅
+Fitted per orbital group	按轨道参数组拟合
+Fitted per period	按周期拟合
+Fixed (Acycle weights)	固定（Acycle 权重）
+Astronomical target periods	天文目标周期
+Acycle default (La2004, nine periods)	Acycle 默认（La2004，九个周期）
+Own nine periods (kyr)	自定义九个周期（kyr）
+Nine periods (kyr, descending)	九个周期（kyr，降序）
+Correlation and p-values	相关与 p 值
+Folds and validation spectra	分折与验证频谱
+Monte Carlo audit	蒙特卡洛核查
+Data spectrum and fixed target at the best rate	最佳速率下的数据频谱与固定目标
+Evolutive COCO of Acycle 3: adaptive targets, or targets trained on separate data (blocked or interleaved validation) so that the correlation is not inflated. The sed.-rate ridge is tracked automatically or through points you give. Depth in metres.	Acycle 3 的演化 COCO：自适应目标，或在独立数据上训练的目标（分块或交错验证），以避免相关被高估。沉积速率脊线可自动追踪，也可通过您给出的点追踪。深度以米为单位。
+Blocked validation (ecoco_blocked)	分块验证（ecoco_blocked）
+Interleaved validation (ecoco_interleaved, slow)	交错验证（ecoco_interleaved，较慢）
+Adaptive (ecoco_adaptive)	自适应（ecoco_adaptive）
+Ridge tracking	脊线追踪
+Viterbi ridge (ecoco_track_ridge)	Viterbi 脊线（ecoco_track_ridge）
+Best rate per window (ecoco_best_per_window)	每个窗口的最佳速率（ecoco_best_per_window）
+Acycle depth slices (ecoco_track)	Acycle 深度分段（ecoco_track）
+Through given points (track_ecoco)	通过给定点（track_ecoco）
+Number of depth slices	深度分段数
+Largest rate jump between windows (cm/kyr)	窗口间的最大速率跳变（cm/kyr）
+Largest p-value of a tracked peak	被追踪峰的最大 p 值
+Points: depth rate; depth rate; ...	点：深度 速率; 深度 速率; ...
+COCO or evolutive COCO with the spectrum of an astronomical series (series 2: time in kyr, value, e.g. an ETP or insolation series from Basic Series) as the target. Depth in metres.	以某一天文序列（序列 2：时间单位 kyr，数值，例如由“基本序列”生成的 ETP 或日照量序列）的频谱为目标的 COCO 或演化 COCO。深度以米为单位。
+COCO (one rate for the record)	COCO（整条记录一个速率）
+eCOCO (sliding windows)	eCOCO（滑动窗口）
+Highest target frequency (cycles/kyr)	目标的最高频率（cycles/kyr）
+Average spectral misfit (Meyers and Sageman 2007; Meyers et al. 2012): compares the frequencies of significant spectral peaks with astronomical target frequencies over a range of sedimentation rates and gives the null-hypothesis significance level (Ho-SL). Evolutive: in sliding EHA windows, with the Ho-SL minima tracked along the record. Depth in metres.	平均频谱失配（Meyers and Sageman 2007；Meyers et al. 2012）：在一定沉积速率范围内，将显著谱峰的频率与天文目标频率进行比较，并给出零假设显著性水平（Ho-SL）。演化模式：在滑动 EHA 窗口内进行，并沿记录追踪 Ho-SL 极小值。深度以米为单位。
+Whole record (asm)	整条记录（asm）
+Evolutive, sliding windows (eAsm, eAsmTrack)	演化，滑动窗口（eAsm，eAsmTrack）
+Astronomical target periods (kyr)	天文目标周期（kyr）
+Relative uncertainty of the targets (0-1, 0 = none)	目标的相对不确定度（0-1，0 = 无）
+Time-bandwidth product of the spectra (NW)	频谱的时间带宽积（NW）
+Harmonic F-test level of the peaks (0-1)	谱峰的谐波 F 检验水平（0-1）
+Own peak frequencies (cycles/m, optional)	自定义谱峰频率（cycles/m，可选）
+Largest Ho-SL of a tracked minimum (%)	被追踪极小值的最大 Ho-SL（%）
+Tests constant sedimentation rates against noise analysed at the same rate (TimeOpt, likelihood and COCO scores, several noise models), or estimates the rate history and tests the minimally tuned record against surrogates. Depth in metres.	将恒定沉积速率与以相同速率分析的噪声进行对比检验（TimeOpt、似然和 COCO 评分，多种噪声模型），或估计速率变化历史并将最小调谐后的记录与替代数据进行对比检验。深度以米为单位。
+Constant rates, TimeOpt / COCO scores (astro_sedrate_test)	恒定速率，TimeOpt / COCO 评分（astro_sedrate_test）
+Tracked rate and tuning against surrogates (astro_tune_test)	追踪速率和调谐与替代数据对比（astro_tune_test）
+TimeOpt fit	TimeOpt 拟合
+Short-eccentricity modulation	短偏心率调制
+Default	默认
+Include the COCO score	包含 COCO 评分
+Minimal tuning at the best rate (writes an age model)	按最佳速率进行最小调谐（写出年龄模型）
+Noise series	噪声序列
+Surrogates	替代数据
+Sampled rate paths	抽样的速率路径
+Runs the astronomical sedimentation-rate test on two proxies of the same section and combines their evidence rate by rate (they share one sedimentation rate). Depth in metres.	对同一剖面的两个代用指标分别进行天文沉积速率检验，并逐个速率合并二者的证据（两者共用同一沉积速率）。深度以米为单位。
+TimeOpt fit 1 (precession modulation)	TimeOpt 拟合 1（岁差调制）
+TimeOpt fit 2 (short-eccentricity modulation)	TimeOpt 拟合 2（短偏心率调制）
+Combination	合并方式
+Minimum p	最小 p 值
+Floating age model from a filtered cycle: every maximum (or minimum) of the filtered series is one cycle period later than the previous one (Acycle: Build Age Model; minimal tuning).	由滤波旋回建立浮动年龄模型：滤波序列的每个极大值（或极小值）比前一个晚一个旋回周期（Acycle：Build Age Model；最小调谐）。
+Period of the filtered cycle (kyr)	滤波旋回的周期（kyr）
+Tie points at	控制点位于
+Half-width of the peak search (points)	峰值搜索半宽（点数）
+Age of the first tie point (kyr)	第一个控制点的年龄（kyr）
+Also write the tuned series	同时写出调谐序列
+Age model from a filtered or extracted cycle (depth in metres): the distance between successive maxima, minima or both of the cycle is set to its duration. Use a filtered series (Time Series > Filtering and cycle extraction) or a cycle extracted in the Track view.	由滤波或提取得到的旋回建立年龄模型（深度以米为单位）：将该旋回相邻极大值、极小值或二者之间的间距设为其持续时间。请使用滤波序列（时间序列 > 滤波与旋回提取）或在“追踪”视图中提取的旋回。
+Maxima (one cycle apart)	极大值（相隔一个旋回）
+Minima (one cycle apart)	极小值（相隔一个旋回）
+Maxima and minima (half a cycle apart)	极大值和极小值（相隔半个旋回）
+Points compared on each side (peak detection)	每侧参与比较的点数（峰值检测）
+Age of the top of the record (kyr)	记录顶部的年龄（kyr）
+Integrates a sedimentation-rate curve (depth in m, rate in cm/kyr) to a depth-time model.	对沉积速率曲线（深度单位 m，速率单位 cm/kyr）积分，得到深度-时间模型。
+Converts a record (file 1: depth in metres, value) to time with file 2: a tracked period curve of one cycle (depth, period), a sedimentation-rate curve (depth, cm/kyr) or tie points (depth, age).	利用文件 2 将记录（文件 1：深度以米为单位，数值）转换到时间域；文件 2 可为某一旋回的追踪周期曲线（深度、周期）、沉积速率曲线（深度、cm/kyr）或控制点（深度、年龄）。
+File 2 holds	文件 2 的内容
+Tracked period curve of one cycle	某一旋回的追踪周期曲线
+Sedimentation-rate curve (cm/kyr)	沉积速率曲线（cm/kyr）
+Tie points (depth, age)	控制点（深度、年龄）
+Interpolate the result at an even time step	按等时间步长对结果插值
+Time step (kyr)	时间步长（kyr）
+Converts a depth series to time with an age model (file 2: depth, age), as Acycle: Age Scale.	利用年龄模型（文件 2：深度、年龄）将深度序列转换到时间域，同 Acycle：Age Scale。
+Age model (depth, age)	年龄模型（深度、年龄）
+Extrapolate beyond the first and last tie point	外推至首、末控制点之外
+Interpolate the tuned series at an even step	按等步长对调谐序列插值
+Turns a floating astrochronology (time in kyr from the start of the record) into absolute ages by giving one point of the floating scale a radioisotopic or other age.	通过为浮动标尺上的某一点赋予放射性同位素年龄或其他年龄，将浮动天文年代标尺（自记录起点算起的时间，单位 kyr）转换为绝对年龄。
+Floating time of the anchor point (kyr)	锚点的浮动时间（kyr）
+Age of the anchor point (kyr)	锚点的年龄（kyr）
+The floating time increases	浮动时间的增加方向
+Towards the present (older at the start)	朝向现今（起点较老）
+Away from the present (younger at the start)	远离现今（起点较年轻）
+Sort the output with decreasing age	输出按年龄降序排列
+Weighted mean of dates with uncertainties, MSWD and probability of fit, with the confidence interval of IsoPlot or ArArCALC (also for any values with uncertainties), or the age spectrum and plateau age of an Ar/Ar step-heating experiment. Data file: date and uncertainty (wtMean; or the six Ar/Ar columns date, uncertainty, K/Ca, %Ar40*, F, F uncertainty), or the seven step-heating columns %Ar39, date, uncertainty, K/Ca, %Ar40*, F, F uncertainty.	带不确定度的定年数据的加权平均值、MSWD 和拟合概率，置信区间按 IsoPlot 或 ArArCALC 计算（也适用于任何带不确定度的数值），或 Ar/Ar 阶段加热实验的年龄谱和坪年龄。数据文件：年龄和不确定度（wtMean；或 Ar/Ar 的六列：年龄、不确定度、K/Ca、%Ar40*、F、F 的不确定度），或阶段加热的七列：%Ar39、年龄、不确定度、K/Ca、%Ar40*、F、F 的不确定度。
+Dates with uncertainties (wtMean)	带不确定度的定年数据（wtMean）
+Ar/Ar step heating (stepHeat)	Ar/Ar 阶段加热（stepHeat）
+Uncertainties in the file are	文件中的不确定度为
+95% confidence interval	95% 置信区间
+ArArCALC (Koppers 2002)	ArArCALC（Koppers 2002）
+IsoPlot (Ludwig 2008)	IsoPlot（Ludwig 2008）
+Rows left out of the mean (optional)	不参与平均的行（可选）
+Row numbers of the data file, e.g. outliers by Chauvenet's criterion listed in the result.	数据文件的行号，例如结果中列出的按 Chauvenet 准则判定的异常值。
+Time unit of the dates	定年数据的时间单位
+J value (neutron fluence, 0 = none)	J 值（中子通量，0 = 无）
+Ar/Ar only: adds the uncertainty of J.	仅 Ar/Ar：加入 J 的不确定度。
+Uncertainty of J (0 = none)	J 的不确定度（0 = 无）
+Total decay constant of 40K (1/yr)	40K 的总衰变常数（1/yr）
+%Ar40* level shown	显示的 %Ar40* 水平
+Boundaries, mid-ages and colours of the units of the International Chronostratigraphic Chart: a unit and its subdivisions, an age range, or the units at one age, drawn as a time-scale chart; optionally with the astronomical periods at the mid-age.	国际年代地层表各年代单位的界线、中值年龄和颜色：某一单位及其次级单位、某一年龄范围，或某一年龄所属的各级单位，绘制成地质年代表；可选择给出中值年龄处的天文周期。
+A unit and its subdivisions	某一单位及其次级单位
+An age range	某一年龄范围
+The units at one age	某一年龄所属的各级单位
+Unit	单位
+Phanerozoic (Eon, 0-541 Ma)	显生宙（宙，0-541 Ma）
+Cenozoic (Era, 0-66 Ma)	新生代（代，0-66 Ma）
+Quaternary (Period, 0-2.58 Ma)	第四纪（纪，0-2.58 Ma）
+Holocene (Epoch, 0-0.0117 Ma)	全新世（世，0-0.0117 Ma）
+Holocene Age (Age, 0-0.0117 Ma)	全新期（期，0-0.0117 Ma）
+Pleistocene (Epoch, 0.0117-2.58 Ma)	更新世（世，0.0117-2.58 Ma）
+Calabrian (Age, 0.781-1.8 Ma)	卡拉布里雅期（期，0.781-1.8 Ma）
+Gelasian (Age, 1.8-2.58 Ma)	杰拉期（期，1.8-2.58 Ma）
+Neogene (Period, 2.58-23.03 Ma)	新近纪（纪，2.58-23.03 Ma）
+Pliocene (Epoch, 2.58-5.333 Ma)	上新世（世，2.58-5.333 Ma）
+Piacenzian (Age, 2.58-3.6 Ma)	皮亚琴察期（期，2.58-3.6 Ma）
+Zanclean (Age, 3.6-5.333 Ma)	赞克勒期（期，3.6-5.333 Ma）
+Miocene (Epoch, 5.333-23.03 Ma)	中新世（世，5.333-23.03 Ma）
+Messinian (Age, 5.333-7.246 Ma)	墨西拿期（期，5.333-7.246 Ma）
+Tortonian (Age, 7.246-11.63 Ma)	托尔托纳期（期，7.246-11.63 Ma）
+Serravallian (Age, 11.63-13.82 Ma)	塞拉瓦莱期（期，11.63-13.82 Ma）
+Langhian (Age, 13.82-15.97 Ma)	兰盖期（期，13.82-15.97 Ma）
+Burdigalian (Age, 15.97-20.44 Ma)	波尔多期（期，15.97-20.44 Ma）
+Aquitanian (Age, 20.44-23.03 Ma)	阿基坦期（期，20.44-23.03 Ma）
+Paleogene (Period, 23.03-66 Ma)	古近纪（纪，23.03-66 Ma）
+Oligocene (Epoch, 23.03-33.9 Ma)	渐新世（世，23.03-33.9 Ma）
+Chattian (Age, 23.03-28.1 Ma)	夏特期（期，23.03-28.1 Ma）
+Rupelian (Age, 28.1-33.9 Ma)	吕珀尔期（期，28.1-33.9 Ma）
+Eocene (Epoch, 33.9-56 Ma)	始新世（世，33.9-56 Ma）
+Priabonian (Age, 33.9-37.8 Ma)	普利亚本期（期，33.9-37.8 Ma）
+Bartonian (Age, 37.8-41.2 Ma)	巴顿期（期，37.8-41.2 Ma）
+Lutetian (Age, 41.2-47.8 Ma)	卢泰特期（期，41.2-47.8 Ma）
+Ypresian (Age, 47.8-56 Ma)	伊普里斯期（期，47.8-56 Ma）
+Paleocene (Epoch, 56-66 Ma)	古新世（世，56-66 Ma）
+Thanetian (Age, 56-59.2 Ma)	坦尼特期（期，56-59.2 Ma）
+Selandian (Age, 59.2-61.6 Ma)	塞兰特期（期，59.2-61.6 Ma）
+Danian (Age, 61.6-66 Ma)	丹麦期（期，61.6-66 Ma）
+Mesozoic (Era, 66-252 Ma)	中生代（代，66-252 Ma）
+Cretaceous (Period, 66-145 Ma)	白垩纪（纪，66-145 Ma）
+Maastrictian (Age, 66-72.1 Ma)	马斯特里赫特期（期，66-72.1 Ma）
+Campanian (Age, 72.1-83.6 Ma)	坎潘期（期，72.1-83.6 Ma）
+Santonian (Age, 83.6-86.3 Ma)	圣通期（期，83.6-86.3 Ma）
+Coniacian (Age, 86.3-89.8 Ma)	康尼亚克期（期，86.3-89.8 Ma）
+Turonian (Age, 89.8-93.9 Ma)	土伦期（期，89.8-93.9 Ma）
+Cenamonian (Age, 93.9-100 Ma)	塞诺曼期（期，93.9-100 Ma）
+Albian (Age, 100-113 Ma)	阿尔布期（期，100-113 Ma）
+Aptian (Age, 113-126 Ma)	阿普特期（期，113-126 Ma）
+Barremian (Age, 126-131 Ma)	巴雷姆期（期，126-131 Ma）
+Hauterivian (Age, 131-134 Ma)	欧特里夫期（期，131-134 Ma）
+Valanginian (Age, 134-139 Ma)	瓦兰今期（期，134-139 Ma）
+Berriasian (Age, 139-145 Ma)	贝里阿斯期（期，139-145 Ma）
+Jurassic (Period, 145-201.3 Ma)	侏罗纪（纪，145-201.3 Ma）
+Tithonian (Age, 145-152.1 Ma)	提塘期（期，145-152.1 Ma）
+Kimmeridgian (Age, 152.1-157.3 Ma)	钦莫利期（期，152.1-157.3 Ma）
+Oxfordian (Age, 157.3-163.5 Ma)	牛津期（期，157.3-163.5 Ma）
+Callovian (Age, 163.5-166.1 Ma)	卡洛夫期（期，163.5-166.1 Ma）
+Bathonian (Age, 166.1-168.3 Ma)	巴通期（期，166.1-168.3 Ma）
+Bajocian (Age, 168.3-170.3 Ma)	巴柔期（期，168.3-170.3 Ma）
+Aalenian (Age, 170.3-174.1 Ma)	阿林期（期，170.3-174.1 Ma）
+Toarcian (Age, 174.1-182.7 Ma)	托阿尔期（期，174.1-182.7 Ma）
+Pliensbachian (Age, 182.7-190.8 Ma)	普林斯巴期（期，182.7-190.8 Ma）
+Sinemurian (Age, 190.8-199.3 Ma)	辛涅缪尔期（期，190.8-199.3 Ma）
+Hettangian (Age, 199.3-201.3 Ma)	赫塘期（期，199.3-201.3 Ma）
+Triassic (Period, 201.3-251.902 Ma)	三叠纪（纪，201.3-251.902 Ma）
+Rhaetian (Age, 201.3-208.5 Ma)	瑞替期（期，201.3-208.5 Ma）
+Norian (Age, 208.5-227 Ma)	诺利期（期，208.5-227 Ma）
+Carnian (Age, 227-237 Ma)	卡尼期（期，227-237 Ma）
+Ladinian (Age, 237-242 Ma)	拉丁期（期，237-242 Ma）
+Anisian (Age, 242-247.2 Ma)	安尼期（期，242-247.2 Ma）
+Olenekian (Age, 247.2-251.2 Ma)	奥伦尼克期（期，247.2-251.2 Ma）
+Induan (Age, 251.2-251.902 Ma)	印度期（期，251.2-251.902 Ma）
+Paleozoic (Era, 251.902-541 Ma)	古生代（代，251.902-541 Ma）
+Permian (Period, 251.902-298.9 Ma)	二叠纪（纪，251.902-298.9 Ma）
+Lopingian (Epoch, 251.902-259.1 Ma)	乐平世（世，251.902-259.1 Ma）
+Changhsingian (Age, 251.902-254.14 Ma)	长兴期（期，251.902-254.14 Ma）
+Wuchiapingian (Age, 254.14-259.1 Ma)	吴家坪期（期，254.14-259.1 Ma）
+Guadalupian (Epoch, 259.1-272.95 Ma)	瓜德鲁普世（世，259.1-272.95 Ma）
+Capitanian (Age, 259.1-265.1 Ma)	卡匹敦期（期，259.1-265.1 Ma）
+Wordian (Age, 265.1-268.8 Ma)	沃德期（期，265.1-268.8 Ma）
+Roardian (Age, 268.8-272.95 Ma)	罗德期（期，268.8-272.95 Ma）
+Cisuralian (Epoch, 272.95-298.9 Ma)	乌拉尔世（世，272.95-298.9 Ma）
+Kungurian (Age, 272.95-283.5 Ma)	空谷期（期，272.95-283.5 Ma）
+Artinskian (Age, 283.5-290.1 Ma)	亚丁斯克期（期，283.5-290.1 Ma）
+Sakmarian (Age, 290.1-295 Ma)	萨克马尔期（期，290.1-295 Ma）
+Asselian (Age, 295-298.9 Ma)	阿瑟尔期（期，295-298.9 Ma）
+Carboniferous (Period, 298.9-358.9 Ma)	石炭纪（纪，298.9-358.9 Ma）
+Gzhelian (Age, 298.9-303.7 Ma)	格舍尔期（期，298.9-303.7 Ma）
+Kasimovian (Age, 303.7-307 Ma)	卡西莫夫期（期，303.7-307 Ma）
+Moscovian (Age, 307-315.2 Ma)	莫斯科期（期，307-315.2 Ma）
+Bashkirian (Age, 315.2-323.2 Ma)	巴什基尔期（期，315.2-323.2 Ma）
+Serpukhovian (Age, 323.2-330.9 Ma)	谢尔普霍夫期（期，323.2-330.9 Ma）
+Visean (Age, 330.9-346.7 Ma)	维宪期（期，330.9-346.7 Ma）
+Tournaisian (Age, 346.7-358.9 Ma)	杜内期（期，346.7-358.9 Ma）
+Devonian (Period, 358.9-419.2 Ma)	泥盆纪（纪，358.9-419.2 Ma）
+Famennian (Age, 358.9-372.2 Ma)	法门期（期，358.9-372.2 Ma）
+Frasnian (Age, 372.2-382.7 Ma)	弗拉斯期（期，372.2-382.7 Ma）
+Eifelian (Age, 378.7-393.3 Ma)	艾菲尔期（期，378.7-393.3 Ma）
+Givetian (Age, 382.7-378.7 Ma)	吉维特期（期，382.7-378.7 Ma）
+Emsian (Age, 393.3-407.6 Ma)	埃姆斯期（期，393.3-407.6 Ma）
+Pragian (Age, 407.6-410.8 Ma)	布拉格期（期，407.6-410.8 Ma）
+Lochkovian (Age, 410.8-419.2 Ma)	洛赫考夫期（期，410.8-419.2 Ma）
+Silurian (Period, 419.2-443.8 Ma)	志留纪（纪，419.2-443.8 Ma）
+Pridoli (Epoch, 419.2-423 Ma)	普里道利世（世，419.2-423 Ma）
+Pridoli Age (Age, 419.2-423 Ma)	普里道利期（期，419.2-423 Ma）
+Ludlow (Epoch, 423-427.4 Ma)	罗德洛世（世，423-427.4 Ma）
+Ludfordian (Age, 423-425.6 Ma)	卢德福德期（期，423-425.6 Ma）
+Wenlock (Epoch, 427.4-433.4 Ma)	温洛克世（世，427.4-433.4 Ma）
+Gorstian (Age, 425.6-427.4 Ma)	高斯特期（期，425.6-427.4 Ma）
+Homerian (Age, 427.4-430.5 Ma)	侯默期（期，427.4-430.5 Ma）
+Sheinwoodian (Age, 430.5-433.4 Ma)	申伍德期（期，430.5-433.4 Ma）
+Llandovery (Epoch, 433.4-443.8 Ma)	兰多维列世（世，433.4-443.8 Ma）
+Telychian (Age, 433.4-438.5 Ma)	特列奇期（期，433.4-438.5 Ma）
+Aeronian (Age, 438.5-440.8 Ma)	埃隆期（期，438.5-440.8 Ma）
+Rhuddanian (Age, 440.8-443.8 Ma)	鲁丹期（期，440.8-443.8 Ma）
+Ordovician (Period, 443.8-485.4 Ma)	奥陶纪（纪，443.8-485.4 Ma）
+Hirnantian (Age, 443.8-445.2 Ma)	赫南特期（期，443.8-445.2 Ma）
+Katian (Age, 445.2-453 Ma)	凯迪期（期，445.2-453 Ma）
+Sandbian (Age, 453-458.4 Ma)	桑比期（期，453-458.4 Ma）
+Darriwilian (Age, 458.4-467.3 Ma)	达瑞威尔期（期，458.4-467.3 Ma）
+Dapingian (Age, 467.3-470 Ma)	大坪期（期，467.3-470 Ma）
+Floian (Age, 470-477.7 Ma)	弗洛期（期，470-477.7 Ma）
+Tremadocian (Age, 477.7-485.4 Ma)	特马豆克期（期，477.7-485.4 Ma）
+Cambrian (Period, 485.4-541 Ma)	寒武纪（纪，485.4-541 Ma）
+Furongian (Epoch, 485.4-497 Ma)	芙蓉世（世，485.4-497 Ma）
+Stage 10 (Age, 485.4-489.5 Ma)	第十期（期，485.4-489.5 Ma）
+Jiangshanian (Age, 489.5-494 Ma)	江山期（期，489.5-494 Ma）
+Paibian (Age, 494-497 Ma)	排碧期（期，494-497 Ma）
+Series 3 (Epoch, 497-509 Ma)	第三世（世，497-509 Ma）
+Guzhangian (Age, 497-500.5 Ma)	古丈期（期，497-500.5 Ma）
+Drumian (Age, 500.5-504.5 Ma)	鼓山期（期，500.5-504.5 Ma）
+Stage 5 (Age, 504.5-509 Ma)	第五期（期，504.5-509 Ma）
+Series 2 (Epoch, 509-521 Ma)	第二世（世，509-521 Ma）
+Stage 4 (Age, 509-514 Ma)	第四期（期，509-514 Ma）
+Stage 3 (Age, 514-521 Ma)	第三期（期，514-521 Ma）
+Terreneuvian (Epoch, 521-541 Ma)	纽芬兰世（世，521-541 Ma）
+Stage 2 (Age, 521-529 Ma)	第二期（期，521-529 Ma）
+Fortunian (Age, 529-541 Ma)	幸运期（期，529-541 Ma）
+Proterozoic (Eon, 541-2500 Ma)	元古宙（宙，541-2500 Ma）
+Neoproterozoic (Era, 541-1000 Ma)	新元古代（代，541-1000 Ma）
+Ediacaran (Period, 541-635 Ma)	埃迪卡拉纪（纪，541-635 Ma）
+Cryogenian (Period, 635-720 Ma)	成冰纪（纪，635-720 Ma）
+Tonian (Period, 720-1000 Ma)	拉伸纪（纪，720-1000 Ma）
+Mesoproterozoic (Era, 1000-1600 Ma)	中元古代（代，1000-1600 Ma）
+Stenian (Period, 1000-1200 Ma)	狭带纪（纪，1000-1200 Ma）
+Ectasian (Period, 1200-1400 Ma)	延展纪（纪，1200-1400 Ma）
+Calymmian (Period, 1400-1600 Ma)	盖层纪（纪，1400-1600 Ma）
+Paleoproterozoic (Era, 1600-2500 Ma)	古元古代（代，1600-2500 Ma）
+Statherian (Period, 1600-1800 Ma)	固结纪（纪，1600-1800 Ma）
+Orosirian (Period, 1800-2050 Ma)	造山纪（纪，1800-2050 Ma）
+Rhyacian (Period, 2050-2300 Ma)	层侵纪（纪，2050-2300 Ma）
+Siderian (Period, 2300-2500 Ma)	成铁纪（纪，2300-2500 Ma）
+Archean (Eon, 2500-4000 Ma)	太古宙（宙，2500-4000 Ma）
+Neoarchean (Era, 2500-2800 Ma)	新太古代（代，2500-2800 Ma）
+Neoarchean Period (Period, 2500-2800 Ma)	新太古纪（纪，2500-2800 Ma）
+Mesoarchean (Era, 2800-3200 Ma)	中太古代（代，2800-3200 Ma）
+Mesoarchean Period (Period, 2800-3200 Ma)	中太古纪（纪，2800-3200 Ma）
+Paleoarchean (Era, 3200-3600 Ma)	古太古代（代，3200-3600 Ma）
+Paleoarchean Period (Period, 3200-3600 Ma)	古太古纪（纪，3200-3600 Ma）
+Eoarchean (Era, 3600-4000 Ma)	始太古代（代，3600-4000 Ma）
+Eoarchean Period (Period, 3600-4000 Ma)	始太古纪（纪，3600-4000 Ma）
+Hadean (Eon, 4000-4600 Ma)	冥古宙（宙，4000-4600 Ma）
+Youngest age (Ma)	最年轻年龄（Ma）
+Oldest age (Ma)	最老年龄（Ma）
+Age (Ma)	年龄（Ma）
+Also give the astronomical periods at the mid-age	同时给出中值年龄处的天文周期
+Bayesian age-depth model of radioisotopic dates alone (modified Bchron; Trayler et al., 2020). The file is a table with a header: position (depth or height), age, sd (1 sigma, or a 2sd column) and optionally thickness; rows at the same position are combined into one dated level.	仅基于放射性同位素年龄的贝叶斯年龄-深度模型（改进的 Bchron；Trayler et al., 2020）。文件为带表头的数据表：position（深度或高度）、age、sd（1 sigma，或 2sd 列），以及可选的 thickness；同一位置的各行合并为一个定年层位。
+Positions are	位置表示
+Depths (increasing downwards, older)	深度（向下增大，越深越老）
+Heights (increasing upwards, younger)	高度（向上增大，越高越年轻）
+Number of MCMC iterations	MCMC 迭代次数
+Burn-in iterations	预热迭代次数
+Probability of the interval	区间的概率
+Number of positions of the model	模型的位置个数
+Also predict the age at positions (optional)	同时预测以下位置的年龄（可选）
+Joint Bayesian age-depth model of radioisotopic dates (file 1: table with position, age, sd and optionally thickness, or single-zircon dates) and a floating astrochronology (file 2: tracked period of the cycle, depth and period). Estimates hiatus durations, outlier probabilities and, optionally, compares with the dates-only modBchron model.	放射性同位素年龄（文件 1：含 position、age、sd 以及可选 thickness 的数据表，或单颗粒锆石年龄）与浮动天文年代标尺（文件 2：旋回的追踪周期，深度和周期）的联合贝叶斯年龄-深度模型。可估计沉积间断时长和异常值概率，并可选择与仅基于定年数据的 modBchron 模型进行比较。
+File 1 holds	文件 1 的内容
+One row per dated level (position, age, sd)	每个定年层位一行（position、age、sd）
+Single-zircon dates (one row per grain; grains at one position form a level)	单颗粒锆石年龄（每颗一行；同一位置的颗粒构成一个层位）
+Longest crystallisation interval before eruption (kyr)	喷发前的最长结晶时间间隔（kyr）
+Unit of the ages	年龄的单位
+Relative uncertainty of the tracked period (1 sd, %)	追踪周期的相对不确定度（1 sd，%）
+Positions of hiatuses (empty = none)	沉积间断的位置（留空 = 无）
+Prior durations of the hiatuses (kyr)	沉积间断的先验时长（kyr）
+Prior uncertainties of the hiatuses (1 sd, kyr)	沉积间断的先验不确定度（1 sd，kyr）
+Outlier model of the dates	定年数据的异常值模型
+Mixture with outlier probability	含异常值概率的混合模型
+Two-stage screening	两阶段筛选
+Gaussian (no outliers)	高斯（无异常值）
+Outliers can be	异常值可能
+Too old or too young	偏老或偏年轻
+Too old (inheritance)	偏老（继承）
+Too young (Pb loss)	偏年轻（Pb 丢失）
+Thinning interval	抽稀间隔
+Track realisations per segment	每段的追踪实现个数
+Leave-one-out test of every date (one extra run per date, slow)	对每个定年数据做留一法检验（每个数据额外运行一次，较慢）
+Also run the dates-only modBchron model	同时运行仅基于定年数据的 modBchron 模型
+modBchron iterations	modBchron 迭代次数
+File 1: depth and one or more proxy columns; file 2: a tracked period curve (depth, period), e.g. from the Track view. Every simulation blends randomly perturbed copies of the track and follows the nearest ridge in the scalogram of a randomly chosen proxy; the spread of the re-tracked curves is the tracking uncertainty, used by Age model with uncertainty, Gap duration and Dates + astrochronology.	文件 1：深度以及一个或多个代用指标列；文件 2：追踪周期曲线（深度、周期），例如来自“追踪”视图。每次模拟将追踪曲线的若干随机扰动副本混合，并在随机选取的某一代用指标的小波尺度图中跟踪最近的脊线；重新追踪所得曲线的离散程度即为追踪不确定度，供“带不确定度的年龄模型”“沉积间断的时长”和“定年数据 + 天文年代学”使用。
+Proxy columns of file 1 (numbers; empty = all)	文件 1 的代用指标列（编号；留空 = 全部）
+Perturbation of the track (+/- %)	追踪曲线的扰动幅度（+/- %）
+Upper limit of the ridge search (factor of the track)	脊线搜索上限（追踪曲线的倍数）
+Lower limit of the ridge search (factor of the track)	脊线搜索下限（追踪曲线的倍数）
+Smoothing of every re-tracked curve	每条重新追踪曲线的平滑
+LOESS, automatic span	LOESS，自动跨度
+LOESS, given span	LOESS，指定跨度
+Span (0 to 1) or window length (depth units)	跨度（0 至 1）或窗口长度（深度单位）
+Shortest period of the scalograms	小波尺度图的最短周期
+Longest period of the scalograms	小波尺度图的最长周期
+Simulates age models from a tracked cycle with its uncertainty (a re-tracked curve, or a tracked period curve with a relative uncertainty) and the uncertainty of the cycle duration; optionally anchored to dated levels (ages in kyr) with hiatuses. Writes the mean, sd and quantiles of the age at every depth.	由追踪旋回及其不确定度（重新追踪曲线，或带相对不确定度的追踪周期曲线）和旋回持续时间的不确定度模拟年龄模型；可选择锚定到定年层位（年龄单位 kyr），并考虑沉积间断。写出每个深度处年龄的均值、sd 和分位数。
+The data file is a	数据文件为
+Tracked period curve (depth, period)	追踪周期曲线（深度、周期）
+Re-tracked curve (depth, mean frequency, sd), from Re-track	重新追踪曲线（深度、平均频率、sd），来自“重新追踪”
+Uncertainty of the cycle duration (kyr)	旋回持续时间的不确定度（kyr）
+Distribution of the cycle duration	旋回持续时间的分布
+Normal (uncertainty = 1 sd)	正态（不确定度 = 1 sd）
+Uniform (uncertainty = half-width)	均匀（不确定度 = 半宽）
+Ages	年龄
+Floating (time from the top)	浮动（自顶部算起的时间）
+Anchored to dated levels	锚定到定年层位
+Depths of the dated levels	定年层位的深度
+Ages of the dated levels (kyr)	定年层位的年龄（kyr）
+Age uncertainties (1 sd, kyr; one value for all)	年龄不确定度（1 sd，kyr；单个值则适用于全部）
+Depth uncertainty of the dated levels (full width)	定年层位的深度不确定度（全宽）
+Depths of hiatuses (empty = none)	沉积间断的深度（留空 = 无）
+Durations of the hiatuses (kyr)	沉积间断的时长（kyr）
+Uncertainties of the hiatuses (1 sd, kyr)	沉积间断的不确定度（1 sd，kyr）
+Rejections before a disagreeing date is dropped	剔除不一致定年数据之前的拒绝次数
+Estimates the duration of a gap at a given depth from a stable cycle: file 1 is the tracked curve on both sides of the gap (a re-tracked curve, or a period curve with a relative uncertainty), file 2 the proxy record. Both sides are tuned, the cycle is extracted and the missing part of the cycle across the gap is the gap duration.	由稳定的旋回估计给定深度处间断的时长：文件 1 为间断两侧的追踪曲线（重新追踪曲线，或带相对不确定度的周期曲线），文件 2 为代用指标记录。对两侧分别调谐并提取旋回，旋回在间断处缺失的部分即为间断时长。
+File 1 is a	文件 1 为
+Depth of the gap	间断的深度
+Duration of the cycle missing in the gap (kyr)	间断处缺失旋回的持续时间（kyr）
+Number of missing cycles	缺失旋回的个数
+Uncertainty of the missing-cycle duration (kyr, if it differs from the tracked cycle)	缺失旋回持续时间的不确定度（kyr，若与追踪旋回不同）
+Extracted band: shortest period (factor of the missing cycle)	提取频带：最短周期（缺失旋回的倍数）
+Extracted band: longest period (factor of the missing cycle)	提取频带：最长周期（缺失旋回的倍数）
+Measure between	在以下极值之间量测
+Maxima of the cycle	旋回的极大值
+Minima of the cycle	旋回的极小值
+Scale resolution dj of the tuned scalograms	调谐后小波尺度图的尺度分辨率 dj
+Second file: the tracked period curve (depth, period). Frequency uncertainty of the tracked cycle from the Gabor uncertainty of the Morlet wavelet or the resolution of an FFT, and the resulting spread of the time-depth model.	第二个文件：追踪周期曲线（深度、周期）。由 Morlet 小波的 Gabor 不确定度或 FFT 的分辨率给出所追踪旋回的频率不确定度，以及由此产生的时间-深度模型的离散范围。
+Uncertainty of	不确定度来源
+Morlet wavelet (Gabor)	Morlet 小波（Gabor）
+FFT, practical resolution 1/T	FFT，实用分辨率 1/T
+FFT, Heisenberg-Gabor limit 1/(4 pi T)	FFT，Heisenberg-Gabor 极限 1/(4 pi T)
+Multiple of the uncertainty	不确定度的倍数
+Record or window length for the FFT (0 = length of the track)	FFT 的记录或窗口长度（0 = 追踪曲线的长度）
+De-chirps the record (file 1) with an existing age model (file 2: a tracked period curve, a sedimentation-rate curve or depth-age points): in the time of the age model every astronomical cycle should be a horizontal line; intervals where the cycles bend away are flagged with the rate correction they ask for.	利用已有的年龄模型（文件 2：追踪周期曲线、沉积速率曲线或深度-年龄点）对记录（文件 1）去啁啾：在年龄模型的时间域中，每个天文旋回都应是一条水平线；旋回发生偏折的层段会被标记，并给出所需的速率校正量。
+Tracked period of one cycle (depth, period)	某一旋回的追踪周期（深度、周期）
+Sedimentation rate (depth, rate)	沉积速率（深度、速率）
+Unit of the rate	速率的单位
+cm/kyr with depth in metres	cm/kyr，深度以米为单位
+depth units per kyr	深度单位/kyr
+m/Myr with depth in metres	m/Myr，深度以米为单位
+Approximate age of the record (Ma, picks the cycles)	记录的大致年龄（Ma，用于选取旋回）
+Cycles to check (kyr; empty = eccentricity, obliquity, precession)	要检验的旋回（kyr；留空 = 偏心率、斜率、岁差）
+Transform: Morlet wavelet	变换：Morlet 小波
+Transform: multitaper EHA	变换：多窗谱 EHA
+Transform: superlet SST (slower)	变换：超小波 SST（较慢）
+Transform: chirplet SST (slow)	变换：啁啾小波 SST（较慢）
+Rate correction that is flagged (0.1 = 10 %)	触发标记的速率校正量（0.1 = 10 %）
+Cycles that must agree	须相互一致的旋回数
+Also run a blind re-track for comparison (slower)	同时运行一次盲重新追踪以作比较（较慢）
+Horizontal axis of the maps	图的横轴
+Time of the age model	年龄模型的时间
+Depth	深度
+Tests an astronomically tuned record (time in kyr, 0-50 Ma): are the precession (or obliquity) amplitude modulations those of the La2004 solution? Significance from phase-randomised or AR(1) surrogates, with filters and added noise that guard against modulations created by tuning (Zeeden et al. 2015, 2019).	检验天文调谐后的记录（时间单位 kyr，0-50 Ma）：其岁差（或斜率）振幅调制是否与 La2004 天文解一致？显著性由相位随机化或 AR(1) 替代数据得出，并采用滤波和添加噪声的方法防范由调谐产生的调制（Zeeden et al. 2015, 2019）。
+Precession amplitude modulation (testPrecession)	岁差振幅调制（testPrecession）
+Obliquity amplitude modulation (testTilt)	斜率振幅调制（testTilt）
+Time unit of the data	数据的时间单位
+Phase-randomised	相位随机化
+Part of each end excluded (0-1)	两端各自排除的部分（0-1）
+Largest noise added (standard deviations of the data)	添加的最大噪声（数据标准差的倍数）
+Low-pass cut-off of the envelope (cycles/kyr)	包络的低通截止频率（cycles/kyr）
+Detrend the envelope	对包络去趋势
+Finds depths where energy over many periods arrives at once (phase jumps of all cycles at a hiatus, erosion surfaces, turbidites, spikes) with the transient-extracting (time-reassigned) wavelet transform.	利用瞬变提取（时间重排）小波变换，寻找多个周期的能量同时到达的深度（沉积间断处所有旋回的相位跳变、侵蚀面、浊积层、尖峰）。
+Period spacing dj (octaves)	周期间隔 dj（倍频程）
+Number of cycles (small = sharper in depth)	振荡周数（越小在深度上越锐利）
+Detection threshold (multiple of the running median)	检测阈值（滑动中位数的倍数）
+Minimum distance between transients (0 = longest period / 4)	瞬变之间的最小间距（0 = 最长周期 / 4）
+Running-median window (0 = 2 x longest period)	滑动中位数窗口（0 = 2 x 最长周期）
+Aligns record 2 to record 1 by dynamic time warping and writes the depth-to-depth tie function (depth in record 2, equivalent depth in record 1) and record 2 on the depth scale of record 1. With an open end (and begin), record 2 may match only part of record 1. Use the tie function in Age scale / tuning to move other proxies of record 2.	通过动态时间规整将记录 2 与记录 1 对齐，写出深度-深度对应函数（记录 2 中的深度、记录 1 中的等效深度）以及换算到记录 1 深度标尺上的记录 2。若选择开放终点（及起点），记录 2 可只与记录 1 的一部分匹配。可在“年龄标尺 / 调谐”中使用该对应函数来转换记录 2 的其他代用指标。
+Points per record (even resampling)	每条记录的点数（等间距重采样）
+Both records are resampled evenly with at most this many points; the cost matrix grows with its square.	两条记录均按等间距重采样，点数不超过该值；代价矩阵的规模随其平方增长。
+Values	数值
+Detrended and standardised	去趋势并标准化
+As they are	保持原样
+Step pattern	步进模式
+symmetric2 (default, normalisable)	symmetric2（默认，可归一化）
+asymmetric (needed for open begin)	asymmetric（开放起点所需）
+symmetricP05 (slope limited)	symmetricP05（斜率受限）
+symmetricP1 (slope limited)	symmetricP1（斜率受限）
+symmetricP2 (slope limited)	symmetricP2（斜率受限）
+Rabiner-Juang type IIIc	Rabiner-Juang IIIc 型
+Rabiner-Juang type IVc	Rabiner-Juang IVc 型
+Window constraint	窗口约束
+Sakoe-Chiba band	Sakoe-Chiba 带
+Slanted band	斜带
+Itakura parallelogram	Itakura 平行四边形
+Window size (share of the record)	窗口大小（占记录的比例）
+Open end (record 2 matches a leading part of record 1)	开放终点（记录 2 与记录 1 的前段匹配）
+Open begin (needs open end and an asymmetric or type c step pattern)	开放起点（需要开放终点以及 asymmetric 或 c 型步进模式）
+Alignment of the two records	两条记录的对齐
+Record 2 on the depth scale of record 1	记录 1 深度标尺上的记录 2
+Tie function	对应函数
+Eccentricity, obliquity and precession periods at a given age, with the precession constant k from the AstroGeo22 tidal model (Farhat et al. 2022) or your own k. Use it to know which periods to expect in a deep-time record.	给定年龄的偏心率、斜率和岁差周期，岁差常数 k 取自 AstroGeo22 潮汐模型（Farhat et al. 2022）或您自定的 k。可用于了解深时记录中预期出现哪些周期。
+Terms	项
+Nine main periods (Acycle ORBIT9)	九个主要周期（Acycle ORBIT9）
+All named terms with aliases	全部具名项及其别名
+Main periods with weights for tracking	带追踪权重的主要周期
+Every gi-gj, k+si and k+gi term	所有 gi-gj、k+si 和 k+gi 项
+Precession constant k	岁差常数 k
+AstroGeo22 model at this age	该年龄的 AstroGeo22 模型值
+My own value	自定义值
+Precession constant k (kyr)	岁差常数 k（kyr）
+Include eccentricity	包含偏心率
+Include obliquity	包含斜率
+Include precession	包含岁差
+The nine main astronomical periods over an age range, with the precession constant from AstroGeo22 or the La2004 extrapolation. Shows how the obliquity and precession periods shorten into the past.	某一年龄范围内的九个主要天文周期，岁差常数取自 AstroGeo22 或 La2004 外推。显示斜率和岁差周期如何向更古老的时期逐渐变短。
+Age step (Ma)	年龄步长（Ma）
+Precession constant from	岁差常数来源
+AstroGeo22 (Farhat et al. 2022), interpolated	AstroGeo22（Farhat et al. 2022），插值
+AstroGeo22, nearest 1-Myr row as in Acycle	AstroGeo22，取最近的 1-Myr 行，同 Acycle
+La2004 polynomial extrapolation	La2004 多项式外推
+Precession and obliquity periods at an age from Berger et al. (1992), or eccentricity, obliquity and precession periods from the Solar System frequencies g and s and the precession constant k (Laskar 1999 or Malinverno and Meyers 2024).	由 Berger et al. (1992) 计算某一年龄的岁差和斜率周期，或由太阳系频率 g、s 和岁差常数 k 计算偏心率、斜率和岁差周期（Laskar 1999 或 Malinverno and Meyers 2024）。
+At an age, Berger et al. 1992 (bergerPeriods)	某一年龄，Berger et al. 1992（bergerPeriods）
+From g, s and k (calcPeriods)	由 g、s 和 k 计算（calcPeriods）
+Age (Ma, 0-500)	年龄（Ma，0-500）
+g1 to g5 (arcsec/yr)	g1 至 g5（arcsec/yr）
+s1, s2, s3, s4, (s5,) s6 (arcsec/yr, optional)	s1, s2, s3, s4, (s5,) s6（arcsec/yr，可选）
+Needed for the obliquity periods; leave empty for eccentricity and precession only.	计算斜率周期时需要；若只需偏心率和岁差，可留空。
+Precession constant k (arcsec/yr)	岁差常数 k（arcsec/yr）
+Laskar (1999, table 6)	Laskar（1999，表 6）
+Malinverno and Meyers (2024, table 1)	Malinverno and Meyers（2024，表 1）
+Which astronomical term, harmonic or combination tone could an unidentified spectral peak be? Lists the terms within a relative tolerance of each measured period.	一个未识别的谱峰可能对应哪个天文项、谐波或组合频率？列出每个实测周期相对容差范围内的各项。
+Measured period(s) (kyr)	实测周期（kyr）
+Relative tolerance	相对容差
+Highest order	最高阶数
+Single terms	单项
+Also harmonics, sums and differences	同时包括谐波、和频与差频
+Predicted number of precession (or obliquity) cycles per eccentricity cycle at a given age. Compare with the bundling counted in the record (then use the Precession constant tool, method 'Bundling').	给定年龄下每个偏心率旋回内岁差（或斜率）旋回个数的预测值。可与记录中数出的成束关系比较（随后使用“岁差常数”工具的“成束”方法）。
+Eccentricity terms (rows)	偏心率项（行）
+Precession / obliquity terms (columns)	岁差 / 斜率项（列）
+All difference and combination tones (f1 - f2, f1 + f2) of a set of periods, and the tone closest to a period you observed, e.g. to explain a peak that is not a primary astronomical term.	一组周期的全部差频与和频（f1 - f2, f1 + f2），以及与您观测到的某一周期最接近的频率，例如用于解释非主要天文项的谱峰。
+Observed period to explain (kyr, 0 = none)	待解释的观测周期（kyr，0 = 无）
+Explore chaos in the inner solar system: shift g4-g3 / s4-s3 and see which cycles move, the sensitivity of every term to each fundamental frequency, or which resonance state measured long modulation periods imply.	探索内太阳系的混沌：改变 g4-g3 / s4-s3 并观察哪些旋回随之移动，各项对每个基本频率的敏感性，或实测的长调制周期所指示的共振状态。
+Analysis	分析
+Scenario: shift g4-g3 and s4-s3	情景：改变 g4-g3 和 s4-s3
+Sensitivity of every term to each fundamental	各项对每个基本频率的敏感性
+Resonance state from measured modulation periods	由实测调制周期判断共振状态
+g4-g3 period in the scenario (kyr, 0 = La2004)	情景中的 g4-g3 周期（kyr，0 = La2004）
+s4-s3 period in the scenario (kyr, 0 = La2004)	情景中的 s4-s3 周期（kyr，0 = La2004）
+How g3 and g4 move	g3 和 g4 的移动方式
+Both, about their mean	两者围绕其均值移动
+Keep g3, move g4	g3 不变，移动 g4
+Keep g4, move g3	g4 不变，移动 g3
+Fractional change of each fundamental	每个基本频率的相对变化量
+Fundamentals	基本频率
+Measured eccentricity modulation, g4-g3 (kyr)	实测偏心率调制，g4-g3（kyr）
+Measured obliquity modulation, s4-s3 (kyr)	实测斜率调制，s4-s3（kyr）
+Largest p and q of the ratio p:q	比值 p:q 中 p 和 q 的最大值
+Probability density of the fundamental frequencies g1-g5 and s1-s4, s6 at an age, from the chaotic diffusion of the Solar System (Hoang et al. 2021, table 2): the priors of the Bayesian TimeOpt methods.	某一年龄下基本频率 g1-g5 和 s1-s4, s6 的概率密度，源自太阳系的混沌扩散（Hoang et al. 2021，表 2）：即贝叶斯 TimeOpt 各方法的先验。
+Age (Ga)	年龄（Ga）
+CTest (Zeeden et al. 2023): give the wavelength ranges (m) of the eccentricity, obliquity and precession cycles you identified in a depth-domain spectrum and the age; a Monte Carlo consistency test returns the sedimentation rate, the precession constant k and the Earth-Moon distance and length of day.	CTest（Zeeden et al. 2023）：给出您在深度域频谱中识别出的偏心率、斜率和岁差旋回的波长范围（m）以及年龄；蒙特卡洛一致性检验将返回沉积速率、岁差常数 k 以及地月距离和日长。
+CTest (Zeeden et al. 2023)	CTest（Zeeden et al. 2023）
+CTest in the published draw order (slow, reproduces the paper's samples)	按已发表抽样顺序的 CTest（较慢，可重现论文中的样本）
+Flexible Monte Carlo with a sedimentation-rate range	带沉积速率范围的灵活蒙特卡洛
+Age of the record (Ma): one value or min, max	记录的年龄（Ma）：一个值，或 最小, 最大
+405-kyr eccentricity, wavelength min, max (m)	405-kyr 偏心率，波长 最小, 最大（m）
+~125-kyr eccentricity (m)	~125-kyr 偏心率（m）
+~95-kyr eccentricity (m)	~95-kyr 偏心率（m）
+Obliquity k+s3 (m, empty = not identified)	斜率 k+s3（m，留空 = 未识别）
+Longest precession k+g5 (m)	最长岁差 k+g5（m）
+Middle precession k+g2 (m)	中间岁差 k+g2（m）
+Shortest precession k+g4 and k+g3 (m)	最短岁差 k+g4 和 k+g3（m）
+Cycles used besides eccentricity	除偏心率外使用的旋回
+From the cycles given	依据所给旋回
+Precession and obliquity	岁差和斜率
+Obliquity only	仅斜率
+Precession only	仅岁差
+Sedimentation rate range (m/kyr)	沉积速率范围（m/kyr）
+Accepted Monte Carlo samples	接受的蒙特卡洛样本数
+Range of k sampled (yr)	k 的抽样范围（yr）
+Sampling of g2-g5	g2-g5 的抽样方式
+Uniform within 2 sigma (as in the paper)	2 sigma 内均匀分布（同论文）
+Normal	正态
+Uncertainty of s3	s3 的不确定度
+As in the published code (s3 fixed)	同已发表代码（s3 固定）
+Scaled like g2-g5	按 g2-g5 的方式缩放
+Earth-Moon conversion	地月换算
+Angular-momentum conservation	角动量守恒
+AstroGeo22 curve (Farhat et al. 2022)	AstroGeo22 曲线（Farhat et al. 2022）
+Consistency test for a record already tuned to time: give the period ranges (kyr) of the cycles you resolved; the precession constant k, the secular frequencies and the Earth-Moon state follow, with the uncertainty of the tuning target propagated.	针对已调谐到时间域的记录的一致性检验：给出您所分辨出的各旋回的周期范围（kyr）；由此得到岁差常数 k、长期频率和地月状态，并传递调谐目标的不确定度。
+Monte Carlo consistency test (astro_from_periods)	蒙特卡洛一致性检验（astro_from_periods）
+Zeeden et al. (2023) estimator (astro_ctest)	Zeeden et al. (2023) 估计量（astro_ctest）
+Joint inversion of the obliquity and precession terms only (astro_invert)	仅对斜率和岁差项的联合反演（astro_invert）
+405-kyr eccentricity, period min, max (kyr)	405-kyr 偏心率，周期 最小, 最大（kyr）
+~125-kyr eccentricity (kyr, empty = not resolved)	~125-kyr 偏心率（kyr，留空 = 未分辨）
+~95-kyr eccentricity (kyr)	~95-kyr 偏心率（kyr）
+Obliquity k+s3 (kyr)	斜率 k+s3（kyr）
+Precession k+g5 (kyr)	岁差 k+g5（kyr）
+Precession k+g2 (kyr)	岁差 k+g2（kyr）
+Precession k+g4 (kyr)	岁差 k+g4（kyr）
+Precession k+g3 (kyr)	岁差 k+g3（kyr）
+Short precession k+g4 and k+g3 together (kyr)	短岁差 k+g4 和 k+g3 合并（kyr）
+Other constraints (term = min, max; ...)	其他约束（项 = 最小, 最大; ...）
+Any term of 'Astronomical periods at an age', e.g. g4-g3 = 2200, 2600; any:k+g5|k+g2 = 19, 20	“某一年龄的天文周期”中的任一项，例如 g4-g3 = 2200, 2600; any:k+g5|k+g2 = 19, 20
+Period assumed for the tuning target (kyr, 0 = free stretch)	调谐目标的假定周期（kyr，0 = 自由伸缩）
+Tuning target term	调谐目标项
+Monte Carlo samples	蒙特卡洛样本数
+Range of k sampled (kyr)	k 的抽样范围（kyr）
+The precession constant k and the Earth-Moon state from measured cycles: single cycles read as named terms, the ratio of two cycles (works on untuned depth data), a bundling count, every possible reading of one peak, a quick conversion, or a scan of k against several peaks.	由实测旋回求岁差常数 k 和地月状态：将单个旋回解读为具名项、两个旋回之比（适用于未调谐的深度域数据）、成束计数、单个谱峰的所有可能解读、快速换算，或针对多个谱峰对 k 进行扫描。
+Single cycles read as named terms	将单个旋回解读为具名项
+Ratio of two cycles	两个旋回之比
+Precession cycles per eccentricity bundle	每个偏心率束内的岁差旋回数
+Every reading of one peak (hypotheses)	单个谱峰的所有解读（假设）
+Quick conversion of periods to k	周期快速换算为 k
+Scan k against measured peaks	针对实测谱峰扫描 k
+Measured periods (kyr)	实测周期（kyr）
+Hypotheses use the first period only.	“假设”方法仅使用第一个周期。
+Term of each period	各周期对应的项
+Longer cycle (kyr or m)	较长旋回（kyr 或 m）
+Shorter cycle (same unit)	较短旋回（相同单位）
+Term of the longer cycle	较长旋回对应的项
+Term of the shorter cycle	较短旋回对应的项
+Relative 1-sigma uncertainty of each cycle	各旋回的相对 1-sigma 不确定度
+Cycles counted per bundle (may be fractional)	每束内数出的旋回数（可为小数）
+Eccentricity term of the bundle	束对应的偏心率项
+Bundled term	成束的项
+1-sigma counting uncertainty (cycles)	1-sigma 计数不确定度（旋回数）
+Candidate terms	候选项
+Term of the periods	周期对应的项
+Obliquity k+s3	斜率 k+s3
+Precession k+g5	岁差 k+g5
+Precession k+g2	岁差 k+g2
+Precession k+g4	岁差 k+g4
+Precession k+g3	岁差 k+g3
+Terms predicted for every k	每个 k 对应的预测项
+Smallest k (kyr)	最小 k（kyr）
+Largest k (kyr)	最大 k（kyr）
+Step of k (kyr)	k 的步长（kyr）
+Relative tolerance of a match	匹配的相对容差
+Age (Ma): one value or min, max	年龄（Ma）：一个值，或 最小, 最大
+Record length (kyr or m; 0 = use the tolerance / sd)	记录长度（kyr 或 m；0 = 使用容差 / sd）
+With a record length the band of each cycle is its frequency resolution.	给出记录长度时，各旋回的频带即为其频率分辨率。
+Relative half-width of each cycle	各旋回的相对半宽
+Multiple of the frequency resolution	频率分辨率的倍数
+Period assumed for the tuning target (kyr, 0 = untuned)	调谐目标的假定周期（kyr，0 = 未调谐）
+Combine several k terms by	多个 k 项的合并方式
+Multiplying the densities	密度相乘
+Pooling the samples	样本合并
+g4-g3 period range for chaos (kyr, empty = La2004)	混沌情形下的 g4-g3 周期范围（kyr，留空 = La2004）
+s4-s3 period range (kyr, empty = La2004)	s4-s3 周期范围（kyr，留空 = La2004）
+Sampling of the secular frequencies	长期频率的抽样方式
+Monte Carlo draws (0 = point estimate)	蒙特卡洛抽样次数（0 = 点估计）
+Multiplies the densities of two sets of precession-constant samples (e.g. the *_k_samples.txt files of two CTest runs or two proxies), as in Zeeden et al. (2023). Column 2 of each file is used.	将两组岁差常数样本（例如两次 CTest 运行或两个代用指标的 *_k_samples.txt 文件）的密度相乘，同 Zeeden et al. (2023)。使用每个文件的第 2 列。
+Grid points of the densities	密度的网格点数
+Age for the Earth-Moon state (Ma, 0 = present-day obliquity)	用于地月状态的年龄（Ma，0 = 现今斜率）
+Tests an age model: the significant obliquity and precession peaks of the tuned record must give one consistent precession constant k, which is compared with AstroGeo22; spectral peaks and amplitude modulation are tested as well. The data file is the tuned record (time, value).	检验年龄模型：已调谐记录中显著的斜率和岁差谱峰必须给出一个一致的岁差常数 k，并将其与 AstroGeo22 比较；同时检验谱峰和振幅调制。数据文件为已调谐记录（时间、数值）。
+Time unit of the record	记录的时间单位
+k+g5 and k+g2 separate only when tbw <= record length (kyr) / 1600; values below 1.5 (a single taper) fail in astrochron::mtm.	仅当 tbw <= 记录长度（kyr）/ 1600 时 k+g5 与 k+g2 才能分开；小于 1.5（单个窗）的值会使 astrochron::mtm 失败。
+Confidence level of a peak	谱峰的置信水平
+Also require the harmonic F-test	同时要求通过谐波 F 检验
+Half-width of the search windows (fraction)	搜索窗口的半宽（比例）
+Remove intervals with weak precession first	先剔除岁差信号弱的层段
+Precession band of the pre-scan (kyr)	预扫描的岁差频带（kyr）
+Running window of the pre-scan (kyr)	预扫描的滑动窗口（kyr）
+Weak when below this fraction of the median	低于中位数的该比例时视为弱
+Shortest piece kept or removed (kyr)	保留或剔除的最短片段（kyr）
+Phase-randomised surrogates	相位随机化替代数据
+Reference k (kyr, 0 = AstroGeo22 at the age)	参考 k（kyr，0 = 该年龄的 AstroGeo22 值）
+Plausible range of k for the verdict (kyr)	用于判定的 k 合理范围（kyr）
+Range of k searched (kyr, empty = around AstroGeo22)	k 的搜索范围（kyr，留空 = AstroGeo22 附近）
+Builds synthetic tuned records with known precession constants (five orbital terms, a 405-kyr cycle and AR(1) noise) and shows the k recovered by the tuned-record test: a check that the chosen time-bandwidth product resolves the terms.	构建岁差常数已知的合成已调谐记录（五个轨道项、一个 405-kyr 旋回和 AR(1) 噪声），并显示已调谐记录检验所恢复的 k：用于检验所选的时间带宽积能否分辨各项。
+Known k of the synthetic records (kyr)	合成记录的已知 k（kyr）
+Noise level (sd multiplier)	噪声水平（sd 倍数）
+Record length (kyr)	记录长度（kyr）
+Age passed to the test (Ma)	传递给检验的年龄（Ma）
+Compares a measured precession constant with AstroGeo22 (Farhat et al. 2022) and the La2004 extrapolation at the age of the record, or lists the Devonian reference values of Zeeden et al. (2023).	将实测岁差常数与记录年龄处的 AstroGeo22（Farhat et al. 2022）和 La2004 外推值进行比较，或列出 Zeeden et al. (2023) 的泥盆纪参考值。
+Table	表格
+Measured k against the published models	实测 k 与已发表模型的对比
+Zeeden et al. (2023) Table 1, Devonian reference values	Zeeden et al. (2023) 表 1，泥盆纪参考值
+Measured k (kyr, 0 = none)	实测 k（kyr，0 = 无）
+Obliquity for the inversion (degrees, 0 = AstroGeo22)	用于反演的斜率（度，0 = AstroGeo22）
+From any one known quantity (precession constant, Earth-Moon distance, length of day, lunar months per year, an observed cycle, or an age on the AstroGeo22 model) to the full Earth-Moon state: distance, solar and sidereal day, days and months per year, obliquity, spin rate and angular momentum.	由任一已知量（岁差常数、地月距离、日长、每年的太阴月数、观测到的旋回，或 AstroGeo22 模型上的年龄）求完整的地月状态：距离、太阳日和恒星日、每年的日数和月数、斜率、自转速率和角动量。
+Known quantity	已知量
+Precession frequency (arcsec/yr)	岁差频率（arcsec/yr）
+Earth-Moon distance (Earth radii)	地月距离（地球半径）
+Earth-Moon distance (km)	地月距离（km）
+Length of the solar day (h)	太阳日长度（h）
+Lunar months per year	每年的太阴月数
+Observed obliquity or precession cycle (kyr)	观测到的斜率或岁差旋回（kyr）
+Age on the AstroGeo22 model (Ma)	AstroGeo22 模型上的年龄（Ma）
+Precession constant k (kyr), one or more	岁差常数 k（kyr），一个或多个
+Type of month	月的类型
+Sidereal	恒星月
+Synodic	朔望月
+Observed cycle (kyr)	观测旋回（kyr）
+The cycle is	该旋回为
+Inversion of a precession value	岁差值的反演
+Obliquity	斜率
+AstroGeo22 at an age	某一年龄的 AstroGeo22 值
+Present day (23.25 degrees)	现今（23.25 度）
+Age for the obliquity (Ma)	斜率对应的年龄（Ma）
+Obliquity (degrees)	斜率（度）
+Curves of the Earth-Moon system with conserved angular momentum over a range of distances, day lengths, months per year or precession constants, compared with the AstroGeo22 tidal model.	在一定范围的距离、日长、每年月数或岁差常数内，角动量守恒条件下的地月系统曲线，并与 AstroGeo22 潮汐模型比较。
+Vary	变化量
+From (Earth radii)	自（地球半径）
+To (Earth radii)	至（地球半径）
+From (h)	自（h）
+To (h)	至（h）
+From (months per year)	自（每年月数）
+To (months per year)	至（每年月数）
+From (kyr)	自（kyr）
+To (kyr)	至（kyr）
+Obliquity for the precession (degrees)	用于岁差的斜率（度）
+Show the AstroGeo22 model (0-1000 Ma)	显示 AstroGeo22 模型（0-1000 Ma）
+Earth-Moon distance (Earth radii) and length of day (hours), with uncertainties, from a precession frequency k and its uncertainty (e.g. from Bayesian TimeOpt), after Walker et al. (1986) with the constants of Malinverno and Meyers (2024).	由岁差频率 k 及其不确定度（例如来自贝叶斯 TimeOpt）计算地月距离（地球半径）和日长（小时）及其不确定度，依据 Walker et al. (1986)，常数取自 Malinverno and Meyers (2024)。
+Precession frequency k (arcsec/yr)	岁差频率 k（arcsec/yr）
+Standard deviation of k (arcsec/yr)	k 的标准差（arcsec/yr）
+Distribution of the sampling interval (Acycle: Plot > Sampling Rate).	采样间隔的分布（Acycle：Plot > Sampling Rate）。
+Number of histogram bins	直方图分组数
+Histogram, density and normal Q-Q plot of the data values (Acycle: Plot > Data Distribution).	数据值的直方图、密度图和正态 Q-Q 图（Acycle：Plot > Data Distribution）。
+About CycloDesk	关于 CycloDesk
+is a point-and-click workbench for cyclostratigraphy by Michiel Arts. All calculations are done by the R	是由 Michiel Arts 开发的旋回地层学点选式工作平台。所有计算均由 R
+packages WaverideR and astrochron; the R code of every step is in the R code & log tab.	包 WaverideR 和 astrochron 完成；每一步的 R 代码见“R 代码与日志”选项卡。
+Source code, manual and feedback:	源代码、手册与反馈：
+. Something wrong or missing?	。发现问题或缺少功能？
+Tell us	告诉我们
+When you publish results, please cite CycloDesk and the packages that did the work:	发表成果时，请引用 CycloDesk 以及完成计算的各软件包：
+(the paper that introduced WaverideR).	（介绍 WaverideR 的论文）。
+The original method papers named in the help of each function (the purple line under the name of a tool).	各功能帮助中列出的原始方法论文（工具名称下方的紫色一行）。
+The menu layout and working-folder workflow are inspired by Acycle: Li, M., Hinnov, L.A., Kump, L.R.	菜单布局和工作文件夹式的工作流程借鉴了 Acycle：Li, M., Hinnov, L.A., Kump, L.R.
+Dismiss	关闭
+Menu	菜单
+Tool	工具
+Function(s)	函数
+New folder	新建文件夹
+Name	名称
+Create	创建
+New data file	新建数据文件
+Paste two (or more) columns: depth/time and values (from Excel or a text file)	粘贴两列（或更多列）：深度/时间和数值（来自 Excel 或文本文件）
+Save	保存
+Rename	重命名
+New name	新名称
+Delete %d file(s) from the working folder? This cannot be undone.	要从工作文件夹中删除 %d 个文件吗？此操作无法撤销。
+Delete files	删除文件
+Delete 1 file(s) from the working folder? This cannot be undone.	要从工作文件夹中删除 1 个文件吗？此操作无法撤销。
+File name (without extension)	文件名（不含扩展名）
+Format	格式
+PDF (editable in Illustrator)	PDF（可在 Illustrator 中编辑）
+PNG (300 dpi)	PNG（300 dpi）
+Width (inches)	宽度（英寸）
+Height (inches)	高度（英寸）
+No tie points yet.	尚无控制点。
+Pick at least one tie point first.	请先选取至少一个控制点。
+The update check failed.	检查更新失败。
+Drop the files on a folder.	请将文件拖放到文件夹上。
+A calculation is still running.	仍有计算正在运行。
+Not a CycloDesk result file.	不是 CycloDesk 结果文件。
+Figure failed	绘图失败
+Select exactly one file or folder.	请只选择一个文件或文件夹。
+Select the files to delete in the list first.	请先在列表中选择要删除的文件。
+Checking GitHub for updates ...	正在 GitHub 上检查更新 ...
+That name exists already.	该名称已存在。
+This PC	此电脑
+Click at least two points along the beds first.	请先沿岩层点击至少两个点。
+This result has no scalogram or spectrum map to track on.	此结果没有可供追踪的小波尺度图或频谱图。
+The map of this result could not be read for tracking.	无法读取此结果的图以进行追踪。
+Choose a data file.	请选择数据文件。
+The file could not be read as a series.	无法将该文件读取为序列。
+Compute the scalogram first.	请先计算小波尺度图。
+Click at least one point on the band of the cycle first.	请先在旋回的条带上点击至少一个点。
+Show a scalogram first.	请先显示小波尺度图。
+Choose a file.	请选择文件。
+Choose the depth and value columns and a multiplier other than 0.	请选择深度列和数值列，并设置不为 0 的乘数。
+Give at least one value.	请至少给出一个值。
+Helper lines added; they are drawn once a scalogram is shown.	辅助线已添加；显示小波尺度图后即会绘出。
+Tick the groups to remove first.	请先勾选要移除的组。
+Choose a file and the column with the depths.	请选择文件以及含深度的列。
+The file could not be read.	无法读取该文件。
+Track the cycle first: click at least two points on its band.	请先追踪旋回：在其条带上点击至少两个点。
+Delete %d files...	<e5><88><a0><e9><99><a4> %d <e4><b8><aa><e6><96><87><e4><bb><b6>...
+%d files	%d <e4><b8><aa><e6><96><87><e4><bb><b6>
+Analysis & age models	分析与年龄模型
+R code & log	R 代码与日志
+Tools	工具
+adds a point, snapped to the nearest power peak	添加一个点，吸附到最近的功率峰
+adds a point exactly where you click (free tracking)	在点击处添加一个点（自由追踪）
+adds or removes a vertical boundary line	添加或删除一条竖直边界线
+extracted cycle	提取的旋回
+age model + tuned series	年龄模型 + 已调谐序列
+floating model from the Track view	来自“追踪”视图的浮动模型
+Track view: the data of the tracked record	“追踪”视图：被追踪记录的数据
+an age-model file (depth, age)	年龄模型文件（深度、年龄）
+a constant sedimentation rate	恒定的沉积速率
+the nearest maximum	最近的极大值
+the nearest minimum	最近的极小值
+nothing (exactly where you click)	不吸附（正好在点击处）
+adds a point to the route	向路线添加一个点
+sets the scale bar (two points)	设置比例尺（两个点）

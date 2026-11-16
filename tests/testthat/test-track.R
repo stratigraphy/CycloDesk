@@ -65,7 +65,7 @@ test_that("evolutive, eTimeOpt and eCOCO maps can be tracked", {
   per <- data.frame(depth = tr$depth, period = tr$period / 100 * 21)
   am <- as.data.frame(WaverideR::curve2time(tracked_cycle_curve = per, tracked_cycle_period = 21))
   expect_equal(diff(range(am[, 2])), sum(diff(tr$depth) / (tr$period[-1] / 100)), tolerance = 0.05)
-  # the rho1/wavelet results are not maps for the Track tab
+  # the rho1/wavelet results are not maps for the Track view
   expect_null(cd_track_kind(list(tool = "sampling", result = list())))
 })
 

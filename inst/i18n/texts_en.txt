@@ -1,0 +1,2150 @@
+jquery
+www/shared
+jquery.min.js
+shiny
+CycloDesk
+File
+New folder...
+New data file (paste)...
+Colour record from an image (outcrop, core, tree rings)...
+Save current figure...
+Save R code of this session
+Open working folder in Explorer
+Quit CycloDesk
+Edit
+Refresh list
+Rename...
+Duplicate
+Delete...
+Del
+Show all files / data files only
+Plot
+Plot stacked
+Plot standardised
+Plot with swapped axes
+Statistics summary / data table
+Sampling rate
+Data distribution
+Basic Series
+Astronomical solutions and insolation
+Astronomical solution
+Insolation
+ETP
+Insolation: daily, caloric, integrated, threshold
+Insolation map: latitude and season
+Ice-volume model (Imbrie and Imbrie 1980)
+Synthetic records
+Signal / noise generator
+Synthetic series: cycles, ARMA, ETP + AR(1)
+Red noise (AR(1)) series
+Time to stratigraphy: sed.-rate ramp or differential accumulation
+Exponential sed.-rate ramp (time to depth)
+Synthetic stratigraphy from a forcing (facies)
+Bioturbation: mix or unmix a record
+Bioturbation impulse response
+Example data
+Processing
+Clean and select
+Sort / unique / remove empty
+Select part
+Remove part
+Remove outliers
+Clipping
+Extract column
+Clean values and select levels (all columns)
+Interpolate and resample
+Interpolation
+Interpolation of uneven records (Laepple and Huybers 2013)
+Resample at the levels of a second file (2 files)
+Discretise a litholog (base, top, value)
+Rank series from bed thicknesses
+Transform
+Data transformations
+Transformations (astrochron)
+Derivative
+Smoothing
+Data taper (window)
+Accumulation rates (accum)
+Detrend and pre-whiten
+Detrending
+Lowpass, highpass and kernel detrending
+Pre-whitening
+Statistics
+Summary statistics (strats)
+Moving-window statistics
+Moving-window correlation of two proxies
+Windowed lag-1 autocorrelation (Monte Carlo)
+Cross-plot with density curves
+Principal components (stratPCA)
+Local maxima and minima
+Peaks and troughs (astrochron)
+Change points
+Bayesian change points
+Change points: R2 against their number
+Time Series
+Spectra
+Spectral analysis
+Bayesian, SWA and average MESA spectra
+Lomb-Scargle periodogram (uneven sampling)
+Spectral peak tests (multiple testing, AR order, power law)
+False positives of a spectral background (testBackground)
+Evolutive spectra
+Evolutionary spectral analysis
+EHA band power and spectrum at a depth
+De-chirped EHA (changing sed. rate)
+Wavelets and superlets
+Wavelet / superlet / synchrosqueezing
+Adaptive and synchrosqueezed scalograms
+Chirp-matched wavelet sed. rate map
+De-chirped scalogram along a track (2 files)
+Frequency resolution and cycle bands
+Significance and surrogates
+Scalogram significance (CWT / superlet)
+Synchrosqueezed scalogram significance
+Band-averaged power significance
+Surrogate series (IAAFT / phase randomised)
+Phase-randomised surrogates and spectral noise
+Filtering and cycle extraction
+Filtering
+Amplitude modulation (Hilbert)
+Extract a cycle of constant period
+Extract a tracked cycle (2 files)
+Dynamic filter along a tracked period (2 files)
+Two series: coherence and phase
+Wavelet coherence (2 series)
+Cross wavelet (2 series)
+Cross superlet (2 series)
+Cross-spectral analysis: coherence and phase (2 series)
+Correlation of two series (surrogateCor / slideCor)
+Decomposition (EMD, SSA)
+EMD / ensemble EMD (extricate)
+Singular spectrum analysis (SSA)
+Instantaneous frequency and amplitude of modes
+Ratios between modes (e.g. eccentricity / precession)
+Precision of the Hilbert instantaneous frequency (test signal)
+Nonlinear analysis
+Bispectral analysis
+Bicoherence (WOSA, astrochron)
+Recurrence plot
+Sedimentary noise and power
+Evolutive lag-1 autocorrelation (rho1)
+DYNOT (dynamic noise after tuning)
+Power decomposition analysis
+Power decomposition (Acycle legacy)
+Spectral moments
+Sed. rate
+Track a cycle or a rate
+Track a cycle by hand
+Automatic astronomical tracking
+Astronomical HMM tracking
+Chirp-matched EHA tracking
+Evolutive MESA ridge tracking
+Sed.-rate scan of a scalogram (FLMW)
+Tracked cycle to sed. rate (freq2sedrate)
+TimeOpt
+eTimeOpt (evolutive)
+Windowed TimeOpt with several fits
+TimeOpt with Monte Carlo significance
+TimeOpt with variable sed. rate (timeOptTemplate)
+Bayesian TimeOpt (timeOptB)
+Bayesian TimeOpt by MCMC (timeOptBMCMC / timeOptMCMC)
+eTimeOpt with ridge tracking (eTimeOptTrack)
+COCO
+eCOCO (evolutive)
+COCO: adaptive / cross-validated
+eCOCO: adaptive / cross-validated
+COCO / eCOCO with a target series (2 files)
+Other astronomical tests
+Average spectral misfit (ASM / eASM)
+Astronomical sed.-rate test
+Astronomical sed.-rate test, two proxies (2 files)
+Age models
+Build an age model
+Build age model
+Minimal tuning (WaverideR)
+Sedimentation rate to age model
+Depth to time: tracked curve, sed. rate or tie points (2 files)
+Age scale / tuning (2 files)
+Anchor to absolute ages
+Anchor to an astronomical solution or metronome
+Anchor a floating time scale (anchorTime)
+Weighted mean age (wtMean / stepHeat)
+Geological time scale
+Dated levels (Bayesian)
+U-Pb age-depth model (modBchron)
+Dates + astrochronology (astroMCBchron, 2 files)
+Uncertainty (Monte Carlo)
+Re-track a cycle (Monte Carlo, multi-proxy)
+Age model with uncertainty (Monte Carlo)
+Duration of a hiatus (Monte Carlo, 2 files)
+Uncertainty of a tracked cycle (2 files)
+Check an age model
+Check an age model (de-chirped record, 2 files)
+Amplitude-modulation test of a tuned record (testPrecession / testTilt)
+Detect hiatuses and transients
+Correlate two records
+Correlate two records (dynamic time warping, 2 files)
+Astronomy
+Astronomical periods
+Astronomical periods at an age
+Astronomical periods through time
+Precession and obliquity periods (bergerPeriods / calcPeriods)
+Identify a measured period
+Bundling ratios
+Combination and difference tones (tones)
+Chaotic resonance and sensitivity
+Priors of the Solar System frequencies (hoangPriors)
+Precession constant
+CTest from depth-domain peaks
+CTest for a tuned record
+Precession constant from cycles
+Combine two k estimates
+Test a tuned record (precession constant)
+Check the k test on synthetic records
+Compare k with published models
+Earth-Moon system
+Earth-Moon calculator
+Earth-Moon relations
+Earth-Moon distance and day length from k (alodfromk)
+Help
+About CycloDesk and how to cite
+Which R function does what
+Tutorial and manual (web)
+Report a problem or suggest a feature
+Check for updates
+Language
+Close CycloDesk (stops R)
+Close
+Show the file panel
+Files
+Up one folder (Backspace)
+Type a path
+Refresh (F5)
+Delete the selected files (Del)
+Hide the file panel
+Filter files
+Drag to make the file panel wider or narrower
+Data
+Track
+Anchor
+Image
+R code
+Log
+Stacked
+Standardised
+Points
+Reverse depth axis
+Depth vertical
+Log value axis
+Save figure
+Data files, spectra and saved results (.rds). Drag to zoom, double-click to reset
+All tools
+Track a cycle on the scalogram
+Click points along the band of a cycle, give its duration, and build a
+floating age model. The tuning check compares the amplitude envelope of a shorter cycle with a longer
+cycle extracted directly from the record; move points and watch the check until you are happy.
+1. Scalogram
+Colour palette
+Viridis
+Magma
+Inferno
+Plasma
+Cividis (colour-blind safe)
+Mako
+Rocket
+Turbo (rainbow-like)
+Jet (MATLAB / Acycle style)
+Blue to red
+Spectral
+Red-yellow-blue
+Yellow-orange-red
+Greys
+Zissou
+Rainbow
+batlowK (scico)
+Show scalogram
+2. Track the cycle
+A click on the scalogram
+Show the power peaks
+Peak filter (0: all peaks; to the right: only the strong ones)
+Click a point to select it (Shift/Ctrl-click: several), click it again
+to deselect; drag a point to move it; Delete or Backspace removes the selected points.
+Undo last point
+Delete selected
+Select all
+Deselect
+Clear all
+Ridge search width around the clicks (fraction)
+Snap the whole curve to the nearest peaks
+Follow the ridge (HMM)
+Snapping: at every depth the curve goes to the power peak nearest to the
+line through your points (within the search width). HMM: WaverideR::track_ridge_hmm.
+Smooth the curve: LOWESS span (0 = off)
+3. Helper lines
+Set up a group of lines and press Add; add as many groups as you
+like. Tick groups in the list to remove them. On a sedimentation-rate map (eCOCO, eTimeOpt) only
+fixed values and file columns are drawn, read as rates (cm/kyr; use multiplier 1 for a rate column).
+Lines
+periods of cycles (kyr), scaled by the current track
+periods of cycles (kyr), from an age-model file (depth, age)
+fixed periods (depth units, e.g. m)
+a column of a file (depth, value) x multiplier
+Cycles (kyr)
+Periods (depth units)
+Multiplier (period = value x multiplier)
+1 when the column is already a period in depth units; e.g. 4.05
+for a sedimentation rate in cm/kyr gives the 405-kyr period in m (rate x 405 / 100).
+Colour
+white
+red
+orange
+yellow
+cyan
+magenta
+green
+black
+Line
+dashed
+solid
+dotted
+Label (optional)
+Add
+Remove ticked
+Remove all
+Vertical boundary lines at depths
+Boundary lines can also be clicked on the scalogram (third click
+option above); clicking a line again removes it.
+Add depths from the file
+Clear boundary lines
+4. Floating age model and extraction
+Duration of the tracked cycle (kyr)
+Cycle to extract (kyr; any cycle, scaled from the track)
+Band: lower factor
+upper factor
+Add the mean to the extracted cycle
+Show below the scalogram
+Results (written to the working folder)
+Save track
+Extract cycle
+Age model + tuned series
+Anchor to a solution...
+5. Tuning check (amplitude modulation)
+The modulated cycle is extracted with the track and its Hilbert
+envelope is taken. The modulating cycle is then extracted from that envelope (amplitude modulation)
+and, with the track, from the record itself; both are compared on the floating time scale.
+A good age model gives a high correlation.
+Modulated cycle (kyr)
+Modulating cycle (kyr)
+Update after every change of the track
+Show the tuning check
+Run the check
+Anchor to an astronomical solution
+Click a peak in the record (top), then the matching peak in the target
+(middle): each pair is a tie point. The bottom figure shows the tuned record on the target.
+1. Record
+Starting age model
+Sed. rate (cm/kyr)
+Depth unit
+cm
+ft
+Age of the top of the record (ka)
+Age increases with depth
+2. Target
+Astronomical solution or metronome
+La2004 eccentricity
+La2004 obliquity
+La2004 precession index
+La2004 ETP
+Insolation 65N, June solstice (La2004)
+La2010b eccentricity
+La2011 eccentricity
+Metronome
+Period (kyr)
+Phase (degrees)
+Flip the target (maxima become minima)
+Show from (ka)
+to (ka)
+Empty: the range of the starting age model plus a margin.
+3. Tie points
+A click snaps to
+Undo last tie
+Clear ties
+4. Results (written to the working folder)
+Save ties
+Colour record along a route on an image
+Outcrop photographs, core scans, tree-ring images or satellite images:
+click a route along the beds (or across the rings), set the scale, and the colour is averaged across
+a swath at every step along the route. For satellite images use an exported image or screenshot
+that you are allowed to use, and set the scale from its scale bar.
+1. Image
+or copy an image into the working folder
+Browse...
+No file selected
+2. Route and scale
+A click on the image
+Clear route
+Reverse direction
+Swath width (pixels)
+Step (pixels)
+Across the swath
+Mean
+Median (robust against cracks and specks)
+Length of the scale bar
+Pixels per unit
+Click both ends of a scale bar (or of a known distance) with
+"sets the scale bar" and give its length; or type the pixels per unit directly. Without a
+scale the record is in pixels.
+Depth at the start
+Along the route, depth
+increases
+decreases
+3. Record
+Show
+Grey value (luma, 0-255)
+Lightness L*
+Red-green a*
+Yellow-blue b*
+Red (0-255)
+Green (0-255)
+Blue (0-255)
+Hue (degrees)
+Saturation
+Value (brightness)
+Extract and write
+Writes <image>-profile.txt (all colour columns, with header) and
+<image>-<channel>.txt (depth and the shown channel) to the working folder.
+The R code of every operation in this session. It runs in the working folder
+(setwd() to it first).
+Save to working folder
+Clear
+Places
+This computer
+Home
+This PC (all drives)
+C: System
+D: Data
+This PC: all drives
+Go to drive C:
+Go to drive D:
+Click a folder to open it, the arrow or a part of the path above to go
+up. Click a data file to plot it; Ctrl/Shift-click selects several. Drag files onto a folder, drive or part of the
+path to move them there (hold Ctrl to copy). Arrow keys, Enter and Backspace also work.
+Folder: %s | %d data files | %d selected | WaverideR %s, astrochron %s
+No data files here.
+Open another folder or drive above.
+Up one level
+Delete
+files
+Open the folder
+CycloDesk is closed
+R has stopped. You can close this window.
+Start CycloDesk again from its icon.
+2001 points, 154 to 174, dt 0.01
+Start
+End
+Median interval
+Min interval
+Max interval
+Median
+Standard deviation
+Minimum
+Maximum
+Choose a tool
+Every tool of the menus, in the order of the work. Its settings open here on
+the left and its result on the right; the result files are written to the working folder.
+Find a tool, e.g. wavelet, detrend, TimeOpt, tuning
+Make or load a series
+Prepare the data
+Spectra, wavelets, filters
+Sedimentation rates from astronomical cycles
+Depth to time, anchoring, uncertainty
+Periods, precession constant, Earth-Moon
+No tool with these words.
+Scalogram or spectrum map (wavelet, EHA, eTimeOpt, eCOCO, ...)
+Compute a new CWT
+Data file
+Shortest period
+Longest period
+omega_nr
+dj
+No helper lines yet.
+Depths from a file
+(choose a file)
+Record (depth domain)
+Image in the working folder
+Eccentricity, obliquity or precession index from an astronomical solution. The solution is downloaded once by astrochron::getLaskar() and then kept in a local cache.
+Solution
+La2004 (Laskar et al. 2004)
+La2010a
+La2010b
+La2010c
+La2010d
+La2011
+Parameter
+Eccentricity
+Obliquity (radians)
+Precession index
+ETP (standardised sum)
+Obliquity, precession and ETP are only in La2004.
+Start (ka)
+End (ka)
+Step (ka)
+Reset to the defaults for this file
+Write result files to the working folder
+Run
+Cancel
+Track on this map
+Zoom
+Apply
+Reset
+drag a box on the figure; double-click resets
+Daily mean insolation at the top of the atmosphere (Berger 1978) from La2004.
+Latitude (degrees N)
+True solar longitude
+June solstice (90)
+September equinox (180)
+December solstice (270)
+March equinox (0)
+Other...
+True solar longitude (degrees)
+Solar constant (W/m2)
+Eccentricity + tilt + precession composite from La2004, each standardised and weighted.
+Weight of eccentricity
+Weight of obliquity
+Weight of precession
+Standardise the result
+Insolation series from La2004 computed by the palinsol package: daily mean insolation on a day, caloric summer insolation (Milankovitch), insolation integrated between two true solar longitudes, or integrated over the days above a threshold (Huybers and Tziperman 2008).
+Quantity
+Daily mean insolation (W/m2)
+Caloric summer insolation (kJ/m2)
+Insolation integrated between two true solar longitudes (kJ/m2)
+Integrated insolation above a threshold (kJ/m2)
+True solar longitude (degrees; 90 = 21 June)
+From true solar longitude (degrees)
+To true solar longitude (degrees)
+Threshold (W/m2)
+Start (ka; negative = future)
+Step (ka, >= 1)
+Save the result for re-plotting later (.rds)
+Daily mean insolation for every latitude and true solar longitude at one time, or the difference between two times (La2004, palinsol), with the seasonal cycle at one latitude and the latitude profile on one day.
+Map
+Insolation at one time (insoMap)
+Difference between two times (insoDiff)
+Time (ka; negative = future)
+Second time (ka)
+Seasonal cycle at latitude (degrees N)
+Latitude profile on
+Ice volume from the Imbrie and Imbrie (1980) model forced by daily insolation (La2004, palinsol), with one or several time constants and non-linearity coefficients.
+Insolation latitude (degrees N)
+Insolation on
+Mean time constant(s) Tm (ka)
+Non-linearity coefficient(s) b (0-1)
+Start times of each Tm and b (ka; empty = one regime)
+e.g. Tm = 15, 5; b = 0.6, 0.3; times = 500, 1000 uses Tm 15 and b 0.6 from 0 to 500 ka.
+Burn-in (points)
+Initial ice volume
+Scale the ice volume to 0-1
+Sum of sinusoids plus white, AR(1) red or power-law noise (Acycle: Basic Series > Signal/Noise Generator).
+Number of points
+Sampling interval
+Periods (comma separated, empty = none)
+Amplitudes (one per period)
+Noise
+AR(1) red noise
+White noise
+Power-law noise
+None
+AR(1) coefficient rho
+Power-law exponent beta
+Noise standard deviation
+Random seed
+File name
+Sum of sinusoids with white noise, an autoregressive moving-average (ARMA) series, or an ETP signal (La2004) plus AR(1) red noise; shows the MTM spectrum with AR(1) confidence levels.
+Model
+Sum of sinusoids plus white noise (cycles)
+ARMA model (armaGen)
+ETP plus AR(1) noise (ar1etp)
+Periods (comma separated)
+Phases in radians (one per period, empty = 0)
+Variance of the white noise
+Start (ka for ETP)
+End (ka for ETP)
+AR coefficients (one per order)
+MA coefficients (one per order)
+AR(1) coefficient of the noise
+Noise amplitude relative to ETP (1 = equal variance, < 0 = noise only)
+Generates an AR(1) red-noise series with a given mean, standard deviation and lag-1 autocorrelation.
+First depth / time
+Lag-1 autocorrelation (0 = white noise)
+Converts a time series (time in kyr, value), e.g. ETP or insolation, into a synthetic stratigraphic series (depth in m): with a linearly changing sedimentation rate, or with a rate that follows the signal (differential accumulation); use it to test how tools cope with changing rates.
+Choose a readable data file.
+Linear sed.-rate ramp (sedRamp)
+Differential accumulation (diffAccum)
+Sed. rate at the start of the series (cm/kyr)
+Sed. rate at the end of the series (cm/kyr)
+Lowest sed. rate (cm/kyr)
+Highest sed. rate (cm/kyr)
+Highest rate at
+peaks of the signal
+troughs of the signal
+Converts a time series (time in kyr, value), e.g. an ETP or insolation series, to a synthetic stratigraphic record whose sedimentation rate changes exponentially from the start to the end value; use it to test how tracking and age-model tools cope with a changing rate.
+Sedimentation rate at the start of the series (cm/kyr)
+Sedimentation rate at the end of the series (cm/kyr)
+Turns a forcing series (e.g. precession, ETP or an ice-volume model) into a series of sedimentary facies by slicing the standardised forcing into classes, and compares the spectra of forcing and facies.
+Number of facies
+Clip the forcing at its mean value (no facies change below it)
+Reverse the sign of the forcing
+Simulates the smoothing of a time series (time in kyr) by diffusive bioturbation, or removes it by Wiener deconvolution (Liu et al. 2021), for a mixed-layer depth, sedimentation rate and mixing parameter G.
+Direction
+Mix: simulate bioturbation (bioturb)
+Unmix: remove bioturbation (unbioturb)
+Mixing parameter G = D / (ML v)
+Mixed-layer depth (cm)
+Sedimentation rate (cm/kyr)
+Fraction tapered before deconvolution
+Wiener filter (stabilises the deconvolution)
+Lowpass cut-off after deconvolution (cycles/kyr, 0 = none)
+Response of the advection-diffusion bioturbation model of Schink and Guinasso (1975) to an impulse: how a single event is smeared over depth and time by a mixed layer.
+Bioturbation parameter G = D / (ML v)
+Writes an example data set of WaverideR into the working folder.
+Data set
+IODP 926 grey scale (Zeeden et al. 2013)
+Sullivan core magnetic susceptibility (Pas et al. 2018)
+ETP astronomical signal example
+Depth rank example
+Total solar irradiance 0-9400 ka (Steinhilber et al. 2012)
+Bisciaro Fm XRF (several columns)
+Sorts by the first column, removes empty values and averages duplicated depths.
+Keeps the part of the series between two depths / times (Acycle: Math > Select Parts). Drag the two lines on the figure or type the values.
+From
+To
+Removes the part of the series between two depths; optionally closes the gap (Acycle: Remove Parts). Drag the two lines on the figure or type the values.
+Close the gap (shift the part below upwards)
+Removes values outside c times the interquartile range from the quartiles (astrochron::trim).
+Factor c (x IQR)
+Values below the lower or above the upper limit are set to the limit (Acycle: Math > Clipping).
+Lower limit
+Upper limit
+Writes one proxy column of a multi-column table as its own two-column series.
+Column
+Grey
+Works on all columns of a table: removes levels with an empty value, replaces negative or zero values (e.g. before a log transform), removes values above or below a threshold, or keeps an interval.
+Operation
+Remove levels with an empty value (rmNA)
+Replace negative values by 0 (repl0)
+Replace values <= 0 by the smallest positive number (replEps)
+Remove values above or below a threshold (trimAT)
+Keep an interval of all columns (iso)
+Column shown in the figure; trimAT tests and keeps only this column.
+Threshold
+Remove the values
+larger than the threshold
+smaller than the threshold
+Resamples the series at an even interval (linear, as Acycle) or with a cubic spline.
+New sampling interval
+Method
+Linear
+Cubic spline
+Estimates the sampling interval at which linear interpolation of an unevenly sampled record does not bias the spectral background (from power-law noise surrogates on the actual sampling grid), then interpolates with an anti-alias filter.
+Interpolation interval
+Estimate it (Laepple and Huybers 2013)
+Given
+Interval
+Threshold of the spectral ratio R
+Power-law exponent of the noise surrogates
+MTM time-bandwidth product
+Smoothing of the ratio R
+Number of noise simulations (> 1 runs in parallel)
+Anti-alias filter
+Interpolates series 1 linearly at the depths / times of series 2 (e.g. to compare or cross-plot two proxies measured at different levels).
+Series 1
+Series 2
+Also write a table with both series at the levels of file 2
+Turns a bed table (column 1 base, column 2 top of every bed, column 3 rank or proxy value, as in StratigrapheR) into an evenly sampled series that keeps the bed boundaries.
+Divisor of the greatest common bed thickness
+Resample to a regular step
+Step of the resampled series
+Builds a lithofacies rank series from a bed table in stratigraphic order (column 1 bed thickness, another column the facies rank of the bed), sampled at an even step.
+Rank column
+Sampling step (0 = no interpolation)
+Height of the base of the first bed
+Standardise, remove the mean, log transform, change sign or scale, or flip the depth axis.
+Transformation
+Standardise (z-score)
+Remove mean
+Log10
+Natural log
+Change sign (x -1)
+Normalise to 0-1
+Multiply depth by a factor (units)
+Flip depth axis (top <-> base)
+Depth to height / time to age (x -> max - x)
+Factor
+e.g. 0.01 converts cm to m
+Divides by the linear trend, arcsine transform, flips the stratigraphic order, clips or mutes the values below a threshold (enhances the modulator, e.g. eccentricity), pads with zeros, or converts depth to time with a constant sedimentation rate.
+Divide by the linear trend (divTrend)
+Arcsine transform, after rescaling to 0-1 (arcsinT)
+Flip the stratigraphic order (flip)
+Clip the values below a threshold (clipIt)
+Mute the values below a threshold by a divisor (clipIt)
+Pad with zeros (pad)
+Depth to time with a constant sed. rate (constantSedrate)
+Height given to the new first level
+Value given to the clipped values
+Divisor
+Number of zeros added at the end
+Sedimentation rate (depth units per time unit)
+In the units of the depth column per time unit, e.g. 0.02 m/kyr for 2 cm/kyr with depths in metres.
+Time of the first level
+Time
+increases with depth
+decreases with depth
+First derivative dy/dx (central differences).
+Moving average, moving median or Gaussian kernel with a window in depth / time units, or LOESS.
+Moving average
+Moving median
+Gaussian kernel
+LOESS (span)
+Window width (depth / time units)
+For the Gaussian kernel the window is 4 sigma wide.
+LOESS span (fraction of the record)
+Applies a cosine-tapered (Tukey), DPSS, Gaussian or Hann taper to the series, e.g. before a periodogram, and shows the shape of the taper and its spectral window.
+Taper
+Cosine-tapered window (cosTaper)
+Discrete prolate spheroidal sequence (dpssTaper)
+Gaussian window (gausTaper)
+Hann window (hannTaper)
+Fraction of the series tapered (1 = Hann)
+Time-bandwidth product
+Which DPSS (1 = first)
+Gaussian alpha (1 / standard deviation, >= 2.5)
+Normalise the taper to RMS = 1 (keeps the power of a white process)
+Remove the mean first
+Remove a linear trend first
+Also write the taper itself (256 points)
+Accumulation rate of a component (concentration in weight %) from a constant linear sedimentation rate and dry bulk density: component, bulk and linear accumulation rates.
+Dry bulk density (g/cm3)
+Removes a linear, LOWESS, polynomial or automatic-span LOESS trend (Acycle: Detrending).
+Trend
+LOWESS
+Polynomial
+LOESS with automatic span (WaverideR)
+LOWESS span (fraction of the record)
+Polynomial order
+Also write the trend
+FFT lowpass filter with a rectangular, Gaussian or cosine-tapered window, the matching highpass (series minus lowpass), or removal of a Gaussian-kernel trend.
+Lowpass filter (lowpass)
+Highpass: series minus lowpass (lowpass)
+Remove a Gaussian-kernel trend (noKernel)
+Cut-off frequency (cycles per unit)
+Window
+Rectangular
+Gaussian
+Cosine-tapered
+Gaussian window: alpha (>= 2.5)
+Cosine-tapered window: fraction tapered
+Zero padding factor
+Remove a linear trend before filtering
+Kernel smoothing (fraction of the record, > 0)
+Also write the lowpass / kernel trend
+Removes the AR(1) or AR(p) red-noise structure (Acycle: Pre-whitening).
+AR(1)
+AR(p), order chosen by AIC
+Maximum AR order
+Summary of the sampling interval (and its Nyquist frequency) and of the distribution of the values.
+Sampling-interval figure
+Cumulative sampling intervals
+Histogram of the sampling intervals
+Mean, median and variance, or minimum, maximum and range, in a window of constant length in depth or time (the number of points per window adapts to uneven sampling); on an even grid also the distribution of the values in each window.
+Mean, median and variance (mwStats)
+Mean, median, variance and value densities on an even grid (mwStatsGrid)
+Minimum, maximum and range (mwMinMax)
+Window length (depth / time units)
+Window placement
+Centred on every level
+Starting at the smallest depth / time
+Starting at the largest depth / time
+Confidence interval of the mean (%, 0 = none)
+Ends: mean of the first and last half window (centred windows only)
+Grid step
+Also write the table of windows (mwin / mwinGrid)
+Correlation coefficient (Pearson, Spearman or Kendall) of two columns of a table in a moving window of constant length in depth or time.
+First proxy
+Second proxy
+Correlation
+Pearson
+Spearman
+Kendall
+Lag-1 autocorrelation in a moving window, averaged over Monte Carlo runs with random sampling intervals and window widths between the shortest and longest window (mean and standard deviation).
+Shortest window (depth / time units)
+Longest window (depth / time units)
+Number of simulations
+Cross-plot of two columns of a table with kernel density estimates of each variable along the axes; gives the Pearson and Spearman correlation.
+x variable
+y variable
+Grey fill of the density curves
+Principal component analysis of all numeric columns of a table (column 1 depth or time), optionally rotated (varimax or promax); writes the loadings and the scores along the record.
+Rotation
+Varimax (orthogonal)
+Promax (oblique)
+Number of components (0 = all)
+Standardise the variables first (scores of standardised data)
+stratPCA uses the correlation matrix but multiplies the loadings with the raw values for the scores.
+Finds the local maxima and/or minima of a (filtered or extracted) cycle, keeping only the most extreme of consecutive extremes of the same kind, e.g. as tie points for an age model.
+Find
+Maxima
+Minima
+Maxima and minima
+Points compared on each side
+Finds the maxima of peaks and / or minima of troughs, optionally only above (peaks) or below (troughs) a level, or lists the plateau points that are not evaluated as peaks or troughs.
+Peaks
+Troughs
+Peaks and troughs
+Only peaks above / troughs below a level
+Level
+List the plateau points instead (flat tops / bottoms, not evaluated)
+Bayesian change-point regression (as Acycle: Math > Changepoint).
+Maximum number of change points
+Minimum segment length (points)
+Runs the Bayesian change-point regression (Ruggieri 2013) for 1 to k change points and gives the R2 of each model, to choose the number of change points for Bayesian change points.
+Largest number of change points
+Largest number of points (longer records are resampled)
+Multitaper (MTM) spectrum with AR(1), robust red-noise (ML96), LOWSPEC or power-law confidence levels; periodogram; maximum entropy (MESA) or adaptive multitaper (AMTM) of WaverideR.
+MTM, AR(1) red noise
+MTM, robust red noise (Mann & Lees 1996)
+LOWSPEC (Meyers 2012)
+MTM, power-law noise
+Periodogram
+MESA, maximum entropy (WaverideR)
+Adaptive MTM with noise models (WaverideR)
+Spectral whitening background, SWA (WaverideR)
+Time-bandwidth product (NW)
+Padding factor
+Remove linear trend
+Maximum frequency shown (cycles/unit)
+Default: the Nyquist frequency, 1 / (2 x sampling interval).
+Horizontal axis
+Frequency
+Period
+Logarithmic power axis
+Bayesian probability spectrum (Gregory 2005, Weedon et al. 2019), periodogram with the Smoothed Window Average background (Kemp 2016, Weedon 2020), or the average spectrum of an evolutive MESA.
+Spectrum
+Bayesian probability spectrum
+Periodogram with SWA background
+Average of an evolutive MESA
+MESA window length (depth units)
+MESA window step (depth units)
+Normalise every window before averaging
+Periodogram of an unevenly sampled series without interpolation (Lomb-Scargle), with the power level that the highest peak exceeds by chance with probability alpha (Baluev 2008 or Press et al. 1994), and optionally a p-value of the highest peak by randomisation.
+Lowest frequency (0 = 1 / record length)
+Highest frequency (cycles/unit)
+Default: half the inverse of the median sampling interval.
+Oversampling factor
+Significance level alpha
+Normalisation
+Standard (0 to 1, Baluev 2008)
+Press et al. (1994)
+p-value of the highest peak by randomisation (randlsp)
+Randomisations
+Tests spectral peaks more strictly than one confidence level: confidence levels and p-values corrected for testing many frequencies at once (Bonferroni and five other corrections), the intermediate spectrum of Thomson et al. (2001) to choose the order of the AR background, or a power-law (1/f) fit.
+Test
+Bonferroni-corrected confidence levels (confAdjust)
+p-values corrected for multiple testing (multiTest)
+Intermediate spectrum, MTM / AR(p) (mtmAR)
+Power-law (1/f) fit to the periodogram (pwrLawFit)
+Spectrum and background
+MTM, robust red noise (ML96)
+LOWSPEC
+Computed without zero padding, as the multiple-testing corrections require.
+Frequency bands of interest (optional): low high; low high
+Only frequencies in these bands count as tests, which makes the correction less strict. For the power-law fit: the first band is the frequency range of the fit.
+Order of the AR model
+Increase the order until the intermediate spectrum stops getting flatter.
+AR estimation
+Maximum likelihood
+Burg
+Yule-Walker
+Least squares
+Simulates noise series with the length, sampling and noise of your record and counts how often each background method (AR(1), ML96, LOWSPEC, power law) finds false peaks, in total and per frequency, also after multiple-testing corrections. Use it to choose a background method you can trust.
+Noise of the simulated series
+AR(1) coefficient rho or power-law exponent beta (0 = from the data)
+By default rho is the lag-1 autocorrelation of the detrended record, beta its power-law slope.
+Background method tested
+MTM, AR(1)
+MTM, power law
+Periodogram, power law
+Periodogram, AR(1)
+Time-bandwidth product (NW, MTM methods)
+Remove a linear trend from the simulated series
+Remove a LOWESS trend (span 0-1, 0 = no)
+Also evaluate multiple-testing corrections
+Number of simulated series
+Sliding-window spectra: evolutive harmonic analysis (EHA, multitaper), EHA on a log2 period axis, windowed FFT or evolutive maximum entropy (MESA).
+EHA, multitaper (astrochron)
+EHA on a log2 period axis (WaverideR)
+Windowed FFT (WaverideR)
+Evolutive MESA (WaverideR)
+Pad the ends by half a window
+No padding (the result starts and ends half a window inside)
+Mirror the record at its ends
+Mean value
+With padding, windows are also centred on the first and last samples, so the result spans the whole record.
+Step (depth / time units)
+Maximum frequency (cycles/unit)
+Logarithmic power
+Normalise each window to its maximum
+Depth / time on the vertical axis (Acycle style)
+Evolutive harmonic analysis (EHA), then the power in a frequency band through the record and its share of the total power (e.g. how strong precession is along the section), or the spectrum at one depth.
+Result
+Power in a band through the record (integratePower)
+Spectrum at one depth (extract)
+Window length (depth units)
+Step (depth units)
+Highest frequency of the EHA (cycles/unit)
+Frequency band: low high (cycles/unit)
+Default: around the highest peak of the periodogram.
+Normalise each spectrum to unit total power
+Depth of the spectrum
+Power
+Amplitude
+Harmonic F-test probability
+Evolutive multitaper spectra in which every window is first warped by the linear change of the sedimentation rate that sharpens its spectrum most, so cycles whose period changes become sharp lines; gives the rate gradient per window. Optional significance against warped AR(1) surrogates.
+Step between windows (0 = window / 20)
+Largest relative rate gradient tried (per depth unit)
+Number of gradients on each side of zero
+Choice of the gradient of a window
+Strength of the lines (F-test)
+Match with the astronomical template
+Highest whitened peak
+Spectral entropy
+Astronomical periods of the template (kyr)
+Depth unit of the data
+metres
+centimetres
+feet
+Number of AR(1) surrogates for significance (0 = none, slow)
+Figure
+De-chirped map, significant cells outlined
+Significance (ratio to the 95% surrogate level)
+De-chirped map only
+Continuous wavelet transform with 22 mother wavelets, superlet transform or synchrosqueezed wavelet transform (WaverideR). Significance against red noise is optional for the CWT.
+Continuous wavelet transform (CWT)
+Superlet transform
+Synchrosqueezed wavelet transform (SST)
+Mother wavelet
+Morlet
+Morlet, zero mean
+Paul
+Generalised Morse
+Bump
+Complex Morlet (cmor)
+Complex Gaussian (cgau)
+Complex Mexican hat
+Shannon
+Frequency B-spline
+Meyer
+Log-Gabor
+Gammatone
+Hann
+DOG (real)
+Real Morlet
+Hermitian hat
+Poisson
+Haar
+Daubechies
+Symlets
+Battle-Lemarie
+Number of cycles (omega_nr)
+Scale resolution dj (smaller = more periods, slower)
+Number of periods
+Base number of cycles c1
+Superlet order (min, max)
+Significance against red noise (slower)
+Number of red-noise simulations
+Show the average spectrum
+Show the data
+Period axis label
+Depth axis label
+Colour scale
+Default (quantiles)
+Quantiles
+Logarithmic
+Square root
+Automatic
+Whiten (equal contrast at every period)
+Sharper scalograms than the plain CWT: adaptive Morlet wavelet (number of cycles grows with the period), superlet synchrosqueezing, chirplet synchrosqueezing (follows changes of the sedimentation rate, with a map of the rate of change of the period) and ConceFT / multitaper synchrosqueezing (robust against noise).
+Adaptive Morlet wavelet (Awavelet)
+Superlet synchrosqueezing (superlet SST)
+Chirplet synchrosqueezing (chirplet SST, slow)
+ConceFT (multitaper synchrosqueezing, Daubechies et al. 2016)
+Multitaper SST (average of Morse wavelets)
+Number of cycles at the shortest period (omega_min)
+Number of cycles at the longest period (omega_max)
+Change of the number of cycles with the period
+Linear in log2(period)
+Linear in the scale index
+Linear in period
+Quadratic
+Number of cycles of the orders (omega_0)
+Combination of the orders
+Geometric mean
+Arithmetic mean
+Largest dimensionless chirp tried
+Chirp step
+Show the map of the rate of change of the period instead of the power
+Number of Morse wavelets (K)
+Number of random combinations
+Scores the astronomical template on scalograms of chirped Morlet wavelets matched to every rate gradient, for every depth and sedimentation rate (an eCOCO-like evidence map that allows for changing rates). Shows the best score over the gradients and the best rate at every depth.
+Astronomical periods (kyr)
+Period and rate spacing (octaves)
+Number of cycles of the wavelet (omega_0)
+Step between scored positions (0 = 5 samples)
+Second file: the tracked period curve (depth, period) of a cycle of known duration. The record is tuned with it, transformed in time and mapped back onto depth, so all cycles become sharp lines where the track is right: a check of the track. Optional significance against warped AR(1) surrogates.
+Transform in time
+Morlet wavelet
+Superlet SST
+Multisynchrosqueezing
+Chirplet SST (slow)
+Multitaper EHA
+Combined (Morlet, EHA and superlet SST)
+Shortest period (kyr; 0 = automatic)
+Longest period (kyr; 0 = automatic)
+Period spacing (octaves)
+Number of cycles of the Morlet wavelet
+EHA window (kyr; 0 = 20 x shortest period)
+Tuned scalogram (time domain)
+Frequency uncertainty of a Fourier spectrum of this record (practical 1/T and Heisenberg-Gabor limit) and the period range a cycle can be told apart from (Rayleigh band), for the periods you give.
+Periods of interest
+Number of Rayleigh bandwidths (half-width of the band)
+Which parts of a wavelet or superlet scalogram stand above noise: analytic Torrence & Compo (1998) levels, Monte Carlo surrogates (white, AR(1), signal-corrected AR(1) or power-law noise, with p-values of candidate cycles), or percentiles of the average spectrum of red-noise runs.
+Scalogram
+Morlet CWT
+Superlet
+Analytic (Torrence & Compo 1998, instantaneous)
+Noise surrogates (Monte Carlo)
+Red-noise percentiles of the average spectrum
+Noise background
+AR(1) without the candidate cycles
+Power law (1/f^beta)
+Periods removed before fitting the noise
+Candidate periods to give p-values for
+Significance level
+Percentiles of the red noise
+Scale resolution dj
+Keeps only the ridges of a synchrosqueezed transform (SST, superlet SST or ConceFT) that are unlikely to come from AR noise of the record (optionally with a variance that changes along the record).
+Synchrosqueezed wavelet transform
+ConceFT
+Number of noise simulations
+Highest AR order of the noise model
+Noise variance changes along the record
+Averages the wavelet power over a band of periods (e.g. one Milankovitch band) and tests it at every depth against white or AR(1) noise (Torrence & Compo 1998, eq. 24): is this cycle significant here?
+Shortest period of the band
+Longest period of the band
+Degrees of freedom
+Exact (eigenvalues)
+Torrence & Compo (1998)
+Number of cycles of the Morlet wavelet (omega_nr)
+Null-hypothesis series with the same spectrum as the data: IAAFT surrogates keep the value distribution exactly and the spectrum approximately, phase-randomised (FT) surrogates keep the spectrum exactly.
+Surrogate type
+IAAFT (Schreiber & Schmitz 1996)
+Fourier phase randomisation
+Number of surrogates
+Maximum IAAFT iterations
+Surrogate series with the same power spectrum as the record but random phases (Ebisuzaki 1997), or noise generated from a theoretical spectrum (power law or AR(1); Timmer and Konig 1995) with the length, sampling, mean and standard deviation of the record.
+Phase-randomised surrogates of the record (surrogates)
+Noise from a theoretical spectrum (makeNoise)
+Number of series
+Keep the mean of the record
+Keep the variance of the record
+Power law 1 / f^beta
+beta or rho (0 = from the record)
+Random seed (0 = random)
+Band-pass filter: Taner (Taner 2000), Gaussian or cosine-tapered window. Optionally writes the amplitude envelope. Drag the two lines on the spectrum or type the cut-off frequencies.
+Filter
+Taner (astrochron)
+Gaussian (WaverideR)
+Cosine-tapered window (astrochron)
+Low frequency cut-off (cycles/unit)
+High frequency cut-off (cycles/unit)
+Taner roll-off rate
+Add the mean back to the filtered series
+Also write the amplitude envelope (Hilbert)
+Instantaneous amplitude of a filtered series (Acycle: Amplitude Modulation).
+Reconstructs a cycle of fixed period from the wavelet transform (band given as factors of the period or as shortest and longest period), its spectral power, or its amplitude (wavelet analogue of the Hilbert envelope, absolute calibration); or the envelope of the whole record.
+Extract
+Cycle, band as factors of the period
+Cycle, band as shortest and longest period
+Spectral power of the cycle
+Amplitude of the cycle
+Envelope of the whole record
+Period of the cycle
+Lower band factor
+Upper band factor
+Add the mean of the data to the cycle
+Second file: the tracked period curve (depth, period). Extracts the tracked cycle (or another cycle scaled from it) with band limits from the Gabor uncertainty of the wavelet, its spectral power, or its amplitude along the changing period.
+Cycle, band from the wavelet uncertainty
+Duration of the cycle to extract (kyr)
+Band half-width (standard deviations of the uncertainty)
+Second file: the tracked period curve (depth, period). Band-pass filter whose pass band follows the tracked period (the dynamic filter of Acycle, Thibault & Rizzi / Li), computed in sliding Hann windows.
+Relative bandwidth of the pass band
+Number of control points (0 = all track points)
+Window step (depth units)
+Drop the ends covered by less than 10% of a window (edge blow-up)
+Show the pass band as period
+Wavelet coherence and phase of two series; series 2 is interpolated onto the depths of series 1.
+Cross-wavelet power and phase of two series; series 2 is interpolated onto the depths of series 1.
+Cross-superlet power and phase of two series (the superlet counterpart of the cross wavelet); series 2 is interpolated onto the depths of series 1.
+Show phase arrows
+Fourier coherence and phase of two series (Acycle: lead-lag), with the lead or lag of series 2 behind series 1 in the units of column 1 at each frequency and the 95% significance level of the coherence. Both series are interpolated onto a common grid over their overlap.
+Common sampling interval
+Smoothing: modified Daniell span (odd, at least 3)
+Applied twice; wider spans give a smoother coherence with more degrees of freedom.
+Cosine taper proportion
+Zero padding (proportion of the length)
+Remove linear trends
+Confidence level
+Highest frequency shown
+Lowest panel
+Lag of series 2 (units of column 1)
+Correlation of two records with a significance test that respects their serial correlation (phase-randomised surrogates, also for different sampling; Baddouh et al. 2016), or the shift of the second record that correlates best with the first (slideCor).
+Correlation with surrogate significance (surrogateCor)
+Best shift between the records (slideCor)
+Correlation coefficient
+Spearman rank
+Kendall rank
+Correlate first differences
+Reverse the polarity of the second record
+Remove the linear trend of each window
+Smallest overlap (points, 0 = default)
+Splits the series into intrinsic mode functions (IMFs, from short to long periods) plus a residue and the removed trend, by (ensemble) empirical mode decomposition. Writes all modes as one table (input for Instantaneous frequency and Ratios), chosen modes or the sum of modes as series, and checks of the decomposition. Uneven sampling is allowed.
+Ensemble EMD (EEMD, added white noise)
+EMD (no added noise)
+Number of IMFs
+The residue (and, unless bound to it, the removed trend) is added as an extra mode.
+Ensemble size (decompositions combined, even)
+Noise amplitude factor
+Noise amplitude unit
+Mean of the lag-1 differences
+Data units
+Mirrored noise (cancels when combined)
+Sifting iterations
+Removed before decomposition (added back as a mode)
+Linear trend
+Add the removed trend to the residue (one mode instead of two)
+Resampling
+None (uneven sampling allowed)
+Even, at the greatest common divisor of the spacing (respace)
+Even, at an own interval
+respace only refines: the interval must divide the greatest common divisor of the depth steps.
+Merge modes (groups separated by ;)
+For example 6, 7 or 1, 2; 7, 8 (mode.bind). Mode numbers of the decomposition before merging.
+Write these modes as two-column series
+For example 4 or 4, 6 (numbers after merging).
+Write the sum of these modes as a series
+For example 3-5: a band-pass reconstruction (mode.out, keep). Numbers after merging.
+Check the decomposition (integrity, parsimony, symmetry, check.emd)
+Signal and all modes
+DecomposeR plot_emd (modes listed below)
+Modes in the figure (empty = all)
+Decomposes the series into components of a trajectory matrix (singular spectrum analysis), to be grouped into trend, cycles and noise. Writes the same table as EMD (input for Instantaneous frequency and Ratios). Uneven series are interpolated and the components given at the original depths.
+Implementation
+Base R (CycloDesk)
+Window length (points)
+Longer than the longest period of interest; at most half the record.
+Number of components
+Removed before decomposition (written as the trend)
+Nothing
+Group components (groups separated by ;)
+For example 1, 2; 3, 4: each pair of a cycle gives one component. Components not listed stay single.
+Write these components as two-column series
+Numbers of the columns after grouping.
+Signal and components
+Share of variance per component
+Instantaneous frequency, period and amplitude of IMFs: select a decomposition table written by EMD / SSA (all modes) or a two-column series (one IMF or a filtered cycle). The period curves can be used as a tracked cycle in Age models > Build an age model > Depth to time.
+Modes to analyse (empty = all but residue and trend)
+Positions among the mode columns: 1 = first column after depth and signal (imf_1 of an EMD table).
+Instantaneous frequency method
+Hilbert transform (HT)
+Normalised Hilbert transform (NHT)
+Direct quadrature (DQ)
+Generalised zero-crossing (GZC)
+Hilbert transform, analytic derivative (chain rule)
+HT: Hilbert transform; NHT and DQ first normalise the mode to unit amplitude (Huang et al. 2009), which can fail; GZC: generalised zero crossing, robust, precise to a quarter period (needs simple modes); chain: Hilbert transform with the analytic derivative of the phase.
+Interpolation interval for the Hilbert transform (0 = automatic)
+Uneven series are interpolated before the transform; 0 uses the greatest common divisor of the spacing (HT, NHT) or the median spacing (chain).
+Differentiation lag (samples)
+Running median of the period curves (points, 0 = none)
+Smooths the written period curves (useful for an age model); the table also keeps the raw values.
+Compare with the zero-crossing frequency (gzc.departure)
+Period curves of all modes
+One mode: envelope and period
+Period distribution (plot_pulse)
+Spectral population, period vs amplitude (plot_pulse)
+DecomposeR plot_imf (one mode)
+Mode for the one-mode figures
+Reference periods drawn in the figure
+Instantaneous ratios of the frequencies of pairs of modes of a decomposition table (EMD / SSA), with the product of their amplitudes. Compare them with the ratios of astronomical periods (e.g. 405 / 21 kyr) to test an astronomical interpretation without an age model.
+Modes (at least two; empty = all but residue and trend)
+Positions among the mode columns, e.g. 4, 6, 7.
+Reference periods (expected ratios between them)
+Periods in any one unit (e.g. kyr); every ratio between them is listed and drawn.
+Pairs in the figure (e.g. 4/6; empty = automatic)
+Ratios along the record
+Ratio population (plot_ratio)
+Compares the instantaneous frequency computed with the Hilbert transform with the exact value for a test signal a sin(2 pi f1 t + phi1) + b sin(2 pi f2 t + phi2) + c, to see how sampling, an offset or a second cycle bias the method.
+Length of the test signal
+Random (uneven) sampling with the same number of points
+Phase derivative
+Arctangent of the phase (arctan)
+Analytic derivative (chain)
+Amplitude a of cycle 1
+Frequency f1 of cycle 1
+Phase phi1 of cycle 1 (radians)
+Amplitude b of cycle 2
+Frequency f2 of cycle 2
+Phase phi2 of cycle 2 (radians)
+Offset c
+Bispectrum and bicoherence: phase coupling between frequencies, e.g. combination tones of astronomical cycles.
+Significance test
+Surrogates (IAAFT, slow)
+Bispectrum and bicoherence by Welch overlapping segments (Choudhury et al. 2008), as in Sullivan et al. (2023): high bicoherence at (f1, f2) means f1 + f2 is a combination tone with coupled phases.
+Number of segments
+Overlap of the segments (%)
+Confidence level of the contour (%)
+Hanning taper
+Frequencies to mark (optional)
+Bicoherence
+Bispectrum
+Power spectrum
+Recurrence plot of the series after time-delay embedding (Acycle: Recurrence plot): dark points mark pairs of depths at which the system is in a similar state. Regular cycles give diagonal lines; changes in the pattern mark changes in the dynamics. Gives the recurrence quantification (RR, DET, LAM, ...).
+Embedding dimension
+Delay (samples)
+Default: the first lag at which the autocorrelation falls below 1/e.
+Distance threshold
+Fraction of the largest distance
+Recurrence rate
+Recurrence rate (share of recurrent pairs)
+Distance
+Euclidean
+Manhattan
+Standardise the series first
+Most points in the plot (subsampling)
+Shortest line for DET and LAM (points)
+Distance matrix (unthresholded)
+Running lag-1 autocorrelation with Monte Carlo windows, a sea-level proxy (Li et al. 2018, Acycle: rho1).
+Shortest window (time units)
+Longest window (time units)
+Monte Carlo simulations (at least 50)
+Dynamic noise after orbital tuning, a sea-level proxy for tuned series (Li et al. 2018, Acycle: DYNOT).
+Shortest window (kyr)
+Longest window (kyr)
+Step (kyr)
+Monte Carlo simulations
+Ratio of power in astronomical bands to total power in sliding windows (Acycle: Power Decomposition Analysis).
+Target band (two frequencies, cycles/unit)
+Window length
+Ratio of the power in a target band to the total power in sliding windows, exactly as the Acycle menu and DYNOT compute it (adaptive multitaper, historical bin mapping).
+Step (samples)
+Padding (FFT length)
+Evolutive mean frequency and bandwidth, indicators of sedimentation-rate change (Sinnesael et al. 2018).
+Step
+Tracks the astronomical cycles in a scalogram automatically (hidden Markov model over all cycles at once) and gives the sedimentation rate and an age model with uncertainty. Use the Track view to do it by hand.
+Approximate age (Ma)
+Morlet CWT (fast)
+Multi-synchrosqueezed (msst)
+Tracker
+HMM on the scalogram
+HMM and chirp-matched spectra
+Chirp-matched spectra
+Tracks the sedimentation rate through a scalogram with all astronomical cycles at once (hidden Markov model), with a credible band and an age model. The iterative method repeats the tracking on the record converted to time, which sharpens the cycles.
+One pass on a scalogram (track_astro_hmm)
+Iterative, in the time domain (track_astro_iterative)
+Sedimentation rates are given in cm/kyr; the depth unit converts them to the depth unit of the data.
+At the age of the record (AstroGeo22)
+Own list (kyr)
+Age of the record (Ma)
+Obliquity and precession periods at this age (lunar recession), from WaverideR::astro_periods_tracking.
+Periods (kyr)
+Synchrosqueezed CWT
+Superlet SST (slower)
+Scalogram of the first pass
+Number of cycles of the wavelet (omega_nr)
+Iterations in the time domain
+Approximate duration (kyr, 0 = unknown)
+Turned into a guide for the tracking; strongly recommended for real records.
+Background of the power
+Rate change allowed per shortest cycle (sd of log2 rate)
+Probability of an abrupt jump
+Depths of possible jumps, e.g. hiatuses (optional)
+Smoothing of the tracked path
+Piecewise constant (TV)
+Piecewise linear
+Posterior samples (uncertainty)
+Track on the scalogram
+Evidence map (rate x depth)
+Posterior of the rate
+Sed. rate and age model
+Sliding-window multitaper spectra de-chirped for a linear change of the rate, scored against the astronomical template. Gives a tracked rate (HMM on rate and gradient) or the spectral rate estimate per window (rate-gram).
+Estimate
+HMM tracking of rate and gradient (track_chirp_hmm)
+Best rate per window, median filtered (rate_gram)
+Largest relative change of the rate across a window
+Weight of the spectral evidence
+Median filter (windows)
+Follows one cycle (e.g. precession or the 405-kyr eccentricity) through an evolutive maximum-entropy spectrum and converts its period to a sedimentation rate with the duration of the cycle.
+Shortest period of the tracked cycle (depth units)
+Longest period of the tracked cycle (depth units)
+e.g. 405 (long eccentricity), 100, 41 (obliquity) or about 20 (precession).
+Largest change of frequency between windows (fraction)
+Penalty for changes of frequency
+Scores every trial sedimentation rate at every depth by how well the astronomical periods match the wavelet spectrum (FLMW fit, peak or template match, or summed power above red noise), then finds the most probable smooth rate curve with a credible band.
+Score
+Template match (fast)
+Weighted peak match
+Linear fit to spectral peaks (classic FLMW)
+Summed power above red noise
+Sed. rate step (cm/kyr)
+Period tolerance (relative)
+Red-noise simulations
+Red-noise percentile
+Rate change allowed per metre (sd of the log rate)
+Depths of hiatuses or breaks (optional)
+Sharpness of the score
+Converts a tracked cycle (depth and its period or frequency, e.g. from EHA or a tracked scalogram ridge) into a sedimentation-rate curve and age model, given the duration of the cycle.
+Column 2 of the data
+Period (depth units)
+Frequency (cycles/depth unit)
+Duration of the cycle (kyr)
+Optimises the sedimentation rate by fitting precession amplitude modulation and spectral power (Meyers 2015).
+Minimum sed. rate (cm/kyr)
+Maximum sed. rate (cm/kyr)
+Number of sed. rates
+Sed. rate grid
+Envelope fit
+Precession amplitude modulation
+Short eccentricity modulation
+Eccentricity periods (kyr, empty = default)
+Precession periods (kyr, empty = default)
+TimeOpt in sliding windows: astrochron eTimeOpt, or WaverideR win_timeOpt with the null-model bias correction.
+eTimeOpt (astrochron)
+win_timeOpt, bias corrected (WaverideR)
+Null simulations per window
+Runs windowed TimeOpt (bias corrected against noise) with the precession, short-eccentricity and obliquity amplitude-modulation fits and compares their best rates per window: rates that agree are robust, rates in the ratio of two cycles point to an alias. Depth in metres.
+Fit 1: precession amplitude modulation
+Fit 2: short-eccentricity amplitude modulation
+Fit 3: obliquity amplitude modulation
+Fixed length in depth
+Fixed duration in time
+Window length (m)
+Window duration (kyr)
+Noise simulations per window
+Tolerance of the rate ratios
+TimeOpt default
+Fit written as sed. rate curve
+Fit 1
+Fit 2
+Fit 3
+TimeOpt (Meyers 2015) over a grid of sedimentation rates, with the p-value of the best fit from simulated AR(1) or power-law noise series that are analysed in the same way, and the TimeOpt summary figure. Depth in metres.
+Statistic tested
+r2 opt (envelope x power)
+r2 spectral power
+r2 envelope
+Noise model of the simulations
+AR(1) red noise (timeOptSim)
+Power law (timeOptSimPwrLaw)
+rho or beta of the noise (0 = from the record)
+Meyers (2015) used 2000; with 100 the smallest p-value that can be reported is 0.1.
+Processor cores
+Include the modulation periods in the spectral fit
+In decreasing order, starting with 405 kyr; default 405.7, 130.7, 123.8, 98.9, 94.9 kyr.
+Default 23.6, 22.3, 19.1, 18.9 kyr.
+Low cut-off of the bandpass (cycles/kyr, 0 = default)
+Default 0.035 (precession modulation) or 0.007 (short eccentricity modulation).
+High cut-off of the bandpass (cycles/kyr, 0 = default)
+Default 0.065 (precession modulation) or 0.0115 (short eccentricity modulation).
+Roll-off of the Taner filter (dB/octave, 0 = default)
+TimeOpt for a sedimentation rate that changes along the record following a template: faster deposition of one lithology (the proxy itself as template), a linear change, steps at given depths or possible hiatuses. Gives the instantaneous sed. rate, an age model and optionally a Monte Carlo p-value. Slow: each average rate is a full optimisation. Depth in metres.
+Sedimentation-rate template
+The proxy itself (differential accumulation)
+Linear change along the record
+Steps at given depths
+Possible hiatuses at given depths
+Depths of the steps or hiatuses
+Minimum average sed. rate (cm/kyr)
+Maximum average sed. rate (cm/kyr)
+Number of average sed. rates
+Lowest instantaneous sed. rate (cm/kyr, 0 = default)
+Highest instantaneous sed. rate (cm/kyr, 0 = factor below)
+Highest instantaneous rate as a factor of the average (0 = default 5)
+Optimise on
+Modulations x spectral power
+Modulations
+Spectral power
+Remove the linear trend of the template
+Flip the template
+Monte Carlo significance (timeOptTemplateSim, slow)
+Bayesian TimeOpt of Malinverno and Meyers (2024): posterior probability of the sedimentation rate and the precession frequency k on a grid, with age-specific priors, the best astronomical fit and optionally the p-values of AR(2) noise simulations. k also gives the Earth-Moon distance and day length. Depth in metres.
+Lowest k (arcsec/yr, 0 = from the prior)
+Highest k (arcsec/yr, 0 = from the prior)
+Number of k values
+Include the envelope fit
+Obliquity terms
+s1 to s6
+s3 and s4
+Tolerance of the precession band (cycles/kyr)
+Significance with 1000 AR(2) simulations (timeOptBSim)
+Likelihood maps
+Posterior
+Best fit to the data
+AR(2) noise fit
+Simulations (timeOptBSim)
+Markov chain Monte Carlo versions of Bayesian TimeOpt: posterior distributions of the sedimentation rate, the precession frequency k and the Solar System frequencies g (and s), hence of all astronomical periods and grand cycles. Slow: astrochron recommends 50 000 samples for timeOptBMCMC. Depth in metres.
+timeOptBMCMC (Malinverno and Meyers 2024)
+timeOptMCMC (Meyers and Malinverno 2018)
+Sets the priors of k and of the g (and s) frequencies (Hoang et al. 2021).
+Number of MCMC samples
+Fit
+Power and envelope
+Power only
+Prior mean of k (arcsec/yr, 0 = AstroGeo22 at the age)
+Prior standard deviation of k (arcsec/yr, 0 = AstroGeo22 range)
+Figure number
+timeOptBMCMC: 1 MCMC diagnostics, 2 posterior and prior PDFs, 3 Milankovitch periods, 4-5 grand cycles, 6 correlations. timeOptMCMC: 1 stability, 2-3 candidates along the chain, 4 kernel densities, 5 histograms.
+Evolutive TimeOpt in sliding windows, then the r2 maxima in every window (eTimeOptTrack) and the best sedimentation rate along the record as a sed.-rate curve and age model. Depth in metres.
+Step (m)
+Statistic tracked
+r2 opt
+Smallest r2 of a tracked maximum
+Correlation coefficient between the data spectrum and an astronomical target for a range of sedimentation rates (Li et al. 2018).
+Approximate age of the record (Ma)
+Used to set the precession and obliquity periods of the target (Berger 1992 / Waltham 2015).
+Monte Carlo simulations (0 = none)
+COCO in sliding windows with ridge tracking of the best sedimentation rate (Li et al. 2018).
+Correlation of the data spectrum with an astronomical target over a range of constant sedimentation rates (Acycle 3): adaptive target amplitudes, or cvCOCO with targets trained on one half of the record and tested on the other. Depth in metres.
+cvCOCO, blocked halves
+cvCOCO, interleaved samples
+Adaptive COCO
+Target amplitudes
+Fitted per orbital group
+Fitted per period
+Fixed (Acycle weights)
+Astronomical target periods
+Acycle default (La2004, nine periods)
+Own nine periods (kyr)
+Nine periods (kyr, descending)
+Correlation and p-values
+Folds and validation spectra
+pCOCO
+Monte Carlo audit
+Data spectrum and fixed target at the best rate
+Evolutive COCO of Acycle 3: adaptive targets, or targets trained on separate data (blocked or interleaved validation) so that the correlation is not inflated. The sed.-rate ridge is tracked automatically or through points you give. Depth in metres.
+Blocked validation (ecoco_blocked)
+Interleaved validation (ecoco_interleaved, slow)
+Adaptive (ecoco_adaptive)
+Ridge tracking
+Viterbi ridge (ecoco_track_ridge)
+Best rate per window (ecoco_best_per_window)
+Acycle depth slices (ecoco_track)
+Through given points (track_ecoco)
+Number of depth slices
+Largest rate jump between windows (cm/kyr)
+Largest p-value of a tracked peak
+Points: depth rate; depth rate; ...
+COCO or evolutive COCO with the spectrum of an astronomical series (series 2: time in kyr, value, e.g. an ETP or insolation series from Basic Series) as the target. Depth in metres.
+COCO (one rate for the record)
+eCOCO (sliding windows)
+Highest target frequency (cycles/kyr)
+Average spectral misfit (Meyers and Sageman 2007; Meyers et al. 2012): compares the frequencies of significant spectral peaks with astronomical target frequencies over a range of sedimentation rates and gives the null-hypothesis significance level (Ho-SL). Evolutive: in sliding EHA windows, with the Ho-SL minima tracked along the record. Depth in metres.
+Whole record (asm)
+Evolutive, sliding windows (eAsm, eAsmTrack)
+Astronomical target periods (kyr)
+Relative uncertainty of the targets (0-1, 0 = none)
+Time-bandwidth product of the spectra (NW)
+Harmonic F-test level of the peaks (0-1)
+Own peak frequencies (cycles/m, optional)
+Largest Ho-SL of a tracked minimum (%)
+Tests constant sedimentation rates against noise analysed at the same rate (TimeOpt, likelihood and COCO scores, several noise models), or estimates the rate history and tests the minimally tuned record against surrogates. Depth in metres.
+Constant rates, TimeOpt / COCO scores (astro_sedrate_test)
+Tracked rate and tuning against surrogates (astro_tune_test)
+TimeOpt fit
+Short-eccentricity modulation
+Default
+Include the COCO score
+Minimal tuning at the best rate (writes an age model)
+Noise series
+Surrogates
+Sampled rate paths
+Runs the astronomical sedimentation-rate test on two proxies of the same section and combines their evidence rate by rate (they share one sedimentation rate). Depth in metres.
+TimeOpt fit 1 (precession modulation)
+TimeOpt fit 2 (short-eccentricity modulation)
+Combination
+Minimum p
+Stouffer
+Floating age model from a filtered cycle: every maximum (or minimum) of the filtered series is one cycle period later than the previous one (Acycle: Build Age Model; minimal tuning).
+Period of the filtered cycle (kyr)
+Tie points at
+Half-width of the peak search (points)
+Age of the first tie point (kyr)
+Also write the tuned series
+Age model from a filtered or extracted cycle (depth in metres): the distance between successive maxima, minima or both of the cycle is set to its duration. Use a filtered series (Time Series > Filtering and cycle extraction) or a cycle extracted in the Track view.
+Maxima (one cycle apart)
+Minima (one cycle apart)
+Maxima and minima (half a cycle apart)
+Points compared on each side (peak detection)
+Age of the top of the record (kyr)
+Integrates a sedimentation-rate curve (depth in m, rate in cm/kyr) to a depth-time model.
+Converts a record (file 1: depth in metres, value) to time with file 2: a tracked period curve of one cycle (depth, period), a sedimentation-rate curve (depth, cm/kyr) or tie points (depth, age).
+File 2 holds
+Tracked period curve of one cycle
+Sedimentation-rate curve (cm/kyr)
+Tie points (depth, age)
+Interpolate the result at an even time step
+Time step (kyr)
+Converts a depth series to time with an age model (file 2: depth, age), as Acycle: Age Scale.
+Age model (depth, age)
+Extrapolate beyond the first and last tie point
+Interpolate the tuned series at an even step
+Turns a floating astrochronology (time in kyr from the start of the record) into absolute ages by giving one point of the floating scale a radioisotopic or other age.
+Floating time of the anchor point (kyr)
+Age of the anchor point (kyr)
+The floating time increases
+Towards the present (older at the start)
+Away from the present (younger at the start)
+Sort the output with decreasing age
+Weighted mean of dates with uncertainties, MSWD and probability of fit, with the confidence interval of IsoPlot or ArArCALC (also for any values with uncertainties), or the age spectrum and plateau age of an Ar/Ar step-heating experiment. Data file: date and uncertainty (wtMean; or the six Ar/Ar columns date, uncertainty, K/Ca, %Ar40*, F, F uncertainty), or the seven step-heating columns %Ar39, date, uncertainty, K/Ca, %Ar40*, F, F uncertainty.
+Dates with uncertainties (wtMean)
+Ar/Ar step heating (stepHeat)
+Uncertainties in the file are
+1 sigma
+2 sigma
+95% confidence interval
+ArArCALC (Koppers 2002)
+IsoPlot (Ludwig 2008)
+Rows left out of the mean (optional)
+Row numbers of the data file, e.g. outliers by Chauvenet's criterion listed in the result.
+Time unit of the dates
+Ma
+ka
+J value (neutron fluence, 0 = none)
+Ar/Ar only: adds the uncertainty of J.
+Uncertainty of J (0 = none)
+Total decay constant of 40K (1/yr)
+%Ar40* level shown
+Boundaries, mid-ages and colours of the units of the International Chronostratigraphic Chart: a unit and its subdivisions, an age range, or the units at one age, drawn as a time-scale chart; optionally with the astronomical periods at the mid-age.
+A unit and its subdivisions
+An age range
+The units at one age
+Unit
+Phanerozoic (Eon, 0-541 Ma)
+Cenozoic (Era, 0-66 Ma)
+Quaternary (Period, 0-2.58 Ma)
+Holocene (Epoch, 0-0.0117 Ma)
+Holocene Age (Age, 0-0.0117 Ma)
+Pleistocene (Epoch, 0.0117-2.58 Ma)
+Calabrian (Age, 0.781-1.8 Ma)
+Gelasian (Age, 1.8-2.58 Ma)
+Neogene (Period, 2.58-23.03 Ma)
+Pliocene (Epoch, 2.58-5.333 Ma)
+Piacenzian (Age, 2.58-3.6 Ma)
+Zanclean (Age, 3.6-5.333 Ma)
+Miocene (Epoch, 5.333-23.03 Ma)
+Messinian (Age, 5.333-7.246 Ma)
+Tortonian (Age, 7.246-11.63 Ma)
+Serravallian (Age, 11.63-13.82 Ma)
+Langhian (Age, 13.82-15.97 Ma)
+Burdigalian (Age, 15.97-20.44 Ma)
+Aquitanian (Age, 20.44-23.03 Ma)
+Paleogene (Period, 23.03-66 Ma)
+Oligocene (Epoch, 23.03-33.9 Ma)
+Chattian (Age, 23.03-28.1 Ma)
+Rupelian (Age, 28.1-33.9 Ma)
+Eocene (Epoch, 33.9-56 Ma)
+Priabonian (Age, 33.9-37.8 Ma)
+Bartonian (Age, 37.8-41.2 Ma)
+Lutetian (Age, 41.2-47.8 Ma)
+Ypresian (Age, 47.8-56 Ma)
+Paleocene (Epoch, 56-66 Ma)
+Thanetian (Age, 56-59.2 Ma)
+Selandian (Age, 59.2-61.6 Ma)
+Danian (Age, 61.6-66 Ma)
+Mesozoic (Era, 66-252 Ma)
+Cretaceous (Period, 66-145 Ma)
+Maastrictian (Age, 66-72.1 Ma)
+Campanian (Age, 72.1-83.6 Ma)
+Santonian (Age, 83.6-86.3 Ma)
+Coniacian (Age, 86.3-89.8 Ma)
+Turonian (Age, 89.8-93.9 Ma)
+Cenamonian (Age, 93.9-100 Ma)
+Albian (Age, 100-113 Ma)
+Aptian (Age, 113-126 Ma)
+Barremian (Age, 126-131 Ma)
+Hauterivian (Age, 131-134 Ma)
+Valanginian (Age, 134-139 Ma)
+Berriasian (Age, 139-145 Ma)
+Jurassic (Period, 145-201.3 Ma)
+Tithonian (Age, 145-152.1 Ma)
+Kimmeridgian (Age, 152.1-157.3 Ma)
+Oxfordian (Age, 157.3-163.5 Ma)
+Callovian (Age, 163.5-166.1 Ma)
+Bathonian (Age, 166.1-168.3 Ma)
+Bajocian (Age, 168.3-170.3 Ma)
+Aalenian (Age, 170.3-174.1 Ma)
+Toarcian (Age, 174.1-182.7 Ma)
+Pliensbachian (Age, 182.7-190.8 Ma)
+Sinemurian (Age, 190.8-199.3 Ma)
+Hettangian (Age, 199.3-201.3 Ma)
+Triassic (Period, 201.3-251.902 Ma)
+Rhaetian (Age, 201.3-208.5 Ma)
+Norian (Age, 208.5-227 Ma)
+Carnian (Age, 227-237 Ma)
+Ladinian (Age, 237-242 Ma)
+Anisian (Age, 242-247.2 Ma)
+Olenekian (Age, 247.2-251.2 Ma)
+Induan (Age, 251.2-251.902 Ma)
+Paleozoic (Era, 251.902-541 Ma)
+Permian (Period, 251.902-298.9 Ma)
+Lopingian (Epoch, 251.902-259.1 Ma)
+Changhsingian (Age, 251.902-254.14 Ma)
+Wuchiapingian (Age, 254.14-259.1 Ma)
+Guadalupian (Epoch, 259.1-272.95 Ma)
+Capitanian (Age, 259.1-265.1 Ma)
+Wordian (Age, 265.1-268.8 Ma)
+Roardian (Age, 268.8-272.95 Ma)
+Cisuralian (Epoch, 272.95-298.9 Ma)
+Kungurian (Age, 272.95-283.5 Ma)
+Artinskian (Age, 283.5-290.1 Ma)
+Sakmarian (Age, 290.1-295 Ma)
+Asselian (Age, 295-298.9 Ma)
+Carboniferous (Period, 298.9-358.9 Ma)
+Gzhelian (Age, 298.9-303.7 Ma)
+Kasimovian (Age, 303.7-307 Ma)
+Moscovian (Age, 307-315.2 Ma)
+Bashkirian (Age, 315.2-323.2 Ma)
+Serpukhovian (Age, 323.2-330.9 Ma)
+Visean (Age, 330.9-346.7 Ma)
+Tournaisian (Age, 346.7-358.9 Ma)
+Devonian (Period, 358.9-419.2 Ma)
+Famennian (Age, 358.9-372.2 Ma)
+Frasnian (Age, 372.2-382.7 Ma)
+Eifelian (Age, 378.7-393.3 Ma)
+Givetian (Age, 382.7-378.7 Ma)
+Emsian (Age, 393.3-407.6 Ma)
+Pragian (Age, 407.6-410.8 Ma)
+Lochkovian (Age, 410.8-419.2 Ma)
+Silurian (Period, 419.2-443.8 Ma)
+Pridoli (Epoch, 419.2-423 Ma)
+Pridoli Age (Age, 419.2-423 Ma)
+Ludlow (Epoch, 423-427.4 Ma)
+Ludfordian (Age, 423-425.6 Ma)
+Wenlock (Epoch, 427.4-433.4 Ma)
+Gorstian (Age, 425.6-427.4 Ma)
+Homerian (Age, 427.4-430.5 Ma)
+Sheinwoodian (Age, 430.5-433.4 Ma)
+Llandovery (Epoch, 433.4-443.8 Ma)
+Telychian (Age, 433.4-438.5 Ma)
+Aeronian (Age, 438.5-440.8 Ma)
+Rhuddanian (Age, 440.8-443.8 Ma)
+Ordovician (Period, 443.8-485.4 Ma)
+Hirnantian (Age, 443.8-445.2 Ma)
+Katian (Age, 445.2-453 Ma)
+Sandbian (Age, 453-458.4 Ma)
+Darriwilian (Age, 458.4-467.3 Ma)
+Dapingian (Age, 467.3-470 Ma)
+Floian (Age, 470-477.7 Ma)
+Tremadocian (Age, 477.7-485.4 Ma)
+Cambrian (Period, 485.4-541 Ma)
+Furongian (Epoch, 485.4-497 Ma)
+Stage 10 (Age, 485.4-489.5 Ma)
+Jiangshanian (Age, 489.5-494 Ma)
+Paibian (Age, 494-497 Ma)
+Series 3 (Epoch, 497-509 Ma)
+Guzhangian (Age, 497-500.5 Ma)
+Drumian (Age, 500.5-504.5 Ma)
+Stage 5 (Age, 504.5-509 Ma)
+Series 2 (Epoch, 509-521 Ma)
+Stage 4 (Age, 509-514 Ma)
+Stage 3 (Age, 514-521 Ma)
+Terreneuvian (Epoch, 521-541 Ma)
+Stage 2 (Age, 521-529 Ma)
+Fortunian (Age, 529-541 Ma)
+Proterozoic (Eon, 541-2500 Ma)
+Neoproterozoic (Era, 541-1000 Ma)
+Ediacaran (Period, 541-635 Ma)
+Cryogenian (Period, 635-720 Ma)
+Tonian (Period, 720-1000 Ma)
+Mesoproterozoic (Era, 1000-1600 Ma)
+Stenian (Period, 1000-1200 Ma)
+Ectasian (Period, 1200-1400 Ma)
+Calymmian (Period, 1400-1600 Ma)
+Paleoproterozoic (Era, 1600-2500 Ma)
+Statherian (Period, 1600-1800 Ma)
+Orosirian (Period, 1800-2050 Ma)
+Rhyacian (Period, 2050-2300 Ma)
+Siderian (Period, 2300-2500 Ma)
+Archean (Eon, 2500-4000 Ma)
+Neoarchean (Era, 2500-2800 Ma)
+Neoarchean Period (Period, 2500-2800 Ma)
+Mesoarchean (Era, 2800-3200 Ma)
+Mesoarchean Period (Period, 2800-3200 Ma)
+Paleoarchean (Era, 3200-3600 Ma)
+Paleoarchean Period (Period, 3200-3600 Ma)
+Eoarchean (Era, 3600-4000 Ma)
+Eoarchean Period (Period, 3600-4000 Ma)
+Hadean (Eon, 4000-4600 Ma)
+Youngest age (Ma)
+Oldest age (Ma)
+Age (Ma)
+Also give the astronomical periods at the mid-age
+Bayesian age-depth model of radioisotopic dates alone (modified Bchron; Trayler et al., 2020). The file is a table with a header: position (depth or height), age, sd (1 sigma, or a 2sd column) and optionally thickness; rows at the same position are combined into one dated level.
+Positions are
+Depths (increasing downwards, older)
+Heights (increasing upwards, younger)
+Number of MCMC iterations
+Burn-in iterations
+Probability of the interval
+Number of positions of the model
+Also predict the age at positions (optional)
+Joint Bayesian age-depth model of radioisotopic dates (file 1: table with position, age, sd and optionally thickness, or single-zircon dates) and a floating astrochronology (file 2: tracked period of the cycle, depth and period). Estimates hiatus durations, outlier probabilities and, optionally, compares with the dates-only modBchron model.
+File 1 holds
+One row per dated level (position, age, sd)
+Single-zircon dates (one row per grain; grains at one position form a level)
+Longest crystallisation interval before eruption (kyr)
+Unit of the ages
+ka (kyr)
+Relative uncertainty of the tracked period (1 sd, %)
+Positions of hiatuses (empty = none)
+Prior durations of the hiatuses (kyr)
+Prior uncertainties of the hiatuses (1 sd, kyr)
+Outlier model of the dates
+Mixture with outlier probability
+Two-stage screening
+Gaussian (no outliers)
+Outliers can be
+Too old or too young
+Too old (inheritance)
+Too young (Pb loss)
+Thinning interval
+Track realisations per segment
+Leave-one-out test of every date (one extra run per date, slow)
+Also run the dates-only modBchron model
+modBchron iterations
+File 1: depth and one or more proxy columns; file 2: a tracked period curve (depth, period), e.g. from the Track view. Every simulation blends randomly perturbed copies of the track and follows the nearest ridge in the scalogram of a randomly chosen proxy; the spread of the re-tracked curves is the tracking uncertainty, used by Age model with uncertainty, Gap duration and Dates + astrochronology.
+Proxy columns of file 1 (numbers; empty = all)
+Perturbation of the track (+/- %)
+Upper limit of the ridge search (factor of the track)
+Lower limit of the ridge search (factor of the track)
+Smoothing of every re-tracked curve
+LOESS, automatic span
+LOESS, given span
+Span (0 to 1) or window length (depth units)
+Shortest period of the scalograms
+Longest period of the scalograms
+Simulates age models from a tracked cycle with its uncertainty (a re-tracked curve, or a tracked period curve with a relative uncertainty) and the uncertainty of the cycle duration; optionally anchored to dated levels (ages in kyr) with hiatuses. Writes the mean, sd and quantiles of the age at every depth.
+The data file is a
+Tracked period curve (depth, period)
+Re-tracked curve (depth, mean frequency, sd), from Re-track
+Uncertainty of the cycle duration (kyr)
+Distribution of the cycle duration
+Normal (uncertainty = 1 sd)
+Uniform (uncertainty = half-width)
+Ages
+Floating (time from the top)
+Anchored to dated levels
+Depths of the dated levels
+Ages of the dated levels (kyr)
+Age uncertainties (1 sd, kyr; one value for all)
+Depth uncertainty of the dated levels (full width)
+Depths of hiatuses (empty = none)
+Durations of the hiatuses (kyr)
+Uncertainties of the hiatuses (1 sd, kyr)
+Rejections before a disagreeing date is dropped
+Estimates the duration of a gap at a given depth from a stable cycle: file 1 is the tracked curve on both sides of the gap (a re-tracked curve, or a period curve with a relative uncertainty), file 2 the proxy record. Both sides are tuned, the cycle is extracted and the missing part of the cycle across the gap is the gap duration.
+File 1 is a
+Depth of the gap
+Duration of the cycle missing in the gap (kyr)
+Number of missing cycles
+Uncertainty of the missing-cycle duration (kyr, if it differs from the tracked cycle)
+Extracted band: shortest period (factor of the missing cycle)
+Extracted band: longest period (factor of the missing cycle)
+Measure between
+Maxima of the cycle
+Minima of the cycle
+Scale resolution dj of the tuned scalograms
+Second file: the tracked period curve (depth, period). Frequency uncertainty of the tracked cycle from the Gabor uncertainty of the Morlet wavelet or the resolution of an FFT, and the resulting spread of the time-depth model.
+Uncertainty of
+Morlet wavelet (Gabor)
+FFT, practical resolution 1/T
+FFT, Heisenberg-Gabor limit 1/(4 pi T)
+Multiple of the uncertainty
+Record or window length for the FFT (0 = length of the track)
+De-chirps the record (file 1) with an existing age model (file 2: a tracked period curve, a sedimentation-rate curve or depth-age points): in the time of the age model every astronomical cycle should be a horizontal line; intervals where the cycles bend away are flagged with the rate correction they ask for.
+Tracked period of one cycle (depth, period)
+Sedimentation rate (depth, rate)
+Unit of the rate
+cm/kyr with depth in metres
+depth units per kyr
+m/Myr with depth in metres
+kyr
+Approximate age of the record (Ma, picks the cycles)
+Cycles to check (kyr; empty = eccentricity, obliquity, precession)
+Transform: Morlet wavelet
+Transform: multitaper EHA
+Transform: superlet SST (slower)
+Transform: chirplet SST (slow)
+Rate correction that is flagged (0.1 = 10 %)
+Cycles that must agree
+Also run a blind re-track for comparison (slower)
+Horizontal axis of the maps
+Time of the age model
+Depth
+Tests an astronomically tuned record (time in kyr, 0-50 Ma): are the precession (or obliquity) amplitude modulations those of the La2004 solution? Significance from phase-randomised or AR(1) surrogates, with filters and added noise that guard against modulations created by tuning (Zeeden et al. 2015, 2019).
+Precession amplitude modulation (testPrecession)
+Obliquity amplitude modulation (testTilt)
+Time unit of the data
+Myr
+Phase-randomised
+Part of each end excluded (0-1)
+Largest noise added (standard deviations of the data)
+Low-pass cut-off of the envelope (cycles/kyr)
+Detrend the envelope
+Finds depths where energy over many periods arrives at once (phase jumps of all cycles at a hiatus, erosion surfaces, turbidites, spikes) with the transient-extracting (time-reassigned) wavelet transform.
+Period spacing dj (octaves)
+Number of cycles (small = sharper in depth)
+Detection threshold (multiple of the running median)
+Minimum distance between transients (0 = longest period / 4)
+Running-median window (0 = 2 x longest period)
+Aligns record 2 to record 1 by dynamic time warping and writes the depth-to-depth tie function (depth in record 2, equivalent depth in record 1) and record 2 on the depth scale of record 1. With an open end (and begin), record 2 may match only part of record 1. Use the tie function in Age scale / tuning to move other proxies of record 2.
+Points per record (even resampling)
+Both records are resampled evenly with at most this many points; the cost matrix grows with its square.
+Values
+Detrended and standardised
+As they are
+Step pattern
+symmetric2 (default, normalisable)
+symmetric1
+asymmetric (needed for open begin)
+symmetricP05 (slope limited)
+symmetricP1 (slope limited)
+symmetricP2 (slope limited)
+asymmetricP05
+asymmetricP1
+asymmetricP2
+Rabiner-Juang type IIIc
+Rabiner-Juang type IVc
+Window constraint
+Sakoe-Chiba band
+Slanted band
+Itakura parallelogram
+Window size (share of the record)
+Open end (record 2 matches a leading part of record 1)
+Open begin (needs open end and an asymmetric or type c step pattern)
+Alignment of the two records
+Record 2 on the depth scale of record 1
+Tie function
+Eccentricity, obliquity and precession periods at a given age, with the precession constant k from the AstroGeo22 tidal model (Farhat et al. 2022) or your own k. Use it to know which periods to expect in a deep-time record.
+Terms
+Nine main periods (Acycle ORBIT9)
+All named terms with aliases
+Main periods with weights for tracking
+Every gi-gj, k+si and k+gi term
+Precession constant k
+AstroGeo22 model at this age
+My own value
+Precession constant k (kyr)
+Include eccentricity
+Include obliquity
+Include precession
+The nine main astronomical periods over an age range, with the precession constant from AstroGeo22 or the La2004 extrapolation. Shows how the obliquity and precession periods shorten into the past.
+Age step (Ma)
+Precession constant from
+AstroGeo22 (Farhat et al. 2022), interpolated
+AstroGeo22, nearest 1-Myr row as in Acycle
+La2004 polynomial extrapolation
+Precession and obliquity periods at an age from Berger et al. (1992), or eccentricity, obliquity and precession periods from the Solar System frequencies g and s and the precession constant k (Laskar 1999 or Malinverno and Meyers 2024).
+At an age, Berger et al. 1992 (bergerPeriods)
+From g, s and k (calcPeriods)
+Age (Ma, 0-500)
+g1 to g5 (arcsec/yr)
+s1, s2, s3, s4, (s5,) s6 (arcsec/yr, optional)
+Needed for the obliquity periods; leave empty for eccentricity and precession only.
+Precession constant k (arcsec/yr)
+Laskar (1999, table 6)
+Malinverno and Meyers (2024, table 1)
+Which astronomical term, harmonic or combination tone could an unidentified spectral peak be? Lists the terms within a relative tolerance of each measured period.
+Measured period(s) (kyr)
+Relative tolerance
+Highest order
+Single terms
+Also harmonics, sums and differences
+Predicted number of precession (or obliquity) cycles per eccentricity cycle at a given age. Compare with the bundling counted in the record (then use the Precession constant tool, method 'Bundling').
+Eccentricity terms (rows)
+Precession / obliquity terms (columns)
+All difference and combination tones (f1 - f2, f1 + f2) of a set of periods, and the tone closest to a period you observed, e.g. to explain a peak that is not a primary astronomical term.
+Observed period to explain (kyr, 0 = none)
+Explore chaos in the inner solar system: shift g4-g3 / s4-s3 and see which cycles move, the sensitivity of every term to each fundamental frequency, or which resonance state measured long modulation periods imply.
+Analysis
+Scenario: shift g4-g3 and s4-s3
+Sensitivity of every term to each fundamental
+Resonance state from measured modulation periods
+g4-g3 period in the scenario (kyr, 0 = La2004)
+s4-s3 period in the scenario (kyr, 0 = La2004)
+How g3 and g4 move
+Both, about their mean
+Keep g3, move g4
+Keep g4, move g3
+Fractional change of each fundamental
+Fundamentals
+Measured eccentricity modulation, g4-g3 (kyr)
+Measured obliquity modulation, s4-s3 (kyr)
+Largest p and q of the ratio p:q
+Probability density of the fundamental frequencies g1-g5 and s1-s4, s6 at an age, from the chaotic diffusion of the Solar System (Hoang et al. 2021, table 2): the priors of the Bayesian TimeOpt methods.
+Age (Ga)
+CTest (Zeeden et al. 2023): give the wavelength ranges (m) of the eccentricity, obliquity and precession cycles you identified in a depth-domain spectrum and the age; a Monte Carlo consistency test returns the sedimentation rate, the precession constant k and the Earth-Moon distance and length of day.
+CTest (Zeeden et al. 2023)
+CTest in the published draw order (slow, reproduces the paper's samples)
+Flexible Monte Carlo with a sedimentation-rate range
+Age of the record (Ma): one value or min, max
+405-kyr eccentricity, wavelength min, max (m)
+~125-kyr eccentricity (m)
+~95-kyr eccentricity (m)
+Obliquity k+s3 (m, empty = not identified)
+Longest precession k+g5 (m)
+Middle precession k+g2 (m)
+Shortest precession k+g4 and k+g3 (m)
+Cycles used besides eccentricity
+From the cycles given
+Precession and obliquity
+Obliquity only
+Precession only
+Sedimentation rate range (m/kyr)
+Accepted Monte Carlo samples
+Range of k sampled (yr)
+Sampling of g2-g5
+Uniform within 2 sigma (as in the paper)
+Normal
+Uncertainty of s3
+As in the published code (s3 fixed)
+Scaled like g2-g5
+Earth-Moon conversion
+Angular-momentum conservation
+AstroGeo22 curve (Farhat et al. 2022)
+Consistency test for a record already tuned to time: give the period ranges (kyr) of the cycles you resolved; the precession constant k, the secular frequencies and the Earth-Moon state follow, with the uncertainty of the tuning target propagated.
+Monte Carlo consistency test (astro_from_periods)
+Zeeden et al. (2023) estimator (astro_ctest)
+Joint inversion of the obliquity and precession terms only (astro_invert)
+405-kyr eccentricity, period min, max (kyr)
+~125-kyr eccentricity (kyr, empty = not resolved)
+~95-kyr eccentricity (kyr)
+Obliquity k+s3 (kyr)
+Precession k+g5 (kyr)
+Precession k+g2 (kyr)
+Precession k+g4 (kyr)
+Precession k+g3 (kyr)
+Short precession k+g4 and k+g3 together (kyr)
+Other constraints (term = min, max; ...)
+Any term of 'Astronomical periods at an age', e.g. g4-g3 = 2200, 2600; any:k+g5|k+g2 = 19, 20
+Period assumed for the tuning target (kyr, 0 = free stretch)
+Tuning target term
+Monte Carlo samples
+Range of k sampled (kyr)
+The precession constant k and the Earth-Moon state from measured cycles: single cycles read as named terms, the ratio of two cycles (works on untuned depth data), a bundling count, every possible reading of one peak, a quick conversion, or a scan of k against several peaks.
+Single cycles read as named terms
+Ratio of two cycles
+Precession cycles per eccentricity bundle
+Every reading of one peak (hypotheses)
+Quick conversion of periods to k
+Scan k against measured peaks
+Measured periods (kyr)
+Hypotheses use the first period only.
+Term of each period
+Longer cycle (kyr or m)
+Shorter cycle (same unit)
+Term of the longer cycle
+Term of the shorter cycle
+Relative 1-sigma uncertainty of each cycle
+Cycles counted per bundle (may be fractional)
+Eccentricity term of the bundle
+Bundled term
+1-sigma counting uncertainty (cycles)
+Candidate terms
+Term of the periods
+Obliquity k+s3
+Precession k+g5
+Precession k+g2
+Precession k+g4
+Precession k+g3
+Terms predicted for every k
+Smallest k (kyr)
+Largest k (kyr)
+Step of k (kyr)
+Relative tolerance of a match
+Age (Ma): one value or min, max
+Record length (kyr or m; 0 = use the tolerance / sd)
+With a record length the band of each cycle is its frequency resolution.
+Relative half-width of each cycle
+Multiple of the frequency resolution
+Period assumed for the tuning target (kyr, 0 = untuned)
+Combine several k terms by
+Multiplying the densities
+Pooling the samples
+g4-g3 period range for chaos (kyr, empty = La2004)
+s4-s3 period range (kyr, empty = La2004)
+Sampling of the secular frequencies
+Monte Carlo draws (0 = point estimate)
+Multiplies the densities of two sets of precession-constant samples (e.g. the *_k_samples.txt files of two CTest runs or two proxies), as in Zeeden et al. (2023). Column 2 of each file is used.
+Grid points of the densities
+Age for the Earth-Moon state (Ma, 0 = present-day obliquity)
+Tests an age model: the significant obliquity and precession peaks of the tuned record must give one consistent precession constant k, which is compared with AstroGeo22; spectral peaks and amplitude modulation are tested as well. The data file is the tuned record (time, value).
+Time unit of the record
+k+g5 and k+g2 separate only when tbw <= record length (kyr) / 1600; values below 1.5 (a single taper) fail in astrochron::mtm.
+Confidence level of a peak
+Also require the harmonic F-test
+Half-width of the search windows (fraction)
+Remove intervals with weak precession first
+Precession band of the pre-scan (kyr)
+Running window of the pre-scan (kyr)
+Weak when below this fraction of the median
+Shortest piece kept or removed (kyr)
+Phase-randomised surrogates
+Reference k (kyr, 0 = AstroGeo22 at the age)
+Plausible range of k for the verdict (kyr)
+Range of k searched (kyr, empty = around AstroGeo22)
+Builds synthetic tuned records with known precession constants (five orbital terms, a 405-kyr cycle and AR(1) noise) and shows the k recovered by the tuned-record test: a check that the chosen time-bandwidth product resolves the terms.
+Known k of the synthetic records (kyr)
+Noise level (sd multiplier)
+Record length (kyr)
+Age passed to the test (Ma)
+Compares a measured precession constant with AstroGeo22 (Farhat et al. 2022) and the La2004 extrapolation at the age of the record, or lists the Devonian reference values of Zeeden et al. (2023).
+Table
+Measured k against the published models
+Zeeden et al. (2023) Table 1, Devonian reference values
+Measured k (kyr, 0 = none)
+Obliquity for the inversion (degrees, 0 = AstroGeo22)
+From any one known quantity (precession constant, Earth-Moon distance, length of day, lunar months per year, an observed cycle, or an age on the AstroGeo22 model) to the full Earth-Moon state: distance, solar and sidereal day, days and months per year, obliquity, spin rate and angular momentum.
+Known quantity
+Precession frequency (arcsec/yr)
+Earth-Moon distance (Earth radii)
+Earth-Moon distance (km)
+Length of the solar day (h)
+Lunar months per year
+Observed obliquity or precession cycle (kyr)
+Age on the AstroGeo22 model (Ma)
+Precession constant k (kyr), one or more
+Type of month
+Sidereal
+Synodic
+Observed cycle (kyr)
+The cycle is
+Inversion of a precession value
+Obliquity
+AstroGeo22 at an age
+Present day (23.25 degrees)
+Age for the obliquity (Ma)
+Obliquity (degrees)
+Curves of the Earth-Moon system with conserved angular momentum over a range of distances, day lengths, months per year or precession constants, compared with the AstroGeo22 tidal model.
+Vary
+From (Earth radii)
+To (Earth radii)
+From (h)
+To (h)
+From (months per year)
+To (months per year)
+From (kyr)
+To (kyr)
+Obliquity for the precession (degrees)
+Show the AstroGeo22 model (0-1000 Ma)
+Earth-Moon distance (Earth radii) and length of day (hours), with uncertainties, from a precession frequency k and its uncertainty (e.g. from Bayesian TimeOpt), after Walker et al. (1986) with the constants of Malinverno and Meyers (2024).
+Precession frequency k (arcsec/yr)
+Standard deviation of k (arcsec/yr)
+Distribution of the sampling interval (Acycle: Plot > Sampling Rate).
+Number of histogram bins
+Histogram, density and normal Q-Q plot of the data values (Acycle: Plot > Data Distribution).
+About CycloDesk
+CycloDesk 0.2.2 (alpha)
+is a point-and-click workbench for cyclostratigraphy by Michiel Arts. All calculations are done by the R
+packages WaverideR and astrochron; the R code of every step is in the R code & log tab.
+Source code, manual and feedback:
+github.com/stratigraphy/CycloDesk
+. Something wrong or missing?
+Tell us
+When you publish results, please cite CycloDesk and the packages that did the work:
+Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy. R package version 0.2.2. https://github.com/stratigraphy/CycloDesk
+Arts, M., et al. (2024). Frontiers in Earth Science 12, 1357751. doi:10.3389/feart.2024.1357751
+(the paper that introduced WaverideR).
+Arts, M. (2023). WaverideR: Extracting Signals from Wavelet Spectra. R package,
+Meyers, S.R. (2014). astrochron: An R Package for Astrochronology.
+The original method papers named in the help of each function (the purple line under the name of a tool).
+The menu layout and working-folder workflow are inspired by Acycle: Li, M., Hinnov, L.A., Kump, L.R.
+(2019). Acycle: Time-series analysis software for paleoclimate research and education. Computers &
+Geosciences 127, 12-22. doi:10.1016/j.cageo.2019.02.011
+Dismiss
+Menu
+Tool
+Function(s)
+New folder
+Name
+Create
+New data file
+Paste two (or more) columns: depth/time and values (from Excel or a text file)
+Save
+Rename
+New name
+Delete %d file(s) from the working folder? This cannot be undone.
+Delete files
+Delete 1 file(s) from the working folder? This cannot be undone.
+File name (without extension)
+Format
+PDF (editable in Illustrator)
+PNG (300 dpi)
+Width (inches)
+Height (inches)
+No tie points yet.
+Pick at least one tie point first.
+The update check failed.
+Drop the files on a folder.
+A calculation is still running.
+Not a CycloDesk result file.
+Figure failed
+Select exactly one file or folder.
+Select the files to delete in the list first.
+Checking GitHub for updates ...
+That name exists already.
+This PC
+Click at least two points along the beds first.
+This result has no scalogram or spectrum map to track on.
+The map of this result could not be read for tracking.
+Choose a data file.
+The file could not be read as a series.
+Compute the scalogram first.
+Click at least one point on the band of the cycle first.
+Show a scalogram first.
+Choose a file.
+Choose the depth and value columns and a multiplier other than 0.
+Give at least one value.
+Helper lines added; they are drawn once a scalogram is shown.
+Tick the groups to remove first.
+Choose a file and the column with the depths.
+The file could not be read.
+Track the cycle first: click at least two points on its band.
+Delete %d files...
+%d files
+Language
+R has stopped. You can close this window.
+Start CycloDesk again from its icon.
+Analysis & age models
+R code & log
+Tools
+adds a point, snapped to the nearest power peak
+adds a point exactly where you click (free tracking)
+adds or removes a vertical boundary line
+extracted cycle
+age model + tuned series
+floating model from the Track view
+Track view: the data of the tracked record
+an age-model file (depth, age)
+a constant sedimentation rate
+the nearest maximum
+the nearest minimum
+nothing (exactly where you click)
+adds a point to the route
+sets the scale bar (two points)

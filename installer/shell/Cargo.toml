@@ -1,6 +1,6 @@
 [package]
 name = "cyclodesk"
-version = "0.2.1"
+version = "0.2.2"
 description = "CycloDesk desktop window: starts CycloDesk's R in the background and shows it in a native window"
 edition = "2021"
 license = "GPL-2.0-or-later"

@@ -5,7 +5,7 @@
 #' Opens the point-and-click interface in the web browser. Pick a working folder on the left; its data files are
 #' listed below it. Select one or more files and choose a tool from the menus; results are written as new text files
 #' into the same folder (with Acycle-style suffixes such as \code{-rsp0.02} or \code{-rLowess0.35}), and the
-#' equivalent R code is collected in the R code tab.
+#' equivalent R code is collected in the R code & log tab.
 #'
 #' @param folder Working folder to start in (character string); \code{NULL} uses the last folder used, or the home
 #'   folder. \code{Default=NULL}.
@@ -36,7 +36,11 @@ cd_app <- function(folder = NULL, stop_on_close = TRUE) {
   if (nzchar(www)) {
     shiny::addResourcePath("cyclodesk", www)
   }
-  shiny::shinyApp(ui = cd_ui(), server = cd_server(folder = folder, stop_on_close = stop_on_close))
+  # the page is built at every (re)load, in the language chosen in Help > Language
+  ui <- function(req) {
+    cd_tr_tags(cd_ui())
+  }
+  shiny::shinyApp(ui = ui, server = cd_server(folder = folder, stop_on_close = stop_on_close))
 }
 
 cd_menu <- function(label, items, icon = NULL) {
@@ -78,51 +82,61 @@ cd_tool_icon <- function(id) {
   "circle"
 }
 
-cd_tool_items <- function(menu) {
-  tl <- cd_tool_order(cd_tools(), menu)
+# A submenu that opens beside the menu (the tools of one group)
+cd_submenu <- function(label, items) {
+  shiny::tags$li(class = "cd-sub",
+      shiny::tags$a(href = "#", class = "cd-subhead", shiny::tags$span(class = "cd-lab", label),
+          shiny::tags$span(class = "cd-subcaret", shiny::icon("chevron-right"))),
+      shiny::tags$ul(class = "cd-submenu", items))
+}
+
+# The items of one menu: a submenu per group of cd_menu_layout(); the tools of a group without a name are shown
+# directly in the menu
+cd_tool_items <- function(menu, tl = cd_tools()) {
+  groups <- cd_menu_layout()[[menu]]
+  cmds <- cd_menu_commands()
   out <- list()
-  last_group <- ""
-  for (t in tl) {
-    g <- if (is.null(t$group)) { "" } else { t$group }
-    if (!identical(g, last_group) && nzchar(g)) {
+  for (g in names(groups)) {
+    items <- list()
+    for (id in groups[[g]]) {
+      if (startsWith(id, "cmd:")) {
+        items[[length(items) + 1]] <- cd_item(cmds[[id]]$label, id, icon = cmds[[id]]$icon)
+        next
+      }
+      for (t in tl) {
+        if (identical(t$id, id)) {
+          items[[length(items) + 1]] <- cd_item(t$label, paste0("tool:", t$id),
+              icon = if (is.null(t$icon)) { cd_tool_icon(t$id) } else { t$icon })
+        }
+      }
+    }
+    if (!length(items)) {
+      next
+    }
+    if (nzchar(trimws(g))) {
+      out[[length(out) + 1]] <- cd_submenu(g, items)
+    } else {
       if (length(out)) {
         out[[length(out) + 1]] <- cd_divider()
       }
-      out[[length(out) + 1]] <- cd_header(g)
-    }
-    last_group <- g
-    out[[length(out) + 1]] <- cd_item(t$label, paste0("tool:", t$id), icon = if (is.null(t$icon)) { cd_tool_icon(t$id) } else { t$icon })
-    if (t$id == "track_auto") {
-      out[[length(out) + 1]] <- cd_item("Track a cycle by hand on the scalogram", "cmd:track", icon = "route")
-      out[[length(out) + 1]] <- cd_item("Anchor to an astronomical solution or metronome", "cmd:anchor", icon = "anchor")
+      out <- c(out, items)
     }
   }
   out
 }
 
-# Tools of one menu with the same group gathered together ####
-# Groups keep the order in which they first appear; a group with a source in brackets, e.g.
-# "Spectral analysis (astrochron)", follows the group of the same name without it.
-cd_tool_order <- function(tl, menu) {
-  sel <- list()
-  for (t in tl) {
-    if (identical(t$menu, menu)) {
-      sel[[length(sel) + 1]] <- t
-    }
+# The languages of Help > Language, each under its own name; the language in use is ticked
+cd_language_items <- function() {
+  langs <- cd_languages()
+  cur <- cd_lang()
+  out <- list()
+  for (code in names(langs)) {
+    out[[length(out) + 1]] <- shiny::tags$li(shiny::tags$a(href = "#", class = "cd-act cd-notr",
+        `data-action` = paste0("lang:", code),
+        shiny::tags$span(class = "cd-ico", if (identical(code, cur)) { shiny::icon("check") } else { NULL }),
+        shiny::tags$span(class = "cd-lab", langs[[code]])))
   }
-  if (!length(sel)) {
-    return(sel)
-  }
-  g <- character(length(sel))
-  for (i in seq_along(sel)) {
-    g[i] <- if (is.null(sel[[i]]$group)) { "" } else { sel[[i]]$group }
-  }
-  base <- sub(" \\([^)]*\\)$", "", g)
-  key_base <- match(base, base)
-  key_group <- match(g, g)
-  key_source <- as.integer(base != g)
-  o <- order(key_base, key_source, key_group, seq_along(sel))
-  sel[o]
+  out
 }
 
 # Small wave logo for the menu bar
@@ -162,9 +176,8 @@ cd_ui <- function() {
                 cd_item("Statistics summary / data table", "cmd:stats", "table"),
                 cd_divider()), cd_tool_items("Plot"))),
               cd_menu("Basic Series", cd_tool_items("Basic Series")),
-              cd_menu("Math", cd_tool_items("Math")),
+              cd_menu("Processing", cd_tool_items("Processing")),
               cd_menu("Time Series", cd_tool_items("Time Series")),
-              cd_menu("Wavelets", cd_tool_items("Wavelets")),
               cd_menu("Sed. rate", cd_tool_items("Sed. rate")),
               cd_menu("Age models", cd_tool_items("Age models")),
               cd_menu("Astronomy", cd_tool_items("Astronomy")),
@@ -174,18 +187,24 @@ cd_ui <- function() {
                 cd_item("Tutorial and manual (web)", "cmd:manual", "graduation-cap"),
                 cd_divider(),
                 cd_item("Report a problem or suggest a feature", "cmd:feedback", "comment-dots"),
-                cd_item("Check for updates", "cmd:update", "arrows-rotate")))),
+                cd_item("Check for updates", "cmd:update", "arrows-rotate"),
+                cd_divider(),
+                cd_submenu("Language", cd_language_items())))),
           shiny::tags$button(class = "cd-closebtn", id = "cd_close", title = "Close CycloDesk (stops R)",
               shiny::icon("power-off"), shiny::tags$span("Close")),
           shiny::tags$span(class = "cd-busy", id = "cd_busy", "")))
-  left <- shiny::tags$div(class = "cd-left",
+  left <- shiny::tags$div(class = "cd-left", id = "cd_left",
       shiny::tags$div(class = "cd-card cd-nav",
           shiny::tags$div(class = "cd-navtop",
               shiny::tags$button(class = "cd-ibtn", id = "cd_up", title = "Up one folder (Backspace)", shiny::icon("arrow-up")),
               shiny::uiOutput("places", inline = TRUE),
               shiny::tags$span(class = "cd-spacer"),
               shiny::tags$button(class = "cd-ibtn", id = "cd_edit", title = "Type a path", shiny::icon("pencil")),
-              shiny::tags$button(class = "cd-ibtn", id = "cd_refresh", title = "Refresh (F5)", shiny::icon("rotate"))),
+              shiny::tags$button(class = "cd-ibtn", id = "cd_refresh", title = "Refresh (F5)", shiny::icon("rotate")),
+              shiny::tags$button(class = "cd-ibtn", id = "cd_delete", title = "Delete the selected files (Del)",
+                  shiny::icon("trash-can")),
+              shiny::tags$button(class = "cd-ibtn", id = "cd_collapse", title = "Hide the file panel",
+                  shiny::icon("angles-left"))),
           shiny::uiOutput("drives"),
           shiny::tags$div(id = "cd_crumbs", class = "cd-crumbs"),
           shiny::tags$div(id = "cd_pathbox", class = "cd-pathbox", style = "display:none",
@@ -205,31 +224,60 @@ cd_ui <- function() {
           shiny::checkboxInput("pl_pts", "Points", FALSE),
           shiny::checkboxInput("pl_rev", "Reverse depth axis", FALSE),
           shiny::checkboxInput("pl_swap", "Depth vertical", FALSE),
+          shiny::checkboxInput("pl_logy", "Log value axis", FALSE),
           shiny::actionButton("pl_savefig", "Save figure", icon = shiny::icon("image"), class = "btn-sm"),
-          shiny::tags$span(class = "cd-hint", "Drag to zoom, double-click to reset")),
+          shiny::tags$span(class = "cd-hint", "Data files, spectra and saved results (.rds). Drag to zoom, double-click to reset")),
       shiny::plotOutput("mainplot", height = "600px", brush = shiny::brushOpts("pl_brush", direction = "x", resetOnNew = TRUE),
           dblclick = "pl_dbl"))
-  tool_tab <- shiny::tabPanel("Tool", value = "tool",
-      shiny::fluidRow(
-          shiny::column(4, class = "cd-toolform",
-              shiny::uiOutput("tool_head"),
-              shiny::uiOutput("tool_files"),
-              shiny::uiOutput("tool_form"),
-              shiny::uiOutput("tool_buttons")),
-          shiny::column(8,
-              shiny::uiOutput("tool_view_ui"),
-              shiny::plotOutput("tool_plot", height = "560px", dblclick = "tool_dbl",
-                  brush = shiny::brushOpts("tool_brush", direction = "xy", resetOnNew = TRUE, delay = 400)),
-              shiny::verbatimTextOutput("tool_text"))))
+  tool_tab <- shiny::tabPanel("Tools", value = "tool",
+      shiny::conditionalPanel("!output.tool_open", shiny::uiOutput("tool_start")),
+      shiny::conditionalPanel("output.tool_open",
+          shiny::fluidRow(
+              shiny::column(4, class = "cd-toolform",
+                  shiny::actionLink("tool_index", "All tools", icon = shiny::icon("table-cells"), class = "cd-toolindex"),
+                  shiny::uiOutput("tool_head"),
+                  shiny::uiOutput("tool_files"),
+                  shiny::uiOutput("tool_form"),
+                  shiny::uiOutput("tool_buttons")),
+              shiny::column(8,
+                  shiny::uiOutput("tool_view_ui"),
+                  shiny::plotOutput("tool_plot", height = "560px", dblclick = "tool_dbl",
+                      brush = shiny::brushOpts("tool_brush", direction = "xy", resetOnNew = TRUE, delay = 400)),
+                  shiny::verbatimTextOutput("tool_text")))))
   data_tab <- shiny::tabPanel("Data", value = "data",
       shiny::fluidRow(shiny::column(5, shiny::uiOutput("stats")), shiny::column(7, shiny::tableOutput("datatable"))))
-  code_tab <- shiny::tabPanel("R code", value = "code",
-      shiny::tags$p(class = "cd-hint", "The R code of every operation in this session. It runs in the working folder",
-          " (setwd() to it first)."),
-      shiny::actionButton("code_save", "Save to working folder", icon = shiny::icon("floppy-disk"), class = "btn-sm"),
-      shiny::actionButton("code_clear", "Clear", class = "btn-sm"),
-      shiny::tags$div(class = "cd-code", shiny::verbatimTextOutput("code")))
-  log_tab <- shiny::tabPanel("Log", value = "log", shiny::tags$div(class = "cd-log", shiny::verbatimTextOutput("log")))
+  code_tab <- shiny::tabPanel("R code & log", value = "code",
+      shiny::tags$div(class = "cd-codelog",
+          shiny::tags$div(class = "cd-codecol",
+              shiny::tags$div(class = "cd-coltitle", "R code"),
+              shiny::tags$p(class = "cd-hint", "The R code of every operation in this session. It runs in the working folder",
+                  " (setwd() to it first)."),
+              shiny::actionButton("code_save", "Save to working folder", icon = shiny::icon("floppy-disk"), class = "btn-sm"),
+              shiny::actionButton("code_clear", "Clear", class = "btn-sm"),
+              shiny::tags$div(class = "cd-code", shiny::verbatimTextOutput("code"))),
+          shiny::tags$div(class = "cd-logcol",
+              shiny::tags$div(class = "cd-coltitle", "Log"),
+              shiny::tags$div(class = "cd-log", shiny::verbatimTextOutput("log")))))
+  # The five tabs, in the order of the work. Track, Anchor and Image are views inside the two work tabs.
+  stage_tab <- function(stage, label, active = FALSE) {
+    shiny::tags$li(class = if (active) { "active" } else { NULL }, `data-stage` = stage,
+        shiny::tags$a(href = "#", class = "cd-act", `data-action` = paste0("stage:", stage), label))
+  }
+  st <- cd_stages()
+  views <- list()
+  for (s in names(st)) {
+    btns <- list()
+    for (v in names(st[[s]]$views)) {
+      btns[[length(btns) + 1]] <- shiny::tags$a(href = "#", class = "cd-act cd-view", `data-view` = v,
+          `data-action` = paste0("view:", s, ":", v), st[[s]]$views[[v]])
+    }
+    views[[length(views) + 1]] <- shiny::tags$div(class = "cd-views", `data-stage` = s, style = "display:none", btns)
+  }
+  stages <- shiny::tags$div(class = "cd-tabbar",
+      shiny::tags$ul(class = "nav nav-tabs cd-stages", id = "cd_stages",
+          stage_tab("data", "Data"), stage_tab("plot", "Plot", active = TRUE), stage_tab("proc", st$proc$label),
+          stage_tab("ana", st$ana$label), stage_tab("code", "R code & log")),
+      views)
   shiny::fluidPage(
       title = "CycloDesk",
       theme = NULL,
@@ -240,11 +288,16 @@ cd_ui <- function() {
           shiny::tags$script(src = "cyclodesk/cyclodesk.js")),
       menubar,
       shiny::tags$div(class = "cd-main",
+          shiny::tags$div(class = "cd-ribbon", id = "cd_ribbon", title = "Show the file panel",
+              shiny::tags$button(class = "cd-ibtn", id = "cd_expand", shiny::icon("angles-right")),
+              shiny::tags$div(class = "cd-ribbonlab", shiny::icon("folder-open"), shiny::tags$span(id = "cd_ribbon_name", "Files"))),
           left,
+          shiny::tags$div(class = "cd-resizer", id = "cd_resizer", title = "Drag to make the file panel wider or narrower"),
           shiny::tags$div(class = "cd-right cd-card",
-              shiny::tabsetPanel(id = "tabs", type = "tabs", plot_tab, tool_tab, cd_track_tab(), cd_anchor_tab(), cd_image_tab(), data_tab, code_tab,
-                  log_tab))),
-      shiny::tags$div(class = "cd-status", shiny::textOutput("status", inline = TRUE)))
+              stages,
+              shiny::tabsetPanel(id = "tabs", type = "hidden", selected = "plot", data_tab, plot_tab, tool_tab, cd_track_tab(),
+                  cd_anchor_tab(), cd_image_tab(), code_tab))),
+      shiny::tags$div(class = "cd-status", shiny::uiOutput("status", inline = TRUE)))
 }
 
 # shiny draws plots with ragg when it is installed; a broken ragg installation (built for another R version) gives

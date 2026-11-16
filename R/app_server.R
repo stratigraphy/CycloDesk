@@ -4,6 +4,28 @@ cd_config_file <- function() {
   file.path(tools::R_user_dir("CycloDesk", "config"), "last_folder.txt")
 }
 
+# Width and state of the file panel, remembered between sessions
+cd_ui_state_file <- function() {
+  file.path(tools::R_user_dir("CycloDesk", "config"), "window.txt")
+}
+cd_ui_state_read <- function() {
+  out <- list(width = 340, collapsed = FALSE)
+  f <- cd_ui_state_file()
+  if (file.exists(f)) {
+    v <- suppressWarnings(as.numeric(readLines(f, warn = FALSE, n = 2)))
+    if (length(v) == 2 && all(is.finite(v))) {
+      out <- list(width = min(max(v[1], 220), 1200), collapsed = v[2] == 1)
+    }
+  }
+  out
+}
+cd_ui_state_write <- function(width, collapsed) {
+  f <- cd_ui_state_file()
+  dir.create(dirname(f), recursive = TRUE, showWarnings = FALSE)
+  try(writeLines(c(as.character(round(width)), if (isTRUE(collapsed)) { "1" } else { "0" }), f), silent = TRUE)
+  invisible(NULL)
+}
+
 cd_start_folder <- function(folder) {
   if (!is.null(folder) && dir.exists(folder)) {
     return(normalizePath(folder, winslash = "/"))
@@ -36,6 +58,8 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         cols = list(),
         sheets = list(),
         tool = NULL,
+        tool_stage = "proc",
+        views = list(proc = "tool", ana = "tool"),
         tool_res = NULL,
         tool_err = NULL,
         job = NULL,
@@ -47,6 +71,23 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         recent = cd_recent_folders(),
         drives = cd_drives(),
         tick = 0)
+
+    # Texts of the page's script in the language in use
+    session$onFlushed(function() {
+      session$sendCustomMessage("cd_i18n", cd_js_texts())
+    }, once = TRUE)
+
+    # File panel: width and collapsed state ####
+    session$onFlushed(function() {
+      session$sendCustomMessage("cd_ui", cd_ui_state_read())
+    }, once = TRUE)
+    shiny::observeEvent(input$ui_state, {
+      s <- input$ui_state
+      w <- suppressWarnings(as.numeric(s$width))
+      if (length(w) == 1 && is.finite(w)) {
+        cd_ui_state_write(w, isTRUE(s$collapsed))
+      }
+    })
 
     # Update check (once a day, in a background process) ####
     upd <- shiny::reactiveValues(job = NULL, status = NULL, force = FALSE)
@@ -75,7 +116,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       force <- shiny::isolate(upd$force)
       if (inherits(st, "try-error")) {
         if (force) {
-          shiny::showNotification("The update check failed.", id = "cd_upd", type = "error")
+          cd_notify("The update check failed.", id = "cd_upd", type = "error")
         }
         return()
       }
@@ -92,7 +133,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
             text = "A window shows the progress; CycloDesk opens again in a new tab when the update is installed."))
         shiny::stopApp()
       } else {
-        shiny::showModal(shiny::modalDialog(title = "Update CycloDesk", easyClose = TRUE,
+        cd_show_modal(shiny::modalDialog(title = "Update CycloDesk", easyClose = TRUE,
             shiny::tags$p("Close CycloDesk, then run this in a fresh R session and start CycloDesk again:"),
             shiny::tags$pre(paste(cd_update_code(st), collapse = "\n"))))
       }
@@ -116,7 +157,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         }
         rv$listing <- list(dirs = character(), files = character())
         session$sendCustomMessage("cd_listing", list(items = items, selected = list(),
-            crumbs = list(list(l = "This PC", p = RC_PC)), up = FALSE))
+            crumbs = list(list(l = cd_tr("This PC"), p = RC_PC)), up = FALSE))
         shiny::updateTextInput(session, "path", value = "")
         rv$tick <- rv$tick + 1
         return(invisible(NULL))
@@ -144,7 +185,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       has_pc <- length(rv$drives) > 0
       cr <- cd_crumbs(rv$folder)
       if (has_pc) {
-        cr <- c(list(list(l = "This PC", p = RC_PC)), cr)
+        cr <- c(list(list(l = cd_tr("This PC"), p = RC_PC)), cr)
       }
       session$sendCustomMessage("cd_listing", list(items = items, selected = as.list(sel), crumbs = cr,
           up = dirname(rv$folder) != rv$folder || has_pc))
@@ -162,7 +203,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         path <- paste0(path, "/")
       }
       if (!dir.exists(path)) {
-        shiny::showNotification(paste("Folder not found:", path), type = "error")
+        cd_notify(paste("Folder not found:", path), type = "error")
         shiny::updateTextInput(session, "path", value = rv$folder)
         return(invisible(FALSE))
       }
@@ -198,7 +239,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         set_folder(p)
       }
     })
-    output$places <- shiny::renderUI({
+    output$places <- cd_render_ui({
       rec <- rv$recent
       items <- list(cd_header("This computer"))
       home <- normalizePath(Sys.getenv("USERPROFILE", path.expand("~")), winslash = "/", mustWork = FALSE)
@@ -230,7 +271,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
               shiny::icon("star"), shiny::tags$span("Places"), shiny::icon("chevron-down")),
           shiny::tags$ul(class = "dropdown-menu", items))
     })
-    output$drives <- shiny::renderUI({
+    output$drives <- cd_render_ui({
       dr <- rv$drives
       if (!length(dr)) {
         return(NULL)
@@ -259,7 +300,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         dest <- tg
       }
       if (identical(dest, RC_PC) || !dir.exists(dest)) {
-        shiny::showNotification("Drop the files on a folder.", type = "warning")
+        cd_notify("Drop the files on a folder.", type = "warning")
         return()
       }
       dest <- normalizePath(dest, winslash = "/")
@@ -279,7 +320,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         msg <- paste0(msg, sprintf("; %d failed: %s", length(res$failed), paste(res$failed, collapse = ", ")))
       }
       say(msg)
-      shiny::showNotification(msg, type = if (length(res$failed) || length(res$skipped)) { "warning" } else { "message" },
+      cd_notify(msg, type = if (length(res$failed) || length(res$skipped)) { "warning" } else { "message" },
           duration = 6)
       refresh(select = character())
     })
@@ -288,10 +329,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       if (grepl("\\.rds$", v, ignore.case = TRUE)) {
         open_rds(file.path(rv$folder, substring(v, 3)))
       } else if (grepl("\\.(pdf|png|r)$", v, ignore.case = TRUE)) {
-        if (.Platform$OS.type == "windows") {
-          shell_exec <- get("shell.exec", envir = baseenv())
-          shell_exec(file.path(rv$folder, substring(v, 3)))
-        }
+        cd_open_path(file.path(rv$folder, substring(v, 3)))
       } else {
         shiny::updateTabsetPanel(session, "tabs", selected = "plot")
       }
@@ -305,6 +343,22 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       v <- v[startsWith(v, "f|")]
       v <- substring(v, 3)
       v[cd_is_data(v)]
+    })
+
+    # A saved result (.cyclodesk.rds) selected on its own: the Plot tab shows its figure
+    selected_result <- shiny::reactive({
+      rv$tick
+      v <- as.character(input$files)
+      v <- substring(v[startsWith(v, "f|")], 3)
+      if (length(v) != 1 || !grepl("\\.rds$", v, ignore.case = TRUE)) {
+        return(NULL)
+      }
+      r <- try(readRDS(file.path(rv$folder, v)), silent = TRUE)
+      if (inherits(r, "try-error") || !is.list(r) || !isTRUE(r$cyclodesk)) {
+        return(NULL)
+      }
+      r$file <- v
+      r
     })
 
     # Reading files (cached by modification time) ####
@@ -342,7 +396,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       out
     })
 
-    output$colpick <- shiny::renderUI({
+    output$colpick <- cd_render_ui({
       fs <- selected_files()
       if (length(fs) != 1) {
         return(NULL)
@@ -381,7 +435,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       }
     })
 
-    output$fileinfo <- shiny::renderUI({
+    output$fileinfo <- cd_render_ui({
       fs <- selected_files()
       if (!length(fs)) {
         return(shiny::tags$span(class = "cd-hint", "Click a folder to open it, the arrow or a part of the path above to go",
@@ -405,12 +459,15 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       shiny::tags$table(rows)
     })
 
-    output$status <- shiny::renderText({
+    # the status bar is sent as an interface element, not with renderText(): that would turn the accented letters
+    # of a translation into codes in a session that does not use UTF-8
+    output$status <- shiny::renderUI({
       rv$tick
-      sprintf("Folder: %s   |   %d data files   |   %d selected   |   WaverideR %s, astrochron %s",
-          if (identical(rv$folder, RC_PC)) { "This PC" } else { rv$folder },
-          length(rv$listing$files), length(selected_files()), as.character(utils::packageVersion("WaverideR")),
-          as.character(utils::packageVersion("astrochron")))
+      shiny::tags$span(class = "cd-notr",
+          cd_trf("Folder: %s   |   %d data files   |   %d selected   |   WaverideR %s, astrochron %s",
+              if (identical(rv$folder, RC_PC)) { cd_tr("This PC") } else { rv$folder },
+              length(rv$listing$files), length(selected_files()), as.character(utils::packageVersion("WaverideR")),
+              as.character(utils::packageVersion("astrochron"))))
     })
 
     # Plot tab ####
@@ -428,6 +485,34 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       rv$xlim <- NULL
     })
     main_plot <- function() {
+      view <- if (is.null(rv$xlim)) { NULL } else { list(x = rv$xlim, y = NULL) }
+      # a saved result: the figure of its tool
+      r <- selected_result()
+      if (!is.null(r)) {
+        t <- try(cd_get_tool(r$tool), silent = TRUE)
+        if (inherits(t, "try-error") || is.null(t$plot)) {
+          cd_message_plot("This result has no figure")
+          return(invisible(NULL))
+        }
+        op <- options(CycloDesk.view = view)
+        on.exit(options(op), add = TRUE)
+        p <- try(t$plot(r$result$result, r$result$params), silent = TRUE)
+        if (inherits(p, "try-error")) {
+          cd_message_plot(paste("Plot failed:", conditionMessage(attr(p, "condition"))))
+        }
+        return(invisible(NULL))
+      }
+      # a spectrum table (first column: frequency): power with its confidence levels
+      fs <- selected_files()
+      if (length(fs) == 1) {
+        d <- try(read_file(fs, full = TRUE), silent = TRUE)
+        if (!inherits(d, "try-error") && cd_is_spectrum_table(d)) {
+          op <- options(CycloDesk.view = view)
+          on.exit(options(op), add = TRUE)
+          cd_plot_spectrum_table(d, logy = isTRUE(input$pl_logy), col = rv$cols[[fs]])
+          return(invisible(NULL))
+        }
+      }
       dl <- sel_data()
       labs <- names(dl)
       if (length(dl) == 1) {
@@ -435,8 +520,28 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       }
       cd_plot_series(unname(dl), labels = labs, stack = isTRUE(input$pl_stack), standardise = isTRUE(input$pl_std),
           type = if (isTRUE(input$pl_pts)) { "o" } else { "l" }, xlim = rv$xlim, rev_x = isTRUE(input$pl_rev),
-          swap = isTRUE(input$pl_swap), xlab = if (length(dl) == 1) { names(dl[[1]])[1] } else { "Depth / time" })
+          swap = isTRUE(input$pl_swap), xlab = if (length(dl) == 1) { names(dl[[1]])[1] } else { "Depth / time" },
+          logy = isTRUE(input$pl_logy))
     }
+    # a spectrum is shown on a log axis; other files go back to a linear axis
+    auto_log <- new.env()
+    auto_log$on <- FALSE
+    shiny::observeEvent(selected_files(), {
+      fs <- selected_files()
+      spec <- FALSE
+      if (length(fs) == 1) {
+        d <- try(read_file(fs, full = TRUE), silent = TRUE)
+        spec <- !inherits(d, "try-error") && cd_is_spectrum_table(d)
+      }
+      if (spec && !isTRUE(input$pl_logy)) {
+        auto_log$on <- TRUE
+        shiny::updateCheckboxInput(session, "pl_logy", value = TRUE)
+      } else if (!spec && auto_log$on) {
+        auto_log$on <- FALSE
+        shiny::updateCheckboxInput(session, "pl_logy", value = FALSE)
+      }
+      rv$xlim <- NULL
+    }, ignoreNULL = FALSE)
     output$mainplot <- shiny::renderPlot({
       main_plot()
     }, res = 96)
@@ -453,7 +558,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       }
       utils::head(d, 500)
     }, digits = 6)
-    output$stats <- shiny::renderUI({
+    output$stats <- cd_render_ui({
       dl <- sel_data()
       if (!length(dl)) {
         return(shiny::tags$p(class = "cd-hint", "Select a data file."))
@@ -476,7 +581,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       out
     })
 
-    # Code and log tabs ####
+    # R code & log tab ####
     output$code <- shiny::renderText({
       hdr <- c("# R code written by CycloDesk", "library(WaverideR)", "library(astrochron)",
           sprintf("setwd(%s)", cd_dep(rv$folder)))
@@ -490,7 +595,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       writeLines(c("# R code written by CycloDesk", "library(WaverideR)", "library(astrochron)",
           sprintf("setwd(%s)", cd_dep(rv$folder)), rv$code), f)
       say("R code saved: ", basename(f))
-      shiny::showNotification(paste("Saved", basename(f)), type = "message")
+      cd_notify(paste("Saved", basename(f)), type = "message")
       refresh()
     }
     shiny::observeEvent(input$code_save, {
@@ -509,15 +614,61 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
     open_tool <- function(id) {
       rv$form_nonce <- rv$form_nonce + 1
       rv$tool <- cd_get_tool(id)
+      rv$tool_stage <- cd_menu_stage(rv$tool$menu)
       rv$tool_res <- NULL
       rv$tool_err <- NULL
       shiny::updateTabsetPanel(session, "tabs", selected = "tool")
     }
 
-    output$tool_head <- shiny::renderUI({
+    # start page of a work tab: its tools, with a search box. A tool is shown in the work tab of its menu; the
+    # other work tab shows its own list of tools meanwhile.
+    output$tool_open <- shiny::reactive({
+      !is.null(rv$tool) && identical(cd_menu_stage(rv$tool$menu), rv$tool_stage)
+    })
+    shiny::outputOptions(output, "tool_open", suspendWhenHidden = FALSE)
+    output$tool_start <- cd_render_ui({
+      cd_tool_index(stage = rv$tool_stage)
+    })
+
+    # Tabs ####
+    # The page has five tabs (Data, Plot, Processing, Analysis & age models, R code & log). The two work tabs show
+    # one of several panels: the tool view, or Image (Processing), Track or Anchor (Analysis & age models). Each
+    # work tab comes back to the view it showed last.
+    go_stage <- function(stage) {
+      if (stage %in% names(cd_stages())) {
+        go_view(stage, rv$views[[stage]])
+      } else {
+        shiny::updateTabsetPanel(session, "tabs", selected = stage)
+      }
+    }
+    go_view <- function(stage, view) {
+      if (identical(view, "tool")) {
+        rv$tool_stage <- stage
+      }
+      shiny::updateTabsetPanel(session, "tabs", selected = view)
+    }
+    shiny::observe({
+      panel <- input$tabs
+      stage <- cd_panel_stage(panel, rv$tool_stage)
+      if (stage %in% names(cd_stages())) {
+        v <- shiny::isolate(rv$views)
+        if (!identical(v[[stage]], panel)) {
+          v[[stage]] <- panel
+          rv$views <- v
+        }
+      }
+      session$sendCustomMessage("cd_stage", list(stage = stage, view = panel))
+    })
+    shiny::observeEvent(input$tool_index, {
+      rv$tool <- NULL
+      rv$tool_res <- NULL
+      rv$tool_err <- NULL
+    })
+
+    output$tool_head <- cd_render_ui({
       t <- rv$tool
       if (is.null(t)) {
-        return(shiny::tags$p(class = "cd-hint", "Choose a tool from the Basic Series, Math or Time Series menu."))
+        return(NULL)
       }
       shiny::tagList(shiny::tags$h4(t$label), shiny::tags$div(class = "cd-info", t$info),
           shiny::tags$div(class = "cd-uses", t$uses))
@@ -553,7 +704,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       }
     })
 
-    output$tool_files <- shiny::renderUI({
+    output$tool_files <- cd_render_ui({
       t <- rv$tool
       if (is.null(t) || t$inputs < 1) {
         return(NULL)
@@ -590,7 +741,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       d
     }
 
-    output$tool_form <- shiny::renderUI({
+    output$tool_form <- cd_render_ui({
       t <- rv$tool
       if (is.null(t)) {
         return(NULL)
@@ -644,7 +795,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       shiny::tagList(items)
     })
 
-    output$tool_buttons <- shiny::renderUI({
+    output$tool_buttons <- cd_render_ui({
       t <- rv$tool
       if (is.null(t)) {
         return(NULL)
@@ -656,7 +807,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
           shiny::actionButton("tool_cancel", "Cancel", icon = shiny::icon("stop"), class = "btn-default"),
           shiny::actionButton("tool_savefig", "Save figure", icon = shiny::icon("image"), class = "btn-default"),
           shiny::conditionalPanel("output.tool_has_wavelet == '1'",
-              shiny::actionButton("tool_to_track", "Track on this map (Track tab)", icon = shiny::icon("route"),
+              shiny::actionButton("tool_to_track", "Track on this map", icon = shiny::icon("route"),
                   class = "btn-default")))
     })
 
@@ -712,7 +863,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         return()
       }
       if (!is.null(rv$job)) {
-        shiny::showNotification("A calculation is still running.", type = "warning")
+        cd_notify("A calculation is still running.", type = "warning")
         return()
       }
       p <- cd_read_params(t, input)
@@ -724,7 +875,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         d <- tool_data(1)
         f1 <- input$tool_file1
         if (is.null(d)) {
-          shiny::showNotification("Choose a readable data file.", type = "error")
+          cd_notify("Choose a readable data file.", type = "error")
           return()
         }
       }
@@ -747,7 +898,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         rv$tool_err <- conditionMessage(res)
         rv$tool_res <- NULL
         say(t$label, " failed: ", conditionMessage(res))
-        shiny::showNotification(conditionMessage(res), type = "error", duration = 8)
+        cd_notify(conditionMessage(res), type = "error", duration = 8)
         return()
       }
       finish_run(res)
@@ -772,7 +923,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
           rv$tool_err <- conditionMessage(res)
           rv$tool_res <- NULL
           say(rv$job_info$label, " failed: ", conditionMessage(res))
-          shiny::showNotification(conditionMessage(res), type = "error", duration = 8)
+          cd_notify(conditionMessage(res), type = "error", duration = 8)
         } else {
           finish_run(res)
         }
@@ -864,7 +1015,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         view$v <- list(x = vx, y = vy)
       }
     })
-    output$tool_view_ui <- shiny::renderUI({
+    output$tool_view_ui <- cd_render_ui({
       if (is.null(rv$tool)) {
         return(NULL)
       }
@@ -988,10 +1139,11 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
     open_rds <- function(f) {
       x <- try(readRDS(f), silent = TRUE)
       if (inherits(x, "try-error") || !isTRUE(x$cyclodesk)) {
-        shiny::showNotification("Not an CycloDesk result file.", type = "error")
+        cd_notify("Not a CycloDesk result file.", type = "error")
         return()
       }
       rv$tool <- cd_get_tool(x$tool)
+      rv$tool_stage <- cd_menu_stage(rv$tool$menu)
       rv$tool_err <- NULL
       rv$tool_res <- x$result
       rv$tool_res$written <- character()
@@ -1016,7 +1168,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         fs <- selected_files()
         if (length(fs)) { tools::file_path_sans_ext(fs[1]) } else { "figure" }
       }
-      shiny::showModal(shiny::modalDialog(title = "Save figure",
+      cd_show_modal(shiny::modalDialog(title = "Save figure",
           shiny::textInput("fig_name", "File name (without extension)", base),
           shiny::selectInput("fig_fmt", "Format", c("PDF (editable in Illustrator)" = "pdf", "PNG (300 dpi)" = "png")),
           shiny::numericInput("fig_w", "Width (inches)", 10, min = 2),
@@ -1028,7 +1180,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       nm <- gsub("[^A-Za-z0-9_.-]", "_", input$fig_name)
       f <- file.path(rv$folder, paste0(nm, ".", input$fig_fmt))
       if (file.exists(f) && !file.remove(f)) {
-        shiny::showNotification(paste(basename(f), "is open in another program"), type = "error")
+        cd_notify(paste(basename(f), "is open in another program"), type = "error")
         return()
       }
       if (input$fig_fmt == "pdf") {
@@ -1047,10 +1199,10 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       grDevices::dev.off()
       shiny::removeModal()
       if (inherits(ok, "try-error")) {
-        shiny::showNotification("Figure failed", type = "error")
+        cd_notify("Figure failed", type = "error")
       } else {
         say("Figure saved: ", basename(f))
-        shiny::showNotification(paste("Saved", basename(f)), type = "message")
+        cd_notify(paste("Saved", basename(f)), type = "message")
         refresh()
       }
     }
@@ -1072,15 +1224,30 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       fs <- as.character(input$files)
       fs <- fs[startsWith(fs, "f|") | startsWith(fs, "d|")]
       if (length(fs) != 1) {
-        shiny::showNotification("Select exactly one file or folder.", type = "warning")
+        cd_notify("Select exactly one file or folder.", type = "warning")
         return(NULL)
       }
       substring(fs, 3)
     }
     shiny::observeEvent(input$menu_action, {
       a <- input$menu_action$action
+      if (startsWith(a, "lang:")) {
+        cd_set_lang(substring(a, 6))
+        say("Language: ", cd_languages()[[cd_lang()]])
+        session$reload()
+        return()
+      }
       if (startsWith(a, "tool:")) {
         open_tool(substring(a, 6))
+        return()
+      }
+      if (startsWith(a, "stage:")) {
+        go_stage(substring(a, 7))
+        return()
+      }
+      if (startsWith(a, "view:")) {
+        sv <- strsplit(substring(a, 6), ":", fixed = TRUE)[[1]]
+        go_view(sv[1], sv[2])
         return()
       }
       cmd <- substring(a, 5)
@@ -1101,10 +1268,10 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       } else if (cmd == "stats") {
         shiny::updateTabsetPanel(session, "tabs", selected = "data")
       } else if (cmd == "newfolder") {
-        shiny::showModal(shiny::modalDialog(title = "New folder", shiny::textInput("nf_name", "Name", "new_folder"),
+        cd_show_modal(shiny::modalDialog(title = "New folder", shiny::textInput("nf_name", "Name", "new_folder"),
             footer = shiny::tagList(shiny::modalButton("Cancel"), shiny::actionButton("nf_ok", "Create"))))
       } else if (cmd == "newfile") {
-        shiny::showModal(shiny::modalDialog(title = "New data file", size = "l",
+        cd_show_modal(shiny::modalDialog(title = "New data file", size = "l",
             shiny::textInput("nd_name", "File name", "new_data.txt"),
             shiny::textAreaInput("nd_text", "Paste two (or more) columns: depth/time and values (from Excel or a text file)",
                 rows = 14, width = "100%"),
@@ -1118,19 +1285,14 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       } else if (cmd == "savecode") {
         save_code()
       } else if (cmd == "explorer") {
-        if (.Platform$OS.type == "windows") {
-          shell_exec <- get("shell.exec", envir = baseenv())
-          shell_exec(rv$folder)
-        } else {
-          shiny::showNotification(rv$folder, type = "message")
-        }
+        cd_open_path(rv$folder)
       } else if (cmd == "quit") {
         session$sendCustomMessage("cd_close", list())
         shiny::stopApp()
       } else if (cmd == "rename") {
         f <- one_file()
         if (!is.null(f)) {
-          shiny::showModal(shiny::modalDialog(title = "Rename", shiny::textInput("rn_name", "New name", f),
+          cd_show_modal(shiny::modalDialog(title = "Rename", shiny::textInput("rn_name", "New name", f),
               shiny::tags$input(type = "hidden", id = "rn_old", value = f),
               footer = shiny::tagList(shiny::modalButton("Cancel"), shiny::actionButton("rn_ok", "Rename"))))
           rv$rename_from <- f
@@ -1154,10 +1316,12 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         fs <- as.character(input$files)
         fs <- substring(fs[startsWith(fs, "f|")], 3)
         if (length(fs)) {
-          shiny::showModal(shiny::modalDialog(title = "Delete files",
-              shiny::tags$p(sprintf("Delete %d file(s) permanently?", length(fs))),
+          cd_show_modal(shiny::modalDialog(title = "Delete files",
+              shiny::tags$p(cd_trf("Delete %d file(s) from the working folder? This cannot be undone.", length(fs))),
               shiny::tags$ul(cd_li_tags(fs)),
               footer = shiny::tagList(shiny::modalButton("Cancel"), shiny::actionButton("del_ok", "Delete", class = "btn-danger"))))
+        } else {
+          cd_notify("Select the files to delete in the list first.", type = "warning")
         }
       } else if (cmd == "image") {
         shiny::updateTabsetPanel(session, "tabs", selected = "image")
@@ -1168,7 +1332,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       } else if (cmd == "feedback") {
         session$sendCustomMessage("cd_open", list(url = "https://github.com/stratigraphy/CycloDesk/issues/new/choose"))
       } else if (cmd == "update") {
-        shiny::showNotification("Checking GitHub for updates ...", id = "cd_upd", duration = 4)
+        cd_notify("Checking GitHub for updates ...", id = "cd_upd", duration = 4)
         start_update_check(force = TRUE)
       } else if (cmd == "functions") {
         cd_functions_modal()
@@ -1190,7 +1354,7 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
       txt <- gsub(",", ".", gsub("[ \t;]+", "\t", trimws(txt)))
       f <- file.path(rv$folder, nm)
       if (file.exists(f)) {
-        shiny::showNotification(paste(nm, "already exists"), type = "error")
+        cd_notify(paste(nm, "already exists"), type = "error")
         return()
       }
       writeLines(txt[nzchar(txt)], f)
@@ -1207,20 +1371,44 @@ cd_server <- function(folder = NULL, stop_on_close = TRUE) {
         shiny::removeModal()
         refresh(select = nm)
       } else {
-        shiny::showNotification("That name exists already.", type = "error")
+        cd_notify("That name exists already.", type = "error")
       }
     })
     shiny::observeEvent(input$del_ok, {
       fs <- as.character(input$files)
       fs <- substring(fs[startsWith(fs, "f|")], 3)
+      failed <- character()
       for (f in fs) {
-        file.remove(file.path(rv$folder, f))
+        ok <- suppressWarnings(file.remove(file.path(rv$folder, f)))
+        if (!isTRUE(ok)) {
+          failed <- c(failed, f)
+        }
       }
-      say("Deleted ", paste(fs, collapse = ", "))
+      done <- setdiff(fs, failed)
+      if (length(done)) {
+        say("Deleted ", paste(done, collapse = ", "))
+      }
+      if (length(failed)) {
+        cd_notify(paste("Could not delete (open in another program?):", paste(failed, collapse = ", ")),
+            type = "error", duration = 8)
+      }
       shiny::removeModal()
       refresh(select = character())
     })
   }
+}
+
+# Opens a file or folder with the program the system uses for it (Explorer, Finder, the file manager)
+cd_open_path <- function(path) {
+  if (.Platform$OS.type == "windows") {
+    shell_exec <- get("shell.exec", envir = baseenv())
+    try(shell_exec(normalizePath(path, winslash = "\\", mustWork = FALSE)), silent = TRUE)
+  } else if (Sys.info()[["sysname"]] == "Darwin") {
+    try(system2("open", shQuote(path), wait = FALSE), silent = TRUE)
+  } else {
+    try(system2("xdg-open", shQuote(path), wait = FALSE, stdout = FALSE, stderr = FALSE), silent = TRUE)
+  }
+  invisible(NULL)
 }
 
 cd_li_tags <- function(x) {
@@ -1235,7 +1423,7 @@ cd_li_tags <- function(x) {
 cd_update_note <- function(st, force = FALSE) {
   if (any(st$update)) {
     what <- paste(st$package[st$update], collapse = " and ")
-    shiny::showNotification(id = "cd_upd", duration = NULL, type = "warning",
+    cd_notify(id = "cd_upd", duration = NULL, type = "warning",
         ui = shiny::tags$span(sprintf("A newer version of %s is available on GitHub.", what)),
         action = shiny::actionLink("upd_go", "Update and restart"))
     return(invisible(TRUE))
@@ -1247,7 +1435,7 @@ cd_update_note <- function(st, force = FALSE) {
         "development install (not checked)" } else if (is.na(st$latest[i])) { "GitHub could not be reached" } else {
         "up to date" }))
     }
-    shiny::showNotification(paste(txt, collapse = "; "), id = "cd_upd", type = "message", duration = 8)
+    cd_notify(paste(txt, collapse = "; "), id = "cd_upd", type = "message", duration = 8)
   }
   invisible(FALSE)
 }
@@ -1256,10 +1444,10 @@ cd_about_modal <- function() {
   link <- function(href, txt) {
     shiny::tags$a(href = href, target = "_blank", txt)
   }
-  shiny::showModal(shiny::modalDialog(title = "About CycloDesk", size = "l", easyClose = TRUE, shiny::tags$div(class = "cd-about",
+  cd_show_modal(shiny::modalDialog(title = "About CycloDesk", size = "l", easyClose = TRUE, shiny::tags$div(class = "cd-about",
       shiny::tags$p(shiny::tags$b(sprintf("CycloDesk %s (alpha)", as.character(utils::packageVersion("CycloDesk")))),
           " is a point-and-click workbench for cyclostratigraphy by Michiel Arts. All calculations are done by the R",
-          " packages WaverideR and astrochron; the R code of every step is in the R code tab."),
+          " packages WaverideR and astrochron; the R code of every step is in the R code & log tab."),
       shiny::tags$p("Source code, manual and feedback: ", link("https://github.com/stratigraphy/CycloDesk",
           "github.com/stratigraphy/CycloDesk"), ". Something wrong or missing? ",
           link("https://github.com/stratigraphy/CycloDesk/issues/new/choose", "Tell us"), "."),
@@ -1274,7 +1462,7 @@ cd_about_modal <- function() {
               " https://CRAN.R-project.org/package=WaverideR (see citation(\"WaverideR\"))."),
           shiny::tags$li("Meyers, S.R. (2014). astrochron: An R Package for Astrochronology.",
               " https://CRAN.R-project.org/package=astrochron (see citation(\"astrochron\"))."),
-          shiny::tags$li("The original method papers named in the help of each function (Tool tab, purple line).")),
+          shiny::tags$li("The original method papers named in the help of each function (the purple line under the name of a tool).")),
       shiny::tags$p("The menu layout and working-folder workflow are inspired by Acycle: Li, M., Hinnov, L.A., Kump, L.R.",
           " (2019). Acycle: Time-series analysis software for paleoclimate research and education. Computers &",
           " Geosciences 127, 12-22. doi:10.1016/j.cageo.2019.02.011"))))
@@ -1287,7 +1475,7 @@ cd_functions_modal <- function() {
     rows[[i]] <- shiny::tags$tr(shiny::tags$td(tl[[i]]$menu), shiny::tags$td(tl[[i]]$label),
         shiny::tags$td(shiny::tags$code(tl[[i]]$uses)))
   }
-  shiny::showModal(shiny::modalDialog(title = "Which R function does what", size = "l", easyClose = TRUE,
+  cd_show_modal(shiny::modalDialog(title = "Which R function does what", size = "l", easyClose = TRUE,
       shiny::tags$table(class = "table table-condensed", shiny::tags$thead(shiny::tags$tr(shiny::tags$th("Menu"),
           shiny::tags$th("Tool"), shiny::tags$th("Function(s)"))), shiny::tags$tbody(rows))))
 }

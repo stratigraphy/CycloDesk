@@ -1,6 +1,6 @@
 # Anchoring a record to an astronomical solution or a metronome ####
 #
-# The Anchor tab: click a peak in the record (a data file, or the cycle extracted in the Track tab) and the matching
+# The Anchor view: click a peak in the record (a data file, or the cycle extracted in the Track view) and the matching
 # peak in the target (La2004 / La2010 / La2011, ETP, insolation or a metronome); every pair is a tie point. With one
 # tie the floating age model is shifted; with more ties the age model runs through the ties and keeps the floating
 # rates beyond the first and last tie. The tuned record is compared with the target as you go.
@@ -16,7 +16,7 @@ cd_anchor_tab <- function() {
               cd_section("1. Record",
                   shiny::uiOutput("anc_rec_ui"),
                   shiny::radioButtons("anc_init", "Starting age model", c(
-                      "floating model from the Track tab" = "track", "an age-model file (depth, age)" = "file",
+                      "floating model from the Track view" = "track", "an age-model file (depth, age)" = "file",
                       "a constant sedimentation rate" = "sr"), selected = "track"),
                   shiny::conditionalPanel("input.anc_init == 'file'", shiny::uiOutput("anc_amfile_ui")),
                   shiny::conditionalPanel("input.anc_init == 'sr'",
@@ -132,18 +132,18 @@ cd_anchor_server <- function(input, output, session, ctx) {
   rv <- ctx$rv
   av <- shiny::reactiveValues(ties = data.frame(depth = numeric(), time = numeric()), pend_d = NULL, pend_t = NULL)
 
-  output$anc_rec_ui <- shiny::renderUI({
+  output$anc_rec_ui <- cd_render_ui({
     ctx$shared$ver
     ch <- ctx$data_files()
     if (!is.null(ctx$shared$extract)) {
-      ch <- c(stats::setNames("track_extract", paste("Track tab:", ctx$shared$extract_label)),
-          stats::setNames("track_data", "Track tab: the data of the tracked record"), stats::setNames(ch, ch))
+      ch <- c(stats::setNames("track_extract", paste("Track view:", ctx$shared$extract_label)),
+          stats::setNames("track_data", "Track view: the data of the tracked record"), stats::setNames(ch, ch))
     }
     sel <- shiny::isolate(ctx$selected_files())
     pick <- if (!is.null(ctx$shared$extract)) { "track_extract" } else if (length(sel)) { sel[1] } else { NULL }
     shiny::selectInput("anc_rec", "Record (depth domain)", choices = ch, selected = pick)
   })
-  output$anc_amfile_ui <- shiny::renderUI({
+  output$anc_amfile_ui <- cd_render_ui({
     shiny::selectInput("anc_amfile", NULL, choices = ctx$data_files())
   })
 
@@ -442,19 +442,19 @@ cd_anchor_server <- function(input, output, session, ctx) {
   }
   shiny::observeEvent(input$anc_save, {
     if (!nrow(av$ties)) {
-      shiny::showNotification("No tie points yet.", type = "warning")
+      cd_notify("No tie points yet.", type = "warning")
       return()
     }
     nm <- paste0(rec_name(), "-ties.txt")
     write_series(av$ties, file.path(rv$folder, nm))
     ctx$say("Tie points written: ", nm)
-    shiny::showNotification(paste("Written", nm), type = "message")
+    cd_notify(paste("Written", nm), type = "message")
     ctx$refresh()
   })
   shiny::observeEvent(input$anc_age, {
     d <- record()
     if (is.null(d) || !nrow(av$ties)) {
-      shiny::showNotification("Pick at least one tie point first.", type = "warning")
+      cd_notify("Pick at least one tie point first.", type = "warning")
       return()
     }
     b <- rec_name()
@@ -478,7 +478,7 @@ cd_anchor_server <- function(input, output, session, ctx) {
       "# one tie: the starting (floating) age model is shifted so that it passes through the tie"
     }, sprintf("# written by CycloDesk: %s, %s, %s", n1, n2, n3)), paste("Anchor to", input$anc_tgt))
     ctx$say("Anchored age model written: ", paste(c(n1, n2, n3), collapse = ", "))
-    shiny::showNotification(paste("Written", n1, n2, n3, sep = "\n"), type = "message", duration = 8)
+    cd_notify(paste("Written", n1, n2, n3, sep = "\n"), type = "message", duration = 8)
     ctx$refresh(select = n2)
   })
 }

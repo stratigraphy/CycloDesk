@@ -94,7 +94,7 @@ cd_dc_zc_period <- function(x, y) {
   2 * diff(range(x)) / nz
 }
 
-# x limits of the zoom in the Tool tab, applied to all panels of a figure with a common x axis
+# x limits of the zoom in the tool view, applied to all panels of a figure with a common x axis
 cd_dc_vx <- function(xlim) {
   v <- getOption("CycloDesk.view")
   if (!is.null(v) && length(v$x) == 2 && all(is.finite(v$x)) && diff(v$x) != 0) {
@@ -880,7 +880,7 @@ cd_tools_decompose <- function() {
         full_table = TRUE,
         info = paste("Instantaneous frequency, period and amplitude of IMFs: select a decomposition table written by",
             "EMD / SSA (all modes) or a two-column series (one IMF or a filtered cycle). The period curves can be used as",
-            "a tracked cycle in Age models > Depth to time."),
+            "a tracked cycle in Age models > Build an age model > Depth to time."),
         uses = paste("DecomposeR::inst.pulse (HT, NHT, DQ: normalise, dq.algorithm), gzc (gzc.algorithm), HilbertTransform,",
             "HilbertEnvelope, InstantaneousFrequency, gzc.departure, plot_pulse, plot_imf"),
         params = c(list(
@@ -958,7 +958,7 @@ cd_tools_decompose <- function() {
               code <- c(code, sprintf("per_%d <- data.frame(dat[, 1], pers[, %d])", j, j),
                   sprintf("amp_%d <- data.frame(dat[, 1], a[, %d])", j, j))
             }
-            txt <- c(txt, "Period curves (depth, period) written as series: use one in Age models > Depth to time (tracked period curve).")
+            txt <- c(txt, "Period curves (depth, period) written as series: use one in Age models > Build an age model > Depth to time (tracked period curve).")
           } else {
             txt <- c(txt, "Analyse three modes or fewer to also get each period and amplitude curve as a two-column series.")
           }

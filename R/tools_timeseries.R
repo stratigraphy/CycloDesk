@@ -569,7 +569,7 @@ cd_tools_timeseries <- function() {
         }),
     cd_tool("track_auto", "Time Series", "Automatic astronomical tracking", group = "Tracking (WaverideR)", heavy = TRUE,
         info = paste("Tracks the astronomical cycles in a scalogram automatically (hidden Markov model over all cycles",
-            "at once) and gives the sedimentation rate and an age model with uncertainty. Use the Track tab to do it by hand."),
+            "at once) and gives the sedimentation rate and an age model with uncertainty. Use the Track view to do it by hand."),
         uses = "WaverideR::track_astro_auto, WaverideR::plot_track",
         params = list(
           cd_num("srmin", "Lowest sed. rate (cm/kyr)", 0.5, min = 0),

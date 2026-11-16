@@ -1,0 +1,2017 @@
+# language: Nederlands
+# CycloDesk interface texts: English<TAB>translation. A text that is missing here stays English.
+File	Bestand
+New folder...	Nieuwe map...
+New data file (paste)...	Nieuw databestand (plakken)...
+Colour record from an image (outcrop, core, tree rings)...	Kleurrecord uit een afbeelding (ontsluiting, kern, jaarringen)...
+Save current figure...	Huidige figuur opslaan...
+Save R code of this session	R-code van deze sessie opslaan
+Open working folder in Explorer	Werkmap openen in Verkenner
+Quit CycloDesk	CycloDesk afsluiten
+Edit	Bewerken
+Refresh list	Lijst vernieuwen
+Rename...	Naam wijzigen...
+Duplicate	Dupliceren
+Delete...	Verwijderen...
+Show all files / data files only	Alle bestanden / alleen databestanden tonen
+Plot	Plotten
+Plot stacked	Gestapeld plotten
+Plot standardised	Gestandaardiseerd plotten
+Plot with swapped axes	Plotten met verwisselde assen
+Statistics summary / data table	Statistische samenvatting / datatabel
+Sampling rate	Bemonsteringsinterval
+Data distribution	Verdeling van de data
+Basic Series	Basisreeksen
+Astronomical solutions and insolation	Astronomische oplossingen en insolatie
+Astronomical solution	Astronomische oplossing
+Insolation	Insolatie
+Insolation: daily, caloric, integrated, threshold	Insolatie: dagelijks, calorisch, geïntegreerd, drempelwaarde
+Insolation map: latitude and season	Insolatiekaart: breedtegraad en seizoen
+Ice-volume model (Imbrie and Imbrie 1980)	IJsvolumemodel (Imbrie en Imbrie 1980)
+Synthetic records	Synthetische records
+Signal / noise generator	Signaal- / ruisgenerator
+Synthetic series: cycles, ARMA, ETP + AR(1)	Synthetische reeksen: cycli, ARMA, ETP + AR(1)
+Red noise (AR(1)) series	Rode-ruisreeks (AR(1))
+Time to stratigraphy: sed.-rate ramp or differential accumulation	Tijd naar stratigrafie: verloop van de sed.snelheid of differentiële accumulatie
+Exponential sed.-rate ramp (time to depth)	Exponentieel verloop van de sed.snelheid (tijd naar diepte)
+Synthetic stratigraphy from a forcing (facies)	Synthetische stratigrafie uit een forcering (facies)
+Bioturbation: mix or unmix a record	Bioturbatie: een record mengen of ontmengen
+Bioturbation impulse response	Impulsrespons van bioturbatie
+Example data	Voorbeelddata
+Processing	Verwerking
+Clean and select	Opschonen en selecteren
+Sort / unique / remove empty	Sorteren / uniek maken / lege waarden verwijderen
+Select part	Deel selecteren
+Remove part	Deel verwijderen
+Remove outliers	Uitschieters verwijderen
+Clipping	Afkappen
+Extract column	Kolom extraheren
+Clean values and select levels (all columns)	Waarden opschonen en niveaus selecteren (alle kolommen)
+Interpolate and resample	Interpoleren en herbemonsteren
+Interpolation	Interpolatie
+Interpolation of uneven records (Laepple and Huybers 2013)	Interpolatie van onregelmatige records (Laepple en Huybers 2013)
+Resample at the levels of a second file (2 files)	Herbemonsteren op de niveaus van een tweede bestand (2 bestanden)
+Discretise a litholog (base, top, value)	Een litholog discretiseren (basis, top, waarde)
+Rank series from bed thicknesses	Rangreeks uit laagdiktes
+Transform	Transformeren
+Data transformations	Datatransformaties
+Transformations (astrochron)	Transformaties (astrochron)
+Derivative	Afgeleide
+Smoothing	Afvlakken
+Data taper (window)	Datataper (venster)
+Accumulation rates (accum)	Accumulatiesnelheden (accum)
+Detrend and pre-whiten	Trend verwijderen en pre-whitening
+Detrending	Trend verwijderen
+Lowpass, highpass and kernel detrending	Laagdoorlaat, hoogdoorlaat en trend verwijderen met kernel
+Statistics	Statistiek
+Summary statistics (strats)	Samenvattende statistieken (strats)
+Moving-window statistics	Statistiek in een schuivend venster
+Moving-window correlation of two proxies	Correlatie van twee proxy's in een schuivend venster
+Windowed lag-1 autocorrelation (Monte Carlo)	Lag-1-autocorrelatie in vensters (Monte Carlo)
+Cross-plot with density curves	Crossplot met dichtheidscurven
+Principal components (stratPCA)	Hoofdcomponenten (stratPCA)
+Local maxima and minima	Lokale maxima en minima
+Peaks and troughs (astrochron)	Pieken en dalen (astrochron)
+Change points	Veranderpunten
+Bayesian change points	Bayesiaanse veranderpunten
+Change points: R2 against their number	Veranderpunten: R2 tegen hun aantal
+Time Series	Tijdreeksen
+Spectral analysis	Spectraalanalyse
+Bayesian, SWA and average MESA spectra	Bayesiaanse, SWA- en gemiddelde MESA-spectra
+Lomb-Scargle periodogram (uneven sampling)	Lomb-Scargle-periodogram (onregelmatige bemonstering)
+Spectral peak tests (multiple testing, AR order, power law)	Toetsen van spectrale pieken (meervoudig toetsen, AR-orde, machtswet)
+False positives of a spectral background (testBackground)	Fout-positieven van een spectrale achtergrond (testBackground)
+Evolutive spectra	Evolutieve spectra
+Evolutionary spectral analysis	Evolutieve spectraalanalyse
+EHA band power and spectrum at a depth	EHA-bandvermogen en spectrum op één diepte
+De-chirped EHA (changing sed. rate)	Chirp-gecorrigeerde EHA (veranderende sed.snelheid)
+Wavelets and superlets	Wavelets en superlets
+Adaptive and synchrosqueezed scalograms	Adaptieve scalogrammen en scalogrammen met synchrosqueezing
+Chirp-matched wavelet sed. rate map	Sed.snelheidskaart met chirp-aangepaste wavelets
+De-chirped scalogram along a track (2 files)	Chirp-gecorrigeerd scalogram langs een gevolgde curve (2 bestanden)
+Frequency resolution and cycle bands	Frequentieresolutie en cyclusbanden
+Significance and surrogates	Significantie en surrogaten
+Scalogram significance (CWT / superlet)	Significantie van een scalogram (CWT / superlet)
+Synchrosqueezed scalogram significance	Significantie van een scalogram met synchrosqueezing
+Band-averaged power significance	Significantie van bandgemiddeld vermogen
+Surrogate series (IAAFT / phase randomised)	Surrogaatreeksen (IAAFT / fase-gerandomiseerd)
+Phase-randomised surrogates and spectral noise	Fase-gerandomiseerde surrogaten en spectrale ruis
+Filtering and cycle extraction	Filteren en cycli extraheren
+Filtering	Filteren
+Amplitude modulation (Hilbert)	Amplitudemodulatie (Hilbert)
+Extract a cycle of constant period	Een cyclus met constante periode extraheren
+Extract a tracked cycle (2 files)	Een gevolgde cyclus extraheren (2 bestanden)
+Dynamic filter along a tracked period (2 files)	Dynamisch filter langs een gevolgde periode (2 bestanden)
+Two series: coherence and phase	Twee reeksen: coherentie en fase
+Wavelet coherence (2 series)	Waveletcoherentie (2 reeksen)
+Cross wavelet (2 series)	Cross-wavelet (2 reeksen)
+Cross superlet (2 series)	Cross-superlet (2 reeksen)
+Cross-spectral analysis: coherence and phase (2 series)	Kruisspectraalanalyse: coherentie en fase (2 reeksen)
+Correlation of two series (surrogateCor / slideCor)	Correlatie van twee reeksen (surrogateCor / slideCor)
+Decomposition (EMD, SSA)	Decompositie (EMD, SSA)
+EMD / ensemble EMD (extricate)	EMD / ensemble-EMD (extricate)
+Singular spectrum analysis (SSA)	Singuliere spectrumanalyse (SSA)
+Instantaneous frequency and amplitude of modes	Momentane frequentie en amplitude van modes
+Ratios between modes (e.g. eccentricity / precession)	Verhoudingen tussen modes (bijv. excentriciteit / precessie)
+Precision of the Hilbert instantaneous frequency (test signal)	Precisie van de momentane Hilbertfrequentie (testsignaal)
+Nonlinear analysis	Niet-lineaire analyse
+Bispectral analysis	Bispectraalanalyse
+Bicoherence (WOSA, astrochron)	Bicoherentie (WOSA, astrochron)
+Recurrence plot	Recurrentieplot
+Sedimentary noise and power	Sedimentaire ruis en vermogen
+Evolutive lag-1 autocorrelation (rho1)	Evolutieve lag-1-autocorrelatie (rho1)
+DYNOT (dynamic noise after tuning)	DYNOT (dynamische ruis na tuning)
+Power decomposition analysis	Analyse van vermogensdecompositie
+Power decomposition (Acycle legacy)	Vermogensdecompositie (Acycle, oude versie)
+Spectral moments	Spectrale momenten
+Sed. rate	Sed.snelheid
+Track a cycle or a rate	Een cyclus of snelheid volgen
+Track a cycle by hand	Een cyclus met de hand volgen
+Automatic astronomical tracking	Automatisch astronomisch volgen
+Astronomical HMM tracking	Astronomisch volgen met HMM
+Chirp-matched EHA tracking	Volgen met chirp-aangepaste EHA
+Evolutive MESA ridge tracking	Rug volgen in evolutieve MESA
+Sed.-rate scan of a scalogram (FLMW)	Sed.snelheidsscan van een scalogram (FLMW)
+Tracked cycle to sed. rate (freq2sedrate)	Gevolgde cyclus naar sed.snelheid (freq2sedrate)
+eTimeOpt (evolutive)	eTimeOpt (evolutief)
+Windowed TimeOpt with several fits	TimeOpt in vensters met meerdere fits
+TimeOpt with Monte Carlo significance	TimeOpt met Monte Carlo-significantie
+TimeOpt with variable sed. rate (timeOptTemplate)	TimeOpt met variabele sed.snelheid (timeOptTemplate)
+Bayesian TimeOpt (timeOptB)	Bayesiaanse TimeOpt (timeOptB)
+Bayesian TimeOpt by MCMC (timeOptBMCMC / timeOptMCMC)	Bayesiaanse TimeOpt met MCMC (timeOptBMCMC / timeOptMCMC)
+eTimeOpt with ridge tracking (eTimeOptTrack)	eTimeOpt met rug volgen (eTimeOptTrack)
+eCOCO (evolutive)	eCOCO (evolutief)
+COCO: adaptive / cross-validated	COCO: adaptief / kruisgevalideerd
+eCOCO: adaptive / cross-validated	eCOCO: adaptief / kruisgevalideerd
+COCO / eCOCO with a target series (2 files)	COCO / eCOCO met een doelreeks (2 bestanden)
+Other astronomical tests	Andere astronomische toetsen
+Average spectral misfit (ASM / eASM)	Gemiddelde spectrale misfit (ASM / eASM)
+Astronomical sed.-rate test	Astronomische sed.snelheidstoets
+Astronomical sed.-rate test, two proxies (2 files)	Astronomische sed.snelheidstoets, twee proxy's (2 bestanden)
+Age models	Ouderdomsmodellen
+Build an age model	Een ouderdomsmodel bouwen
+Build age model	Ouderdomsmodel bouwen
+Minimal tuning (WaverideR)	Minimale tuning (WaverideR)
+Sedimentation rate to age model	Sedimentatiesnelheid naar ouderdomsmodel
+Depth to time: tracked curve, sed. rate or tie points (2 files)	Diepte naar tijd: gevolgde curve, sed.snelheid of ankerpunten (2 bestanden)
+Age scale / tuning (2 files)	Ouderdomsschaal / tuning (2 bestanden)
+Anchor to absolute ages	Verankeren aan absolute ouderdommen
+Anchor to an astronomical solution or metronome	Verankeren aan een astronomische oplossing of metronoom
+Anchor a floating time scale (anchorTime)	Een zwevende tijdschaal verankeren (anchorTime)
+Weighted mean age (wtMean / stepHeat)	Gewogen gemiddelde ouderdom (wtMean / stepHeat)
+Geological time scale	Geologische tijdschaal
+Dated levels (Bayesian)	Gedateerde niveaus (Bayesiaans)
+U-Pb age-depth model (modBchron)	U-Pb-ouderdom-dieptemodel (modBchron)
+Dates + astrochronology (astroMCBchron, 2 files)	Dateringen + astrochronologie (astroMCBchron, 2 bestanden)
+Uncertainty (Monte Carlo)	Onzekerheid (Monte Carlo)
+Re-track a cycle (Monte Carlo, multi-proxy)	Een cyclus opnieuw volgen (Monte Carlo, multi-proxy)
+Age model with uncertainty (Monte Carlo)	Ouderdomsmodel met onzekerheid (Monte Carlo)
+Duration of a hiatus (Monte Carlo, 2 files)	Duur van een hiaat (Monte Carlo, 2 bestanden)
+Uncertainty of a tracked cycle (2 files)	Onzekerheid van een gevolgde cyclus (2 bestanden)
+Check an age model	Een ouderdomsmodel controleren
+Check an age model (de-chirped record, 2 files)	Een ouderdomsmodel controleren (chirp-gecorrigeerd record, 2 bestanden)
+Amplitude-modulation test of a tuned record (testPrecession / testTilt)	Amplitudemodulatietoets van een getuned record (testPrecession / testTilt)
+Detect hiatuses and transients	Hiaten en transiënten detecteren
+Correlate two records	Twee records correleren
+Correlate two records (dynamic time warping, 2 files)	Twee records correleren (dynamic time warping, 2 bestanden)
+Astronomy	Astronomie
+Astronomical periods	Astronomische perioden
+Astronomical periods at an age	Astronomische perioden bij een ouderdom
+Astronomical periods through time	Astronomische perioden door de tijd
+Precession and obliquity periods (bergerPeriods / calcPeriods)	Precessie- en obliquiteitsperioden (bergerPeriods / calcPeriods)
+Identify a measured period	Een gemeten periode identificeren
+Bundling ratios	Bundelingsverhoudingen
+Combination and difference tones (tones)	Combinatie- en verschiltonen (tones)
+Chaotic resonance and sensitivity	Chaotische resonantie en gevoeligheid
+Priors of the Solar System frequencies (hoangPriors)	Priors van de frequenties van het zonnestelsel (hoangPriors)
+Precession constant	Precessieconstante
+CTest from depth-domain peaks	CTest uit pieken in het dieptedomein
+CTest for a tuned record	CTest voor een getuned record
+Precession constant from cycles	Precessieconstante uit cycli
+Combine two k estimates	Twee schattingen van k combineren
+Test a tuned record (precession constant)	Een getuned record toetsen (precessieconstante)
+Check the k test on synthetic records	De k-toets controleren met synthetische records
+Compare k with published models	k vergelijken met gepubliceerde modellen
+Earth-Moon system	Aarde-Maansysteem
+Earth-Moon calculator	Aarde-Maancalculator
+Earth-Moon relations	Aarde-Maanrelaties
+Earth-Moon distance and day length from k (alodfromk)	Afstand Aarde-Maan en daglengte uit k (alodfromk)
+About CycloDesk and how to cite	Over CycloDesk en hoe te citeren
+Which R function does what	Welke R-functie doet wat
+Tutorial and manual (web)	Tutorial en handleiding (web)
+Report a problem or suggest a feature	Een probleem melden of een functie voorstellen
+Check for updates	Controleren op updates
+Language	Taal
+Close CycloDesk (stops R)	CycloDesk sluiten (stopt R)
+Close	Sluiten
+Show the file panel	Bestandspaneel tonen
+Files	Bestanden
+Up one folder (Backspace)	Eén map omhoog (Backspace)
+Type a path	Een pad typen
+Refresh (F5)	Vernieuwen (F5)
+Delete the selected files (Del)	Geselecteerde bestanden verwijderen (Del)
+Hide the file panel	Bestandspaneel verbergen
+Filter files	Bestanden filteren
+Drag to make the file panel wider or narrower	Sleep om het bestandspaneel breder of smaller te maken
+Track	Volgen
+Anchor	Verankeren
+Image	Afbeelding
+R code	R-code
+Log	Logboek
+Stacked	Gestapeld
+Standardised	Gestandaardiseerd
+Points	Punten
+Reverse depth axis	Diepte-as omkeren
+Depth vertical	Diepte verticaal
+Log value axis	Logaritmische waarde-as
+Save figure	Figuur opslaan
+Data files, spectra and saved results (.rds). Drag to zoom, double-click to reset	Databestanden, spectra en opgeslagen resultaten (.rds). Sleep om in te zoomen, dubbelklik om te herstellen
+All tools	Alle tools
+Track a cycle on the scalogram	Een cyclus volgen op het scalogram
+Click points along the band of a cycle, give its duration, and build a	Klik punten aan langs de band van een cyclus, geef de duur ervan op en bouw een
+floating age model. The tuning check compares the amplitude envelope of a shorter cycle with a longer	zwevend ouderdomsmodel. De tuningcontrole vergelijkt de amplitude-omhullende van een kortere cyclus met een langere
+cycle extracted directly from the record; move points and watch the check until you are happy.	cyclus die rechtstreeks uit het record is geëxtraheerd; verplaats punten en volg de controle tot het resultaat bevalt.
+Colour palette	Kleurenpalet
+Cividis (colour-blind safe)	Cividis (geschikt voor kleurenblinden)
+Turbo (rainbow-like)	Turbo (regenboogachtig)
+Jet (MATLAB / Acycle style)	Jet (stijl van MATLAB / Acycle)
+Blue to red	Blauw naar rood
+Red-yellow-blue	Rood-geel-blauw
+Yellow-orange-red	Geel-oranje-rood
+Greys	Grijstinten
+Rainbow	Regenboog
+Show scalogram	Scalogram tonen
+2. Track the cycle	2. De cyclus volgen
+A click on the scalogram	Een klik op het scalogram
+Show the power peaks	Vermogenspieken tonen
+Peak filter (0: all peaks; to the right: only the strong ones)	Piekfilter (0: alle pieken; naar rechts: alleen de sterke)
+Click a point to select it (Shift/Ctrl-click: several), click it again	Klik op een punt om het te selecteren (Shift/Ctrl-klik: meerdere), klik er nogmaals op
+to deselect; drag a point to move it; Delete or Backspace removes the selected points.	om de selectie op te heffen; sleep een punt om het te verplaatsen; Delete of Backspace verwijdert de geselecteerde punten.
+Undo last point	Laatste punt ongedaan maken
+Delete selected	Selectie verwijderen
+Select all	Alles selecteren
+Deselect	Selectie opheffen
+Clear all	Alles wissen
+Ridge search width around the clicks (fraction)	Zoekbreedte voor de rug rond de klikken (fractie)
+Snap the whole curve to the nearest peaks	De hele curve vastklikken op de dichtstbijzijnde pieken
+Follow the ridge (HMM)	De rug volgen (HMM)
+Snapping: at every depth the curve goes to the power peak nearest to the	Vastklikken: op elke diepte gaat de curve naar de vermogenspiek die het dichtst ligt bij de
+line through your points (within the search width). HMM: WaverideR::track_ridge_hmm.	lijn door de aangeklikte punten (binnen de zoekbreedte). HMM: WaverideR::track_ridge_hmm.
+Smooth the curve: LOWESS span (0 = off)	Curve afvlakken: LOWESS-span (0 = uit)
+3. Helper lines	3. Hulplijnen
+Set up a group of lines and press Add; add as many groups as you	Stel een groep lijnen in en klik op Toevoegen; voeg zoveel groepen toe als
+like. Tick groups in the list to remove them. On a sedimentation-rate map (eCOCO, eTimeOpt) only	nodig. Vink groepen in de lijst aan om ze te verwijderen. Op een sedimentatiesnelheidskaart (eCOCO, eTimeOpt) worden alleen
+fixed values and file columns are drawn, read as rates (cm/kyr; use multiplier 1 for a rate column).	vaste waarden en bestandskolommen getekend, gelezen als snelheden (cm/kyr; gebruik vermenigvuldiger 1 voor een snelheidskolom).
+Lines	Lijnen
+periods of cycles (kyr), scaled by the current track	perioden van cycli (kyr), geschaald met de huidige gevolgde curve
+periods of cycles (kyr), from an age-model file (depth, age)	perioden van cycli (kyr), uit een ouderdomsmodelbestand (diepte, ouderdom)
+fixed periods (depth units, e.g. m)	vaste perioden (diepte-eenheden, bijv. m)
+a column of a file (depth, value) x multiplier	een kolom van een bestand (diepte, waarde) x vermenigvuldiger
+Cycles (kyr)	Cycli (kyr)
+Periods (depth units)	Perioden (diepte-eenheden)
+Multiplier (period = value x multiplier)	Vermenigvuldiger (periode = waarde x vermenigvuldiger)
+1 when the column is already a period in depth units; e.g. 4.05	1 als de kolom al een periode in diepte-eenheden is; bijv. 4.05
+for a sedimentation rate in cm/kyr gives the 405-kyr period in m (rate x 405 / 100).	voor een sedimentatiesnelheid in cm/kyr geeft de 405-kyr-periode in m (snelheid x 405 / 100).
+Colour	Kleur
+white	wit
+red	rood
+orange	oranje
+yellow	geel
+cyan	cyaan
+green	groen
+black	zwart
+Line	Lijn
+dashed	gestreept
+solid	doorgetrokken
+dotted	gestippeld
+Label (optional)	Label (optioneel)
+Add	Toevoegen
+Remove ticked	Aangevinkte verwijderen
+Remove all	Alles verwijderen
+Vertical boundary lines at depths	Verticale grenslijnen op dieptes
+Boundary lines can also be clicked on the scalogram (third click	Grenslijnen kunnen ook op het scalogram worden aangeklikt (derde klikoptie
+option above); clicking a line again removes it.	hierboven); nogmaals op een lijn klikken verwijdert deze.
+Add depths from the file	Dieptes uit het bestand toevoegen
+Clear boundary lines	Grenslijnen wissen
+4. Floating age model and extraction	4. Zwevend ouderdomsmodel en extractie
+Duration of the tracked cycle (kyr)	Duur van de gevolgde cyclus (kyr)
+Cycle to extract (kyr; any cycle, scaled from the track)	Te extraheren cyclus (kyr; elke cyclus, geschaald vanuit de gevolgde curve)
+Band: lower factor	Band: onderste factor
+upper factor	bovenste factor
+Add the mean to the extracted cycle	Het gemiddelde bij de geëxtraheerde cyclus optellen
+Show below the scalogram	Onder het scalogram tonen
+Results (written to the working folder)	Resultaten (naar de werkmap geschreven)
+Save track	Gevolgde curve opslaan
+Extract cycle	Cyclus extraheren
+Age model + tuned series	Ouderdomsmodel + getunede reeks
+Anchor to a solution...	Verankeren aan een oplossing...
+5. Tuning check (amplitude modulation)	5. Tuningcontrole (amplitudemodulatie)
+The modulated cycle is extracted with the track and its Hilbert	De gemoduleerde cyclus wordt met de gevolgde curve geëxtraheerd en daarvan wordt de Hilbert-omhullende
+envelope is taken. The modulating cycle is then extracted from that envelope (amplitude modulation)	bepaald. De modulerende cyclus wordt vervolgens uit die omhullende geëxtraheerd (amplitudemodulatie)
+and, with the track, from the record itself; both are compared on the floating time scale.	en, met de gevolgde curve, uit het record zelf; beide worden vergeleken op de zwevende tijdschaal.
+A good age model gives a high correlation.	Een goed ouderdomsmodel geeft een hoge correlatie.
+Modulated cycle (kyr)	Gemoduleerde cyclus (kyr)
+Modulating cycle (kyr)	Modulerende cyclus (kyr)
+Update after every change of the track	Bijwerken na elke wijziging van de gevolgde curve
+Show the tuning check	Tuningcontrole tonen
+Run the check	Controle uitvoeren
+Anchor to an astronomical solution	Verankeren aan een astronomische oplossing
+Click a peak in the record (top), then the matching peak in the target	Klik op een piek in het record (boven) en daarna op de overeenkomstige piek in de doelcurve
+(middle): each pair is a tie point. The bottom figure shows the tuned record on the target.	(midden): elk paar is een ankerpunt. De onderste figuur toont het getunede record op de doelcurve.
+Starting age model	Uitgangsouderdomsmodel
+Sed. rate (cm/kyr)	Sed.snelheid (cm/kyr)
+Depth unit	Diepte-eenheid
+Age of the top of the record (ka)	Ouderdom van de top van het record (ka)
+Age increases with depth	Ouderdom neemt toe met de diepte
+2. Target	2. Doelcurve
+Astronomical solution or metronome	Astronomische oplossing of metronoom
+La2004 eccentricity	La2004-excentriciteit
+La2004 obliquity	La2004-obliquiteit
+La2004 precession index	La2004-precessie-index
+La2004 ETP	La2004-ETP
+Insolation 65N, June solstice (La2004)	Insolatie 65N, junisolstitium (La2004)
+La2010b eccentricity	La2010b-excentriciteit
+La2011 eccentricity	La2011-excentriciteit
+Metronome	Metronoom
+Period (kyr)	Periode (kyr)
+Phase (degrees)	Fase (graden)
+Flip the target (maxima become minima)	Doelcurve omkeren (maxima worden minima)
+Show from (ka)	Tonen van (ka)
+to (ka)	tot (ka)
+Empty: the range of the starting age model plus a margin.	Leeg: het bereik van het uitgangsouderdomsmodel plus een marge.
+3. Tie points	3. Ankerpunten
+A click snaps to	Een klik springt naar
+Undo last tie	Laatste ankerpunt ongedaan maken
+Clear ties	Ankerpunten wissen
+4. Results (written to the working folder)	4. Resultaten (naar de werkmap geschreven)
+Save ties	Ankerpunten opslaan
+Colour record along a route on an image	Kleurrecord langs een route op een afbeelding
+Outcrop photographs, core scans, tree-ring images or satellite images:	Foto's van ontsluitingen, kernscans, jaarringbeelden of satellietbeelden:
+click a route along the beds (or across the rings), set the scale, and the colour is averaged across	klik een route aan langs de lagen (of dwars over de ringen), stel de schaal in, en de kleur wordt gemiddeld over
+a swath at every step along the route. For satellite images use an exported image or screenshot	een strook bij elke stap langs de route. Gebruik voor satellietbeelden een geëxporteerde afbeelding of schermafdruk
+that you are allowed to use, and set the scale from its scale bar.	die gebruikt mag worden, en stel de schaal in aan de hand van de schaalbalk ervan.
+1. Image	1. Afbeelding
+or copy an image into the working folder	of kopieer een afbeelding naar de werkmap
+Browse...	Bladeren...
+No file selected	Geen bestand geselecteerd
+2. Route and scale	2. Route en schaal
+A click on the image	Een klik op de afbeelding
+Clear route	Route wissen
+Reverse direction	Richting omkeren
+Swath width (pixels)	Strookbreedte (pixels)
+Step (pixels)	Stap (pixels)
+Across the swath	Dwars over de strook
+Mean	Gemiddelde
+Median (robust against cracks and specks)	Mediaan (robuust tegen scheuren en vlekjes)
+Length of the scale bar	Lengte van de schaalbalk
+Pixels per unit	Pixels per eenheid
+Click both ends of a scale bar (or of a known distance) with	Klik op beide uiteinden van een schaalbalk (of van een bekende afstand) met
+"sets the scale bar" and give its length; or type the pixels per unit directly. Without a	"stelt de schaalbalk in" en geef de lengte ervan op; of typ het aantal pixels per eenheid rechtstreeks in. Zonder
+scale the record is in pixels.	schaal is het record in pixels.
+Depth at the start	Diepte aan het begin
+Along the route, depth	Langs de route geldt: diepte
+increases	neemt toe
+decreases	neemt af
+Show	Tonen
+Grey value (luma, 0-255)	Grijswaarde (luma, 0-255)
+Lightness L*	Lichtheid L*
+Red-green a*	Rood-groen a*
+Yellow-blue b*	Geel-blauw b*
+Red (0-255)	Rood (0-255)
+Green (0-255)	Groen (0-255)
+Blue (0-255)	Blauw (0-255)
+Hue (degrees)	Tint (graden)
+Saturation	Verzadiging
+Value (brightness)	Waarde (helderheid)
+Extract and write	Extraheren en wegschrijven
+Writes <image>-profile.txt (all colour columns, with header) and	Schrijft <image>-profile.txt (alle kleurkolommen, met kopregel) en
+<image>-<channel>.txt (depth and the shown channel) to the working folder.	<image>-<channel>.txt (diepte en het getoonde kanaal) naar de werkmap.
+The R code of every operation in this session. It runs in the working folder	De R-code van elke bewerking in deze sessie. De code draait in de werkmap
+(setwd() to it first).	(eerst met setwd() naar die map gaan).
+Save to working folder	Opslaan in de werkmap
+Clear	Wissen
+Places	Locaties
+This computer	Deze computer
+Home	Thuismap
+This PC (all drives)	Deze pc (alle schijven)
+C: System	C: Systeem
+This PC: all drives	Deze pc: alle schijven
+Go to drive C:	Naar schijf C:
+Go to drive D:	Naar schijf D:
+Click a folder to open it, the arrow or a part of the path above to go	Klik op een map om deze te openen, of op de pijl of een deel van het pad hierboven om omhoog te
+up. Click a data file to plot it; Ctrl/Shift-click selects several. Drag files onto a folder, drive or part of the	gaan. Klik op een databestand om het te plotten; Ctrl/Shift-klik selecteert er meerdere. Sleep bestanden naar een map, schijf of deel van het
+path to move them there (hold Ctrl to copy). Arrow keys, Enter and Backspace also work.	pad om ze daarheen te verplaatsen (houd Ctrl ingedrukt om te kopiëren). Pijltjestoetsen, Enter en Backspace werken ook.
+Folder: %s | %d data files | %d selected | WaverideR %s, astrochron %s	Map: %s | %d databestanden | %d geselecteerd | WaverideR %s, astrochron %s
+No data files here.	Geen databestanden hier.
+Open another folder or drive above.	Open hierboven een andere map of schijf.
+Up one level	Eén niveau omhoog
+Delete	Verwijderen
+files	bestanden
+Open the folder	Map openen
+CycloDesk is closed	CycloDesk is gesloten
+R has stopped. You can close this window.	R is gestopt. Dit venster kan worden gesloten.
+Start CycloDesk again from its icon.	Start CycloDesk opnieuw via het pictogram.
+2001 points, 154 to 174, dt 0.01	2001 punten, 154 tot 174, dt 0.01
+Start	Begin
+End	Einde
+Median interval	Mediaan interval
+Min interval	Min. interval
+Max interval	Max. interval
+Median	Mediaan
+Standard deviation	Standaarddeviatie
+Choose a tool	Kies een tool
+Every tool of the menus, in the order of the work. Its settings open here on	Alle tools uit de menu's, in de volgorde van het werk. De instellingen van een tool openen hier
+the left and its result on the right; the result files are written to the working folder.	links en het resultaat rechts; de resultaatbestanden worden naar de werkmap geschreven.
+Find a tool, e.g. wavelet, detrend, TimeOpt, tuning	Zoek een tool, bijv. wavelet, trend, TimeOpt, tuning
+Make or load a series	Een reeks maken of laden
+Prepare the data	De data voorbereiden
+Sedimentation rates from astronomical cycles	Sedimentatiesnelheden uit astronomische cycli
+Depth to time, anchoring, uncertainty	Diepte naar tijd, verankering, onzekerheid
+Periods, precession constant, Earth-Moon	Perioden, precessieconstante, Aarde-Maan
+No tool with these words.	Geen tool met deze woorden.
+Scalogram or spectrum map (wavelet, EHA, eTimeOpt, eCOCO, ...)	Scalogram of spectrumkaart (wavelet, EHA, eTimeOpt, eCOCO, ...)
+Compute a new CWT	Een nieuwe CWT berekenen
+Data file	Databestand
+Shortest period	Kortste periode
+Longest period	Langste periode
+No helper lines yet.	Nog geen hulplijnen.
+Depths from a file	Dieptes uit een bestand
+(choose a file)	(kies een bestand)
+Record (depth domain)	Record (dieptedomein)
+Image in the working folder	Afbeelding in de werkmap
+Eccentricity, obliquity or precession index from an astronomical solution. The solution is downloaded once by astrochron::getLaskar() and then kept in a local cache.	Excentriciteit, obliquiteit of precessie-index uit een astronomische oplossing. De oplossing wordt eenmalig gedownload door astrochron::getLaskar() en daarna in een lokale cache bewaard.
+Solution	Oplossing
+Eccentricity	Excentriciteit
+Obliquity (radians)	Obliquiteit (radialen)
+Precession index	Precessie-index
+ETP (standardised sum)	ETP (gestandaardiseerde som)
+Obliquity, precession and ETP are only in La2004.	Obliquiteit, precessie en ETP zijn alleen beschikbaar in La2004.
+Start (ka)	Begin (ka)
+End (ka)	Einde (ka)
+Step (ka)	Stap (ka)
+Reset to the defaults for this file	Standaardwaarden voor dit bestand herstellen
+Write result files to the working folder	Resultaatbestanden naar de werkmap schrijven
+Run	Uitvoeren
+Cancel	Annuleren
+Track on this map	Volgen op deze kaart
+Zoom	Zoomen
+Apply	Toepassen
+Reset	Herstellen
+drag a box on the figure; double-click resets	sleep een kader op de figuur; dubbelklikken herstelt
+Daily mean insolation at the top of the atmosphere (Berger 1978) from La2004.	Daggemiddelde insolatie aan de top van de atmosfeer (Berger 1978) uit La2004.
+Latitude (degrees N)	Breedtegraad (graden N)
+True solar longitude	Ware zonnelengte
+June solstice (90)	Junisolstitium (90)
+September equinox (180)	Septemberequinox (180)
+December solstice (270)	Decembersolstitium (270)
+March equinox (0)	Maartequinox (0)
+Other...	Anders...
+True solar longitude (degrees)	Ware zonnelengte (graden)
+Solar constant (W/m2)	Zonneconstante (W/m2)
+Eccentricity + tilt + precession composite from La2004, each standardised and weighted.	Samengesteld signaal van excentriciteit + obliquiteit + precessie uit La2004, elk gestandaardiseerd en gewogen.
+Weight of eccentricity	Gewicht van excentriciteit
+Weight of obliquity	Gewicht van obliquiteit
+Weight of precession	Gewicht van precessie
+Standardise the result	Resultaat standaardiseren
+Insolation series from La2004 computed by the palinsol package: daily mean insolation on a day, caloric summer insolation (Milankovitch), insolation integrated between two true solar longitudes, or integrated over the days above a threshold (Huybers and Tziperman 2008).	Insolatiereeksen uit La2004, berekend met het pakket palinsol: daggemiddelde insolatie op een dag, calorische zomerinsolatie (Milankovitch), insolatie geïntegreerd tussen twee ware zonnelengtes, of geïntegreerd over de dagen boven een drempelwaarde (Huybers en Tziperman 2008).
+Quantity	Grootheid
+Daily mean insolation (W/m2)	Daggemiddelde insolatie (W/m2)
+Caloric summer insolation (kJ/m2)	Calorische zomerinsolatie (kJ/m2)
+Insolation integrated between two true solar longitudes (kJ/m2)	Insolatie geïntegreerd tussen twee ware zonnelengtes (kJ/m2)
+Integrated insolation above a threshold (kJ/m2)	Geïntegreerde insolatie boven een drempelwaarde (kJ/m2)
+True solar longitude (degrees; 90 = 21 June)	Ware zonnelengte (graden; 90 = 21 juni)
+From true solar longitude (degrees)	Van ware zonnelengte (graden)
+To true solar longitude (degrees)	Tot ware zonnelengte (graden)
+Threshold (W/m2)	Drempelwaarde (W/m2)
+Start (ka; negative = future)	Begin (ka; negatief = toekomst)
+Step (ka, >= 1)	Stap (ka, >= 1)
+Save the result for re-plotting later (.rds)	Resultaat opslaan om later opnieuw te plotten (.rds)
+Daily mean insolation for every latitude and true solar longitude at one time, or the difference between two times (La2004, palinsol), with the seasonal cycle at one latitude and the latitude profile on one day.	Daggemiddelde insolatie voor elke breedtegraad en ware zonnelengte op één tijdstip, of het verschil tussen twee tijdstippen (La2004, palinsol), met de seizoenscyclus op één breedtegraad en het breedteprofiel op één dag.
+Map	Kaart
+Insolation at one time (insoMap)	Insolatie op één tijdstip (insoMap)
+Difference between two times (insoDiff)	Verschil tussen twee tijdstippen (insoDiff)
+Time (ka; negative = future)	Tijdstip (ka; negatief = toekomst)
+Second time (ka)	Tweede tijdstip (ka)
+Seasonal cycle at latitude (degrees N)	Seizoenscyclus op breedtegraad (graden N)
+Latitude profile on	Breedteprofiel op
+Ice volume from the Imbrie and Imbrie (1980) model forced by daily insolation (La2004, palinsol), with one or several time constants and non-linearity coefficients.	IJsvolume uit het model van Imbrie en Imbrie (1980), aangedreven door dagelijkse insolatie (La2004, palinsol), met één of meerdere tijdconstanten en niet-lineariteitscoëfficiënten.
+Insolation latitude (degrees N)	Breedtegraad van de insolatie (graden N)
+Insolation on	Insolatie op
+Mean time constant(s) Tm (ka)	Gemiddelde tijdconstante(n) Tm (ka)
+Non-linearity coefficient(s) b (0-1)	Niet-lineariteitscoëfficiënt(en) b (0-1)
+Start times of each Tm and b (ka; empty = one regime)	Begintijden van elke Tm en b (ka; leeg = één regime)
+e.g. Tm = 15, 5; b = 0.6, 0.3; times = 500, 1000 uses Tm 15 and b 0.6 from 0 to 500 ka.	bijv. Tm = 15, 5; b = 0.6, 0.3; tijden = 500, 1000 gebruikt Tm 15 en b 0.6 van 0 tot 500 ka.
+Burn-in (points)	Burn-in (punten)
+Initial ice volume	Initieel ijsvolume
+Scale the ice volume to 0-1	IJsvolume schalen naar 0-1
+Sum of sinusoids plus white, AR(1) red or power-law noise (Acycle: Basic Series > Signal/Noise Generator).	Som van sinusoïden plus witte ruis, rode AR(1)-ruis of machtswetruis (Acycle: Basic Series > Signal/Noise Generator).
+Number of points	Aantal punten
+Sampling interval	Bemonsteringsinterval
+Periods (comma separated, empty = none)	Perioden (door komma's gescheiden, leeg = geen)
+Amplitudes (one per period)	Amplitudes (één per periode)
+Noise	Ruis
+AR(1) red noise	Rode AR(1)-ruis
+White noise	Witte ruis
+Power-law noise	Machtswetruis
+None	Geen
+AR(1) coefficient rho	AR(1)-coëfficiënt rho
+Power-law exponent beta	Machtswetexponent beta
+Noise standard deviation	Standaarddeviatie van de ruis
+Random seed	Seed van de toevalsgenerator
+File name	Bestandsnaam
+Sum of sinusoids with white noise, an autoregressive moving-average (ARMA) series, or an ETP signal (La2004) plus AR(1) red noise; shows the MTM spectrum with AR(1) confidence levels.	Som van sinusoïden met witte ruis, een autoregressieve reeks met voortschrijdend gemiddelde (ARMA), of een ETP-signaal (La2004) plus rode AR(1)-ruis; toont het MTM-spectrum met AR(1)-betrouwbaarheidsniveaus.
+Sum of sinusoids plus white noise (cycles)	Som van sinusoïden plus witte ruis (cycles)
+ARMA model (armaGen)	ARMA-model (armaGen)
+ETP plus AR(1) noise (ar1etp)	ETP plus AR(1)-ruis (ar1etp)
+Periods (comma separated)	Perioden (door komma's gescheiden)
+Phases in radians (one per period, empty = 0)	Fasen in radialen (één per periode, leeg = 0)
+Variance of the white noise	Variantie van de witte ruis
+Start (ka for ETP)	Begin (ka voor ETP)
+End (ka for ETP)	Einde (ka voor ETP)
+AR coefficients (one per order)	AR-coëfficiënten (één per orde)
+MA coefficients (one per order)	MA-coëfficiënten (één per orde)
+AR(1) coefficient of the noise	AR(1)-coëfficiënt van de ruis
+Noise amplitude relative to ETP (1 = equal variance, < 0 = noise only)	Ruisamplitude ten opzichte van ETP (1 = gelijke variantie, < 0 = alleen ruis)
+Generates an AR(1) red-noise series with a given mean, standard deviation and lag-1 autocorrelation.	Genereert een rode-ruisreeks (AR(1)) met een gegeven gemiddelde, standaarddeviatie en lag-1-autocorrelatie.
+First depth / time	Eerste diepte / tijd
+Lag-1 autocorrelation (0 = white noise)	Lag-1-autocorrelatie (0 = witte ruis)
+Converts a time series (time in kyr, value), e.g. ETP or insolation, into a synthetic stratigraphic series (depth in m): with a linearly changing sedimentation rate, or with a rate that follows the signal (differential accumulation); use it to test how tools cope with changing rates.	Zet een tijdreeks (tijd in kyr, waarde), bijv. ETP of insolatie, om in een synthetische stratigrafische reeks (diepte in m): met een lineair veranderende sedimentatiesnelheid, of met een snelheid die het signaal volgt (differentiële accumulatie); te gebruiken om te testen hoe tools omgaan met veranderende snelheden.
+Choose a readable data file.	Kies een leesbaar databestand.
+Linear sed.-rate ramp (sedRamp)	Lineair verloop van de sed.snelheid (sedRamp)
+Differential accumulation (diffAccum)	Differentiële accumulatie (diffAccum)
+Sed. rate at the start of the series (cm/kyr)	Sed.snelheid aan het begin van de reeks (cm/kyr)
+Sed. rate at the end of the series (cm/kyr)	Sed.snelheid aan het einde van de reeks (cm/kyr)
+Lowest sed. rate (cm/kyr)	Laagste sed.snelheid (cm/kyr)
+Highest sed. rate (cm/kyr)	Hoogste sed.snelheid (cm/kyr)
+Highest rate at	Hoogste snelheid bij
+peaks of the signal	pieken van het signaal
+troughs of the signal	dalen van het signaal
+Converts a time series (time in kyr, value), e.g. an ETP or insolation series, to a synthetic stratigraphic record whose sedimentation rate changes exponentially from the start to the end value; use it to test how tracking and age-model tools cope with a changing rate.	Zet een tijdreeks (tijd in kyr, waarde), bijv. een ETP- of insolatiereeks, om in een synthetisch stratigrafisch record waarvan de sedimentatiesnelheid exponentieel verandert van de begin- naar de eindwaarde; te gebruiken om te testen hoe tools voor het volgen van cycli en voor ouderdomsmodellen omgaan met een veranderende snelheid.
+Sedimentation rate at the start of the series (cm/kyr)	Sedimentatiesnelheid aan het begin van de reeks (cm/kyr)
+Sedimentation rate at the end of the series (cm/kyr)	Sedimentatiesnelheid aan het einde van de reeks (cm/kyr)
+Turns a forcing series (e.g. precession, ETP or an ice-volume model) into a series of sedimentary facies by slicing the standardised forcing into classes, and compares the spectra of forcing and facies.	Zet een forceringsreeks (bijv. precessie, ETP of een ijsvolumemodel) om in een reeks sedimentaire facies door de gestandaardiseerde forcering in klassen te verdelen, en vergelijkt de spectra van forcering en facies.
+Number of facies	Aantal facies
+Clip the forcing at its mean value (no facies change below it)	De forcering afkappen op haar gemiddelde waarde (geen faciesverandering daaronder)
+Reverse the sign of the forcing	Het teken van de forcering omkeren
+Simulates the smoothing of a time series (time in kyr) by diffusive bioturbation, or removes it by Wiener deconvolution (Liu et al. 2021), for a mixed-layer depth, sedimentation rate and mixing parameter G.	Simuleert de afvlakking van een tijdreeks (tijd in kyr) door diffusieve bioturbatie, of verwijdert deze door Wiener-deconvolutie (Liu et al. 2021), voor een menglaagdiepte, sedimentatiesnelheid en mengparameter G.
+Direction	Richting
+Mix: simulate bioturbation (bioturb)	Mengen: bioturbatie simuleren (bioturb)
+Unmix: remove bioturbation (unbioturb)	Ontmengen: bioturbatie verwijderen (unbioturb)
+Mixing parameter G = D / (ML v)	Mengparameter G = D / (ML v)
+Mixed-layer depth (cm)	Menglaagdiepte (cm)
+Sedimentation rate (cm/kyr)	Sedimentatiesnelheid (cm/kyr)
+Fraction tapered before deconvolution	Fractie die vóór de deconvolutie wordt getaperd
+Wiener filter (stabilises the deconvolution)	Wiener-filter (stabiliseert de deconvolutie)
+Lowpass cut-off after deconvolution (cycles/kyr, 0 = none)	Laagdoorlaat-afsnijfrequentie na deconvolutie (cycli/kyr, 0 = geen)
+Response of the advection-diffusion bioturbation model of Schink and Guinasso (1975) to an impulse: how a single event is smeared over depth and time by a mixed layer.	Respons van het advectie-diffusiemodel voor bioturbatie van Schink en Guinasso (1975) op een impuls: hoe een enkele gebeurtenis door een menglaag over diepte en tijd wordt uitgesmeerd.
+Bioturbation parameter G = D / (ML v)	Bioturbatieparameter G = D / (ML v)
+Writes an example data set of WaverideR into the working folder.	Schrijft een voorbeelddataset van WaverideR naar de werkmap.
+Data set	Dataset
+IODP 926 grey scale (Zeeden et al. 2013)	IODP 926 grijswaarden (Zeeden et al. 2013)
+Sullivan core magnetic susceptibility (Pas et al. 2018)	Magnetische susceptibiliteit van de Sullivan-kern (Pas et al. 2018)
+ETP astronomical signal example	Voorbeeld van een astronomisch ETP-signaal
+Depth rank example	Voorbeeld van een diepte-rangreeks
+Total solar irradiance 0-9400 ka (Steinhilber et al. 2012)	Totale zonne-irradiantie 0-9400 ka (Steinhilber et al. 2012)
+Bisciaro Fm XRF (several columns)	XRF van de Bisciaro-formatie (meerdere kolommen)
+Sorts by the first column, removes empty values and averages duplicated depths.	Sorteert op de eerste kolom, verwijdert lege waarden en middelt dubbele dieptes.
+Keeps the part of the series between two depths / times (Acycle: Math > Select Parts). Drag the two lines on the figure or type the values.	Behoudt het deel van de reeks tussen twee dieptes / tijden (Acycle: Math > Select Parts). Sleep de twee lijnen op de figuur of typ de waarden.
+From	Van
+To	Tot
+Removes the part of the series between two depths; optionally closes the gap (Acycle: Remove Parts). Drag the two lines on the figure or type the values.	Verwijdert het deel van de reeks tussen twee dieptes; sluit optioneel het gat (Acycle: Remove Parts). Sleep de twee lijnen op de figuur of typ de waarden.
+Close the gap (shift the part below upwards)	Gat sluiten (het deel eronder naar boven schuiven)
+Removes values outside c times the interquartile range from the quartiles (astrochron::trim).	Verwijdert waarden die meer dan c maal de interkwartielafstand buiten de kwartielen liggen (astrochron::trim).
+Values below the lower or above the upper limit are set to the limit (Acycle: Math > Clipping).	Waarden onder de ondergrens of boven de bovengrens worden op de grens gezet (Acycle: Math > Clipping).
+Lower limit	Ondergrens
+Upper limit	Bovengrens
+Writes one proxy column of a multi-column table as its own two-column series.	Schrijft één proxykolom van een tabel met meerdere kolommen weg als eigen reeks met twee kolommen.
+Column	Kolom
+Works on all columns of a table: removes levels with an empty value, replaces negative or zero values (e.g. before a log transform), removes values above or below a threshold, or keeps an interval.	Werkt op alle kolommen van een tabel: verwijdert niveaus met een lege waarde, vervangt negatieve waarden of nulwaarden (bijv. vóór een logtransformatie), verwijdert waarden boven of onder een drempelwaarde, of behoudt een interval.
+Operation	Bewerking
+Remove levels with an empty value (rmNA)	Niveaus met een lege waarde verwijderen (rmNA)
+Replace negative values by 0 (repl0)	Negatieve waarden vervangen door 0 (repl0)
+Replace values <= 0 by the smallest positive number (replEps)	Waarden <= 0 vervangen door het kleinste positieve getal (replEps)
+Remove values above or below a threshold (trimAT)	Waarden boven of onder een drempelwaarde verwijderen (trimAT)
+Keep an interval of all columns (iso)	Een interval van alle kolommen behouden (iso)
+Column shown in the figure; trimAT tests and keeps only this column.	Kolom die in de figuur wordt getoond; trimAT toetst en behoudt alleen deze kolom.
+Threshold	Drempelwaarde
+Remove the values	Waarden verwijderen
+larger than the threshold	groter dan de drempelwaarde
+smaller than the threshold	kleiner dan de drempelwaarde
+Resamples the series at an even interval (linear, as Acycle) or with a cubic spline.	Herbemonstert de reeks op een regelmatig interval (lineair, zoals Acycle) of met een kubische spline.
+New sampling interval	Nieuw bemonsteringsinterval
+Method	Methode
+Linear	Lineair
+Cubic spline	Kubische spline
+Estimates the sampling interval at which linear interpolation of an unevenly sampled record does not bias the spectral background (from power-law noise surrogates on the actual sampling grid), then interpolates with an anti-alias filter.	Schat het bemonsteringsinterval waarbij lineaire interpolatie van een onregelmatig bemonsterd record de spectrale achtergrond niet vertekent (op basis van machtswetruis-surrogaten op het werkelijke bemonsteringsraster), en interpoleert vervolgens met een anti-aliasfilter.
+Interpolation interval	Interpolatie-interval
+Estimate it (Laepple and Huybers 2013)	Schatten (Laepple en Huybers 2013)
+Given	Opgegeven
+Threshold of the spectral ratio R	Drempelwaarde van de spectrale verhouding R
+Power-law exponent of the noise surrogates	Machtswetexponent van de ruissurrogaten
+MTM time-bandwidth product	MTM-tijd-bandbreedteproduct
+Smoothing of the ratio R	Afvlakking van de verhouding R
+Number of noise simulations (> 1 runs in parallel)	Aantal ruissimulaties (> 1 draait parallel)
+Anti-alias filter	Anti-aliasfilter
+Interpolates series 1 linearly at the depths / times of series 2 (e.g. to compare or cross-plot two proxies measured at different levels).	Interpoleert reeks 1 lineair op de dieptes / tijden van reeks 2 (bijv. om twee proxy's die op verschillende niveaus zijn gemeten te vergelijken of in een crossplot te zetten).
+Series 1	Reeks 1
+Series 2	Reeks 2
+Also write a table with both series at the levels of file 2	Ook een tabel schrijven met beide reeksen op de niveaus van bestand 2
+Turns a bed table (column 1 base, column 2 top of every bed, column 3 rank or proxy value, as in StratigrapheR) into an evenly sampled series that keeps the bed boundaries.	Zet een lagentabel (kolom 1 basis, kolom 2 top van elke laag, kolom 3 rang of proxywaarde, zoals in StratigrapheR) om in een regelmatig bemonsterde reeks waarin de laaggrenzen behouden blijven.
+Divisor of the greatest common bed thickness	Deler van de grootste gemene laagdikte
+Resample to a regular step	Herbemonsteren met een regelmatige stap
+Step of the resampled series	Stap van de herbemonsterde reeks
+Builds a lithofacies rank series from a bed table in stratigraphic order (column 1 bed thickness, another column the facies rank of the bed), sampled at an even step.	Bouwt een rangreeks van lithofacies uit een lagentabel in stratigrafische volgorde (kolom 1 laagdikte, een andere kolom de faciesrang van de laag), bemonsterd met een regelmatige stap.
+Rank column	Rangkolom
+Sampling step (0 = no interpolation)	Bemonsteringsstap (0 = geen interpolatie)
+Height of the base of the first bed	Hoogte van de basis van de eerste laag
+Standardise, remove the mean, log transform, change sign or scale, or flip the depth axis.	Standaardiseren, het gemiddelde verwijderen, logtransformatie, teken of schaal wijzigen, of de diepte-as omkeren.
+Transformation	Transformatie
+Standardise (z-score)	Standaardiseren (z-score)
+Remove mean	Gemiddelde verwijderen
+Natural log	Natuurlijke logaritme
+Change sign (x -1)	Teken omkeren (x -1)
+Normalise to 0-1	Normaliseren naar 0-1
+Multiply depth by a factor (units)	Diepte vermenigvuldigen met een factor (eenheden)
+Flip depth axis (top <-> base)	Diepte-as omkeren (top <-> basis)
+Depth to height / time to age (x -> max - x)	Diepte naar hoogte / tijd naar ouderdom (x -> max - x)
+e.g. 0.01 converts cm to m	bijv. 0.01 zet cm om in m
+Divides by the linear trend, arcsine transform, flips the stratigraphic order, clips or mutes the values below a threshold (enhances the modulator, e.g. eccentricity), pads with zeros, or converts depth to time with a constant sedimentation rate.	Deelt door de lineaire trend, arcsinustransformatie, keert de stratigrafische volgorde om, kapt de waarden onder een drempelwaarde af of dempt ze (versterkt de modulator, bijv. excentriciteit), vult aan met nullen, of zet diepte om in tijd met een constante sedimentatiesnelheid.
+Divide by the linear trend (divTrend)	Delen door de lineaire trend (divTrend)
+Arcsine transform, after rescaling to 0-1 (arcsinT)	Arcsinustransformatie, na herschaling naar 0-1 (arcsinT)
+Flip the stratigraphic order (flip)	De stratigrafische volgorde omkeren (flip)
+Clip the values below a threshold (clipIt)	De waarden onder een drempelwaarde afkappen (clipIt)
+Mute the values below a threshold by a divisor (clipIt)	De waarden onder een drempelwaarde dempen met een deler (clipIt)
+Pad with zeros (pad)	Aanvullen met nullen (pad)
+Depth to time with a constant sed. rate (constantSedrate)	Diepte naar tijd met een constante sed.snelheid (constantSedrate)
+Height given to the new first level	Hoogte die het nieuwe eerste niveau krijgt
+Value given to the clipped values	Waarde die de afgekapte waarden krijgen
+Divisor	Deler
+Number of zeros added at the end	Aantal nullen dat aan het einde wordt toegevoegd
+Sedimentation rate (depth units per time unit)	Sedimentatiesnelheid (diepte-eenheden per tijdseenheid)
+In the units of the depth column per time unit, e.g. 0.02 m/kyr for 2 cm/kyr with depths in metres.	In de eenheden van de dieptekolom per tijdseenheid, bijv. 0.02 m/kyr voor 2 cm/kyr met dieptes in meters.
+Time of the first level	Tijd van het eerste niveau
+Time	Tijd
+increases with depth	neemt toe met de diepte
+decreases with depth	neemt af met de diepte
+First derivative dy/dx (central differences).	Eerste afgeleide dy/dx (centrale differenties).
+Moving average, moving median or Gaussian kernel with a window in depth / time units, or LOESS.	Voortschrijdend gemiddelde, voortschrijdende mediaan of Gaussische kernel met een venster in diepte- / tijdseenheden, of LOESS.
+Moving average	Voortschrijdend gemiddelde
+Moving median	Voortschrijdende mediaan
+Gaussian kernel	Gaussische kernel
+Window width (depth / time units)	Vensterbreedte (diepte- / tijdseenheden)
+For the Gaussian kernel the window is 4 sigma wide.	Bij de Gaussische kernel is het venster 4 sigma breed.
+LOESS span (fraction of the record)	LOESS-span (fractie van het record)
+Applies a cosine-tapered (Tukey), DPSS, Gaussian or Hann taper to the series, e.g. before a periodogram, and shows the shape of the taper and its spectral window.	Past een cosinustaper (Tukey), DPSS-, Gaussische of Hann-taper toe op de reeks, bijv. vóór een periodogram, en toont de vorm van de taper en het bijbehorende spectrale venster.
+Cosine-tapered window (cosTaper)	Venster met cosinustaper (cosTaper)
+Discrete prolate spheroidal sequence (dpssTaper)	Discrete prolate sferoïdale sequentie (dpssTaper)
+Gaussian window (gausTaper)	Gaussisch venster (gausTaper)
+Hann window (hannTaper)	Hann-venster (hannTaper)
+Fraction of the series tapered (1 = Hann)	Fractie van de reeks die wordt getaperd (1 = Hann)
+Time-bandwidth product	Tijd-bandbreedteproduct
+Which DPSS (1 = first)	Welke DPSS (1 = eerste)
+Gaussian alpha (1 / standard deviation, >= 2.5)	Gaussische alpha (1 / standaarddeviatie, >= 2.5)
+Normalise the taper to RMS = 1 (keeps the power of a white process)	De taper normaliseren naar RMS = 1 (behoudt het vermogen van een wit proces)
+Remove the mean first	Eerst het gemiddelde verwijderen
+Remove a linear trend first	Eerst een lineaire trend verwijderen
+Also write the taper itself (256 points)	Ook de taper zelf wegschrijven (256 punten)
+Accumulation rate of a component (concentration in weight %) from a constant linear sedimentation rate and dry bulk density: component, bulk and linear accumulation rates.	Accumulatiesnelheid van een component (concentratie in gewichts-%) uit een constante lineaire sedimentatiesnelheid en droge bulkdichtheid: accumulatiesnelheid van de component, bulkaccumulatiesnelheid en lineaire accumulatiesnelheid.
+Dry bulk density (g/cm3)	Droge bulkdichtheid (g/cm3)
+Removes a linear, LOWESS, polynomial or automatic-span LOESS trend (Acycle: Detrending).	Verwijdert een lineaire trend, LOWESS-trend, polynoomtrend of LOESS-trend met automatische span (Acycle: Detrending).
+Polynomial	Polynoom
+LOESS with automatic span (WaverideR)	LOESS met automatische span (WaverideR)
+LOWESS span (fraction of the record)	LOWESS-span (fractie van het record)
+Polynomial order	Orde van de polynoom
+Also write the trend	Ook de trend wegschrijven
+FFT lowpass filter with a rectangular, Gaussian or cosine-tapered window, the matching highpass (series minus lowpass), or removal of a Gaussian-kernel trend.	FFT-laagdoorlaatfilter met een rechthoekig, Gaussisch of cosinus-getaperd venster, het bijbehorende hoogdoorlaatfilter (reeks min laagdoorlaat), of verwijdering van een trend met Gaussische kernel.
+Lowpass filter (lowpass)	Laagdoorlaatfilter (lowpass)
+Highpass: series minus lowpass (lowpass)	Hoogdoorlaat: reeks min laagdoorlaat (lowpass)
+Remove a Gaussian-kernel trend (noKernel)	Een trend met Gaussische kernel verwijderen (noKernel)
+Cut-off frequency (cycles per unit)	Afsnijfrequentie (cycli per eenheid)
+Window	Venster
+Rectangular	Rechthoekig
+Gaussian	Gaussisch
+Cosine-tapered	Cosinus-getaperd
+Gaussian window: alpha (>= 2.5)	Gaussisch venster: alpha (>= 2.5)
+Cosine-tapered window: fraction tapered	Venster met cosinustaper: getaperde fractie
+Zero padding factor	Zero-paddingfactor
+Remove a linear trend before filtering	Een lineaire trend verwijderen vóór het filteren
+Kernel smoothing (fraction of the record, > 0)	Kernelafvlakking (fractie van het record, > 0)
+Also write the lowpass / kernel trend	Ook de laagdoorlaat- / kerneltrend wegschrijven
+Removes the AR(1) or AR(p) red-noise structure (Acycle: Pre-whitening).	Verwijdert de rode-ruisstructuur AR(1) of AR(p) (Acycle: Pre-whitening).
+AR(p), order chosen by AIC	AR(p), orde gekozen met AIC
+Maximum AR order	Maximale AR-orde
+Summary of the sampling interval (and its Nyquist frequency) and of the distribution of the values.	Samenvatting van het bemonsteringsinterval (en de bijbehorende Nyquistfrequentie) en van de verdeling van de waarden.
+Sampling-interval figure	Figuur van het bemonsteringsinterval
+Cumulative sampling intervals	Cumulatieve bemonsteringsintervallen
+Histogram of the sampling intervals	Histogram van de bemonsteringsintervallen
+Mean, median and variance, or minimum, maximum and range, in a window of constant length in depth or time (the number of points per window adapts to uneven sampling); on an even grid also the distribution of the values in each window.	Gemiddelde, mediaan en variantie, of minimum, maximum en bereik, in een venster met constante lengte in diepte of tijd (het aantal punten per venster past zich aan onregelmatige bemonstering aan); op een regelmatig raster ook de verdeling van de waarden in elk venster.
+Mean, median and variance (mwStats)	Gemiddelde, mediaan en variantie (mwStats)
+Mean, median, variance and value densities on an even grid (mwStatsGrid)	Gemiddelde, mediaan, variantie en waardedichtheden op een regelmatig raster (mwStatsGrid)
+Minimum, maximum and range (mwMinMax)	Minimum, maximum en bereik (mwMinMax)
+Window length (depth / time units)	Vensterlengte (diepte- / tijdseenheden)
+Window placement	Plaatsing van het venster
+Centred on every level	Gecentreerd op elk niveau
+Starting at the smallest depth / time	Beginnend bij de kleinste diepte / tijd
+Starting at the largest depth / time	Beginnend bij de grootste diepte / tijd
+Confidence interval of the mean (%, 0 = none)	Betrouwbaarheidsinterval van het gemiddelde (%, 0 = geen)
+Ends: mean of the first and last half window (centred windows only)	Uiteinden: gemiddelde van het eerste en laatste halve venster (alleen gecentreerde vensters)
+Grid step	Rasterstap
+Also write the table of windows (mwin / mwinGrid)	Ook de tabel met vensters wegschrijven (mwin / mwinGrid)
+Correlation coefficient (Pearson, Spearman or Kendall) of two columns of a table in a moving window of constant length in depth or time.	Correlatiecoëfficiënt (Pearson, Spearman of Kendall) van twee kolommen van een tabel in een schuivend venster met constante lengte in diepte of tijd.
+First proxy	Eerste proxy
+Second proxy	Tweede proxy
+Correlation	Correlatie
+Lag-1 autocorrelation in a moving window, averaged over Monte Carlo runs with random sampling intervals and window widths between the shortest and longest window (mean and standard deviation).	Lag-1-autocorrelatie in een schuivend venster, gemiddeld over Monte Carlo-runs met willekeurige bemonsteringsintervallen en vensterbreedtes tussen het kortste en het langste venster (gemiddelde en standaarddeviatie).
+Shortest window (depth / time units)	Kortste venster (diepte- / tijdseenheden)
+Longest window (depth / time units)	Langste venster (diepte- / tijdseenheden)
+Number of simulations	Aantal simulaties
+Cross-plot of two columns of a table with kernel density estimates of each variable along the axes; gives the Pearson and Spearman correlation.	Crossplot van twee kolommen van een tabel met kerneldichtheidsschattingen van elke variabele langs de assen; geeft de Pearson- en Spearman-correlatie.
+x variable	x-variabele
+y variable	y-variabele
+Grey fill of the density curves	Grijze vulling van de dichtheidscurven
+Principal component analysis of all numeric columns of a table (column 1 depth or time), optionally rotated (varimax or promax); writes the loadings and the scores along the record.	Hoofdcomponentenanalyse van alle numerieke kolommen van een tabel (kolom 1 diepte of tijd), optioneel geroteerd (varimax of promax); schrijft de ladingen en de scores langs het record weg.
+Rotation	Rotatie
+Varimax (orthogonal)	Varimax (orthogonaal)
+Promax (oblique)	Promax (scheef)
+Number of components (0 = all)	Aantal componenten (0 = alle)
+Standardise the variables first (scores of standardised data)	Eerst de variabelen standaardiseren (scores van gestandaardiseerde data)
+stratPCA uses the correlation matrix but multiplies the loadings with the raw values for the scores.	stratPCA gebruikt de correlatiematrix, maar vermenigvuldigt de ladingen met de ruwe waarden voor de scores.
+Finds the local maxima and/or minima of a (filtered or extracted) cycle, keeping only the most extreme of consecutive extremes of the same kind, e.g. as tie points for an age model.	Zoekt de lokale maxima en/of minima van een (gefilterde of geëxtraheerde) cyclus, waarbij van opeenvolgende extremen van dezelfde soort alleen het meest extreme wordt behouden, bijv. als ankerpunten voor een ouderdomsmodel.
+Find	Zoeken
+Maxima and minima	Maxima en minima
+Points compared on each side	Aantal vergeleken punten aan elke kant
+Finds the maxima of peaks and / or minima of troughs, optionally only above (peaks) or below (troughs) a level, or lists the plateau points that are not evaluated as peaks or troughs.	Zoekt de maxima van pieken en / of de minima van dalen, optioneel alleen boven (pieken) of onder (dalen) een niveau, of geeft een lijst van de plateaupunten die niet als pieken of dalen worden beoordeeld.
+Peaks	Pieken
+Troughs	Dalen
+Peaks and troughs	Pieken en dalen
+Only peaks above / troughs below a level	Alleen pieken boven / dalen onder een niveau
+Level	Niveau
+List the plateau points instead (flat tops / bottoms, not evaluated)	In plaats daarvan de plateaupunten weergeven (vlakke toppen / bodems, niet beoordeeld)
+Bayesian change-point regression (as Acycle: Math > Changepoint).	Bayesiaanse veranderpuntregressie (zoals Acycle: Math > Changepoint).
+Maximum number of change points	Maximaal aantal veranderpunten
+Minimum segment length (points)	Minimale segmentlengte (punten)
+Runs the Bayesian change-point regression (Ruggieri 2013) for 1 to k change points and gives the R2 of each model, to choose the number of change points for Bayesian change points.	Voert de Bayesiaanse veranderpuntregressie (Ruggieri 2013) uit voor 1 tot k veranderpunten en geeft de R2 van elk model, om het aantal veranderpunten voor Bayesiaanse veranderpunten te kiezen.
+Largest number of change points	Grootste aantal veranderpunten
+Largest number of points (longer records are resampled)	Grootste aantal punten (langere records worden herbemonsterd)
+Multitaper (MTM) spectrum with AR(1), robust red-noise (ML96), LOWSPEC or power-law confidence levels; periodogram; maximum entropy (MESA) or adaptive multitaper (AMTM) of WaverideR.	Multitaper-spectrum (MTM) met AR(1)-, robuuste rode-ruis- (ML96), LOWSPEC- of machtswet-betrouwbaarheidsniveaus; periodogram; maximale entropie (MESA) of adaptieve multitaper (AMTM) van WaverideR.
+MTM, AR(1) red noise	MTM, rode AR(1)-ruis
+MTM, robust red noise (Mann & Lees 1996)	MTM, robuuste rode ruis (Mann & Lees 1996)
+MTM, power-law noise	MTM, machtswetruis
+MESA, maximum entropy (WaverideR)	MESA, maximale entropie (WaverideR)
+Adaptive MTM with noise models (WaverideR)	Adaptieve MTM met ruismodellen (WaverideR)
+Spectral whitening background, SWA (WaverideR)	Achtergrond door spectraal witmaken, SWA (WaverideR)
+Time-bandwidth product (NW)	Tijd-bandbreedteproduct (NW)
+Padding factor	Paddingfactor
+Remove linear trend	Lineaire trend verwijderen
+Maximum frequency shown (cycles/unit)	Maximale getoonde frequentie (cycli/eenheid)
+Default: the Nyquist frequency, 1 / (2 x sampling interval).	Standaard: de Nyquistfrequentie, 1 / (2 x bemonsteringsinterval).
+Horizontal axis	Horizontale as
+Frequency	Frequentie
+Period	Periode
+Logarithmic power axis	Logaritmische vermogensas
+Bayesian probability spectrum (Gregory 2005, Weedon et al. 2019), periodogram with the Smoothed Window Average background (Kemp 2016, Weedon 2020), or the average spectrum of an evolutive MESA.	Bayesiaans kansspectrum (Gregory 2005, Weedon et al. 2019), periodogram met de Smoothed Window Average-achtergrond (Kemp 2016, Weedon 2020), of het gemiddelde spectrum van een evolutieve MESA.
+Bayesian probability spectrum	Bayesiaans kansspectrum
+Periodogram with SWA background	Periodogram met SWA-achtergrond
+Average of an evolutive MESA	Gemiddelde van een evolutieve MESA
+MESA window length (depth units)	MESA-vensterlengte (diepte-eenheden)
+MESA window step (depth units)	MESA-vensterstap (diepte-eenheden)
+Normalise every window before averaging	Elk venster normaliseren vóór het middelen
+Periodogram of an unevenly sampled series without interpolation (Lomb-Scargle), with the power level that the highest peak exceeds by chance with probability alpha (Baluev 2008 or Press et al. 1994), and optionally a p-value of the highest peak by randomisation.	Periodogram van een onregelmatig bemonsterde reeks zonder interpolatie (Lomb-Scargle), met het vermogensniveau dat de hoogste piek door toeval overschrijdt met kans alpha (Baluev 2008 of Press et al. 1994), en optioneel een p-waarde van de hoogste piek door randomisatie.
+Lowest frequency (0 = 1 / record length)	Laagste frequentie (0 = 1 / lengte van het record)
+Highest frequency (cycles/unit)	Hoogste frequentie (cycli/eenheid)
+Default: half the inverse of the median sampling interval.	Standaard: de helft van het omgekeerde van het mediane bemonsteringsinterval.
+Oversampling factor	Overbemonsteringsfactor
+Significance level alpha	Significantieniveau alpha
+Normalisation	Normalisatie
+Standard (0 to 1, Baluev 2008)	Standaard (0 tot 1, Baluev 2008)
+p-value of the highest peak by randomisation (randlsp)	p-waarde van de hoogste piek door randomisatie (randlsp)
+Randomisations	Randomisaties
+Tests spectral peaks more strictly than one confidence level: confidence levels and p-values corrected for testing many frequencies at once (Bonferroni and five other corrections), the intermediate spectrum of Thomson et al. (2001) to choose the order of the AR background, or a power-law (1/f) fit.	Toetst spectrale pieken strenger dan met één betrouwbaarheidsniveau: betrouwbaarheidsniveaus en p-waarden gecorrigeerd voor het gelijktijdig toetsen van veel frequenties (Bonferroni en vijf andere correcties), het intermediaire spectrum van Thomson et al. (2001) om de orde van de AR-achtergrond te kiezen, of een machtswetfit (1/f).
+Test	Toets
+Bonferroni-corrected confidence levels (confAdjust)	Bonferroni-gecorrigeerde betrouwbaarheidsniveaus (confAdjust)
+p-values corrected for multiple testing (multiTest)	p-waarden gecorrigeerd voor meervoudig toetsen (multiTest)
+Intermediate spectrum, MTM / AR(p) (mtmAR)	Intermediair spectrum, MTM / AR(p) (mtmAR)
+Power-law (1/f) fit to the periodogram (pwrLawFit)	Machtswetfit (1/f) aan het periodogram (pwrLawFit)
+Spectrum and background	Spectrum en achtergrond
+MTM, robust red noise (ML96)	MTM, robuuste rode ruis (ML96)
+Computed without zero padding, as the multiple-testing corrections require.	Berekend zonder zero-padding, zoals de correcties voor meervoudig toetsen vereisen.
+Frequency bands of interest (optional): low high; low high	Frequentiebanden van belang (optioneel): laag hoog; laag hoog
+Only frequencies in these bands count as tests, which makes the correction less strict. For the power-law fit: the first band is the frequency range of the fit.	Alleen frequenties in deze banden tellen als toetsen, wat de correctie minder streng maakt. Voor de machtswetfit: de eerste band is het frequentiebereik van de fit.
+Order of the AR model	Orde van het AR-model
+Increase the order until the intermediate spectrum stops getting flatter.	Verhoog de orde totdat het intermediaire spectrum niet meer vlakker wordt.
+AR estimation	AR-schatting
+Least squares	Kleinste kwadraten
+Simulates noise series with the length, sampling and noise of your record and counts how often each background method (AR(1), ML96, LOWSPEC, power law) finds false peaks, in total and per frequency, also after multiple-testing corrections. Use it to choose a background method you can trust.	Simuleert ruisreeksen met de lengte, bemonstering en ruis van het record en telt hoe vaak elke achtergrondmethode (AR(1), ML96, LOWSPEC, machtswet) valse pieken vindt, in totaal en per frequentie, ook na correcties voor meervoudig toetsen. Te gebruiken om een betrouwbare achtergrondmethode te kiezen.
+Noise of the simulated series	Ruis van de gesimuleerde reeksen
+AR(1) coefficient rho or power-law exponent beta (0 = from the data)	AR(1)-coëfficiënt rho of machtswetexponent beta (0 = uit de data)
+By default rho is the lag-1 autocorrelation of the detrended record, beta its power-law slope.	Standaard is rho de lag-1-autocorrelatie van het record na trendverwijdering, en beta de machtswethelling ervan.
+Background method tested	Getoetste achtergrondmethode
+MTM, power law	MTM, machtswet
+Periodogram, power law	Periodogram, machtswet
+Time-bandwidth product (NW, MTM methods)	Tijd-bandbreedteproduct (NW, MTM-methoden)
+Remove a linear trend from the simulated series	Een lineaire trend uit de gesimuleerde reeksen verwijderen
+Remove a LOWESS trend (span 0-1, 0 = no)	Een LOWESS-trend verwijderen (span 0-1, 0 = nee)
+Also evaluate multiple-testing corrections	Ook correcties voor meervoudig toetsen evalueren
+Number of simulated series	Aantal gesimuleerde reeksen
+Sliding-window spectra: evolutive harmonic analysis (EHA, multitaper), EHA on a log2 period axis, windowed FFT or evolutive maximum entropy (MESA).	Spectra in een schuivend venster: evolutieve harmonische analyse (EHA, multitaper), EHA op een log2-periode-as, FFT in vensters of evolutieve maximale entropie (MESA).
+EHA on a log2 period axis (WaverideR)	EHA op een log2-periode-as (WaverideR)
+Windowed FFT (WaverideR)	FFT in vensters (WaverideR)
+Evolutive MESA (WaverideR)	Evolutieve MESA (WaverideR)
+Pad the ends by half a window	De uiteinden met een half venster aanvullen
+No padding (the result starts and ends half a window inside)	Geen padding (het resultaat begint en eindigt een half venster naar binnen)
+Mirror the record at its ends	Het record aan de uiteinden spiegelen
+Mean value	Gemiddelde waarde
+With padding, windows are also centred on the first and last samples, so the result spans the whole record.	Met padding worden vensters ook op het eerste en het laatste meetpunt gecentreerd, zodat het resultaat het hele record beslaat.
+Step (depth / time units)	Stap (diepte- / tijdseenheden)
+Maximum frequency (cycles/unit)	Maximale frequentie (cycli/eenheid)
+Logarithmic power	Logaritmisch vermogen
+Normalise each window to its maximum	Elk venster normaliseren op zijn maximum
+Depth / time on the vertical axis (Acycle style)	Diepte / tijd op de verticale as (Acycle-stijl)
+Evolutive harmonic analysis (EHA), then the power in a frequency band through the record and its share of the total power (e.g. how strong precession is along the section), or the spectrum at one depth.	Evolutieve harmonische analyse (EHA), en daarna het vermogen in een frequentieband door het record heen en het aandeel daarvan in het totale vermogen (bijv. hoe sterk precessie is langs de sectie), of het spectrum op één diepte.
+Result	Resultaat
+Power in a band through the record (integratePower)	Vermogen in een band door het record heen (integratePower)
+Spectrum at one depth (extract)	Spectrum op één diepte (extract)
+Window length (depth units)	Vensterlengte (diepte-eenheden)
+Step (depth units)	Stap (diepte-eenheden)
+Highest frequency of the EHA (cycles/unit)	Hoogste frequentie van de EHA (cycli/eenheid)
+Frequency band: low high (cycles/unit)	Frequentieband: laag hoog (cycli/eenheid)
+Default: around the highest peak of the periodogram.	Standaard: rond de hoogste piek van het periodogram.
+Normalise each spectrum to unit total power	Elk spectrum normaliseren op een totaal vermogen van één
+Depth of the spectrum	Diepte van het spectrum
+Power	Vermogen
+Harmonic F-test probability	Kans van de harmonische F-toets
+Evolutive multitaper spectra in which every window is first warped by the linear change of the sedimentation rate that sharpens its spectrum most, so cycles whose period changes become sharp lines; gives the rate gradient per window. Optional significance against warped AR(1) surrogates.	Evolutieve multitaper-spectra waarbij elk venster eerst wordt vervormd met de lineaire verandering van de sedimentatiesnelheid die het spectrum ervan het meest verscherpt, zodat cycli met een veranderende periode scherpe lijnen worden; geeft de snelheidsgradiënt per venster. Optionele significantie ten opzichte van vervormde AR(1)-surrogaten.
+Step between windows (0 = window / 20)	Stap tussen vensters (0 = venster / 20)
+Largest relative rate gradient tried (per depth unit)	Grootste geteste relatieve snelheidsgradiënt (per diepte-eenheid)
+Number of gradients on each side of zero	Aantal gradiënten aan elke kant van nul
+Choice of the gradient of a window	Keuze van de gradiënt van een venster
+Strength of the lines (F-test)	Sterkte van de lijnen (F-toets)
+Match with the astronomical template	Overeenkomst met het astronomische sjabloon
+Highest whitened peak	Hoogste piek na witmaken
+Spectral entropy	Spectrale entropie
+Astronomical periods of the template (kyr)	Astronomische perioden van het sjabloon (kyr)
+Depth unit of the data	Diepte-eenheid van de data
+metres	meter
+centimetres	centimeter
+feet	voet
+Number of AR(1) surrogates for significance (0 = none, slow)	Aantal AR(1)-surrogaten voor significantie (0 = geen, traag)
+Figure	Figuur
+De-chirped map, significant cells outlined	Chirp-gecorrigeerde kaart, significante cellen omlijnd
+Significance (ratio to the 95% surrogate level)	Significantie (verhouding tot het 95%-surrogaatniveau)
+De-chirped map only	Alleen chirp-gecorrigeerde kaart
+Continuous wavelet transform with 22 mother wavelets, superlet transform or synchrosqueezed wavelet transform (WaverideR). Significance against red noise is optional for the CWT.	Continue wavelettransformatie met 22 moederwavelets, superlettransformatie of wavelettransformatie met synchrosqueezing (WaverideR). Significantie ten opzichte van rode ruis is optioneel voor de CWT.
+Continuous wavelet transform (CWT)	Continue wavelettransformatie (CWT)
+Superlet transform	Superlettransformatie
+Synchrosqueezed wavelet transform (SST)	Wavelettransformatie met synchrosqueezing (SST)
+Mother wavelet	Moederwavelet
+Morlet, zero mean	Morlet, gemiddelde nul
+Generalised Morse	Gegeneraliseerde Morse
+Complex Morlet (cmor)	Complexe Morlet (cmor)
+Complex Gaussian (cgau)	Complexe Gaussische (cgau)
+Complex Mexican hat	Complexe Mexican hat
+Frequency B-spline	Frequentie-B-spline
+DOG (real)	DOG (reëel)
+Real Morlet	Reële Morlet
+Number of cycles (omega_nr)	Aantal cycli (omega_nr)
+Scale resolution dj (smaller = more periods, slower)	Schaalresolutie dj (kleiner = meer perioden, trager)
+Number of periods	Aantal perioden
+Base number of cycles c1	Basisaantal cycli c1
+Superlet order (min, max)	Superletorde (min, max)
+Significance against red noise (slower)	Significantie ten opzichte van rode ruis (trager)
+Number of red-noise simulations	Aantal rode-ruissimulaties
+Show the average spectrum	Gemiddeld spectrum tonen
+Show the data	Data tonen
+Period axis label	Label van de periode-as
+Depth axis label	Label van de diepte-as
+Colour scale	Kleurschaal
+Default (quantiles)	Standaard (kwantielen)
+Quantiles	Kwantielen
+Logarithmic	Logaritmisch
+Square root	Vierkantswortel
+Automatic	Automatisch
+Whiten (equal contrast at every period)	Witmaken (gelijk contrast bij elke periode)
+Sharper scalograms than the plain CWT: adaptive Morlet wavelet (number of cycles grows with the period), superlet synchrosqueezing, chirplet synchrosqueezing (follows changes of the sedimentation rate, with a map of the rate of change of the period) and ConceFT / multitaper synchrosqueezing (robust against noise).	Scherpere scalogrammen dan de gewone CWT: adaptieve Morlet-wavelet (het aantal cycli neemt toe met de periode), superlet-synchrosqueezing, chirplet-synchrosqueezing (volgt veranderingen van de sedimentatiesnelheid, met een kaart van de veranderingssnelheid van de periode) en ConceFT / multitaper-synchrosqueezing (robuust tegen ruis).
+Adaptive Morlet wavelet (Awavelet)	Adaptieve Morlet-wavelet (Awavelet)
+Superlet synchrosqueezing (superlet SST)	Superlet-synchrosqueezing (superlet-SST)
+Chirplet synchrosqueezing (chirplet SST, slow)	Chirplet-synchrosqueezing (chirplet-SST, traag)
+ConceFT (multitaper synchrosqueezing, Daubechies et al. 2016)	ConceFT (multitaper-synchrosqueezing, Daubechies et al. 2016)
+Multitaper SST (average of Morse wavelets)	Multitaper-SST (gemiddelde van Morse-wavelets)
+Number of cycles at the shortest period (omega_min)	Aantal cycli bij de kortste periode (omega_min)
+Number of cycles at the longest period (omega_max)	Aantal cycli bij de langste periode (omega_max)
+Change of the number of cycles with the period	Verandering van het aantal cycli met de periode
+Linear in log2(period)	Lineair in log2(periode)
+Linear in the scale index	Lineair in de schaalindex
+Linear in period	Lineair in de periode
+Quadratic	Kwadratisch
+Number of cycles of the orders (omega_0)	Aantal cycli van de ordes (omega_0)
+Combination of the orders	Combinatie van de ordes
+Geometric mean	Meetkundig gemiddelde
+Arithmetic mean	Rekenkundig gemiddelde
+Largest dimensionless chirp tried	Grootste geteste dimensieloze chirp
+Chirp step	Chirpstap
+Show the map of the rate of change of the period instead of the power	De kaart van de veranderingssnelheid van de periode tonen in plaats van het vermogen
+Number of Morse wavelets (K)	Aantal Morse-wavelets (K)
+Number of random combinations	Aantal willekeurige combinaties
+Scores the astronomical template on scalograms of chirped Morlet wavelets matched to every rate gradient, for every depth and sedimentation rate (an eCOCO-like evidence map that allows for changing rates). Shows the best score over the gradients and the best rate at every depth.	Scoort het astronomische sjabloon op scalogrammen van gechirpte Morlet-wavelets die op elke snelheidsgradiënt zijn afgestemd, voor elke diepte en sedimentatiesnelheid (een eCOCO-achtige evidentiekaart die veranderende snelheden toelaat). Toont de beste score over de gradiënten en de beste snelheid op elke diepte.
+Astronomical periods (kyr)	Astronomische perioden (kyr)
+Period and rate spacing (octaves)	Tussenafstand van perioden en snelheden (octaven)
+Number of cycles of the wavelet (omega_0)	Aantal cycli van de wavelet (omega_0)
+Step between scored positions (0 = 5 samples)	Stap tussen gescoorde posities (0 = 5 meetpunten)
+Second file: the tracked period curve (depth, period) of a cycle of known duration. The record is tuned with it, transformed in time and mapped back onto depth, so all cycles become sharp lines where the track is right: a check of the track. Optional significance against warped AR(1) surrogates.	Tweede bestand: de gevolgde periodecurve (diepte, periode) van een cyclus met bekende duur. Het record wordt ermee getuned, in de tijd getransformeerd en terug op diepte afgebeeld, zodat alle cycli scherpe lijnen worden waar de gevolgde curve klopt: een controle van de gevolgde curve. Optionele significantie ten opzichte van vervormde AR(1)-surrogaten.
+Transform in time	Transformatie in de tijd
+Morlet wavelet	Morlet-wavelet
+Superlet SST	Superlet-SST
+Chirplet SST (slow)	Chirplet-SST (traag)
+Multitaper EHA	Multitaper-EHA
+Combined (Morlet, EHA and superlet SST)	Gecombineerd (Morlet, EHA en superlet-SST)
+Shortest period (kyr; 0 = automatic)	Kortste periode (kyr; 0 = automatisch)
+Longest period (kyr; 0 = automatic)	Langste periode (kyr; 0 = automatisch)
+Period spacing (octaves)	Tussenafstand van perioden (octaven)
+Number of cycles of the Morlet wavelet	Aantal cycli van de Morlet-wavelet
+EHA window (kyr; 0 = 20 x shortest period)	EHA-venster (kyr; 0 = 20 x kortste periode)
+Tuned scalogram (time domain)	Getuned scalogram (tijddomein)
+Frequency uncertainty of a Fourier spectrum of this record (practical 1/T and Heisenberg-Gabor limit) and the period range a cycle can be told apart from (Rayleigh band), for the periods you give.	Frequentieonzekerheid van een Fourierspectrum van dit record (praktische 1/T en Heisenberg-Gabor-limiet) en het periodebereik waarvan een cyclus kan worden onderscheiden (Rayleigh-band), voor de opgegeven perioden.
+Periods of interest	Perioden van belang
+Number of Rayleigh bandwidths (half-width of the band)	Aantal Rayleigh-bandbreedtes (halve breedte van de band)
+Which parts of a wavelet or superlet scalogram stand above noise: analytic Torrence & Compo (1998) levels, Monte Carlo surrogates (white, AR(1), signal-corrected AR(1) or power-law noise, with p-values of candidate cycles), or percentiles of the average spectrum of red-noise runs.	Welke delen van een wavelet- of superletscalogram boven de ruis uitkomen: analytische niveaus van Torrence & Compo (1998), Monte Carlo-surrogaten (witte ruis, AR(1), signaalgecorrigeerde AR(1) of machtswetruis, met p-waarden van kandidaatcycli), of percentielen van het gemiddelde spectrum van rode-ruisruns.
+Morlet CWT	Morlet-CWT
+Analytic (Torrence & Compo 1998, instantaneous)	Analytisch (Torrence & Compo 1998, onmiddellijk)
+Noise surrogates (Monte Carlo)	Ruissurrogaten (Monte Carlo)
+Red-noise percentiles of the average spectrum	Rode-ruispercentielen van het gemiddelde spectrum
+Noise background	Ruisachtergrond
+AR(1) without the candidate cycles	AR(1) zonder de kandidaatcycli
+Power law (1/f^beta)	Machtswet (1/f^beta)
+Periods removed before fitting the noise	Perioden die vóór het fitten van de ruis worden verwijderd
+Candidate periods to give p-values for	Kandidaatperioden waarvoor p-waarden worden gegeven
+Significance level	Significantieniveau
+Percentiles of the red noise	Percentielen van de rode ruis
+Scale resolution dj	Schaalresolutie dj
+Keeps only the ridges of a synchrosqueezed transform (SST, superlet SST or ConceFT) that are unlikely to come from AR noise of the record (optionally with a variance that changes along the record).	Behoudt alleen de ruggen van een transformatie met synchrosqueezing (SST, superlet-SST of ConceFT) die waarschijnlijk niet uit AR-ruis van het record voortkomen (optioneel met een variantie die langs het record verandert).
+Synchrosqueezed wavelet transform	Wavelettransformatie met synchrosqueezing
+Number of noise simulations	Aantal ruissimulaties
+Highest AR order of the noise model	Hoogste AR-orde van het ruismodel
+Noise variance changes along the record	Ruisvariantie verandert langs het record
+Averages the wavelet power over a band of periods (e.g. one Milankovitch band) and tests it at every depth against white or AR(1) noise (Torrence & Compo 1998, eq. 24): is this cycle significant here?	Middelt het waveletvermogen over een band van perioden (bijv. één Milankovitch-band) en toetst het op elke diepte tegen witte ruis of AR(1)-ruis (Torrence & Compo 1998, verg. 24): is deze cyclus hier significant?
+Shortest period of the band	Kortste periode van de band
+Longest period of the band	Langste periode van de band
+Degrees of freedom	Vrijheidsgraden
+Exact (eigenvalues)	Exact (eigenwaarden)
+Number of cycles of the Morlet wavelet (omega_nr)	Aantal cycli van de Morlet-wavelet (omega_nr)
+Null-hypothesis series with the same spectrum as the data: IAAFT surrogates keep the value distribution exactly and the spectrum approximately, phase-randomised (FT) surrogates keep the spectrum exactly.	Nulhypothesereeksen met hetzelfde spectrum als de data: IAAFT-surrogaten behouden de waardeverdeling exact en het spectrum bij benadering, fase-gerandomiseerde (FT) surrogaten behouden het spectrum exact.
+Surrogate type	Type surrogaat
+Fourier phase randomisation	Fourier-faserandomisatie
+Number of surrogates	Aantal surrogaten
+Maximum IAAFT iterations	Maximaal aantal IAAFT-iteraties
+Surrogate series with the same power spectrum as the record but random phases (Ebisuzaki 1997), or noise generated from a theoretical spectrum (power law or AR(1); Timmer and Konig 1995) with the length, sampling, mean and standard deviation of the record.	Surrogaatreeksen met hetzelfde vermogensspectrum als het record maar met willekeurige fasen (Ebisuzaki 1997), of ruis gegenereerd uit een theoretisch spectrum (machtswet of AR(1); Timmer en Konig 1995) met de lengte, de bemonstering, het gemiddelde en de standaarddeviatie van het record.
+Phase-randomised surrogates of the record (surrogates)	Fase-gerandomiseerde surrogaten van het record (surrogates)
+Noise from a theoretical spectrum (makeNoise)	Ruis uit een theoretisch spectrum (makeNoise)
+Number of series	Aantal reeksen
+Keep the mean of the record	Het gemiddelde van het record behouden
+Keep the variance of the record	De variantie van het record behouden
+Power law 1 / f^beta	Machtswet 1 / f^beta
+beta or rho (0 = from the record)	beta of rho (0 = uit het record)
+Random seed (0 = random)	Seed van de toevalsgenerator (0 = willekeurig)
+Band-pass filter: Taner (Taner 2000), Gaussian or cosine-tapered window. Optionally writes the amplitude envelope. Drag the two lines on the spectrum or type the cut-off frequencies.	Banddoorlaatfilter: Taner (Taner 2000), Gaussisch of venster met cosinustaper. Schrijft optioneel de amplitude-omhullende weg. Sleep de twee lijnen op het spectrum of typ de afsnijfrequenties.
+Gaussian (WaverideR)	Gaussisch (WaverideR)
+Cosine-tapered window (astrochron)	Venster met cosinustaper (astrochron)
+Low frequency cut-off (cycles/unit)	Onderste afsnijfrequentie (cycli/eenheid)
+High frequency cut-off (cycles/unit)	Bovenste afsnijfrequentie (cycli/eenheid)
+Taner roll-off rate	Roll-off van het Taner-filter
+Add the mean back to the filtered series	Het gemiddelde weer bij de gefilterde reeks optellen
+Also write the amplitude envelope (Hilbert)	Ook de amplitude-omhullende wegschrijven (Hilbert)
+Instantaneous amplitude of a filtered series (Acycle: Amplitude Modulation).	Momentane amplitude van een gefilterde reeks (Acycle: Amplitude Modulation).
+Reconstructs a cycle of fixed period from the wavelet transform (band given as factors of the period or as shortest and longest period), its spectral power, or its amplitude (wavelet analogue of the Hilbert envelope, absolute calibration); or the envelope of the whole record.	Reconstrueert een cyclus met vaste periode uit de wavelettransformatie (band opgegeven als factoren van de periode of als kortste en langste periode), het spectrale vermogen ervan, of de amplitude ervan (wavelet-analogon van de Hilbert-omhullende, absolute kalibratie); of de omhullende van het hele record.
+Extract	Extraheren
+Cycle, band as factors of the period	Cyclus, band als factoren van de periode
+Cycle, band as shortest and longest period	Cyclus, band als kortste en langste periode
+Spectral power of the cycle	Spectraal vermogen van de cyclus
+Amplitude of the cycle	Amplitude van de cyclus
+Envelope of the whole record	Omhullende van het hele record
+Period of the cycle	Periode van de cyclus
+Lower band factor	Onderste bandfactor
+Upper band factor	Bovenste bandfactor
+Add the mean of the data to the cycle	Het gemiddelde van de data bij de cyclus optellen
+Second file: the tracked period curve (depth, period). Extracts the tracked cycle (or another cycle scaled from it) with band limits from the Gabor uncertainty of the wavelet, its spectral power, or its amplitude along the changing period.	Tweede bestand: de gevolgde periodecurve (diepte, periode). Extraheert de gevolgde cyclus (of een andere cyclus die daaruit is geschaald) met bandgrenzen uit de Gabor-onzekerheid van de wavelet, het spectrale vermogen ervan, of de amplitude ervan langs de veranderende periode.
+Cycle, band from the wavelet uncertainty	Cyclus, band uit de waveletonzekerheid
+Duration of the cycle to extract (kyr)	Duur van de te extraheren cyclus (kyr)
+Band half-width (standard deviations of the uncertainty)	Halve bandbreedte (standaarddeviaties van de onzekerheid)
+Second file: the tracked period curve (depth, period). Band-pass filter whose pass band follows the tracked period (the dynamic filter of Acycle, Thibault & Rizzi / Li), computed in sliding Hann windows.	Tweede bestand: de gevolgde periodecurve (diepte, periode). Banddoorlaatfilter waarvan de doorlaatband de gevolgde periode volgt (het dynamische filter van Acycle, Thibault & Rizzi / Li), berekend in schuivende Hann-vensters.
+Relative bandwidth of the pass band	Relatieve bandbreedte van de doorlaatband
+Number of control points (0 = all track points)	Aantal controlepunten (0 = alle punten van de gevolgde curve)
+Window step (depth units)	Vensterstap (diepte-eenheden)
+Drop the ends covered by less than 10% of a window (edge blow-up)	De uiteinden weglaten die door minder dan 10% van een venster worden gedekt (opblazen aan de randen)
+Show the pass band as period	De doorlaatband als periode tonen
+Wavelet coherence and phase of two series; series 2 is interpolated onto the depths of series 1.	Waveletcoherentie en fase van twee reeksen; reeks 2 wordt geïnterpoleerd op de dieptes van reeks 1.
+Cross-wavelet power and phase of two series; series 2 is interpolated onto the depths of series 1.	Cross-waveletvermogen en fase van twee reeksen; reeks 2 wordt geïnterpoleerd op de dieptes van reeks 1.
+Cross-superlet power and phase of two series (the superlet counterpart of the cross wavelet); series 2 is interpolated onto the depths of series 1.	Cross-superletvermogen en fase van twee reeksen (de superlet-tegenhanger van de cross-wavelet); reeks 2 wordt geïnterpoleerd op de dieptes van reeks 1.
+Show phase arrows	Fasepijlen tonen
+Fourier coherence and phase of two series (Acycle: lead-lag), with the lead or lag of series 2 behind series 1 in the units of column 1 at each frequency and the 95% significance level of the coherence. Both series are interpolated onto a common grid over their overlap.	Fouriercoherentie en fase van twee reeksen (Acycle: lead-lag), met de voorsprong of achterstand van reeks 2 ten opzichte van reeks 1 in de eenheden van kolom 1 bij elke frequentie en het 95%-significantieniveau van de coherentie. Beide reeksen worden over hun overlap op een gemeenschappelijk raster geïnterpoleerd.
+Common sampling interval	Gemeenschappelijk bemonsteringsinterval
+Smoothing: modified Daniell span (odd, at least 3)	Afvlakking: gemodificeerde Daniell-span (oneven, minimaal 3)
+Applied twice; wider spans give a smoother coherence with more degrees of freedom.	Tweemaal toegepast; bredere spans geven een gladdere coherentie met meer vrijheidsgraden.
+Cosine taper proportion	Aandeel van de cosinustaper
+Zero padding (proportion of the length)	Zero-padding (aandeel van de lengte)
+Remove linear trends	Lineaire trends verwijderen
+Confidence level	Betrouwbaarheidsniveau
+Highest frequency shown	Hoogste getoonde frequentie
+Lowest panel	Onderste paneel
+Lag of series 2 (units of column 1)	Achterstand van reeks 2 (eenheden van kolom 1)
+Correlation of two records with a significance test that respects their serial correlation (phase-randomised surrogates, also for different sampling; Baddouh et al. 2016), or the shift of the second record that correlates best with the first (slideCor).	Correlatie van twee records met een significantietoets die rekening houdt met hun seriële correlatie (fase-gerandomiseerde surrogaten, ook bij verschillende bemonstering; Baddouh et al. 2016), of de verschuiving van het tweede record die het best met het eerste correleert (slideCor).
+Correlation with surrogate significance (surrogateCor)	Correlatie met surrogaatsignificantie (surrogateCor)
+Best shift between the records (slideCor)	Beste verschuiving tussen de records (slideCor)
+Correlation coefficient	Correlatiecoëfficiënt
+Spearman rank	Spearman-rang
+Kendall rank	Kendall-rang
+Correlate first differences	Eerste verschillen correleren
+Reverse the polarity of the second record	De polariteit van het tweede record omkeren
+Remove the linear trend of each window	De lineaire trend van elk venster verwijderen
+Smallest overlap (points, 0 = default)	Kleinste overlap (punten, 0 = standaard)
+Splits the series into intrinsic mode functions (IMFs, from short to long periods) plus a residue and the removed trend, by (ensemble) empirical mode decomposition. Writes all modes as one table (input for Instantaneous frequency and Ratios), chosen modes or the sum of modes as series, and checks of the decomposition. Uneven sampling is allowed.	Splitst de reeks in intrinsieke modefuncties (IMF's, van korte naar lange perioden) plus een residu en de verwijderde trend, door (ensemble) empirische modedecompositie. Schrijft alle modes als één tabel weg (invoer voor Momentane frequentie en Verhoudingen), gekozen modes of de som van modes als reeksen, en controles van de decompositie. Onregelmatige bemonstering is toegestaan.
+Ensemble EMD (EEMD, added white noise)	Ensemble-EMD (EEMD, toegevoegde witte ruis)
+EMD (no added noise)	EMD (geen toegevoegde ruis)
+Number of IMFs	Aantal IMF's
+The residue (and, unless bound to it, the removed trend) is added as an extra mode.	Het residu (en, tenzij daarmee samengevoegd, de verwijderde trend) wordt als extra mode toegevoegd.
+Ensemble size (decompositions combined, even)	Ensemblegrootte (aantal gecombineerde decomposities, even)
+Noise amplitude factor	Factor voor de ruisamplitude
+Noise amplitude unit	Eenheid van de ruisamplitude
+Mean of the lag-1 differences	Gemiddelde van de lag-1-verschillen
+Data units	Data-eenheden
+Mirrored noise (cancels when combined)	Gespiegelde ruis (valt weg bij het combineren)
+Sifting iterations	Sifting-iteraties
+Removed before decomposition (added back as a mode)	Verwijderd vóór de decompositie (als mode weer toegevoegd)
+Linear trend	Lineaire trend
+Add the removed trend to the residue (one mode instead of two)	De verwijderde trend bij het residu optellen (één mode in plaats van twee)
+Resampling	Herbemonstering
+None (uneven sampling allowed)	Geen (onregelmatige bemonstering toegestaan)
+Even, at the greatest common divisor of the spacing (respace)	Regelmatig, op de grootste gemene deler van de tussenafstanden (respace)
+Even, at an own interval	Regelmatig, op een eigen interval
+respace only refines: the interval must divide the greatest common divisor of the depth steps.	respace verfijnt alleen: het interval moet een deler zijn van de grootste gemene deler van de dieptestappen.
+Merge modes (groups separated by ;)	Modes samenvoegen (groepen gescheiden door ;)
+For example 6, 7 or 1, 2; 7, 8 (mode.bind). Mode numbers of the decomposition before merging.	Bijvoorbeeld 6, 7 of 1, 2; 7, 8 (mode.bind). Modenummers van de decompositie vóór het samenvoegen.
+Write these modes as two-column series	Deze modes wegschrijven als reeksen met twee kolommen
+For example 4 or 4, 6 (numbers after merging).	Bijvoorbeeld 4 of 4, 6 (nummers na het samenvoegen).
+Write the sum of these modes as a series	De som van deze modes wegschrijven als reeks
+For example 3-5: a band-pass reconstruction (mode.out, keep). Numbers after merging.	Bijvoorbeeld 3-5: een banddoorlaatreconstructie (mode.out, keep). Nummers na het samenvoegen.
+Check the decomposition (integrity, parsimony, symmetry, check.emd)	De decompositie controleren (integriteit, spaarzaamheid, symmetrie, check.emd)
+Signal and all modes	Signaal en alle modes
+DecomposeR plot_emd (modes listed below)	DecomposeR plot_emd (hieronder vermelde modes)
+Modes in the figure (empty = all)	Modes in de figuur (leeg = alle)
+Decomposes the series into components of a trajectory matrix (singular spectrum analysis), to be grouped into trend, cycles and noise. Writes the same table as EMD (input for Instantaneous frequency and Ratios). Uneven series are interpolated and the components given at the original depths.	Ontbindt de reeks in componenten van een trajectmatrix (singuliere spectrumanalyse), te groeperen in trend, cycli en ruis. Schrijft dezelfde tabel weg als EMD (invoer voor Momentane frequentie en Verhoudingen). Onregelmatige reeksen worden geïnterpoleerd en de componenten worden op de oorspronkelijke dieptes gegeven.
+Implementation	Implementatie
+Window length (points)	Vensterlengte (punten)
+Longer than the longest period of interest; at most half the record.	Langer dan de langste periode van belang; hoogstens de helft van het record.
+Number of components	Aantal componenten
+Removed before decomposition (written as the trend)	Verwijderd vóór de decompositie (weggeschreven als de trend)
+Nothing	Niets
+Group components (groups separated by ;)	Componenten groeperen (groepen gescheiden door ;)
+For example 1, 2; 3, 4: each pair of a cycle gives one component. Components not listed stay single.	Bijvoorbeeld 1, 2; 3, 4: elk paar van een cyclus geeft één component. Niet-vermelde componenten blijven afzonderlijk.
+Write these components as two-column series	Deze componenten wegschrijven als reeksen met twee kolommen
+Numbers of the columns after grouping.	Nummers van de kolommen na het groeperen.
+Signal and components	Signaal en componenten
+Share of variance per component	Aandeel van de variantie per component
+Instantaneous frequency, period and amplitude of IMFs: select a decomposition table written by EMD / SSA (all modes) or a two-column series (one IMF or a filtered cycle). The period curves can be used as a tracked cycle in Age models > Build an age model > Depth to time.	Momentane frequentie, periode en amplitude van IMF's: selecteer een decompositietabel die door EMD / SSA is weggeschreven (alle modes) of een reeks met twee kolommen (één IMF of een gefilterde cyclus). De periodecurven kunnen als gevolgde cyclus worden gebruikt in Ouderdomsmodellen > Een ouderdomsmodel bouwen > Diepte naar tijd.
+Modes to analyse (empty = all but residue and trend)	Te analyseren modes (leeg = alle behalve residu en trend)
+Positions among the mode columns: 1 = first column after depth and signal (imf_1 of an EMD table).	Posities binnen de modekolommen: 1 = eerste kolom na diepte en signaal (imf_1 van een EMD-tabel).
+Instantaneous frequency method	Methode voor de momentane frequentie
+Hilbert transform (HT)	Hilberttransformatie (HT)
+Normalised Hilbert transform (NHT)	Genormaliseerde Hilberttransformatie (NHT)
+Direct quadrature (DQ)	Directe kwadratuur (DQ)
+Generalised zero-crossing (GZC)	Gegeneraliseerde nuldoorgang (GZC)
+Hilbert transform, analytic derivative (chain rule)	Hilberttransformatie, analytische afgeleide (kettingregel)
+HT: Hilbert transform; NHT and DQ first normalise the mode to unit amplitude (Huang et al. 2009), which can fail; GZC: generalised zero crossing, robust, precise to a quarter period (needs simple modes); chain: Hilbert transform with the analytic derivative of the phase.	HT: Hilberttransformatie; NHT en DQ normaliseren de mode eerst op een amplitude van één (Huang et al. 2009), wat kan mislukken; GZC: gegeneraliseerde nuldoorgang, robuust, nauwkeurig tot op een kwart periode (vereist eenvoudige modes); chain: Hilberttransformatie met de analytische afgeleide van de fase.
+Interpolation interval for the Hilbert transform (0 = automatic)	Interpolatie-interval voor de Hilberttransformatie (0 = automatisch)
+Uneven series are interpolated before the transform; 0 uses the greatest common divisor of the spacing (HT, NHT) or the median spacing (chain).	Onregelmatige reeksen worden vóór de transformatie geïnterpoleerd; 0 gebruikt de grootste gemene deler van de tussenafstanden (HT, NHT) of de mediane tussenafstand (chain).
+Differentiation lag (samples)	Differentiatielag (meetpunten)
+Running median of the period curves (points, 0 = none)	Voortschrijdende mediaan van de periodecurven (punten, 0 = geen)
+Smooths the written period curves (useful for an age model); the table also keeps the raw values.	Vlakt de weggeschreven periodecurven af (nuttig voor een ouderdomsmodel); de tabel bevat ook de ruwe waarden.
+Compare with the zero-crossing frequency (gzc.departure)	Vergelijken met de nuldoorgangsfrequentie (gzc.departure)
+Period curves of all modes	Periodecurven van alle modes
+One mode: envelope and period	Eén mode: omhullende en periode
+Period distribution (plot_pulse)	Periodeverdeling (plot_pulse)
+Spectral population, period vs amplitude (plot_pulse)	Spectrale populatie, periode tegen amplitude (plot_pulse)
+DecomposeR plot_imf (one mode)	DecomposeR plot_imf (één mode)
+Mode for the one-mode figures	Mode voor de figuren van één mode
+Reference periods drawn in the figure	Referentieperioden die in de figuur worden getekend
+Instantaneous ratios of the frequencies of pairs of modes of a decomposition table (EMD / SSA), with the product of their amplitudes. Compare them with the ratios of astronomical periods (e.g. 405 / 21 kyr) to test an astronomical interpretation without an age model.	Momentane verhoudingen van de frequenties van paren modes uit een decompositietabel (EMD / SSA), met het product van hun amplitudes. Te vergelijken met de verhoudingen van astronomische perioden (bijv. 405 / 21 kyr) om een astronomische interpretatie te toetsen zonder ouderdomsmodel.
+Modes (at least two; empty = all but residue and trend)	Modes (minstens twee; leeg = alle behalve residu en trend)
+Positions among the mode columns, e.g. 4, 6, 7.	Posities binnen de modekolommen, bijv. 4, 6, 7.
+Reference periods (expected ratios between them)	Referentieperioden (verwachte onderlinge verhoudingen)
+Periods in any one unit (e.g. kyr); every ratio between them is listed and drawn.	Perioden in één willekeurige eenheid (bijv. kyr); elke onderlinge verhouding wordt vermeld en getekend.
+Pairs in the figure (e.g. 4/6; empty = automatic)	Paren in de figuur (bijv. 4/6; leeg = automatisch)
+Ratios along the record	Verhoudingen langs het record
+Ratio population (plot_ratio)	Populatie van verhoudingen (plot_ratio)
+Compares the instantaneous frequency computed with the Hilbert transform with the exact value for a test signal a sin(2 pi f1 t + phi1) + b sin(2 pi f2 t + phi2) + c, to see how sampling, an offset or a second cycle bias the method.	Vergelijkt de met de Hilberttransformatie berekende momentane frequentie met de exacte waarde voor een testsignaal a sin(2 pi f1 t + phi1) + b sin(2 pi f2 t + phi2) + c, om te zien hoe bemonstering, een offset of een tweede cyclus de methode vertekenen.
+Length of the test signal	Lengte van het testsignaal
+Random (uneven) sampling with the same number of points	Willekeurige (onregelmatige) bemonstering met hetzelfde aantal punten
+Phase derivative	Afgeleide van de fase
+Arctangent of the phase (arctan)	Arctangens van de fase (arctan)
+Analytic derivative (chain)	Analytische afgeleide (chain)
+Amplitude a of cycle 1	Amplitude a van cyclus 1
+Frequency f1 of cycle 1	Frequentie f1 van cyclus 1
+Phase phi1 of cycle 1 (radians)	Fase phi1 van cyclus 1 (radialen)
+Amplitude b of cycle 2	Amplitude b van cyclus 2
+Frequency f2 of cycle 2	Frequentie f2 van cyclus 2
+Phase phi2 of cycle 2 (radians)	Fase phi2 van cyclus 2 (radialen)
+Bispectrum and bicoherence: phase coupling between frequencies, e.g. combination tones of astronomical cycles.	Bispectrum en bicoherentie: fasekoppeling tussen frequenties, bijv. combinatietonen van astronomische cycli.
+Significance test	Significantietoets
+Surrogates (IAAFT, slow)	Surrogaten (IAAFT, traag)
+Bispectrum and bicoherence by Welch overlapping segments (Choudhury et al. 2008), as in Sullivan et al. (2023): high bicoherence at (f1, f2) means f1 + f2 is a combination tone with coupled phases.	Bispectrum en bicoherentie met overlappende Welch-segmenten (Choudhury et al. 2008), zoals in Sullivan et al. (2023): hoge bicoherentie bij (f1, f2) betekent dat f1 + f2 een combinatietoon met gekoppelde fasen is.
+Number of segments	Aantal segmenten
+Overlap of the segments (%)	Overlap van de segmenten (%)
+Confidence level of the contour (%)	Betrouwbaarheidsniveau van de contour (%)
+Hanning taper	Hanning-taper
+Frequencies to mark (optional)	Te markeren frequenties (optioneel)
+Bicoherence	Bicoherentie
+Power spectrum	Vermogensspectrum
+Recurrence plot of the series after time-delay embedding (Acycle: Recurrence plot): dark points mark pairs of depths at which the system is in a similar state. Regular cycles give diagonal lines; changes in the pattern mark changes in the dynamics. Gives the recurrence quantification (RR, DET, LAM, ...).	Recurrentieplot van de reeks na inbedding met tijdvertraging (Acycle: Recurrence plot): donkere punten markeren paren van dieptes waarop het systeem zich in een vergelijkbare toestand bevindt. Regelmatige cycli geven diagonale lijnen; veranderingen in het patroon markeren veranderingen in de dynamiek. Geeft de recurrentiekwantificatie (RR, DET, LAM, ...).
+Embedding dimension	Inbeddingsdimensie
+Delay (samples)	Vertraging (meetpunten)
+Default: the first lag at which the autocorrelation falls below 1/e.	Standaard: de eerste lag waarbij de autocorrelatie onder 1/e daalt.
+Distance threshold	Afstandsdrempel
+Fraction of the largest distance	Fractie van de grootste afstand
+Recurrence rate	Recurrentiegraad
+Recurrence rate (share of recurrent pairs)	Recurrentiegraad (aandeel recurrente paren)
+Distance	Afstand
+Euclidean	Euclidisch
+Standardise the series first	Eerst de reeks standaardiseren
+Most points in the plot (subsampling)	Maximaal aantal punten in de plot (onderbemonstering)
+Shortest line for DET and LAM (points)	Kortste lijn voor DET en LAM (punten)
+Distance matrix (unthresholded)	Afstandsmatrix (zonder drempel)
+Running lag-1 autocorrelation with Monte Carlo windows, a sea-level proxy (Li et al. 2018, Acycle: rho1).	Voortschrijdende lag-1-autocorrelatie met Monte Carlo-vensters, een zeespiegelproxy (Li et al. 2018, Acycle: rho1).
+Shortest window (time units)	Kortste venster (tijdseenheden)
+Longest window (time units)	Langste venster (tijdseenheden)
+Monte Carlo simulations (at least 50)	Monte Carlo-simulaties (minstens 50)
+Dynamic noise after orbital tuning, a sea-level proxy for tuned series (Li et al. 2018, Acycle: DYNOT).	Dynamische ruis na orbitale tuning, een zeespiegelproxy voor getunede reeksen (Li et al. 2018, Acycle: DYNOT).
+Shortest window (kyr)	Kortste venster (kyr)
+Longest window (kyr)	Langste venster (kyr)
+Step (kyr)	Stap (kyr)
+Monte Carlo simulations	Monte Carlo-simulaties
+Ratio of power in astronomical bands to total power in sliding windows (Acycle: Power Decomposition Analysis).	Verhouding van het vermogen in astronomische banden tot het totale vermogen in schuivende vensters (Acycle: Power Decomposition Analysis).
+Target band (two frequencies, cycles/unit)	Doelband (twee frequenties, cycli/eenheid)
+Window length	Vensterlengte
+Ratio of the power in a target band to the total power in sliding windows, exactly as the Acycle menu and DYNOT compute it (adaptive multitaper, historical bin mapping).	Verhouding van het vermogen in een doelband tot het totale vermogen in schuivende vensters, precies zoals het Acycle-menu en DYNOT die berekenen (adaptieve multitaper, historische toewijzing aan frequentiebins).
+Step (samples)	Stap (meetpunten)
+Padding (FFT length)	Padding (FFT-lengte)
+Evolutive mean frequency and bandwidth, indicators of sedimentation-rate change (Sinnesael et al. 2018).	Evolutieve gemiddelde frequentie en bandbreedte, indicatoren van veranderingen in de sedimentatiesnelheid (Sinnesael et al. 2018).
+Step	Stap
+Tracks the astronomical cycles in a scalogram automatically (hidden Markov model over all cycles at once) and gives the sedimentation rate and an age model with uncertainty. Use the Track view to do it by hand.	Volgt de astronomische cycli in een scalogram automatisch (hidden Markov model over alle cycli tegelijk) en geeft de sedimentatiesnelheid en een ouderdomsmodel met onzekerheid. Gebruik de weergave Volgen om dit met de hand te doen.
+Approximate age (Ma)	Ouderdom bij benadering (Ma)
+Morlet CWT (fast)	Morlet-CWT (snel)
+Multi-synchrosqueezed (msst)	Multisynchrosqueezing (msst)
+Tracker	Volgmethode
+HMM on the scalogram	HMM op het scalogram
+HMM and chirp-matched spectra	HMM en chirp-aangepaste spectra
+Chirp-matched spectra	Chirp-aangepaste spectra
+Tracks the sedimentation rate through a scalogram with all astronomical cycles at once (hidden Markov model), with a credible band and an age model. The iterative method repeats the tracking on the record converted to time, which sharpens the cycles.	Volgt de sedimentatiesnelheid door een scalogram met alle astronomische cycli tegelijk (hidden Markov model), met een geloofwaardigheidsband en een ouderdomsmodel. De iteratieve methode herhaalt het volgen op het naar tijd omgezette record, wat de cycli verscherpt.
+One pass on a scalogram (track_astro_hmm)	Eén doorgang op een scalogram (track_astro_hmm)
+Iterative, in the time domain (track_astro_iterative)	Iteratief, in het tijddomein (track_astro_iterative)
+Sedimentation rates are given in cm/kyr; the depth unit converts them to the depth unit of the data.	Sedimentatiesnelheden worden gegeven in cm/kyr; de diepte-eenheid rekent ze om naar de diepte-eenheid van de data.
+At the age of the record (AstroGeo22)	Bij de ouderdom van het record (AstroGeo22)
+Own list (kyr)	Eigen lijst (kyr)
+Age of the record (Ma)	Ouderdom van het record (Ma)
+Obliquity and precession periods at this age (lunar recession), from WaverideR::astro_periods_tracking.	Obliquiteits- en precessieperioden bij deze ouderdom (terugwijken van de Maan), uit WaverideR::astro_periods_tracking.
+Periods (kyr)	Perioden (kyr)
+Synchrosqueezed CWT	CWT met synchrosqueezing
+Superlet SST (slower)	Superlet-SST (trager)
+Scalogram of the first pass	Scalogram van de eerste doorgang
+Number of cycles of the wavelet (omega_nr)	Aantal cycli van de wavelet (omega_nr)
+Iterations in the time domain	Iteraties in het tijddomein
+Approximate duration (kyr, 0 = unknown)	Duur bij benadering (kyr, 0 = onbekend)
+Turned into a guide for the tracking; strongly recommended for real records.	Wordt omgezet in een richtlijn voor het volgen; sterk aanbevolen voor echte records.
+Background of the power	Achtergrond van het vermogen
+Rate change allowed per shortest cycle (sd of log2 rate)	Toegestane snelheidsverandering per kortste cyclus (sd van log2 snelheid)
+Probability of an abrupt jump	Kans op een abrupte sprong
+Depths of possible jumps, e.g. hiatuses (optional)	Dieptes van mogelijke sprongen, bijv. hiaten (optioneel)
+Smoothing of the tracked path	Afvlakking van het gevolgde pad
+Piecewise constant (TV)	Stuksgewijs constant (TV)
+Piecewise linear	Stuksgewijs lineair
+Posterior samples (uncertainty)	Posteriortrekkingen (onzekerheid)
+Track on the scalogram	Gevolgde curve op het scalogram
+Evidence map (rate x depth)	Evidentiekaart (snelheid x diepte)
+Posterior of the rate	Posterior van de snelheid
+Sed. rate and age model	Sed.snelheid en ouderdomsmodel
+Sliding-window multitaper spectra de-chirped for a linear change of the rate, scored against the astronomical template. Gives a tracked rate (HMM on rate and gradient) or the spectral rate estimate per window (rate-gram).	Multitaper-spectra in schuivende vensters, gecorrigeerd voor chirp bij een lineaire verandering van de snelheid en gescoord tegen het astronomische sjabloon. Geeft een gevolgde snelheid (HMM op snelheid en gradiënt) of de spectrale snelheidsschatting per venster (rate-gram).
+Estimate	Schatting
+HMM tracking of rate and gradient (track_chirp_hmm)	Volgen van snelheid en gradiënt met HMM (track_chirp_hmm)
+Best rate per window, median filtered (rate_gram)	Beste snelheid per venster, mediaangefilterd (rate_gram)
+Largest relative change of the rate across a window	Grootste relatieve verandering van de snelheid over een venster
+Weight of the spectral evidence	Gewicht van de spectrale evidentie
+Median filter (windows)	Mediaanfilter (vensters)
+Follows one cycle (e.g. precession or the 405-kyr eccentricity) through an evolutive maximum-entropy spectrum and converts its period to a sedimentation rate with the duration of the cycle.	Volgt één cyclus (bijv. precessie of de 405-kyr-excentriciteit) door een evolutief maximale-entropiespectrum en zet de periode ervan met de duur van de cyclus om in een sedimentatiesnelheid.
+Shortest period of the tracked cycle (depth units)	Kortste periode van de gevolgde cyclus (diepte-eenheden)
+Longest period of the tracked cycle (depth units)	Langste periode van de gevolgde cyclus (diepte-eenheden)
+e.g. 405 (long eccentricity), 100, 41 (obliquity) or about 20 (precession).	bijv. 405 (lange excentriciteit), 100, 41 (obliquiteit) of ongeveer 20 (precessie).
+Largest change of frequency between windows (fraction)	Grootste frequentieverandering tussen vensters (fractie)
+Penalty for changes of frequency	Straf voor frequentieveranderingen
+Scores every trial sedimentation rate at every depth by how well the astronomical periods match the wavelet spectrum (FLMW fit, peak or template match, or summed power above red noise), then finds the most probable smooth rate curve with a credible band.	Scoort elke proefsedimentatiesnelheid op elke diepte op hoe goed de astronomische perioden overeenkomen met het waveletspectrum (FLMW-fit, piek- of sjabloonovereenkomst, of gesommeerd vermogen boven rode ruis), en zoekt daarna de meest waarschijnlijke gladde snelheidscurve met een geloofwaardigheidsband.
+Template match (fast)	Sjabloonovereenkomst (snel)
+Weighted peak match	Gewogen piekovereenkomst
+Linear fit to spectral peaks (classic FLMW)	Lineaire fit aan spectrale pieken (klassieke FLMW)
+Summed power above red noise	Gesommeerd vermogen boven rode ruis
+Sed. rate step (cm/kyr)	Stap van de sed.snelheid (cm/kyr)
+Period tolerance (relative)	Periodetolerantie (relatief)
+Red-noise simulations	Rode-ruissimulaties
+Red-noise percentile	Rode-ruispercentiel
+Rate change allowed per metre (sd of the log rate)	Toegestane snelheidsverandering per meter (sd van de log-snelheid)
+Depths of hiatuses or breaks (optional)	Dieptes van hiaten of onderbrekingen (optioneel)
+Sharpness of the score	Scherpte van de score
+Converts a tracked cycle (depth and its period or frequency, e.g. from EHA or a tracked scalogram ridge) into a sedimentation-rate curve and age model, given the duration of the cycle.	Zet een gevolgde cyclus (diepte en de periode of frequentie ervan, bijv. uit EHA of een gevolgde rug in een scalogram) om in een sedimentatiesnelheidscurve en ouderdomsmodel, gegeven de duur van de cyclus.
+Column 2 of the data	Kolom 2 van de data
+Period (depth units)	Periode (diepte-eenheden)
+Frequency (cycles/depth unit)	Frequentie (cycli/diepte-eenheid)
+Duration of the cycle (kyr)	Duur van de cyclus (kyr)
+Optimises the sedimentation rate by fitting precession amplitude modulation and spectral power (Meyers 2015).	Optimaliseert de sedimentatiesnelheid door de amplitudemodulatie van precessie en het spectrale vermogen te fitten (Meyers 2015).
+Minimum sed. rate (cm/kyr)	Minimale sed.snelheid (cm/kyr)
+Maximum sed. rate (cm/kyr)	Maximale sed.snelheid (cm/kyr)
+Number of sed. rates	Aantal sed.snelheden
+Sed. rate grid	Raster van sed.snelheden
+Envelope fit	Fit van de omhullende
+Precession amplitude modulation	Amplitudemodulatie van precessie
+Short eccentricity modulation	Modulatie van korte excentriciteit
+Eccentricity periods (kyr, empty = default)	Excentriciteitsperioden (kyr, leeg = standaard)
+Precession periods (kyr, empty = default)	Precessieperioden (kyr, leeg = standaard)
+TimeOpt in sliding windows: astrochron eTimeOpt, or WaverideR win_timeOpt with the null-model bias correction.	TimeOpt in schuivende vensters: eTimeOpt van astrochron, of win_timeOpt van WaverideR met de biascorrectie op basis van het nulmodel.
+win_timeOpt, bias corrected (WaverideR)	win_timeOpt, biasgecorrigeerd (WaverideR)
+Null simulations per window	Nulsimulaties per venster
+Runs windowed TimeOpt (bias corrected against noise) with the precession, short-eccentricity and obliquity amplitude-modulation fits and compares their best rates per window: rates that agree are robust, rates in the ratio of two cycles point to an alias. Depth in metres.	Voert TimeOpt in vensters uit (biasgecorrigeerd ten opzichte van ruis) met de fits van de amplitudemodulatie van precessie, korte excentriciteit en obliquiteit, en vergelijkt hun beste snelheden per venster: snelheden die overeenkomen zijn robuust, snelheden in de verhouding van twee cycli wijzen op een alias. Diepte in meters.
+Fit 1: precession amplitude modulation	Fit 1: amplitudemodulatie van precessie
+Fit 2: short-eccentricity amplitude modulation	Fit 2: amplitudemodulatie van korte excentriciteit
+Fit 3: obliquity amplitude modulation	Fit 3: amplitudemodulatie van obliquiteit
+Fixed length in depth	Vaste lengte in diepte
+Fixed duration in time	Vaste duur in tijd
+Window length (m)	Vensterlengte (m)
+Window duration (kyr)	Vensterduur (kyr)
+Noise simulations per window	Ruissimulaties per venster
+Tolerance of the rate ratios	Tolerantie van de snelheidsverhoudingen
+TimeOpt default	TimeOpt-standaard
+Fit written as sed. rate curve	Fit die als sed.snelheidscurve wordt weggeschreven
+TimeOpt (Meyers 2015) over a grid of sedimentation rates, with the p-value of the best fit from simulated AR(1) or power-law noise series that are analysed in the same way, and the TimeOpt summary figure. Depth in metres.	TimeOpt (Meyers 2015) over een raster van sedimentatiesnelheden, met de p-waarde van de beste fit uit gesimuleerde AR(1)- of machtswetruisreeksen die op dezelfde manier worden geanalyseerd, en de TimeOpt-overzichtsfiguur. Diepte in meters.
+Statistic tested	Getoetste statistiek
+r2 opt (envelope x power)	r2 opt (omhullende x vermogen)
+r2 spectral power	r2 spectraal vermogen
+r2 envelope	r2 omhullende
+Noise model of the simulations	Ruismodel van de simulaties
+AR(1) red noise (timeOptSim)	Rode AR(1)-ruis (timeOptSim)
+Power law (timeOptSimPwrLaw)	Machtswet (timeOptSimPwrLaw)
+rho or beta of the noise (0 = from the record)	rho of beta van de ruis (0 = uit het record)
+Meyers (2015) used 2000; with 100 the smallest p-value that can be reported is 0.1.	Meyers (2015) gebruikte er 2000; met 100 is de kleinste p-waarde die kan worden gerapporteerd 0.1.
+Processor cores	Processorkernen
+Include the modulation periods in the spectral fit	De modulatieperioden in de spectrale fit opnemen
+In decreasing order, starting with 405 kyr; default 405.7, 130.7, 123.8, 98.9, 94.9 kyr.	In afnemende volgorde, te beginnen met 405 kyr; standaard 405.7, 130.7, 123.8, 98.9, 94.9 kyr.
+Default 23.6, 22.3, 19.1, 18.9 kyr.	Standaard 23.6, 22.3, 19.1, 18.9 kyr.
+Low cut-off of the bandpass (cycles/kyr, 0 = default)	Onderste afsnijfrequentie van het banddoorlaatfilter (cycli/kyr, 0 = standaard)
+Default 0.035 (precession modulation) or 0.007 (short eccentricity modulation).	Standaard 0.035 (precessiemodulatie) of 0.007 (modulatie van korte excentriciteit).
+High cut-off of the bandpass (cycles/kyr, 0 = default)	Bovenste afsnijfrequentie van het banddoorlaatfilter (cycli/kyr, 0 = standaard)
+Default 0.065 (precession modulation) or 0.0115 (short eccentricity modulation).	Standaard 0.065 (precessiemodulatie) of 0.0115 (modulatie van korte excentriciteit).
+Roll-off of the Taner filter (dB/octave, 0 = default)	Roll-off van het Taner-filter (dB/octaaf, 0 = standaard)
+TimeOpt for a sedimentation rate that changes along the record following a template: faster deposition of one lithology (the proxy itself as template), a linear change, steps at given depths or possible hiatuses. Gives the instantaneous sed. rate, an age model and optionally a Monte Carlo p-value. Slow: each average rate is a full optimisation. Depth in metres.	TimeOpt voor een sedimentatiesnelheid die langs het record verandert volgens een sjabloon: snellere afzetting van één lithologie (de proxy zelf als sjabloon), een lineaire verandering, stappen op opgegeven dieptes of mogelijke hiaten. Geeft de momentane sed.snelheid, een ouderdomsmodel en optioneel een Monte Carlo-p-waarde. Traag: elke gemiddelde snelheid is een volledige optimalisatie. Diepte in meters.
+Sedimentation-rate template	Sjabloon voor de sedimentatiesnelheid
+The proxy itself (differential accumulation)	De proxy zelf (differentiële accumulatie)
+Linear change along the record	Lineaire verandering langs het record
+Steps at given depths	Stappen op opgegeven dieptes
+Possible hiatuses at given depths	Mogelijke hiaten op opgegeven dieptes
+Depths of the steps or hiatuses	Dieptes van de stappen of hiaten
+Minimum average sed. rate (cm/kyr)	Minimale gemiddelde sed.snelheid (cm/kyr)
+Maximum average sed. rate (cm/kyr)	Maximale gemiddelde sed.snelheid (cm/kyr)
+Number of average sed. rates	Aantal gemiddelde sed.snelheden
+Lowest instantaneous sed. rate (cm/kyr, 0 = default)	Laagste momentane sed.snelheid (cm/kyr, 0 = standaard)
+Highest instantaneous sed. rate (cm/kyr, 0 = factor below)	Hoogste momentane sed.snelheid (cm/kyr, 0 = factor hieronder)
+Highest instantaneous rate as a factor of the average (0 = default 5)	Hoogste momentane snelheid als factor van het gemiddelde (0 = standaard 5)
+Optimise on	Optimaliseren op
+Modulations x spectral power	Modulaties x spectraal vermogen
+Modulations	Modulaties
+Spectral power	Spectraal vermogen
+Remove the linear trend of the template	De lineaire trend van het sjabloon verwijderen
+Flip the template	Het sjabloon omkeren
+Monte Carlo significance (timeOptTemplateSim, slow)	Monte Carlo-significantie (timeOptTemplateSim, traag)
+Bayesian TimeOpt of Malinverno and Meyers (2024): posterior probability of the sedimentation rate and the precession frequency k on a grid, with age-specific priors, the best astronomical fit and optionally the p-values of AR(2) noise simulations. k also gives the Earth-Moon distance and day length. Depth in metres.	Bayesiaanse TimeOpt van Malinverno en Meyers (2024): posteriorkans van de sedimentatiesnelheid en de precessiefrequentie k op een raster, met ouderdomsspecifieke priors, de beste astronomische fit en optioneel de p-waarden van AR(2)-ruissimulaties. k geeft ook de afstand Aarde-Maan en de daglengte. Diepte in meters.
+Lowest k (arcsec/yr, 0 = from the prior)	Laagste k (arcsec/yr, 0 = uit de prior)
+Highest k (arcsec/yr, 0 = from the prior)	Hoogste k (arcsec/yr, 0 = uit de prior)
+Number of k values	Aantal k-waarden
+Include the envelope fit	De fit van de omhullende opnemen
+Obliquity terms	Obliquiteitstermen
+s1 to s6	s1 tot en met s6
+s3 and s4	s3 en s4
+Tolerance of the precession band (cycles/kyr)	Tolerantie van de precessieband (cycli/kyr)
+Significance with 1000 AR(2) simulations (timeOptBSim)	Significantie met 1000 AR(2)-simulaties (timeOptBSim)
+Likelihood maps	Likelihoodkaarten
+Best fit to the data	Beste fit aan de data
+AR(2) noise fit	AR(2)-ruisfit
+Simulations (timeOptBSim)	Simulaties (timeOptBSim)
+Markov chain Monte Carlo versions of Bayesian TimeOpt: posterior distributions of the sedimentation rate, the precession frequency k and the Solar System frequencies g (and s), hence of all astronomical periods and grand cycles. Slow: astrochron recommends 50 000 samples for timeOptBMCMC. Depth in metres.	Markov chain Monte Carlo-versies van de Bayesiaanse TimeOpt: posteriorverdelingen van de sedimentatiesnelheid, de precessiefrequentie k en de frequenties g (en s) van het zonnestelsel, en daarmee van alle astronomische perioden en grote cycli. Traag: astrochron beveelt 50 000 trekkingen aan voor timeOptBMCMC. Diepte in meters.
+timeOptBMCMC (Malinverno and Meyers 2024)	timeOptBMCMC (Malinverno en Meyers 2024)
+timeOptMCMC (Meyers and Malinverno 2018)	timeOptMCMC (Meyers en Malinverno 2018)
+Sets the priors of k and of the g (and s) frequencies (Hoang et al. 2021).	Stelt de priors van k en van de g- (en s-)frequenties in (Hoang et al. 2021).
+Number of MCMC samples	Aantal MCMC-trekkingen
+Power and envelope	Vermogen en omhullende
+Power only	Alleen vermogen
+Prior mean of k (arcsec/yr, 0 = AstroGeo22 at the age)	Prior-gemiddelde van k (arcsec/yr, 0 = AstroGeo22 bij de ouderdom)
+Prior standard deviation of k (arcsec/yr, 0 = AstroGeo22 range)	Prior-standaarddeviatie van k (arcsec/yr, 0 = bereik van AstroGeo22)
+Figure number	Figuurnummer
+timeOptBMCMC: 1 MCMC diagnostics, 2 posterior and prior PDFs, 3 Milankovitch periods, 4-5 grand cycles, 6 correlations. timeOptMCMC: 1 stability, 2-3 candidates along the chain, 4 kernel densities, 5 histograms.	timeOptBMCMC: 1 MCMC-diagnostiek, 2 posterior- en prior-PDF's, 3 Milankovitch-perioden, 4-5 grote cycli, 6 correlaties. timeOptMCMC: 1 stabiliteit, 2-3 kandidaten langs de keten, 4 kerneldichtheden, 5 histogrammen.
+Evolutive TimeOpt in sliding windows, then the r2 maxima in every window (eTimeOptTrack) and the best sedimentation rate along the record as a sed.-rate curve and age model. Depth in metres.	Evolutieve TimeOpt in schuivende vensters, daarna de r2-maxima in elk venster (eTimeOptTrack) en de beste sedimentatiesnelheid langs het record als sed.snelheidscurve en ouderdomsmodel. Diepte in meters.
+Step (m)	Stap (m)
+Statistic tracked	Gevolgde statistiek
+Smallest r2 of a tracked maximum	Kleinste r2 van een gevolgd maximum
+Correlation coefficient between the data spectrum and an astronomical target for a range of sedimentation rates (Li et al. 2018).	Correlatiecoëfficiënt tussen het dataspectrum en een astronomisch doel voor een bereik van sedimentatiesnelheden (Li et al. 2018).
+Approximate age of the record (Ma)	Ouderdom van het record bij benadering (Ma)
+Used to set the precession and obliquity periods of the target (Berger 1992 / Waltham 2015).	Gebruikt om de precessie- en obliquiteitsperioden van het doel in te stellen (Berger 1992 / Waltham 2015).
+Monte Carlo simulations (0 = none)	Monte Carlo-simulaties (0 = geen)
+COCO in sliding windows with ridge tracking of the best sedimentation rate (Li et al. 2018).	COCO in schuivende vensters met het volgen van de rug van de beste sedimentatiesnelheid (Li et al. 2018).
+Correlation of the data spectrum with an astronomical target over a range of constant sedimentation rates (Acycle 3): adaptive target amplitudes, or cvCOCO with targets trained on one half of the record and tested on the other. Depth in metres.	Correlatie van het dataspectrum met een astronomisch doel over een bereik van constante sedimentatiesnelheden (Acycle 3): adaptieve doelamplitudes, of cvCOCO met doelen die op de ene helft van het record zijn getraind en op de andere zijn getoetst. Diepte in meters.
+cvCOCO, blocked halves	cvCOCO, helften in blokken
+cvCOCO, interleaved samples	cvCOCO, afwisselende meetpunten
+Adaptive COCO	Adaptieve COCO
+Target amplitudes	Doelamplitudes
+Fitted per orbital group	Gefit per orbitale groep
+Fitted per period	Gefit per periode
+Fixed (Acycle weights)	Vast (Acycle-gewichten)
+Astronomical target periods	Astronomische doelperioden
+Acycle default (La2004, nine periods)	Acycle-standaard (La2004, negen perioden)
+Own nine periods (kyr)	Eigen negen perioden (kyr)
+Nine periods (kyr, descending)	Negen perioden (kyr, aflopend)
+Correlation and p-values	Correlatie en p-waarden
+Folds and validation spectra	Folds en validatiespectra
+Monte Carlo audit	Monte Carlo-controle
+Data spectrum and fixed target at the best rate	Dataspectrum en vast doel bij de beste snelheid
+Evolutive COCO of Acycle 3: adaptive targets, or targets trained on separate data (blocked or interleaved validation) so that the correlation is not inflated. The sed.-rate ridge is tracked automatically or through points you give. Depth in metres.	Evolutieve COCO van Acycle 3: adaptieve doelen, of doelen die op afzonderlijke data zijn getraind (validatie in blokken of afwisselend), zodat de correlatie niet kunstmatig wordt verhoogd. De rug van de sed.snelheid wordt automatisch gevolgd of door opgegeven punten geleid. Diepte in meters.
+Blocked validation (ecoco_blocked)	Validatie in blokken (ecoco_blocked)
+Interleaved validation (ecoco_interleaved, slow)	Afwisselende validatie (ecoco_interleaved, traag)
+Adaptive (ecoco_adaptive)	Adaptief (ecoco_adaptive)
+Ridge tracking	Rug volgen
+Viterbi ridge (ecoco_track_ridge)	Viterbi-rug (ecoco_track_ridge)
+Best rate per window (ecoco_best_per_window)	Beste snelheid per venster (ecoco_best_per_window)
+Acycle depth slices (ecoco_track)	Acycle-dieptesegmenten (ecoco_track)
+Through given points (track_ecoco)	Door opgegeven punten (track_ecoco)
+Number of depth slices	Aantal dieptesegmenten
+Largest rate jump between windows (cm/kyr)	Grootste snelheidssprong tussen vensters (cm/kyr)
+Largest p-value of a tracked peak	Grootste p-waarde van een gevolgde piek
+Points: depth rate; depth rate; ...	Punten: diepte snelheid; diepte snelheid; ...
+COCO or evolutive COCO with the spectrum of an astronomical series (series 2: time in kyr, value, e.g. an ETP or insolation series from Basic Series) as the target. Depth in metres.	COCO of evolutieve COCO met het spectrum van een astronomische reeks (reeks 2: tijd in kyr, waarde, bijv. een ETP- of insolatiereeks uit Basisreeksen) als doel. Diepte in meters.
+COCO (one rate for the record)	COCO (één snelheid voor het record)
+eCOCO (sliding windows)	eCOCO (schuivende vensters)
+Highest target frequency (cycles/kyr)	Hoogste doelfrequentie (cycli/kyr)
+Average spectral misfit (Meyers and Sageman 2007; Meyers et al. 2012): compares the frequencies of significant spectral peaks with astronomical target frequencies over a range of sedimentation rates and gives the null-hypothesis significance level (Ho-SL). Evolutive: in sliding EHA windows, with the Ho-SL minima tracked along the record. Depth in metres.	Gemiddelde spectrale misfit (Meyers en Sageman 2007; Meyers et al. 2012): vergelijkt de frequenties van significante spectrale pieken met astronomische doelfrequenties over een bereik van sedimentatiesnelheden en geeft het significantieniveau van de nulhypothese (Ho-SL). Evolutief: in schuivende EHA-vensters, waarbij de Ho-SL-minima langs het record worden gevolgd. Diepte in meters.
+Whole record (asm)	Hele record (asm)
+Evolutive, sliding windows (eAsm, eAsmTrack)	Evolutief, schuivende vensters (eAsm, eAsmTrack)
+Astronomical target periods (kyr)	Astronomische doelperioden (kyr)
+Relative uncertainty of the targets (0-1, 0 = none)	Relatieve onzekerheid van de doelen (0-1, 0 = geen)
+Time-bandwidth product of the spectra (NW)	Tijd-bandbreedteproduct van de spectra (NW)
+Harmonic F-test level of the peaks (0-1)	Niveau van de harmonische F-toets voor de pieken (0-1)
+Own peak frequencies (cycles/m, optional)	Eigen piekfrequenties (cycli/m, optioneel)
+Largest Ho-SL of a tracked minimum (%)	Grootste Ho-SL van een gevolgd minimum (%)
+Tests constant sedimentation rates against noise analysed at the same rate (TimeOpt, likelihood and COCO scores, several noise models), or estimates the rate history and tests the minimally tuned record against surrogates. Depth in metres.	Toetst constante sedimentatiesnelheden tegen ruis die bij dezelfde snelheid is geanalyseerd (TimeOpt-, likelihood- en COCO-scores, meerdere ruismodellen), of schat de snelheidsgeschiedenis en toetst het minimaal getunede record tegen surrogaten. Diepte in meters.
+Constant rates, TimeOpt / COCO scores (astro_sedrate_test)	Constante snelheden, TimeOpt- / COCO-scores (astro_sedrate_test)
+Tracked rate and tuning against surrogates (astro_tune_test)	Gevolgde snelheid en tuning tegen surrogaten (astro_tune_test)
+TimeOpt fit	TimeOpt-fit
+Short-eccentricity modulation	Modulatie van korte excentriciteit
+Default	Standaard
+Include the COCO score	De COCO-score opnemen
+Minimal tuning at the best rate (writes an age model)	Minimale tuning bij de beste snelheid (schrijft een ouderdomsmodel weg)
+Noise series	Ruisreeksen
+Surrogates	Surrogaten
+Sampled rate paths	Getrokken snelheidspaden
+Runs the astronomical sedimentation-rate test on two proxies of the same section and combines their evidence rate by rate (they share one sedimentation rate). Depth in metres.	Voert de astronomische sedimentatiesnelheidstoets uit op twee proxy's van dezelfde sectie en combineert hun evidentie snelheid voor snelheid (ze delen één sedimentatiesnelheid). Diepte in meters.
+TimeOpt fit 1 (precession modulation)	TimeOpt-fit 1 (precessiemodulatie)
+TimeOpt fit 2 (short-eccentricity modulation)	TimeOpt-fit 2 (modulatie van korte excentriciteit)
+Combination	Combinatie
+Minimum p	Minimale p
+Floating age model from a filtered cycle: every maximum (or minimum) of the filtered series is one cycle period later than the previous one (Acycle: Build Age Model; minimal tuning).	Zwevend ouderdomsmodel uit een gefilterde cyclus: elk maximum (of minimum) van de gefilterde reeks ligt één cyclusperiode later dan het vorige (Acycle: Build Age Model; minimale tuning).
+Period of the filtered cycle (kyr)	Periode van de gefilterde cyclus (kyr)
+Tie points at	Ankerpunten op
+Half-width of the peak search (points)	Halve zoekbreedte voor pieken (punten)
+Age of the first tie point (kyr)	Ouderdom van het eerste ankerpunt (kyr)
+Also write the tuned series	Ook de getunede reeks wegschrijven
+Age model from a filtered or extracted cycle (depth in metres): the distance between successive maxima, minima or both of the cycle is set to its duration. Use a filtered series (Time Series > Filtering and cycle extraction) or a cycle extracted in the Track view.	Ouderdomsmodel uit een gefilterde of geëxtraheerde cyclus (diepte in meters): de afstand tussen opeenvolgende maxima, minima of beide van de cyclus wordt gelijkgesteld aan de duur ervan. Gebruik een gefilterde reeks (Tijdreeksen > Filteren en cycli extraheren) of een cyclus die in de weergave Volgen is geëxtraheerd.
+Maxima (one cycle apart)	Maxima (één cyclus uit elkaar)
+Minima (one cycle apart)	Minima (één cyclus uit elkaar)
+Maxima and minima (half a cycle apart)	Maxima en minima (een halve cyclus uit elkaar)
+Points compared on each side (peak detection)	Aantal vergeleken punten aan elke kant (piekdetectie)
+Age of the top of the record (kyr)	Ouderdom van de top van het record (kyr)
+Integrates a sedimentation-rate curve (depth in m, rate in cm/kyr) to a depth-time model.	Integreert een sedimentatiesnelheidscurve (diepte in m, snelheid in cm/kyr) tot een diepte-tijdmodel.
+Converts a record (file 1: depth in metres, value) to time with file 2: a tracked period curve of one cycle (depth, period), a sedimentation-rate curve (depth, cm/kyr) or tie points (depth, age).	Zet een record (bestand 1: diepte in meters, waarde) om naar tijd met bestand 2: een gevolgde periodecurve van één cyclus (diepte, periode), een sedimentatiesnelheidscurve (diepte, cm/kyr) of ankerpunten (diepte, ouderdom).
+File 2 holds	Bestand 2 bevat
+Tracked period curve of one cycle	Gevolgde periodecurve van één cyclus
+Sedimentation-rate curve (cm/kyr)	Sedimentatiesnelheidscurve (cm/kyr)
+Tie points (depth, age)	Ankerpunten (diepte, ouderdom)
+Interpolate the result at an even time step	Het resultaat interpoleren met een regelmatige tijdstap
+Time step (kyr)	Tijdstap (kyr)
+Converts a depth series to time with an age model (file 2: depth, age), as Acycle: Age Scale.	Zet een dieptereeks om naar tijd met een ouderdomsmodel (bestand 2: diepte, ouderdom), zoals Acycle: Age Scale.
+Age model (depth, age)	Ouderdomsmodel (diepte, ouderdom)
+Extrapolate beyond the first and last tie point	Extrapoleren voorbij het eerste en het laatste ankerpunt
+Interpolate the tuned series at an even step	De getunede reeks interpoleren met een regelmatige stap
+Turns a floating astrochronology (time in kyr from the start of the record) into absolute ages by giving one point of the floating scale a radioisotopic or other age.	Zet een zwevende astrochronologie (tijd in kyr vanaf het begin van het record) om in absolute ouderdommen door één punt van de zwevende schaal een radio-isotopische of andere ouderdom te geven.
+Floating time of the anchor point (kyr)	Zwevende tijd van het verankeringspunt (kyr)
+Age of the anchor point (kyr)	Ouderdom van het verankeringspunt (kyr)
+The floating time increases	De zwevende tijd neemt toe
+Towards the present (older at the start)	Naar het heden toe (ouder aan het begin)
+Away from the present (younger at the start)	Van het heden af (jonger aan het begin)
+Sort the output with decreasing age	De uitvoer sorteren op afnemende ouderdom
+Weighted mean of dates with uncertainties, MSWD and probability of fit, with the confidence interval of IsoPlot or ArArCALC (also for any values with uncertainties), or the age spectrum and plateau age of an Ar/Ar step-heating experiment. Data file: date and uncertainty (wtMean; or the six Ar/Ar columns date, uncertainty, K/Ca, %Ar40*, F, F uncertainty), or the seven step-heating columns %Ar39, date, uncertainty, K/Ca, %Ar40*, F, F uncertainty.	Gewogen gemiddelde van dateringen met onzekerheden, MSWD en kans op fit, met het betrouwbaarheidsinterval van IsoPlot of ArArCALC (ook voor willekeurige waarden met onzekerheden), of het ouderdomsspectrum en de plateau-ouderdom van een Ar/Ar-experiment met stapsgewijze verhitting. Databestand: datering en onzekerheid (wtMean; of de zes Ar/Ar-kolommen datering, onzekerheid, K/Ca, %Ar40*, F, onzekerheid van F), of de zeven kolommen voor stapsgewijze verhitting %Ar39, datering, onzekerheid, K/Ca, %Ar40*, F, onzekerheid van F.
+Dates with uncertainties (wtMean)	Dateringen met onzekerheden (wtMean)
+Ar/Ar step heating (stepHeat)	Ar/Ar, stapsgewijze verhitting (stepHeat)
+Uncertainties in the file are	Onzekerheden in het bestand zijn
+95% confidence interval	95%-betrouwbaarheidsinterval
+Rows left out of the mean (optional)	Rijen die buiten het gemiddelde blijven (optioneel)
+Row numbers of the data file, e.g. outliers by Chauvenet's criterion listed in the result.	Rijnummers van het databestand, bijv. uitschieters volgens het criterium van Chauvenet die in het resultaat worden vermeld.
+Time unit of the dates	Tijdseenheid van de dateringen
+J value (neutron fluence, 0 = none)	J-waarde (neutronenfluentie, 0 = geen)
+Ar/Ar only: adds the uncertainty of J.	Alleen Ar/Ar: voegt de onzekerheid van J toe.
+Uncertainty of J (0 = none)	Onzekerheid van J (0 = geen)
+Total decay constant of 40K (1/yr)	Totale vervalconstante van 40K (1/yr)
+%Ar40* level shown	Getoond %Ar40*-niveau
+Boundaries, mid-ages and colours of the units of the International Chronostratigraphic Chart: a unit and its subdivisions, an age range, or the units at one age, drawn as a time-scale chart; optionally with the astronomical periods at the mid-age.	Grenzen, middenouderdommen en kleuren van de eenheden van de Internationale Chronostratigrafische Tabel: een eenheid en haar onderverdelingen, een ouderdomsbereik, of de eenheden bij één ouderdom, getekend als tijdschaaldiagram; optioneel met de astronomische perioden bij de middenouderdom.
+A unit and its subdivisions	Een eenheid en haar onderverdelingen
+An age range	Een ouderdomsbereik
+The units at one age	De eenheden bij één ouderdom
+Unit	Eenheid
+Phanerozoic (Eon, 0-541 Ma)	Fanerozoïcum (Eon, 0-541 Ma)
+Cenozoic (Era, 0-66 Ma)	Cenozoïcum (Era, 0-66 Ma)
+Quaternary (Period, 0-2.58 Ma)	Kwartair (Periode, 0-2.58 Ma)
+Holocene (Epoch, 0-0.0117 Ma)	Holoceen (Tijdvak, 0-0.0117 Ma)
+Holocene Age (Age, 0-0.0117 Ma)	Holoceen-tijdsnede (Tijdsnede, 0-0.0117 Ma)
+Pleistocene (Epoch, 0.0117-2.58 Ma)	Pleistoceen (Tijdvak, 0.0117-2.58 Ma)
+Calabrian (Age, 0.781-1.8 Ma)	Calabrien (Tijdsnede, 0.781-1.8 Ma)
+Gelasian (Age, 1.8-2.58 Ma)	Gelasien (Tijdsnede, 1.8-2.58 Ma)
+Neogene (Period, 2.58-23.03 Ma)	Neogeen (Periode, 2.58-23.03 Ma)
+Pliocene (Epoch, 2.58-5.333 Ma)	Plioceen (Tijdvak, 2.58-5.333 Ma)
+Piacenzian (Age, 2.58-3.6 Ma)	Piacenzien (Tijdsnede, 2.58-3.6 Ma)
+Zanclean (Age, 3.6-5.333 Ma)	Zanclien (Tijdsnede, 3.6-5.333 Ma)
+Miocene (Epoch, 5.333-23.03 Ma)	Mioceen (Tijdvak, 5.333-23.03 Ma)
+Messinian (Age, 5.333-7.246 Ma)	Messinien (Tijdsnede, 5.333-7.246 Ma)
+Tortonian (Age, 7.246-11.63 Ma)	Tortonien (Tijdsnede, 7.246-11.63 Ma)
+Serravallian (Age, 11.63-13.82 Ma)	Serravallien (Tijdsnede, 11.63-13.82 Ma)
+Langhian (Age, 13.82-15.97 Ma)	Langhien (Tijdsnede, 13.82-15.97 Ma)
+Burdigalian (Age, 15.97-20.44 Ma)	Burdigalien (Tijdsnede, 15.97-20.44 Ma)
+Aquitanian (Age, 20.44-23.03 Ma)	Aquitanien (Tijdsnede, 20.44-23.03 Ma)
+Paleogene (Period, 23.03-66 Ma)	Paleogeen (Periode, 23.03-66 Ma)
+Oligocene (Epoch, 23.03-33.9 Ma)	Oligoceen (Tijdvak, 23.03-33.9 Ma)
+Chattian (Age, 23.03-28.1 Ma)	Chattien (Tijdsnede, 23.03-28.1 Ma)
+Rupelian (Age, 28.1-33.9 Ma)	Rupelien (Tijdsnede, 28.1-33.9 Ma)
+Eocene (Epoch, 33.9-56 Ma)	Eoceen (Tijdvak, 33.9-56 Ma)
+Priabonian (Age, 33.9-37.8 Ma)	Priabonien (Tijdsnede, 33.9-37.8 Ma)
+Bartonian (Age, 37.8-41.2 Ma)	Bartonien (Tijdsnede, 37.8-41.2 Ma)
+Lutetian (Age, 41.2-47.8 Ma)	Lutetien (Tijdsnede, 41.2-47.8 Ma)
+Ypresian (Age, 47.8-56 Ma)	Ypresien (Tijdsnede, 47.8-56 Ma)
+Paleocene (Epoch, 56-66 Ma)	Paleoceen (Tijdvak, 56-66 Ma)
+Thanetian (Age, 56-59.2 Ma)	Thanetien (Tijdsnede, 56-59.2 Ma)
+Selandian (Age, 59.2-61.6 Ma)	Selandien (Tijdsnede, 59.2-61.6 Ma)
+Danian (Age, 61.6-66 Ma)	Danien (Tijdsnede, 61.6-66 Ma)
+Mesozoic (Era, 66-252 Ma)	Mesozoïcum (Era, 66-252 Ma)
+Cretaceous (Period, 66-145 Ma)	Krijt (Periode, 66-145 Ma)
+Maastrictian (Age, 66-72.1 Ma)	Maastrichtien (Tijdsnede, 66-72.1 Ma)
+Campanian (Age, 72.1-83.6 Ma)	Campanien (Tijdsnede, 72.1-83.6 Ma)
+Santonian (Age, 83.6-86.3 Ma)	Santonien (Tijdsnede, 83.6-86.3 Ma)
+Coniacian (Age, 86.3-89.8 Ma)	Coniacien (Tijdsnede, 86.3-89.8 Ma)
+Turonian (Age, 89.8-93.9 Ma)	Turonien (Tijdsnede, 89.8-93.9 Ma)
+Cenamonian (Age, 93.9-100 Ma)	Cenomanien (Tijdsnede, 93.9-100 Ma)
+Albian (Age, 100-113 Ma)	Albien (Tijdsnede, 100-113 Ma)
+Aptian (Age, 113-126 Ma)	Aptien (Tijdsnede, 113-126 Ma)
+Barremian (Age, 126-131 Ma)	Barremien (Tijdsnede, 126-131 Ma)
+Hauterivian (Age, 131-134 Ma)	Hauterivien (Tijdsnede, 131-134 Ma)
+Valanginian (Age, 134-139 Ma)	Valanginien (Tijdsnede, 134-139 Ma)
+Berriasian (Age, 139-145 Ma)	Berriasien (Tijdsnede, 139-145 Ma)
+Jurassic (Period, 145-201.3 Ma)	Jura (Periode, 145-201.3 Ma)
+Tithonian (Age, 145-152.1 Ma)	Tithonien (Tijdsnede, 145-152.1 Ma)
+Kimmeridgian (Age, 152.1-157.3 Ma)	Kimmeridgien (Tijdsnede, 152.1-157.3 Ma)
+Oxfordian (Age, 157.3-163.5 Ma)	Oxfordien (Tijdsnede, 157.3-163.5 Ma)
+Callovian (Age, 163.5-166.1 Ma)	Callovien (Tijdsnede, 163.5-166.1 Ma)
+Bathonian (Age, 166.1-168.3 Ma)	Bathonien (Tijdsnede, 166.1-168.3 Ma)
+Bajocian (Age, 168.3-170.3 Ma)	Bajocien (Tijdsnede, 168.3-170.3 Ma)
+Aalenian (Age, 170.3-174.1 Ma)	Aalenien (Tijdsnede, 170.3-174.1 Ma)
+Toarcian (Age, 174.1-182.7 Ma)	Toarcien (Tijdsnede, 174.1-182.7 Ma)
+Pliensbachian (Age, 182.7-190.8 Ma)	Pliensbachien (Tijdsnede, 182.7-190.8 Ma)
+Sinemurian (Age, 190.8-199.3 Ma)	Sinemurien (Tijdsnede, 190.8-199.3 Ma)
+Hettangian (Age, 199.3-201.3 Ma)	Hettangien (Tijdsnede, 199.3-201.3 Ma)
+Triassic (Period, 201.3-251.902 Ma)	Trias (Periode, 201.3-251.902 Ma)
+Rhaetian (Age, 201.3-208.5 Ma)	Rhaetien (Tijdsnede, 201.3-208.5 Ma)
+Norian (Age, 208.5-227 Ma)	Norien (Tijdsnede, 208.5-227 Ma)
+Carnian (Age, 227-237 Ma)	Carnien (Tijdsnede, 227-237 Ma)
+Ladinian (Age, 237-242 Ma)	Ladinien (Tijdsnede, 237-242 Ma)
+Anisian (Age, 242-247.2 Ma)	Anisien (Tijdsnede, 242-247.2 Ma)
+Olenekian (Age, 247.2-251.2 Ma)	Olenekien (Tijdsnede, 247.2-251.2 Ma)
+Induan (Age, 251.2-251.902 Ma)	Induen (Tijdsnede, 251.2-251.902 Ma)
+Paleozoic (Era, 251.902-541 Ma)	Paleozoïcum (Era, 251.902-541 Ma)
+Permian (Period, 251.902-298.9 Ma)	Perm (Periode, 251.902-298.9 Ma)
+Lopingian (Epoch, 251.902-259.1 Ma)	Lopingien (Tijdvak, 251.902-259.1 Ma)
+Changhsingian (Age, 251.902-254.14 Ma)	Changhsingien (Tijdsnede, 251.902-254.14 Ma)
+Wuchiapingian (Age, 254.14-259.1 Ma)	Wuchiapingien (Tijdsnede, 254.14-259.1 Ma)
+Guadalupian (Epoch, 259.1-272.95 Ma)	Guadalupien (Tijdvak, 259.1-272.95 Ma)
+Capitanian (Age, 259.1-265.1 Ma)	Capitanien (Tijdsnede, 259.1-265.1 Ma)
+Wordian (Age, 265.1-268.8 Ma)	Wordien (Tijdsnede, 265.1-268.8 Ma)
+Roardian (Age, 268.8-272.95 Ma)	Roadien (Tijdsnede, 268.8-272.95 Ma)
+Cisuralian (Epoch, 272.95-298.9 Ma)	Cisuralien (Tijdvak, 272.95-298.9 Ma)
+Kungurian (Age, 272.95-283.5 Ma)	Kungurien (Tijdsnede, 272.95-283.5 Ma)
+Artinskian (Age, 283.5-290.1 Ma)	Artinskien (Tijdsnede, 283.5-290.1 Ma)
+Sakmarian (Age, 290.1-295 Ma)	Sakmarien (Tijdsnede, 290.1-295 Ma)
+Asselian (Age, 295-298.9 Ma)	Asselien (Tijdsnede, 295-298.9 Ma)
+Carboniferous (Period, 298.9-358.9 Ma)	Carboon (Periode, 298.9-358.9 Ma)
+Gzhelian (Age, 298.9-303.7 Ma)	Gzhelien (Tijdsnede, 298.9-303.7 Ma)
+Kasimovian (Age, 303.7-307 Ma)	Kasimovien (Tijdsnede, 303.7-307 Ma)
+Moscovian (Age, 307-315.2 Ma)	Moscovien (Tijdsnede, 307-315.2 Ma)
+Bashkirian (Age, 315.2-323.2 Ma)	Bashkirien (Tijdsnede, 315.2-323.2 Ma)
+Serpukhovian (Age, 323.2-330.9 Ma)	Serpukhovien (Tijdsnede, 323.2-330.9 Ma)
+Visean (Age, 330.9-346.7 Ma)	Viséen (Tijdsnede, 330.9-346.7 Ma)
+Tournaisian (Age, 346.7-358.9 Ma)	Tournaisien (Tijdsnede, 346.7-358.9 Ma)
+Devonian (Period, 358.9-419.2 Ma)	Devoon (Periode, 358.9-419.2 Ma)
+Famennian (Age, 358.9-372.2 Ma)	Famennien (Tijdsnede, 358.9-372.2 Ma)
+Frasnian (Age, 372.2-382.7 Ma)	Frasnien (Tijdsnede, 372.2-382.7 Ma)
+Eifelian (Age, 378.7-393.3 Ma)	Eifelien (Tijdsnede, 378.7-393.3 Ma)
+Givetian (Age, 382.7-378.7 Ma)	Givetien (Tijdsnede, 382.7-378.7 Ma)
+Emsian (Age, 393.3-407.6 Ma)	Emsien (Tijdsnede, 393.3-407.6 Ma)
+Pragian (Age, 407.6-410.8 Ma)	Pragien (Tijdsnede, 407.6-410.8 Ma)
+Lochkovian (Age, 410.8-419.2 Ma)	Lochkovien (Tijdsnede, 410.8-419.2 Ma)
+Silurian (Period, 419.2-443.8 Ma)	Siluur (Periode, 419.2-443.8 Ma)
+Pridoli (Epoch, 419.2-423 Ma)	Pridoli (Tijdvak, 419.2-423 Ma)
+Pridoli Age (Age, 419.2-423 Ma)	Pridoli-tijdsnede (Tijdsnede, 419.2-423 Ma)
+Ludlow (Epoch, 423-427.4 Ma)	Ludlow (Tijdvak, 423-427.4 Ma)
+Ludfordian (Age, 423-425.6 Ma)	Ludfordien (Tijdsnede, 423-425.6 Ma)
+Wenlock (Epoch, 427.4-433.4 Ma)	Wenlock (Tijdvak, 427.4-433.4 Ma)
+Gorstian (Age, 425.6-427.4 Ma)	Gorstien (Tijdsnede, 425.6-427.4 Ma)
+Homerian (Age, 427.4-430.5 Ma)	Homerien (Tijdsnede, 427.4-430.5 Ma)
+Sheinwoodian (Age, 430.5-433.4 Ma)	Sheinwoodien (Tijdsnede, 430.5-433.4 Ma)
+Llandovery (Epoch, 433.4-443.8 Ma)	Llandovery (Tijdvak, 433.4-443.8 Ma)
+Telychian (Age, 433.4-438.5 Ma)	Telychien (Tijdsnede, 433.4-438.5 Ma)
+Aeronian (Age, 438.5-440.8 Ma)	Aeronien (Tijdsnede, 438.5-440.8 Ma)
+Rhuddanian (Age, 440.8-443.8 Ma)	Rhuddanien (Tijdsnede, 440.8-443.8 Ma)
+Ordovician (Period, 443.8-485.4 Ma)	Ordovicium (Periode, 443.8-485.4 Ma)
+Hirnantian (Age, 443.8-445.2 Ma)	Hirnantien (Tijdsnede, 443.8-445.2 Ma)
+Katian (Age, 445.2-453 Ma)	Katien (Tijdsnede, 445.2-453 Ma)
+Sandbian (Age, 453-458.4 Ma)	Sandbien (Tijdsnede, 453-458.4 Ma)
+Darriwilian (Age, 458.4-467.3 Ma)	Darriwilien (Tijdsnede, 458.4-467.3 Ma)
+Dapingian (Age, 467.3-470 Ma)	Dapingien (Tijdsnede, 467.3-470 Ma)
+Floian (Age, 470-477.7 Ma)	Floien (Tijdsnede, 470-477.7 Ma)
+Tremadocian (Age, 477.7-485.4 Ma)	Tremadocien (Tijdsnede, 477.7-485.4 Ma)
+Cambrian (Period, 485.4-541 Ma)	Cambrium (Periode, 485.4-541 Ma)
+Furongian (Epoch, 485.4-497 Ma)	Furongien (Tijdvak, 485.4-497 Ma)
+Stage 10 (Age, 485.4-489.5 Ma)	Etage 10 (Tijdsnede, 485.4-489.5 Ma)
+Jiangshanian (Age, 489.5-494 Ma)	Jiangshanien (Tijdsnede, 489.5-494 Ma)
+Paibian (Age, 494-497 Ma)	Paibien (Tijdsnede, 494-497 Ma)
+Series 3 (Epoch, 497-509 Ma)	Serie 3 (Tijdvak, 497-509 Ma)
+Guzhangian (Age, 497-500.5 Ma)	Guzhangien (Tijdsnede, 497-500.5 Ma)
+Drumian (Age, 500.5-504.5 Ma)	Drumien (Tijdsnede, 500.5-504.5 Ma)
+Stage 5 (Age, 504.5-509 Ma)	Etage 5 (Tijdsnede, 504.5-509 Ma)
+Series 2 (Epoch, 509-521 Ma)	Serie 2 (Tijdvak, 509-521 Ma)
+Stage 4 (Age, 509-514 Ma)	Etage 4 (Tijdsnede, 509-514 Ma)
+Stage 3 (Age, 514-521 Ma)	Etage 3 (Tijdsnede, 514-521 Ma)
+Terreneuvian (Epoch, 521-541 Ma)	Terreneuvien (Tijdvak, 521-541 Ma)
+Stage 2 (Age, 521-529 Ma)	Etage 2 (Tijdsnede, 521-529 Ma)
+Fortunian (Age, 529-541 Ma)	Fortunien (Tijdsnede, 529-541 Ma)
+Proterozoic (Eon, 541-2500 Ma)	Proterozoïcum (Eon, 541-2500 Ma)
+Neoproterozoic (Era, 541-1000 Ma)	Neoproterozoïcum (Era, 541-1000 Ma)
+Ediacaran (Period, 541-635 Ma)	Ediacarium (Periode, 541-635 Ma)
+Cryogenian (Period, 635-720 Ma)	Cryogenium (Periode, 635-720 Ma)
+Tonian (Period, 720-1000 Ma)	Tonium (Periode, 720-1000 Ma)
+Mesoproterozoic (Era, 1000-1600 Ma)	Mesoproterozoïcum (Era, 1000-1600 Ma)
+Stenian (Period, 1000-1200 Ma)	Stenium (Periode, 1000-1200 Ma)
+Ectasian (Period, 1200-1400 Ma)	Ectasium (Periode, 1200-1400 Ma)
+Calymmian (Period, 1400-1600 Ma)	Calymmium (Periode, 1400-1600 Ma)
+Paleoproterozoic (Era, 1600-2500 Ma)	Paleoproterozoïcum (Era, 1600-2500 Ma)
+Statherian (Period, 1600-1800 Ma)	Statherium (Periode, 1600-1800 Ma)
+Orosirian (Period, 1800-2050 Ma)	Orosirium (Periode, 1800-2050 Ma)
+Rhyacian (Period, 2050-2300 Ma)	Rhyacium (Periode, 2050-2300 Ma)
+Siderian (Period, 2300-2500 Ma)	Siderium (Periode, 2300-2500 Ma)
+Archean (Eon, 2500-4000 Ma)	Archeïcum (Eon, 2500-4000 Ma)
+Neoarchean (Era, 2500-2800 Ma)	Neoarcheïcum (Era, 2500-2800 Ma)
+Neoarchean Period (Period, 2500-2800 Ma)	Neoarcheïcum-periode (Periode, 2500-2800 Ma)
+Mesoarchean (Era, 2800-3200 Ma)	Mesoarcheïcum (Era, 2800-3200 Ma)
+Mesoarchean Period (Period, 2800-3200 Ma)	Mesoarcheïcum-periode (Periode, 2800-3200 Ma)
+Paleoarchean (Era, 3200-3600 Ma)	Paleoarcheïcum (Era, 3200-3600 Ma)
+Paleoarchean Period (Period, 3200-3600 Ma)	Paleoarcheïcum-periode (Periode, 3200-3600 Ma)
+Eoarchean (Era, 3600-4000 Ma)	Eoarcheïcum (Era, 3600-4000 Ma)
+Eoarchean Period (Period, 3600-4000 Ma)	Eoarcheïcum-periode (Periode, 3600-4000 Ma)
+Hadean (Eon, 4000-4600 Ma)	Hadeïcum (Eon, 4000-4600 Ma)
+Youngest age (Ma)	Jongste ouderdom (Ma)
+Oldest age (Ma)	Oudste ouderdom (Ma)
+Age (Ma)	Ouderdom (Ma)
+Also give the astronomical periods at the mid-age	Ook de astronomische perioden bij de middenouderdom geven
+Bayesian age-depth model of radioisotopic dates alone (modified Bchron; Trayler et al., 2020). The file is a table with a header: position (depth or height), age, sd (1 sigma, or a 2sd column) and optionally thickness; rows at the same position are combined into one dated level.	Bayesiaans ouderdom-dieptemodel van alleen radio-isotopische dateringen (aangepaste Bchron; Trayler et al., 2020). Het bestand is een tabel met een kopregel: position (diepte of hoogte), age, sd (1 sigma, of een kolom 2sd) en optioneel thickness; rijen op dezelfde positie worden gecombineerd tot één gedateerd niveau.
+Positions are	Posities zijn
+Depths (increasing downwards, older)	Dieptes (toenemend naar beneden, ouder)
+Heights (increasing upwards, younger)	Hoogtes (toenemend naar boven, jonger)
+Number of MCMC iterations	Aantal MCMC-iteraties
+Burn-in iterations	Burn-in-iteraties
+Probability of the interval	Kans van het interval
+Number of positions of the model	Aantal posities van het model
+Also predict the age at positions (optional)	Ook de ouderdom op posities voorspellen (optioneel)
+Joint Bayesian age-depth model of radioisotopic dates (file 1: table with position, age, sd and optionally thickness, or single-zircon dates) and a floating astrochronology (file 2: tracked period of the cycle, depth and period). Estimates hiatus durations, outlier probabilities and, optionally, compares with the dates-only modBchron model.	Gezamenlijk Bayesiaans ouderdom-dieptemodel van radio-isotopische dateringen (bestand 1: tabel met position, age, sd en optioneel thickness, of dateringen van afzonderlijke zirkonen) en een zwevende astrochronologie (bestand 2: gevolgde periode van de cyclus, diepte en periode). Schat de duur van hiaten en de kans op uitschieters, en vergelijkt optioneel met het modBchron-model op basis van alleen dateringen.
+File 1 holds	Bestand 1 bevat
+One row per dated level (position, age, sd)	Eén rij per gedateerd niveau (position, age, sd)
+Single-zircon dates (one row per grain; grains at one position form a level)	Dateringen van afzonderlijke zirkonen (één rij per korrel; korrels op één positie vormen een niveau)
+Longest crystallisation interval before eruption (kyr)	Langste kristallisatie-interval vóór de eruptie (kyr)
+Unit of the ages	Eenheid van de ouderdommen
+Relative uncertainty of the tracked period (1 sd, %)	Relatieve onzekerheid van de gevolgde periode (1 sd, %)
+Positions of hiatuses (empty = none)	Posities van hiaten (leeg = geen)
+Prior durations of the hiatuses (kyr)	Prior-duur van de hiaten (kyr)
+Prior uncertainties of the hiatuses (1 sd, kyr)	Prior-onzekerheden van de hiaten (1 sd, kyr)
+Outlier model of the dates	Uitschietermodel van de dateringen
+Mixture with outlier probability	Mengsel met uitschieterkans
+Two-stage screening	Screening in twee stappen
+Gaussian (no outliers)	Gaussisch (geen uitschieters)
+Outliers can be	Uitschieters zijn mogelijk
+Too old or too young	Te oud of te jong
+Too old (inheritance)	Te oud (overerving)
+Too young (Pb loss)	Te jong (Pb-verlies)
+Thinning interval	Uitdunningsinterval
+Track realisations per segment	Realisaties van de gevolgde curve per segment
+Leave-one-out test of every date (one extra run per date, slow)	Leave-one-out-toets van elke datering (één extra run per datering, traag)
+Also run the dates-only modBchron model	Ook het modBchron-model met alleen dateringen uitvoeren
+modBchron iterations	modBchron-iteraties
+File 1: depth and one or more proxy columns; file 2: a tracked period curve (depth, period), e.g. from the Track view. Every simulation blends randomly perturbed copies of the track and follows the nearest ridge in the scalogram of a randomly chosen proxy; the spread of the re-tracked curves is the tracking uncertainty, used by Age model with uncertainty, Gap duration and Dates + astrochronology.	Bestand 1: diepte en één of meer proxykolommen; bestand 2: een gevolgde periodecurve (diepte, periode), bijv. uit de weergave Volgen. Elke simulatie mengt willekeurig verstoorde kopieën van de gevolgde curve en volgt de dichtstbijzijnde rug in het scalogram van een willekeurig gekozen proxy; de spreiding van de opnieuw gevolgde curven is de volgonzekerheid, die wordt gebruikt door Ouderdomsmodel met onzekerheid, Duur van een hiaat en Dateringen + astrochronologie.
+Proxy columns of file 1 (numbers; empty = all)	Proxykolommen van bestand 1 (nummers; leeg = alle)
+Perturbation of the track (+/- %)	Verstoring van de gevolgde curve (+/- %)
+Upper limit of the ridge search (factor of the track)	Bovengrens van het zoeken naar de rug (factor van de gevolgde curve)
+Lower limit of the ridge search (factor of the track)	Ondergrens van het zoeken naar de rug (factor van de gevolgde curve)
+Smoothing of every re-tracked curve	Afvlakking van elke opnieuw gevolgde curve
+LOESS, automatic span	LOESS, automatische span
+LOESS, given span	LOESS, opgegeven span
+Span (0 to 1) or window length (depth units)	Span (0 tot 1) of vensterlengte (diepte-eenheden)
+Shortest period of the scalograms	Kortste periode van de scalogrammen
+Longest period of the scalograms	Langste periode van de scalogrammen
+Simulates age models from a tracked cycle with its uncertainty (a re-tracked curve, or a tracked period curve with a relative uncertainty) and the uncertainty of the cycle duration; optionally anchored to dated levels (ages in kyr) with hiatuses. Writes the mean, sd and quantiles of the age at every depth.	Simuleert ouderdomsmodellen uit een gevolgde cyclus met de bijbehorende onzekerheid (een opnieuw gevolgde curve, of een gevolgde periodecurve met een relatieve onzekerheid) en de onzekerheid van de cyclusduur; optioneel verankerd aan gedateerde niveaus (ouderdommen in kyr) met hiaten. Schrijft het gemiddelde, de sd en de kwantielen van de ouderdom op elke diepte weg.
+The data file is a	Het databestand is een
+Tracked period curve (depth, period)	Gevolgde periodecurve (diepte, periode)
+Re-tracked curve (depth, mean frequency, sd), from Re-track	Opnieuw gevolgde curve (diepte, gemiddelde frequentie, sd), uit Opnieuw volgen
+Uncertainty of the cycle duration (kyr)	Onzekerheid van de cyclusduur (kyr)
+Distribution of the cycle duration	Verdeling van de cyclusduur
+Normal (uncertainty = 1 sd)	Normaal (onzekerheid = 1 sd)
+Uniform (uncertainty = half-width)	Uniform (onzekerheid = halve breedte)
+Ages	Ouderdommen
+Floating (time from the top)	Zwevend (tijd vanaf de top)
+Anchored to dated levels	Verankerd aan gedateerde niveaus
+Depths of the dated levels	Dieptes van de gedateerde niveaus
+Ages of the dated levels (kyr)	Ouderdommen van de gedateerde niveaus (kyr)
+Age uncertainties (1 sd, kyr; one value for all)	Ouderdomsonzekerheden (1 sd, kyr; één waarde voor alle)
+Depth uncertainty of the dated levels (full width)	Diepteonzekerheid van de gedateerde niveaus (volledige breedte)
+Depths of hiatuses (empty = none)	Dieptes van hiaten (leeg = geen)
+Durations of the hiatuses (kyr)	Duur van de hiaten (kyr)
+Uncertainties of the hiatuses (1 sd, kyr)	Onzekerheden van de hiaten (1 sd, kyr)
+Rejections before a disagreeing date is dropped	Aantal verwerpingen voordat een afwijkende datering wordt weggelaten
+Estimates the duration of a gap at a given depth from a stable cycle: file 1 is the tracked curve on both sides of the gap (a re-tracked curve, or a period curve with a relative uncertainty), file 2 the proxy record. Both sides are tuned, the cycle is extracted and the missing part of the cycle across the gap is the gap duration.	Schat de duur van een hiaat op een opgegeven diepte uit een stabiele cyclus: bestand 1 is de gevolgde curve aan beide zijden van het hiaat (een opnieuw gevolgde curve, of een periodecurve met een relatieve onzekerheid), bestand 2 het proxyrecord. Beide zijden worden getuned, de cyclus wordt geëxtraheerd en het ontbrekende deel van de cyclus over het hiaat heen is de duur van het hiaat.
+File 1 is a	Bestand 1 is een
+Depth of the gap	Diepte van het hiaat
+Duration of the cycle missing in the gap (kyr)	Duur van de cyclus die in het hiaat ontbreekt (kyr)
+Number of missing cycles	Aantal ontbrekende cycli
+Uncertainty of the missing-cycle duration (kyr, if it differs from the tracked cycle)	Onzekerheid van de duur van de ontbrekende cyclus (kyr, als die afwijkt van de gevolgde cyclus)
+Extracted band: shortest period (factor of the missing cycle)	Geëxtraheerde band: kortste periode (factor van de ontbrekende cyclus)
+Extracted band: longest period (factor of the missing cycle)	Geëxtraheerde band: langste periode (factor van de ontbrekende cyclus)
+Measure between	Meten tussen
+Maxima of the cycle	Maxima van de cyclus
+Minima of the cycle	Minima van de cyclus
+Scale resolution dj of the tuned scalograms	Schaalresolutie dj van de getunede scalogrammen
+Second file: the tracked period curve (depth, period). Frequency uncertainty of the tracked cycle from the Gabor uncertainty of the Morlet wavelet or the resolution of an FFT, and the resulting spread of the time-depth model.	Tweede bestand: de gevolgde periodecurve (diepte, periode). Frequentieonzekerheid van de gevolgde cyclus uit de Gabor-onzekerheid van de Morlet-wavelet of de resolutie van een FFT, en de resulterende spreiding van het tijd-dieptemodel.
+Uncertainty of	Onzekerheid van
+Morlet wavelet (Gabor)	Morlet-wavelet (Gabor)
+FFT, practical resolution 1/T	FFT, praktische resolutie 1/T
+FFT, Heisenberg-Gabor limit 1/(4 pi T)	FFT, Heisenberg-Gabor-limiet 1/(4 pi T)
+Multiple of the uncertainty	Veelvoud van de onzekerheid
+Record or window length for the FFT (0 = length of the track)	Record- of vensterlengte voor de FFT (0 = lengte van de gevolgde curve)
+De-chirps the record (file 1) with an existing age model (file 2: a tracked period curve, a sedimentation-rate curve or depth-age points): in the time of the age model every astronomical cycle should be a horizontal line; intervals where the cycles bend away are flagged with the rate correction they ask for.	Corrigeert het record (bestand 1) voor chirp met een bestaand ouderdomsmodel (bestand 2: een gevolgde periodecurve, een sedimentatiesnelheidscurve of diepte-ouderdomspunten): in de tijd van het ouderdomsmodel zou elke astronomische cyclus een horizontale lijn moeten zijn; intervallen waar de cycli afbuigen worden gemarkeerd met de snelheidscorrectie die ze vereisen.
+Tracked period of one cycle (depth, period)	Gevolgde periode van één cyclus (diepte, periode)
+Sedimentation rate (depth, rate)	Sedimentatiesnelheid (diepte, snelheid)
+Unit of the rate	Eenheid van de snelheid
+cm/kyr with depth in metres	cm/kyr met diepte in meters
+depth units per kyr	diepte-eenheden per kyr
+m/Myr with depth in metres	m/Myr met diepte in meters
+Approximate age of the record (Ma, picks the cycles)	Ouderdom van het record bij benadering (Ma, bepaalt de cycli)
+Cycles to check (kyr; empty = eccentricity, obliquity, precession)	Te controleren cycli (kyr; leeg = excentriciteit, obliquiteit, precessie)
+Transform: Morlet wavelet	Transformatie: Morlet-wavelet
+Transform: multitaper EHA	Transformatie: multitaper-EHA
+Transform: superlet SST (slower)	Transformatie: superlet-SST (trager)
+Transform: chirplet SST (slow)	Transformatie: chirplet-SST (traag)
+Rate correction that is flagged (0.1 = 10 %)	Snelheidscorrectie die wordt gemarkeerd (0.1 = 10 %)
+Cycles that must agree	Cycli die moeten overeenstemmen
+Also run a blind re-track for comparison (slower)	Ter vergelijking ook blind opnieuw volgen (trager)
+Horizontal axis of the maps	Horizontale as van de kaarten
+Time of the age model	Tijd van het ouderdomsmodel
+Depth	Diepte
+Tests an astronomically tuned record (time in kyr, 0-50 Ma): are the precession (or obliquity) amplitude modulations those of the La2004 solution? Significance from phase-randomised or AR(1) surrogates, with filters and added noise that guard against modulations created by tuning (Zeeden et al. 2015, 2019).	Toetst een astronomisch getuned record (tijd in kyr, 0-50 Ma): zijn de amplitudemodulaties van precessie (of obliquiteit) die van de La2004-oplossing? Significantie uit fase-gerandomiseerde of AR(1)-surrogaten, met filters en toegevoegde ruis die beschermen tegen modulaties die door de tuning zijn ontstaan (Zeeden et al. 2015, 2019).
+Precession amplitude modulation (testPrecession)	Amplitudemodulatie van precessie (testPrecession)
+Obliquity amplitude modulation (testTilt)	Amplitudemodulatie van obliquiteit (testTilt)
+Time unit of the data	Tijdseenheid van de data
+Phase-randomised	Fase-gerandomiseerd
+Part of each end excluded (0-1)	Deel van elk uiteinde dat wordt uitgesloten (0-1)
+Largest noise added (standard deviations of the data)	Grootste toegevoegde ruis (standaarddeviaties van de data)
+Low-pass cut-off of the envelope (cycles/kyr)	Laagdoorlaat-afsnijfrequentie van de omhullende (cycli/kyr)
+Detrend the envelope	Trend van de omhullende verwijderen
+Finds depths where energy over many periods arrives at once (phase jumps of all cycles at a hiatus, erosion surfaces, turbidites, spikes) with the transient-extracting (time-reassigned) wavelet transform.	Zoekt dieptes waar energie over veel perioden tegelijk aankomt (fasesprongen van alle cycli bij een hiaat, erosievlakken, turbidieten, spikes) met de transiënt-extraherende (in de tijd herverdeelde) wavelettransformatie.
+Period spacing dj (octaves)	Tussenafstand van perioden dj (octaven)
+Number of cycles (small = sharper in depth)	Aantal cycli (klein = scherper in diepte)
+Detection threshold (multiple of the running median)	Detectiedrempel (veelvoud van de voortschrijdende mediaan)
+Minimum distance between transients (0 = longest period / 4)	Minimale afstand tussen transiënten (0 = langste periode / 4)
+Running-median window (0 = 2 x longest period)	Venster van de voortschrijdende mediaan (0 = 2 x langste periode)
+Aligns record 2 to record 1 by dynamic time warping and writes the depth-to-depth tie function (depth in record 2, equivalent depth in record 1) and record 2 on the depth scale of record 1. With an open end (and begin), record 2 may match only part of record 1. Use the tie function in Age scale / tuning to move other proxies of record 2.	Lijnt record 2 uit op record 1 met dynamic time warping en schrijft de diepte-diepte-koppelfunctie (diepte in record 2, equivalente diepte in record 1) en record 2 op de diepteschaal van record 1 weg. Met een open einde (en begin) mag record 2 met slechts een deel van record 1 overeenkomen. Gebruik de koppelfunctie in Ouderdomsschaal / tuning om andere proxy's van record 2 over te zetten.
+Points per record (even resampling)	Punten per record (regelmatige herbemonstering)
+Both records are resampled evenly with at most this many points; the cost matrix grows with its square.	Beide records worden regelmatig herbemonsterd met hoogstens dit aantal punten; de kostenmatrix groeit met het kwadraat ervan.
+Values	Waarden
+Detrended and standardised	Trend verwijderd en gestandaardiseerd
+As they are	Ongewijzigd
+Step pattern	Stappatroon
+symmetric2 (default, normalisable)	symmetric2 (standaard, normaliseerbaar)
+asymmetric (needed for open begin)	asymmetric (nodig voor open begin)
+symmetricP05 (slope limited)	symmetricP05 (helling begrensd)
+symmetricP1 (slope limited)	symmetricP1 (helling begrensd)
+symmetricP2 (slope limited)	symmetricP2 (helling begrensd)
+Window constraint	Vensterbeperking
+Sakoe-Chiba band	Sakoe-Chiba-band
+Slanted band	Schuine band
+Itakura parallelogram	Itakura-parallellogram
+Window size (share of the record)	Venstergrootte (aandeel van het record)
+Open end (record 2 matches a leading part of record 1)	Open einde (record 2 komt overeen met een begindeel van record 1)
+Open begin (needs open end and an asymmetric or type c step pattern)	Open begin (vereist een open einde en een asymmetrisch stappatroon of een stappatroon van type c)
+Alignment of the two records	Uitlijning van de twee records
+Record 2 on the depth scale of record 1	Record 2 op de diepteschaal van record 1
+Tie function	Koppelfunctie
+Eccentricity, obliquity and precession periods at a given age, with the precession constant k from the AstroGeo22 tidal model (Farhat et al. 2022) or your own k. Use it to know which periods to expect in a deep-time record.	Excentriciteits-, obliquiteits- en precessieperioden bij een gegeven ouderdom, met de precessieconstante k uit het getijdenmodel AstroGeo22 (Farhat et al. 2022) of een eigen k. Te gebruiken om te weten welke perioden in een deep-time-record te verwachten zijn.
+Terms	Termen
+Nine main periods (Acycle ORBIT9)	Negen hoofdperioden (Acycle ORBIT9)
+All named terms with aliases	Alle benoemde termen met aliassen
+Main periods with weights for tracking	Hoofdperioden met gewichten voor het volgen
+Every gi-gj, k+si and k+gi term	Elke gi-gj-, k+si- en k+gi-term
+Precession constant k	Precessieconstante k
+AstroGeo22 model at this age	AstroGeo22-model bij deze ouderdom
+My own value	Zelf opgegeven waarde
+Precession constant k (kyr)	Precessieconstante k (kyr)
+Include eccentricity	Excentriciteit opnemen
+Include obliquity	Obliquiteit opnemen
+Include precession	Precessie opnemen
+The nine main astronomical periods over an age range, with the precession constant from AstroGeo22 or the La2004 extrapolation. Shows how the obliquity and precession periods shorten into the past.	De negen astronomische hoofdperioden over een ouderdomsbereik, met de precessieconstante uit AstroGeo22 of de La2004-extrapolatie. Toont hoe de obliquiteits- en precessieperioden korter worden verder terug in het verleden.
+Age step (Ma)	Ouderdomsstap (Ma)
+Precession constant from	Precessieconstante uit
+AstroGeo22 (Farhat et al. 2022), interpolated	AstroGeo22 (Farhat et al. 2022), geïnterpoleerd
+AstroGeo22, nearest 1-Myr row as in Acycle	AstroGeo22, dichtstbijzijnde 1-Myr-rij zoals in Acycle
+La2004 polynomial extrapolation	Polynomiale extrapolatie van La2004
+Precession and obliquity periods at an age from Berger et al. (1992), or eccentricity, obliquity and precession periods from the Solar System frequencies g and s and the precession constant k (Laskar 1999 or Malinverno and Meyers 2024).	Precessie- en obliquiteitsperioden bij een ouderdom volgens Berger et al. (1992), of excentriciteits-, obliquiteits- en precessieperioden uit de frequenties g en s van het zonnestelsel en de precessieconstante k (Laskar 1999 of Malinverno en Meyers 2024).
+At an age, Berger et al. 1992 (bergerPeriods)	Bij een ouderdom, Berger et al. 1992 (bergerPeriods)
+From g, s and k (calcPeriods)	Uit g, s en k (calcPeriods)
+Age (Ma, 0-500)	Ouderdom (Ma, 0-500)
+g1 to g5 (arcsec/yr)	g1 tot en met g5 (arcsec/yr)
+s1, s2, s3, s4, (s5,) s6 (arcsec/yr, optional)	s1, s2, s3, s4, (s5,) s6 (arcsec/yr, optioneel)
+Needed for the obliquity periods; leave empty for eccentricity and precession only.	Nodig voor de obliquiteitsperioden; leeg laten voor alleen excentriciteit en precessie.
+Precession constant k (arcsec/yr)	Precessieconstante k (arcsec/yr)
+Laskar (1999, table 6)	Laskar (1999, tabel 6)
+Malinverno and Meyers (2024, table 1)	Malinverno en Meyers (2024, tabel 1)
+Which astronomical term, harmonic or combination tone could an unidentified spectral peak be? Lists the terms within a relative tolerance of each measured period.	Welke astronomische term, harmonische of combinatietoon zou een niet-geïdentificeerde spectrale piek kunnen zijn? Geeft de termen binnen een relatieve tolerantie van elke gemeten periode.
+Measured period(s) (kyr)	Gemeten periode(n) (kyr)
+Relative tolerance	Relatieve tolerantie
+Highest order	Hoogste orde
+Single terms	Enkelvoudige termen
+Also harmonics, sums and differences	Ook harmonischen, sommen en verschillen
+Predicted number of precession (or obliquity) cycles per eccentricity cycle at a given age. Compare with the bundling counted in the record (then use the Precession constant tool, method 'Bundling').	Voorspeld aantal precessiecycli (of obliquiteitscycli) per excentriciteitscyclus bij een gegeven ouderdom. Te vergelijken met de in het record getelde bundeling (gebruik daarna de tool Precessieconstante, methode 'Bundeling').
+Eccentricity terms (rows)	Excentriciteitstermen (rijen)
+Precession / obliquity terms (columns)	Precessie- / obliquiteitstermen (kolommen)
+All difference and combination tones (f1 - f2, f1 + f2) of a set of periods, and the tone closest to a period you observed, e.g. to explain a peak that is not a primary astronomical term.	Alle verschil- en combinatietonen (f1 - f2, f1 + f2) van een set perioden, en de toon die het dichtst bij een waargenomen periode ligt, bijv. om een piek te verklaren die geen primaire astronomische term is.
+Observed period to explain (kyr, 0 = none)	Te verklaren waargenomen periode (kyr, 0 = geen)
+Explore chaos in the inner solar system: shift g4-g3 / s4-s3 and see which cycles move, the sensitivity of every term to each fundamental frequency, or which resonance state measured long modulation periods imply.	Chaos in het binnenste zonnestelsel verkennen: g4-g3 / s4-s3 verschuiven en zien welke cycli meeverschuiven, de gevoeligheid van elke term voor elke fundamentele frequentie, of welke resonantietoestand uit gemeten lange modulatieperioden volgt.
+Analysis	Analyse
+Scenario: shift g4-g3 and s4-s3	Scenario: g4-g3 en s4-s3 verschuiven
+Sensitivity of every term to each fundamental	Gevoeligheid van elke term voor elke fundamentele frequentie
+Resonance state from measured modulation periods	Resonantietoestand uit gemeten modulatieperioden
+g4-g3 period in the scenario (kyr, 0 = La2004)	g4-g3-periode in het scenario (kyr, 0 = La2004)
+s4-s3 period in the scenario (kyr, 0 = La2004)	s4-s3-periode in het scenario (kyr, 0 = La2004)
+How g3 and g4 move	Hoe g3 en g4 verschuiven
+Both, about their mean	Beide, rond hun gemiddelde
+Keep g3, move g4	g3 behouden, g4 verschuiven
+Keep g4, move g3	g4 behouden, g3 verschuiven
+Fractional change of each fundamental	Fractionele verandering van elke fundamentele frequentie
+Fundamentals	Fundamentele frequenties
+Measured eccentricity modulation, g4-g3 (kyr)	Gemeten excentriciteitsmodulatie, g4-g3 (kyr)
+Measured obliquity modulation, s4-s3 (kyr)	Gemeten obliquiteitsmodulatie, s4-s3 (kyr)
+Largest p and q of the ratio p:q	Grootste p en q van de verhouding p:q
+Probability density of the fundamental frequencies g1-g5 and s1-s4, s6 at an age, from the chaotic diffusion of the Solar System (Hoang et al. 2021, table 2): the priors of the Bayesian TimeOpt methods.	Kansdichtheid van de fundamentele frequenties g1-g5 en s1-s4, s6 bij een ouderdom, uit de chaotische diffusie van het zonnestelsel (Hoang et al. 2021, tabel 2): de priors van de Bayesiaanse TimeOpt-methoden.
+Age (Ga)	Ouderdom (Ga)
+CTest (Zeeden et al. 2023): give the wavelength ranges (m) of the eccentricity, obliquity and precession cycles you identified in a depth-domain spectrum and the age; a Monte Carlo consistency test returns the sedimentation rate, the precession constant k and the Earth-Moon distance and length of day.	CTest (Zeeden et al. 2023): geef de golflengtebereiken (m) op van de excentriciteits-, obliquiteits- en precessiecycli die in een spectrum in het dieptedomein zijn geïdentificeerd, en de ouderdom; een Monte Carlo-consistentietoets geeft de sedimentatiesnelheid, de precessieconstante k, de afstand Aarde-Maan en de daglengte.
+CTest in the published draw order (slow, reproduces the paper's samples)	CTest in de gepubliceerde trekkingsvolgorde (traag, reproduceert de trekkingen van het artikel)
+Flexible Monte Carlo with a sedimentation-rate range	Flexibele Monte Carlo met een bereik van sedimentatiesnelheden
+Age of the record (Ma): one value or min, max	Ouderdom van het record (Ma): één waarde of min, max
+405-kyr eccentricity, wavelength min, max (m)	405-kyr-excentriciteit, golflengte min, max (m)
+~125-kyr eccentricity (m)	~125-kyr-excentriciteit (m)
+~95-kyr eccentricity (m)	~95-kyr-excentriciteit (m)
+Obliquity k+s3 (m, empty = not identified)	Obliquiteit k+s3 (m, leeg = niet geïdentificeerd)
+Longest precession k+g5 (m)	Langste precessie k+g5 (m)
+Middle precession k+g2 (m)	Middelste precessie k+g2 (m)
+Shortest precession k+g4 and k+g3 (m)	Kortste precessie k+g4 en k+g3 (m)
+Cycles used besides eccentricity	Gebruikte cycli naast excentriciteit
+From the cycles given	Uit de opgegeven cycli
+Precession and obliquity	Precessie en obliquiteit
+Obliquity only	Alleen obliquiteit
+Precession only	Alleen precessie
+Sedimentation rate range (m/kyr)	Bereik van de sedimentatiesnelheid (m/kyr)
+Accepted Monte Carlo samples	Geaccepteerde Monte Carlo-trekkingen
+Range of k sampled (yr)	Bereik waaruit k wordt getrokken (yr)
+Sampling of g2-g5	Trekking van g2-g5
+Uniform within 2 sigma (as in the paper)	Uniform binnen 2 sigma (zoals in het artikel)
+Normal	Normaal
+Uncertainty of s3	Onzekerheid van s3
+As in the published code (s3 fixed)	Zoals in de gepubliceerde code (s3 vast)
+Scaled like g2-g5	Geschaald zoals g2-g5
+Earth-Moon conversion	Aarde-Maanomrekening
+Angular-momentum conservation	Behoud van impulsmoment
+AstroGeo22 curve (Farhat et al. 2022)	AstroGeo22-curve (Farhat et al. 2022)
+Consistency test for a record already tuned to time: give the period ranges (kyr) of the cycles you resolved; the precession constant k, the secular frequencies and the Earth-Moon state follow, with the uncertainty of the tuning target propagated.	Consistentietoets voor een record dat al naar tijd is getuned: geef de periodebereiken (kyr) op van de onderscheiden cycli; daaruit volgen de precessieconstante k, de seculiere frequenties en de Aarde-Maantoestand, waarbij de onzekerheid van het tuningdoel wordt doorgerekend.
+Monte Carlo consistency test (astro_from_periods)	Monte Carlo-consistentietoets (astro_from_periods)
+Zeeden et al. (2023) estimator (astro_ctest)	Schatter van Zeeden et al. (2023) (astro_ctest)
+Joint inversion of the obliquity and precession terms only (astro_invert)	Gezamenlijke inversie van alleen de obliquiteits- en precessietermen (astro_invert)
+405-kyr eccentricity, period min, max (kyr)	405-kyr-excentriciteit, periode min, max (kyr)
+~125-kyr eccentricity (kyr, empty = not resolved)	~125-kyr-excentriciteit (kyr, leeg = niet onderscheiden)
+~95-kyr eccentricity (kyr)	~95-kyr-excentriciteit (kyr)
+Obliquity k+s3 (kyr)	Obliquiteit k+s3 (kyr)
+Precession k+g5 (kyr)	Precessie k+g5 (kyr)
+Precession k+g2 (kyr)	Precessie k+g2 (kyr)
+Precession k+g4 (kyr)	Precessie k+g4 (kyr)
+Precession k+g3 (kyr)	Precessie k+g3 (kyr)
+Short precession k+g4 and k+g3 together (kyr)	Korte precessie k+g4 en k+g3 samen (kyr)
+Other constraints (term = min, max; ...)	Andere randvoorwaarden (term = min, max; ...)
+Any term of 'Astronomical periods at an age', e.g. g4-g3 = 2200, 2600; any:k+g5|k+g2 = 19, 20	Elke term van 'Astronomische perioden bij een ouderdom', bijv. g4-g3 = 2200, 2600; any:k+g5|k+g2 = 19, 20
+Period assumed for the tuning target (kyr, 0 = free stretch)	Aangenomen periode van het tuningdoel (kyr, 0 = vrije rek)
+Tuning target term	Term van het tuningdoel
+Monte Carlo samples	Monte Carlo-trekkingen
+Range of k sampled (kyr)	Bereik waaruit k wordt getrokken (kyr)
+The precession constant k and the Earth-Moon state from measured cycles: single cycles read as named terms, the ratio of two cycles (works on untuned depth data), a bundling count, every possible reading of one peak, a quick conversion, or a scan of k against several peaks.	De precessieconstante k en de Aarde-Maantoestand uit gemeten cycli: afzonderlijke cycli gelezen als benoemde termen, de verhouding van twee cycli (werkt op niet-getunede dieptedata), een bundelingstelling, elke mogelijke lezing van één piek, een snelle omrekening, of een scan van k tegen meerdere pieken.
+Single cycles read as named terms	Afzonderlijke cycli gelezen als benoemde termen
+Ratio of two cycles	Verhouding van twee cycli
+Precession cycles per eccentricity bundle	Precessiecycli per excentriciteitsbundel
+Every reading of one peak (hypotheses)	Elke lezing van één piek (hypothesen)
+Quick conversion of periods to k	Snelle omrekening van perioden naar k
+Scan k against measured peaks	k scannen tegen gemeten pieken
+Measured periods (kyr)	Gemeten perioden (kyr)
+Hypotheses use the first period only.	Hypothesen gebruiken alleen de eerste periode.
+Term of each period	Term van elke periode
+Longer cycle (kyr or m)	Langere cyclus (kyr of m)
+Shorter cycle (same unit)	Kortere cyclus (zelfde eenheid)
+Term of the longer cycle	Term van de langere cyclus
+Term of the shorter cycle	Term van de kortere cyclus
+Relative 1-sigma uncertainty of each cycle	Relatieve 1-sigma-onzekerheid van elke cyclus
+Cycles counted per bundle (may be fractional)	Getelde cycli per bundel (mag een breuk zijn)
+Eccentricity term of the bundle	Excentriciteitsterm van de bundel
+Bundled term	Gebundelde term
+1-sigma counting uncertainty (cycles)	1-sigma-telonzekerheid (cycli)
+Candidate terms	Kandidaattermen
+Term of the periods	Term van de perioden
+Obliquity k+s3	Obliquiteit k+s3
+Precession k+g5	Precessie k+g5
+Precession k+g2	Precessie k+g2
+Precession k+g4	Precessie k+g4
+Precession k+g3	Precessie k+g3
+Terms predicted for every k	Voorspelde termen voor elke k
+Smallest k (kyr)	Kleinste k (kyr)
+Largest k (kyr)	Grootste k (kyr)
+Step of k (kyr)	Stap van k (kyr)
+Relative tolerance of a match	Relatieve tolerantie van een overeenkomst
+Age (Ma): one value or min, max	Ouderdom (Ma): één waarde of min, max
+Record length (kyr or m; 0 = use the tolerance / sd)	Recordlengte (kyr of m; 0 = de tolerantie / sd gebruiken)
+With a record length the band of each cycle is its frequency resolution.	Met een recordlengte is de band van elke cyclus de frequentieresolutie ervan.
+Relative half-width of each cycle	Relatieve halve breedte van elke cyclus
+Multiple of the frequency resolution	Veelvoud van de frequentieresolutie
+Period assumed for the tuning target (kyr, 0 = untuned)	Aangenomen periode van het tuningdoel (kyr, 0 = niet-getuned)
+Combine several k terms by	Meerdere k-termen combineren via
+Multiplying the densities	Vermenigvuldiging van de dichtheden
+Pooling the samples	Samenvoeging van de trekkingen
+g4-g3 period range for chaos (kyr, empty = La2004)	Bereik van de g4-g3-periode voor chaos (kyr, leeg = La2004)
+s4-s3 period range (kyr, empty = La2004)	Bereik van de s4-s3-periode (kyr, leeg = La2004)
+Sampling of the secular frequencies	Trekking van de seculiere frequenties
+Monte Carlo draws (0 = point estimate)	Monte Carlo-trekkingen (0 = puntschatting)
+Multiplies the densities of two sets of precession-constant samples (e.g. the *_k_samples.txt files of two CTest runs or two proxies), as in Zeeden et al. (2023). Column 2 of each file is used.	Vermenigvuldigt de dichtheden van twee sets trekkingen van de precessieconstante (bijv. de *_k_samples.txt-bestanden van twee CTest-runs of twee proxy's), zoals in Zeeden et al. (2023). Van elk bestand wordt kolom 2 gebruikt.
+Grid points of the densities	Rasterpunten van de dichtheden
+Age for the Earth-Moon state (Ma, 0 = present-day obliquity)	Ouderdom voor de Aarde-Maantoestand (Ma, 0 = huidige obliquiteit)
+Tests an age model: the significant obliquity and precession peaks of the tuned record must give one consistent precession constant k, which is compared with AstroGeo22; spectral peaks and amplitude modulation are tested as well. The data file is the tuned record (time, value).	Toetst een ouderdomsmodel: de significante obliquiteits- en precessiepieken van het getunede record moeten één consistente precessieconstante k opleveren, die wordt vergeleken met AstroGeo22; spectrale pieken en amplitudemodulatie worden eveneens getoetst. Het databestand is het getunede record (tijd, waarde).
+Time unit of the record	Tijdseenheid van het record
+k+g5 and k+g2 separate only when tbw <= record length (kyr) / 1600; values below 1.5 (a single taper) fail in astrochron::mtm.	k+g5 en k+g2 worden alleen gescheiden wanneer tbw <= recordlengte (kyr) / 1600; waarden onder 1.5 (één enkele taper) mislukken in astrochron::mtm.
+Confidence level of a peak	Betrouwbaarheidsniveau van een piek
+Also require the harmonic F-test	Ook de harmonische F-toets vereisen
+Half-width of the search windows (fraction)	Halve breedte van de zoekvensters (fractie)
+Remove intervals with weak precession first	Eerst intervallen met zwakke precessie verwijderen
+Precession band of the pre-scan (kyr)	Precessieband van de voorscan (kyr)
+Running window of the pre-scan (kyr)	Schuivend venster van de voorscan (kyr)
+Weak when below this fraction of the median	Zwak wanneer onder deze fractie van de mediaan
+Shortest piece kept or removed (kyr)	Kortste stuk dat wordt behouden of verwijderd (kyr)
+Phase-randomised surrogates	Fase-gerandomiseerde surrogaten
+Reference k (kyr, 0 = AstroGeo22 at the age)	Referentie-k (kyr, 0 = AstroGeo22 bij de ouderdom)
+Plausible range of k for the verdict (kyr)	Plausibel bereik van k voor het oordeel (kyr)
+Range of k searched (kyr, empty = around AstroGeo22)	Doorzocht bereik van k (kyr, leeg = rond AstroGeo22)
+Builds synthetic tuned records with known precession constants (five orbital terms, a 405-kyr cycle and AR(1) noise) and shows the k recovered by the tuned-record test: a check that the chosen time-bandwidth product resolves the terms.	Bouwt synthetische getunede records met bekende precessieconstanten (vijf orbitale termen, een 405-kyr-cyclus en AR(1)-ruis) en toont de k die door de toets voor getunede records wordt teruggevonden: een controle dat het gekozen tijd-bandbreedteproduct de termen scheidt.
+Known k of the synthetic records (kyr)	Bekende k van de synthetische records (kyr)
+Noise level (sd multiplier)	Ruisniveau (sd-vermenigvuldiger)
+Record length (kyr)	Recordlengte (kyr)
+Age passed to the test (Ma)	Ouderdom die aan de toets wordt doorgegeven (Ma)
+Compares a measured precession constant with AstroGeo22 (Farhat et al. 2022) and the La2004 extrapolation at the age of the record, or lists the Devonian reference values of Zeeden et al. (2023).	Vergelijkt een gemeten precessieconstante met AstroGeo22 (Farhat et al. 2022) en de La2004-extrapolatie bij de ouderdom van het record, of geeft de Devonische referentiewaarden van Zeeden et al. (2023).
+Table	Tabel
+Measured k against the published models	Gemeten k tegenover de gepubliceerde modellen
+Zeeden et al. (2023) Table 1, Devonian reference values	Zeeden et al. (2023) tabel 1, Devonische referentiewaarden
+Measured k (kyr, 0 = none)	Gemeten k (kyr, 0 = geen)
+Obliquity for the inversion (degrees, 0 = AstroGeo22)	Obliquiteit voor de inversie (graden, 0 = AstroGeo22)
+From any one known quantity (precession constant, Earth-Moon distance, length of day, lunar months per year, an observed cycle, or an age on the AstroGeo22 model) to the full Earth-Moon state: distance, solar and sidereal day, days and months per year, obliquity, spin rate and angular momentum.	Van één willekeurige bekende grootheid (precessieconstante, afstand Aarde-Maan, daglengte, maanmaanden per jaar, een waargenomen cyclus, of een ouderdom op het AstroGeo22-model) naar de volledige Aarde-Maantoestand: afstand, zonnedag en siderische dag, dagen en maanden per jaar, obliquiteit, rotatiesnelheid en impulsmoment.
+Known quantity	Bekende grootheid
+Precession frequency (arcsec/yr)	Precessiefrequentie (arcsec/yr)
+Earth-Moon distance (Earth radii)	Afstand Aarde-Maan (aardstralen)
+Earth-Moon distance (km)	Afstand Aarde-Maan (km)
+Length of the solar day (h)	Lengte van de zonnedag (h)
+Lunar months per year	Maanmaanden per jaar
+Observed obliquity or precession cycle (kyr)	Waargenomen obliquiteits- of precessiecyclus (kyr)
+Age on the AstroGeo22 model (Ma)	Ouderdom op het AstroGeo22-model (Ma)
+Precession constant k (kyr), one or more	Precessieconstante k (kyr), één of meer
+Type of month	Type maand
+Sidereal	Siderisch
+Synodic	Synodisch
+Observed cycle (kyr)	Waargenomen cyclus (kyr)
+The cycle is	De cyclus is
+Inversion of a precession value	Inversie van een precessiewaarde
+Obliquity	Obliquiteit
+AstroGeo22 at an age	AstroGeo22 bij een ouderdom
+Present day (23.25 degrees)	Heden (23.25 graden)
+Age for the obliquity (Ma)	Ouderdom voor de obliquiteit (Ma)
+Obliquity (degrees)	Obliquiteit (graden)
+Curves of the Earth-Moon system with conserved angular momentum over a range of distances, day lengths, months per year or precession constants, compared with the AstroGeo22 tidal model.	Curven van het Aarde-Maansysteem met behouden impulsmoment over een bereik van afstanden, daglengtes, maanden per jaar of precessieconstanten, vergeleken met het getijdenmodel AstroGeo22.
+Vary	Variëren
+From (Earth radii)	Van (aardstralen)
+To (Earth radii)	Tot (aardstralen)
+From (h)	Van (h)
+To (h)	Tot (h)
+From (months per year)	Van (maanden per jaar)
+To (months per year)	Tot (maanden per jaar)
+From (kyr)	Van (kyr)
+To (kyr)	Tot (kyr)
+Obliquity for the precession (degrees)	Obliquiteit voor de precessie (graden)
+Show the AstroGeo22 model (0-1000 Ma)	Het AstroGeo22-model tonen (0-1000 Ma)
+Earth-Moon distance (Earth radii) and length of day (hours), with uncertainties, from a precession frequency k and its uncertainty (e.g. from Bayesian TimeOpt), after Walker et al. (1986) with the constants of Malinverno and Meyers (2024).	Afstand Aarde-Maan (aardstralen) en daglengte (uren), met onzekerheden, uit een precessiefrequentie k en de onzekerheid ervan (bijv. uit de Bayesiaanse TimeOpt), naar Walker et al. (1986) met de constanten van Malinverno en Meyers (2024).
+Precession frequency k (arcsec/yr)	Precessiefrequentie k (arcsec/yr)
+Standard deviation of k (arcsec/yr)	Standaarddeviatie van k (arcsec/yr)
+Distribution of the sampling interval (Acycle: Plot > Sampling Rate).	Verdeling van het bemonsteringsinterval (Acycle: Plot > Sampling Rate).
+Number of histogram bins	Aantal histogramklassen
+Histogram, density and normal Q-Q plot of the data values (Acycle: Plot > Data Distribution).	Histogram, dichtheid en normale Q-Q-plot van de datawaarden (Acycle: Plot > Data Distribution).
+About CycloDesk	Over CycloDesk
+CycloDesk 0.2.2 (alpha)	CycloDesk 0.2.2 (alfa)
+is a point-and-click workbench for cyclostratigraphy by Michiel Arts. All calculations are done by the R	is een point-and-click-werkomgeving voor cyclostratigrafie van Michiel Arts. Alle berekeningen worden uitgevoerd door de
+packages WaverideR and astrochron; the R code of every step is in the R code & log tab.	R-pakketten WaverideR en astrochron; de R-code van elke stap staat op het tabblad R-code & logboek.
+Source code, manual and feedback:	Broncode, handleiding en feedback:
+. Something wrong or missing?	. Klopt er iets niet of ontbreekt er iets?
+Tell us	Laat het weten
+When you publish results, please cite CycloDesk and the packages that did the work:	Citeer bij het publiceren van resultaten CycloDesk en de pakketten die het werk hebben gedaan:
+(the paper that introduced WaverideR).	(het artikel waarin WaverideR werd geïntroduceerd).
+The original method papers named in the help of each function (the purple line under the name of a tool).	De oorspronkelijke methodeartikelen die in de hulp van elke functie worden genoemd (de paarse regel onder de naam van een tool).
+The menu layout and working-folder workflow are inspired by Acycle: Li, M., Hinnov, L.A., Kump, L.R.	De menu-indeling en de werkwijze met een werkmap zijn geïnspireerd op Acycle: Li, M., Hinnov, L.A., Kump, L.R.
+Dismiss	Sluiten
+Function(s)	Functie(s)
+New folder	Nieuwe map
+Name	Naam
+Create	Maken
+New data file	Nieuw databestand
+Paste two (or more) columns: depth/time and values (from Excel or a text file)	Plak twee (of meer) kolommen: diepte/tijd en waarden (uit Excel of een tekstbestand)
+Save	Opslaan
+Rename	Naam wijzigen
+New name	Nieuwe naam
+Delete %d file(s) from the working folder? This cannot be undone.	%d bestand(en) uit de werkmap verwijderen? Dit kan niet ongedaan worden gemaakt.
+Delete files	Bestanden verwijderen
+Delete 1 file(s) from the working folder? This cannot be undone.	1 bestand(en) uit de werkmap verwijderen? Dit kan niet ongedaan worden gemaakt.
+File name (without extension)	Bestandsnaam (zonder extensie)
+Format	Formaat
+PDF (editable in Illustrator)	PDF (bewerkbaar in Illustrator)
+Width (inches)	Breedte (inch)
+Height (inches)	Hoogte (inch)
+No tie points yet.	Nog geen ankerpunten.
+Pick at least one tie point first.	Kies eerst minstens één ankerpunt.
+The update check failed.	De controle op updates is mislukt.
+Drop the files on a folder.	Zet de bestanden neer op een map.
+A calculation is still running.	Er loopt nog een berekening.
+Not a CycloDesk result file.	Geen CycloDesk-resultaatbestand.
+Figure failed	Figuur mislukt
+Select exactly one file or folder.	Selecteer precies één bestand of map.
+Select the files to delete in the list first.	Selecteer eerst in de lijst de te verwijderen bestanden.
+Checking GitHub for updates ...	GitHub controleren op updates ...
+That name exists already.	Die naam bestaat al.
+This PC	Deze pc
+Click at least two points along the beds first.	Klik eerst minstens twee punten aan langs de lagen.
+This result has no scalogram or spectrum map to track on.	Dit resultaat heeft geen scalogram of spectrumkaart om op te volgen.
+The map of this result could not be read for tracking.	De kaart van dit resultaat kon niet worden gelezen voor het volgen.
+Choose a data file.	Kies een databestand.
+The file could not be read as a series.	Het bestand kon niet als reeks worden gelezen.
+Compute the scalogram first.	Bereken eerst het scalogram.
+Click at least one point on the band of the cycle first.	Klik eerst minstens één punt aan op de band van de cyclus.
+Show a scalogram first.	Toon eerst een scalogram.
+Choose a file.	Kies een bestand.
+Choose the depth and value columns and a multiplier other than 0.	Kies de diepte- en waardekolom en een vermenigvuldiger ongelijk aan 0.
+Give at least one value.	Geef minstens één waarde op.
+Helper lines added; they are drawn once a scalogram is shown.	Hulplijnen toegevoegd; ze worden getekend zodra een scalogram wordt getoond.
+Tick the groups to remove first.	Vink eerst de te verwijderen groepen aan.
+Choose a file and the column with the depths.	Kies een bestand en de kolom met de dieptes.
+The file could not be read.	Het bestand kon niet worden gelezen.
+Track the cycle first: click at least two points on its band.	Volg eerst de cyclus: klik minstens twee punten aan op de band ervan.
+Delete %d files...	%d bestanden verwijderen...
+%d files	%d bestanden
+Analysis & age models	Analyse & ouderdomsmodellen
+R code & log	R-code & logboek
+Tools	Tools
+adds a point, snapped to the nearest power peak	voegt een punt toe, op de dichtstbijzijnde vermogenspiek
+adds a point exactly where you click (free tracking)	voegt een punt toe precies waar u klikt (vrij volgen)
+adds or removes a vertical boundary line	voegt een verticale grenslijn toe of verwijdert die
+extracted cycle	geëxtraheerde cyclus
+age model + tuned series	ouderdomsmodel + getunede reeks
+floating model from the Track view	zwevend model uit de weergave Volgen
+Track view: the data of the tracked record	Weergave Volgen: de gegevens van het gevolgde record
+an age-model file (depth, age)	een ouderdomsmodelbestand (diepte, ouderdom)
+a constant sedimentation rate	een constante sedimentatiesnelheid
+the nearest maximum	het dichtstbijzijnde maximum
+the nearest minimum	het dichtstbijzijnde minimum
+nothing (exactly where you click)	niets (precies waar u klikt)
+adds a point to the route	voegt een punt toe aan de route
+sets the scale bar (two points)	stelt de schaalbalk in (twee punten)

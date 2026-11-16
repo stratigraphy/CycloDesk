@@ -244,8 +244,8 @@ cd_tools_agemodels <- function() {
   list(
     cd_tool("am_mintune", M, "Minimal tuning (WaverideR)", group = "Age models from a cycle", icon = "clock",
         info = paste("Age model from a filtered or extracted cycle (depth in metres): the distance between successive",
-            "maxima, minima or both of the cycle is set to its duration. Use a filtered series (Time Series > Filtering)",
-            "or a cycle extracted in the Track tab."),
+            "maxima, minima or both of the cycle is set to its duration. Use a filtered series (Time Series > Filtering and cycle extraction)",
+            "or a cycle extracted in the Track view."),
         uses = "WaverideR::minimal_tuning",
         params = list(
           cd_num("cycle", "Duration of the cycle (kyr)", 405, min = 0),
@@ -387,7 +387,7 @@ cd_tools_agemodels <- function() {
     cd_tool("am_retrack", M, "Re-track a cycle (Monte Carlo, multi-proxy)", group = "Uncertainty (Monte Carlo)",
         inputs = 2L, full_table = TRUE, heavy = TRUE, icon = "route",
         info = paste("File 1: depth and one or more proxy columns; file 2: a tracked period curve (depth, period), e.g.",
-            "from the Track tab. Every simulation blends randomly perturbed copies of the track and follows the nearest",
+            "from the Track view. Every simulation blends randomly perturbed copies of the track and follows the nearest",
             "ridge in the scalogram of a randomly chosen proxy; the spread of the re-tracked curves is the tracking",
             "uncertainty, used by Age model with uncertainty, Gap duration and Dates + astrochronology."),
         uses = "WaverideR::analyse_wavelet, WaverideR::retrack_wt_MC, WaverideR::plot_wavelet",

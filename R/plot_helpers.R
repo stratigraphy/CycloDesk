@@ -23,7 +23,7 @@ cd_message_plot <- function(msg) {
 
 # Series plot: one or more series on one axis or stacked panels
 cd_plot_series <- function(series, labels = NULL, stack = FALSE, standardise = FALSE, type = "l", xlab = "Depth / time",
-    ylab = "Value", xlim = NULL, ylim = NULL, rev_x = FALSE, swap = FALSE, main = NULL) {
+    ylab = "Value", xlim = NULL, ylim = NULL, rev_x = FALSE, swap = FALSE, main = NULL, logy = FALSE) {
   n <- length(series)
   if (!n) {
     cd_message_plot("Select one or more data files in the list on the left")
@@ -32,9 +32,14 @@ cd_plot_series <- function(series, labels = NULL, stack = FALSE, standardise = F
   oldpar <- cd_par_keep_coords(graphics::par(no.readonly = TRUE))
   on.exit(graphics::par(oldpar))
   cols <- cd_cols(n)
+  logy <- logy && !standardise
+  lg <- if (!logy) { "" } else if (swap) { "x" } else { "y" }
   for (i in seq_len(n)) {
     s <- series[[i]]
     s <- s[stats::complete.cases(s[, 1:2]), 1:2, drop = FALSE]
+    if (logy && !standardise) {
+      s <- s[s[, 2] > 0, , drop = FALSE]
+    }
     if (standardise && nrow(s) > 1) {
       s[, 2] <- (s[, 2] - mean(s[, 2])) / stats::sd(s[, 2])
     }
@@ -52,7 +57,7 @@ cd_plot_series <- function(series, labels = NULL, stack = FALSE, standardise = F
     for (i in seq_len(n)) {
       cd_par()
       s <- series[[i]]
-      cd_plot_one(s, col = cols[i], type = type, xlab = xlab, ylab = labels[i], xlim = xlim, rev_x = rev_x,
+      cd_plot_one(s, col = cols[i], type = type, xlab = xlab, ylab = labels[i], xlim = xlim, rev_x = rev_x, log = lg,
           swap = swap)
     }
     return(invisible(NULL))
@@ -72,7 +77,7 @@ cd_plot_series <- function(series, labels = NULL, stack = FALSE, standardise = F
     ylim <- range(ally[inx], finite = TRUE)
   }
   if (!swap) {
-    vw <- cd_view_lims(xlim, ylim, x = allx, y = ally)
+    vw <- cd_view_lims(xlim, ylim, x = allx, y = ally, logy = logy)
     xlim <- vw$x
     ylim <- vw$y
   }
@@ -81,9 +86,9 @@ cd_plot_series <- function(series, labels = NULL, stack = FALSE, standardise = F
   }
   yl <- if (standardise) { "Standardised value" } else if (n == 1) { labels[1] } else { ylab }
   if (swap) {
-    graphics::plot(NA, xlim = ylim, ylim = xlim, xlab = yl, ylab = xlab, main = main)
+    graphics::plot(NA, xlim = ylim, ylim = xlim, xlab = yl, ylab = xlab, main = main, log = lg)
   } else {
-    graphics::plot(NA, xlim = xlim, ylim = ylim, xlab = xlab, ylab = yl, main = main)
+    graphics::plot(NA, xlim = xlim, ylim = ylim, xlab = xlab, ylab = yl, main = main, log = lg)
   }
   graphics::grid(col = "grey90", lty = 1)
   for (i in seq_len(n)) {
@@ -101,7 +106,7 @@ cd_plot_series <- function(series, labels = NULL, stack = FALSE, standardise = F
 }
 
 cd_plot_one <- function(s, col = "#1f4e79", type = "l", xlab = "", ylab = "", xlim = NULL, rev_x = FALSE,
-    swap = FALSE, add = FALSE, main = NULL) {
+    swap = FALSE, add = FALSE, main = NULL, log = "") {
   if (is.null(xlim)) {
     xlim <- range(s[, 1], finite = TRUE)
   }
@@ -112,10 +117,10 @@ cd_plot_one <- function(s, col = "#1f4e79", type = "l", xlab = "", ylab = "", xl
   }
   if (swap) {
     graphics::plot(s[, 2], s[, 1], type = type, col = col, xlab = ylab, ylab = xlab, ylim = xlim, xlim = ylim,
-        pch = 16, cex = 0.5, main = main)
+        pch = 16, cex = 0.5, main = main, log = log)
   } else {
     graphics::plot(s[, 1], s[, 2], type = type, col = col, xlab = xlab, ylab = ylab, xlim = xlim, ylim = ylim,
-        pch = 16, cex = 0.5, main = main)
+        pch = 16, cex = 0.5, main = main, log = log)
   }
   graphics::grid(col = "grey90", lty = 1)
   if (swap) {
@@ -123,6 +128,33 @@ cd_plot_one <- function(s, col = "#1f4e79", type = "l", xlab = "", ylab = "", xl
   } else {
     graphics::lines(s[, 1], s[, 2], col = col, type = type, pch = 16, cex = 0.5)
   }
+}
+
+# A table whose first column is a frequency: the output of a spectrum tool
+cd_is_spectrum_table <- function(d) {
+  is.data.frame(d) && ncol(d) >= 2 && nrow(d) >= 3 && grepl("^freq", names(d)[1], ignore.case = TRUE)
+}
+
+# Plots a spectrum table: the power column (or the second column) against frequency, with the columns that hold a
+# background fit or confidence levels of the power as lines
+cd_plot_spectrum_table <- function(d, logy = TRUE, col = NULL) {
+  nm <- names(d)
+  kp <- which(tolower(nm) == "power")
+  kp <- if (length(kp)) { kp[1] } else { 2L }
+  kc <- which(grepl("(fit|_power)$", nm, ignore.case = TRUE) & seq_along(nm) != kp)
+  # another column chosen in the file panel: that column alone
+  if (!is.null(col) && length(col) == 1 && col >= 2 && col <= ncol(d) && col != kp && !(col == 2 && kp != 2)) {
+    kp <- as.integer(col)
+    kc <- integer()
+  }
+  cl <- NULL
+  cln <- NULL
+  if (length(kc)) {
+    cl <- as.matrix(d[, kc, drop = FALSE])
+    cln <- gsub("_", " ", sub("_power$", "", nm[kc]))
+  }
+  y <- d[[kp]]
+  cd_plot_spectrum(d[[1]], y, cl = cl, cl_names = cln, logy = logy && any(y > 0, na.rm = TRUE), ylab = nm[kp])
 }
 
 # Spectrum plot with confidence levels and labelled peaks
@@ -378,9 +410,9 @@ cd_plot_band <- function(d, flow, fhigh) {
   invisible(NULL)
 }
 
-# Zoom of the figure in the Tool tab ####
+# Zoom of the figure in the tool view ####
 #
-# The Tool tab stores the zoom (a box dragged on the figure, or typed limits) in the option CycloDesk.view =
+# The tool view stores the zoom (a box dragged on the figure, or typed limits) in the option CycloDesk.view =
 # list(x = c(from, to), y = c(from, to)). The plot helpers apply it to the last panel of a figure only, because the
 # mouse coordinates refer to that panel. With only x limits, y is fitted to the data inside them.
 cd_state <- new.env(parent = emptyenv())

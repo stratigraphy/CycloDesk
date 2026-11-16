@@ -149,10 +149,10 @@ cd_sr_text <- function(o, sr_cm, time = NULL) {
   for (x in o) {
     nm <- c(nm, x$name)
   }
-  c(txt, sprintf("Sedimentation-rate curve (depth, cm/kyr) written to %s: use it in Time Series > Sedimentation rate to age model.",
+  c(txt, sprintf("Sedimentation-rate curve (depth, cm/kyr) written to %s: use it in Age models > Build an age model > Sedimentation rate to age model.",
       nm[grepl("_sedrate\\.txt$", nm)][1]),
       if (any(grepl("_age\\.txt$", nm))) {
-        sprintf("Age model (depth, time in kyr) written to %s: use it in Time Series > Age scale / tuning.",
+        sprintf("Age model (depth, time in kyr) written to %s: use it in Age models > Build an age model > Age scale / tuning.",
             nm[grepl("_age\\.txt$", nm)][1])
       } else {
         character()
