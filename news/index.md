@@ -1,5 +1,16 @@
 # Changelog
 
+## CycloDesk 0.2.3 (alpha)
+
+- **Windows installer: installing a new version over an earlier one
+  works in one go.** The installer used to refuse the folder of the
+  earlier CycloDesk (“Directory … is not empty”, again at every click on
+  Next), so the old version had to be uninstalled and the installer
+  started a second time. It now asks once whether to replace the earlier
+  CycloDesk, runs its uninstaller and goes on; if CycloDesk is still
+  running it asks to close it first. Data files are not affected:
+  CycloDesk does not keep them in its own folder.
+
 ## CycloDesk 0.2.2 (alpha)
 
 - **Menus in the order of the work**, with submenus by subject: Basic

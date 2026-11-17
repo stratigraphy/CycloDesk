@@ -98,6 +98,11 @@ rights are needed.
 | Mac with an Intel processor | `CycloDesk-<version>-MacOSX-x86_64.pkg` | As above. |
 | Linux (x86_64) | `CycloDesk-<version>-Linux-x86_64.sh` | In a terminal: `bash CycloDesk-<version>-Linux-x86_64.sh`. The window needs WebKitGTK 4.1 (standard on Ubuntu 22.04+, Debian 12+, Fedora); without it CycloDesk opens in the web browser. |
 
+A newer installer can be run over an earlier CycloDesk: on Windows it
+asks once whether to replace it. On macOS and Linux remove the earlier
+version first (see below), or run the Linux installer with `-u` to
+update it.
+
 Afterwards, start **CycloDesk** from the desktop icon, the Start menu,
 Applications/Launchpad or the applications menu. It opens in its own
 window; your data stay on your computer. CycloDesk checks once a day
@@ -155,7 +160,7 @@ If CycloDesk helps your work, please cite it, together with the packages
 that do the calculations:
 
 - Arts, M. (2026). CycloDesk: Graphical Interface for Cyclostratigraphy.
-  R package version 0.2.2. <https://github.com/stratigraphy/CycloDesk>
+  R package version 0.2.3. <https://github.com/stratigraphy/CycloDesk>
 - Arts, M., Corradini, C., Pondrelli, M., Pas, D., Da Silva, A.-C.
   (2024). Age and orbital forcing in the upper Silurian Cellon section
   (Carnic Alps, Austria) uncovered using the WaverideR R package.
