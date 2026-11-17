@@ -8,6 +8,12 @@ One installer per system, each with its own R from conda-forge and all packages:
 | macOS | `CycloDesk-<version>-MacOSX-<arm64/x86_64>.pkg` | `~/Library/CycloDesk`; CycloDesk.app in Applications |
 | Linux | `CycloDesk-<version>-Linux-x86_64.sh` | `~/CycloDesk`; menu entry and desktop icon |
 
+A Windows installer replaces an earlier CycloDesk in the chosen folder after asking once: `build_installer.R`
+inserts `construct/win_replace_earlier.nsi` into constructor's NSIS template (`nsis_template`), at the start of the
+folder check, because constructor itself refuses a folder that is not empty. The build stops with a message if a
+new constructor version no longer has that check (`Function OnDirectoryLeave`). The macOS and Linux installers of
+constructor still refuse an existing folder (the Linux one accepts `-u` to update).
+
 ## How they are built
 
 `build_installer.R` builds the installer for the system it runs on:

@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use CycloDesk, please cite it as below, and also cite WaverideR and astrochron, which do the calculations."
 type: software
 title: "CycloDesk: Graphical Interface for Cyclostratigraphy"
-version: 0.2.2
-date-released: 2026-11-15
+version: 0.2.3
+date-released: 2026-11-17
 license: GPL-2.0-or-later
 doi: 10.5281/zenodo.23983505
 identifiers:

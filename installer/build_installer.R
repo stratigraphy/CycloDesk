@@ -224,6 +224,39 @@ unlink(file.path(cons, "construct.yaml.in"))
 if (platform != "linux") {
   unlink(file.path(cons, "post_install.sh"))
 }
+unlink(file.path(cons, "win_replace_earlier.nsi"))
+
+# Windows: replace an earlier CycloDesk in the chosen folder ####
+# constructor's installer refuses a folder that is not empty, so a new version could only be installed after
+# uninstalling the old one and starting the installer again. The template of constructor is copied with the lines
+# of construct/win_replace_earlier.nsi inserted at the start of OnDirectoryLeave (the check of the folder): when the
+# folder holds an earlier CycloDesk, the installer asks once, runs its uninstaller and goes on.
+if (platform == "win") {
+  py <- tempfile(fileext = ".py")
+  writeLines(c("import os, constructor", "print(os.path.join(os.path.dirname(constructor.__file__), 'nsis', 'main.nsi.tmpl'))"),
+      py)
+  tmpl_file <- suppressWarnings(system2("python", shQuote(py), stdout = TRUE))
+  tmpl_file <- tmpl_file[length(tmpl_file)]
+  if (!length(tmpl_file) || !file.exists(tmpl_file)) {
+    stop("constructor's Windows installer template (main.nsi.tmpl) was not found", call. = FALSE)
+  }
+  tmpl <- readLines(tmpl_file, encoding = "UTF-8", warn = FALSE)
+  k <- grep("^Function OnDirectoryLeave\\s*$", tmpl)
+  if (length(k) != 1) {
+    stop("constructor's template has no single 'Function OnDirectoryLeave'; check construct/win_replace_earlier.nsi",
+        " against the new constructor version", call. = FALSE)
+  }
+  ins <- readLines(file.path(inst_dir, "construct", "win_replace_earlier.nsi"), warn = FALSE)
+  tmpl <- c(tmpl[seq_len(k)], ins, tmpl[seq(k + 1, length(tmpl))])
+  writeLines(tmpl, file.path(cons, "main_cyclodesk.nsi.tmpl"), useBytes = TRUE)
+  say("Installer template: ", tmpl_file, " with construct/win_replace_earlier.nsi")
+  k <- grep("^exclude:", tpl)
+  if (!length(k)) {
+    k <- length(tpl) + 1
+  }
+  tpl <- c(tpl[seq_len(k - 1)], "nsis_template: main_cyclodesk.nsi.tmpl", tpl[seq(k, length.out = length(tpl) - k + 1)])
+  writeLines(tpl, file.path(cons, "construct.yaml"))
+}
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 # as "python -m constructor": on Windows R starts programs by their short (8.3) name, and the constructor.exe launcher
 # then looks for CONSTR~1-script.py
